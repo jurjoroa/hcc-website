@@ -1,0 +1,14 @@
+---
+title: "Register"
+---
+
+About this site
+
+//{{< li xxdqfhbi trigger=loop delay=4000 >}}
+
+```{=html}
+<iframe width="100%" height="100%" scrolling="yes" overflow="auto" src="https://hertie-coding-club.shinyapps.io/HCC-initial-survey/" title="Quarto Documentation"></iframe>
+```
+
+
+

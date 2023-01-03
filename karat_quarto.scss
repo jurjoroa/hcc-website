@@ -1,0 +1,168 @@
+/*-- scss:defaults --*/
+
+// use litera as the base
+$theme: "litera" !default;
+
+// import google fonts
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+p {
+  font-family: "Poppins", sans-serif;
+  color: #996333;
+}
+
+.category {
+  font-family: "Poppins", sans-serif;
+  color: #996333;
+}
+
+body {
+  background: #272727;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Poppins", sans-serif;
+  color: #06787a;
+}
+
+// h1 {
+//   font-family: "IBM Plex Mono", "Courier New", Courier, monospace;
+//   color: #06787a;
+// }
+
+.nav-link {
+  font-family: "Poppins", sans-serif;
+  color: #06787a;
+}
+.navbar-title {
+  font-family: "Poppins", sans-serif;
+  color: #06787a;
+}
+
+.nav-link {
+  font-weight: 400;
+  color: #06787a;
+}
+
+$link-color: #165f4b;
+// Default is 50 for navbar
+$navbar-height: 30px;
+$body-bg: #d9d9d9;
+$body-color: #5f5f5f;
+$code-block-bg-alpha: 0.8;
+$navbar-bg: #d9d9d9;
+$navbar-bg-alpha: -0.7;
+$title-block-banner-color: #d9d9d9;
+
+// about me formatting
+
+// .section {
+//   padding: 50px 0;
+//   position: relative;
+// }
+
+// .section-title h2 {
+//   margin: 0 0 15px;
+//   border-left: 5px solid #d1e8e2;
+//   padding-left: 15px;
+// }
+// .section-title {
+//   padding-bottom: 45px;
+// }
+// .section-title p {
+//   margin: 0;
+// }
+
+// /* Resume Box
+// ---------------------*/
+// .resume-box {
+//   background: #272727;
+//   border-radius: 20px;
+// }
+// .resume-box ul {
+//   margin: 0;
+//   padding: 30px 20px;
+//   list-style: none;
+// }
+// .resume-box li {
+//   position: relative;
+//   padding: 0 20px 0 60px;
+//   margin: 0 0 30px;
+// }
+// .resume-box li:last-child {
+//   margin-bottom: 0;
+// }
+// .resume-box li:after {
+//   content: "";
+//   position: absolute;
+//   top: 0px;
+//   left: 20px;
+//   border-left: 1px dashed #d1e8e2;
+//   bottom: 0;
+// }
+// .resume-box .icon {
+//   width: 40px;
+//   height: 40px;
+//   position: absolute;
+//   left: 0;
+//   right: 0;
+//   color: #d1e8e2;
+//   line-height: 40px;
+//   background: #ffffff;
+//   text-align: center;
+//   z-index: 1;
+//   border: 1px dashed;
+//   border-radius: 50%;
+// }
+// .resume-box .time {
+//   background: #272727;
+//   color: #ffffff;
+//   font-size: 10px;
+//   padding: 2px 10px;
+//   display: inline-block;
+//   margin-bottom: 12px;
+//   border-radius: 20px;
+//   font-weight: 600;
+// }
+// .resume-box h5 {
+//   font-weight: 700;
+//   color: #d1e8e2;
+//   font-size: 16px;
+//   margin-bottom: 10px;
+// }
+// .resume-box p {
+//   margin: 0;
+// }
+
+// .resume-box li:after {
+//   content: "";
+//   position: absolute;
+//   top: 0px;
+//   left: 20px;
+//   border-left: 1px dashed #d1e8e2;
+//   bottom: 0;
+// }
+
+// a {
+//   text-decoration: none;
+//   color: #d1e8e2;
+// }
+
+// .btn-dark {
+//   background-color: #996333;
+//   border-color: #996333;
+//   margin: 5px;
+// }
+
+// .btn-light {
+//   background-color: #996333;
+//   border-color: #996333;
+//   margin: 5px;
+// }
+
+// // about me formatting ends

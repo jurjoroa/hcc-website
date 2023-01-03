@@ -1,0 +1,79 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Hertie Coding Club",
+    "section": "",
+    "text": "This is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites.\n\n1 + 1\n\n[1] 2\n\n\n\n damoncroberts\n DamonCharlesRoberts\n Wednesdays from 12:15 - 2:15 pm Mountain\n Ketchum Arts & Sciences, Office 382, Boulder, CO 80309"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site\n\n1 + 1\n\n[1] 2"
+  },
+  {
+    "objectID": "index.html#agenda-for-today",
+    "href": "index.html#agenda-for-today",
+    "title": "Hertie Coding Club",
+    "section": "Agenda for today",
+    "text": "Agenda for today\n\n\n\nObjective of the club. Why this club?\nWho we are?\nMotivation\nDinamic of the sessions\nSlack\nGitHub and GitHub Desktop\nR and RStudio\n\n\n\nCustomize our RStudio appearance\nCreate our first project\nRStudio elements\nWorking directory\nPackages\nObjects\nSummary\nNext session\n\n\n\n\n\n\n(Re) Introduction to R"
+  },
+  {
+    "objectID": "Presentation/(Re) Introduction to R.html",
+    "href": "Presentation/(Re) Introduction to R.html",
+    "title": "Hertie Coding Club",
+    "section": "",
+    "text": "Objective of the club. Why this club?\n\n\nObjective of the club. Why this club?\n\n\n<9f><92> Data is a relevant trend and us, as future policy makers, must have those skills.\n\n\n\n<9f><91><80><8d><9f><94> Programming: You are developing your problem-solving skills. The time you spend learning how to code and resolving code problems makes us think more logically.\n\n\n\n<9f><93> Gap: A lot of people want to learn code, but you must take Stats I and Stats II to have the right to apply to the Introduction to Data Science Course. Why should we not start learning from the first semester?\n\n\n\n<9f><9a><82> Democratize learning code: No matter if you are from the MPP, MIA, or another program, everyone should learn how to code and possess those abilities; we must exploit our potential.\n\n\n\nWho are we?\n    \n\n\nWho are we?\n\nInstructors\n\n\n\n\n\n\n\n\n\nGabriel Zech\n\nMDS 2023\n\nProject Manager\n\n(Data Science Lab) Bertelsmann Stiftung\n\n\n\n\n\n\n\n\nCarmen Garro\n\nMDS\n\n2024\n\n\n\n\n\n\n\n\nJorge Roa\n\nMDS\n\n2024\n\n\n\n\n\n\n\n\nLukas Warode\n\nMDS 2023\nData Researcher\n\nPOLITICO\n\n\n\n\n\n\n\n\nRodrigo Dornelles\n\nMDS\n\n2024\n\n\n\n\n\nWho are we?\n\nCommunications\n\n\n\n\n\n\n\n\n\n\n\n\nIleana Marroquin (MPP 2023)\nCoordinator alligator\n\n\n\n\n\n\n\n\n\n\n\nRidhima Singh (MPP 2024)\nCoordinator alligator\n\n\n\n\n\n\n\n\n\n\n\nMary Nguyen (MPP 2023)\nCelebrity promoter (Social Media)\n\n\n\n\n\n\n\n\n\n\n\nChhengpor Aun (MIA 2024)\nCelebrity promoter (Social Media)\n\n\n\n\n\n\n\n\n\n\n\nLisa Bewermeier (MPP 2024)\nCelebrity promoter (Social Media)\n\n\n\n\n\n\n\n\n\n\n\nNatascha Schoepl (MPP 2023)\nCentral office emissary\n\n\n\n\n\n\n\n\n\n\n\n\n\nAbigail Pena Alejos (MPP 2023)\nCentral office emissary\n\n\n\n\n\n\n\n\n\n\n\nKaja Buxrud (MPP 2024)\nPromotion emotion\n\n\n\n\n\n\n\n\n\n\n\n\nIssac John (MPP 2024)\nPromotion emotion\n\n\n\n\n\n\n\n\n\n\n\n\nFernando Segovia (MIA 2024)\nPromotion emotion\n\n\n\n\n\n\n\n\n\n\n\nAayran Salman (MPP 2024)\nCanva Wizard\n\n\n\n\n\n\n\n\nMotivation\n\n\nMotivation\n\n\n\nThis was my first graph in R\n\n\n\n\n\n\n\n\nHow I improved\n\n\n\n\n\n\n\n\n\n\nMotivation\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nMotivation\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWhat is the key to learn how to code\n  \n\n\n\n\n\n\n\n\n\nLearning a new thing can be difficult sometimes.\nGetting errors can be scary: don’t worry, we are here for you.\nIn my opinion: the more errors you get, the better. Why? Because you learn from those errors. (It doesn’t apply to real life :p)\nFrom my own experience: patience.\nThe goal of the club is help us each other learn how to code.\n\n\n\n\n\nDinamic of the sessions\n\n\nDinamic of the sessions\n \n\n\n\n\n\n\n\n\n\nIn the short run, we will have sessions for introduction to R (weekly)\nWe hope this semester, we can have specific sessions for advanced R users and other languages (Python, SQL).\nWe will record the sessions for future reference.\n\n\n\n\n\nSlack\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPermanent platform for Hertie Community\nLike a WhatsApp for code.\nShare code, share files, and ask questions.\nOne of the most popular platforms in the data science world.\n\n\n\n\n\nGitHub and GitHub Desktop\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWebsite and cloud-based service to store and manage code\nGit IDE: used in the programming world. It is used for tracking changes in the source code during software development.\nIt makes it easier for individuals and teams to use Git for version control and collaboration.\n\n\n\n\n\nR and RStudio\n\n\nR and RStudio\n\n\nWhy R?\n\nOpen source\nOne of the most used language programs in the world\nWorks for every type of data (shape and sizes)\nEasy to learn it (We will help you with that)\nMore than 18,000 packages\n\n\n\n\n\n\n\n\n\n\n\nCustomize our RStudio appearance\n\n\nCustomize our RStudio appearance\n\n\n\n\n\n\n\n\nWelcome to RStudio\n\nFirst window that appears when you open RStudio\nLet’s change the appearance of RStudio\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCustomize our RStudio appearance\n\n\n\n\n\n\n\nBlue is my favorite color. For me looks awesome! What about you?\n\n\n\n\nCreate our first project\n\n\nCreate our first project (Step 1)\n\n\n\n\n\n\n\n\nGo to the next steps:\n\nCreate a new directory (Where we will store our project)\nSelect “New Project”\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCreate our first project (Step 2)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nGo to the next steps:\n\nSelect again New Project\nChoose the path where you want to create your project (It should be a folder)\n\n\n\n\n\n\n\n\n\n\nWorking directory (How we load and save things in R)\n\n\n\n\n\n\n\n Go to the next steps:\n\ndata/: for processed data\ndata-raw/: for raw data and intermediate datasets (Internet, f.e.)\nfigures/: for save your plots\nanalysis/: for save your scripts\ndocuments/: for outlines, drafts, other text\nR/: for functions\n\n\n\nAlarid et. al. (2019)\n\n\n\n\n\n\n\n\n\nYOU ARE READY\n\n\n\n\n\n\n\nRStudio\nCreate a script (This is the place where we write code)\n\n\n\n\n\n\n\n\nGo to the next steps:\n\nIn the file section, create an R script\nSave inside your analysis folder\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSource\nThe source pane is where you create and edit R Scripts\n\n\n\n\n\n\n\n\n\n“Command + Return” on Mac, or “Control + Enter” on PC to send all highlighted code to the console.\nSave it inside your analysis folder\n\n\n\n\n\n\n\n\n\n\nConsole\nThe console is the heart of R.\n\n\n\n\n\n\n\n\n\nHere R actually evaluates your code\nTry to write most of your code in a document in the Source. Only type directly into the Console to de-bug or do quick analyses.\nWhen ready: > and If waiting: +\nCancel commands by pressing Esc.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nEnvironment/History\nThe Environment tab of this panel shows you the names of all the data objects\n\n\n\n\n\n\n\n\n\nYou can also see information like the number of observations and rows in data objects\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFiles and more\nThe Files / Plots / Packages / Help panel shows you lots of helpful information\n\n\n\n\n\n\n\n\n\nFiles - The files panel gives you access to the file directory on your hard drive.\nPlots - The Plots panel shows all your plots.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPackages\n\n\nPackages\n\n\nWhy R?\n\nPackages in R Programming language are a set of R functions, compiled code, and sample data. These are stored under a directory called “library” within the R environment.\nR packages provide a simple way to distribute R code and documentation.\nPackages are the fundamental units of reproducible R code. They include reusable R functions, the documentation that describes how to use them, and sample data\nMore than 18,000 packages\nExtends the capacity of R and allows us to do much more\n\n\n\n\n\n\n\n\n\n\n\nHow we install packages\nThe easy way\n\n\n\n\n\n\n\n\n\nGo to the “Packages” tab\nPress the “Install” button\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nHow we install packages\nThe easy way\n\n\n\n\n\n\n\n\n\nOther way is type in the console\n\ninstall.packages(“tidyverse”)\n\n\n\n\n\n\n\n\n\n\nObjects\n\n\nObjects\n\n\nWhy objects?\n\nR works with objects (vectors, dataframes, lists, numbers, etc)\nTo do useful and interesting things in R, we need to assign values to objects.\nTo create an object, give it a name followed by the assignment operator, followed by the value.\nAssignment operator <-\nCan also use = but not recommended\nShortcut: “Alt + -” on PC, “Option + -” on Mac\n\n\nx <- 2 + 2\n\nx\n\n[1] 4\n\n\n\n\n\n\n\n\n\n\n\n\nType of objects\nThere are 5 basic types of objects in the R language:\n\n\n\nAtomic vectors are one of the basic types of objects in R programming. Atomic vectors can store homogeneous data types such as character, doubles, integers, raw, logical, and complex.\nList is another type of object in R programming. List can contain heterogeneous data types such as vectors or another lists.\n\n\n#Numeric vector\nnumbers <- c(1, 2, 3, 4)\n\n#String vector\ncharacters <- c(\"a\", \"b\", \"c\", \"d\")\n\n#Numeric value\nvalue <- 5\n\n#List\nmy_list <- list(c(1, 2, 3, 4), list(\"a\", \"b\", \"c\"))\n\n\n\nprint(numbers)\n\n[1] 1 2 3 4\n\nprint(characters)\n\n[1] \"a\" \"b\" \"c\" \"d\"\n\nprint(value)\n\n[1] 5\n\nprint(my_list)\n\n[[1]]\n[1] 1 2 3 4\n\n[[2]]\n[[2]][[1]]\n[1] \"a\"\n\n[[2]][[2]]\n[1] \"b\"\n\n[[2]][[3]]\n[1] \"c\"\n\n\n\n\n\n\nMore type of objects\n\n\n\nMatrices: To store values as 2-Dimensional array, matrices are used in R. Data, number of rows and columns are defined in the matrix() function.\nFactors: Factor object encodes a vector of unique elements (levels) from the given data vector.\nArrays: array() function is used to create n-dimensional array. This function takes dim attribute as an argument and creates required length of each dimension as specified in the attribute.\n\n\n\nx <- c(1, 2, 3, 4, 5, 6)\n  \n# Matrix\nmat <- matrix(x, nrow = 2)\n\n# Matrix\ns <- c(\"spring\", \"autumn\", \"winter\", \"summer\", \n\"spring\", \"autumn\")\n  \narr <- array(c(1, 2), dim = c(3, 3))\n\n\nprint(mat)\n\n     [,1] [,2] [,3]\n[1,]    1    3    5\n[2,]    2    4    6\n\nprint(factor(s))\n\n[1] spring autumn winter summer spring autumn\nLevels: autumn spring summer winter\n\nprint(nlevels(factor(s)))\n\n[1] 4\n\nprint(arr)\n\n     [,1] [,2] [,3]\n[1,]    1    2    1\n[2,]    2    1    2\n[3,]    1    2    1\n\n\n\n\n\n\nFinally: dataframes\n\n\n\nData frames are 2-dimensional tabular data object in R programming.\nData frames consists of multiple columns and each column represents a vector.\nColumns in data frame can have different modes of data unlike matrices.\n\n\n\n# Create vectors\nwho <- c(\"Mom\", \"Sister\", \"Myself\", \"Dad\", \"Brother\", \"Brother\", \"Our dog (:\")\nage <- c(58, 17, 25,60, 29, 27, 5)\nnames <- c(\"Carmen\", \"Fernanda\", \"Jorge\", \"Arturo\", \"Ale\", \"Eduardo\", \"Rocky\")\n  \n# Create data frame of vectors\ndf_my_family <- data.frame(who, age, names)\n\n\nprint(df_my_family)\n\n         who age    names\n1        Mom  58   Carmen\n2     Sister  17 Fernanda\n3     Myself  25    Jorge\n4        Dad  60   Arturo\n5    Brother  29      Ale\n6    Brother  27  Eduardo\n7 Our dog (:   5    Rocky\n\n\n\n\n\n\nNow it’s your turn\n\n\nExercise\n\n\n\nCreate a dataframe of your family with multiple vectors.\nInclude age, position (mom, dad, etc), their names and their birthdays.\nHint:\n\n\n# Create vectors\nwho <- c()\nage <- c()\nnames <- c()\nbirthday <- \"?\"\n  \n# Create data frame of vectors\ndf_my_family <- data.frame(\"Here you put your vectors\")\n\nREMEMBER: They must have the same length.\n\n\n\n\n\n\n\n\n\n\nSummary\n\n\n\nCustomize our RStudio appearance\nCreate our first project\nRStudio elements\nWorking directory\nPackages\nObjects\nSummary\nNext session\n\n\n\n\n\n\n\n\n\n\n\nNext session\n\n\n\nBase R\nLoad and save objects\nPipelines\nTidyverse\nAnd more…\n\n\n\nSame channel (Forum)\nSame day and hour Friday, November 11 (14:00 hrs - 16:00 hrs)\nJoin Slack if you haven’t.\nUse Slack for questions.\nFollow us in our social media:\n<9f><93> Instagram: hertiecodingclub\n<9f><90> Twitter: @HertieCodingCLB\n\n\n\n\n\nThanks for your time and welcome\n\n\n\n\n\nRemember that everybody can learn how to code!!\n\n 1200 lines of code where created for this presentation."
+  },
+  {
+    "objectID": "members.html",
+    "href": "members.html",
+    "title": "Members",
+    "section": "",
+    "text": "About this site\n\n1 + 1\n\n[1] 2\n\n\n\nWho are we?\n\n\n\n\n\n\n\n\n\n\nA Lovely Image\n\n\n\n damoncroberts\n DamonCharlesRoberts\n Wednesdays from 12:15 - 2:15 pm Mountain\n Ketchum Arts & Sciences, Office 382, Boulder, CO 80309\n\n\n\n\n\nAnother Lovely Image\n\n\n\n\n\nThe Last Lovely Image"
+  },
+  {
+    "objectID": "r.html",
+    "href": "r.html",
+    "title": "R",
+    "section": "",
+    "text": "About this site\n\n1 + 1 \n\n[1] 2"
+  },
+  {
+    "objectID": "Presentation/(Re) Introduction to R.html#agenda-for-today",
+    "href": "Presentation/(Re) Introduction to R.html#agenda-for-today",
+    "title": "Hertie Coding Club",
+    "section": "Agenda for today",
+    "text": "Agenda for today\n\n\n\nObjective of the club. Why this club?\nWho we are?\nMotivation\nDinamic of the sessions\nSlack\nGitHub and GitHub Desktop\nR and RStudio\n\n\n\nCustomize our RStudio appearance\nCreate our first project\nRStudio elements\nWorking directory\nPackages\nObjects\nSummary\nNext session"
+  },
+  {
+    "objectID": "learn.html",
+    "href": "learn.html",
+    "title": "Learn",
+    "section": "",
+    "text": "About this site\n\n1 + 1\n\n[1] 2"
+  },
+  {
+    "objectID": "learn/rstudio.html",
+    "href": "learn/rstudio.html",
+    "title": "Bea Milz",
+    "section": "",
+    "text": "Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCode for a plot in my talk at rstudio::conf 2022!\n\n\n\n\nGitHub\n\n\nGitHub Actions\n\n\nAutomations\n\n\nRStudio\n\n\nPosit\n\n\n \n\n\n\n\nJul 28, 2022\n\n\nBeatriz Milz\n\n\n0 min\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "learn/rstudio/rstudio/rstudio/index.html",
+    "href": "learn/rstudio/rstudio/rstudio/index.html",
+    "title": "How important is GitHub Actions to RStudio/Posit?",
+    "section": "",
+    "text": "This post is a complementary material for my talk at rstudio::conf 2022 (which is happening TODAY!!!)!\nI’m writing this really quick, from the hotel room, for anyone interested to see the code used to create the plot that it is on my talk:"
+  },
+  {
+    "objectID": "register.html",
+    "href": "register.html",
+    "title": "Register",
+    "section": "",
+    "text": "About this site\n//"
+  }
+]

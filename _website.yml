@@ -1,0 +1,44 @@
+website:
+  title: ""
+  site-url: https://nasa-openscapes.github.io/
+  favicon: images/hcc.png
+  page-footer:
+    center: 
+      - text: "{{< fa brands r-project size=lg >}} language | "
+        href: https://github.com/beatrizmilz/
+      - text: "{{< fa brands r-project size=lg >}} language |"
+        href: https://twitter.com/BeaMilz
+      - text: "{{< fa brands r-project size=lg >}} language |"
+        href: mailto:milz.bea@gmail.com
+
+  twitter-card:
+    creator: "@beamilz"
+    card-style: summary_large_image
+  navbar:
+    logo: images/hcc_bk_white.png
+    href: https://openscapes.org
+    collapse-below: md
+    pinned: true
+    right:
+      - id: howto
+        icon: house-fill
+        href: index.qmd
+        text: "Home"
+      - icon: people-fill  
+        href: members.qmd
+        text: "Members"
+      - icon: mortarboard-fill  
+        text: "Learn"
+        menu:
+          - text: "{{< fa brands r-project >}} language"
+            href: learn/rstudio.qmd
+            
+      - icon: fingerprint  
+        href: register.html
+        text: "Register"
+      - icon: info-square-fill
+        href: about.qmd
+        text: "About us"
+      
+
+

@@ -1,0 +1,276 @@
+hr.rounded {
+  border: 2px solid #0a6aec;
+  border-radius: 5px;
+}
+
+tbody tr:nth-child(odd){
+  background-color: #DCDCDC;
+}
+
+.myimg {
+  border-radius: 50%;
+overflow-x:hidden;
+}
+
+.myimg2 {
+  border-radius: 10%;
+
+}
+
+body, html{
+    overflow:hidden;
+}
+
+
+.font_title_2 {
+  font-size: 1.2em; /* 14px/16=0.875em */
+}
+
+.font_small {
+  font-size: .6em; /* 14px/16=0.875em */
+}
+
+.font_small_1 {
+  font-size: .5em; /* 14px/16=0.875em */
+}
+
+
+
+
+.brxbig {
+            margin-bottom: 10em;
+        }
+
+.brxsmall {
+            display: block;
+            margin-bottom: -.4em;
+        }
+        
+        .brxsmall_small {
+            margin-bottom: -.9em;
+        }
+
+.slide-logo{
+  
+  position: relative; z-index: 2
+}
+
+
+.height_chunk_bg_blue {
+width: 500px;
+  background-color: #d9edf7!important;
+
+}
+
+.height_chunk {
+width: 400px;
+}
+
+ .width_chunk_668px {
+width: 668px;
+}
+
+
+ .height_chunk2 {
+width: 780px;
+height:650px;
+}
+  .height_chunk3 {
+width: 850px;
+height: 400px;
+}
+
+ .height_chunk4 {
+width: 850px;
+}
+
+ .width_chunk5 {
+width: 700px;
+font-size: 10px;
+}
+
+
+
+
+.sectionhead {
+  font-size: 1em;
+  text-align: center;
+  color: $presentation-heading-color;
+  font-family: $presentation-heading-font;
+  background-color: $body-bg;
+  margin: 1px;
+  padding: 2px 2px 2px 2px;
+  width: 120px;
+  border-left: 10px solid;
+}
+
+
+.reveal .footer {
+  font-size: 1em !important;
+  font:white;
+}
+
+
+ .height_chunk {
+width: 400px;
+}
+
+
+.reveal .slide-logo {
+  height: 50px !important;
+  width: 380px!important;
+  max-width: unset !important;
+  max-height: unset !important;
+}
+
+ .height_chunk2 {
+width: 780px;
+height:650px;
+font-size: 15px;
+}
+  .height_auto {
+width: auto;
+height: auto;
+}
+
+ .height_chunk4 {
+width: 850px;
+}
+
+
+   code.r {
+  font-size: 12.5px;
+  border: 5px solid #006DAE;
+}
+
+/* output results
+pre {
+  font-size: 20px
+}*/
+
+
+    .subtitle{
+    /**display: inline-block; **/
+    font-size: 1.5em;
+    /**line-height: 1.2em;
+    vertical-align: top;**/
+  }
+  
+      .font_table{
+    /**display: inline-block; **/
+    font-size: 14px;
+    width: 850px;
+    /**line-height: 1.2em;
+    vertical-align: top;**/
+  }
+    
+    
+    .reveal {
+    /**display: inline-block; **/
+    font-size: 2em;
+    /**line-height: 1.2em;
+    vertical-align: top;**/
+  }
+
+
+/***
+.reveal .slide-background {
+  float: left;
+  content: url('../images/quanteda.svg') ;
+margin-left: -43%;
+  position: fixed;
+  bottom: unset !important;
+  right: unset !important;
+  top: 5px;
+  left: 12px;
+  height: 65px !important;
+  width: 100x !important;
+  max-width: unset !important;
+  max-height: unset !important;
+}
+***/
+
+#title-slide .author {
+  font-size: 45px!important;
+}
+
+
+#title-slide .title {
+  font-size: 100px!important;
+}
+
+#title-slide .title:after {
+  content: url('../images/himym.png');
+   zoom:40%;
+  display: block;
+  
+
+  /***
+    display: block;
+    content: "";
+    height: 200px;
+    background: transparent url('../images/monash-one-line-black-rgb.png') no-repeat;
+  
+    ***/
+}
+
+.title-slide{
+  
+  background-color: radial-gradient( circle farthest-corner at 21.3% 26.5%,  rgba(47,181,227,1) 0%, rgba(155,208,237,1) 61.4% );
+}
+
+.box {
+  margin-top: 10px;
+  margin-right: 10px;
+  border: 5px solid #006DAE;
+  padding: 10px;
+  font-size: 26px;
+  background-color: #E6E6E6;
+}
+
+.font-small {
+  font-size: 1.2rem;
+}
+
+.font-subtitle {
+  font-size: 2rem;
+}
+
+.info-box {
+  margin-top: 10px;
+  margin-right: 10px;
+  border-left: 10px solid #006DAE;
+  padding-left: 20px;
+  padding-right: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: #e8f4f8;
+}
+
+.fa-ul {
+    list-style-type: none!important;
+    margin-left: var(--fa-li-margin, 2.5em)!important;
+    padding-left: 0!important;
+}
+
+.circle {
+    border-radius: 50%;
+    width: 1em;
+    line-height: 1em;
+    padding: 3px;
+    display: inline-block;
+    background: black;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.story {
+  background-color: black;
+  color: white;
+  font-size: 0.3em;
+  padding: 10px;
+  font-family: 'Roboto Condensed', sans-serif;
+  vertical-align: middle;
+}

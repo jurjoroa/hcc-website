@@ -1,0 +1,14 @@
+format:
+  html:
+    smooth-scroll: true
+    theme: 
+          light: spacelab
+          dark: cyborg
+          
+    css: hcc_quarto.scss
+    toc: true
+    code-link: true
+    link-external-newwindow: true
+
+editor: visual
+

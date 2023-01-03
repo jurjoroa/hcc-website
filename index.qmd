@@ -1,0 +1,22 @@
+---
+title: "Hertie Coding Club"
+---
+
+This is a Quarto website.
+
+To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
+
+```{r}
+1 + 1
+```
+
+
+{{< fa envelope title="Email" >}} 
+
+{{< fa brands twitter title="Twitter" >}} [damoncroberts](https://twitter.com/damoncroberts)
+
+{{< fa brands github title="Github" >}} [DamonCharlesRoberts](https://github.com/damoncharlesroberts)
+
+{{< fa clock title="Office Hours" >}} Wednesdays from 12:15 - 2:15 pm Mountain
+
+{{< fa building-columns title="Office" >}} Ketchum Arts & Sciences, Office 382, Boulder, CO 80309

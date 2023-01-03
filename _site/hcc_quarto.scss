@@ -1,0 +1,302 @@
+/* css styles */
+/*
+/*div.gallery {
+/* margin: 5px;
+/* border: 1px solid #ccc;
+/* float: left;
+/* width: 180px;
+/*}
+/*
+/*div.gallery:hover {
+/*  border: 1px solid #777;
+/*}
+/*
+/*div.gallery img {
+/*  width: 100%;
+/*  height: auto;
+/*}
+/*
+/*div.desc {
+/*  padding: 15px;
+/*  text-align: center;
+/*}
+/*
+
+/* /* The grid: Four equal columns that floats next to each other */
+/*.column {
+/*  float: left;
+/*  width: 25%;
+/*  padding: 10px;
+/*}
+/*
+/*/* Style the images inside the grid */
+/*.column img {
+/*  opacity: 0.8;
+/*  cursor: pointer;
+/*}
+/*
+/*.column img:hover {
+/*  opacity: 1;
+/*}
+/*
+/*/* Clear floats after the columns */
+/*.row:after {
+/* content: "";
+/* display: table;
+/* clear: both;
+/*}
+/*
+/*/* The expanding image container (positioning is needed to position the close button and the text) */
+/*.container {
+/*  position: relative;
+/*  display: none;
+/*}
+/*
+/*/* Expanding image text */
+/*#imgtext {
+/*  position: absolute;
+/*  bottom: 15px;
+/*  left: 15px;
+/*  color: white;
+/*  font-size: 20px;
+/*}
+/*
+/*/* Closable button inside the image */
+/*.closebtn {
+/*  position: absolute;
+/*  top: 10px;
+/*  right: 15px;
+/*  color: white;
+/*  font-size: 35px;
+/*  cursor: pointer;
+/*} 
+/*
+/*  */
+
+function myFunction(imgs) {
+  // Get the expanded image
+  var expandImg = document.getElementById("expandedImg");
+  // Get the image text
+  var imgText = document.getElementById("imgtext");
+  // Use the same src in the expanded image as the image being clicked on from the grid
+  expandImg.src = imgs.src;
+  // Use the value of the alt attribute of the clickable image as text inside the expanded image
+  imgText.innerHTML = imgs.alt;
+  // Show the container element (hidden with CSS)
+  expandImg.parentElement.style.display = "block";
+} 
+
+
+    .navbar-brand > img {
+      max-height: 270px;
+      max-width: 200px;
+      width: auto;
+    }
+    
+    
+        .sidebar nav[role=doc-toc] ul>li>a.active {
+    border-left: 1px solid var(--bs-red);
+    color: var(--bs-red) !important;
+}
+
+
+.sidebar nav[role=doc-toc] ul>li>ul>li>a.active {
+    border-left: 1px solid var(--bs-red);
+    color: var(--bs-red) !important;
+}
+
+.nav-link:hover, .nav-link:focus {
+    color: var(--bs-red);
+}
+
+hr {
+    border: 2.5px solid #c0041c;
+  border-radius: 10px;
+  opacity: 70%
+}
+
+/*-- scss:defaults --*/
+
+/**** navbar overrides *****/
+
+.navbar {
+    background: linear-gradient(to right, #000428, #004e92); 
+    position: fixed;
+    width: 100%;
+}
+
+.navbar a {
+    color:  white !important;
+}
+
+
+.dropdown-menu .dropdown-item {
+text-align: center;
+background: linear-gradient(to right, #000428, #004e92); 
+}
+
+
+
+.quarto-color-scheme-toggle:not(.alternate) .bi::before {
+  background-image: url('data:image/svg+xml,<svg width="18" height="18" xmlns="http://www.w3.org/2000/svg" fill="white" fill-rule="evenodd" clip-rule="evenodd"><path d="M18 18h-12c-3.311 0-6-2.689-6-6s2.689-6 6-6h12.039c3.293.021 5.961 2.701 5.961 6 0 3.311-2.688 6-6 6zm-12-10c2.208 0 4 1.792 4 4s-1.792 4-4 4-4-1.792-4-4 1.792-4 4-4z"/></svg>') !important;
+}
+
+
+.dropdown-menu {
+  min-width: 150px !important;
+  top: 50px !important;
+}
+
+.aa-SubmitIcon{
+  
+  fill: white !important;
+}
+
+.navbar-dark .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='white' stroke-linecap='round' stroke-miterlimit='10' stroke-width='4' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+}
+
+.navbar-toggler {
+    border:0px;
+     box-shadow: none !important;
+}
+
+.nav-footer {
+    background: linear-gradient(to right, #000428, #004e92); 
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    color: white !important;
+}
+
+.footer-items {
+    padding: 100px 0;
+    margin: -10px;
+
+}
+
+.nav-footer a{
+   color: white !important;
+  
+}
+
+.quarto-container {
+  margin-top: 100px !important;
+}
+
+
+li.nav-item {
+  text-align: center !important;
+}
+
+.navbar-brand{
+  color: #c0041c !important;
+}
+
+
+.navbar .navbar-nav .nav-link.active {
+    font-weight: 700 !important;
+    color: #c0041c !important;
+}
+
+.navbar-brand, .navbar-nav li.nav-item a.nav-link {
+    height: inherit;
+    line-height: 30px !important;
+    padding-top: 7px !important;
+    padding-bottom: 5px !important;
+}
+
+a.nav-link,
+a.nav-link:after,
+a.nav-link:before {
+  transition: all .5s;
+}
+
+a.nav-link {
+  position: relative;
+}
+
+a.nav-link:after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 0%;
+  content: '.'; /* make invisible, dot beneath links */
+  color: transparent;
+  background: #c0041c;
+  height: 2px;
+}
+
+a.nav-link:hover:after {
+  width: 70%;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover {
+    color: #c0041c !important;
+}
+
+
+
+p > a:hover {
+  color: #c0041c;
+  text-decoration: none;
+}
+
+p > a {
+  position: relative;
+  color: #c0041c;
+  text-decoration: none;
+}
+
+ul.share li a {
+    background-color: #c0041c;
+}
+
+p > a::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #e14675;
+  visibility: hidden;
+  transform: scaleX(0);
+  transition: all 0.3s ease-in-out 0s;
+}
+
+a {
+  color: #e14675;
+}
+
+a:hover {
+  color: #e14675;
+}
+
+p > a:hover::before {
+  visibility: visible;
+  transform: scaleX(1);
+}
+
+.quarto-title-meta {
+  margin-top: 20px;
+}
+
+.quarto.column-body {
+  color: white !important;
+}
+
+h1.title .quarto.column-body  {
+  color: white !important;
+}
+
+.quarto-title-banner {
+  margin-block-end: 1rem;
+  position: relative;
+  margin-top: 60px;
+  height: 85%;
+  background: linear-gradient(to right, #000428, #004e92); 
+  color: white !important;
+}

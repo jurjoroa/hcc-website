@@ -1,0 +1,226 @@
+---
+title: "Members"
+filters:
+   - lightbox
+lightbox: 
+  match: auto
+  effect: fade
+  desc-position: left
+  css-class: "lightwidth"
+---
+
+About this site
+
+```{r}
+1 + 1
+```
+
+<hr>
+
+
+# Who are we? {auto-animate="true" auto-animate-easing="ease-in-out" background="#517699" style="text-align: left;"}
+
+<!--<center>Instructors</center>
+<!--
+<!--::: columns
+<!--::: {.column width="20%"}
+<!--<center>
+<!--
+<!--```{r, echo=FALSE, out.width="70%", out.height="70%", out.extra='class="myimg"'}
+<!--knitr::include_graphics("Presentation/images/gabriel.jpeg")
+<!--```
+<!--
+<!--Gabriel Zech
+<!--
+<!--</brxsmall>
+<!--
+<!--MDS 2023
+<!--
+<!--</brxsmall>
+<!--
+<!--Project Manager
+<!--
+<!--</brxsmall>
+<!--
+<!--(Data Science Lab) Bertelsmann Stiftung
+<!--
+<!--</center>
+<!--:::
+<!--
+<!--::: {.column width="20%"}
+<!--<center>
+<!--
+<!--```{r, echo=FALSE, out.width="70%", out.height="70%", out.extra='class="myimg"'}
+<!--knitr::include_graphics("Presentation/images/carmen.jpeg")
+<!--```
+<!--
+<!--Carmen Garro
+<!--
+<!--</brxsmall>
+<!--
+<!--MDS
+<!--
+<!--</brxsmall>
+<!--
+<!--2024
+<!--
+<!--</center>
+<!--:::
+<!--
+<!--::: {.column width="20%"}
+<!--<center>
+<!--
+<!--```{r, echo=FALSE, out.width="70%", out.height="70%", out.extra='class="myimg"'}
+<!--knitr::include_graphics("Presentation/images/jorge.jpeg")
+<!--```
+<!--
+<!--Jorge Roa
+<!--
+<!--</brxsmall>
+<!--
+<!--MDS
+<!--
+<!--</brxsmall>
+<!--
+<!--2024
+<!--
+<!--</center>
+<!--:::
+<!--
+<!--::: {.column width="20%"}
+<!--<center>
+<!--
+<!--```{r, echo=FALSE, out.width="70%", out.height="70%", out.extra='class="myimg"'}
+<!--knitr::include_graphics("Presentation/images/lukas.jpeg")
+<!--```
+<!--
+<!--Lukas Warode
+<!--
+<!--</brxsmall>
+<!--
+<!--MDS 2023
+<!--
+<!--Data Researcher
+<!--
+<!--</brxsmall>
+<!--
+<!--POLITICO
+<!--
+<!--</center>
+<!--:::
+<!--
+<!--::: {.column width="20%"}
+<!--<center>
+<!--
+<!--```{r, echo=FALSE, out.width="70%", out.height="70%", out.extra='class="myimg"'}
+<!--knitr::include_graphics("Presentation/images/rodrigo.png")
+<!--```
+<!--
+<!--Rodrigo Dornelles
+<!--
+<!--</brxsmall>
+<!--
+<!--MDS
+<!--
+<!--</brxsmall>
+<!--
+<!--2024
+<!--
+<!--</center>
+<!--:::
+<!--:::
+<!--
+<!--
+<!--<div class="gallery">
+<!--  <a target="_blank" href="img_5terre.jpg">
+<!--    <img src="Presentation/images/lukas.jpeg" alt="Cinque Terre" width="100%" height="100%">
+<!--  </a>
+<!--  <div class="desc">Add a description of the image here</div>
+<!--</div>
+<!--
+<!--<div class="gallery">
+<!--  <a target="_blank" href="img_forest.jpg">
+<!--    <img src="Presentation/images/lukas.jpeg" alt="Forest" width="100%" height="100%">
+<!--  </a>
+<!--  <div class="desc">Add a description of the image here</div>
+<!--</div>
+<!--
+<!--<div class="gallery">
+<!--  <a target="_blank" href="img_lights.jpg">
+<!--    <img src="Presentation/images/lukas.jpeg" alt="Northern Lights" width="100%" height="100%">
+<!--  </a>
+<!--  <div class="desc">Add a description of the image here</div>
+<!--</div>
+<!--
+<!--<div class="gallery">
+<!--  <a target="_blank" href="img_mountains.jpg">
+<!--    <img src="Presentation/images/lukas.jpeg" alt="Mountains" width="100%" height="100%">
+<!--  </a>
+<!--  <div class="desc">Add a description of the image here</div>
+<!--</div>
+<!--
+
+<!-- <!-- The grid: four columns -->
+<!--<div class="row">
+<!--  <div class="column">
+<!--    <img src="Presentation/images/lukas.jpeg" alt="Nature" onclick="myFunction(this);">
+<!--  </div>
+<!--  <div class="column">
+<!--    <img src="Presentation/images/lukas.jpeg" alt="Snow" onclick="myFunction(this);">
+<!--  </div>
+<!--  <div class="column">
+<!--    <img src="iPresentation/images/lukas.jpeg" alt="Mountains" onclick="myFunction(this);">
+<!--  </div>
+<!--  <div class="column">
+<!--    <img src="Presentation/images/lukas.jpeg" alt="Lights" onclick="myFunction(this);">
+<!--  </div>
+<!--</div>
+<!--
+<!--<!-- The expanding image container -->
+<!--<div class="container">
+<!--  <!-- Close the image -->
+<!--  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+<!--
+<!--  <!-- Expanded image -->
+<!--  <img id="expandedImg" style="width:100%">
+<!--
+<!--  <!-- Image text -->
+<!--  <div id="imgtext"></div>
+<!--</div> 
+<!--
+<!-- -->
+
+::: columns
+::: {.column width="45%"}
+
+![A Lovely Image](Presentation/images/lukas.jpeg){group="my-gallery" description="Oak Bluffs is famous for its Gingerbread cottages, busy town center, and party like atmosphere."}
+
+{{< fa envelope title="Email" >}} 
+
+{{< fa brands twitter title="Twitter" >}} [damoncroberts](https://twitter.com/damoncroberts)
+
+{{< fa brands github title="Github" >}} [DamonCharlesRoberts](https://github.com/damoncharlesroberts)
+
+{{< fa clock title="Office Hours" >}} Wednesdays from 12:15 - 2:15 pm Mountain
+
+{{< fa building-columns title="Office" >}} Ketchum Arts & Sciences, Office 382, Boulder, CO 80309
+
+:::
+::: {.column width="10%"}
+
+
+:::
+::: {.column width="45%"}
+
+![Another Lovely Image](Presentation/images/lukas.jpeg){group="my-gallery" description="Oak Bluffs is famous for its Gingerbread cottages, busy town center, and party like atmosphere."}
+
+:::
+
+::: {.column width="40%"}
+
+
+![The Last Lovely Image](Presentation/images/lukas.jpeg){group="my-gallery" description="Oak Bluffs is famous for its Gingerbread cottages, busy town center, and party like atmosphere."}
+
+:::
+
+:::
