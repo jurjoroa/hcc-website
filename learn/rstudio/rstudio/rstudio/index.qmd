@@ -18,7 +18,11 @@ I'm writing this really quick, from the hotel room, for anyone interested to see
 
 
 ```{=html}
-<iframe width="800" height="500" src="https://hertie-coding-club.shinyapps.io/HCC-initial-survey/" title="Quarto Documentation"></iframe>
+<iframe frameborder="0"
+        scrolling="no" 
+        style="overflow:hidden;height:100%;width:100%" 
+        height="100%" 
+     width="100%" src="https://hertie-coding-club.shinyapps.io/HCC-initial-survey/" title="Quarto Documentation"></iframe>
 ```
 
 

@@ -34,7 +34,7 @@ website:
             href: learn/rstudio.qmd
             
       - icon: fingerprint  
-        href: register.html
+        href: register.qmd
         text: "Register"
       - icon: info-square-fill
         href: about.qmd

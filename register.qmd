@@ -4,11 +4,17 @@ title: "Register"
 
 About this site
 
-//{{< li xxdqfhbi trigger=loop delay=4000 >}}
+{{< li xxdqfhbi trigger=loop delay=4000 >}}
+
 
 ```{=html}
-<iframe width="100%" height="100%" scrolling="yes" overflow="auto" src="https://hertie-coding-club.shinyapps.io/HCC-initial-survey/" title="Quarto Documentation"></iframe>
+<iframe frameborder="0"
+        scrolling="no" 
+        style="overflow:hidden;height:100%;width:100%" 
+        height="100%" 
+     width="100%" src="https://hertie-coding-club.shinyapps.io/HCC-initial-survey/" title="Quarto Documentation"></iframe>
 ```
+
 
 
 
