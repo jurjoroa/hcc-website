@@ -152,24 +152,6 @@ background: linear-gradient(to right, #000428, #004e92);
 }
 
 
-.nav-footer{
-background: linear-gradient(
-  180deg,
-  hsl(208deg 100% 21%) 0%,
-  hsl(209deg 71% 26%) 38%,
-  hsl(209deg 56% 31%) 54%,
-  hsl(208deg 46% 36%) 64%,
-  hsl(209deg 36% 42%) 71%,
-  hsl(209deg 29% 47%) 76%,
-  hsl(209deg 26% 52%) 80%,
-  hsl(209deg 26% 58%) 82%,
-  hsl(209deg 26% 63%) 85%,
-  hsl(209deg 26% 68%) 87%,
-  hsl(209deg 26% 79%) 90%,
-  hsl(210deg 26% 89%) 94%,
-  hsl(0deg 0% 100%) 100%
-); 
-}
 
 .quarto-container {
   margin-top: 100px !important;
@@ -218,7 +200,13 @@ a.nav-link:after {
   color: transparent;
   background: #c0041c;
   height: 2px;
+
 }
+
+a:not(.lightbox) {
+  color: white;
+}
+
 
 a.nav-link:hover:after {
   width: 70%;
@@ -236,10 +224,16 @@ p > a:hover {
 }
 
 p > a {
+  color: #c0041c;
+  text-decoration: none;
+}
+
+p > a:not(.lightbox) {
   position: relative;
   color: #c0041c;
   text-decoration: none;
 }
+
 
 ul.share li a {
     background-color: #c0041c;
@@ -252,18 +246,18 @@ p > a::before {
   height: 2px;
   bottom: 0;
   left: 0;
-  background-color: #e14675;
+  background-color: #c0041c;
   visibility: hidden;
   transform: scaleX(0);
   transition: all 0.3s ease-in-out 0s;
 }
 
 a {
-  color: #e14675;
+  color: #c0041c;
 }
 
 a:hover {
-  color: #e14675;
+  color: #c0041c;
 }
 
 p > a:hover::before {
