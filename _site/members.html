@@ -440,7 +440,7 @@ party
 
 like
 
-atmosphere." title="A Lovely Image" data-gallery="my-gallery"><img src="Presentation/images/lukas.jpeg" class="img-fluid figure-img"></a></p>
+atmosphere." data-gallery="my-gallery" title="A Lovely Image"><img src="Presentation/images/lukas.jpeg" class="img-fluid figure-img"></a></p>
 <p></p><figcaption class="figure-caption">A Lovely Image</figcaption><p></p>
 </figure>
 </div>
@@ -482,7 +482,7 @@ party
 
 like
 
-atmosphere." title="Another Lovely Image" data-gallery="my-gallery"><img src="Presentation/images/lukas.jpeg" class="img-fluid figure-img"></a></p>
+atmosphere." data-gallery="my-gallery" title="Another Lovely Image"><img src="Presentation/images/lukas.jpeg" class="img-fluid figure-img"></a></p>
 <p></p><figcaption class="figure-caption">Another Lovely Image</figcaption><p></p>
 </figure>
 </div>
@@ -517,12 +517,17 @@ party
 
 like
 
-atmosphere." title="The Last Lovely Image" data-gallery="my-gallery"><img src="Presentation/images/lukas.jpeg" class="img-fluid figure-img"></a></p>
+atmosphere." data-gallery="my-gallery" title="The Last Lovely Image"><img src="Presentation/images/lukas.jpeg" class="img-fluid figure-img"></a></p>
 <p></p><figcaption class="figure-caption">The Last Lovely Image</figcaption><p></p>
 </figure>
 </div>
 </div>
 </div>
+<p><i class="fa-solid fa-envelope" title="Email" aria-label="envelope"></i></p>
+<p><i class="fa-brands fa-twitter" title="Twitter" aria-label="twitter"></i> <a href="https://twitter.com/damoncroberts">damoncroberts</a></p>
+<p><i class="fa-brands fa-github" title="Github" aria-label="github"></i> <a href="https://github.com/damoncharlesroberts">DamonCharlesRoberts</a></p>
+<p><i class="fa-solid fa-clock" title="Office Hours" aria-label="clock"></i> Wednesdays from 12:15 - 2:15 pm Mountain</p>
+<p><i class="fa-solid fa-building-columns" title="Office" aria-label="building-columns"></i> Ketchum Arts &amp; Sciences, Office 382, Boulder, CO 80309</p>
 
 
 </section>
@@ -793,10 +798,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
-      <div class="nav-footer-center">
-        <ul class="footer-items list-unstyled">
-    <li class="nav-item">
-    <a class="nav-link" href="https://github.com/beatrizmilz/"><i class="fa-brands fa-r-project fa-lg" aria-label="r-project"></i> language |</a>
+    <div class="nav-footer-left">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/beatrizmilz/">
+      <i class="bi bi-{{< fa brands r-project size=lg >}} language | " role="img">
+</i> 
+    </a>
   </li>  
     <li class="nav-item">
     <a class="nav-link" href="https://twitter.com/BeaMilz"><i class="fa-brands fa-r-project fa-lg" aria-label="r-project"></i> language |</a>
@@ -805,10 +813,26 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     <a class="nav-link" href="mailto:milz.bea@gmail.com"><i class="fa-brands fa-r-project fa-lg" aria-label="r-project"></i> language |</a>
   </li>  
 </ul>
-      </div>
+    </div>   
+    <div class="nav-footer-right">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/beatrizmilz/">
+      <i class="bi bi-{{< fa brands r-project size=lg >}} language | " role="img">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item">
+    <a class="nav-link" href="https://twitter.com/BeaMilz"><i class="fa-brands fa-r-project fa-lg" aria-label="r-project"></i> language |</a>
+  </li>  
+    <li class="nav-item">
+    <a class="nav-link" href="mailto:milz.bea@gmail.com"><i class="fa-brands fa-r-project fa-lg" aria-label="r-project"></i> language |</a>
+  </li>  
+</ul>
+    </div>
   </div>
 </footer>
-<script>var lightboxQuarto = GLightbox({"closeEffect":"fade","selector":".lightbox","descPosition":"left","loop":true,"skin":"lightwidth","openEffect":"fade"});</script>
+<script>var lightboxQuarto = GLightbox({"openEffect":"fade","selector":".lightbox","descPosition":"left","skin":"lightwidth","closeEffect":"fade","loop":true});</script>
 
 
 

@@ -3,13 +3,22 @@ website:
   site-url: https://nasa-openscapes.github.io/
   favicon: images/hcc.png
   page-footer:
-    center: 
-      - text: "{{< fa brands r-project size=lg >}} language | "
+    background: "#004e92"
+    left: 
+      - icon: "{{< fa brands r-project size=lg >}} language | "
         href: https://github.com/beatrizmilz/
       - text: "{{< fa brands r-project size=lg >}} language |"
         href: https://twitter.com/BeaMilz
       - text: "{{< fa brands r-project size=lg >}} language |"
         href: mailto:milz.bea@gmail.com
+    right: 
+      - icon: "{{< fa brands r-project size=lg >}} language | "
+        href: https://github.com/beatrizmilz/
+      - text: "{{< fa brands r-project size=lg >}} language |"
+        href: https://twitter.com/BeaMilz
+      - text: "{{< fa brands r-project size=lg >}} language |"
+        href: mailto:milz.bea@gmail.com
+
 
   twitter-card:
     creator: "@beamilz"

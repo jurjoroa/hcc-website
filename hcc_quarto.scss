@@ -73,18 +73,6 @@
 /*
 /*  */
 
-function myFunction(imgs) {
-  // Get the expanded image
-  var expandImg = document.getElementById("expandedImg");
-  // Get the image text
-  var imgText = document.getElementById("imgtext");
-  // Use the same src in the expanded image as the image being clicked on from the grid
-  expandImg.src = imgs.src;
-  // Use the value of the alt attribute of the clickable image as text inside the expanded image
-  imgText.innerHTML = imgs.alt;
-  // Show the container element (hidden with CSS)
-  expandImg.parentElement.style.display = "block";
-} 
 
 
     .navbar-brand > img {
@@ -130,6 +118,8 @@ hr {
 }
 
 
+
+
 .dropdown-menu .dropdown-item {
 text-align: center;
 background: linear-gradient(to right, #000428, #004e92); 
@@ -161,22 +151,24 @@ background: linear-gradient(to right, #000428, #004e92);
      box-shadow: none !important;
 }
 
-.nav-footer {
-    background: linear-gradient(to right, #000428, #004e92); 
-    margin-top: auto;
-    width: 100%;
-    color: white !important;
-}
 
-.footer-items {
-    padding: 100px 0;
-    margin: -10px;
-
-}
-
-.nav-footer a{
-   color: white !important;
-  
+.nav-footer{
+background: linear-gradient(
+  180deg,
+  hsl(208deg 100% 21%) 0%,
+  hsl(209deg 71% 26%) 38%,
+  hsl(209deg 56% 31%) 54%,
+  hsl(208deg 46% 36%) 64%,
+  hsl(209deg 36% 42%) 71%,
+  hsl(209deg 29% 47%) 76%,
+  hsl(209deg 26% 52%) 80%,
+  hsl(209deg 26% 58%) 82%,
+  hsl(209deg 26% 63%) 85%,
+  hsl(209deg 26% 68%) 87%,
+  hsl(209deg 26% 79%) 90%,
+  hsl(210deg 26% 89%) 94%,
+  hsl(0deg 0% 100%) 100%
+); 
 }
 
 .quarto-container {
@@ -286,6 +278,7 @@ p > a:hover::before {
 .quarto.column-body {
   color: white !important;
 }
+
 
 h1.title .quarto.column-body  {
   color: white !important;

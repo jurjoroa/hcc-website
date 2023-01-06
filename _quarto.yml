@@ -7,6 +7,4 @@ metadata-files:
   - _format.yml
   
   
-execute:
-  freeze: auto
 
