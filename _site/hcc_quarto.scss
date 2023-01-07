@@ -204,8 +204,9 @@ a.nav-link:after {
 }
 
 a:not(.lightbox) {
-  color: white;
+  color: #757575;
 }
+
 
 
 a.nav-link:hover:after {
@@ -216,6 +217,11 @@ a.nav-link:hover:after {
     color: #c0041c !important;
 }
 
+
+.footer{
+  border-top: solid #c0041c;
+  
+}
 
 
 p > a:hover {
