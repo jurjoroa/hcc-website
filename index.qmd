@@ -1,6 +1,8 @@
 ---
 title: "Hertie Coding Club"
+title-block-banner: true
 ---
+
 
 This is a Quarto website.
 

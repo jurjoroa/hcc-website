@@ -67,7 +67,7 @@ ul.task-list li input[type="checkbox"] {
 <style>html{ scroll-behavior: smooth; }</style>
 
 
-<link rel="stylesheet" href="../../../../hcc_quarto.scss">
+<link rel="stylesheet" href="../../../../hcc_style_01_07.css">
 <meta name="twitter:title" content="How important is GitHub Actions to RStudio/Posit?">
 <meta name="twitter:description" content="Code for a plot in my talk at rstudio::conf 2022!">
 <meta name="twitter:creator" content="@beamilz">
@@ -183,7 +183,6 @@ ul.task-list li input[type="checkbox"] {
 
 <p>This post is a complementary material for <a href="https://beamilz.com/talks/en/2022-rstudio-conf/">my talk at rstudio::conf 2022</a> (which is happening <strong>TODAY!!!</strong>)!</p>
 <p>I’m writing this really quick, from the hotel room, for anyone interested to see the code used to create the plot that it is on my talk:</p>
-<iframe width="800" height="500" src="https://hertie-coding-club.shinyapps.io/HCC-initial-survey/" title="Quarto Documentation"></iframe>
 
 
 
@@ -453,10 +452,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
-      <div class="nav-footer-center">
-        <ul class="footer-items list-unstyled">
-    <li class="nav-item">
-    <a class="nav-link" href="https://github.com/beatrizmilz/"><i class="fa-brands fa-r-project fa-lg" aria-label="r-project"></i> language |</a>
+    <div class="nav-footer-left">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/beatrizmilz/">
+      <i class="bi bi-{{< fa brands r-project size=lg >}} language | " role="img">
+</i> 
+    </a>
   </li>  
     <li class="nav-item">
     <a class="nav-link" href="https://twitter.com/BeaMilz"><i class="fa-brands fa-r-project fa-lg" aria-label="r-project"></i> language |</a>
@@ -465,7 +467,23 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     <a class="nav-link" href="mailto:milz.bea@gmail.com"><i class="fa-brands fa-r-project fa-lg" aria-label="r-project"></i> language |</a>
   </li>  
 </ul>
-      </div>
+    </div>   
+    <div class="nav-footer-right">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/beatrizmilz/">
+      <i class="bi bi-{{< fa brands r-project size=lg >}} language | " role="img">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item">
+    <a class="nav-link" href="https://twitter.com/BeaMilz"><i class="fa-brands fa-r-project fa-lg" aria-label="r-project"></i> language |</a>
+  </li>  
+    <li class="nav-item">
+    <a class="nav-link" href="mailto:milz.bea@gmail.com"><i class="fa-brands fa-r-project fa-lg" aria-label="r-project"></i> language |</a>
+  </li>  
+</ul>
+    </div>
   </div>
 </footer>
 
