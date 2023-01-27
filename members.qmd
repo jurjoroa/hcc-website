@@ -7,6 +7,11 @@ lightbox:
   effect: fade
   desc-position: left
   css-class: "lightwidth"
+  
+format:
+  html:  
+    include-in-header:
+      text: "<script src='js/anime_photos.js'></script>"
 ---
 
 About this site
@@ -190,20 +195,29 @@ About this site
 <!--
 <!-- -->
 
+
+
 ::: columns
 ::: {.column width="45%"}
 
+<div class="inline-photo show-on-scroll"  style = "font-size: 12px">
+
 ![A Lovely Image](Presentation/images/lukas.jpeg){group="my-gallery" description="Oak Bluffs is famous for its Gingerbread cottages, busy town center, and party like atmosphere."}
+
+<div class = "em-wide">
+
+
 
 {{< fa envelope title="Email" >}} 
 
-{{< fa brands twitter title="Twitter" >}} [damoncroberts](https://twitter.com/damoncroberts)
+{{< fa brands twitter title="Twitter(https://twitter.com/damoncroberts)" >}}
 
-{{< fa brands github title="Github" >}} [DamonCharlesRoberts](https://github.com/damoncharlesroberts)
+{{< fa brands github title="Github(https://github.com/damoncharlesroberts)" >}}
 
-{{< fa clock title="Office Hours" >}} Wednesdays from 12:15 - 2:15 pm Mountain
 
-{{< fa building-columns title="Office" >}} Ketchum Arts & Sciences, Office 382, Boulder, CO 80309
+</div> 
+
+</div> 
 
 :::
 ::: {.column width="10%"}
@@ -212,14 +226,23 @@ About this site
 :::
 ::: {.column width="45%"}
 
+<div class="inline-photo show-on-scroll"  style = "font-size: 5px">
+
 ![Another Lovely Image](Presentation/images/lukas.jpeg){group="my-gallery" description="Oak Bluffs is famous for its Gingerbread cottages, busy town center, and party like atmosphere."}
+
+
+</div> 
 
 :::
 
 ::: {.column width="40%"}
 
 
+<div class="inline-photo show-on-scroll" style = "font-size: 5px">
+
 ![The Last Lovely Image](Presentation/images/lukas.jpeg){group="my-gallery" description="Oak Bluffs is famous for its Gingerbread cottages, busy town center, and party like atmosphere."}
+
+</div> 
 
 :::
 
@@ -237,3 +260,19 @@ About this site
 {{< fa clock title="Office Hours" >}} Wednesdays from 12:15 - 2:15 pm Mountain
 
 {{< fa building-columns title="Office" >}} Ketchum Arts & Sciences, Office 382, Boulder, CO 80309
+
+
+{{< animate fadeInDown "Some text" >}}
+
+
+{{< elevator >}}
+
+
+
+
+
+<img src="https://cssanimation.rocks/levelup/public/03/02-end/images/pizza.jpg" class="inline-photo show-on-scroll">
+
+<script src='js/anime_photos.js'></script>
+
+

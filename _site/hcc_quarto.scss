@@ -74,9 +74,59 @@
 /*  */
 
 
+#quarto-document-content {
+  width: 6000px;
+}
+
+#quarto-margin-sidebar {
+  margin-right: -600px;
+  margin-left: 500px;
+}
+
+
+
+.scrolling-words-container {
+  display: flex;
+  align-items: center;
+  font-size: 2rem;
+  font-weight: 600; 
+}
+
+.scrolling-words-box {
+  height: 3rem;
+  margin: auto;
+  overflow: hidden;
+  
+  ul {
+    margin: 0 0.625rem;
+    padding: 0;
+    animation: scrollUp 4s infinite;
+    li {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      height: 3rem;
+      list-style: none; 
+    }
+  }
+}
+
+// Variables
+$item-count: 5;
+
+@keyframes scrollUp {
+  @for $i from 1 through ($item-count - 1) {
+    #{($i * 25) - 10%}, #{$i * 25%} {
+      transform: translateY((-100% / $item-count) * $i);
+    }
+  }
+}
+
+
+
 
     .navbar-brand > img {
-      max-height: 270px;
+      max-height: 400px;
       max-width: 200px;
       width: auto;
     }
@@ -284,11 +334,46 @@ h1.title .quarto.column-body  {
   color: white !important;
 }
 
-.quarto-title-banner {
+div > h1.title {
+  color: white !important;
+}
+
+
+ .quarto-title-banner{
   margin-block-end: 1rem;
   position: relative;
   margin-top: 60px;
   height: 85%;
   background: linear-gradient(to right, #000428, #004e92); 
   color: white !important;
+  background-color:  white !important;
+  
+}
+
+
+
+
+.inline-photo {
+  border: 1em solid #fff;
+  border-bottom: 4em solid #fff;
+  border-radius: .25em;
+  box-shadow: 1em 1em 2em .25em rgba(0,0,0,.2);
+  margin: 2em auto;
+  opacity: 0;
+  transform: translateY(4em); //rotateZ(-5deg);
+  transition: transform 4s .25s cubic-bezier(0,1,.3,1),
+              opacity .3s .25s ease-out;
+  max-width: 600px;
+  width: 90%;
+  will-change: transform, opacity;
+}
+
+.inline-photo.is-visible {
+  opacity: 1;
+  transform: rotateZ(0deg);
+}
+
+
+.em-wide {
+  line-height: 1%;
 }

@@ -5,7 +5,7 @@ format:
           light: spacelab
           dark: cyborg
           
-    css: hcc_style_01_07.css
+    css: hcc_quarto.scss
     toc: true
     code-link: true
     link-external-newwindow: true
