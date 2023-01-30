@@ -25,6 +25,14 @@ About this site
 
 # Who are we? {auto-animate="true" auto-animate-easing="ease-in-out" background="#517699" style="text-align: left;"}
 
+   <header class="header show-on-scroll">
+      <div class="main-photo"></div>
+      <h1 class="heading" style = "text-align: center;">When the moon hits your eye</h1>
+     </header>
+
+
+
+
 <!--<center>Instructors</center>
 <!--
 <!--::: columns
@@ -273,6 +281,20 @@ About this site
 
 <img src="https://cssanimation.rocks/levelup/public/03/02-end/images/pizza.jpg" class="inline-photo show-on-scroll">
 
-<script src='js/anime_photos.js'></script>
+```{=html}
 
+<div class="scrolling-words-container">
+  <div class="scrolling-words-box">
+    <ul>
+      <li style="color: #ea4335">Code</li>
+      <li style="color: #4285f4">Build</li>
+      <li style="color: #34a853">Create</li>
+      <li style="color: #fbbc04">Design</li>
+      <li style="color: #ea4335">Code</li>
+    </ul>
+  </div>
+  <span style="color: #5f6368">for everyone</span>
+</div>
+
+<script src='js/anime_photos.js'></script>
 
