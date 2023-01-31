@@ -265,19 +265,8 @@ trgrtgrtg
 
 :::
 
-<div class="inline-photo show-on-scroll" style = "font-size: 5px">
 
-```{r}
-1 + 1
-```
-
-</div> 
-
-
-<img src="Presentation/images/lukas.jpeg" class="inline-photo show-on-scroll">
-
-
-<img src="Presentation/images/lukas.jpeg" class="inline-photo show-on-scroll">
+<img src="Presentation/images/lukas.jpeg" class="inline-photo show-on-scroll pic_grid">          <img src="Presentation/images/lukas.jpeg" class="inline-photo show-on-scroll pic_grid">
 
 
 
