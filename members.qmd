@@ -9,7 +9,7 @@ lightbox:
   css-class: "lightwidth"
   
 format:
-  html:  
+  html:
     include-in-header:
       text: "<script src='js/anime_photos.js'></script>"
 ---
@@ -25,10 +25,19 @@ About this site
 
 # Who are we? {auto-animate="true" auto-animate-easing="ease-in-out" background="#517699" style="text-align: left;"}
 
-   <header class="header show-on-scroll">
-      <div class="main-photo"></div>
-      <h1 class="heading" style = "text-align: center;">When the moon hits your eye</h1>
-     </header>
+trgrtgrtg
+
+
+
+
+
+
+ <header class="header show-on-scroll">
+   
+  <h1 class="heading"> When the moon hits your eye  </h1>
+        
+  </header>
+     
 
 
 
@@ -255,6 +264,20 @@ About this site
 :::
 
 :::
+
+<div class="inline-photo show-on-scroll" style = "font-size: 5px">
+
+```{r}
+1 + 1
+```
+
+</div> 
+
+
+<img src="Presentation/images/lukas.jpeg" class="inline-photo show-on-scroll">
+
+
+<img src="Presentation/images/lukas.jpeg" class="inline-photo show-on-scroll">
 
 
 

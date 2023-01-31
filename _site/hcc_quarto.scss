@@ -79,10 +79,6 @@
   width: 6000px;
 }
 
-#quarto-margin-sidebar {
-  margin-right: -600px;
-  margin-left: 500px;
-}
 
 
 
@@ -358,9 +354,8 @@ div > h1.title {
   border: 1em solid #fff;
   border-bottom: 4em solid #fff;
   border-radius: .25em;
-  box-shadow: 1em 1em 2em .25em rgba(0,0,0,.2);
+  box-shadow: 1em 1em 2em .25em #d56679;
   margin: 2em auto;
-  opacity: 0;
   transform: translateY(4em); //rotateZ(-5deg);
   transition: transform 4s .25s cubic-bezier(0,1,.3,1),
               opacity .3s .25s ease-out;
@@ -380,22 +375,23 @@ div > h1.title {
 }
 
 
-header:not(.headroom) {
+
+header:not(.headroom):not(.quarto-title-block) {
   opacity: 0;
   transition: opacity .5s .25s ease-out;
 }
 
-header:not(.headroom).is-visible {
+header:not(.headroom):not(.quarto-title-block).is-visible {
   opacity: 1;
 }
 
 .heading {
-  transform: translate(-50%, calc(-50% + 1em));
+  transform: translate(15%, calc(15% + 1em));
 }
 
 
 .is-visible .heading {
-  transform: translate(-50%, -50%);
+  transform: translate(15%, 15%);
 }
 
 
@@ -404,6 +400,7 @@ header:not(.headroom).is-visible {
   transition: transform 4s .25s cubic-bezier(0,1,.3,1),
               filter 10s 2s ease-out;
   will-change: transform;
+  width: -50%;
 }
 
 
