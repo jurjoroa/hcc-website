@@ -266,7 +266,7 @@ trgrtgrtg
 :::
 
 
-<img src="Presentation/images/lukas.jpeg" class="inline-photo show-on-scroll pic_grid">          <img src="Presentation/images/lukas.jpeg" class="inline-photo show-on-scroll pic_grid">
+<a href="https://pagedart.com"><img src="Presentation/images/lukas.jpeg" class="inline-photo show-on-scroll pic_grid"></a>          <img src="Presentation/images/lukas.jpeg" class="inline-photo show-on-scroll pic_grid">
 
 
 
@@ -291,7 +291,8 @@ trgrtgrtg
 
 
 
-<img src="https://cssanimation.rocks/levelup/public/03/02-end/images/pizza.jpg" class="inline-photo show-on-scroll">
+
+
 
 ```{=html}
 
@@ -309,4 +310,3 @@ trgrtgrtg
 </div>
 
 <script src='js/anime_photos.js'></script>
-

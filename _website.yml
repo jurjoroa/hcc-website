@@ -25,7 +25,7 @@ website:
   navbar:
     logo: images/hcc_bk_white.png
     href: https://openscapes.org
-    collapse-below: md
+    collapse-below: lg
     pinned: true
     right:
       - id: howto
