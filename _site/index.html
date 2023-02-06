@@ -185,6 +185,67 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 
 
+
+
+<div style="
+  flex-direction: column;
+  width: 100%;
+  height: 720px;
+  margin-top: -60px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  overflow: clip; 
+  contain: content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to right, #000428, #004e92); ">
+  <h1>A Web Developer</h1>
+<css-doodle><style>
+    @grid: 50x1 / 50vmin;
+    :container {
+      perspective: 23vmin;
+    }
+    background: @m(
+      @r(200, 240), 
+      radial-gradient(
+        @p(#00b8a9, #f8f3d4, #f6416c, #ffde7d) 15%,
+        transparent 50%
+      ) @r(100%) @r(100%) / @r(1%, 3%) @lr no-repeat
+    );
+
+    @size: 50%;
+    @place-cell: center;
+
+    border-radius: 50%;
+    transform-style: preserve-3d;
+    animation: scale-up 35s linear infinite;
+    animation-delay: calc(@i * -.4s);
+
+    @keyframes scale-up {
+      0% {
+        opacity: 0;
+        transform: translate3d(0, 0, 0) rotate(0);
+      }
+      10% { 
+        opacity: 1; 
+      }
+      95% {
+        transform:
+          translate3d(0, 0, @r(50vmin, 55vmin))
+          rotate(@r(-360deg, 360deg));
+      }
+      100% {
+        opacity: 0;
+        transform: translate3d(0, 0, 1vmin);
+      }
+    }
+  </style></css-doodle>
+</div>
+
+
 <main><div class="intro">
     <h1>A Web Developer</h1>
     <p>I am a web developer and I love to create websites.</p>
@@ -210,7 +271,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     </div>
     <img src="https://images.unsplash.com/photo-1596495578065-6e0763fa1178?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=871&amp;q=80" alt="me">
 </div>
-</main><div class="hero-section">
+</main>
+</div>
+
+<script src="https://unpkg.com/css-doodle@0.33.0/css-doodle.min.js"></script><div class="hero-section">
   <div class="cardg">
     <a class="card" href="#">
       <div class="card__background" style="background-image: url(https://images.unsplash.com/photo-1557177324-56c542165309?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1950&amp;q=80)"></div>
@@ -243,21 +307,6 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 
 
-<div class="layout_grid">
-<p>This is a Quarto website.</p>
-<p>To learn more about Quarto websites visit <a href="https://quarto.org/docs/websites" class="uri">https://quarto.org/docs/websites</a>.</p>
-<div class="cell">
-<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fl">1</span> <span class="op">+</span> <span class="fl">1</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 2</code></pre>
-</div>
-</div>
-<p><i class="fa-solid fa-envelope" title="Email" aria-label="envelope"></i></p>
-<p><i class="fa-brands fa-twitter" title="Twitter" aria-label="twitter"></i> <a href="https://twitter.com/damoncroberts">damoncroberts</a></p>
-<p><i class="fa-brands fa-github" title="Github" aria-label="github"></i> <a href="https://github.com/damoncharlesroberts">DamonCharlesRoberts</a></p>
-<p><i class="fa-solid fa-clock" title="Office Hours" aria-label="clock"></i> Wednesdays from 12:15 - 2:15 pm Mountain</p>
-<p><i class="fa-solid fa-building-columns" title="Office" aria-label="building-columns"></i> Ketchum Arts &amp; Sciences, Office 382, Boulder, CO 80309</p>
-</div>
 <div class="layout" style="font-size: 5px">
 <article><img src="Presentation/images/lukas.jpeg"><img src="Presentation/images/lukas.jpeg"><img src="Presentation/images/lukas.jpeg"><img src="Presentation/images/lukas.jpeg"></article>
 </div>
@@ -265,7 +314,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>This is a Quarto website.</p>
 <p>To learn more about Quarto websites visit <a href="https://quarto.org/docs/websites" class="uri">https://quarto.org/docs/websites</a>.</p>
 <div class="cell">
-<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fl">1</span> <span class="op">+</span> <span class="fl">1</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fl">1</span> <span class="op">+</span> <span class="fl">1</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 2</code></pre>
 </div>
@@ -578,7 +627,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </div>
   </div>
 </footer>
-</div>
 
 
 <script src="site_libs/quarto-html/zenscroll-min.js"></script>

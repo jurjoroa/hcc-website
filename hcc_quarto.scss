@@ -627,6 +627,7 @@ header:not(.headroom):not(.quarto-title-block).is-visible {
 
 
 .hero-sec{
+  width: 100%;
   align-items: flex-start;
   background-image: linear-gradient(15deg, #0f4667 0%, #2a6973 150%);
   display: flex;
@@ -640,7 +641,7 @@ display: grid;
 grid-template-columns: repeat(1, 1fr);
 grid-column-gap: var(--spacing-l);
 grid-row-gap: var(--spacing-l);
-max-width: var(--width-container);
+
 width: 100%;
 border: none; /* add this line */
 }
@@ -649,6 +650,7 @@ border: none; /* add this line */
 .cardg{
 grid-template-columns: repeat(2, 1fr);
 border: none; /* add this line */
+width: 100%;
 }
 }
 
@@ -656,12 +658,14 @@ border: none; /* add this line */
 .cardg{
 grid-template-columns: repeat(4, 1fr);
 border: none; /* add this line */
+width: 100%;
 }
 }
 .card{
 list-style: none;
 position: relative;
 border: none; /* add this line */
+width: 100%;
 }
 
 .card:before{
@@ -672,6 +676,7 @@ border: none; /* add this line */
 }
 
 .card__background{
+  width: 100%;
   background-size: cover;
   background-position: center;
   border-radius: var(--spacing-l);
@@ -698,6 +703,7 @@ border: none; /* add this line */
 
 .card__content{
   left: 0;
+  width:100%;
   padding: var(--spacing-l);
   position: absolute;
   top: 0;
@@ -737,7 +743,6 @@ border: none; /* add this line */
   padding: 0;
   box-sizing: border-box;
 }
-
 
 
 

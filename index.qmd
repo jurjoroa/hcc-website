@@ -4,6 +4,69 @@ page-layout: custom
 ---
 
 ```{=HTML}
+
+
+<div style="
+  flex-direction: column;
+  width: 100%;
+  height: 720px;
+  margin-top: -60px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  overflow: clip; 
+  contain: content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to right, #000428, #004e92); ">
+  <h1>A Web Developer</h1>
+<css-doodle>
+  <style>
+    @grid: 50x1 / 50vmin;
+    :container {
+      perspective: 23vmin;
+    }
+    background: @m(
+      @r(200, 240), 
+      radial-gradient(
+        @p(#00b8a9, #f8f3d4, #f6416c, #ffde7d) 15%,
+        transparent 50%
+      ) @r(100%) @r(100%) / @r(1%, 3%) @lr no-repeat
+    );
+
+    @size: 50%;
+    @place-cell: center;
+
+    border-radius: 50%;
+    transform-style: preserve-3d;
+    animation: scale-up 35s linear infinite;
+    animation-delay: calc(@i * -.4s);
+
+    @keyframes scale-up {
+      0% {
+        opacity: 0;
+        transform: translate3d(0, 0, 0) rotate(0);
+      }
+      10% { 
+        opacity: 1; 
+      }
+      95% {
+        transform:
+          translate3d(0, 0, @r(50vmin, 55vmin))
+          rotate(@r(-360deg, 360deg));
+      }
+      100% {
+        opacity: 0;
+        transform: translate3d(0, 0, 1vmin);
+      }
+    }
+  </style>
+</css-doodle>
+</div>
+
+
 <main>
   <div class="intro">
     <h1>A Web Developer</h1>
@@ -30,9 +93,9 @@ page-layout: custom
     </div>
     <img src="https://images.unsplash.com/photo-1596495578065-6e0763fa1178?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=871&q=80" alt="me">
   </div>
-</main>
+</div>
 
-
+<script src="https://unpkg.com/css-doodle@0.33.0/css-doodle.min.js"></script>
 ```
 
 
@@ -77,31 +140,6 @@ page-layout: custom
 
 
 ```
-
-
-<div class="layout_grid">
-
-This is a Quarto website.
-
-To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
-
-```{r}
-1 + 1
-```
-
-
-{{< fa envelope title="Email" >}} 
-
-{{< fa brands twitter title="Twitter" >}} [damoncroberts](https://twitter.com/damoncroberts)
-
-{{< fa brands github title="Github" >}} [DamonCharlesRoberts](https://github.com/damoncharlesroberts)
-
-{{< fa clock title="Office Hours" >}} Wednesdays from 12:15 - 2:15 pm Mountain
-
-{{< fa building-columns title="Office" >}} Ketchum Arts & Sciences, Office 382, Boulder, CO 80309
-
-</div> 
-
 
 
 <div class="layout" style = "font-size: 5px">
