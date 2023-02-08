@@ -341,7 +341,12 @@ header:not(.headroom):not(.quarto-title-block).is-visible {
   width: -50%;
 }
 
-
+.h1{
+  z-index: -1;
+  position:relative;
+  display:grid;
+  place-items: center;
+}
 
 .intro {
   display: flex;

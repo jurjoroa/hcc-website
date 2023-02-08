@@ -9,7 +9,7 @@ page-layout: custom
 <div style="
   flex-direction: column;
   width: 100%;
-  height: 720px;
+  height: 96vh;
   margin-top: -60px;
   background-size: cover;
   background-position: center;
@@ -21,7 +21,7 @@ page-layout: custom
   align-items: center;
   justify-content: center;
   background: linear-gradient(to right, #000428, #004e92); ">
-  <h1>A Web Developer</h1>
+
 <css-doodle>
   <style>
     @grid: 50x1 / 50vmin;
@@ -64,6 +64,8 @@ page-layout: custom
     }
   </style>
 </css-doodle>
+
+    <h1>Hertie Coding Club</h1>
 </div>
 
 

@@ -60,7 +60,7 @@
     "href": "learn/rstudio.html",
     "title": "Bea Milz",
     "section": "",
-    "text": "Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCode for a plot in my talk at rstudio::conf 2022!\n\n\n\n\nGitHub\n\n\nGitHub Actions\n\n\nAutomations\n\n\nRStudio\n\n\nPosit\n\n\n \n\n\n\n\nJul 28, 2022\n\n\nBeatriz Milz\n\n\n0 min\n\n\n\n\n\n\nNo matching items"
+    "text": "Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCode for a plot in my talk at rstudio::conf 2022!\n\n\n\n\nGitHub\n\n\nGitHub Actions\n\n\nAutomations\n\n\nRStudio\n\n\nPosit\n\n\n \n\n\n\n\nJul 28, 2022\n\n\nBeatriz Milz\n\n\n0 min\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\nGitHub\n\n\nGitHub Actions\n\n\nAutomations\n\n\nRStudio\n\n\nPosit\n\n\n \n\n\n\n\nJul 28, 2022\n\n\nJorge Roa, Fernando Alarid-Escudero\n\n\n4 min\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "learn/rstudio/rstudio/rstudio/index.html",
@@ -82,5 +82,61 @@
     "title": "",
     "section": "page-layout: custom",
     "text": "page-layout: custom\n\n    A Web Developer\n    I am a web developer and I love to create websites.\n    Learn More\n  \n  \n    \n      \n      Projects\n      I have worked on many projects and I am very proud of them. I am a very good developer and I am always looking for new projects.\n    \n    \n      \n      Skills\n      I have a lot of skills and I am very good at them. I am very good at programming and I am always looking for new skills.\n    \n\n  \n  \n    \n      About Me\n      I am a web developer and I love to create websites. I am a very good developer and I am always looking for new projects. I am a very good developer and I am always looking for new projects.\n    \n    \n\n\n\n\n\nThis is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites.\n\n1 + 1\n\n[1] 2\n\n\n\n damoncroberts\n DamonCharlesRoberts\n Wednesdays from 12:15 - 2:15 pm Mountain\n Ketchum Arts & Sciences, Office 382, Boulder, CO 80309"
+  },
+  {
+    "objectID": "learn/rstudio/rstudio/rstudio/thread.html",
+    "href": "learn/rstudio/rstudio/rstudio/thread.html",
+    "title": "Enable Multithread with data.table in Mac/Intel chips",
+    "section": "",
+    "text": "This document shows you how we can enable the use of multiple cores on Macs with Intel/Apple silicon chips (M1 and M2).\nIf we load data.table library in  studio, this message will appear in your console:\nAs you can see, OpenMP support is needed to use multiple cores in Macs. Therefore, we must install those packages through the terminal and set the required paths to run OpenMP."
+  },
+  {
+    "objectID": "learn/rstudio/rstudio/rstudio/thread.html#install-llvm",
+    "href": "learn/rstudio/rstudio/rstudio/thread.html#install-llvm",
+    "title": "Enable Multithread with data.table in Mac/Intel chips",
+    "section": "Install llvm",
+    "text": "Install llvm\nWe need to install the llvm package to access the clang compiler, which helps us to set multithreading.\n\nbrew install llvm\n\n\n\n\n \n\n\n\n\n\n\nbrew install llvm\n\n\n\n\n\nOnce the installation is finished, we should see this screen in the terminal."
+  },
+  {
+    "objectID": "learn/rstudio/rstudio/rstudio/thread.html#install-libopenmp",
+    "href": "learn/rstudio/rstudio/rstudio/thread.html#install-libopenmp",
+    "title": "Enable Multithread with data.table in Mac/Intel chips",
+    "section": "Install libopenmp",
+    "text": "Install libopenmp\n\nbrew install libopenmp\n\nThis is the screen that you should see once the installation is done."
+  },
+  {
+    "objectID": "learn/rstudio/rstudio/rstudio/thread.html#install-libopenmpt",
+    "href": "learn/rstudio/rstudio/rstudio/thread.html#install-libopenmpt",
+    "title": "Enable Multithread with data.table in Mac/Intel chips",
+    "section": "Install libopenmpt",
+    "text": "Install libopenmpt\n\nbrew install libopenmpt\n\nThis is the screen that you should see once the installation is done."
+  },
+  {
+    "objectID": "learn/rstudio/rstudio/rstudio/thread.html#install-gcc",
+    "href": "learn/rstudio/rstudio/rstudio/thread.html#install-gcc",
+    "title": "Enable Multithread with data.table in Mac/Intel chips",
+    "section": "Install gcc",
+    "text": "Install gcc\n\nbrew install gcc\n\nThis is the screen that you should see once the installation is done."
+  },
+  {
+    "objectID": "learn/rstudio/rstudio/rstudio/thread.html#install-cask-openmtp",
+    "href": "learn/rstudio/rstudio/rstudio/thread.html#install-cask-openmtp",
+    "title": "Enable Multithread with data.table in Mac/Intel chips",
+    "section": "Install –cask openmtp",
+    "text": "Install –cask openmtp\n\nbrew install --cask openmtp\n\nThis is the screen that you should see once the installation is done."
+  },
+  {
+    "objectID": "learn/rstudio/rstudio/rstudio/thread.html#apple-silicon",
+    "href": "learn/rstudio/rstudio/rstudio/thread.html#apple-silicon",
+    "title": "Enable Multithread with data.table in Mac/Intel chips",
+    "section": "Apple Silicon",
+    "text": "Apple Silicon\n\nHOMEBREW_LOC=/opt/homebrew \nLLVM_LOC=$(HOMEBREW_LOC)/opt/llvm \nCC=$(LLVM_LOC)/bin/clang -fopenmp \nCXX=$(LLVM_LOC)/bin/clang++ -fopenmp \nCFLAGS=-g -O3 -Wall -pedantic -std=gnu99 -mtune=native -pipe \nCXXFLAGS=-g -O3 -Wall -pedantic -std=c++11 -mtune=native -pipe \nLDFLAGS=-L$(HOMEBREW_LOC)/opt/gettext/lib -L$(LLVM_LOC)/lib -Wl,-rpath,$(LLVM_LOC)/lib \nCPPFLAGS=-I$(HOMEBREW_LOC)/opt/gettext/include -I$(LLVM_LOC)/include"
+  },
+  {
+    "objectID": "learn/rstudio/rstudio/rstudio/thread.html#intel",
+    "href": "learn/rstudio/rstudio/rstudio/thread.html#intel",
+    "title": "Enable Multithread with data.table in Mac/Intel chips",
+    "section": "Intel",
+    "text": "Intel\n\nHOMEBREW_LOC=/usr/local\nLLVM_LOC=$(HOMEBREW_LOC)/opt/llvm\nCC=$(LLVM_LOC)/bin/clang -fopenmp \nCXX=$(LLVM_LOC)/bin/clang++ -fopenmp \nCFLAGS=-g -O3 -Wall -pedantic -std=gnu99 -mtune=native -pipe \nCXXFLAGS=-g -O3 -Wall -pedantic -std=c++11 -mtune=native -pipe \nLDFLAGS=-L$(HOMEBREW_LOC)/opt/gettext/lib -L$(LLVM_LOC)/lib -Wl,-rpath,$(LLVM_LOC)/lib \nCPPFLAGS=-I$(HOMEBREW_LOC)/opt/gettext/include -I$(LLVM_LOC)/include\n\n\n\n\n \n\n\n\n\n\n\n\n\nOnce you put the paths, save the text file and close it. The difference between Apple Silicon and Intel is just the path; everything else remains similar. For Apple Silicon, the path is /opt/homebrew and for Intel is /usr/local."
   }
 ]
