@@ -10,7 +10,6 @@ html{
 
 
 
-
     .navbar-brand > img {
       max-height: 400px;
       max-width: 200px;
@@ -340,6 +339,79 @@ header:not(.headroom):not(.quarto-title-block).is-visible {
   will-change: transform;
   width: -50%;
 }
+
+.main_page{
+ display: flex;
+    height: auto;
+
+  max-width: 100%;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: .9fr .1fr; /* define three columns */
+  grid-gap: 1px;
+  align-items: center; /* align the text and image vertically */
+}
+
+.text {
+  text-align: center;
+  font-size: 2.5em;
+  font-family: 'Source Sans Pro', sans-serif;
+  animation: zoomIn; /* referring directly to the animation's @keyframe declaration */
+  animation-duration: 6s; /* don't forget to set a duration! */
+  grid-column: 1; /* position in the first column */
+  color: #ffffff;
+}
+
+.image img {
+  width: 400px;
+  height: auto;
+  animation: zoomIn; /* referring directly to the animation's @keyframe declaration */
+  animation-duration: 6s; /* don't forget to set a duration! */
+  grid-column: 2; /* position in the third column */
+}
+
+.next-section-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 10px 20px;
+  background-color: green;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+
+/* Media query for smaller screens */
+@media only screen and (max-width: 617px) {
+  .grid-container {
+    grid-template-columns: 1fr; /* change to one column for smaller screens */
+  }
+  
+  .image img {
+  width: 250px;
+  height: auto;
+  animation: zoomIn; /* referring directly to the animation's @keyframe declaration */
+  animation-duration: 6s; /* don't forget to set a duration! */
+  grid-column: 2; /* position in the third column */
+}
+ 
+ .text {
+  text-align: center;
+  font-size: 1.5em;
+  font-family: 'Source Sans Pro', sans-serif;
+  animation: zoomIn; /* referring directly to the animation's @keyframe declaration */
+  animation-duration: 6s; /* don't forget to set a duration! */
+  grid-column: 1; /* position in the first column */
+  color: #ffffff;
+}
+  
+  
+}
+
 
 .h1{
   z-index: -1;

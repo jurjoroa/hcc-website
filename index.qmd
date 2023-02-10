@@ -3,8 +3,14 @@ title: ""
 page-layout: custom
 ---
 
-```{=HTML}
 
+```{=HTML}
+<head>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+</head>
 
 <div style="
   flex-direction: column;
@@ -65,7 +71,13 @@ page-layout: custom
   </style>
 </css-doodle>
 
-    <h1>Hertie Coding Club</h1>
+<div class="grid-container">
+  <div class="text">Welcome to </div>
+  <div class="image show-on-scroll">
+    <img src="images/hcc_hd_white.png" alt="Image">
+  </div>
+</div>
+<button class="next-section-button">Next Section</button>
 </div>
 
 
@@ -98,6 +110,12 @@ page-layout: custom
 </div>
 
 <script src="https://unpkg.com/css-doodle@0.33.0/css-doodle.min.js"></script>
+
+<script src='js/neon.js'></script>
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&family=Source+Sans+Pro:wght@300&family=Urbanist:wght@100;900&display=swap');
+</style>
 ```
 
 
