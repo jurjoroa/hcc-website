@@ -365,24 +365,82 @@ header:not(.headroom):not(.quarto-title-block).is-visible {
 }
 
 .image img {
-  width: 400px;
+  width: 600px;
+  display: block;
   height: auto;
   animation: zoomIn; /* referring directly to the animation's @keyframe declaration */
   animation-duration: 6s; /* don't forget to set a duration! */
-  grid-column: 2; /* position in the third column */
 }
 
-.next-section-button {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  padding: 10px 20px;
-  background-color: green;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
+.image_mob img {
+  display: none;
 }
+
+
+.glow-on-hover {
+    width: 120px;
+    height: 40px;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: #111;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 20px;
+    bottom: -100px;
+    animation: zoomInUp; /* referring directly to the animation's @keyframe declaration */
+    animation-duration: 6s; /* don't forget to set a duration! */
+}
+
+.glow-on-hover:before {
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+}
+
+.glow-on-hover:active {
+    color: #000
+}
+
+.glow-on-hover:active:after {
+    background: transparent;
+}
+
+.glow-on-hover:hover:before {
+    opacity: 1;
+}
+
+.glow-on-hover:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #111;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}
+
+
 
 
 /* Media query for smaller screens */
@@ -392,23 +450,21 @@ header:not(.headroom):not(.quarto-title-block).is-visible {
   }
   
   .image img {
-  width: 250px;
-  height: auto;
-  animation: zoomIn; /* referring directly to the animation's @keyframe declaration */
-  animation-duration: 6s; /* don't forget to set a duration! */
-  grid-column: 2; /* position in the third column */
-}
- 
- .text {
-  text-align: center;
-  font-size: 1.5em;
-  font-family: 'Source Sans Pro', sans-serif;
-  animation: zoomIn; /* referring directly to the animation's @keyframe declaration */
-  animation-duration: 6s; /* don't forget to set a duration! */
-  grid-column: 1; /* position in the first column */
-  color: #ffffff;
+  display: none;
 }
   
+  .image_mob img {
+  width: 300px;
+  height: auto;
+  display: block;
+  animation: zoomIn; /* referring directly to the animation's @keyframe declaration */
+  animation-duration: 6s;
+}
+  
+  
+  .glow-on-hover {
+   
+}
   
 }
 
@@ -823,3 +879,165 @@ width: 100%;
 
 
 
+.btn-21 {
+  cursor: pointer;
+  font-family: Urbanist;
+  bottom: -100px;
+  animation: zoomInUp; /* referring directly to the animation's @keyframe declaration */
+  animation-duration: 6s; /
+  text-transform: uppercase;
+  width: 120px;
+  height: 50px;
+  position: relative;
+  color: white;
+  transition: all 0.5s ease-in-out;
+  border-radius: 0px;
+  background: transparent;
+  overflow: hidden;
+  border: none;
+}
+
+.btn-21:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(to right, transparent, #bbb);
+  animation: btn-21-right 2s linear infinite;
+  transition: 0.5s ease-in-out;
+}
+
+.btn-21:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(to bottom, transparent, #bbb);
+  animation: btn-21-bottom 2s linear infinite;
+  animation-delay: 1s;
+  transform: translateY(-100%);
+}
+
+.btn-21 span {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 4px;
+}
+
+.btn-21 span:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(to left, transparent, #bbb);
+  animation: btn-21-left 2s linear infinite;
+}
+
+.btn-21 span:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(to top, transparent, #bbb);
+  animation: btn-21-top 2s linear infinite;
+  animation-delay: 1s;
+  transform: translateY(-100%);
+}
+
+.btn-21:hover:before {
+  background: linear-gradient(to right, transparent, red);
+}
+
+.btn-21:hover:after {
+  background: linear-gradient(to bottom, transparent, red);
+}
+
+.btn-21 span:hover:before {
+  background: linear-gradient(to top, transparent, red);
+}
+
+.btn-21 span:hover:after {
+  background: linear-gradient(to left, transparent, red);
+}
+
+.btn-21:hover {
+  color: red;
+}
+
+.btn-21:active:before {
+  background: linear-gradient(to right, transparent, #00a7fc);
+}
+
+.btn-21:active:after {
+  background: linear-gradient(to bottom, transparent, #00a7fc);
+}
+
+.btn-21 span:active:before {
+  background: linear-gradient(to top, transparent, #00a7fc);
+}
+
+.btn-21 span:active:after {
+  background: linear-gradient(to left, transparent, #00a7fc);
+}
+
+.btn-21:active {
+  color: #00a7fc;
+}
+
+@keyframes btn-21-right {
+  0% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(100%);
+  }
+
+}
+
+@keyframes btn-21-top {
+  0% {
+    transform: translateY(100%);
+  }
+
+  100% {
+    transform: translateY(-100%);
+  }
+
+}
+
+@keyframes btn-21-left {
+  0% {
+    transform: translateX(100%);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+
+}
+
+@keyframes btn-21-bottom {
+  0% {
+    transform: translateY(-100%);
+  }
+
+  100% {
+    transform: translateY(100%);
+  }
+
+}
+
+.btn-21:focus {
+  outline: none
+}

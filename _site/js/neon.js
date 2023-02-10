@@ -1,4 +1,4 @@
-const nextSectionButton = document.querySelector('.next-section-button');
+const nextSectionButton = document.querySelector('.btn-21');
 const sections = document.querySelectorAll('.intro');
 
 let currentSectionIndex = 0;
