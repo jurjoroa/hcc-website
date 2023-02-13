@@ -93,6 +93,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
 <link href="./images/hcc.png" rel="icon" type="image/png">
+<script src="site_libs/quarto-listing/list.min.js"></script>
+<script src="site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -125,9 +127,39 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     "search-submit-button-title": "Submit"
   }
 }</script>
+<script>
+
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-learn .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-image','listing-date','listing-title','listing-subtitle','listing-categories','listing-author','listing-reading-time',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      
+      searchColumns: ["listing-date","listing-title","listing-author","listing-subtitle","listing-image","listing-description"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-learn'] = new List('listing-learn', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  </script>
 <style>html{ scroll-behavior: smooth; }</style>
 <script src="js/navbar.js"></script>
 
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 <link rel="stylesheet" href="hcc_quarto.scss">
 <meta name="twitter:title" content="">
@@ -347,10 +379,107 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 
 
-<div class="layout" style="font-size: 5px">
-<article>
-<img src="Presentation/images/lukas.jpeg"> <img src="Presentation/images/lukas.jpeg"> <img src="Presentation/images/lukas.jpeg"> <img src="Presentation/images/lukas.jpeg">
-</article>
+<div class="layout_grid">
+<div id="listing-learn" class="quarto-listing quarto-listing-container-default">
+<div class="list quarto-listing-default">
+<div class="quarto-post image-right" data-index="0" data-categories="GitHub,GitHub Actions,Automations,RStudio,Posit" data-listing-date-sort="1658959200000" data-listing-file-modified-sort="1676327462783" data-listing-reading-time-sort="0.21">
+<div class="thumbnail">
+<p><a href="./learn/rstudio/rstudio/rstudio/index.html"> <img src="./learn/rstudio/rstudio/rstudio/images/appleintel.png" class="thumnail-image"> </a></p>
+</div>
+<div class="body">
+<a href="./learn/rstudio/rstudio/rstudio/index.html">
+<h3 class="no-anchor listing-title">
+How important is GitHub Actions to RStudio/Posit?
+</h3>
+<div class="listing-subtitle">
+Code for a plot in my talk at rstudio::conf 2022!
+</div>
+</a>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('GitHub'); return false;">
+GitHub
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('GitHub Actions'); return false;">
+GitHub Actions
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Automations'); return false;">
+Automations
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('RStudio'); return false;">
+RStudio
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Posit'); return false;">
+Posit
+</div>
+</div>
+<a href="./learn/rstudio/rstudio/rstudio/index.html"> </a>
+</div>
+<div class="metadata">
+<a href="./learn/rstudio/rstudio/rstudio/index.html">
+<div class="listing-date">
+Jul 28, 2022
+</div>
+<div class="listing-author">
+Beatriz Milz
+</div>
+<div class="listing-reading-time">
+0 min
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="1" data-categories="GitHub,GitHub Actions,Automations,RStudio,Posit" data-listing-date-sort="1658959200000" data-listing-file-modified-sort="1676326223898" data-listing-reading-time-sort="3.935">
+<div class="thumbnail">
+<p><a href="./learn/rstudio/rstudio/rstudio/thread.html"> <img src="./learn/rstudio/rstudio/rstudio/images/appleintel.png" class="thumnail-image"> </a></p>
+</div>
+<div class="body">
+<a href="./learn/rstudio/rstudio/rstudio/thread.html">
+<h3 class="no-anchor listing-title">
+Enable Multithread with data.table in Mac/Intel chips
+</h3>
+<div class="listing-subtitle">
+
+</div>
+</a>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('GitHub'); return false;">
+GitHub
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('GitHub Actions'); return false;">
+GitHub Actions
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Automations'); return false;">
+Automations
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('RStudio'); return false;">
+RStudio
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Posit'); return false;">
+Posit
+</div>
+</div>
+<a href="./learn/rstudio/rstudio/rstudio/thread.html"> </a>
+</div>
+<div class="metadata">
+<a href="./learn/rstudio/rstudio/rstudio/thread.html">
+<div class="listing-date">
+Jul 28, 2022
+</div>
+<div class="listing-author">
+Jorge Roa, Fernando Alarid-Escudero
+</div>
+<div class="listing-reading-time">
+3 min
+</div>
+</a>
+</div>
+</div>
+</div>
+<div class="listing-no-matching d-none">
+No matching items
+</div>
+</div>
+<p><a href="../learn/rstudio.html"> <button type="button" class="btn btn-primary float-end btn-sm">See all posts in English</button></a></p>
 </div>
 <div class="layout_grid">
 <p>This is a Quarto website.</p>
@@ -367,6 +496,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p><i class="fa-solid fa-clock" title="Office Hours" aria-label="clock"></i> Wednesdays from 12:15 - 2:15 pm Mountain</p>
 <p><i class="fa-solid fa-building-columns" title="Office" aria-label="building-columns"></i> Ketchum Arts &amp; Sciences, Office 382, Boulder, CO 80309</p>
 </div>
+<div class="layout" style="font-size: 5px">
+<article>
+<img src="Presentation/images/lukas.jpeg"> <img src="Presentation/images/lukas.jpeg"> <img src="Presentation/images/lukas.jpeg"> <img src="Presentation/images/lukas.jpeg">
+</article>
+</div>
+
 
 
 

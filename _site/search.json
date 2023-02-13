@@ -60,7 +60,7 @@
     "href": "learn/rstudio.html",
     "title": "Bea Milz",
     "section": "",
-    "text": "Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCode for a plot in my talk at rstudio::conf 2022!\n\n\n\n\nGitHub\n\n\nGitHub Actions\n\n\nAutomations\n\n\nRStudio\n\n\nPosit\n\n\n \n\n\n\n\nJul 28, 2022\n\n\nBeatriz Milz\n\n\n0 min\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\nGitHub\n\n\nGitHub Actions\n\n\nAutomations\n\n\nRStudio\n\n\nPosit\n\n\n \n\n\n\n\nJul 28, 2022\n\n\nJorge Roa, Fernando Alarid-Escudero\n\n\n4 min\n\n\n\n\n\n\nNo matching items"
+    "text": "Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n  \n\n\n\n\n\nCode for a plot in my talk at rstudio::conf 2022!\n\n\n\n\nGitHub\n\n\nGitHub Actions\n\n\nAutomations\n\n\nRStudio\n\n\nPosit\n\n\n \n\n\n\n\nJul 28, 2022\n\n\nBeatriz Milz\n\n\n0 min\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\nGitHub\n\n\nGitHub Actions\n\n\nAutomations\n\n\nRStudio\n\n\nPosit\n\n\n \n\n\n\n\nJul 28, 2022\n\n\nJorge Roa, Fernando Alarid-Escudero\n\n\n3 min\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "learn/rstudio/rstudio/rstudio/index.html",
@@ -95,7 +95,7 @@
     "href": "learn/rstudio/rstudio/rstudio/thread.html#install-llvm",
     "title": "Enable Multithread with data.table in Mac/Intel chips",
     "section": "Install llvm",
-    "text": "Install llvm\nWe need to install the llvm package to access the clang compiler, which helps us to set multithreading.\n\nbrew install llvm\n\n\n\n\n \n\n\n\n\n\n\n\nbrew install llvm\n\n\n\n\n\nOnce the installation is finished, we should see this screen in the terminal."
+    "text": "Install llvm\nWe need to install the llvm package to access the clang compiler, which helps us to set multithreading.\n\nbrew install llvm\n\n\n\n\n \n\n\n\n\n\n\n\n\nOnce the installation is finished, we should see this screen in the terminal."
   },
   {
     "objectID": "learn/rstudio/rstudio/rstudio/thread.html#install-libopenmp",
@@ -109,7 +109,7 @@
     "href": "learn/rstudio/rstudio/rstudio/thread.html#install-libopenmpt",
     "title": "Enable Multithread with data.table in Mac/Intel chips",
     "section": "Install libopenmpt",
-    "text": "Install libopenmpt\n\nbrew install libopenmpt\n\nThis is the screen that you should see once the installation is done."
+    "text": "Install libopenmpt\n\nbrew install libopenmpt\n\nThis is the screen that you should see once the installation is done.\n :::"
   },
   {
     "objectID": "learn/rstudio/rstudio/rstudio/thread.html#install-gcc",
@@ -123,7 +123,7 @@
     "href": "learn/rstudio/rstudio/rstudio/thread.html#install-cask-openmtp",
     "title": "Enable Multithread with data.table in Mac/Intel chips",
     "section": "Install –cask openmtp",
-    "text": "Install –cask openmtp\n\nbrew install --cask openmtp\n\nThis is the screen that you should see once the installation is done."
+    "text": "Install –cask openmtp\n\nbrew install --cask openmtp\n\nThis is the screen that you should see once the installation is done.\n}"
   },
   {
     "objectID": "learn/rstudio/rstudio/rstudio/thread.html#apple-silicon",
@@ -137,6 +137,20 @@
     "href": "learn/rstudio/rstudio/rstudio/thread.html#intel",
     "title": "Enable Multithread with data.table in Mac/Intel chips",
     "section": "Intel",
-    "text": "Intel\n\nHOMEBREW_LOC=/usr/local\nLLVM_LOC=$(HOMEBREW_LOC)/opt/llvm\nCC=$(LLVM_LOC)/bin/clang -fopenmp \nCXX=$(LLVM_LOC)/bin/clang++ -fopenmp \nCFLAGS=-g -O3 -Wall -pedantic -std=gnu99 -mtune=native -pipe \nCXXFLAGS=-g -O3 -Wall -pedantic -std=c++11 -mtune=native -pipe \nLDFLAGS=-L$(HOMEBREW_LOC)/opt/gettext/lib -L$(LLVM_LOC)/lib -Wl,-rpath,$(LLVM_LOC)/lib \nCPPFLAGS=-I$(HOMEBREW_LOC)/opt/gettext/include -I$(LLVM_LOC)/include\n\n\n\n\n \n\n\n\n\n\n\n\n\nOnce you put the paths, save the text file and close it. The difference between Apple Silicon and Intel is just the path; everything else remains similar. For Apple Silicon, the path is /opt/homebrew and for Intel is /usr/local."
+    "text": "Intel\n\nHOMEBREW_LOC=/usr/local\nLLVM_LOC=$(HOMEBREW_LOC)/opt/llvm\nCC=$(LLVM_LOC)/bin/clang -fopenmp \nCXX=$(LLVM_LOC)/bin/clang++ -fopenmp \nCFLAGS=-g -O3 -Wall -pedantic -std=gnu99 -mtune=native -pipe \nCXXFLAGS=-g -O3 -Wall -pedantic -std=c++11 -mtune=native -pipe \nLDFLAGS=-L$(HOMEBREW_LOC)/opt/gettext/lib -L$(LLVM_LOC)/lib -Wl,-rpath,$(LLVM_LOC)/lib \nCPPFLAGS=-I$(HOMEBREW_LOC)/opt/gettext/include -I$(LLVM_LOC)/include\n\n\n\n\n\n\nOnce you put the paths, save the text file and close it. The difference between Apple Silicon and Intel is just the path; everything else remains similar. For Apple Silicon, the path is /opt/homebrew and for Intel is /usr/local."
+  },
+  {
+    "objectID": "index.html#recent-posts-posts-recentes",
+    "href": "index.html#recent-posts-posts-recentes",
+    "title": "",
+    "section": "Recent posts / Posts recentes",
+    "text": "Recent posts / Posts recentes\n\n\n\n\n\n\n\n\n\n\nHow important is GitHub Actions to RStudio/Posit?\n\n\n\nJul 28, 2022\n\n\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "index.html#posts-in-english",
+    "href": "index.html#posts-in-english",
+    "title": "",
+    "section": "Posts in English",
+    "text": "Posts in English\n\n\n\n See all posts in English"
   }
 ]

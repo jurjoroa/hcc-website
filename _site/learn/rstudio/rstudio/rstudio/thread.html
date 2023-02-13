@@ -270,6 +270,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 
 
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/appleintel.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
 <p>This document shows you how we can enable the use of multiple cores on Macs with Intel/Apple silicon chips (M1 and M2).</p>
 <hr>
 <p>If we load data.table library in <i class="fa-brands fa-r-project" aria-label="r-project"></i> studio, this message will appear in your console:</p>
@@ -281,7 +286,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 <div class="quarto-layout-row quarto-layout-valign-top">
 <div class="quarto-layout-cell" style="flex-basis: 100.0%;justify-content: center;">
-<p><img src="images/dt.png" class="img-fluid" width="359"></p>
+<p><img src="images/dt.png" class="img-fluid"></p>
 </div>
 </div>
 </div>
@@ -308,8 +313,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div class="quarto-layout-cell" style="flex-basis: 100.0%;justify-content: center;">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/firststep.png" class="img-fluid figure-img" width="489"></p>
-<p></p><figcaption class="figure-caption">Terminal</figcaption><p></p>
+<p><img src="images/firststep.png" class="img-fluid figure-img"></p>
 </figure>
 </div>
 </div>
@@ -318,19 +322,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </section>
 <section id="second-step-install-homebrew" class="level1">
 <h1>Second Step (Install homebrew)</h1>
-<div class="quarto-layout-panel">
-<div class="quarto-layout-row quarto-layout-valign-top">
-<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 100.0%;justify-content: center;">
-<p>&nbsp;</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/homebrew.png" class="img-fluid figure-img" width="400"></p>
+</figure>
 </div>
-</div>
-<div class="quarto-layout-row quarto-layout-valign-top">
-<div class="quarto-layout-cell" style="flex-basis: 100.0%;justify-content: center;">
-<p><img src="images/homebrew.png" class="img-fluid" width="156"></p>
-</div>
-</div>
-</div>
-<p><a href="https://brew.sh/">Homebrew</a> is an open-source software package management system that makes installing applications on Linux and Apple’s macOS operating systems easier. Homebrew will help us install <strong><code>OpenMP</code></strong>. Open Multi-Processing allows us to run applications in parallel to efficient processes. In this case, we want to employ the multiple cores that Mac has for <strong><code>data.table</code></strong> wrangling.</p>
+<p><a href="https://brew.sh/"></a> is an open-source software package management system that makes installing applications on Linux and Apple’s macOS operating systems easier. Homebrew will help us install <strong><code>OpenMP</code></strong>. Open Multi-Processing allows us to run applications in parallel to efficient processes. In this case, we want to employ the multiple cores that Mac has for <strong><code>data.table</code></strong> wrangling.</p>
 <p>As the Homebrew page states, Homebrew installs the stuff you need that Apple (or your Linux system) didn’t. So, once we open our terminal, we need to paste this command on our terminal.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a></span>
@@ -338,23 +335,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="ex">https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh</span><span class="va">)</span><span class="st">"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>To install <strong><code>homebrew</code></strong>, you need to enter your password and press <strong><code>ENTER</code></strong>. After installing homebrew, you should see in your terminal this screen:</p>
-<div class="quarto-layout-panel">
-<div class="quarto-layout-row quarto-layout-valign-top">
-<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 100.0%;justify-content: center;">
-<p>&nbsp;</p>
-</div>
-</div>
-<div class="quarto-layout-row quarto-layout-valign-top">
-<div class="quarto-layout-cell" style="flex-basis: 100.0%;justify-content: center;">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/secondstep_home.png" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">homebrew installation</figcaption><p></p>
-</figure>
-</div>
-</div>
-</div>
-</div>
+<p><img src="images/secondstep_home.png" class="img-fluid"></p>
 </section>
 <section id="third-step-check-package-and-change-paths" class="level1">
 <h1>Third Step (Check package and change paths)</h1>
@@ -371,7 +352,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <thead>
 <tr class="header">
 <th style="text-align: center;"><img src="images/Apple-Silicon.png" class="img-fluid" width="30"> chips</th>
-<th style="text-align: center;"><img src="images/intel.png" width="50" height="34"> chips</th>
+<th style="text-align: center;"><img src="images/intel.png" width="80" height="30"> chips</th>
 </tr>
 </thead>
 <tbody>
@@ -390,12 +371,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 <div class="quarto-layout-row quarto-layout-valign-top">
 <div class="quarto-layout-cell" style="flex-basis: 100.0%;justify-content: center;">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/bre_help.png" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">brew help</figcaption><p></p>
-</figure>
-</div>
+<p><img src="images/brew_help.png" class="img-fluid"></p>
 </div>
 </div>
 </div>
@@ -416,12 +392,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 <div class="quarto-layout-row quarto-layout-valign-top">
 <div class="quarto-layout-cell" style="flex-basis: 100.0%;justify-content: center;">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/llvm.png" class="img-fluid figure-img" width="393"></p>
-<p></p><figcaption class="figure-caption">brew install llvm</figcaption><p></p>
-</figure>
-</div>
+<p><img src="images/llvm.png" class="img-fluid"></p>
 </div>
 </div>
 </div>
@@ -434,7 +405,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 <div class="quarto-layout-row quarto-layout-valign-top">
 <div class="quarto-layout-cell" style="flex-basis: 100.0%;justify-content: center;">
-<p><img src="images/llvm_end.png" class="img-fluid" width="393"></p>
+<p><img src="images/llvm_end.png" class="img-fluid"></p>
 </div>
 </div>
 </div>
@@ -445,17 +416,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">brew</span> install libopenmp</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>This is the screen that you should see once the installation is done.</p>
-<div class="quarto-layout-panel">
-<div class="quarto-layout-row quarto-layout-valign-top">
-<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 100.0%;justify-content: center;">
-<p>&nbsp;</p>
-</div>
-</div>
-<div class="quarto-layout-row quarto-layout-valign-top">
-<div class="quarto-layout-cell" style="flex-basis: 100.0%;justify-content: center;">
-<p><img src="images/libopenmp.png" class="img-fluid" width="393"></p>
-</div>
-</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/libopenmp.png" class="img-fluid figure-img"></p>
+</figure>
 </div>
 </section>
 <section id="install-libopenmpt" class="level2">
@@ -464,18 +428,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="ex">brew</span> install libopenmpt</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>This is the screen that you should see once the installation is done.</p>
-<div class="quarto-layout-panel">
-<div class="quarto-layout-row quarto-layout-valign-top">
-<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 100.0%;justify-content: center;">
-<p>&nbsp;</p>
-</div>
-</div>
-<div class="quarto-layout-row quarto-layout-valign-top">
-<div class="quarto-layout-cell" style="flex-basis: 100.0%;justify-content: center;">
-<p><img src="images/libopenmpt.png" class="img-fluid" width="393"></p>
-</div>
-</div>
-</div>
+<p><img src="images/libopenmpt.png" class="img-fluid" data-fig-align="center"> :::</p>
 </section>
 <section id="install-gcc" class="level2">
 <h2 class="anchored" data-anchor-id="install-gcc">Install gcc</h2>
@@ -483,17 +436,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="ex">brew</span> install gcc</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>This is the screen that you should see once the installation is done.</p>
-<div class="quarto-layout-panel">
-<div class="quarto-layout-row quarto-layout-valign-top">
-<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 100.0%;justify-content: center;">
-<p>&nbsp;</p>
-</div>
-</div>
-<div class="quarto-layout-row quarto-layout-valign-top">
-<div class="quarto-layout-cell" style="flex-basis: 100.0%;justify-content: center;">
-<p><img src="images/ggc.png" class="img-fluid" width="393"></p>
-</div>
-</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/ggc.png" class="img-fluid figure-img"></p>
+</figure>
 </div>
 </section>
 <section id="install-cask-openmtp" class="level2">
@@ -502,18 +448,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="ex">brew</span> install <span class="at">--cask</span> openmtp</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>This is the screen that you should see once the installation is done.</p>
-<div class="quarto-layout-panel">
-<div class="quarto-layout-row quarto-layout-valign-top">
-<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 100.0%;justify-content: center;">
-<p>&nbsp;</p>
-</div>
-</div>
-<div class="quarto-layout-row quarto-layout-valign-top">
-<div class="quarto-layout-cell" style="flex-basis: 100.0%;justify-content: center;">
-<p><img src="images/cask.png" class="img-fluid" width="393"></p>
-</div>
-</div>
-</div>
+<p><img src="images/cask.png" class="img-fluid" data-fig-align="center">}</p>
 </section>
 </section>
 <section id="fifth-step-create-.r-folder-and-makevars-file." class="level1">
@@ -572,17 +507,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a><span class="va">LDFLAGS</span><span class="op">=</span>-L<span class="va">$(</span><span class="ex">HOMEBREW_LOC</span><span class="va">)</span>/opt/gettext/lib <span class="ex">-L</span><span class="va">$(</span><span class="ex">LLVM_LOC</span><span class="va">)</span><span class="ex">/lib</span> <span class="at">-Wl,-rpath,</span><span class="va">$(</span><span class="ex">LLVM_LOC</span><span class="va">)</span>/lib </span>
 <span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a><span class="va">CPPFLAGS</span><span class="op">=</span>-I<span class="va">$(</span><span class="ex">HOMEBREW_LOC</span><span class="va">)</span>/opt/gettext/include <span class="ex">-I</span><span class="va">$(</span><span class="ex">LLVM_LOC</span><span class="va">)</span><span class="ex">/include</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div class="quarto-layout-panel">
-<div class="quarto-layout-row quarto-layout-valign-top">
-<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 100.0%;justify-content: center;">
-<p>&nbsp;</p>
-</div>
-</div>
-<div class="quarto-layout-row quarto-layout-valign-top">
-<div class="quarto-layout-cell" style="flex-basis: 100.0%;justify-content: center;">
-<p><img src="images/makevar_mac.png" class="img-fluid"></p>
-</div>
-</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/makevar_mac.png" class="img-fluid figure-img"></p>
+</figure>
 </div>
 </section>
 <section id="intel" class="level2">
@@ -597,17 +525,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a><span class="va">LDFLAGS</span><span class="op">=</span>-L<span class="va">$(</span><span class="ex">HOMEBREW_LOC</span><span class="va">)</span>/opt/gettext/lib <span class="ex">-L</span><span class="va">$(</span><span class="ex">LLVM_LOC</span><span class="va">)</span><span class="ex">/lib</span> <span class="at">-Wl,-rpath,</span><span class="va">$(</span><span class="ex">LLVM_LOC</span><span class="va">)</span>/lib </span>
 <span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a><span class="va">CPPFLAGS</span><span class="op">=</span>-I<span class="va">$(</span><span class="ex">HOMEBREW_LOC</span><span class="va">)</span>/opt/gettext/include <span class="ex">-I</span><span class="va">$(</span><span class="ex">LLVM_LOC</span><span class="va">)</span><span class="ex">/include</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div class="quarto-layout-panel">
-<div class="quarto-layout-row quarto-layout-valign-top">
-<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 100.0%;justify-content: center;">
-<p>&nbsp;</p>
-</div>
-</div>
-<div class="quarto-layout-row quarto-layout-valign-top">
-<div class="quarto-layout-cell" style="flex-basis: 100.0%;justify-content: center;">
-<p><img src="images/makevar_intel.png" class="img-fluid"></p>
-</div>
-</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/makevar_intel.png" class="img-fluid figure-img"></p>
+</figure>
 </div>
 <p>Once you put the paths, save the text file and close it. The difference between Apple Silicon and Intel is just the path; everything else remains similar. For Apple Silicon, the path is <strong><code>/opt/homebrew</code></strong> and for Intel is <strong><code>/usr/local</code></strong>.</p>
 </section>
@@ -620,17 +541,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">'data.table'</span>, <span class="at">type=</span><span class="st">'source'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>If everything was done correctly, you should load the package with library(data.table) and see the following message.</p>
-<div class="quarto-layout-panel">
-<div class="quarto-layout-row quarto-layout-valign-top">
-<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 100.0%;justify-content: center;">
-<p>&nbsp;</p>
-</div>
-</div>
-<div class="quarto-layout-row quarto-layout-valign-top">
-<div class="quarto-layout-cell" style="flex-basis: 100.0%;justify-content: center;">
-<p><img src="images/library.png" class="img-fluid"></p>
-</div>
-</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/library.png" class="img-fluid figure-img"></p>
+</figure>
 </div>
 <p>Remember that you can set more threads with <strong><code>setDTthreads</code></strong> (according to the specifications of your computer). Happy coding!</p>
 

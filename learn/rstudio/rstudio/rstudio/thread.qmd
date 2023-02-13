@@ -9,7 +9,7 @@ code-link: true
 title-block-banner: true
 ---
 
-\vspace{-1.6cm}
+![](images/appleintel.png){fig-align="center"}
 
 This document shows you how we can enable the use of multiple cores on Macs with Intel/Apple silicon chips (M1 and M2).
 
@@ -20,7 +20,7 @@ If we load data.table library in {{< fa brands r-project >}} studio, this messag
 \vspace{1cm}
 
 ::: {layout="[[-1], [1], [-1]]"}
-![](images/dt.png){width="359"}
+![](images/dt.png)
 :::
 
 \vspace{1cm}
@@ -40,16 +40,16 @@ As you can see, OpenMP support is needed to use multiple cores in Macs. Therefor
 \vspace{-1cm}
 
 ::: {layout="[[-1], [1], [-1]]"}
-![Terminal](images/firststep.png){width="489"}
+![](images/firststep.png){fig-align="center"}
 :::
 
 # Second Step (Install homebrew)
 
-::: {layout="[[-1], [1], [-1]]"}
-![](images/homebrew.png){width="156"}
-:::
 
-[Homebrew](https://brew.sh/) is an open-source software package management system that makes installing applications on Linux and Apple's macOS operating systems easier. Homebrew will help us install **`OpenMP`**. Open Multi-Processing allows us to run applications in parallel to efficient processes. In this case, we want to employ the multiple cores that Mac has for **`data.table`** wrangling.
+![](images/homebrew.png){width="400" fig-align="center"}
+
+
+[](https://brew.sh/) is an open-source software package management system that makes installing applications on Linux and Apple's macOS operating systems easier. Homebrew will help us install **`OpenMP`**. Open Multi-Processing allows us to run applications in parallel to efficient processes. In this case, we want to employ the multiple cores that Mac has for **`data.table`** wrangling.
 
 As the Homebrew page states, Homebrew installs the stuff you need that Apple (or your Linux system) didn't. So, once we open our terminal, we need to paste this command on our terminal.
 
@@ -63,9 +63,8 @@ To install **`homebrew`**, you need to enter your password and press **`ENTER`**
 
 \vspace{-2cm}
 
-::: {layout="[[-1], [1], [-1]]"}
-![homebrew installation](images/secondstep_home.png)
-:::
+![](images/secondstep_home.png)
+
 
 # Third Step (Check package and change paths)
 
@@ -77,14 +76,14 @@ brew help
 
 We need to set our paths properly if the command is not recognized.
 
-| ![](images/Apple-Silicon.png){width="30"} chips | ![](images/intel.png){width="50" height="34"} chips |
+| ![](images/Apple-Silicon.png){width="30"} chips | ![](images/intel.png){width="80" height="30"} chips |
 |:---------------------------------:|:-----------------------------------:|
 |    **`export PATH=/opt/homebrew/bin:$PATH`**    | **`export PATH=/usr/local/opt/homebrew/bin:$PATH`** |
 
 With these changes, we can rerun homebrew help, and this information should appear in our terminal.
 
 ::: {layout="[[-1], [1], [-1]]"}
-![brew help](images/bre_help.png)
+![](images/brew_help.png)
 :::
 
 # Fourth Step: Installing required packages (libopenmp, libopenmpt, llvm, cask, ggc)
@@ -102,13 +101,13 @@ brew install llvm
 \vspace{-1cm}
 
 ::: {layout="[[-1], [1], [-1]]"}
-![brew install llvm](images/llvm.png){width="393"}
+![](images/llvm.png)
 :::
 
 Once the installation is finished, we should see this screen in the terminal.
 
 ::: {layout="[[-1], [1], [-1]]"}
-![](images/llvm_end.png){width="393"}
+![](images/llvm_end.png)
 :::
 
 ## Install libopenmp
@@ -119,9 +118,9 @@ brew install libopenmp
 
 This is the screen that you should see once the installation is done.
 
-::: {layout="[[-1], [1], [-1]]"}
-![](images/libopenmp.png){width="393"}
-:::
+
+![](images/libopenmp.png){fig-align="center"}
+
 
 ## Install libopenmpt
 
@@ -133,8 +132,8 @@ This is the screen that you should see once the installation is done.
 
 \vspace{-1cm}
 
-::: {layout="[[-1], [1], [-1]]"}
-![](images/libopenmpt.png){width="393"}
+
+![](images/libopenmpt.png){fig-align="center"}
 :::
 
 ## Install gcc
@@ -147,9 +146,9 @@ This is the screen that you should see once the installation is done.
 
 \vspace{-1cm}
 
-::: {layout="[[-1], [1], [-1]]"}
-![](images/ggc.png){width="393"}
-:::
+
+![](images/ggc.png){fig-align="center"}
+
 
 ## Install --cask openmtp
 
@@ -161,9 +160,9 @@ This is the screen that you should see once the installation is done.
 
 \vspace{-1cm}
 
-::: {layout="[[-1], [1], [-1]]"}
-![](images/cask.png){width="393"}
-:::
+
+![](images/cask.png){fig-align="center"}}
+
 
 # Fifth Step: create .R folder and Makevars file.
 
@@ -205,9 +204,9 @@ LDFLAGS=-L$(HOMEBREW_LOC)/opt/gettext/lib -L$(LLVM_LOC)/lib -Wl,-rpath,$(LLVM_LO
 CPPFLAGS=-I$(HOMEBREW_LOC)/opt/gettext/include -I$(LLVM_LOC)/include
 ```
 
-::: {layout="[[-1], [1], [-1]]"}
-![](images/makevar_mac.png)
-:::
+
+![](images/makevar_mac.png){fig-align="center"}
+
 
 ## Intel
 
@@ -223,9 +222,9 @@ CPPFLAGS=-I$(HOMEBREW_LOC)/opt/gettext/include -I$(LLVM_LOC)/include
 
 ```
 
-::: {layout="[[-1], [1], [-1]]"}
-![](images/makevar_intel.png)
-:::
+
+![](images/makevar_intel.png){fig-align="center"}
+
 
 Once you put the paths, save the text file and close it. The difference between Apple Silicon and Intel is just the path; everything else remains similar. For Apple Silicon, the path is **`/opt/homebrew`** and for Intel is **`/usr/local`**.
 
@@ -240,9 +239,8 @@ install.packages('data.table', type='source')
 
 If everything was done correctly, you should load the package with library(data.table) and see the following message.
 
-::: {layout="[[-1], [1], [-1]]"}
-![](images/library.png)
-:::
+
+![](images/library.png){fig-align="center"}
 
 Remember that you can set more threads with **`setDTthreads`** (according to the specifications of your computer). Happy coding!
 

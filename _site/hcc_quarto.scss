@@ -1,6 +1,11 @@
 /* css styles */
+html{
+  
+  scroll-behavior: smooth;
+}
+
 body {
-  background-image: radial-gradient(circle at 1px 1px, #F0F0F0 1px, transparent 0);
+  background-image: radial-gradient(circle at 1px 1px, #E0E0E0 1px, transparent 0);
   background-size: 40px 40px;
 }
 

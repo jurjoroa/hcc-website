@@ -1,7 +1,19 @@
 ---
 title: ""
 page-layout: custom
-
+listing: 
+  - id: learn
+    contents: learn/**/*/*.qmd
+    type: default
+    fields: [image, date, title, subtitle, categories, author, reading-time]
+    sort: "date desc"
+    #categories: cloud
+    sort-ui: false
+    filter-ui: false
+    page-size: 3 
+toc: true
+title-block-banner: false
+comments: false
 ---
 
 
@@ -166,15 +178,13 @@ page-layout: custom
 ```
 
 
-<div class="layout" style = "font-size: 5px">
+<div class="layout_grid">
 
-<article>
 
-  <img src="Presentation/images/lukas.jpeg">
-  <img src="Presentation/images/lukas.jpeg">
-  <img src="Presentation/images/lukas.jpeg">
-  <img src="Presentation/images/lukas.jpeg">
-</article>
+::: {#learn}
+:::
+
+<a href="../learn/rstudio.html"> <button type="button" class="btn btn-primary float-end btn-sm">See all posts in English</button></a>
 
 
 </div> 
@@ -200,5 +210,19 @@ To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
 {{< fa clock title="Office Hours" >}} Wednesdays from 12:15 - 2:15 pm Mountain
 
 {{< fa building-columns title="Office" >}} Ketchum Arts & Sciences, Office 382, Boulder, CO 80309
+
+</div> 
+
+
+<div class="layout" style = "font-size: 5px">
+
+<article>
+
+  <img src="Presentation/images/lukas.jpeg">
+  <img src="Presentation/images/lukas.jpeg">
+  <img src="Presentation/images/lukas.jpeg">
+  <img src="Presentation/images/lukas.jpeg">
+</article>
+
 
 </div> 
