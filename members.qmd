@@ -11,8 +11,9 @@ lightbox:
 format:
   html:
     include-in-header:
-      text: "<script src='js/anime_photos.js'></script>"
+      text: "<script src='js/anime_photos.js, js/background.js, https://s3-us-west-2.amazonaws.com/s.cdpn.io/499416/TweenLite.min.js, https://s3-us-west-2.amazonaws.com/s.cdpn.io/499416/EasePack.min.js, https://s3-us-west-2.amazonaws.com/s.cdpn.io/499416/demo.js' ></script>"
 ---
+
 
 About this site
 
@@ -26,8 +27,6 @@ About this site
 # Who are we? {auto-animate="true" auto-animate-easing="ease-in-out" background="#517699" style="text-align: left;"}
 
 trgrtgrtg
-
-
 
 
 
@@ -296,6 +295,7 @@ trgrtgrtg
 
 ```{=html}
 
+
 <div class="scrolling-words-container">
   <div class="scrolling-words-box">
     <ul>
@@ -310,3 +310,5 @@ trgrtgrtg
 </div>
 
 <script src='js/anime_photos.js'></script>
+
+<script src='js/background.js'></script>
