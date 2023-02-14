@@ -190,6 +190,8 @@ comments: false
 </div> 
 
 
+
+
 <div class="layout_grid">
 
 This is a Quarto website.
@@ -214,15 +216,17 @@ To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
 </div> 
 
 
+
 <div class="layout" style = "font-size: 5px">
 
 <article>
 
-  <img src="Presentation/images/lukas.jpeg">
-  <img src="Presentation/images/lukas.jpeg">
-  <img src="Presentation/images/lukas.jpeg">
-  <img src="Presentation/images/lukas.jpeg">
+  <img id="lukas" src="Presentation/images/lukas.jpeg">
+  <img id="lukas" src="Presentation/images/lukas.jpeg">
+  <img id="lukas" src="Presentation/images/lukas.jpeg">
+  <img id="lukas" src="Presentation/images/lukas.jpeg">
 </article>
 
 
 </div> 
+
