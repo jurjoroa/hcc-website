@@ -840,6 +840,21 @@ display: grid;
 color: red ;
 bottom: 90px;
 position: absolute;
+display: grid;
 }
+ 
+ 
+   .quarto-category:nth-of-type(5) {
+bottom: 90px;
+position: absolute; left: 100px;
+display: grid;
+}
+
+   .quarto-category:nth-of-type(6) {
+bottom: 90px;
+position: absolute; left: 150px;
+display: grid;
+}
+ 
   
 }

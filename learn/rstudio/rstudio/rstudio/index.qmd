@@ -3,7 +3,7 @@ title: "How important is GitHub Actions to RStudio/Posit?"
 subtitle: "Code for a plot in my talk at rstudio::conf 2022!"
 author: "Beatriz Milz"
 date: "2022-07-28"
-categories: ["GitHub", "GitHub Actions", "Automations", "RStudio", "Posit", "Posit", "RStudio"]
+categories: ["GitHub", "GitHub Actions", "Automations", "RStudio", "Automations", "Automations", "Automations"]
 toc: true
 draft: false
 code-link: true
