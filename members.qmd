@@ -288,26 +288,169 @@ trgrtgrtg
 
 
 
+```{=HTML}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+   
+<section id="container">
+    <div class="user-container">
+        <!-- Card Two-->
+        <div class="card inline-photo3 show-on-scroll">
+            <div class="hover_esp"> Astrud Gilberto</div>
+            <div class="user-content">
+                <div class="bio">
+                    <p class="text_grid"> In this updated code, the width and height properties of the .card .profile
+                        class are set to 100% so that the image fills the entire space of the card. Additionally, the
+                        object-fit property is set to cover</p>
+                    <div class="text_grid_title"> Astrud Gilberto <br> (MPP 2024)</div>
+                </div>
+                <div class="social">
+                    <a id="hoverlogo"><i class="fab fa-instagram"></i></a>
+                    <a id="hoverlogo"><i class="fab fa-spotify"></i></a>
+                    <a id="hoverlogo"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card Two-->
+        <div class="card inline-photo3 show-on-scroll">
+            <div class="hover_esp"> Astrud Gilberto</div>
+            <div class="user-content">
+                <div class="bio">
+                    <p class="text_grid"> In this updated code, the width and height properties of the .card .profile
+                        class are set to 100% so that the image fills the entire space of the card. Additionally, the
+                        object-fit property is set to cover</p>
+                    <div class="text_grid_title"> Astrud Gilberto <br> (MPP 2024)</div>
+                </div>
+                <div class="social">
+                    <a id="hoverlogo"><i class="fab fa-instagram"></i></a>
+                    <a id="hoverlogo"><i class="fab fa-spotify"></i></a>
+                    <a id="hoverlogo"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card Two-->
+        <div class="card inline-photo3 show-on-scroll">
+            <div class="hover_esp"> Astrud Gilberto</div>
+            <div class="user-content">
+                <div class="bio">
+                    <p class="text_grid"> In this updated code, the width and height properties of the .card .profile
+                        class are set to 100% so that the image fills the entire space of the card. Additionally, the
+                        object-fit property is set to cover</p>
+                    <div class="text_grid_title"> Astrud Gilberto <br> (MPP 2024)</div>
+                </div>
+                <div class="social">
+                    <a id="hoverlogo"><i class="fab fa-instagram"></i></a>
+                    <a id="hoverlogo"><i class="fab fa-spotify"></i></a>
+                    <a id="hoverlogo"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card Two-->
+        <div class="card inline-photo3 show-on-scroll">
+            <div class="hover_esp"> Astrud Gilberto</div>
+            <div class="user-content">
+                <div class="bio">
+                    <p class="text_grid"> In this updated code, the width and height properties of the .card .profile
+                        class are set to 100% so that the image fills the entire space of the card. Additionally, the
+                        object-fit property is set to cover</p>
+                    <div class="text_grid_title"> Astrud Gilberto <br> (MPP 2024)</div>
+                </div>
+                <div class="social">
+                    <a id="hoverlogo"><i class="fab fa-instagram"></i></a>
+                    <a id="hoverlogo"><i class="fab fa-spotify"></i></a>
+                    <a id="hoverlogo"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+
+           <!-- Card Two-->
+        <div class="card inline-photo3 show-on-scroll">
+            <div class="hover_esp"> Astrud Gilberto</div>
+            <div class="user-content">
+                <div class="bio">
+                    <p class="text_grid"> In this updated code, the width and height properties of the .card .profile
+                        class are set to 100% so that the image fills the entire space of the card. Additionally, the
+                        object-fit property is set to cover</p>
+                    <div class="text_grid_title"> Astrud Gilberto <br> (MPP 2024)</div>
+                </div>
+                <div class="social">
+                    <a id="hoverlogo"><i class="fab fa-instagram"></i></a>
+                    <a id="hoverlogo"><i class="fab fa-spotify"></i></a>
+                    <a id="hoverlogo"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+
+         <!-- Card Two-->
+        <div class="card inline-photo3 show-on-scroll">
+            <div class="hover_esp"> Astrud Gilberto</div>
+            <div class="user-content">
+                <div class="bio">
+                    <p class="text_grid"> In this updated code, the width and height properties of the .card .profile
+                        class are set to 100% so that the image fills the entire space of the card. Additionally, the
+                        object-fit property is set to cover</p>
+                    <div class="text_grid_title"> Astrud Gilberto <br> (MPP 2024)</div>
+                </div>
+                <div class="social">
+                    <a id="hoverlogo"><i class="fab fa-instagram"></i></a>
+                    <a id="hoverlogo"><i class="fab fa-spotify"></i></a>
+                    <a id="hoverlogo"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+
+          <!-- Card Two-->
+        <div class="card inline-photo3 show-on-scroll">
+            <div class="hover_esp"> Astrud Gilberto</div>
+            <div class="user-content">
+                <div class="bio">
+                    <p class="text_grid"> In this updated code, the width and height properties of the .card .profile
+                        class are set to 100% so that the image fills the entire space of the card. Additionally, the
+                        object-fit property is set to cover</p>
+                    <div class="text_grid_title"> Astrud Gilberto <br> (MPP 2024)</div>
+                </div>
+                <div class="social">
+                    <a id="hoverlogo"><i class="fab fa-instagram"></i></a>
+                    <a id="hoverlogo"><i class="fab fa-spotify"></i></a>
+                    <a id="hoverlogo"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+
+           <!-- Card Two-->
+        <div class="card inline-photo3 show-on-scroll">
+            <div class="hover_esp"> Astrud Gilberto</div>
+            <div class="user-content">
+                <div class="bio">
+                    <p class="text_grid"> In this updated code, the width and height properties of the .card .profile
+                        class are set to 100% so that the image fills the entire space of the card. Additionally, the
+                        object-fit property is set to cover</p>
+                    <div class="text_grid_title"> Astrud Gilberto <br> (MPP 2024)</div>
+                </div>
+                <div class="social">
+                    <a id="hoverlogo"><i class="fab fa-instagram"></i></a>
+                    <a id="hoverlogo"><i class="fab fa-spotify"></i></a>
+                    <a id="hoverlogo"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
 
 
+
+
+    </div>
+</section>
+
+```
 
 
 
 ```{=html}
 
 
-<div class="scrolling-words-container">
-  <div class="scrolling-words-box">
-    <ul>
-      <li style="color: #ea4335">Code</li>
-      <li style="color: #4285f4">Build</li>
-      <li style="color: #34a853">Create</li>
-      <li style="color: #fbbc04">Design</li>
-      <li style="color: #ea4335">Code</li>
-    </ul>
-  </div>
-  <span style="color: #5f6368">for everyone</span>
-</div>
 
 <script src='js/anime_photos.js'></script>
 
