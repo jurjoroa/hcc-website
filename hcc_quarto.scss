@@ -4,8 +4,7 @@ html{
   scroll-behavior: smooth;
 }
 
-
-
+    
     .navbar-brand > img {
       max-height: 400px;
       max-width: 200px;
@@ -1011,6 +1010,7 @@ display: grid;
 
 
 @media (min-width: 1185px) {
+  
 
   .card .text_grid{
   font-size: .6rem;
@@ -1246,4 +1246,35 @@ h3#hover_esp:hover{
   transform: translateY(130%);
   transition-timing-function: ease-in;
   transition: 0.5s;
+}
+
+
+/* Scroller styling */
+.scroller {
+  height: 1.2em;
+  line-height: 1.2em;
+  position: relative;
+  overflow: hidden;
+  width: 10em;
+}
+.scroller > span {
+  position: absolute;
+  top: 0;
+  animation: slide 10s infinite;
+  font-weight: bold;
+  
+}
+@keyframes slide {
+  0% {
+    top: 0;
+  }
+  25% {
+    top: -1.2em;
+  }
+  50% {
+    top: -2.4em;
+  }
+  75% {
+    top: -3.6em;
+  }
 }

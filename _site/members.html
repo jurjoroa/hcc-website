@@ -423,7 +423,7 @@ When the moon hits your eye
 <div class="inline-photo show-on-scroll" style="font-size: 12px">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="Presentation/images/lukas.jpeg" class="lightbox" title="A Lovely Image" data-gallery="my-gallery" data-description="Oak
+<p><a href="Presentation/images/lukas.jpeg" class="lightbox" data-description="Oak
 
 Bluffs
 
@@ -451,7 +451,7 @@ party
 
 like
 
-atmosphere."><img src="Presentation/images/lukas.jpeg" class="img-fluid figure-img"></a></p>
+atmosphere." title="A Lovely Image" data-gallery="my-gallery"><img src="Presentation/images/lukas.jpeg" class="img-fluid figure-img"></a></p>
 <p></p><figcaption class="figure-caption">A Lovely Image</figcaption><p></p>
 </figure>
 </div>
@@ -467,7 +467,7 @@ atmosphere."><img src="Presentation/images/lukas.jpeg" class="img-fluid figure-i
 <div class="inline-photo show-on-scroll" style="font-size: 5px">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="Presentation/images/lukas.jpeg" class="lightbox" title="Another Lovely Image" data-gallery="my-gallery" data-description="Oak
+<p><a href="Presentation/images/lukas.jpeg" class="lightbox" data-description="Oak
 
 Bluffs
 
@@ -495,7 +495,7 @@ party
 
 like
 
-atmosphere."><img src="Presentation/images/lukas.jpeg" class="img-fluid figure-img"></a></p>
+atmosphere." title="Another Lovely Image" data-gallery="my-gallery"><img src="Presentation/images/lukas.jpeg" class="img-fluid figure-img"></a></p>
 <p></p><figcaption class="figure-caption">Another Lovely Image</figcaption><p></p>
 </figure>
 </div>
@@ -504,7 +504,7 @@ atmosphere."><img src="Presentation/images/lukas.jpeg" class="img-fluid figure-i
 <div class="inline-photo show-on-scroll" style="font-size: 5px">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="Presentation/images/lukas.jpeg" class="lightbox" title="The Last Lovely Image" data-gallery="my-gallery" data-description="Oak
+<p><a href="Presentation/images/lukas.jpeg" class="lightbox" data-description="Oak
 
 Bluffs
 
@@ -532,7 +532,7 @@ party
 
 like
 
-atmosphere."><img src="Presentation/images/lukas.jpeg" class="img-fluid figure-img"></a></p>
+atmosphere." title="The Last Lovely Image" data-gallery="my-gallery"><img src="Presentation/images/lukas.jpeg" class="img-fluid figure-img"></a></p>
 <p></p><figcaption class="figure-caption">The Last Lovely Image</figcaption><p></p>
 </figure>
 </div>
@@ -704,6 +704,12 @@ atmosphere."><img src="Presentation/images/lukas.jpeg" class="img-fluid figure-i
 
 <script src="js/anime_photos.js"></script>
 <script src="js/background.js"></script>
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.scrollex.min.js"></script>
+<script src="js/jquery.scrolly.min.js"></script>
+<script src="js/breakpoints.min.js"></script>
+<script src="js/util.js"></script>
+<script src="js/main.js"></script>
 
 
 </section>
@@ -1008,7 +1014,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>
   </div>
 </footer>
-<script>var lightboxQuarto = GLightbox({"descPosition":"left","loop":true,"skin":"lightwidth","closeEffect":"fade","openEffect":"fade","selector":".lightbox"});</script>
+<script>var lightboxQuarto = GLightbox({"skin":"lightwidth","selector":".lightbox","closeEffect":"fade","loop":true,"openEffect":"fade","descPosition":"left"});</script>
 
 
 

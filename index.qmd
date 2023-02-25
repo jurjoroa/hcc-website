@@ -21,8 +21,9 @@ comments: false
 <head>
   <link
     rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-  />
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">  
+    
 </head>
 
 <div style="
@@ -126,7 +127,7 @@ comments: false
 <script src="https://unpkg.com/css-doodle@0.33.0/css-doodle.min.js"></script>
 
 <script src='js/neon.js'></script>
-
+<script src="js/text.js"></script>
 
 
 <style>
@@ -194,7 +195,15 @@ comments: false
 
 
 
+
+
+
 <div class="layout_grid">
+
+
+
+
+
 
 This is a Quarto website.
 
@@ -218,6 +227,40 @@ To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
 </div> 
 
 
+```{=HTML}
+
+<div class="layout_grid">
+
+ <h1>Coding is
+      <!-- Scroller Start -->
+      
+      <div class="scroller">
+  <span>
+    <span style="color: red;">Cool</span><br/>
+    <span style="color: blue;">Art</span><br/>
+    <span style="color: green;">Intriguing</span><br/>
+    <span style="color: green;">Intriguing</span><br/>
+    <span style="color: orange;">Challenging</span>
+  </span>
+</div>
+      
+      <!-- Scroller End -->
+    </h1>
+
+<h1>This pen is
+  <span
+     class="txt-rotate"
+     data-period="2000"
+     data-rotate='[ "nerdy and awesome everyday!", "simple.", "pure JS.", "pretty.", "fun!" ]'></span>
+</h1>
+
+
+
+</div>
+  
+```
+
+
 
 <div class="layout" style = "font-size: 5px">
 
@@ -234,9 +277,10 @@ To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
 
 
 
+```{=html}
 
+<script src="js/text.js"></script>
 
-```{=HTML}
-
+```
 
 

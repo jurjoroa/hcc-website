@@ -455,3 +455,5 @@ trgrtgrtg
 <script src='js/anime_photos.js'></script>
 
 <script src='js/background.js'></script>
+
+<script src="js/text.js"></script>
