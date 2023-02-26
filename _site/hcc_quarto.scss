@@ -1278,3 +1278,43 @@ h3#hover_esp:hover{
     top: -3.6em;
   }
 }
+
+
+.txt-rotate {
+  color: #C60115;
+  font-family: 'Montserrat', sans-serif;
+}
+
+
+
+.scroll-text {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.scroll-text.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* CSS rules for Intersection Observer */
+h1#main, p#main {
+    opacity: 0; 
+    position: relative;
+    bottom: -40px;
+    transition: all 0.8s ease-out;
+}
+
+.show#main {
+    opacity: 1;
+    bottom: 0;
+}
+
+.testimonials:nth-of-type(2) p.show#main {
+    transition-delay: 0.5s;
+}
+
+.testimonials:nth-of-type(3) p.show#main {
+    transition-delay: 1s;
+}

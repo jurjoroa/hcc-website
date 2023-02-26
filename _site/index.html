@@ -310,28 +310,30 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 
 <main>
-  <div class="intro">
+<div class="intro">
+  <div class="scroll-text">
     <h1>A Web Developer</h1>
     <p>I am a web developer and I love to create websites.</p>
-    <button>Learn More</button>
   </div>
-  <div class="achievements">
-    <div class="work">
-      <i class="fas fa-atom"></i>
-      <p class="work-heading">Projects</p>
-      <p class="work-text">I have worked on many projects and I am very proud of them. I am a very good developer and I am always looking for new projects.</p>
-    </div>
-    <div class="work">
-      <i class="fas fa-skiing"></i>
-      <p class="work-heading">Skills</p>
-      <p class="work-text">I have a lot of skills and I am very good at them. I am very good at programming and I am always looking for new skills.</p>
-    </div>
+  <button>Learn More</button>
+</div>
 
+<div class="achievements">
+  <div class="work">
+    <i class="fas fa-atom"></i>
+      <p class="work-heading" id="main">Projects</p>
+      <p class="work-text" id="main">I have worked on many projects and I am very proud of them. I am a very good developer and I am always looking for new projects.</p>
   </div>
+  <div class="work work-appear">
+    <i class="fas fa-skiing" id="main"></i>
+      <p class="work-heading" id="main">Skills</p>
+      <p class="work-text" id="main">I have a lot of skills and I am very good at them. I am very good at programming and I am always looking for new skills.</p>
+  </div>
+</div>
   <div class="about-me">
     <div class="about-me-text">
-      <h2 class="anchored">About Me</h2>
-      <p>I am a web developer and I love to create websites. I am a very good developer and I am always looking for new projects. I am a very good developer and I am always looking for new projects.</p>
+      <h2 id="main" class="anchored">About Me</h2>
+      <p id="main">I am a web developer and I love to create websites. I am a very good developer and I am always looking for new projects. I am a very good developer and I am always looking for new projects.</p>
     </div>
     <img src="https://images.unsplash.com/photo-1596495578065-6e0763fa1178?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=871&amp;q=80" alt="me">
   </div>
@@ -489,7 +491,7 @@ Jorge Roa, Fernando Alarid-Escudero
 No matching items
 </div>
 </div>
-<p><a href="../learn/rstudio.html"> <button type="button" class="btn btn-primary float-end btn-sm">See all posts in English</button></a></p>
+<p><a href="../learn/rstudio.html"> <button type="button" class="btn btn-primary float-end btn-sm" id="main">See all posts in English</button></a></p>
 </div>
 <div class="layout_grid">
 <p>This is a Quarto website.</p>
@@ -506,6 +508,11 @@ No matching items
 <p><i class="fa-solid fa-clock" title="Office Hours" aria-label="clock"></i> Wednesdays from 12:15 - 2:15 pm Mountain</p>
 <p><i class="fa-solid fa-building-columns" title="Office" aria-label="building-columns"></i> Ketchum Arts &amp; Sciences, Office 382, Boulder, CO 80309</p>
 </div>
+
+  <style>
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+</style> 
+
 
 <div class="layout_grid">
 
@@ -540,6 +547,9 @@ No matching items
 </div>
 
 <script src="js/text.js"></script>
+<script src="js/text_obs.js"></script>
+<script src="js/text_obs_achiev.js"></script>
+
 
 
 
