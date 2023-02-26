@@ -146,30 +146,29 @@ comments: false
 
 <div class="layout_grid_cards">
  <div class="hero-section">
-  <div class="cardheight">
    <div class="cardg">
-    <a class="card" href="#">
+    <a class="card_img" href="#">
       <div class="card__background" style="background-image: url(https://images.unsplash.com/photo-1557177324-56c542165309?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80)"></div>
       <div class="card__content">
         <p class="card__category">Category</p>
         <h3 class="card__heading">Example Card Heading</h3>
       </div>
     </a>
-    <a class="card" href="#">
+    <a class="card_img" href="#">
       <div class="card__background" style="background-image: url(https://images.unsplash.com/photo-1557187666-4fd70cf76254?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60)"></div>
       <div class="card__content">
         <p class="card__category">Category</p>
         <h3 class="card__heading">Example Card Heading</h3>
       </div>
     </a>
-    <a class="card" href="#">
+    <a class="card_img" href="#">
       <div class="card__background" style="background-image: url(https://images.unsplash.com/photo-1556680262-9990363a3e6d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60)"></div>
       <div class="card__content">
         <p class="card__category">Category</p>
         <h3 class="card__heading">Example Card Heading</h3>
       </div>
     </li>
-    <a class="card" href="#">
+    <a class="card_img" href="#">
       <div class="card__background" style="background-image: url(https://images.unsplash.com/photo-1557004396-66e4174d7bf6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60)"></div>
       <div class="card__content">
         <p class="card__category">Category</p>
@@ -177,10 +176,14 @@ comments: false
       </div>
     </a>
   </div>
- </div>
 </div>
 
 ```
+
+<div class="section_white">
+
+</div> 
+
 
 
 <div class="layout_grid">
@@ -189,7 +192,7 @@ comments: false
 ::: {#learn}
 :::
 
-<a href="../learn/rstudio.html"> <button type="button" class="btn btn-primary float-end btn-sm" id="main">See all posts in English</button></a>
+<a href="../learn/rstudio.html"> <button type="button" class="btn btn-primary float-end btn-sm">See all posts in English</button></a>
 
 
 </div> 
@@ -200,11 +203,7 @@ comments: false
 
 
 
-<div class="layout_grid">
-
-
-
-
+<div class="layout_grid" id="main">
 
 
 This is a Quarto website.

@@ -541,6 +541,10 @@ header:not(.headroom):not(.quarto-title-block).is-visible {
 }
 
 
+.section_white{
+  margin-top: 100px;
+}
+
 
 .hero-sec{
   width: 100%;
@@ -574,16 +578,20 @@ height : 100%;
 @media(max-width: 410px){
 
 .cardg{
-grid-template-columns: repeat(1, 1fr);
-grid-template-rows: repeat(1, 1fr);
+grid-template-columns: repeat(2, 1fr);
+grid-auto-rows: 350px;
 border: none; /* add this line */
-height: 50%;
-gap
-
+grid-gap: 0.9rem;
 }
+
+
 
 .card__background{
   height: 50%;
+  grid-template-columns: repeat(2, 1fr);
+grid-auto-rows: 350px;
+border: none; /* add this line */
+grid-gap: 0.9rem;
 }
 
 
@@ -598,14 +606,14 @@ border: none; /* add this line */
 width: 100%;
 }
 }
-.card{
+.card_img{
 list-style: none;
 position: relative;
 border: none; /* add this line */
 width: 100%;
 }
 
-.card:before{
+.card_img:before{
   content: '';
   display: block;
   padding-bottom: 150%;
@@ -631,11 +639,11 @@ width: 100%;
   transform 200ms linear;
 }
 
-.card:hover .card__background{
+.card_img:hover .card__background{
   transform: scale(1.05) translateZ(0);
 }
 
-.cardg:hover > .card:not(:hover) .card__background{
+.cardg:hover > .card_img:not(:hover) .card__background{
   filter: brightness(0.5) saturate(0) contrast(1.2) blur(20px);
 }
 
@@ -1299,7 +1307,7 @@ h3#hover_esp:hover{
 }
 
 /* CSS rules for Intersection Observer */
-h1#main, p#main {
+h1#main, p#main{
     opacity: 0; 
     position: relative;
     bottom: -40px;
@@ -1318,3 +1326,6 @@ h1#main, p#main {
 .testimonials:nth-of-type(3) p.show#main {
     transition-delay: 1s;
 }
+
+
+
