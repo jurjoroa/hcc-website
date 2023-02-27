@@ -1102,7 +1102,7 @@ display: grid;
   width: 100%;
 }
 .bio {
-  margin-top: 270px;
+  margin-top: 400px;
   font-size: 1rem;
   line-height: 1.2; 
   position: relative;
@@ -1328,4 +1328,6 @@ h1#main, p#main{
 }
 
 
-
+iframe[seamless] {
+    border: none;
+}

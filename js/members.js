@@ -1,11 +1,9 @@
-// script.js
-
-// Fetch the JSON data
-fetch('members.json')
-  .then(response => response.json())
-  .then(data => {
-    // Update the HTML content
-    const jsonDataElement = document.getElementById('json-data');
-    jsonDataElement.innerHTML = JSON.stringify(data);
-  })
-  .catch(error => console.error(error));
+$(document).ready(function(){
+   $('#member1').load("member1.html");
+   $('#member2').load("member2.html");
+   $('#member3').load("member3.html");
+   $('#member4').load("member4.html");
+   $('#member5').load("member5.html");
+   $('#member6').load("member6.html");
+   $('#member7').load("member7.html");
+});
