@@ -35,6 +35,9 @@ website:
       - icon: people-fill  
         href: members.qmd
         text: "Members"
+      - icon: people-fill  
+        href: shiny.qmd
+        text: "Shiny"
       - icon: mortarboard-fill  
         text: "Learn"
         menu:

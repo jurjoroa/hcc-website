@@ -152,5 +152,12 @@
     "title": "",
     "section": "Posts in English",
     "text": "Posts in English\n\n\n\n See all posts in English"
+  },
+  {
+    "objectID": "shiny.html",
+    "href": "shiny.html",
+    "title": "Diamonds Explorer",
+    "section": "",
+    "text": "Sample Size\n\n\n\n\n\n\n\n\n\n\nJitter\n\n\n\n\n\n\n\n\nSmooth\n\n\n\n\n\n\n\n\n\nX\n\ncarat\ncut\ncolor\nclarity\ndepth\ntable\nprice\nx\ny\nz\n\n\n\n\n\n\nY\n\ncarat\ncut\ncolor\nclarity\ndepth\ntable\nprice\nx\ny\nz\n\n\n\n\n\n\nColor\n\nNone\ncarat\ncut\ncolor\nclarity\ndepth\ntable\nprice\nx\ny\nz\n\n\n\n\n\n\n\nFacet Row\n\nNone\ncut\ncolor\nclarity\n\n\n\n\n\nFacet Column\n\nNone\ncut\ncolor\nclarity"
   }
 ]
