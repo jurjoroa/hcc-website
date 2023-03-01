@@ -10,7 +10,7 @@ format:
 ```{=html}
 <div style="
   flex-direction: column;
-  width: 100%;
+  width: 105%;
   height: 200vh;
   margin-top: -130px;
   margin-bottom: 100px
@@ -18,7 +18,6 @@ format:
   background-position: center;
   background-repeat: no-repeat;
   overflow: hidden;
-  overflow: clip; 
   contain: content;
   display: flex;
   align-items: center;
