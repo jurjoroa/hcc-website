@@ -10,6 +10,7 @@ lightbox:
   
 format:
   html:
+    
     include-in-header:
       text: "<script src='js/anime_photos.js, js/background.js, https://s3-us-west-2.amazonaws.com/s.cdpn.io/499416/TweenLite.min.js, https://s3-us-west-2.amazonaws.com/s.cdpn.io/499416/EasePack.min.js, https://s3-us-west-2.amazonaws.com/s.cdpn.io/499416/demo.js' ></script>"
 ---
@@ -19,6 +20,27 @@ About this site
 
 ```{r}
 1 + 1
+```
+
+
+```{r, }
+# Load the ggplot2 package
+library(ggplot2)
+library(extrafont)
+library(showtext)
+
+showtext.auto()
+#extrafont::choose_font("Arial")
+
+# Create some example data
+x <- 1:10
+y <- x^2
+
+# Create the plot
+ggplot(data = data.frame(x, y), aes(x = x, y = y)) +
+  geom_line() + theme(text = element_text(family = "Arial", size = 20))
+
+
 ```
 
 <hr>
@@ -353,4 +375,8 @@ trgrtgrtg
 <script src="js/members.js"></script>
 
 ```
+
+
+
+
 

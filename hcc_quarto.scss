@@ -183,7 +183,7 @@ ul.share li a {
     background-color: #c0041c;
 }
 
-p > a::before {
+p > a:before:not(img) {
   content: "";
   position: absolute;
   width: 100%;
@@ -1328,6 +1328,184 @@ h1#main, p#main{
 }
 
 
-iframe[seamless] {
-    border: none;
+
+.cell-output-stdout pre code {
+  background-color: #E8E8E8;
+}
+
+
+
+code span {
+  color: #007BA5;
+}
+
+/*modify code*/
+
+div.sourceCode {
+  background-color: #1C4D68;
+  border: 3px solid #BF041C;
+  border-style: ;
+  font-size: 1.1em;
+  color: white;
+}
+
+div.sourceCode#text {
+  background-color: #1C4D68;
+  border: 3px solid #BF041C;
+  border-style: ;
+  font-size: 1.1em;
+  color: white;
+}
+
+div.sourceCode pre code {
+  background-color: #1C4D68;
+  color: white;
+}
+
+/**/
+
+
+
+code span.at {
+  color: #7aa6da;
+}
+
+code span.ot {
+  color: #007BA5;
+}
+
+code span.ss {
+  color: #20794D;
+}
+
+code span.an {
+  color: #5E5E5E;
+}
+
+
+/*functions with arguments*/
+code span.fu {
+  color: #7FBCD2;
+  font-weight: bold;
+}
+
+/**/
+
+/**/
+
+/*arrows, parenthesis*/
+code span.op {
+  color: #7FBCD2;
+  font-weight: bold;
+}
+
+/**/
+
+code span.st {
+  color: #b9ca4a;
+}
+
+code span.cf {
+  color: #007BA5;
+}
+
+
+/*Copy button*/
+
+.code-copy-button i{
+  filter: invert(13%) sepia(97%) saturate(7416%) hue-rotate(341deg) brightness(102%) contrast(102%);
+transform: scale(1.3);
+}
+
+.code-copy-button:hover {
+  filter: invert(13%) sepia(97%) saturate(7416%) hue-rotate(341deg) brightness(102%) contrast(102%);
+transform: scale(1.3);
+}
+
+/**/
+
+
+code span.er {
+  color: #AD0000;
+}
+
+code span.bn {
+  color: #AD0000;
+}
+
+code span.al {
+  color: #AD0000;
+}
+
+/*Packages and variables*/
+code span.va {
+  color:  #3B9ACC;
+  font-weight: bold;
+}
+
+/*library*/
+code span.kw {
+  color: #2C7FAB;
+}
+
+code span.pp {
+  color: #AD0000;
+}
+
+code span.in {
+  color: #5E5E5E;
+}
+
+code span.vs {
+  color: #20794D;
+}
+
+code span.wa {
+  color: #5E5E5E;
+  font-style: italic;
+}
+
+code span.do {
+  color: #5E5E5E;
+  font-style: italic;
+}
+
+code span.ch {
+  color: #20794D;
+}
+
+code span.dt {
+  color: #AD0000;
+}
+
+/* modify numbers colors */
+code span.fl {
+  color: white;
+}
+
+/* modify comments */
+code span.co {
+  color: #E73A3A;
+}
+/**/
+
+code span.cv {
+  color: #5E5E5E;
+  font-style: italic;
+}
+
+code span.cn {
+  color: #8f5902;
+}
+
+code span.sc {
+  color: #e78c45;
+}
+
+code span.dv {
+  color: #d54e53;
+}
+
+:not(img) a {
+  /* animation properties */
 }
