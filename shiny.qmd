@@ -26,7 +26,7 @@ format:
   
 <iframe 
         height="100%" 
-     width="103%" src="https://hertie-coding-club.shinyapps.io/HCC-initial-survey/" title="Quarto Documentation"></iframe>
+     width="110%" src="https://hertie-coding-club.shinyapps.io/HCC-initial-survey/" title="Quarto Documentation"></iframe>
      
 </div>
 ```
