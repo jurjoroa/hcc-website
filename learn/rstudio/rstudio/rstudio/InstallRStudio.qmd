@@ -1,0 +1,44 @@
+---
+title: '{{< animate fadeInDown "Install R and Rstudio: why R rocks 💻 🔥"delay=.6s >}}'
+subtitle: '{{< animate fadeInDown "Unlock the power of data analysis and statistical computing with R and RStudio! Whether you are a student of public policy or a seasoned professional."delay=.6s >}}'
+author: ["Jorge Roa"]
+date: "03-02-2023"
+categories: ["R", "RStudio", "Accesibility", "Install"]
+toc: true
+draft: false
+code-link: true
+title-block-banner: true
+
+---
+
+![](images/rstudio.png){fig-align="center" width="428"}
+
+------------------------------------------------------------------------
+
+{{< animate fadeInLeft "R is a free, open-source programming language that is widely used in data analysis and statistical computing. RStudio is an integrated development environment (IDE) that makes it easier to write and run R code. Installing R and RStudio is straightforward and can be done in a few simple steps:" delay=.7s >}}
+
+# Step 1: Install R
+
+First, you need to install R on your computer. You can download the latest version of R from the Comprehensive R Archive Network (CRAN) website. Follow these steps:
+
+- Go to the CRAN website (https://cran.r-project.org/) and click on the "Download R for (Windows/MacOS/Linux)" link.
+- Choose your operating system from the list and click on the corresponding link to download the installation file.
+- Once the file is downloaded, run the installation program and follow the instructions.
+
+# Step 2: Install RStudio
+
+Once you have installed R, you can install RStudio, which is an optional but highly recommended IDE for R. You can download the latest version of RStudio from the RStudio website. Follow these steps:
+
+    Go to the RStudio website (https://www.rstudio.com/products/rstudio/download/) and click on the "Download" button under the "RStudio Desktop" section.
+    Choose your operating system from the list and click on the corresponding link to download the installation file.
+    Once the file is downloaded, run the installation program and follow the instructions.
+
+# Step 3: Launch RStudio
+
+Once you have installed R and RStudio, you can launch RStudio by double-clicking on its icon. When you first launch RStudio, you will be prompted to select a version of R to use. If you have installed only one version of R, it should be automatically selected. Otherwise, you can choose the version of R that you want to use.
+
+That's it! You have successfully installed R and RStudio on your computer. You can now start using R and RStudio to write and run R code.
+
+In conclusion, installing R and RStudio is a simple process that can be completed in just a few steps. By following these steps, you can have R and RStudio up and running on your computer in no time. If you encounter any issues during the installation process, be sure to consult the R and RStudio documentation or seek help from online forums or communities.
+
+

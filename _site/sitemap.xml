@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://nasa-openscapes.github.io/index.html</loc>
-    <lastmod>2023-03-02T17:28:37.762Z</lastmod>
+    <lastmod>2023-03-03T01:37:33.603Z</lastmod>
   </url>
   <url>
     <loc>https://nasa-openscapes.github.io/about.html</loc>
@@ -30,11 +30,11 @@
   </url>
   <url>
     <loc>https://nasa-openscapes.github.io/learn/rstudio.html</loc>
-    <lastmod>2023-03-01T20:56:20.030Z</lastmod>
+    <lastmod>2023-03-03T01:37:32.228Z</lastmod>
   </url>
   <url>
     <loc>https://nasa-openscapes.github.io/learn/rstudio/rstudio/rstudio/index.html</loc>
-    <lastmod>2023-03-01T21:15:20.645Z</lastmod>
+    <lastmod>2023-03-02T23:23:30.554Z</lastmod>
   </url>
   <url>
     <loc>https://nasa-openscapes.github.io/register.html</loc>
@@ -42,10 +42,14 @@
   </url>
   <url>
     <loc>https://nasa-openscapes.github.io/learn/rstudio/rstudio/rstudio/thread.html</loc>
-    <lastmod>2023-03-01T20:56:33.342Z</lastmod>
+    <lastmod>2023-03-02T23:25:39.194Z</lastmod>
   </url>
   <url>
     <loc>https://nasa-openscapes.github.io/shiny.html</loc>
     <lastmod>2023-03-02T16:46:42.032Z</lastmod>
+  </url>
+  <url>
+    <loc>https://nasa-openscapes.github.io/learn/rstudio/rstudio/rstudio/InstallRStudio.html</loc>
+    <lastmod>2023-03-03T01:37:31.758Z</lastmod>
   </url>
 </urlset>
