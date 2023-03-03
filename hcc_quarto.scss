@@ -4,7 +4,7 @@ html{
   scroll-behavior: smooth;
 }
 
-main, p {
+main:not(.text_grid, .text_grid_title), p:not(.text_grid, .text_grid_title) {
   font-size: 1em !important;
 }
     
