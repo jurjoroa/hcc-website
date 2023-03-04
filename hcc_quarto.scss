@@ -79,9 +79,11 @@ overflow: hidden;
 }
 x
 
-.quarto-color-scheme-toggle:not(.alternate) .bi::before {
-  background-image: url('data:image/svg+xml,<svg width="18" height="18" xmlns="http://www.w3.org/2000/svg" fill="white" fill-rule="evenodd" clip-rule="evenodd"><path d="M18 18h-12c-3.311 0-6-2.689-6-6s2.689-6 6-6h12.039c3.293.021 5.961 2.701 5.961 6 0 3.311-2.688 6-6 6zm-12-10c2.208 0 4 1.792 4 4s-1.792 4-4 4-4-1.792-4-4 1.792-4 4-4z"/></svg>') !important;
+/*Color buttons navbar*/
+.quarto-color-scheme-toggle .bi i.bi::before {
+  filter: brightness(0%) saturate(100%) invert(100%); !important;
 }
+
 
 
 .dropdown-menu {
@@ -1537,4 +1539,9 @@ p .quarto-title-meta-heading{
 p .quarto-title-meta-contents{
   
   font-size: 2em;
+}
+
+.author {
+  font-size: 100px;
+  color: blue;
 }

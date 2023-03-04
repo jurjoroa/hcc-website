@@ -8,40 +8,85 @@ toc: true
 draft: false
 code-link: true
 title-block-banner: true
-
 ---
 
 ![](images/rstudio.png){fig-align="center" width="428"}
 
 ------------------------------------------------------------------------
 
-{{< animate fadeInLeft "Are you looking for a cutting-edge solution for your data analysis needs? Look no further than R! With its user-friendly interface and vast library of packages, R offers a versatile and powerful toolset for users of all skill levels. Whether you're a seasoned professional or just starting out, R has everything you need to take your data analysis to the next level. So why not join the millions of satisfied users who have already made the switch to R? We guarantee you won't be disappointed!" delay=.7s >}}
-
+{{< animate fadeInLeft "R provides a versatile and powerful toolset for users of all skill levels, making it the go-to choice if you’re looking for a cutting-edge solution for your data analysis needs. R has everything you need to advance your data analysis, regardless of your experience level or where you are in your career. We assure you won’t be disappointed, so why not join the millions of happy users who have already switched to R?" delay=.7s >}}
 
 {{< animate fadeInLeft "R is a free, open-source programming language that is widely used in data analysis and statistical computing. RStudio is an integrated development environment (IDE) that makes it easier to write and run R code. Installing R and RStudio is straightforward and can be done in a few simple steps:" delay=.7s >}}
+
+
+# Why R?
+
+{{< animate fadeInLeft "Due to its many benefits in statistical computing and data analysis, R is a strong and flexible programming language that has gained popularity recently. Here are some of the main benefits of using R:" delay=.7s >}}
+
+1)  **Open source software**: R is open source, so users can access and alter the source code to tailor the program to their needs.
+
+::: {.grid}
+::: {.g-col-5}
+:::
+::: {.g-col-4}
+{{< li nnbhwnej trigger=loop delay=3000 speed=0.5 >}}
+:::
+::: {.g-col-3}
+:::
+:::
+
+2)  **Packages**: Users can use R's extensive package library to add functionality for specialized tasks like tables, visualization, and data manipulation. Right now, there are more than 18,000 packages available.
+
+![](https://teachdatascience.com/post/tidyverse/tidyverse-package-workflow.png){fig-align="center" width="400"}
+
+3)  **Easy to use**: R has an intuitive user interface that makes it simple for new users to learn and offers advanced features for seasoned users.
+
+
+::: {.grid}
+::: {.g-col-5}
+:::
+::: {.g-col-4}
+{{< li dxoycpzg trigger=loop delay=3000 speed=0.5 >}}
+:::
+::: {.g-col-3}
+:::
+:::
+
 
 # Step 1: Install R
 
 First, you need to install R on your computer. You can download the latest version of R from the Comprehensive R Archive Network (CRAN) website. Follow these steps:
 
-- Go to the CRAN website (https://cran.r-project.org/) and click on the "Download R for (Windows/MacOS/Linux)" link.
-- Choose your operating system from the list and click on the corresponding link to download the installation file.
-- Once the file is downloaded, run the installation program and follow the instructions.
+-   Go to the [CRAN website](https://cran.r-project.org/) and click on the "Download R for (Windows/MacOS/Linux)" link.
+-   Choose your operating system from the list and click on the corresponding link to download the installation file.
+-   Once the file is downloaded, run the installation program and follow the instructions.
 
 # Step 2: Install RStudio
 
-Once you have installed R, you can install RStudio, which is an optional but highly recommended IDE for R. You can download the latest version of RStudio from the RStudio website. Follow these steps:
+The latest version of RStudio can be downloaded from the RStudio website. After you have installed R, you can install RStudio, an optional but highly recommended IDE for R. The following actions should be taken.
 
-    Go to the RStudio website (https://www.rstudio.com/products/rstudio/download/) and click on the "Download" button under the "RStudio Desktop" section.
-    Choose your operating system from the list and click on the corresponding link to download the installation file.
-    Once the file is downloaded, run the installation program and follow the instructions.
+-   Visit the [RStudio website](https://www.rstudio.com/products/rstudio/download/) and select "RStudio Desktop" from the list of available products.
+-   From the list, select your operating system, and then click the link to download the installation file.
+-   Run the installation program after the file has been downloaded, then adhere to the prompts.
 
 # Step 3: Launch RStudio
 
-Once you have installed R and RStudio, you can launch RStudio by double-clicking on its icon. When you first launch RStudio, you will be prompted to select a version of R to use. If you have installed only one version of R, it should be automatically selected. Otherwise, you can choose the version of R that you want to use.
+Once you have installed R and RStudio, you can launch RStudio by double-clicking on its icon ![](https://gitlab.com/uploads/-/system/project/avatar/18103103/pngguru.com.png){width="28"}. When you first launch RStudio, you will be prompted to select a version of R to use. If you have installed only one version of R, it should be automatically selected. Otherwise, you can choose the version of R that you want to use.
 
-That's it! You have successfully installed R and RStudio on your computer. You can now start using R and RStudio to write and run R code.
+::: callout-tip
+# Ready
 
-In conclusion, installing R and RStudio is a simple process that can be completed in just a few steps. By following these steps, you can have R and RStudio up and running on your computer in no time. If you encounter any issues during the installation process, be sure to consult the R and RStudio documentation or seek help from online forums or communities.
+You've now successfully installed R and RStudio on your computer. Now that R and RStudio are installed, you can begin writing and running R code.
+:::
 
 
+
+::: {.grid}
+::: {.g-col-5}
+:::
+::: {.g-col-4}
+{{< li tqywkdcz trigger=loop delay=1000 >}}
+:::
+::: {.g-col-3}
+:::
+:::

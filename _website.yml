@@ -51,5 +51,7 @@ website:
         href: about.qmd
         text: "About us"
      
-
+comments:
+  giscus:
+    repo: jurjoroa/hcc-website
 
