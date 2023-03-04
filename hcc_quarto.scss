@@ -131,17 +131,19 @@ li.nav-item {
     padding-bottom: 5px !important;
 }
 
-a.nav-link,
-a.nav-link:after,
-a.nav-link:before {
-  transition: all .5s;
+.navbar a.nav-link,
+.navbar a.nav-link:after,
+.navbar a.nav-link:before {
+  transition: all .4s;
 }
 
-a.nav-link {
+
+
+.navbar a.nav-link {
   position: relative;
 }
 
-a.nav-link:after {
+.navbar a.nav-link:after {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -197,7 +199,7 @@ ul.share li a {
     background-color: #c0041c;
 }
 
-p > a:before:not(img) {
+p > a:before:not(img, #TOC) {
   content: "";
   position: absolute;
   width: 100%;
@@ -1524,4 +1526,15 @@ code span.dv {
 
 :not(img) a {
   /* animation properties */
+}
+
+
+p .quarto-title-meta-heading{
+  
+  font-size: 2em;
+}
+
+p .quarto-title-meta-contents{
+  
+  font-size: 2em;
 }
