@@ -1,6 +1,18 @@
 /* css styles */
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300&display=swap');
+:root {
+  --main-font: 'Nunito Sans';
+}
+
+
 html{
   scroll-behavior: smooth;
+}
+
+
+body {
+  font-family: var(--main-font);
 }
 
 main:not(.text_grid, .text_grid_title), p:not(.text_grid, .text_grid_title) {
@@ -1029,7 +1041,7 @@ display: grid;
 .card .text_grid_title{
   font-size: 1rem;
   position: relative;
-  margin-top: -350px;
+  margin-top: -330px;
 }
 
 }
@@ -1079,7 +1091,7 @@ display: grid;
 }
   
   .card .text_grid_title{
-  margin-top: -320px;
+  margin-top: -300px;
   position: relative;
 }
 
