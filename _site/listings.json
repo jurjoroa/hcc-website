@@ -14,5 +14,28 @@
       "/learn/rstudio/rstudio/rstudio/index.html",
       "/learn/rstudio/rstudio/rstudio/thread.html"
     ]
+  },
+  {
+    "listing": "/events.html",
+    "items": []
+  },
+  {
+    "listing": "/events/events.html",
+    "items": [
+      "/events/01_kickoff_event/index.html"
+    ]
+  },
+  {
+    "listing": "/events/index.html",
+    "items": [
+      "/events/01_kickoff_event/index.html",
+      "/events/02_objects/index.html"
+    ]
+  },
+  {
+    "listing": "/learn/index.html",
+    "items": [
+      "/learn/rstudio/rstudio/rstudio/index.html"
+    ]
   }
 ]

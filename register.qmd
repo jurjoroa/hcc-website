@@ -1,10 +1,33 @@
 ---
-title: "Register"
+title: "Diamonds Explorer"
+format:
+    html:
+      page-layout: custom
+      comments: false
 ---
 
-About this site
 
 
-
-
-
+```{=html}
+<div style="
+  flex-direction: column;
+  width: 100%;
+  height: 200vh;
+  margin-top: -130px;
+  margin-bottom: 100px
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  overflow-y: hidden;
+  contain: content;
+  display: flex;
+  align-items: center;
+  justify-content: center;">
+  
+<iframe 
+        height="100%" 
+     width="110%" src="https://hertie-coding-club.shinyapps.io/HCC-initial-survey/" title="Quarto Documentation"></iframe>
+     
+</div>
+```

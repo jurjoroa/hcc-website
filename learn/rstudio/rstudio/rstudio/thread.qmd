@@ -1,5 +1,6 @@
 ---
-title: "Enable Multithread with data.table in Mac/Intel chips"
+title:  '{{< animate fadeInDown "Enable Multithread with data.table in Mac/Intel chips"delay=.6s >}}'
+subtitle: '{{< animate fadeInDown "Multithreading offers faster and more efficient data processing, allowing for quicker analysis of complex datasets."delay=.6s >}}'
 author: ["Jorge Roa", "Fernando Alarid-Escudero"]
 date: "2022-07-28"
 categories: ["GitHub", "GitHub Actions", "Automations", "RStudio", "Posit"]
@@ -7,6 +8,7 @@ toc: true
 draft: false
 code-link: true
 title-block-banner: true
+image: https://repository-images.githubusercontent.com/348082335/caaa2f80-8662-11eb-8fb5-190d10a744c5
 ---
 
 ![](images/appleintel.png){fig-align="center"}

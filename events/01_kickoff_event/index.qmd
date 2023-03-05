@@ -1,0 +1,23 @@
+---
+toc: true
+author: ["Jorge Roa"]
+categories: [Rstudio]
+date: '2022-11-04'
+title: '{{< animate fadeInDown "Kick-Off Event: Hertie Coding Club"delay=.6s >}}'
+subtitle: '{{< animate fadeInDown "Re-Introduction to R"delay=.6s >}}'
+image: https://freesvg.org/img/kick-boxer.png
+draft: false
+title-block-banner: true
+---
+
+loiluiloiyolyiol
+
+llylioyilutltil
+
+
+
+
+<br>
+
+<center>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ZANp3oqcH_0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>

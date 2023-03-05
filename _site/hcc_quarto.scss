@@ -16,7 +16,7 @@ body {
 }
 
 main:not(.text_grid, .text_grid_title), p:not(.text_grid, .text_grid_title) {
-  font-size: 1em !important;
+  font-size: 1.1em !important;
 }
     
     .navbar-brand > img {
@@ -874,14 +874,12 @@ width: 100%;
 }
 
 
-.quarto-categories {
-display: grid;
-}
 
 
 
 
-/* Media query for smaller screens */
+
+/* Media query for smaller screens 
 @media only screen and (max-width: 413px) {
  
   .quarto-category:nth-of-type(4) ~ .quarto-category {
@@ -905,7 +903,7 @@ display: grid;
 }
  
   
-}
+}*/
 
 #container {
   padding: 1rem;
@@ -1149,25 +1147,25 @@ display: grid;
 }
 
 
-.card:nth-child(1) {
+.user-container .card:nth-child(1) {
   background: url("Presentation/images/lukas.jpeg") no-repeat;
   background-size: 400px 400px;
   background-position: center;
 }
 
-.card:nth-child(2) {
+.user-container .card:nth-child(2) {
   background: url("Presentation/images/lukas.jpeg") no-repeat;
   background-size: 400px 400px;
   background-position: center;
 }
 
-.card:nth-child(3) {
+.user-container .card:nth-child(3) {
   background: url("Presentation/images/lukas.jpeg") no-repeat;
   background-size: 400px 400px;
   background-position: center;
 }
 
-.card:nth-child(4) {
+.user-container .card:nth-child(4) {
   background: url("Presentation/images/lukas.jpeg") no-repeat;
   background-size: 400px 400px;
   background-position: center;
@@ -1182,12 +1180,12 @@ display: grid;
   background-size: 400px 400px;
   background-position: center;
 }
-.card:nth-child(7) {
+.user-container .card:nth-child(7) {
   background: url("Presentation/images/lukas.jpeg") no-repeat;
   background-size: 400px 400px;
   background-position: center;
 }
-.card:nth-child(8) {
+.user-container .card:nth-child(8) {
   background: url("Presentation/images/lukas.jpeg") no-repeat;
   background-size: 400px 400px;
   background-position: center;
@@ -1530,18 +1528,133 @@ code span.dv {
   /* animation properties */
 }
 
+/*card events*/
+.card-left {
+  border: 5.5px solid #BF041C;
+  background: linear-gradient(to right, #000428, #004e92); ;
+  border-radius: 10px;
+  color: white;
+}
 
-p .quarto-title-meta-heading{
+.card-left:before{
+    content: '';
+    background:url('images/hcc_logo_card.png');
+    background-size:cover;
+    position:absolute;
+    width: 100px;
+    height: 27px;
+    margin-left:-10px;
+    bottom: 10px;
+}
+
+.card-left:hover {
+  transform: scale(1.1);
+}
+
+
+/*card events*/
+.image-right {
+  border: 3.5px solid #BF041C;
+  background: linear-gradient(to right, #000428, #004e92); ;
+  border-radius: 10px;
+  color: white;
+  transition: all 0.5s ease-in-out;
+  position: relative;
   
-  font-size: 2em;
 }
 
-p .quarto-title-meta-contents{
+
+.image-right:before {
+    content: '';
+    background:url('images/hcc_logo_card.png');
+    background-size:cover;
+    position:absolute;
+    width: 100px;
+    height: 27px;
+    margin-right: 900px;
+    bottom: 10px;
+}
+
+ .image-right:hover {
+  transform: scale(1.05);
+}
+
+
+
+
+/*card events*/
+#posts-in-english .image-right {
+  border: 5.5px solid #BF041C;
+  background: linear-gradient(to right, #000428, #004e92); ;
+  border-radius: 10px;
+  color: white;
+  transition: all 0.5s ease-in-out;
+  position: relative;
   
-  font-size: 2em;
 }
 
-.author {
-  font-size: 100px;
-  color: blue;
+
+#posts-in-english .image-right:before {
+    content: '';
+    background:url('images/hcc_logo_card.png');
+    background-size:cover;
+    position:absolute;
+    width: 100px;
+    height: 27px;
+    margin-right: 740px;
+    bottom: 10px;
 }
+
+#posts-in-english .image-right:hover {
+  transform: scale(1.05);
+}
+
+
+#posts-in-english .listing-title{
+  
+  font-size: 1em;
+}
+
+#posts-in-english .listing-subtitle{
+  
+  font-size: .7em;
+}
+
+
+div.listing-reading-time,
+div.listing-date,
+div.listing-author{
+    color: white;
+  margin-left: 25px;
+}
+
+/* .listing-category div.listing-category*/
+
+div.quarto-post.image-right,
+.listing-title,
+div.listing-subtitle,
+.animate__delay-\.6s{
+      color: white;
+}
+
+.quarto-category a{
+   color: white;
+}
+
+#quarto-header .quarto-category{
+   border: 1px solid #BF041C;
+   color: white;
+}
+
+#posts-in-english .listing-category{
+   color: white;
+   border: 1px solid #BF041C;
+}
+
+
+.layout_grid .image-right .listing-category{
+   color: white;
+   border: 1px solid #BF041C;
+}
+
+

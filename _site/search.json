@@ -60,7 +60,7 @@
     "href": "learn/rstudio.html",
     "title": "Bea Milz",
     "section": "",
-    "text": "Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n  \n\n\n\n\n\nUnlock the power of data analysis and statistical computing with R and RStudio! Whether you are a student of public policy or a seasoned professional.\n\n\n\n\nR\n\n\nRStudio\n\n\nAccesibility\n\n\nInstall\n\n\n \n\n\n\n\nMar 2, 2023\n\n\nJorge Roa\n\n\n2 min\n\n\n\n\n\n\n  \n\n\n\n\n\nCode for a plot in my talk at rstudio::conf 2022!\n\n\n\n\nGitHub\n\n\nGitHub Actions\n\n\nAutomations\n\n\nRStudio\n\n\nAutomations\n\n\nAutomations\n\n\nAutomations\n\n\n \n\n\n\n\nJul 28, 2022\n\n\nBeatriz Milz\n\n\n0 min\n\n\n\n\n\n\n  \n\n\n\n\n\n\n\n\n\n\nGitHub\n\n\nGitHub Actions\n\n\nAutomations\n\n\nRStudio\n\n\nPosit\n\n\n \n\n\n\n\nJul 28, 2022\n\n\nJorge Roa, Fernando Alarid-Escudero\n\n\n3 min\n\n\n\n\n\n\nNo matching items"
+    "text": "Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n  \n\n\n\n\n\nUnlock the power of data analysis and statistical computing with R and RStudio! Whether you are a student of public policy or a seasoned professional.\n\n\n\n\nR\n\n\nRStudio\n\n\nAccesibility\n\n\nInstall\n\n\n \n\n\n\n\nMar 2, 2023\n\n\nJorge Roa\n\n\n2 min\n\n\n\n\n\n\n  \n\n\n\n\n\nThis is a example of subtitle. Keep going and youll be fine. Code for a plot in my talk at rstudio::conf 2022!\n\n\n\n\nGitHub\n\n\nGitHub Actions\n\n\nAutomations\n\n\nRStudio\n\n\n \n\n\n\n\nJul 28, 2022\n\n\nBeatriz Milz\n\n\n0 min\n\n\n\n\n\n\n  \n\n\n\n\n\nMultithreading offers faster and more efficient data processing, allowing for quicker analysis of complex datasets.\n\n\n\n\nGitHub\n\n\nGitHub Actions\n\n\nAutomations\n\n\nRStudio\n\n\nPosit\n\n\n \n\n\n\n\nJul 28, 2022\n\n\nJorge Roa, Fernando Alarid-Escudero\n\n\n3 min\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "learn/rstudio/rstudio/rstudio/index.html",
@@ -173,5 +173,89 @@
     "title": "Install R and Rstudio: why R rocks 💻 🔥",
     "section": "Running Code",
     "text": "Running Code\nWhen you click the Render button a document will be generated that includes both content and the output of embedded code. You can embed code like this:\n\n1 + 1\n\n[1] 2\n\n\nHTML page with custom webfont Share Improve this answer Follow edited Sep 9, 2022 at 8:57 answered Sep 9, 2022 at 8:42 shafee’s user avatar shafee 10.9k33 gold badges1111 silver badges3636 bronze badges Add a comment Your Answer\nSign up or log in Post as a guest Name Email\nRequired, but never shown\nBy clicking “Post Your Answer”, you agree to our terms of service, privacy policy and cookie policy Not the answer you’re looking for? Browse other questions tagged\nhtmlcssquarto\nor ask your own question.\nThe Overflow Blog\nThe open-source game engine you’ve been waiting for: Godot (Ep. 542)\nHow Intuit democratizes AI development across teams through reusability\nsponsored post\nFeatured on Meta\nWe've added a \"Necessary cookies only\" option to the cookie consent popup\nTemporary policy: ChatGPT is banned\nThe [amazon] tag is being burninated\nLaunching the CI/CD and R Collectives and community editing features for...\nStaging Ground Beta 1 Recap, and Reviewers needed for Beta 2\nRelated 3175 How do you disable browser autocomplete on web form field / input tags? 4379 Which “href” value should I use for JavaScript links, “#” or “javascript:void(0)”? 1850  vs. . Which to use? 777 When to use IMG vs. CSS background-image? 583 CSS Font Border? 2385 Get the size of the screen, current web page and browser window 1674 Font scaling based on size of container 940 Remove blue border from css custom-styled button in Chrome 125 Cannot display HTML string Hot\n\n\n\n\n\n\nSure, here’s a step-by-step guide on how to install R and RStudio:\nR is a free, open-source programming language that is widely used in data analysis and statistical computing. RStudio is an integrated development environment (IDE) that makes it easier to write and run R code. Installing R and RStudio is straightforward and can be done in a few simple steps:"
+  },
+  {
+    "objectID": "events.html",
+    "href": "events.html",
+    "title": "Bea Milz",
+    "section": "",
+    "text": "2023 - Janeiro/Fevereiro - Curso de verão no IME/USP - Relatórios reprodutíveis em R. Materiais: 2022, 2023.\n2023 - Cursos na Curso-R: Visualização de dados (março), Relatórios e apresentações (abril). Formulário de bolsas de diversidade. Os materiais dos cursos estão disponíveis online.\n2023 - March - GitHub Actions for R users. Data Science Masterclass Series - Escola Nacional de Saúde Pública/Universidade de Lisboa."
+  },
+  {
+    "objectID": "events.html#invitations-convites",
+    "href": "events.html#invitations-convites",
+    "title": "Bea Milz",
+    "section": "Invitations / Convites",
+    "text": "Invitations / Convites\nPlease email me at: milz.bea@gmail.com"
+  },
+  {
+    "objectID": "events.html#talkspalestras",
+    "href": "events.html#talkspalestras",
+    "title": "Bea Milz",
+    "section": "Talks/Palestras",
+    "text": "Talks/Palestras\n\n\n   \n     \n     \n       Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "events/events.html",
+    "href": "events/events.html",
+    "title": "Bea Milz",
+    "section": "",
+    "text": "2023 - Janeiro/Fevereiro - Curso de verão no IME/USP - Relatórios reprodutíveis em R. Materiais: 2022, 2023.\n2023 - Cursos na Curso-R: Visualização de dados (março), Relatórios e apresentações (abril). Formulário de bolsas de diversidade. Os materiais dos cursos estão disponíveis online.\n2023 - March - GitHub Actions for R users. Data Science Masterclass Series - Escola Nacional de Saúde Pública/Universidade de Lisboa."
+  },
+  {
+    "objectID": "events/events.html#invitations-convites",
+    "href": "events/events.html#invitations-convites",
+    "title": "Bea Milz",
+    "section": "Invitations / Convites",
+    "text": "Invitations / Convites\nPlease email me at: milz.bea@gmail.com"
+  },
+  {
+    "objectID": "events/events.html#talkspalestras",
+    "href": "events/events.html#talkspalestras",
+    "title": "Bea Milz",
+    "section": "Talks/Palestras",
+    "text": "Talks/Palestras\n\n\n   \n     \n     \n       Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nRunning code while we’re sleeping - Introduction to GitHub Actions for R users\n\n\n\nOct 29, 2022\n\n\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "events/index.html",
+    "href": "events/index.html",
+    "title": "Bea Milz",
+    "section": "",
+    "text": "Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\n\nRe-Introduction to R\n\n\n\nNov 4, 2022\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nOct 29, 2022\n\n\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "events/index.html#invitations-convites",
+    "href": "events/index.html#invitations-convites",
+    "title": "Bea Milz",
+    "section": "Invitations / Convites",
+    "text": "Invitations / Convites\nPlease email me at: milz.bea@gmail.com"
+  },
+  {
+    "objectID": "events/index.html#talkspalestras",
+    "href": "events/index.html#talkspalestras",
+    "title": "Bea Milz",
+    "section": "Talks/Palestras",
+    "text": "Talks/Palestras\n\n\n   \n     \n     \n       Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nRunning code while we’re sleeping - Introduction to GitHub Actions for R users\n\n\n\nOct 29, 2022\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nRunning code while we’re sleeping - Introduction to GitHub Actions for R users\n\n\n\nOct 29, 2022\n\n\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "events/01_kickoff_event/index.html",
+    "href": "events/01_kickoff_event/index.html",
+    "title": "Kick-Off Event: Hertie Coding Club",
+    "section": "",
+    "text": "loiluiloiyolyiol\nllylioyilutltil"
+  },
+  {
+    "objectID": "events/02_objects/index.html",
+    "href": "events/02_objects/index.html",
+    "title": "Running code while we’re sleeping - Introduction to GitHub Actions for R users",
+    "section": "",
+    "text": "loiluiloiyolyiol\nllylioyilutltil"
+  },
+  {
+    "objectID": "learn/index.html",
+    "href": "learn/index.html",
+    "title": "Posts",
+    "section": "",
+    "text": "Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nHow important is GitHub Actions to RStudio/Posit?\n\n\nThis is a example of subtitle. Keep going and youll be fine. Code for a plot in my talk at rstudio::conf 2022!\n\n\n\nJul 28, 2022\n\n\n\n\n\n\n\n\nNo matching items"
   }
 ]

@@ -6,10 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Beatriz Milz">
-<meta name="dcterms.date" content="2022-07-28">
 
-<title>How important is GitHub Actions to RStudio/Posit?</title>
+<title>Bea Milz</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -25,25 +23,26 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="../../../../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../../../../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../../../../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../../../../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../../../../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../../../../">
-<link href="../../../../images/hcc.png" rel="icon" type="image/png">
-<script src="../../../../site_libs/quarto-html/quarto.js"></script>
-<script src="../../../../site_libs/quarto-html/popper.min.js"></script>
-<script src="../../../../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../../../../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<script src="../../../../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../../../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../../../../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
-<link href="../../../../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
-<link href="../../../../site_libs/quarto-contrib/animate-4.1.1/animate.min.css" rel="stylesheet">
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./images/hcc.png" rel="icon" type="image/png">
+<script src="site_libs/quarto-listing/list.min.js"></script>
+<script src="site_libs/quarto-listing/quarto-listing.js"></script>
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
+<link href="site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -63,20 +62,43 @@ ul.task-list li input[type="checkbox"] {
     "search-submit-button-title": "Submit"
   }
 }</script>
+<script>
+
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-talks .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-image','listing-date','listing-title','listing-subtitle',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      
+      searchColumns: ["listing-categories"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-talks'] = new List('listing-talks', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  </script>
 <style>html{ scroll-behavior: smooth; }</style>
 <script src="js/navbar.js"></script>
-<style>:root{--animate-duration:3s;--animate-delay:2s;--animate-repeat:1}</style>
-<style>:root{--animate-duration:3s;--animate-delay:2s;--animate-repeat:1}</style>
-<style>:root{--animate-duration:3s;--animate-delay:2s;--animate-repeat:1}</style>
-<style>:root{--animate-duration:3s;--animate-delay:2s;--animate-repeat:1}</style>
-<style>:root{--animate-duration:3s;--animate-delay:2s;--animate-repeat:1}</style>
-<style>:root{--animate-duration:3s;--animate-delay:2s;--animate-repeat:1}</style>
-<style>:root{--animate-duration:3s;--animate-delay:2s;--animate-repeat:1}</style>
 
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
-<link rel="stylesheet" href="../../../../hcc_quarto.scss">
-<meta name="twitter:title" content="How important is GitHub Actions to RStudio/Posit?">
-<meta name="twitter:description" content="{{< animate fadeInDown &quot;This is a example of subtitle. Keep going and youll be fine. Code for a plot in my talk at rstudio::conf 2022!&quot;delay=.6s >}}">
+<link rel="stylesheet" href="hcc_quarto.scss">
+<meta name="twitter:title" content="Bea Milz">
+<meta name="twitter:description" content="Please email me at: milz.bea@gmail.com">
 <meta name="twitter:creator" content="@beamilz">
 <meta name="twitter:card" content="summary_large_image">
 </head>
@@ -88,8 +110,8 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg navbar-dark ">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container">
-    <a href="../../../../index.html" class="navbar-brand navbar-brand-logo">
-    <img src="../../../../images/hcc_bk_white.png" alt="" class="navbar-logo">
+    <a href="./index.html" class="navbar-brand navbar-brand-logo">
+    <img src="./images/hcc_bk_white.png" alt="" class="navbar-logo">
     </a>
   </div>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
@@ -98,12 +120,12 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../../../index.html"><i class="bi bi-house-fill" role="img">
+    <a class="nav-link" href="./index.html"><i class="bi bi-house-fill" role="img">
 </i> 
  <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../../../members.html"><i class="bi bi-people-fill" role="img">
+    <a class="nav-link" href="./members.html"><i class="bi bi-people-fill" role="img">
 </i> 
  <span class="menu-text">Members</span></a>
   </li>  
@@ -115,23 +137,23 @@ ul.task-list li input[type="checkbox"] {
     </a>
     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-learn">    
         <li>
-    <a class="dropdown-item" href="../../../../learn/rstudio.html">
+    <a class="dropdown-item" href="./learn/rstudio.html">
  <span class="dropdown-text"><i class="fa-brands fa-r-project" aria-label="r-project"></i> language</span></a>
   </li>  
     </ul>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="../../../../events/index.html"><i class="bi bi-calendar3" role="img">
+    <a class="nav-link active" href="./events.html" aria-current="page"><i class="bi bi-calendar3" role="img">
 </i> 
  <span class="menu-text">Events</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../../../register.html"><i class="bi bi-fingerprint" role="img">
+    <a class="nav-link" href="./register.html"><i class="bi bi-fingerprint" role="img">
 </i> 
  <span class="menu-text">Register</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../../../about.html"><i class="bi bi-info-square-fill" role="img">
+    <a class="nav-link" href="./about.html"><i class="bi bi-info-square-fill" role="img">
 </i> 
  <span class="menu-text">About us</span></a>
   </li>  
@@ -145,62 +167,88 @@ ul.task-list li input[type="checkbox"] {
     </nav>
 </header>
 <!-- content -->
-<header id="title-block-header" class="quarto-title-block default page-columns page-full">
-  <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-body">
-      <h1 class="title"><span class="animate__animated animate__fadeInDown animate__delay-.6s" style="display: inline-block;">How important is GitHub Actions to RStudio/Posit?</span></h1>
-            <p class="subtitle lead"><span class="animate__animated animate__fadeInDown animate__delay-.6s" style="display: inline-block;">This is a example of subtitle. Keep going and youll be fine. Code for a plot in my talk at rstudio::conf 2022!</span></p>
-                                <div class="quarto-categories">
-                <div class="quarto-category">GitHub</div>
-                <div class="quarto-category">GitHub Actions</div>
-                <div class="quarto-category">Automations</div>
-                <div class="quarto-category">RStudio</div>
-              </div>
-                  </div>
-  </div>
-    
-  
-  <div class="quarto-title-meta">
-
-      <div>
-      <div class="quarto-title-meta-heading">Author</div>
-      <div class="quarto-title-meta-contents">
-               <p>Beatriz Milz </p>
-            </div>
-    </div>
-      
-      <div>
-      <div class="quarto-title-meta-heading">Published</div>
-      <div class="quarto-title-meta-contents">
-        <p class="date">July 28, 2022</p>
-      </div>
-    </div>
-    
-      
-    </div>
-    
-  
-  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
-    </div>
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#next-activities-próximas-atividades" id="toc-next-activities-próximas-atividades" class="nav-link active" data-scroll-target="#next-activities-próximas-atividades">Next activities / Próximas atividades</a></li>
+  <li><a href="#invitations-convites" id="toc-invitations-convites" class="nav-link" data-scroll-target="#invitations-convites">Invitations / Convites</a></li>
+  <li><a href="#talkspalestras" id="toc-talkspalestras" class="nav-link" data-scroll-target="#talkspalestras">Talks/Palestras</a></li>
+  </ul>
+</nav>
+    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-cloud"></div></div>
 <!-- main -->
-<main class="content quarto-banner-title-block" id="quarto-document-content">
+<main class="content column-page-left" id="quarto-document-content">
 
-
-
-
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/appleintel.png" class="img-fluid figure-img"></p>
-</figure>
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Bea Milz</h1>
 </div>
-<p>This post is a complementary material for <a href="https://beamilz.com/talks/en/2022-rstudio-conf/">my talk at rstudio::conf 2022</a> (which is happening <strong>TODAY!!!</strong>)!</p>
-<p>I’m writing this really quick, from the hotel room, for anyone interested to see the code used to create the plot that it is on my talk:</p>
 
 
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+</header>
+
+<section id="next-activities-próximas-atividades" class="level2">
+<h2 class="anchored" data-anchor-id="next-activities-próximas-atividades">Next activities / Próximas atividades</h2>
+<ul>
+<li><p>2023 - Janeiro/Fevereiro - <a href="https://www.ime.usp.br/~verao/">Curso de verão no IME/USP - Relatórios reprodutíveis em R</a>. Materiais: <a href="https://beatrizmilz.github.io/2022-curso-de-verao-ime-usp-relatorios/trabalho_final.html">2022</a>, <a href="https://beatrizmilz.github.io/2023-curso-de-verao-ime-usp-relatorios/">2023</a>.</p></li>
+<li><p>2023 - Cursos na <a href="https://curso-r.com/">Curso-R</a>: Visualização de dados (março), Relatórios e apresentações (abril). <a href="https://forms.gle/KpALbhvHXu9aVKXTA">Formulário de bolsas de diversidade</a>. <a href="https://curso-r.com/material/">Os materiais dos cursos estão disponíveis online</a>.</p></li>
+<li><p>2023 - March - <a href="./talks/Data_Science_ENSP.pdf">GitHub Actions for R users. Data Science Masterclass Series - Escola Nacional de Saúde Pública/Universidade de Lisboa</a>.</p></li>
+</ul>
+</section>
+<section id="invitations-convites" class="level2">
+<h2 class="anchored" data-anchor-id="invitations-convites">Invitations / Convites</h2>
+<p>Please email me at: <a href="mailto:milz.bea@gmail.com">milz.bea@gmail.com</a></p>
+</section>
+<section id="talkspalestras" class="level2">
+<h2 class="anchored" data-anchor-id="talkspalestras">Talks/Palestras</h2>
+<div id="listing-talks" class="quarto-listing quarto-listing-container-grid">
+<div class="listing-actions-group">
+   <div class="input-group input-group-sm quarto-listing-sort">
+     <span class="input-group-text"><i class="bi bi-sort-down"></i></span>
+     <select id="listing-talks-sort" class="form-select" aria-label="Order By" onchange="window['quarto-listings']['listing-talks'].sort(this.options[this.selectedIndex].value, { order: this.options[this.selectedIndex].getAttribute('data-direction')})">
+       <option value="" disabled="" selected="" hidden="">Order By</option>
+       <option value="index" data-direction="asc">Default</option>
+         <option value="listing-title" data-direction="asc">
+          Title
+        </option>
+         <option value="listing-date-sort" data-direction="asc">
+          Date - Oldest
+        </option>
+         <option value="listing-date-sort" data-direction="desc">
+          Date - Newest
+        </option>
+     </select>
+  </div>
+    <div class="input-group input-group-sm quarto-listing-filter">
+      <span class="input-group-text"><i class="bi bi-search"></i></span>
+      <input type="text" class="search form-control" placeholder="Filter">
+    </div>
+</div>
+<div class="list grid quarto-listing-cols-3">
+
+</div>
+<div class="listing-no-matching d-none">
+No matching items
+</div>
+</div>
+
+
+
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -465,8 +513,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
 });
 </script>
-<script src="https://giscus.app/client.js" data-repo="jurjoroa/hcc-website" data-repo-id="R_kgDOIttXkg" data-category="General" data-category-id="DIC_kwDOIttXks4CUpc5" data-mapping="title" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="top" data-theme="light" data-lang="en" crossorigin="anonymous" async="">
-</script>
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
@@ -507,5 +553,5 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 
 
 
-<script src="../../../../site_libs/quarto-html/zenscroll-min.js"></script>
+<script src="site_libs/quarto-html/zenscroll-min.js"></script>
 </body></html>

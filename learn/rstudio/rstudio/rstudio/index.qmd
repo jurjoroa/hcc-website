@@ -1,14 +1,13 @@
 ---
-title: "How important is GitHub Actions to RStudio/Posit?"
-subtitle: "Code for a plot in my talk at rstudio::conf 2022!"
+title: '{{< animate fadeInDown "How important is GitHub Actions to RStudio/Posit?"delay=.6s >}}'
+subtitle:  '{{< animate fadeInDown "This is a example of subtitle. Keep going and youll be fine. Code for a plot in my talk at rstudio::conf 2022!"delay=.6s >}}'
 author: "Beatriz Milz"
 date: "2022-07-28"
-categories: ["GitHub", "GitHub Actions", "Automations", "RStudio", "Automations", "Automations", "Automations"]
+categories: ["GitHub", "GitHub Actions", "Automations", "RStudio"]
 toc: true
 draft: false
 code-link: true
 title-block-banner: true
-
 ---
 
 

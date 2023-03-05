@@ -35,15 +35,14 @@ website:
       - icon: people-fill  
         href: members.qmd
         text: "Members"
-      - icon: people-fill  
-        href: shiny.qmd
-        text: "Shiny"
       - icon: mortarboard-fill  
         text: "Learn"
         menu:
           - text: "{{< fa brands r-project >}} language"
             href: learn/rstudio.qmd
-            
+      - icon: bi-calendar3  
+        href: events/index.qmd
+        text: "Events"
       - icon: fingerprint  
         href: register.qmd
         text: "Register"

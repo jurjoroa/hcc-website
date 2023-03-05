@@ -1,6 +1,6 @@
 format:
   html:
-    highlight-style: cyborg
+    highlight-style: cyborg #change text from code chunks to white. 
     smooth-scroll: true
     theme: 
           light: spacelab
