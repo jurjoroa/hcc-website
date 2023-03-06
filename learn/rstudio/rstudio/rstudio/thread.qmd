@@ -8,7 +8,7 @@ toc: true
 draft: false
 code-link: true
 title-block-banner: true
-image: https://repository-images.githubusercontent.com/348082335/caaa2f80-8662-11eb-8fb5-190d10a744c5
+image: images/apple_intel_f.png
 ---
 
 ![](images/appleintel.png){fig-align="center"}

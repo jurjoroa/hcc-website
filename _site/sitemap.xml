@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://nasa-openscapes.github.io/index.html</loc>
-    <lastmod>2023-03-05T16:45:04.416Z</lastmod>
+    <lastmod>2023-03-06T15:50:40.053Z</lastmod>
   </url>
   <url>
     <loc>https://nasa-openscapes.github.io/about.html</loc>
@@ -30,7 +30,7 @@
   </url>
   <url>
     <loc>https://nasa-openscapes.github.io/learn/rstudio.html</loc>
-    <lastmod>2023-03-05T15:39:43.769Z</lastmod>
+    <lastmod>2023-03-06T17:22:45.412Z</lastmod>
   </url>
   <url>
     <loc>https://nasa-openscapes.github.io/learn/rstudio/rstudio/rstudio/index.html</loc>
@@ -42,7 +42,7 @@
   </url>
   <url>
     <loc>https://nasa-openscapes.github.io/learn/rstudio/rstudio/rstudio/thread.html</loc>
-    <lastmod>2023-03-05T15:31:44.207Z</lastmod>
+    <lastmod>2023-03-06T15:50:38.178Z</lastmod>
   </url>
   <url>
     <loc>https://nasa-openscapes.github.io/shiny.html</loc>
@@ -66,18 +66,26 @@
   </url>
   <url>
     <loc>https://nasa-openscapes.github.io/events/index.html</loc>
-    <lastmod>2023-03-05T15:24:15.520Z</lastmod>
+    <lastmod>2023-03-06T18:23:22.836Z</lastmod>
   </url>
   <url>
     <loc>https://nasa-openscapes.github.io/events/01_kickoff_event/index.html</loc>
-    <lastmod>2023-03-05T15:24:15.093Z</lastmod>
+    <lastmod>2023-03-06T16:17:04.447Z</lastmod>
   </url>
   <url>
     <loc>https://nasa-openscapes.github.io/events/02_objects/index.html</loc>
-    <lastmod>2023-03-05T11:17:46.033Z</lastmod>
+    <lastmod>2023-03-06T18:04:12.756Z</lastmod>
   </url>
   <url>
     <loc>https://nasa-openscapes.github.io/learn/index.html</loc>
     <lastmod>2023-03-05T15:39:45.738Z</lastmod>
+  </url>
+  <url>
+    <loc>https://nasa-openscapes.github.io/events/03_wrangle_part2/index.html</loc>
+    <lastmod>2023-03-06T18:15:43.360Z</lastmod>
+  </url>
+  <url>
+    <loc>https://nasa-openscapes.github.io/events/04_environment/index.html</loc>
+    <lastmod>2023-03-06T18:23:22.367Z</lastmod>
   </url>
 </urlset>

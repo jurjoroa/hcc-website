@@ -1657,4 +1657,9 @@ div.listing-subtitle,
    border: 1px solid #BF041C;
 }
 
+html body.nav-fixed.quarto-light div#quarto-content.quarto-container.page-columns.page-rows-contents.page-layout-full.page-navbar main#quarto-document-content.content.quarto-banner-title-block.column-page{
+ min-height: calc(-1px + 100vh);
 
+html body.nav-fixed.quarto-light div#quarto-content.quarto-container.page-columns.page-rows-contents.page-layout-full.page-navbar main#quarto-document-content.content.quarto-banner-title-block.column-page{
+ min-height: calc(-1px + 100vh);
+}

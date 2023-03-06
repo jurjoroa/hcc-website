@@ -221,7 +221,7 @@
     "href": "events/index.html",
     "title": "Bea Milz",
     "section": "",
-    "text": "Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\n\nRe-Introduction to R\n\n\n\nNov 4, 2022\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nOct 29, 2022\n\n\n\n\n\n\n\n\nNo matching items"
+    "text": "Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\n\nCreate reproducible Python environments\n\n\n\nFeb 24, 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nExercises (part 2)\n\n\n\nNov 24, 2022\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTidyverse, packages and exercise (part 1)\n\n\n\nNov 18, 2022\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nRe-Introduction to R\n\n\n\nNov 4, 2022\n\n\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "events/index.html#invitations-convites",
@@ -247,9 +247,9 @@
   {
     "objectID": "events/02_objects/index.html",
     "href": "events/02_objects/index.html",
-    "title": "Running code while we’re sleeping - Introduction to GitHub Actions for R users",
+    "title": "Meet Up II: Wrangle dataframes",
     "section": "",
-    "text": "loiluiloiyolyiol\nllylioyilutltil"
+    "text": "📍 Hertie School. Seminar Room 2.61\n🗓 November 18, 2022\n\nObjective: We will go over the fundamentals of data wrangling in R. We will create our first repo with GitHub and understand why using Git is important in the Data Science world. Also, we will move on to exploring methods for cleaning, transforming, and manipulating data using the dplyr package. We’ll discuss data operations like filtering, sorting, joining, and summing up. Participants will leave the session with a firm grasp on the fundamentals of data manipulation in R, which will serve as a solid foundation for further exploration and experimentation with this potent language."
   },
   {
     "objectID": "learn/index.html",
@@ -257,5 +257,19 @@
     "title": "Posts",
     "section": "",
     "text": "Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nHow important is GitHub Actions to RStudio/Posit?\n\n\nThis is a example of subtitle. Keep going and youll be fine. Code for a plot in my talk at rstudio::conf 2022!\n\n\n\nJul 28, 2022\n\n\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "events/03_wrangle_part2/index.html",
+    "href": "events/03_wrangle_part2/index.html",
+    "title": "Meet Up III: Wrangle dataframes",
+    "section": "",
+    "text": "📍 Hertie School. Seminar Room 2.61\n🗓 14:00 - 16:00 hrs, November 24, 2022\n\nObjective: We will go over the fundamentals of data wrangling in R. We will continue exploring methods for cleaning, transforming, and manipulating data using the dplyr package. We’ll discuss data operations like filtering, sorting, joining, and summing up. Participants will leave the session with a firm grasp on the fundamentals of data manipulation in R, which will serve as a solid foundation for further exploration and experimentation with this potent language."
+  },
+  {
+    "objectID": "events/04_environment/index.html",
+    "href": "events/04_environment/index.html",
+    "title": "Setting up your environment in Python",
+    "section": "",
+    "text": "📍 Hertie School. Seminar Room 2.34\n🗓 13:00 hrs, February 24, 2023\n\nObjective: The main learning outcome is for you to know how to set up reproducible and shareable environments for Python projects, understand how to effectively switch between environments when using an IDE and how to work more efficiently with IDEs, including how to use jupyter code cells within a .py script (a personal favourite of mine). The workshop will focus on Pipenv (the environment and packaging tool officially recommended by the Python developer community) and VSCode (a very customizable and efficient IDE). Nevertheless, the ideas and workflows covered here also apply for other tools (like Anaconda or venv, Sypder or Pycharm)."
   }
 ]

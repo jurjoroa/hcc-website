@@ -6,10 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Beatriz Milz">
-<meta name="dcterms.date" content="2022-10-29">
+<meta name="author" content="Jorge Roa">
+<meta name="dcterms.date" content="2022-11-18">
 
-<title>Running code while we’re sleeping - Introduction to GitHub Actions for R users</title>
+<title>Meet Up II: Wrangle dataframes</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -41,8 +41,12 @@ ul.task-list li input[type="checkbox"] {
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
 <link href="../../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script src="../../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <link href="../../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
 <link href="../../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
+<link href="../../site_libs/quarto-contrib/animate-4.1.1/animate.min.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -64,11 +68,18 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 <style>html{ scroll-behavior: smooth; }</style>
 <script src="js/navbar.js"></script>
+<style>:root{--animate-duration:3s;--animate-delay:2s;--animate-repeat:1}</style>
+<style>:root{--animate-duration:3s;--animate-delay:2s;--animate-repeat:1}</style>
+<style>:root{--animate-duration:3s;--animate-delay:2s;--animate-repeat:1}</style>
+<style>:root{--animate-duration:3s;--animate-delay:2s;--animate-repeat:1}</style>
+<style>:root{--animate-duration:3s;--animate-delay:2s;--animate-repeat:1}</style>
+<style>:root{--animate-duration:3s;--animate-delay:2s;--animate-repeat:1}</style>
+<style>:root{--animate-duration:3s;--animate-delay:2s;--animate-repeat:1}</style>
 
 
 <link rel="stylesheet" href="../../hcc_quarto.scss">
-<meta name="twitter:title" content="Running code while we’re sleeping - Introduction to GitHub Actions for R users">
-<meta name="twitter:description" content="loiluiloiyolyiol">
+<meta name="twitter:title" content="Meet Up II: Wrangle dataframes">
+<meta name="twitter:description" content="{{< animate fadeInDown &quot;Tidyverse, packages and exercise (part 1)&quot;delay=.6s >}}">
 <meta name="twitter:image" content="https://freesvg.org/img/1449718228.png">
 <meta name="twitter:creator" content="@beamilz">
 <meta name="twitter:card" content="summary_large_image">
@@ -138,57 +149,63 @@ ul.task-list li input[type="checkbox"] {
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title"><span class="animate__animated animate__fadeInDown animate__delay-.6s" style="display: inline-block;">Meet Up II: Wrangle dataframes</span></h1>
+            <p class="subtitle lead"><span class="animate__animated animate__fadeInDown animate__delay-.6s" style="display: inline-block;">Tidyverse, packages and exercise (part 1)</span></p>
+                                <div class="quarto-categories">
+                <div class="quarto-category">Rstudio</div>
+                <div class="quarto-category">Wrangling</div>
+                <div class="quarto-category">Tidyverse</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Jorge Roa </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">November 18, 2022</p>
+      </div>
+    </div>
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
-
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">Running code while we’re sleeping - Introduction to GitHub Actions for R users</h1>
-  <div class="quarto-categories">
-    <div class="quarto-category">GitHub</div>
-    <div class="quarto-category">GitHub Actions</div>
-    <div class="quarto-category">R</div>
-    <div class="quarto-category">Rstudio</div>
-  </div>
-  </div>
+<main class="content quarto-banner-title-block" id="quarto-document-content">
 
 
 
-<div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-contents">
-             <p>Beatriz Milz </p>
-          </div>
-  </div>
-    
-    <div>
-    <div class="quarto-title-meta-heading">Published</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date">October 29, 2022</p>
-    </div>
-  </div>
-  
-    
-  </div>
-  
-
-</header>
-
-<p>loiluiloiyolyiol</p>
-<p>llylioyilutltil</p>
-<p><br></p>
-<center>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/ZANp3oqcH_0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
-</iframe>
-</center>
+<hr>
+<p>📍 Hertie School. Seminar Room 2.61</p>
+<p>🗓 November 18, 2022</p>
+<hr>
+<p><strong>Objective</strong>: We will go over the fundamentals of data wrangling in R. We will create our first repo with GitHub and understand why using Git is important in the Data Science world. Also, we will move on to exploring methods for cleaning, transforming, and manipulating data using the dplyr package. We’ll discuss data operations like filtering, sorting, joining, and summing up. Participants will leave the session with a firm grasp on the fundamentals of data manipulation in R, which will serve as a solid foundation for further exploration and experimentation with this potent language.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="2_session.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="2_session.png" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
+<hr>
 
 
 
@@ -494,6 +511,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>
   </div>
 </footer>
+<script>var lightboxQuarto = GLightbox({"skin":"lightwidth","descPosition":"left","selector":".lightbox","loop":true,"openEffect":"fade","closeEffect":"fade"});</script>
 
 
 

@@ -1,0 +1,33 @@
+---
+toc: true
+author: ["Jorge Roa", "Carmen Garro"]
+categories: [Rstudio, Wrangling, Tidyverse]
+date: '2022-11-24'
+title: '{{< animate fadeInDown "Meet Up III: Wrangle dataframes"delay=.6s >}}'
+subtitle: '{{< animate fadeInDown "Exercises (part 2)"delay=.6s >}}'
+image: https://freesvg.org/img/ftdata.png
+draft: false
+title-block-banner: true
+code-link: true
+filters:
+   - lightbox
+lightbox: 
+  match: auto
+  effect: fade
+  desc-position: left
+  css-class: "lightwidth"
+---
+
+------------------------------------------------------------------------
+
+📍 Hertie School. Seminar Room 2.61
+
+🗓 14:00 - 16:00 hrs, November 24, 2022
+
+------------------------------------------------------------------------
+
+**Objective**: We will go over the fundamentals of data wrangling in R. We will continue exploring methods for cleaning, transforming, and manipulating data using the dplyr package. We'll discuss data operations like filtering, sorting, joining, and summing up. Participants will leave the session with a firm grasp on the fundamentals of data manipulation in R, which will serve as a solid foundation for further exploration and experimentation with this potent language.
+
+![](3_session.png)
+
+------------------------------------------------------------------------

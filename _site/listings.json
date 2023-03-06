@@ -28,8 +28,10 @@
   {
     "listing": "/events/index.html",
     "items": [
-      "/events/01_kickoff_event/index.html",
-      "/events/02_objects/index.html"
+      "/events/04_environment/index.html",
+      "/events/03_wrangle_part2/index.html",
+      "/events/02_wrangle/index.html",
+      "/events/01_kickoff_event/index.html"
     ]
   },
   {
