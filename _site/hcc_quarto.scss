@@ -1572,6 +1572,7 @@ code span.dv {
     width: 100px;
     height: 27px;
     margin-right: 900px;
+    right: calc(100% - 1000px);
     bottom: 10px;
 }
 
@@ -1601,7 +1602,8 @@ code span.dv {
     position:absolute;
     width: 100px;
     height: 27px;
-    margin-right: 740px;
+    right: calc(100% - 1000px);
+    margin-right: 900px;
     bottom: 10px;
 }
 
@@ -1657,9 +1659,3 @@ div.listing-subtitle,
    border: 1px solid #BF041C;
 }
 
-html body.nav-fixed.quarto-light div#quarto-content.quarto-container.page-columns.page-rows-contents.page-layout-full.page-navbar main#quarto-document-content.content.quarto-banner-title-block.column-page{
- min-height: calc(-1px + 100vh);
-
-html body.nav-fixed.quarto-light div#quarto-content.quarto-container.page-columns.page-rows-contents.page-layout-full.page-navbar main#quarto-document-content.content.quarto-banner-title-block.column-page{
- min-height: calc(-1px + 100vh);
-}
