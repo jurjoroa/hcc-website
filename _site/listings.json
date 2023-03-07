@@ -1,13 +1,5 @@
 [
   {
-    "listing": "/learn/rstudio.html",
-    "items": [
-      "/learn/rstudio/rstudio/rstudio/InstallRStudio.html",
-      "/learn/rstudio/rstudio/rstudio/index.html",
-      "/learn/rstudio/rstudio/rstudio/thread.html"
-    ]
-  },
-  {
     "listing": "/index.html",
     "items": [
       "/learn/rstudio/rstudio/rstudio/InstallRStudio.html",
@@ -16,13 +8,17 @@
     ]
   },
   {
-    "listing": "/events.html",
-    "items": []
+    "listing": "/learn/index.html",
+    "items": [
+      "/learn/rstudio/rstudio/rstudio/index.html"
+    ]
   },
   {
-    "listing": "/events/events.html",
+    "listing": "/learn/rstudio.html",
     "items": [
-      "/events/01_kickoff_event/index.html"
+      "/learn/rstudio/rstudio/rstudio/InstallRStudio.html",
+      "/learn/rstudio/rstudio/rstudio/index.html",
+      "/learn/rstudio/rstudio/rstudio/thread.html"
     ]
   },
   {
@@ -32,12 +28,6 @@
       "/events/03_wrangle_part2/index.html",
       "/events/02_wrangle/index.html",
       "/events/01_kickoff_event/index.html"
-    ]
-  },
-  {
-    "listing": "/learn/index.html",
-    "items": [
-      "/learn/rstudio/rstudio/rstudio/index.html"
     ]
   }
 ]
