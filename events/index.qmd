@@ -1,12 +1,11 @@
 ---
-title: "Bea Milz"
 listing:
-  - id: talks
+  - id: Events
     contents: "*/index.qmd"
     type: grid
     fields: [image, date, title, subtitle]
     sort: "date desc"
-    categories: unnumbered
+    categories: numbered
     sort-ui: true
     filter-ui: true
     page-size: 36     
@@ -19,7 +18,7 @@ toc: true
 
 ## Events
 
-::: {#talks}
+::: {#Events}
 :::
 
 

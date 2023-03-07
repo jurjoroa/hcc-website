@@ -8,12 +8,6 @@
     ]
   },
   {
-    "listing": "/learn/index.html",
-    "items": [
-      "/learn/rstudio/rstudio/rstudio/index.html"
-    ]
-  },
-  {
     "listing": "/learn/rstudio.html",
     "items": [
       "/learn/rstudio/rstudio/rstudio/InstallRStudio.html",

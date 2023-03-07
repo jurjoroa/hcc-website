@@ -1584,7 +1584,7 @@ code span.dv {
 
 
 /*card events*/
-#posts-in-english .image-right {
+#learn-r .image-right {
   border: 5.5px solid #BF041C;
   background: linear-gradient(to right, #000428, #004e92); ;
   border-radius: 10px;
@@ -1595,7 +1595,7 @@ code span.dv {
 }
 
 
-#posts-in-english .image-right:before {
+#learn-r .image-right:before {
     content: '';
     background:url('images/hcc_logo_card.png');
     background-size:cover;
@@ -1607,17 +1607,17 @@ code span.dv {
     bottom: 10px;
 }
 
-#posts-in-english .image-right:hover {
+#learn-r .image-right:hover {
   transform: scale(1.05);
 }
 
 
-#posts-in-english .listing-title{
+#learn-r .listing-title{
   
   font-size: 1em;
 }
 
-#posts-in-english .listing-subtitle{
+#learn-r .listing-subtitle{
   
   font-size: .7em;
 }
@@ -1648,7 +1648,7 @@ div.listing-subtitle,
    color: white;
 }
 
-#posts-in-english .listing-category{
+#learn-r .listing-category{
    color: white;
    border: 1px solid #BF041C;
 }

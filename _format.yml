@@ -7,8 +7,6 @@ format:
           dark: cyborg
           
     css: hcc_quarto.scss
-    include-in-header:
-        text: "<script src='js/navbar.js'></script>"
     toc: true
     code-link: true
     link-external-newwindow: true

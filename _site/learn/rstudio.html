@@ -66,7 +66,7 @@ ul.task-list li input[type="checkbox"] {
 <script>
 
   window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-posts-en .list');
+    const listingTargetEl = window.document.querySelector('#listing-learn-r .list');
     if (!listingTargetEl) {
       // No listing discovered, do not attach.
       return; 
@@ -79,7 +79,7 @@ ul.task-list li input[type="checkbox"] {
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-posts-en'] = new List('listing-posts-en', options);
+    window['quarto-listings']['listing-learn-r'] = new List('listing-learn-r', options);
 
     if (window['quarto-listing-loaded']) {
       window['quarto-listing-loaded']();
@@ -93,7 +93,6 @@ ul.task-list li input[type="checkbox"] {
   })
   </script>
 <style>html{ scroll-behavior: smooth; }</style>
-<script src="js/navbar.js"></script>
 <style>:root{--animate-duration:3s;--animate-delay:2s;--animate-repeat:1}</style>
 <style>:root{--animate-duration:3s;--animate-delay:2s;--animate-repeat:1}</style>
 <style>:root{--animate-duration:3s;--animate-delay:2s;--animate-repeat:1}</style>
@@ -181,7 +180,7 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#posts-in-english" id="toc-posts-in-english" class="nav-link active" data-scroll-target="#posts-in-english">Posts in English</a></li>
+  <li><a href="#learn-r" id="toc-learn-r" class="nav-link active" data-scroll-target="#learn-r">Learn R</a></li>
   </ul>
 </nav>
     </div>
@@ -205,13 +204,13 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<section id="posts-in-english" class="level2">
-<h2 class="anchored" data-anchor-id="posts-in-english">Posts in English</h2>
-<div id="listing-posts-en" class="quarto-listing quarto-listing-container-default">
+<section id="learn-r" class="level2">
+<h2 class="anchored" data-anchor-id="learn-r">Learn R</h2>
+<div id="listing-learn-r" class="quarto-listing quarto-listing-container-default">
 <div class="listing-actions-group">
    <div class="input-group input-group-sm quarto-listing-sort">
      <span class="input-group-text"><i class="bi bi-sort-down"></i></span>
-     <select id="listing-posts-en-sort" class="form-select" aria-label="Order By" onchange="window['quarto-listings']['listing-posts-en'].sort(this.options[this.selectedIndex].value, { order: this.options[this.selectedIndex].getAttribute('data-direction')})">
+     <select id="listing-learn-r-sort" class="form-select" aria-label="Order By" onchange="window['quarto-listings']['listing-learn-r'].sort(this.options[this.selectedIndex].value, { order: this.options[this.selectedIndex].getAttribute('data-direction')})">
        <option value="" disabled="" selected="" hidden="">Order By</option>
        <option value="index" data-direction="asc">Default</option>
          <option value="listing-title" data-direction="asc">

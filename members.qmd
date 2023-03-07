@@ -306,8 +306,6 @@ trgrtgrtg
 {{< animate fadeInDown "Some text" >}}
 
 
-{{< elevator >}}
-
 
 
 ```{=HTML}
