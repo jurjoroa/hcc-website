@@ -10,7 +10,7 @@ lightbox:
 comments: false
 format:
   html:
-    
+    code-link: true
     include-in-header:
       text: "<script src='js/anime_photos.js, js/background.js, https://s3-us-west-2.amazonaws.com/s.cdpn.io/499416/TweenLite.min.js, https://s3-us-west-2.amazonaws.com/s.cdpn.io/499416/EasePack.min.js, https://s3-us-west-2.amazonaws.com/s.cdpn.io/499416/demo.js' ></script>"
 ---

@@ -76,7 +76,7 @@ ul.task-list li input[type="checkbox"] {
 <style>:root{--animate-duration:3s;--animate-delay:2s;--animate-repeat:1}</style>
 
 
-<link rel="stylesheet" href="../../hcc_quarto.scss">
+<link rel="stylesheet" href="../../styles.css">
 <meta name="twitter:title" content="Kick-Off Event: Hertie Coding Club">
 <meta name="twitter:description" content="{{< animate fadeInDown &quot;Re-Introduction to R&quot;delay=.6s >}}">
 <meta name="twitter:image" content="https://freesvg.org/img/kick-boxer.png">
@@ -454,7 +454,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
-      var filterRegex = new RegExp(/https:\/\/nasa-openscapes\.github\.io\//);
+      var filterRegex = new RegExp(/^(?:http:|https:)\/\/www\.beamilz\.com\/**/);
     var isInternal = (href) => {
         return filterRegex.test(href) || localhostRegex.test(href);
     }
@@ -508,7 +508,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>
   </div>
 </footer>
-<script>var lightboxQuarto = GLightbox({"selector":".lightbox","skin":"lightwidth","loop":true,"openEffect":"fade","closeEffect":"fade","descPosition":"left"});</script>
+<script>var lightboxQuarto = GLightbox({"selector":".lightbox","skin":"lightwidth","openEffect":"fade","descPosition":"left","closeEffect":"fade","loop":true});</script>
 
 
 

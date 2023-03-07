@@ -7,6 +7,7 @@ categories: ["GitHub", "GitHub Actions", "Automations", "RStudio", "Posit"]
 toc: true
 draft: false
 code-link: true
+code-copy: true
 title-block-banner: true
 image: images/apple_intel_f.png
 ---

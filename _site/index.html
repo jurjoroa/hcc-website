@@ -155,7 +155,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <style>:root{--animate-duration:3s;--animate-delay:2s;--animate-repeat:1}</style>
 <style>:root{--animate-duration:3s;--animate-delay:2s;--animate-repeat:1}</style>
 <style>:root{--animate-duration:3s;--animate-delay:2s;--animate-repeat:1}</style>
-<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script><link rel="stylesheet" href="hcc_quarto.scss">
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script><link rel="stylesheet" href="styles.css">
 <meta name="twitter:title" content="">
 <meta name="twitter:creator" content="@beamilz">
 <meta name="twitter:card" content="summary_large_image">
@@ -461,7 +461,7 @@ Beatriz Milz
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="2" data-categories="GitHub,GitHub Actions,Automations,RStudio,Posit" data-listing-date-sort="1658959200000" data-listing-file-modified-sort="1678181453436" data-listing-reading-time-sort="3.935">
+<div class="quarto-post image-right" data-index="2" data-categories="GitHub,GitHub Actions,Automations,RStudio,Posit" data-listing-date-sort="1658959200000" data-listing-file-modified-sort="1678192027997" data-listing-reading-time-sort="3.935">
 <div class="thumbnail">
 <p><a href="./learn/rstudio/rstudio/rstudio/thread.html"> <img src="./learn/rstudio/rstudio/rstudio/images/apple_intel_f.png" class="thumnail-image"></a></p>
 </div>
@@ -809,20 +809,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       });
     }
   }
-    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
-      var filterRegex = new RegExp(/https:\/\/nasa-openscapes\.github\.io\//);
-    var isInternal = (href) => {
-        return filterRegex.test(href) || localhostRegex.test(href);
-    }
-    // Inspect non-navigation links and adorn them if external
-    var links = window.document.querySelectorAll('a:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item)');
-    for (var i=0; i<links.length; i++) {
-      const link = links[i];
-      if (!isInternal(link.href)) {
-          // target, if specified
-          link.setAttribute("target", "_blank");
-      }
-    }
 });
 </script>
 </div> <!-- /content -->

@@ -61,10 +61,9 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 <style>html{ scroll-behavior: smooth; }</style>
-<script src="js/navbar.js"></script>
 
 
-<link rel="stylesheet" href="hcc_quarto.scss">
+<link rel="stylesheet" href="styles.css">
 <meta name="twitter:title" content="Diamonds Explorer">
 <meta name="twitter:creator" content="@beamilz">
 <meta name="twitter:card" content="summary_large_image">
@@ -426,7 +425,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
-      var filterRegex = new RegExp(/https:\/\/nasa-openscapes\.github\.io\//);
+      var filterRegex = new RegExp(/^(?:http:|https:)\/\/www\.beamilz\.com\/**/);
     var isInternal = (href) => {
         return filterRegex.test(href) || localhostRegex.test(href);
     }

@@ -1,5 +1,4 @@
 ---
-title: "Diamonds Explorer"
 format:
     html:
       page-layout: custom

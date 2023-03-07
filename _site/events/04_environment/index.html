@@ -67,7 +67,6 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 <style>html{ scroll-behavior: smooth; }</style>
-<script src="js/navbar.js"></script>
 <style>:root{--animate-duration:3s;--animate-delay:2s;--animate-repeat:1}</style>
 <style>:root{--animate-duration:3s;--animate-delay:2s;--animate-repeat:1}</style>
 <style>:root{--animate-duration:3s;--animate-delay:2s;--animate-repeat:1}</style>
@@ -77,7 +76,7 @@ ul.task-list li input[type="checkbox"] {
 <style>:root{--animate-duration:3s;--animate-delay:2s;--animate-repeat:1}</style>
 
 
-<link rel="stylesheet" href="../../hcc_quarto.scss">
+<link rel="stylesheet" href="../../styles.css">
 <meta name="twitter:title" content="Setting up your environment in Python">
 <meta name="twitter:description" content="{{< animate fadeInDown &quot;Create reproducible Python environments&quot;delay=.6s >}}">
 <meta name="twitter:image" content="https://freesvg.org/img/python_pills.png">
@@ -457,7 +456,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
-      var filterRegex = new RegExp(/https:\/\/nasa-openscapes\.github\.io\//);
+      var filterRegex = new RegExp(/^(?:http:|https:)\/\/www\.beamilz\.com\/**/);
     var isInternal = (href) => {
         return filterRegex.test(href) || localhostRegex.test(href);
     }
@@ -511,7 +510,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>
   </div>
 </footer>
-<script>var lightboxQuarto = GLightbox({"loop":true,"descPosition":"left","skin":"lightwidth","selector":".lightbox","closeEffect":"fade","openEffect":"fade"});</script>
+<script>var lightboxQuarto = GLightbox({"selector":".lightbox","openEffect":"fade","closeEffect":"fade","skin":"lightwidth","loop":true,"descPosition":"left"});</script>
 
 
 

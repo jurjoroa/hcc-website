@@ -64,7 +64,6 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 <style>html{ scroll-behavior: smooth; }</style>
-<script src="js/navbar.js"></script>
 <style>:root{--animate-duration:3s;--animate-delay:2s;--animate-repeat:1}</style>
 <style>:root{--animate-duration:3s;--animate-delay:2s;--animate-repeat:1}</style>
 <style>:root{--animate-duration:3s;--animate-delay:2s;--animate-repeat:1}</style>
@@ -74,7 +73,7 @@ ul.task-list li input[type="checkbox"] {
 <style>:root{--animate-duration:3s;--animate-delay:2s;--animate-repeat:1}</style>
 
 
-<link rel="stylesheet" href="../../../../hcc_quarto.scss">
+<link rel="stylesheet" href="../../../../styles.css">
 <meta name="twitter:title" content="How important is GitHub Actions to RStudio/Posit?">
 <meta name="twitter:description" content="{{< animate fadeInDown &quot;This is a example of subtitle. Keep going and youll be fine. Code for a plot in my talk at rstudio::conf 2022!&quot;delay=.6s >}}">
 <meta name="twitter:creator" content="@beamilz">
@@ -450,7 +449,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
-      var filterRegex = new RegExp(/https:\/\/nasa-openscapes\.github\.io\//);
+      var filterRegex = new RegExp(/^(?:http:|https:)\/\/www\.beamilz\.com\/**/);
     var isInternal = (href) => {
         return filterRegex.test(href) || localhostRegex.test(href);
     }

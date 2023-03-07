@@ -1,5 +1,4 @@
 ---
-title: "Bea Milz"
 listing:
   - id: learn-r
     contents: "*/rstudio/*.qmd"

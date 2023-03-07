@@ -6,10 +6,12 @@ format:
           light: spacelab
           dark: cyborg
           
-    css: hcc_quarto.scss
+    css: styles.css
     toc: true
     code-link: true
-    link-external-newwindow: true
-
+    #link-external-newwindow: true cause and error
+    link-external-filter: '^(?:http:|https:)\/\/www\.beamilz\.com\/**'
+    citations-hover: true
+    footnotes-hover: true
 editor: visual
 

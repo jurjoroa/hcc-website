@@ -118,7 +118,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     "search-submit-button-title": "Submit"
   }
 }</script><style>html{ scroll-behavior: smooth; }</style>
-<script src="js/navbar.js"></script><link rel="stylesheet" href="hcc_quarto.scss">
+<link rel="stylesheet" href="styles.css">
 <meta name="twitter:title" content="Learn">
 <meta name="twitter:description" content="About this site">
 <meta name="twitter:creator" content="@beamilz">
@@ -460,7 +460,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
-      var filterRegex = new RegExp(/https:\/\/nasa-openscapes\.github\.io\//);
+      var filterRegex = new RegExp(/^(?:http:|https:)\/\/www\.beamilz\.com\/**/);
     var isInternal = (href) => {
         return filterRegex.test(href) || localhostRegex.test(href);
     }
