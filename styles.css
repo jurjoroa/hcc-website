@@ -1682,3 +1682,12 @@ a.nav-link:hover{
 a.nav-link:active{
   color: white!important;
 }
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (max-device-width : 480px) {
+/* Styles */
+/* footer class or footer id */
+.nav-footer {
+bottom: 0 !important;
+}
+}

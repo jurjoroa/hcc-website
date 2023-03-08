@@ -239,11 +239,6 @@ To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
 
 ```{=HTML}
 
-  <style>
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
-</style> 
-
-
 <div class="layout_grid">
 
  <h1>Coding is
@@ -289,11 +284,8 @@ To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
 
 ```{=html}
 
-
-<script src="js/text.js"></script>
 <script src="js/text_obs.js"></script>
 <script src="js/text_obs_achiev.js"></script>
-
 
 ```
 

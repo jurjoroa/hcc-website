@@ -1,1 +1,1 @@
-Sitemap: https://nasa-openscapes.github.io/sitemap.xml
+Sitemap: https://www.hertiecodingclub.com/sitemap.xml
