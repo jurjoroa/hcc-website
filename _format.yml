@@ -9,8 +9,7 @@ format:
     css: styles.css
     toc: true
     code-link: true
-    #link-external-newwindow: true cause and error
-    link-external-filter: '^(?:http:|https:)\/\/www\.beamilz\.com\/**'
+    #link-external-newwindow: true 
     citations-hover: true
     footnotes-hover: true
 editor: visual

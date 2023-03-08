@@ -79,7 +79,7 @@ overflow: hidden;
 }
 
 /*Color buttons navbar*/
-.quarto-color-scheme-toggle .bi i.bi::before {
+.quarto-color-scheme-toggle i.bi::before {
   filter: brightness(0%) saturate(100%) invert(100%); !important;
 }
 
@@ -170,12 +170,6 @@ a.nav-link:hover:after {
 
 .navbar-dark .navbar-nav .nav-link:hover {
     color: #c0041c !important;
-}
-
-
-.footer{
-  border-top: solid #c0041c;
-  
 }
 
 
@@ -1656,4 +1650,35 @@ div.listing-subtitle,
 .layout_grid .image-right .listing-category{
    color: white;
    border: 1px solid #BF041C;
+}
+
+
+
+/*footer*/
+
+/* Media query for smaller screens */
+@media only screen and (max-width: 767px) {
+  
+  div.nav-footer-center{
+    display: none;
+  }
+}
+
+
+
+.nav-footer{
+ background: linear-gradient(to right, rgba(0, 4, 40), rgba(0, 78, 146));
+  border-top: solid #c0041c;
+}
+
+a.nav-link{
+  color: white!important;
+}
+
+a.nav-link:hover{
+  color: red!important;
+}
+
+a.nav-link:active{
+  color: white!important;
 }
