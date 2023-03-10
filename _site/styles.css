@@ -1547,7 +1547,7 @@ code span.dv {
 
 /*card events*/
 .image-right {
-  border: 3.5px solid #BF041C;
+  border: 5.5px solid #BF041C;
   background: linear-gradient(to right, #000428, #004e92); ;
   border-radius: 10px;
   color: white;
@@ -1605,23 +1605,51 @@ code span.dv {
 }
 
 
+ div.listing-title{
+  
+  font-size: 2em;
+    margin-right: 25px;
+}
+
+div.listing-subtitle{
+  
+  font-size: .7em;
+  margin-right: 25px;
+}
+
+div.listing-subtitle p span.animate__animated.animate__fadeInDown.animate__delay-.6s{
+  margin-right: 25px;
+}
+
 #learn-r .listing-title{
   
   font-size: 1em;
 }
 
-#learn-r .listing-subtitle{
+#learn-r div.listing-subtitle{
   
   font-size: .7em;
+  margin-right: 25px;
 }
 
 
 div.listing-reading-time,
+div.quarto-post.image-right div.body a p.show,
 div.listing-date,
-div.listing-author{
+div.listing-author,
+div.listing-subtitle,
+div.listing-categories,
+.thumbnail,
+h3.no-anchor.listing-title{
     color: white;
   margin-left: 25px;
+
 }
+
+h3.no-anchor.listing-title,{
+  padding: 1rem;
+}
+
 
 /* .listing-category div.listing-category*/
 
@@ -1647,6 +1675,13 @@ div.listing-subtitle,
 }
 
 
+div.body div.listing-categories div.listing-category{
+  
+   color: white;
+   border: 1px solid #BF041C;
+  
+}
+
 .layout_grid .image-right .listing-category{
    color: white;
    border: 1px solid #BF041C;
@@ -1671,15 +1706,15 @@ div.listing-subtitle,
   border-top: solid #c0041c;
 }
 
-a.nav-link{
+.nav-footer a.nav-link{
   color: white!important;
 }
 
-a.nav-link:hover{
+.nav-footer a.nav-link:hover{
   color: red!important;
 }
 
-a.nav-link:active{
+.nav-footer a.nav-link:active{
   color: white!important;
 }
 
@@ -1690,4 +1725,9 @@ a.nav-link:active{
 .nav-footer {
 bottom: 0 !important;
 }
+}
+
+
+.navbar a:focus {
+  outline: none;
 }

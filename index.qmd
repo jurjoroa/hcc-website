@@ -137,9 +137,6 @@ comments: false
 
 <script src="https://unpkg.com/css-doodle@0.33.0/css-doodle.min.js"></script>
 
-<script src='js/neon.js'></script>
-<script src="js/text.js"></script>
-
 
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Roboto:wght@100&family=Urbanist:wght@100;900&display=swap');
@@ -286,7 +283,8 @@ To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
 
 <script src="js/text_obs.js"></script>
 <script src="js/text_obs_achiev.js"></script>
-
+<script src="js/text.js"></script>
+<script src="js/background.js"></script>
 ```
 
 
