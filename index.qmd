@@ -96,14 +96,32 @@ comments: false
 
 </div>
 
-<main>
-<div class="intro">
-  <div class="scroll-text">
-    <h1>A Web Developer</h1>
-    <p>I am a web developer and I love to create websites.</p>
+
+
+
+
+<div class="intro_f">
+  <div class="intro-slideshow">
+    <img src="https://www.dropbox.com/s/h8rds5ozk0u3s2f/coder.jpg?raw=1">
+    <img src="https://www.dropbox.com/s/lf29ifrd354ngyv/coffee.jpg?raw=1">
+    <img src="https://www.dropbox.com/s/lxnf1mxej90qoae/library.jpg?raw=1">
+    <img src="https://www.dropbox.com/s/15gdoyzoai94j6j/path.jpg?raw=1">
+    <img src="https://www.dropbox.com/s/pem8kaorr488apn/universe.jpg?raw=1">
   </div>
-  <button>Learn More</button>
+  <div class="scroll-text intro-text">
+    <h2>Welcome to my website!</h2>
+    <p>This is where I share my coding journey.</p>
+  </div>
+  <div class="intro-header">
+    <h1 class="scroll-text">Coding Journey</h1>
+    <p class="scroll-text" >It's all about the journey</p>
+  </div>
 </div>
+
+
+
+
+<main>
 
 <div class="achievements">
   <div class="work">
@@ -120,7 +138,8 @@ comments: false
   <div class="about-me">
     <div class="about-me-text">
       <h2 id="main">About Me</h2>
-      <p id="main">I am a web developer and I love to create websites. I am a very good developer and I am always looking for new projects. I am a very good developer and I am always looking for new projects.</p>
+      <p id="main">I am a web developer and I love to create websites. I am a very good developer and I am always looking for new projects. I am a very good developer and I am always looking for 
+      new projects.</p>
     </div>
     <img src="https://images.unsplash.com/photo-1596495578065-6e0763fa1178?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=871&q=80" alt="me">
   </div>
@@ -285,6 +304,8 @@ To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
 <script src="js/text_obs_achiev.js"></script>
 <script src="js/text.js"></script>
 <script src="js/background.js"></script>
+<script src="js/slider.js"></script>
+
 ```
 
 

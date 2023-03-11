@@ -1,5 +1,5 @@
 const nextSectionButton = document.querySelector('.btn-21');
-const sections = document.querySelectorAll('.intro');
+const sections = document.querySelectorAll('.intro_f');
 let currentSectionIndex = 0;
 
 nextSectionButton.addEventListener('click', () => {

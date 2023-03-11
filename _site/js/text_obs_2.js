@@ -1,5 +1,5 @@
 // Select the element to observe
-const scrollText = document.querySelector('.scroll-text');
+const scrollText_2 = document.querySelector('.scroll-text-2');
 
 // Create an observer that triggers when the element is in view
 const observer = new IntersectionObserver((entries, observer) => {
@@ -14,6 +14,4 @@ const observer = new IntersectionObserver((entries, observer) => {
 });
 
 // Observe the element
-observer.observe(scrollText);
-
-
+observer.observe(scrollText_2);

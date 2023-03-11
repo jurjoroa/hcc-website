@@ -1,11 +1,11 @@
 website:
   google-analytics: "G-HJEMN0LJY7"
   title: ""
-  site-url: https://nasa-openscapes.github.io/
+  site-url: https://www.hertiecodingclub.com/
   favicon: images/hcc.png
   page-footer:
     left: 
-      - text: "License: {{< fa regular copyright >}} {{< fa solid circle-user >}} 2.0 2023 HCC | J.Roa "
+      - text: "License: {{< fa regular copyright >}} {{< fa solid circle-user >}} 2023 HCC | J.Roa"
         href: https://creativecommons.org/licenses/by/2.0/
     center: 
       - text: "{{< fa solid gears size=lg >}} Quarto engine"
@@ -21,6 +21,11 @@ website:
         href: https://twitter.com/HertieCodingCLB
       - text: "{{< fa brands instagram size=lg >}}"
         href: https://www.instagram.com/hertiecodingclub/
+      - text: "{{< fa brands youtube size=lg >}}"
+        href: https://youtube.com/@hertiecodingclub
+      - text: " {{< fa solid building-columns >}}"
+        href: https://www.hertie-school.org/en/
+
 
 
   twitter-card:
