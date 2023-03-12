@@ -102,19 +102,34 @@ comments: false
 
 <div class="intro_f">
   <div class="intro-slideshow">
-    <img src="https://www.dropbox.com/s/h8rds5ozk0u3s2f/coder.jpg?raw=1">
-    <img src="https://www.dropbox.com/s/lf29ifrd354ngyv/coffee.jpg?raw=1">
-    <img src="https://www.dropbox.com/s/lxnf1mxej90qoae/library.jpg?raw=1">
-    <img src="https://www.dropbox.com/s/15gdoyzoai94j6j/path.jpg?raw=1">
-    <img src="https://www.dropbox.com/s/pem8kaorr488apn/universe.jpg?raw=1">
+    <img src="images/Pictures HCC/kick_off_event1.jpeg">
+    <img src="images/Pictures HCC/kick_off_event2.jpeg">
+    <img src="images/Pictures HCC/kick_off_event3.jpeg">
+    <img src="images/Pictures HCC/event2.jpeg">
+    <img src="images/Pictures HCC/event3.jpeg">
   </div>
   <div class="scroll-text intro-text">
-    <h2>Welcome to my website!</h2>
-    <p>This is where I share my coding journey.</p>
+<div class="quote-wrapper">
+<div class="quote-content">
+  <div class="quote-img">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 100 125" xml:space="preserve" class="svg-quote">
+  <g>
+    <g>
+      <path fill="#FFFFFF" fill-rule="evenodd" clip-rule="evenodd" d="M6.438,50.5v35.875h35.875V50.5h-20.5c0-11.321,9.179-20.5,20.5-20.5V14.625    C22.498,14.625,6.438,30.686,6.438,50.5z M93.562,30V14.625c-19.814,0-35.875,16.061-35.875,35.875v35.875h35.875V50.5h-20.5    C73.062,39.179,82.241,30,93.562,30z"/>
+    </g>
+  </g>
+</svg>
+
+</div>
+  <p class="quote-copy" style="color:rgba(0, 78, 146);"> <i>Mastering the art of timing enables us to fast-track your travel experience. We help people do business. </i>
+</p>
+  <p class="quote-name" style="color:rgba(0, 78, 146);">Pedro Arias <span class="blue">CEO</span></p>
+</div>
+</div>
   </div>
   <div class="intro-header">
-    <h1 class="scroll-text">Coding Journey</h1>
-    <p class="scroll-text" >It's all about the journey</p>
+    <h1 class="scroll-text">We are the <br> Hertie Coding Club</h1>
+    <p class="scroll-text"">Everybody can learn to code</p>
   </div>
 </div>
 
