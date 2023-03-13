@@ -542,12 +542,18 @@ header:not(.headroom):not(.quarto-title-block).is-visible {
   padding: 1% 2%;
   //border-top: 2px solid #eeeeee;
   height: 50%;
+  display: grid;
 }
 
 
 
 .layout_grid{
   padding: 1% 10%;
+  //border-top: 2px solid #eeeeee;
+}
+
+.layout_grid_learnr{
+  padding: 1% 6%;
   //border-top: 2px solid #eeeeee;
 }
 

@@ -220,23 +220,26 @@ comments: false
 
 ```
 
-<div class="section_white">
 
+
+
+
+
+<div class="layout_grid_learnr" style="display: grid; grid-template-columns: .1fr 1.1fr; grid-gap: 60px;">
+  <div>
+<h1 class="scroll-text">Follow Us {{< li mbyuiidf trigger=loop delay=1000 scale=25 >}}</h1>
+<a class="twitter-timeline" data-lang="en" data-width="300" data-height="500" data-theme="dark" href="https://twitter.com/HertieCodingCLB?ref_src=twsrc%5Etfw">Tweets by HertieCodingCLB</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
 </div> 
-
-
-
-<div class="layout_grid">
-
+  <div>
+<h1 class="scroll-text">Learn R {{< li qatykyxz trigger=loop delay=1000 scale=50 >}}</h1>
 
 ::: {#learn}
 :::
 
 <a href="../learn/rstudio.html"> <button type="button" class="btn btn-primary float-end btn-sm">See all posts in English</button></a>
 
-
 </div> 
-
+</div> 
 
 
 
