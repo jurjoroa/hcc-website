@@ -555,6 +555,9 @@ header:not(.headroom):not(.quarto-title-block).is-visible {
 .layout_grid_learnr{
   padding: 1% 6%;
   //border-top: 2px solid #eeeeee;
+  display: grid; 
+  grid-template-columns: .1fr 1.1fr; 
+  grid-gap: 60px;
 }
 
 
@@ -1530,7 +1533,7 @@ code span.dv {
 /*card events*/
 .card-left {
   border: 5.5px solid #BF041C;
-  background: linear-gradient(to right, #000428, #004e92); ;
+  background: #00325E ;
   border-radius: 10px;
   color: white;
 }
@@ -1554,7 +1557,7 @@ code span.dv {
 /*card events*/
 .image-right {
   border: 5.5px solid #BF041C;
-  background: linear-gradient(to right, #000428, #004e92); ;
+  background: #00325E ;
   border-radius: 10px;
   color: white;
   transition: all 0.5s ease-in-out;
@@ -1585,7 +1588,7 @@ code span.dv {
 /*card events*/
 #learn-r .image-right {
   border: 5.5px solid #BF041C;
-  background: linear-gradient(to right, #000428, #004e92); ;
+  background: #00325E;
   border-radius: 10px;
   color: white;
   transition: all 0.5s ease-in-out;
@@ -1713,7 +1716,7 @@ div.body div.listing-categories div.listing-category{
 .nav-footer{
  background: linear-gradient(to right, rgba(0, 4, 40), rgba(0, 78, 146));
   border-top: solid #c0041c;
-  height: 12vh;
+  height: 9vh;
 }
 
 .nav-footer a.nav-link{
@@ -1907,6 +1910,18 @@ display: none;
   margin-top: -2%;
 }
 
+@media (max-width: 1000px) {
+  
+.social-media{
+  display: none;
+}
+
+.layout_grid_learnr{
+  padding: 1% 6%;
+  //border-top: 2px solid #eeeeee;
+  display: grid; 
+  grid-template-columns: 5fr; 
+}
 
 
-
+}

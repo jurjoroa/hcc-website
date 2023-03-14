@@ -220,18 +220,41 @@ comments: false
 
 ```
 
+<div class="section_white">
+
+</div> 
 
 
 
 
+<div class="layout_grid_learnr">
 
-<div class="layout_grid_learnr" style="display: grid; grid-template-columns: .1fr 1.1fr; grid-gap: 60px;">
-  <div>
-<h1 class="scroll-text">Follow Us {{< li mbyuiidf trigger=loop delay=1000 scale=25 >}}</h1>
-<a class="twitter-timeline" data-lang="en" data-width="300" data-height="500" data-theme="dark" href="https://twitter.com/HertieCodingCLB?ref_src=twsrc%5Etfw">Tweets by HertieCodingCLB</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
+  <div class="social-media">
+<h1 class="scroll-text social-media">Follow{{< li kjkiqtxg trigger=loop delay=1000 scale=25 >}}</h1>
+
+<a class="twitter-timeline social-media" data-lang="en" data-width="300" data-height="500" data-theme="dark" href="https://twitter.com/HertieCodingCLB?ref_src=twsrc%5Etfw">Tweets by HertieCodingCLB</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
+
+<div class="social-media" style="display: flex; justify-content: center; align-items: center;">
+  <a href="mailto:your-email-address@example.com">
+    <img src="https://img.icons8.com/color/48/000000/gmail.png" alt="Gmail icon" style="margin: 0 10px; height: 35px;">
+  </a>
+  <a href="https://your-slack-workspace.slack.com">
+    <img src="https://img.icons8.com/color/48/000000/slack-new.png" alt="Slack icon" style="margin: 0 10px; height: 35px;">
+  </a>
+  <a href="https://github.com/your-github-username">
+    <img src="https://img.icons8.com/fluent/48/000000/github.png" alt="GitHub icon" style="margin: 0 10px; height: 35px;">
+  </a>
+  <a href="https://www.instagram.com/your-instagram-username">
+    <img src="https://img.icons8.com/color/48/000000/instagram-new.png" alt="Instagram icon" style="margin: 0 10px; height: 35px;">
+  </a>
+  <a href="https://www.youtube.com/channel/your-youtube-channel-id">
+    <img src="https://img.icons8.com/color/48/000000/youtube-play.png" alt="YouTube icon" style="margin: 0 10px; height: 35px;">
+  </a>
+</div>
+
 </div> 
   <div>
-<h1 class="scroll-text">Learn R {{< li qatykyxz trigger=loop delay=1000 scale=50 >}}</h1>
+<h1 class="scroll-text" >Learn R {{< li qatykyxz trigger=loop delay=1000 scale=50 >}}</h1>
 
 ::: {#learn}
 :::
@@ -325,5 +348,23 @@ To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
 <script src="js/slider.js"></script>
 
 ```
+
+<div class="section_white">
+
+</div> 
+
+
+::: {.grid }
+::: {.g-col-4}
+![](_site/images/hertie/hertie.png){width="140"  fig-align="center"}
+:::
+::: {.g-col-4}
+![](_site/images/hertie/DSL.png){width="141" height="36" fig-align="center"}
+:::
+::: {.g-col-4}
+![](_site/images/hertie/logo long.png){width="140"  fig-align="center"}
+:::
+:::
+
 
 
