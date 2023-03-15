@@ -474,20 +474,29 @@ header:not(.headroom):not(.quarto-title-block).is-visible {
 
 .achievements {
   display: flex;
-  justify-content: space-around;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  padding: 40px 80px;
+  padding: 40px 20px;
 }
 
 .achievements .work {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 0 40px;
+  flex-direction: row;
+  padding: 1px 0px;
+  padding-bottom: 40px;
+  width: 100%;
+  margin-left: 10px;
 }
 
-.achievements .work i {
+.achievements .work .work-icon {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  margin-left: 10%;
+}
+
+.achievements .work .work-icon i {
   width: fit-content;
   font-size: 50px;
   color: #333333;
@@ -496,32 +505,30 @@ header:not(.headroom):not(.quarto-title-block).is-visible {
   padding: 12px;
 }
 
-.achievements .work .work-heading {
+.achievements .work .work-icon .work-heading {
   font-size: 20px;
   color: #333333;
   text-transform: uppercase;
-  margin: 10px 0;
+  margin: 0;
 }
 
-.achievements .work .work-text {
+.achievements .work .work-description {
+  width: 100%;
+  margin-left: 100px;
+}
+
+.achievements .work .work-description .work-text {
   font-size: 15px;
   color: #585858;
-  margin: 10px 0;
+  margin: 0;
 }
 
 .about-me {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 40px 80px;
+  padding: 40px 20px;
   border-top: 2px solid #eeeeee;
-}
-
-.about-me img {
-  width: 500px;
-  max-width: 100%;
-  height: auto;
-  border-radius: 10px;
 }
 
 .about-me-text h2 {
@@ -536,6 +543,14 @@ header:not(.headroom):not(.quarto-title-block).is-visible {
   color: #585858;
   margin: 10px 0;
 }
+
+
+
+
+
+
+
+
 
 
 .layout_grid_cards{
@@ -1721,7 +1736,7 @@ div.body div.listing-categories div.listing-category{
 .nav-footer{
  background: linear-gradient(to right, rgba(0, 4, 40), rgba(0, 78, 146));
   border-top: solid #c0041c;
-  height: 9vh;
+  height: 11vh;
 }
 
 .nav-footer a.nav-link{

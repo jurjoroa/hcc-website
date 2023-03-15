@@ -6,8 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Lukas Lehmann">
+<meta name="dcterms.date" content="2023-03-17">
 
-<title>index</title>
+<title>Social Media Scraping</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,27 +25,28 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../">
-<link href="../images/hcc.png" rel="icon" type="image/png">
-<script src="../site_libs/quarto-listing/list.min.js"></script>
-<script src="../site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="../site_libs/quarto-html/quarto.js"></script>
-<script src="../site_libs/quarto-html/popper.min.js"></script>
-<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
-<link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
-<link href="../site_libs/quarto-contrib/animate-4.1.1/animate.min.css" rel="stylesheet">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../images/hcc.png" rel="icon" type="image/png">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script src="../../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
+<link href="../../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
+<link href="../../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
+<link href="../../site_libs/quarto-contrib/animate-4.1.1/animate.min.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -63,35 +66,6 @@ ul.task-list li input[type="checkbox"] {
     "search-submit-button-title": "Submit"
   }
 }</script>
-<script>
-
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-Events .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-image','listing-date','listing-title','listing-subtitle',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-title","listing-author","listing-date","listing-image","listing-description","listing-categories"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-Events'] = new List('listing-Events', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-HJEMN0LJY7"></script>
 
 <script type="text/javascript">
@@ -109,13 +83,14 @@ gtag('config', 'G-HJEMN0LJY7', { 'anonymize_ip': true});
 <style>:root{--animate-duration:3s;--animate-delay:2s;--animate-repeat:1}</style>
 <style>:root{--animate-duration:3s;--animate-delay:2s;--animate-repeat:1}</style>
 <style>:root{--animate-duration:3s;--animate-delay:2s;--animate-repeat:1}</style>
-<style>:root{--animate-duration:3s;--animate-delay:2s;--animate-repeat:1}</style>
-<style>:root{--animate-duration:3s;--animate-delay:2s;--animate-repeat:1}</style>
-<style>:root{--animate-duration:3s;--animate-delay:2s;--animate-repeat:1}</style>
 
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
-<link rel="stylesheet" href="../styles.css">
+<link rel="stylesheet" href="../../styles.css">
+<meta name="twitter:title" content="Social Media Scraping">
+<meta name="twitter:description" content="{{< animate fadeInDown &quot;Introduction to Social Media Analysis using rtweet package.&quot;delay=.6s >}}">
+<meta name="twitter:image" content="https://freesvg.org/img/Social-Media-2.png">
+<meta name="twitter:creator" content="@beamilz">
+<meta name="twitter:card" content="summary_large_image">
 </head>
 
 <body class="nav-fixed">
@@ -125,8 +100,8 @@ gtag('config', 'G-HJEMN0LJY7', { 'anonymize_ip': true});
     <nav class="navbar navbar-expand-lg navbar-dark ">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container">
-    <a href="../index.html" class="navbar-brand navbar-brand-logo">
-    <img src="../images/hcc_bk_white.png" alt="" class="navbar-logo">
+    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../../images/hcc_bk_white.png" alt="" class="navbar-logo">
     </a>
   </div>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
@@ -135,12 +110,12 @@ gtag('config', 'G-HJEMN0LJY7', { 'anonymize_ip': true});
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../index.html"><i class="bi bi-house-fill" role="img">
+    <a class="nav-link" href="../../index.html"><i class="bi bi-house-fill" role="img">
 </i> 
  <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../members.html">
+    <a class="nav-link" href="../../members.html">
  <span class="menu-text"><i class="fa-solid fa-people-group" aria-label="people-group"></i> Members</span></a>
   </li>  
   <li class="nav-item dropdown ">
@@ -151,23 +126,23 @@ gtag('config', 'G-HJEMN0LJY7', { 'anonymize_ip': true});
     </a>
     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-learn">    
         <li>
-    <a class="dropdown-item" href="../learn/rstudio.html">
+    <a class="dropdown-item" href="../../learn/rstudio.html">
  <span class="dropdown-text"><i class="fa-brands fa-r-project" aria-label="r-project"></i> language</span></a>
   </li>  
     </ul>
   </li>
   <li class="nav-item">
-    <a class="nav-link active" href="../events/index.html" aria-current="page"><i class="bi bi-calendar3" role="img">
+    <a class="nav-link" href="../../events/index.html"><i class="bi bi-calendar3" role="img">
 </i> 
  <span class="menu-text">Events</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../register.html"><i class="bi bi-fingerprint" role="img">
+    <a class="nav-link" href="../../register.html"><i class="bi bi-fingerprint" role="img">
 </i> 
  <span class="menu-text">Register</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../about.html"><i class="bi bi-info-square-fill" role="img">
+    <a class="nav-link" href="../../about.html"><i class="bi bi-info-square-fill" role="img">
 </i> 
  <span class="menu-text">About us</span></a>
   </li>  
@@ -181,172 +156,67 @@ gtag('config', 'G-HJEMN0LJY7', { 'anonymize_ip': true});
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title"><span class="animate__animated animate__fadeInDown animate__delay-.6s" style="display: inline-block;">Social Media Scraping</span></h1>
+            <p class="subtitle lead"><span class="animate__animated animate__fadeInDown animate__delay-.6s" style="display: inline-block;">Introduction to Social Media Analysis using rtweet package.</span></p>
+                                <div class="quarto-categories">
+                <div class="quarto-category">Rstudio</div>
+                <div class="quarto-category">Twitter</div>
+                <div class="quarto-category">Wrangling</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Lukas Lehmann </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">March 17, 2023</p>
+      </div>
+    </div>
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#events" id="toc-events" class="nav-link active" data-scroll-target="#events">Events</a></li>
-  </ul>
-</nav>
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(5)</span></div><div class="category" data-category="Environment">Environment <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Python">Python <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Rstudio">Rstudio <span class="quarto-category-count">(4)</span></div><div class="category" data-category="Tidyverse">Tidyverse <span class="quarto-category-count">(2)</span></div><div class="category" data-category="Twitter">Twitter <span class="quarto-category-count">(1)</span></div><div class="category" data-category="VSC Code">VSC Code <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Wrangling">Wrangling <span class="quarto-category-count">(3)</span></div></div></div>
-<!-- main -->
-<main class="content column-page-left" id="quarto-document-content">
-
-
-
-<section id="events" class="level2">
-<h2 class="anchored" data-anchor-id="events">Events</h2>
-<div id="events">
-
-</div>
-
-
-
-</section>
-
-<div class="quarto-listing quarto-listing-container-grid" id="listing-Events">
-<div class="listing-actions-group">
-   <div class="input-group input-group-sm quarto-listing-sort">
-     <span class="input-group-text"><i class="bi bi-sort-down"></i></span>
-     <select id="listing-Events-sort" class="form-select" aria-label="Order By" onchange="window['quarto-listings']['listing-Events'].sort(this.options[this.selectedIndex].value, { order: this.options[this.selectedIndex].getAttribute('data-direction')})">
-       <option value="" disabled="" selected="" hidden="">Order By</option>
-       <option value="index" data-direction="asc">Default</option>
-         <option value="listing-title" data-direction="asc">
-          Title
-        </option>
-         <option value="listing-date-sort" data-direction="asc">
-          Date - Oldest
-        </option>
-         <option value="listing-date-sort" data-direction="desc">
-          Date - Newest
-        </option>
-     </select>
-  </div>
-    <div class="input-group input-group-sm quarto-listing-filter">
-      <span class="input-group-text"><i class="bi bi-search"></i></span>
-      <input type="text" class="search form-control" placeholder="Filter">
+        
     </div>
+<!-- main -->
+<main class="content quarto-banner-title-block" id="quarto-document-content">
+
+
+
+
+<hr>
+<p>📍 Hertie School. Seminar Room 1.61</p>
+<p>🗓 14:00 hrs, March 17, 2023</p>
+<hr>
+<p><strong>Objective</strong>: An introduction to social media analysis! We’ll be scraping tweets from Twitter using the rtweet package, cleaning data, and using it to produce a variety of insightful visualizations. This session will provide you with some of the skills necessary to do social media research on your own, whether for a class, internship, or personal interest.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="05_social_media_analysis.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="05_social_media_analysis.png" class="img-fluid figure-img"></a></p>
+</figure>
 </div>
-<div class="list grid quarto-listing-cols-3">
-<div class="g-col-1" data-index="0" data-categories="Rstudio,Twitter,Wrangling" data-listing-date-sort="1679007600000" data-listing-file-modified-sort="1678917886473" data-listing-reading-time-sort="0.33">
-<a href="../events/05_social_media_analysis/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img src="https://freesvg.org/img/Social-Media-2.png" class="thumbnail-image card-img" style="height: 150px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-<p><span class="animate__animated animate__fadeInDown animate__delay-.6s" style="display: inline-block;">Social Media Scraping</span></p>
-</h5>
-<div class="card-subtitle listing-subtitle">
-<p><span class="animate__animated animate__fadeInDown animate__delay-.6s" style="display: inline-block;">Introduction to Social Media Analysis using rtweet package.</span></p>
-</div>
-<div class="card-attribution card-text-small end">
-<div class="listing-date">
-Mar 17, 2023
-</div>
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="1" data-categories="Python,Environment,VSC Code" data-listing-date-sort="1677193200000" data-listing-file-modified-sort="1678181453211" data-listing-reading-time-sort="0.555">
-<a href="../events/04_environment/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img src="https://freesvg.org/img/python_pills.png" class="thumbnail-image card-img" style="height: 150px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-<p><span class="animate__animated animate__fadeInDown animate__delay-.6s" style="display: inline-block;">Setting up your environment in Python</span></p>
-</h5>
-<div class="card-subtitle listing-subtitle">
-<p><span class="animate__animated animate__fadeInDown animate__delay-.6s" style="display: inline-block;">Create reproducible Python environments</span></p>
-</div>
-<div class="card-attribution card-text-small end">
-<div class="listing-date">
-Feb 24, 2023
-</div>
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="2" data-categories="Rstudio,Wrangling,Tidyverse" data-listing-date-sort="1669244400000" data-listing-file-modified-sort="1678181453209" data-listing-reading-time-sort="0.415">
-<a href="../events/03_wrangle_part2/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img src="https://freesvg.org/img/ftdata.png" class="thumbnail-image card-img" style="height: 150px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-<p><span class="animate__animated animate__fadeInDown animate__delay-.6s" style="display: inline-block;">Meet Up III: Wrangle dataframes</span></p>
-</h5>
-<div class="card-subtitle listing-subtitle">
-<p><span class="animate__animated animate__fadeInDown animate__delay-.6s" style="display: inline-block;">Exercises (part 2)</span></p>
-</div>
-<div class="card-attribution card-text-small end">
-<div class="listing-date">
-Nov 24, 2022
-</div>
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="3" data-categories="Rstudio,Wrangling,Tidyverse" data-listing-date-sort="1668726000000" data-listing-file-modified-sort="1678181453207" data-listing-reading-time-sort="0.51">
-<a href="../events/02_wrangle/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img src="https://freesvg.org/img/1449718228.png" class="thumbnail-image card-img" style="height: 150px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-<p><span class="animate__animated animate__fadeInDown animate__delay-.6s" style="display: inline-block;">Meet Up II: Wrangle dataframes</span></p>
-</h5>
-<div class="card-subtitle listing-subtitle">
-<p><span class="animate__animated animate__fadeInDown animate__delay-.6s" style="display: inline-block;">Tidyverse, packages and exercise (part 1)</span></p>
-</div>
-<div class="card-attribution card-text-small end">
-<div class="listing-date">
-Nov 18, 2022
-</div>
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="4" data-categories="Rstudio" data-listing-date-sort="1667516400000" data-listing-file-modified-sort="1678185052599" data-listing-reading-time-sort="0.5">
-<a href="../events/01_kickoff_event/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img src="https://freesvg.org/img/kick-boxer.png" class="thumbnail-image card-img" style="height: 150px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-<p><span class="animate__animated animate__fadeInDown animate__delay-.6s" style="display: inline-block;">Kick-Off Event: Hertie Coding Club</span></p>
-</h5>
-<div class="card-subtitle listing-subtitle">
-<p><span class="animate__animated animate__fadeInDown animate__delay-.6s" style="display: inline-block;">Re-Introduction to R</span></p>
-</div>
-<div class="card-attribution card-text-small end">
-<div class="listing-date">
-Nov 4, 2022
-</div>
-</div>
-</div>
-</div>
-</a>
-</div>
-</div>
-<div class="listing-no-matching d-none">
-No matching items
-</div>
-</div></main> <!-- /main -->
+<hr>
+
+
+
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -595,6 +465,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
+<script src="https://giscus.app/client.js" data-repo="jurjoroa/hcc-website" data-repo-id="R_kgDOIttXkg" data-category="General" data-category-id="DIC_kwDOIttXks4CUpc5" data-mapping="title" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="top" data-theme="light" data-lang="en" crossorigin="anonymous" async="">
+</script>
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
@@ -636,8 +508,9 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>
   </div>
 </footer>
+<script>var lightboxQuarto = GLightbox({"skin":"lightwidth","loop":true,"closeEffect":"fade","descPosition":"left","selector":".lightbox","openEffect":"fade"});</script>
 
 
 
-<script src="../site_libs/quarto-html/zenscroll-min.js"></script>
+<script src="../../site_libs/quarto-html/zenscroll-min.js"></script>
 </body></html>

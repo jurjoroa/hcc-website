@@ -1,0 +1,33 @@
+---
+toc: true
+author: ["Lukas Lehmann"]
+categories: [Rstudio, Twitter, Wrangling]
+date: '2023-03-17'
+title: '{{< animate fadeInDown "Social Media Scraping"delay=.6s >}}'
+subtitle: '{{< animate fadeInDown "Introduction to Social Media Analysis using rtweet package."delay=.6s >}}'
+image: https://freesvg.org/img/Social-Media-2.png
+draft: false
+title-block-banner: true
+code-link: true
+filters:
+   - lightbox
+lightbox: 
+  match: auto
+  effect: fade
+  desc-position: left
+  css-class: "lightwidth"
+---
+
+------------------------------------------------------------------------
+
+📍 Hertie School. Seminar Room 1.61
+
+🗓 14:00 hrs, March 17, 2023
+
+------------------------------------------------------------------------
+
+**Objective**: An introduction to social media analysis! We’ll be scraping tweets from Twitter using the rtweet package, cleaning data, and using it to produce a variety of insightful visualizations. This session will provide you with some of the skills necessary to do social media research on your own, whether for a class, internship, or personal interest.
+
+![](05_social_media_analysis.png)
+
+------------------------------------------------------------------------
