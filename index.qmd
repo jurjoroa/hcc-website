@@ -134,6 +134,11 @@ comments: false
 </div>
 
 
+    <div class="quote-container">
+        <h1 class="quote-text">“Be the change that you wish to see in the world.”</h1>
+        <p class="quote-author">― Mahatma Gandhi</p>
+    </div>
+
 
 
 <main>
@@ -226,11 +231,37 @@ comments: false
 
 
 
+ <div class="social-media-mobile">
+<h1 class="scroll-text">{{< li kjkiqtxg trigger=loop delay=1000 scale=25 >}}Follow</h1>
+
+<a href="https://www.youtube.com/channel/your-youtube-channel-id">
+  <img src="https://img.icons8.com/color/48/000000/twitter-squared.png" alt="Twitter icon" style="margin: 0 10px; height: 35px;">
+</a>
+  <a href="mailto:your-email-address@example.com">
+    <img src="https://img.icons8.com/color/48/000000/gmail.png" alt="Gmail icon" style="margin: 0 10px; height: 35px;">
+  </a>
+  <a href="https://your-slack-workspace.slack.com">
+    <img src="https://img.icons8.com/color/48/000000/slack-new.png" alt="Slack icon" style="margin: 0 10px; height: 35px;">
+  </a>
+  <a href="https://github.com/your-github-username">
+    <img src="https://img.icons8.com/fluent/48/000000/github.png" alt="GitHub icon" style="margin: 0 10px; height: 35px;">
+  </a>
+  <a href="https://www.instagram.com/your-instagram-username">
+    <img src="https://img.icons8.com/color/48/000000/instagram-new.png" alt="Instagram icon" style="margin: 0 10px; height: 35px;">
+  </a>
+  <a href="https://www.youtube.com/channel/your-youtube-channel-id">
+    <img src="https://img.icons8.com/color/48/000000/youtube-play.png" alt="YouTube icon" style="margin: 0 10px; height: 35px;">
+  </a>
+</div>
+
+
 
 <div class="layout_grid_learnr">
 
-  <div class="social-media">
-<h1 class="scroll-text social-media">Follow{{< li kjkiqtxg trigger=loop delay=1000 scale=25 >}}</h1>
+   <div class="social-media">
+<h1 class="scroll-text social-media">{{< li kjkiqtxg trigger=loop delay=1000 scale=25 >}}Follow</h1>
+
+<div style = "margin-top: 35px;"> </div> 
 
 <a class="twitter-timeline social-media" data-lang="en" data-width="300" data-height="500" data-theme="dark" href="https://twitter.com/HertieCodingCLB?ref_src=twsrc%5Etfw">Tweets by HertieCodingCLB</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
 
@@ -253,13 +284,32 @@ comments: false
 </div>
 
 </div> 
+
+
   <div>
-<h1 class="scroll-text" >Learn R {{< li qatykyxz trigger=loop delay=1000 scale=50 >}}</h1>
+<h1 class="scroll-text">
+  
+::: {.grid}
+::: {.g-col-4}
+:::
+::: {.g-col-7}
+{{< li qatykyxz trigger=loop delay=1000 scale=50 >}} Learn R
+:::
+::: {.g-col-1}
+:::
+:::
+
+</h1> 
+  
+
+<div class="image-grid">
 
 ::: {#learn}
 :::
 
 <a href="../learn/rstudio.html"> <button type="button" class="btn btn-primary float-end btn-sm">See all posts in English</button></a>
+
+</div> 
 
 </div> 
 </div> 
@@ -354,15 +404,23 @@ To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
 </div> 
 
 
-::: {.grid }
+
+
+::: {.grid margin-bottom="-20"}
+::: {.g-col-3}
+
+![](_site/images/hertie/DSL.png){width="140" fig-align="center"}
+
+:::
+::: {.g-col-5}
+
+![](_site/images/hertie/logo long.png){width="140" fig-align="center"}
+
+:::
 ::: {.g-col-4}
+
 ![](_site/images/hertie/hertie.png){width="140"  fig-align="center"}
-:::
-::: {.g-col-4}
-![](_site/images/hertie/DSL.png){width="141" height="36" fig-align="center"}
-:::
-::: {.g-col-4}
-![](_site/images/hertie/logo long.png){width="140"  fig-align="center"}
+
 :::
 :::
 

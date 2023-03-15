@@ -1566,6 +1566,11 @@ code span.dv {
 }
 
 
+
+
+
+
+
 .image-right:before {
     content: '';
     background:url('images/hcc_logo_card.png');
@@ -1802,8 +1807,41 @@ bottom: 0 !important;
   
 }
 
+@media (min-width: 701px) {
+  .quote-container {
+    display: none;
+  }
+}
+
 
 @media (max-width: 700px) {
+  
+  
+.quote-container {
+  border-left: 3px solid #333;
+  padding-left: 16px;
+  margin: 10px 10px;
+  text-align: center;
+  border: 2px solid #3498db;
+  margin-top: 50px;
+}
+
+.quote-text {
+  font-size: 24px;
+  font-style: italic;
+  line-height: 1.5;
+  margin-left: 10px;
+  color: #333;
+}
+
+.quote-author {
+  font-size: 18px;
+  font-weight: bold;
+  text-align: left;
+  color: #666;
+}
+  
+  
   .intro-header { padding: .1rem 1.5rem;
     margin-right: 1%;
     margin-left:1%;
@@ -1902,6 +1940,11 @@ display: none;
 .svg-quote {
   fill: #3498db;
 }
+
+.svg-quote2 path {
+    fill: #fff;
+  }
+
 .quote-name {
   margin-top: 5%;
   color: red;
@@ -1910,11 +1953,23 @@ display: none;
   margin-top: -2%;
 }
 
-@media (max-width: 1000px) {
+.social-media-mobile{
+display: none;
+}
+
+
+@media (max-width: 1241px) {
   
 .social-media{
   display: none;
 }
+
+.social-media-mobile{
+  display: flex; 
+  flex-direction: column; 
+  align-items: center;
+}
+
 
 .layout_grid_learnr{
   padding: 1% 6%;
@@ -1925,3 +1980,5 @@ display: none;
 
 
 }
+
+
