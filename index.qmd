@@ -102,12 +102,12 @@ comments: false
 
 <div class="intro_f">
   <div class="intro-slideshow">
-    <img src="images/Pictures HCC/kick_off_event1.jpeg">
-    <img src="images/Pictures HCC/kick_off_event2.jpeg">
-    <img src="images/Pictures HCC/kick_off_event3.jpeg">
-    <img src="images/Pictures HCC/event2.jpeg">
-    <img src="images/Pictures HCC/event3.jpeg">
-  </div>
+  <div class="image-wrapper"><img src="images/Pictures HCC/kick_off_event1.jpeg"></div>
+  <div class="image-wrapper"><img src="images/Pictures HCC/kick_off_event2.jpeg"></div>
+  <div class="image-wrapper"><img src="images/Pictures HCC/kick_off_event3.jpeg"></div>
+  <div class="image-wrapper"><img src="images/Pictures HCC/event2.jpeg"></div>
+  <div class="image-wrapper"><img src="images/Pictures HCC/event3.jpeg"></div>
+</div>
   <div class="scroll-text intro-text">
 <div class="quote-wrapper">
 <div class="quote-content">
@@ -121,7 +121,7 @@ comments: false
 </svg>
 
 </div>
-  <p class="quote-copy" style="color:rgba(0, 78, 146);"> <i>Mastering the art of timing enables us to fast-track your travel experience. We help people do business. </i>
+  <p class="quote-copy" style="color:white;"> <i>Mastering the art of timing enables us to fast-track your travel experience. We help people do business. </i>
 </p>
   <p class="quote-name" style="color:rgba(0, 78, 146);">Pedro Arias <span class="blue">CEO</span></p>
 </div>
@@ -135,54 +135,54 @@ comments: false
 
 <div class="layout_grid">
     <div class="quote-container">
-        <h1 class="quote-text">“Be the change that you wish to see in the world.”</h1>
-        <p class="quote-author">― Mahatma Gandhi</p>
+        <h1 class="quote-text scroll-text">“Be the change that you wish to see in the world.”</h1>
+        <p class="quote-author scroll-text">― Mahatma Gandhi</p>
     </div>
 
 <div class="achievements">
   <div class="work">
     <div class="work-icon">
       <i class="fas fa-atom"></i>
-      <p class="work-heading">Projects</p>
+      <p class="work-heading scroll-text">Projects</p>
     </div>
     <div class="work-description">
-      <p class="work-text">I have worked on many projects and I am very proud of them. I am a very good developer and I am always looking for new projects.</p>
+      <p class="work-text scroll-text">I have worked on many projects and I am very proud of them. I am a very good developer and I am always looking for new projects.</p>
     </div>
   </div>
   <div class="work">
     <div class="work-icon">
       <i class="fas fa-skiing"></i>
-      <p class="work-heading">Skills</p>
+      <p class="work-heading scroll-text">Skills</p>
     </div>
     <div class="work-description">
-      <p class="work-text">I have a lot of skills and I am very good at them. I am very good at programming and I am always looking for new skills.</p>
+      <p class="work-text scroll-text">I have a lot of skills and I am very good at them. I am very good at programming and I am always looking for new skills.</p>
     </div>
   </div>
   <div class="work">
     <div class="work-icon">
       <i class="fas fa-award"></i>
-      <p class="work-heading">Awards</p>
+      <p class="work-heading scroll-text">Awards</p>
     </div>
     <div class="work-description">
-      <p class="work-text">I have received many awards for my work and I am very proud of them. I am a very talented developer and I always strive for excellence.</p>
+      <p class="work-text scroll-text">I have received many awards for my work and I am very proud of them. I am a very talented developer and I always strive for excellence.</p>
     </div>
   </div>
   <div class="work">
     <div class="work-icon">
       <i class="fas fa-globe"></i>
-      <p class="work-heading">Experience</p>
+      <p class="work-heading scroll-text">Experience</p>
     </div>
     <div class="work-description">
-      <p class="work-text">I have a lot of experience in web development and I have worked with many clients. I am a very reliable and professional developer.</p>
+      <p class="work-text scroll-text">I have a lot of experience in web development and I have worked with many clients. I am a very reliable and professional developer.</p>
     </div>
   </div>
   <div class="work">
     <div class="work-icon">
       <i class="fas fa-briefcase"></i>
-      <p class="work-heading">Portfolio</p>
+      <p class="work-heading scroll-text">Portfolio</p>
     </div>
     <div class="work-description">
-      <p class="work-text">I have a strong portfolio of work that showcases my skills and experience as a developer. I am always proud to share my work with others.</p>
+      <p class="work-text scroll-text">I have a strong portfolio of work that showcases my skills and experience as a developer. I am always proud to share my work with others.</p>
     </div>
   </div>
 </div>

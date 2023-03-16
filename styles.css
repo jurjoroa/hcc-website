@@ -516,8 +516,6 @@ header:not(.headroom):not(.quarto-title-block).is-visible {
 
 .achievements .work .work-icon .work-heading {
   font-size: 25px;
-  font-weight: bold;
-  font-family: "Helvetica Neue", sans-serif;
   letter-spacing: 2px;
   color: #419CCD; /* Add a complementary color here */
   margin: 0;
@@ -1824,9 +1822,6 @@ bottom: 0 !important;
 
 
 
-
-
-
 .intro_f {
   height: 100vh;
   position: relative;
@@ -1835,7 +1830,32 @@ bottom: 0 !important;
   align-items: center;
   text-align: center;
   letter-spacing: 0.1rem;
+  background-color: black;
+   z-index: -1;
 }
+
+
+.intro-slideshow .image-wrapper {
+  top: 0;
+  left: 0;
+  width: 70%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.image-wrapper::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 70%;
+  height: 100%;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 0.5) 85%, rgba(0, 0, 0, 1) 100%);
+  z-index: 1;
+}
+
+
 .intro-slideshow img {
   position: absolute;
   top: 0;
@@ -1848,6 +1868,8 @@ bottom: 0 !important;
   /* display: none; */
   opacity: 0;
   transition: opacity 0.75s ease-in-out;
+  background: linear-gradient(to right, rgba(0,0,0,0) 90%, rgba(0,0,0,1) 100%);
+
 }
 
 
@@ -1857,11 +1879,12 @@ bottom: 0 !important;
 .intro-header {
   border-radius: 0.5rem;
   padding: 2rem 2.5rem;
-  background-color: rgba(0,0,0,0.5);
+  background-color: rgba(0,0,0,0.3);
   margin-right: 31%;
   margin-left:1%;
   margin-bottom: -5%;
   font-size: 1.5em;
+  z-index: 1;
 }
 .intro_f h1 {
   font-size: 4rem;
@@ -1888,12 +1911,16 @@ bottom: 0 !important;
 @media (max-width: 700px) {
   
   
+    .image-wrapper::before {
+    background: none;
+  }
+  
 .quote-container {
   border-left: 3px solid #333;
   padding-left: 16px;
   margin: 10px 10px;
   text-align: center;
-  border: 2px solid #3498db;
+  border: 2px solid #c0041c;
   margin-top: 50px;
 }
 
@@ -1945,7 +1972,8 @@ display: none;
 
 .intro_f {
   height: 60%;
-
+background-color: black;
+ z-index: -1;
 }
   
   
@@ -1994,7 +2022,7 @@ display: none;
 }
 .quote-content {
   text-align: center;
-  border: 2px solid #3498db;
+  border: 2px solid #c0041c;
   padding: 0 3%;
   position: relative;
   top:80px;
