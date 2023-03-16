@@ -133,7 +133,7 @@ comments: false
   </div>
 </div>
 
-
+<div class="layout_grid">
     <div class="quote-container">
         <h1 class="quote-text">“Be the change that you wish to see in the world.”</h1>
         <p class="quote-author">― Mahatma Gandhi</p>
@@ -194,6 +194,7 @@ comments: false
   </div>
 </div>
 
+</div>
 
 <div class="layout_grid_cards">
 <h1 >This pen is
