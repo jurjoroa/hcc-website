@@ -477,7 +477,6 @@ header:not(.headroom):not(.quarto-title-block).is-visible {
   justify-content: center;
   align-items: center;
   padding: 40px 20px;
-  margin-top: 20px;
 }
 
 .achievements .work {
@@ -517,12 +516,10 @@ header:not(.headroom):not(.quarto-title-block).is-visible {
 .achievements .work .work-icon .work-heading {
   font-size: 25px;
   letter-spacing: 2px;
-  color: #419CCD; /* Add a complementary color here */
+  color: #ffffff; /* Add a complementary color here */
   margin: 0;
   text-align: center;
   padding: 10px 20px;
-  background-color: #FFFFFF; /* Add a background color here */
-  border-radius: 20px; /* Add a border radius here */
 }
 
 
@@ -1901,6 +1898,19 @@ bottom: 0 !important;
   
 }
 
+  .container-blue {
+  background-color: #3498db;
+}
+  
+  
+  .work-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-right: 5%; /* Adjust this value to move content to the right as needed */
+}
+
 @media (min-width: 701px) {
   .quote-container {
     display: none;
@@ -1915,13 +1925,19 @@ bottom: 0 !important;
     background: none;
   }
   
+
+  .quote-container-bg {
+  background-color: black;
+}
+  
 .quote-container {
   border-left: 3px solid #333;
   padding-left: 16px;
   margin: 10px 10px;
   text-align: center;
   border: 2px solid #c0041c;
-  margin-top: 50px;
+  margin-top: -100px;
+  margin-bottom: 90px;
 }
 
 .quote-text {
@@ -1975,6 +1991,31 @@ display: none;
 background-color: black;
  z-index: -1;
 }
+  
+  
+
+.intro-slideshow .image-wrapper {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.image-wrapper::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 0.5) 85%, rgba(0, 0, 0, 1) 100%);
+  z-index: 1;
+}
+  
+  
+  
   
   
   
