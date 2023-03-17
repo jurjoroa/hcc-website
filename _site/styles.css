@@ -485,7 +485,7 @@ header:not(.headroom):not(.quarto-title-block).is-visible {
   padding: 40px 0px 20px 0px;
   width: 100%;
   margin-left: 10px;
-  border-bottom: 3px solid #93C6E2;
+  border-bottom: 3px solid #c0041c;
 }
 
 .achievements .work:last-child {
@@ -536,7 +536,7 @@ header:not(.headroom):not(.quarto-title-block).is-visible {
 
 .achievements .work .work-description .work-text {
   font-size: 15px;
-  color: #585858;
+  color: #fff;
   margin: -5px;
   text-align: center;
 }
@@ -1899,7 +1899,7 @@ bottom: 0 !important;
 }
 
   .container-blue {
-  background-color: #3498db;
+  background: linear-gradient(to right, #000428, #004e92);
 }
   
   
