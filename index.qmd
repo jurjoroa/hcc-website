@@ -265,22 +265,22 @@ comments: false
  <div class="social-media-mobile">
 <h1 class="scroll-text">{{< li kjkiqtxg trigger=loop delay=1000 scale=25 >}}Follow</h1>
 
-<a href="https://www.youtube.com/channel/your-youtube-channel-id">
+<a href="https://twitter.com/HertieCodingCLB">
   <img src="https://img.icons8.com/color/48/000000/twitter-squared.png" alt="Twitter icon" style="margin: 0 10px; height: 35px;">
 </a>
-  <a href="mailto:your-email-address@example.com">
+  <a href="mailto:hertiecodingclub@gmail.com">
     <img src="https://img.icons8.com/color/48/000000/gmail.png" alt="Gmail icon" style="margin: 0 10px; height: 35px;">
   </a>
-  <a href="https://your-slack-workspace.slack.com">
+  <a href="http://hertiecodingclub.slack.com">
     <img src="https://img.icons8.com/color/48/000000/slack-new.png" alt="Slack icon" style="margin: 0 10px; height: 35px;">
   </a>
   <a href="https://github.com/your-github-username">
-    <img src="https://img.icons8.com/fluent/48/000000/github.png" alt="GitHub icon" style="margin: 0 10px; height: 35px;">
+    <img src="https://twitter.com/HertieCodingCLB" alt="GitHub icon" style="margin: 0 10px; height: 35px;">
   </a>
-  <a href="https://www.instagram.com/your-instagram-username">
+  <a href="https://www.instagram.com/hertiecodingclub/">
     <img src="https://img.icons8.com/color/48/000000/instagram-new.png" alt="Instagram icon" style="margin: 0 10px; height: 35px;">
   </a>
-  <a href="https://www.youtube.com/channel/your-youtube-channel-id">
+  <a href="https://youtube.com/@hertiecodingclub">
     <img src="https://img.icons8.com/color/48/000000/youtube-play.png" alt="YouTube icon" style="margin: 0 10px; height: 35px;">
   </a>
 </div>
