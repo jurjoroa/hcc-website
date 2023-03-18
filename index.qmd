@@ -121,9 +121,10 @@ comments: false
 </svg>
 
 </div>
-  <p class="quote-copy" style="color:white;"> <i>Mastering the art of timing enables us to fast-track your travel experience. We help people do business. </i>
+  <p class="quote-copy" style="color:white;"> <i> Our goal as a club is to help everyone and between us learn coding skills and show that coding is for everyone, no matter our background.  </i>
 </p>
-  <p class="quote-name" style="color:rgba(0, 78, 146);">Pedro Arias <span class="blue">CEO</span></p>
+  <img src="images/hcc_logo_card.png" style="width:150px; margin-bottom:20px;">
+
 </div>
 </div>
   </div>
@@ -134,16 +135,16 @@ comments: false
 </div>
 
 <div class="quote-container-bg">
-<div class="layout_grid">
+<div class="layout_grid_objectives_mob">
     <div class="quote-container">
-        <h1 class="quote-text scroll-text">“Be the change that you wish to see in the world.”</h1>
-        <p class="quote-author scroll-text">― Mahatma Gandhi</p>
+        <h1 class="quote-text scroll-text" style="color:white;">Our goal as a club is to help everyone and between us learn coding skills and show that coding is for everyone, no matter our background.</h1>
+        <img src="images/hcc_logo_card.png" style="width:150px; margin-bottom:20px;">
     </div>
     </div>
 </div>
 
 <div class="container-blue">
-<div class="layout_grid">
+<div class="layout_grid_objectives">
 <div class="achievements">
   <div class="work">
     <div class="work-icon">
@@ -208,7 +209,6 @@ comments: false
   </div>
   <div class="work">
     <div class="work-icon">
-<script src="https://cdn.lordicon.com/ritcuqlt.js"></script>
 <lord-icon
     src="https://cdn.lordicon.com/gkstbnbz.json"
     trigger="loop"
@@ -221,19 +221,24 @@ comments: false
       <p class="work-text scroll-text">Encourage club members to apply their coding skills to real-world policy problems, empowering them to make data-driven decisions and contribute to better policy design and analysis.</p>
     </div>
   </div>
+<div class="work">
+    <div class="work-description">
 </div>
+
+    </div>
+  </div>
+</div>
+
 
 </div>
 </div>
 </div>
 
+<div class="container-blue2">
 <div class="layout_grid_cards">
-<h1 >This pen is
-  <span
-     class="txt-rotate"
-     data-period="2000"
-     data-rotate='[ "nerdy and awesome everyday!", "simple.", "pure JS.", "pretty.", "fun!" ]'></span>
-</h1>
+<div class="section_white">
+</div> 
+</div>
 </div>
 
 <script src="https://unpkg.com/css-doodle@0.33.0/css-doodle.min.js"></script>
@@ -252,6 +257,12 @@ comments: false
 ```{=HTML}
 
 <div class="layout_grid_cards">
+<h1 >This pen is
+  <span
+     class="txt-rotate"
+     data-period="2000"
+     data-rotate='[ "nerdy and awesome everyday!", "simple.", "pure JS.", "pretty.", "fun!" ]'></span>
+</h1>
  <div class="hero-section">
    <div class="cardg">
     <a class="card_img" href="#">
