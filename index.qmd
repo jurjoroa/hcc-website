@@ -337,7 +337,7 @@ comments: false
 <div style = "margin-top: 35px;"> </div> 
 
 
-<a class="twitter-timeline social-media" data-lang="en" data-width="300" #data-height="500" data-theme="dark" #href="https://twitter.com/HertieCodingCLB?ref_src=twsrc%5Etfw">Tweets by HertieCodingCLB</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
+<a class="twitter-timeline" data-lang="en" data-width="300" data-height="500" data-theme="dark" href="https://twitter.com/HertieCodingCLB?ref_src=twsrc%5Etfw">Tweets by HertieCodingCLB</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
 
 
 <div class="social-media" style="display: flex; justify-content: center; align-items: center;">
