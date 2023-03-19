@@ -265,14 +265,14 @@ comments: false
  <div class="hero-section">
    <div class="cardg">
     <a class="card_img" href="#">
-      <div class="card__background" style="background-image: url(images/home_cards/keyboard.jpg)"></div>
+      <div class="card__background" style="background-image: url(images/home_cards/keyboard_dalle.jpg)"></div>
       <div class="card__content">
         <p class="card__category">Category</p>
         <h3 class="card__heading">Example Card Heading</h3>
       </div>
     </a>
     <a class="card_img" href="#">
-      <div class="card__background" style="background-image:url(images/home_cards/code.jpg)"></div>
+      <div class="card__background" style="background-image:url(images/home_cards/computer_dalle.jpg)"></div>
       <div class="card__content">
         <p class="card__category">Category</p>
         <h3 class="card__heading">Example Card Heading</h3>
