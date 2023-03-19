@@ -163,7 +163,6 @@ comments: false
   </div>
   <div class="work">
     <div class="work-icon">
-      <script src="https://cdn.lordicon.com/ritcuqlt.js"></script>
 <lord-icon
     src="https://cdn.lordicon.com/flvisirw.json"
     trigger="loop"
@@ -223,6 +222,12 @@ comments: false
   </div>
 <div class="work">
     <div class="work-description">
+    <h1 >Coding is
+  <span
+     class="txt-rotate"
+     data-period="2000"
+     data-rotate='[ "teamwork and growth.", "potential unlocked.", "empowering.", "enjoyable and engaging.", "for everyone." ]'></span>
+</h1>
 </div>
 
     </div>
@@ -257,12 +262,6 @@ comments: false
 ```{=HTML}
 
 <div class="layout_grid_cards">
-<h1 >This pen is
-  <span
-     class="txt-rotate"
-     data-period="2000"
-     data-rotate='[ "nerdy and awesome everyday!", "simple.", "pure JS.", "pretty.", "fun!" ]'></span>
-</h1>
  <div class="hero-section">
    <div class="cardg">
     <a class="card_img" href="#">
@@ -337,7 +336,7 @@ comments: false
 <div style = "margin-top: 35px;"> </div> 
 
 
-<a class="twitter-timeline" data-lang="en" data-width="300" data-height="500" data-theme="dark" href="https://twitter.com/HertieCodingCLB?ref_src=twsrc%5Etfw">Tweets by HertieCodingCLB</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
+#<a class="twitter-timeline" data-lang="en" data-width="300" data-height="500" data-theme="dark" #href="https://twitter.com/HertieCodingCLB?ref_src=twsrc%5Etfw">Tweets by HertieCodingCLB</a> <script async #src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
 
 
 <div class="social-media" style="display: flex; justify-content: center; align-items: center;">
@@ -471,6 +470,7 @@ To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
 <script src="js/text.js"></script>
 <script src="js/background.js"></script>
 <script src="js/slider.js"></script>
+<script src="js/image_scroll.js"></script>
 
 ```
 
