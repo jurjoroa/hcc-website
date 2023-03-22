@@ -5,7 +5,7 @@ categories: [Rstudio, Wrangling, Tidyverse]
 date: '2022-11-18'
 title: '{{< animate fadeInDown "Meet Up II: Wrangle dataframes"delay=.6s >}}'
 subtitle: '{{< animate fadeInDown "Tidyverse, packages and exercise (part 1)"delay=.6s >}}'
-image: https://freesvg.org/img/1449718228.png
+image: box.png
 draft: false
 title-block-banner: true
 code-link: true
@@ -28,6 +28,6 @@ lightbox:
 
 **Objective**: We will go over the fundamentals of data wrangling in R. We will create our first repo with GitHub and understand why using Git is important in the Data Science world. Also, we will move on to exploring methods for cleaning, transforming, and manipulating data using the dplyr package. We'll discuss data operations like filtering, sorting, joining, and summing up. Participants will leave the session with a firm grasp on the fundamentals of data manipulation in R, which will serve as a solid foundation for further exploration and experimentation with this potent language.
 
-![](2_session.jpg)
+![](2_session.png)
 
 ------------------------------------------------------------------------

@@ -5,7 +5,7 @@ categories: [Python, Environment, VSC Code]
 date: '2023-02-24'
 title: '{{< animate fadeInDown "Setting up your environment in Python"delay=.6s >}}'
 subtitle: '{{< animate fadeInDown "Create reproducible Python environments"delay=.6s >}}'
-image: https://freesvg.org/img/python_pills.png
+image: python_pills.png
 draft: false
 title-block-banner: true
 code-link: true
@@ -28,6 +28,6 @@ lightbox:
 
 **Objective**: The main learning outcome is for you to know how to set up reproducible and shareable environments for Python projects, understand how to effectively switch between environments when using an IDE and how to work more efficiently with IDEs, including how to use jupyter code cells within a .py script (a personal favourite of mine). The workshop will focus on Pipenv (the environment and packaging tool officially recommended by the Python developer community) and VSCode (a very customizable and efficient IDE). Nevertheless, the ideas and workflows covered here also apply for other tools (like Anaconda or venv, Sypder or Pycharm).
 
-![](04_environment.png)
+![](04_environment.jpg)
 
 ------------------------------------------------------------------------

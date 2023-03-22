@@ -5,7 +5,7 @@ categories: [Rstudio]
 date: '2022-11-04'
 title: '{{< animate fadeInDown "Kick-Off Event: Hertie Coding Club"delay=.6s >}}'
 subtitle: '{{< animate fadeInDown "Re-Introduction to R"delay=.6s >}}'
-image: https://freesvg.org/img/kick-boxer.png
+image: kick-boxer.png
 draft: false
 title-block-banner: true
 code-link: true

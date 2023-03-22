@@ -5,7 +5,7 @@ categories: [Rstudio, Wrangling, Tidyverse]
 date: '2022-11-24'
 title: '{{< animate fadeInDown "Meet Up III: Wrangle dataframes"delay=.6s >}}'
 subtitle: '{{< animate fadeInDown "Exercises (part 2)"delay=.6s >}}'
-image: https://freesvg.org/img/ftdata.png
+image: ftdata.png
 draft: false
 title-block-banner: true
 code-link: true

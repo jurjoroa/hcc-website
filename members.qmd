@@ -1,5 +1,7 @@
 ---
 title: "Members"
+execute:
+  freeze: auto
 filters:
    - lightbox
 lightbox: 
@@ -26,19 +28,17 @@ format:
 
 About this site
 
-```{r}
-1 + 1
+```{r, echo=FALSE, warning=FALSE}
+library(showtext, quietly = T)
+showtext_auto()
 ```
 
 
-```{r, }
+
+```{r, warning=FALSE}
 # Load the ggplot2 package
 library(ggplot2)
-library(extrafont)
-library(showtext)
 
-showtext.auto()
-#extrafont::choose_font("Arial")
 
 # Create some example data
 x <- 1:10
@@ -56,8 +56,6 @@ ggplot(data = data.frame(x, y), aes(x = x, y = y)) +
 
 # Who are we? {auto-animate="true" auto-animate-easing="ease-in-out" background="#517699" style="text-align: left;"}
 
-trgrtgrtg
-
 
 
 
@@ -69,57 +67,6 @@ trgrtgrtg
      
 
 
-
-::: columns
-::: {.column width="45%"}
-
-<div class="inline-photo show-on-scroll"  style = "font-size: 12px">
-
-![A Lovely Image](Presentation/images/lukas.jpeg){group="my-gallery" description="Oak Bluffs is famous for its Gingerbread cottages, busy town center, and party like atmosphere."}
-
-<div class = "em-wide">
-
-
-
-{{< fa envelope title="Email" >}} 
-
-{{< fa brands twitter title="Twitter(https://twitter.com/damoncroberts)" >}}
-
-{{< fa brands github title="Github(https://github.com/damoncharlesroberts)" >}}
-
-
-</div> 
-
-</div> 
-
-:::
-::: {.column width="10%"}
-
-
-:::
-::: {.column width="45%"}
-
-<div class="inline-photo show-on-scroll"  style = "font-size: 5px">
-
-![Another Lovely Image](Presentation/images/lukas.jpeg){group="my-gallery" description="Oak Bluffs is famous for its Gingerbread cottages, busy town center, and party like atmosphere."}
-
-
-</div> 
-
-:::
-
-::: {.column width="40%"}
-
-
-<div class="inline-photo show-on-scroll" style = "font-size: 5px">
-
-![The Last Lovely Image](Presentation/images/lukas.jpeg){group="my-gallery" description="Oak Bluffs is famous for its Gingerbread cottages, busy town center, and party like atmosphere."}
-
-</div> 
-
-:::
-
-:::
 
 
 {{< fa envelope title="Email" >}} 
