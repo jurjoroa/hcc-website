@@ -18,6 +18,8 @@ comments: false
 
 
 ```{=HTML}
+
+
 <head>
   <link
     rel="stylesheet"
@@ -279,14 +281,14 @@ comments: false
       </div>
     </a>
     <a class="card_img" href="#">
-      <div class="card__background" style="background-image: url(images/home_cards/team.png)"></div>
+      <div class="card__background" style="background-image: url(images/home_cards/members_dalle.jpg)"></div>
       <div class="card__content">
         <p class="card__category">Category</p>
         <h3 class="card__heading">Example Card Heading</h3>
       </div>
     </li>
     <a class="card_img" href="#">
-      <div class="card__background" style="background-image:url(images/home_cards/lego.jpg)"></div>
+      <div class="card__background" style="background-image:url(images/home_cards/data_dalle.jpg)"></div>
       <div class="card__content">
         <p class="card__category">Category</p>
         <h3 class="card__heading">Example Card Heading</h3>

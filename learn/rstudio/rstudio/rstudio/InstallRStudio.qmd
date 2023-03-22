@@ -11,6 +11,14 @@ title-block-banner: true
 image: images/r-rstudio-logos.png
 ---
 
+<head>
+
+<title> Install R and Rstudio: why R rocks </title>
+
+<meta name="description" content="Unlock the power of data analysis and statistical computing with R and RStudio! Whether you are a student of public policy or a seasoned professional."/>
+
+</head>
+
 ![](images/rstudio.png){fig-align="center" width="428"}
 
 ------------------------------------------------------------------------

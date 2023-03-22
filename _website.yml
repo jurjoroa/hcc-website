@@ -23,12 +23,6 @@ website:
         href: https://www.instagram.com/hertiecodingclub/
       - text: "{{< fa brands youtube size=lg >}}"
         href: https://youtube.com/@hertiecodingclub
-
-
-
-  twitter-card:
-    creator: "@beamilz"
-    card-style: summary_large_image
   navbar:
     logo: images/hcc_bk_white.png
     href: https://www.hertiecodingclub.com/
