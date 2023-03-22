@@ -86,10 +86,10 @@ comments: false
 </css-doodle>
 
   <div class="image">
-    <img src="images/hcc_long_wel.png">
+    <img class="lozad" src="images/hcc_long_wel.png">
   </div>
     <div class="image_mob">
-    <img src="images/hcc_long_wel_smart.png">
+    <img class="lozad" src="images/hcc_long_wel_smart.png">
   </div>
 
 <button class="btn-21"> <span> Learn more </span> </button>
@@ -102,11 +102,11 @@ comments: false
 
 <div class="intro_f">
   <div class="intro-slideshow">
-  <div class="image-wrapper"><img src="images/Pictures HCC/kick_off_event1.jpeg"></div>
-  <div class="image-wrapper"><img src="images/Pictures HCC/kick_off_event2.jpeg"></div>
-  <div class="image-wrapper"><img src="images/Pictures HCC/kick_off_event3.jpeg"></div>
-  <div class="image-wrapper"><img src="images/Pictures HCC/event2.jpeg"></div>
-  <div class="image-wrapper"><img src="images/Pictures HCC/event3.jpeg"></div>
+  <div class="image-wrapper"><img class="lozad" src="images/Pictures HCC/kick_off_event1.jpeg"></div>
+  <div class="image-wrapper"><img class="lozad" src="images/Pictures HCC/kick_off_event2.jpeg"></div>
+  <div class="image-wrapper"><img class="lozad" src="images/Pictures HCC/kick_off_event3.jpeg"></div>
+  <div class="image-wrapper"><img class="lozad" src="images/Pictures HCC/event2.jpeg"></div>
+  <div class="image-wrapper"><img class="lozad" src="images/Pictures HCC/event3.jpeg"></div>
 </div>
   <div class="scroll-text intro-text">
 <div class="quote-wrapper">
@@ -265,7 +265,7 @@ comments: false
  <div class="hero-section">
    <div class="cardg">
     <a class="card_img" href="#">
-      <div class="card__background" style="background-image: url(images/home_cards/keyboard_dalle.jpg)"></div>
+      <div class="card__background" style="background-image: url(images/home_cards/keyboard_dalle.jpeg)"></div>
       <div class="card__content">
         <p class="card__category">Category</p>
         <h3 class="card__heading">Example Card Heading</h3>
@@ -307,22 +307,22 @@ comments: false
 <h1 class="scroll-text">{{< li kjkiqtxg trigger=loop delay=1000 scale=25 >}}Follow</h1>
 
 <a href="https://twitter.com/HertieCodingCLB">
-  <img src="https://img.icons8.com/color/48/000000/twitter-squared.png" alt="Twitter icon" style="margin: 0 10px; height: 35px;">
+  <img class="lozad" src="https://img.icons8.com/color/48/000000/twitter-squared.png" alt="Twitter icon" style="margin: 0 10px; height: 35px;">
 </a>
   <a href="mailto:hertiecodingclub@gmail.com">
-    <img src="https://img.icons8.com/color/48/000000/gmail.png" alt="Gmail icon" style="margin: 0 10px; height: 35px;">
+    <img class="lozad" src="https://img.icons8.com/color/48/000000/gmail.png" alt="Gmail icon" style="margin: 0 10px; height: 35px;">
   </a>
   <a href="http://hertiecodingclub.slack.com">
-    <img src="https://img.icons8.com/color/48/000000/slack-new.png" alt="Slack icon" style="margin: 0 10px; height: 35px;">
+    <img class="lozad" src="https://img.icons8.com/color/48/000000/slack-new.png" alt="Slack icon" style="margin: 0 10px; height: 35px;">
   </a>
   <a href="https://github.com/Hertie-Coding-Club">
-    <img src="https://img.icons8.com/fluent/48/000000/github.png" alt="GitHub icon" style="margin: 0 10px; height: 35px;">
+    <img class="lozad" src="https://img.icons8.com/fluent/48/000000/github.png" alt="GitHub icon" style="margin: 0 10px; height: 35px;">
   </a>
   <a href="https://www.instagram.com/hertiecodingclub/">
-    <img src="https://img.icons8.com/color/48/000000/instagram-new.png" alt="Instagram icon" style="margin: 0 10px; height: 35px;">
+    <img class="lozad" src="https://img.icons8.com/color/48/000000/instagram-new.png" alt="Instagram icon" style="margin: 0 10px; height: 35px;">
   </a>
   <a href="https://youtube.com/@hertiecodingclub">
-    <img src="https://img.icons8.com/color/48/000000/youtube-play.png" alt="YouTube icon" style="margin: 0 10px; height: 35px;">
+    <img class="lozad" src="https://img.icons8.com/color/48/000000/youtube-play.png" alt="YouTube icon" style="margin: 0 10px; height: 35px;">
   </a>
 </div>
 
@@ -341,19 +341,19 @@ comments: false
 
 <div class="social-media" style="display: flex; justify-content: center; align-items: center;">
   <a href="mailto:hertiecodingclub@gmail.com">
-    <img src="https://img.icons8.com/color/48/000000/gmail.png" alt="Gmail icon" style="margin: 0 10px; height: 35px;">
+    <img class="lozad" src="https://img.icons8.com/color/48/000000/gmail.png" alt="Gmail icon" style="margin: 0 10px; height: 35px;">
   </a>
   <a href="http://hertiecodingclub.slack.com">
-    <img src="https://img.icons8.com/color/48/000000/slack-new.png" alt="Slack icon" style="margin: 0 10px; height: 35px;">
+    <img class="lozad" src="https://img.icons8.com/color/48/000000/slack-new.png" alt="Slack icon" style="margin: 0 10px; height: 35px;">
   </a>
   <a href="https://github.com/Hertie-Coding-Club">
-    <img src="https://img.icons8.com/fluent/48/000000/github.png" alt="GitHub icon" style="margin: 0 10px; height: 35px;">
+    <img class="lozad"src="https://img.icons8.com/fluent/48/000000/github.png" alt="GitHub icon" style="margin: 0 10px; height: 35px;">
   </a>
   <a href="https://www.instagram.com/hertiecodingclub/">
-    <img src="https://img.icons8.com/color/48/000000/instagram-new.png" alt="Instagram icon" style="margin: 0 10px; height: 35px;">
+    <img class="lozad" src="https://img.icons8.com/color/48/000000/instagram-new.png" alt="Instagram icon" style="margin: 0 10px; height: 35px;">
   </a>
   <a href="https://youtube.com/@hertiecodingclub">
-    <img src="https://img.icons8.com/color/48/000000/youtube-play.png" alt="YouTube icon" style="margin: 0 10px; height: 35px;">
+    <img class="lozad" src="https://img.icons8.com/color/48/000000/youtube-play.png" alt="YouTube icon" style="margin: 0 10px; height: 35px;">
   </a>
 </div>
 
@@ -499,5 +499,9 @@ To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
 :::
 :::
 
+```{=HTML}
 
+<script src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js"></script>
+
+```
 
