@@ -224,12 +224,7 @@ comments: false
   </div>
 <div class="work">
     <div class="work-description">
-    <h1 >Coding is
-  <span
-     class="txt-rotate"
-     data-period="2000"
-     data-rotate='[ "teamwork and growth.", "potential unlocked.", "empowering.", "enjoyable and engaging.", "for everyone." ]'></span>
-</h1>
+
 </div>
 
     </div>
@@ -247,6 +242,7 @@ comments: false
 </div> 
 </div>
 </div>
+
 
 <script src="https://unpkg.com/css-doodle@0.33.0/css-doodle.min.js"></script>
 <script src="https://cdn.lordicon.com/ritcuqlt.js"></script>
@@ -299,7 +295,19 @@ comments: false
 
 ```
 
-<div class="section_white">
+<div style="font-size: 15px;
+margin-top:20px;
+color: grey">*All the images were generated with Dall-e. </div> 
+
+<div class="section_white" style="display: flex;
+        align-items: center;
+        justify-content: center;">
+<h1>Coding is
+  <span
+     class="txt-rotate"
+     data-period="2000"
+     data-rotate='[ "teamwork and growth.", "potential unlocked.", "empowering.", "enjoyable and engaging.", "for everyone." ]'></span>
+</h1>
 
 </div> 
 
@@ -417,35 +425,6 @@ To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
 {{< fa building-columns title="Office" >}} Ketchum Arts & Sciences, Office 382, Boulder, CO 80309
 
 </div> 
-
-
-```{=HTML}
-
-<div class="layout_grid">
-
- <h1>Coding is
-      <!-- Scroller Start -->
-      
-      <div class="scroller">
-  <span>
-    <span style="color: red;">Cool</span><br/>
-    <span style="color: blue;">Art</span><br/>
-    <span style="color: green;">Intriguing</span><br/>
-    <span style="color: green;">Intriguing</span><br/>
-    <span style="color: orange;">Challenging</span>
-  </span>
-</div>
-      
-      <!-- Scroller End -->
-    </h1>
-
-
-
-
-
-</div>
-  
-```
 
 
 
