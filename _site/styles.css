@@ -2133,3 +2133,6 @@ display: none;
 
 }
 
+li.page-item.active a.page.page-link {
+  pointer-events: none;
+}

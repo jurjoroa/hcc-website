@@ -149,6 +149,35 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       window['quarto-listing-loaded']();
     }
   })
+  
+
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-Events .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-image','listing-date','listing-title',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      page: 1,
+    pagination: { item: "<li class='page-item'><button class='page page-link' type='button'></button></li>" },
+      searchColumns: ["listing-title","listing-author","listing-date","listing-image","listing-description"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-Events'] = new List('listing-Events', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
   </script><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-HJEMN0LJY7"></script><script type="text/javascript">
 
 window.dataLayer = window.dataLayer || [];
@@ -156,6 +185,11 @@ function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 gtag('config', 'G-HJEMN0LJY7', { 'anonymize_ip': true});
 </script><style>html{ scroll-behavior: smooth; }</style>
+<style>:root{--animate-duration:3s;--animate-delay:2s;--animate-repeat:1}</style>
+<style>:root{--animate-duration:3s;--animate-delay:2s;--animate-repeat:1}</style>
+<style>:root{--animate-duration:3s;--animate-delay:2s;--animate-repeat:1}</style>
+<style>:root{--animate-duration:3s;--animate-delay:2s;--animate-repeat:1}</style>
+<style>:root{--animate-duration:3s;--animate-delay:2s;--animate-repeat:1}</style>
 <style>:root{--animate-duration:3s;--animate-delay:2s;--animate-repeat:1}</style>
 <style>:root{--animate-duration:3s;--animate-delay:2s;--animate-repeat:1}</style>
 <style>:root{--animate-duration:3s;--animate-delay:2s;--animate-repeat:1}</style>
@@ -488,7 +522,7 @@ Coding is <span class="txt-rotate" data-period="2000" data-rotate="[ &quot;teamw
 <div class="image-grid">
 <div id="listing-learn" class="quarto-listing quarto-listing-container-default">
 <div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="R,RStudio,Accesibility,Install" data-listing-date-sort="1677711600000" data-listing-file-modified-sort="1679501603164" data-listing-reading-time-sort="2.88">
+<div class="quarto-post image-right" data-index="0" data-categories="R,RStudio,Accesibility,Install" data-listing-date-sort="1677711600000" data-listing-file-modified-sort="1679574265862" data-listing-reading-time-sort="2.88">
 <div class="thumbnail">
 <p><a href="./learn/rstudio/rstudio/rstudio/InstallRStudio.html"> <img src="./learn/rstudio/rstudio/rstudio/images/r-rstudio-logos.png" class="thumnail-image"></a></p>
 </div>
@@ -532,7 +566,7 @@ Jorge Roa
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="1" data-categories="GitHub,GitHub Actions,Automations,RStudio" data-listing-date-sort="1658959200000" data-listing-file-modified-sort="1678181453436" data-listing-reading-time-sort="0.21">
+<div class="quarto-post image-right" data-index="1" data-categories="GitHub,GitHub Actions,Automations,RStudio" data-listing-date-sort="1658959200000" data-listing-file-modified-sort="1679574265900" data-listing-reading-time-sort="0.21">
 <div class="thumbnail">
 <p><a href="./learn/rstudio/rstudio/rstudio/index.html"> <img src="./learn/rstudio/rstudio/rstudio/images/appleintel.png" class="thumnail-image"></a></p>
 </div>
@@ -576,7 +610,7 @@ Beatriz Milz
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="2" data-categories="GitHub,GitHub Actions,Automations,RStudio,Posit" data-listing-date-sort="1658959200000" data-listing-file-modified-sort="1679045373458" data-listing-reading-time-sort="3.935">
+<div class="quarto-post image-right" data-index="2" data-categories="GitHub,GitHub Actions,Automations,RStudio,Posit" data-listing-date-sort="1658959200000" data-listing-file-modified-sort="1679574265900" data-listing-reading-time-sort="3.935">
 <div class="thumbnail">
 <p><a href="./learn/rstudio/rstudio/rstudio/thread.html"> <img src="./learn/rstudio/rstudio/rstudio/images/apple_intel_f.png" class="thumnail-image"></a></p>
 </div>
@@ -651,7 +685,7 @@ No matching items
 <article><img id="lukas" src="Presentation/images/lukas.jpeg"><img id="lukas" src="Presentation/images/lukas.jpeg"><img id="lukas" src="Presentation/images/lukas.jpeg"><img id="lukas" src="Presentation/images/lukas.jpeg"></article>
 </div>
 
-<script src="js/text_obs.js"></script><script src="js/text_obs_achiev.js"></script><script src="js/text.js"></script><script src="js/background.js"></script><script src="js/slider.js"></script><div class="section_white">
+<script src="js/text_obs.js"></script><script src="js/text_obs_achiev.js"></script><script src="js/text.js"></script><script src="js/background.js"></script><script src="js/slider.js"></script><script src="js/pagination.js"></script><div class="section_white">
 
 </div>
 <div class="grid" data-margin-bottom="-20">
@@ -674,6 +708,115 @@ No matching items
 </div>
 </div>
 </div>
+<div class="layout_grid">
+<div id="listing-Events" class="quarto-listing quarto-listing-container-grid">
+<div class="list grid quarto-listing-cols-3">
+<div class="g-col-1" data-index="0" data-categories="Rstudio,Twitter,Wrangling" data-listing-date-sort="1679007600000" data-listing-file-modified-sort="1679574265828" data-listing-reading-time-sort="0.33">
+<a href="./events/05_social_media_analysis/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img src="./events/05_social_media_analysis/Social-Media.png" class="thumbnail-image card-img" style="height: 150px;"></p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+</h5>
+<p><span class="animate__animated animate__fadeInDown animate__delay-.6s" style="display: inline-block;">Social Media Scraping</span></p>
+
+<div class="card-attribution card-text-small end">
+<div class="listing-date">
+Mar 17, 2023
+</div>
+</div>
+</div>
+</div>
+</a>
+</div>
+<div class="g-col-1" data-index="1" data-categories="Python,Environment,VSC Code" data-listing-date-sort="1677193200000" data-listing-file-modified-sort="1679574265824" data-listing-reading-time-sort="0.555">
+<a href="./events/04_environment/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img data-src="./events/04_environment/python_pills.png" class="thumbnail-image card-img" style="height: 150px;"></p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+</h5>
+<p><span class="animate__animated animate__fadeInDown animate__delay-.6s" style="display: inline-block;">Setting up your environment in Python</span></p>
+
+<div class="card-attribution card-text-small end">
+<div class="listing-date">
+Feb 24, 2023
+</div>
+</div>
+</div>
+</div>
+</a>
+</div>
+<div class="g-col-1" data-index="2" data-categories="Rstudio,Wrangling,Tidyverse" data-listing-date-sort="1669244400000" data-listing-file-modified-sort="1679574265822" data-listing-reading-time-sort="0.415">
+<a href="./events/03_wrangle_part2/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img data-src="./events/03_wrangle_part2/ftdata.png" class="thumbnail-image card-img" style="height: 150px;"></p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+</h5>
+<p><span class="animate__animated animate__fadeInDown animate__delay-.6s" style="display: inline-block;">Meet Up III: Wrangle dataframes</span></p>
+
+<div class="card-attribution card-text-small end">
+<div class="listing-date">
+Nov 24, 2022
+</div>
+</div>
+</div>
+</div>
+</a>
+</div>
+<div class="g-col-1" data-index="3" data-categories="Rstudio,Wrangling,Tidyverse" data-listing-date-sort="1668726000000" data-listing-file-modified-sort="1679574265820" data-listing-reading-time-sort="0.51">
+<a href="./events/02_wrangle/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img data-src="./events/02_wrangle/box.png" class="thumbnail-image card-img" style="height: 150px;"></p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+</h5>
+<p><span class="animate__animated animate__fadeInDown animate__delay-.6s" style="display: inline-block;">Meet Up II: Wrangle dataframes</span></p>
+
+<div class="card-attribution card-text-small end">
+<div class="listing-date">
+Nov 18, 2022
+</div>
+</div>
+</div>
+</div>
+</a>
+</div>
+<div class="g-col-1" data-index="4" data-categories="Rstudio" data-listing-date-sort="1667516400000" data-listing-file-modified-sort="1679574265816" data-listing-reading-time-sort="0.5">
+<a href="./events/01_kickoff_event/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img data-src="./events/01_kickoff_event/kick-boxer.png" class="thumbnail-image card-img" style="height: 150px;"></p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+</h5>
+<p><span class="animate__animated animate__fadeInDown animate__delay-.6s" style="display: inline-block;">Kick-Off Event: Hertie Coding Club</span></p>
+
+<div class="card-attribution card-text-small end">
+<div class="listing-date">
+Nov 4, 2022
+</div>
+</div>
+</div>
+</div>
+</a>
+</div>
+</div>
+<div class="listing-no-matching d-none">
+No matching items
+</div>
+<nav id="Events-pagination" class="listing-pagination" aria-label="Page Navigation"><ul class="pagination"></ul></nav>
+</div>
+<p><a href="../events/index.html"> <button type="button" class="btn btn-primary float-end btn-sm">See all/Ver todos</button></a></p>
+<p><br></p>
+</div>
+<!-- Important: apply it to html index.html  -->
+<!-- <li class='page-item'><button class='page page-link' type='button'></button></li> -->
 
 
 

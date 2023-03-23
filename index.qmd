@@ -10,7 +10,16 @@ listing:
     #categories: cloud
     sort-ui: false
     filter-ui: false
-    page-size: 3 
+    page-size: 3
+  - id: Events
+    contents: events/*/index.qmd
+    type: grid
+    fields: [image, date, title]
+    sort: "date desc"
+    #categories: cloud
+    sort-ui: false
+    filter-ui: false
+    page-size: 1 
 toc: true
 title-block-banner: false
 comments: false
@@ -450,7 +459,7 @@ To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
 <script src="js/text.js"></script>
 <script src="js/background.js"></script>
 <script src="js/slider.js"></script>
-
+<script src="js/pagination.js"></script>
 ```
 
 <div class="section_white">
@@ -477,5 +486,23 @@ To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
 
 :::
 :::
+
+
+<div class="layout_grid">
+
+::: {#Events}
+:::
+
+
+
+<a href="../events/index.html"> <button type="button" class="btn btn-primary float-end btn-sm">See all/Ver todos</button></a>
+
+<br>
+
+</div>
+
+
+<!-- Important: apply it to html index.html  -->
+<!-- <li class='page-item'><button class='page page-link' type='button'></button></li> -->
 
 
