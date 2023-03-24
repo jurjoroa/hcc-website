@@ -14,12 +14,13 @@ listing:
   - id: Events
     contents: events/*/index.qmd
     type: grid
+    grid-columns: 2
     fields: [image, date, title]
     sort: "date desc"
     #categories: cloud
     sort-ui: false
     filter-ui: false
-    page-size: 1 
+    page-size: 2 
 toc: true
 title-block-banner: false
 comments: false
@@ -409,6 +410,52 @@ color: grey">*All the images were generated with Dall-e. </div>
 
 
 
+<hr class="sep-2" />
+
+
+
+<div class="layout_grid_events">
+
+
+
+ <div class="social-media">
+
+<div style = "margin-top: 35px;"> </div> 
+
+<h1 style="font-size: 90px;
+margin-top:20px;
+display: flex;
+justify-content: center;
+align-items: center;
+font-weight: 700;
+  background-image: conic-gradient(#553c9a, #ee4b2b, #00c2cb, #553c9a);
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;"
+  class="scroll-text"> Events </h1>
+
+
+</div> 
+
+<div style="justify-self: end;"> 
+
+::: {#Events}
+:::
+
+ </div>
+ 
+</div>
+
+</div>
+
+<div class="layout_grid_6">
+<a style="padding: 1% 12%;" href="../events/index.html"> <button type="button" class="btn btn-primary float-end btn-sm">See all/Ver todos</button></a>
+
+
+</div>
+<hr class="sep-2" />
+
+
 
 
 <div class="layout_grid" id="main">
@@ -488,21 +535,15 @@ To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
 :::
 
 
-<div class="layout_grid">
 
-::: {#Events}
-:::
-
-
-
-<a href="../events/index.html"> <button type="button" class="btn btn-primary float-end btn-sm">See all/Ver todos</button></a>
-
-<br>
-
-</div>
 
 
 <!-- Important: apply it to html index.html  -->
 <!-- <li class='page-item'><button class='page page-link' type='button'></button></li> -->
 
-
+<!--     const options = {
+      valueNames: ['listing-image','listing-date','listing-title',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      page: 1,
+    pagination: { item: "<li class='page-item'><a class='page page-link' href='#'></a></li>" },
+      searchColumns: ["listing-title","listing-author","listing-date","listing-image","listing-description"],
+    }; -->

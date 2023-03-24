@@ -160,8 +160,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
     const options = {
       valueNames: ['listing-image','listing-date','listing-title',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      page: 1,
-    pagination: { item: "<li class='page-item'><button class='page page-link' type='button'></button></li>" },
+      page: 2,
+    pagination: { item: "<li class='page-item'><a class='page page-link' href='#'></a></li>" },
       searchColumns: ["listing-title","listing-author","listing-date","listing-image","listing-description"],
     };
 
@@ -666,51 +666,28 @@ No matching items
 </div>
 </div>
 </div>
-<div id="main" class="layout_grid">
-<p>This is a Quarto website.</p>
-<p>To learn more about Quarto websites visit <a href="https://quarto.org/docs/websites" class="uri">https://quarto.org/docs/websites</a>.</p>
-<div class="cell">
-<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fl">1</span> <span class="op">+</span> <span class="fl">1</span> <span class="op">+</span> <span class="fl">1</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 3</code></pre>
-</div>
-</div>
-<p><i class="fa-solid fa-envelope" title="Email" aria-label="envelope"></i></p>
-<p><i class="fa-brands fa-twitter" title="Twitter" aria-label="twitter"></i> <a href="https://twitter.com/damoncroberts">damoncroberts</a></p>
-<p><i class="fa-brands fa-github" title="Github" aria-label="github"></i> <a href="https://github.com/damoncharlesroberts">DamonCharlesRoberts</a></p>
-<p><i class="fa-solid fa-clock" title="Office Hours" aria-label="clock"></i> Wednesdays from 12:15 - 2:15 pm Mountain</p>
-<p><i class="fa-solid fa-building-columns" title="Office" aria-label="building-columns"></i> Ketchum Arts &amp; Sciences, Office 382, Boulder, CO 80309</p>
-</div>
-<div class="layout" style="font-size: 5px">
-<article><img id="lukas" src="Presentation/images/lukas.jpeg"><img id="lukas" src="Presentation/images/lukas.jpeg"><img id="lukas" src="Presentation/images/lukas.jpeg"><img id="lukas" src="Presentation/images/lukas.jpeg"></article>
-</div>
-
-<script src="js/text_obs.js"></script><script src="js/text_obs_achiev.js"></script><script src="js/text.js"></script><script src="js/background.js"></script><script src="js/slider.js"></script><script src="js/pagination.js"></script><div class="section_white">
+<hr class="sep-2">
+<div class="layout_grid_events">
+<div class="social-media">
+<div style="margin-top: 35px;">
 
 </div>
-<div class="grid" data-margin-bottom="-20">
-<div class="g-col-3">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="_site/images/hertie/DSL.png" class="img-fluid figure-img" width="140"></p>
-</figure>
+<h1 style="font-size: 90px;
+margin-top:20px;
+display: flex;
+justify-content: center;
+align-items: center;
+font-weight: 700;
+  background-image: conic-gradient(#553c9a, #ee4b2b, #00c2cb, #553c9a);
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;" class="scroll-text">
+Events
+</h1>
 </div>
-</div>
-<div class="g-col-5">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="_site/images/hertie/logo long.png" class="img-fluid figure-img" width="140"></p>
-</figure>
-</div>
-</div>
-<div class="g-col-4">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="_site/images/hertie/hertie.png" class="img-fluid figure-img" width="140"></p>
-</figure>
-</div>
-</div>
-</div>
-<div class="layout_grid">
+<div style="justify-self: end;">
 <div id="listing-Events" class="quarto-listing quarto-listing-container-grid">
-<div class="list grid quarto-listing-cols-3">
+<div class="list grid quarto-listing-cols-2">
 <div class="g-col-1" data-index="0" data-categories="Rstudio,Twitter,Wrangling" data-listing-date-sort="1679007600000" data-listing-file-modified-sort="1679574265828" data-listing-reading-time-sort="0.33">
 <a href="./events/05_social_media_analysis/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
@@ -734,7 +711,7 @@ Mar 17, 2023
 <a href="./events/04_environment/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
-<img data-src="./events/04_environment/python_pills.png" class="thumbnail-image card-img" style="height: 150px;"></p>
+<img src="./events/04_environment/python_pills.png" class="thumbnail-image card-img" style="height: 150px;"></p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
 </h5>
@@ -812,11 +789,63 @@ No matching items
 </div>
 <nav id="Events-pagination" class="listing-pagination" aria-label="Page Navigation"><ul class="pagination"></ul></nav>
 </div>
-<p><a href="../events/index.html"> <button type="button" class="btn btn-primary float-end btn-sm">See all/Ver todos</button></a></p>
-<p><br></p>
+</div>
+</div>
+</div>
+<div class="layout_grid_6">
+<p><a style="padding: 1% 12%;" href="../events/index.html"> <button type="button" class="btn btn-primary float-end btn-sm">See all/Ver todos</button></a></p>
+</div>
+<hr class="sep-2">
+<div id="main" class="layout_grid">
+<p>This is a Quarto website.</p>
+<p>To learn more about Quarto websites visit <a href="https://quarto.org/docs/websites" class="uri">https://quarto.org/docs/websites</a>.</p>
+<div class="cell">
+<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fl">1</span> <span class="op">+</span> <span class="fl">1</span> <span class="op">+</span> <span class="fl">1</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 3</code></pre>
+</div>
+</div>
+<p><i class="fa-solid fa-envelope" title="Email" aria-label="envelope"></i></p>
+<p><i class="fa-brands fa-twitter" title="Twitter" aria-label="twitter"></i> <a href="https://twitter.com/damoncroberts">damoncroberts</a></p>
+<p><i class="fa-brands fa-github" title="Github" aria-label="github"></i> <a href="https://github.com/damoncharlesroberts">DamonCharlesRoberts</a></p>
+<p><i class="fa-solid fa-clock" title="Office Hours" aria-label="clock"></i> Wednesdays from 12:15 - 2:15 pm Mountain</p>
+<p><i class="fa-solid fa-building-columns" title="Office" aria-label="building-columns"></i> Ketchum Arts &amp; Sciences, Office 382, Boulder, CO 80309</p>
+</div>
+<div class="layout" style="font-size: 5px">
+<article><img id="lukas" src="Presentation/images/lukas.jpeg"><img id="lukas" src="Presentation/images/lukas.jpeg"><img id="lukas" src="Presentation/images/lukas.jpeg"><img id="lukas" src="Presentation/images/lukas.jpeg"></article>
+</div>
+
+<script src="js/text_obs.js"></script><script src="js/text_obs_achiev.js"></script><script src="js/text.js"></script><script src="js/background.js"></script><script src="js/slider.js"></script><script src="js/pagination.js"></script><div class="section_white">
+
+</div>
+<div class="grid" data-margin-bottom="-20">
+<div class="g-col-3">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="_site/images/hertie/DSL.png" class="img-fluid figure-img" width="140"></p>
+</figure>
+</div>
+</div>
+<div class="g-col-5">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="_site/images/hertie/logo long.png" class="img-fluid figure-img" width="140"></p>
+</figure>
+</div>
+</div>
+<div class="g-col-4">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="_site/images/hertie/hertie.png" class="img-fluid figure-img" width="140"></p>
+</figure>
+</div>
+</div>
 </div>
 <!-- Important: apply it to html index.html  -->
 <!-- <li class='page-item'><button class='page page-link' type='button'></button></li> -->
+<!--     const options = {
+      valueNames: ['listing-image','listing-date','listing-title',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      page: 1,
+    pagination: { item: "<li class='page-item'><a class='page page-link' href='#'></a></li>" },
+      searchColumns: ["listing-title","listing-author","listing-date","listing-image","listing-description"],
+    }; -->
 
 
 
@@ -1069,9 +1098,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
 });
-</script>
-</div> <!-- /content -->
-<footer class="footer"><div class="nav-footer">
+</script><!-- /content --><footer class="footer"><div class="nav-footer">
     <div class="nav-footer-left">
       <ul class="footer-items list-unstyled">
 <li class="nav-item">

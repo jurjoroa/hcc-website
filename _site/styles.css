@@ -623,6 +623,12 @@ header:not(.headroom):not(.quarto-title-block).is-visible {
   //border-top: 2px solid #eeeeee;
 }
 
+.layout_grid_6{
+  padding: 1% 6%;
+  display: grid;
+  justify-self: end;
+  margin-top: -50px;
+}
 
 
 .layout_grid_learnr{
@@ -633,6 +639,11 @@ header:not(.headroom):not(.quarto-title-block).is-visible {
   grid-gap: 60px;
 }
 
+.layout_grid_events{
+  padding: 1% 6%;
+  display: grid; 
+  grid-template-columns: 1.5fr 1.5fr; 
+}
 
 .section_white{
   margin-top: 100px;
@@ -1605,7 +1616,7 @@ code span.dv {
 
 /*card events*/
 .card-left {
-  border: 5.5px solid #BF041C;
+  border: 3.5px solid #BF041C;
   background: #00325E ;
   border-radius: 10px;
   color: white;
@@ -1629,7 +1640,7 @@ code span.dv {
 
 /*card events*/
 .image-right {
-  border: 5.5px solid #BF041C;
+  border: 3.5px solid #BF041C;
   background: #00325E ;
   border-radius: 10px;
   color: white;
@@ -1665,7 +1676,7 @@ code span.dv {
 
 /*card events*/
 #learn-r .image-right {
-  border: 5.5px solid #BF041C;
+  border: 3.5px solid #BF041C;
   background: #00325E;
   border-radius: 10px;
   color: white;
@@ -1691,6 +1702,34 @@ code span.dv {
   transform: scale(1.05);
 }
 
+
+/*card events*/
+.card-left {
+  border: 3.5px solid #BF041C;
+  background: black;
+  border-radius: 10px;
+  color: white;
+  transition: all 0.5s ease-in-out;
+  position: relative;
+  
+}
+
+
+.card-left:before {
+    content: '';
+    background:url('images/hcc_logo_card.png');
+    background-size:cover;
+    position:absolute;
+    width: 100px;
+    height: 27px;
+    right: calc(100% - 1000px);
+    margin-right: 900px;
+    bottom: 10px;
+}
+
+.card-left:hover {
+  transform: scale(1.05);
+}
 
  div.listing-title{
   
@@ -2133,6 +2172,11 @@ display: none;
 
 }
 
-li.page-item.active a.page.page-link {
-  pointer-events: none;
-}
+
+
+
+
+hr.sep-2 {
+  border: 0; 
+  height: 2px; 
+  background-image: linear-gradient(to right, #f0f0f0, #3498db, #c0041c, #f0f0f0);
