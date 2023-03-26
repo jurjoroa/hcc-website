@@ -34,7 +34,11 @@ website:
         href: index.qmd
         text: "Home"
       - text: "{{< fa solid people-group >}} Members"
-        href: members.qmd
+        menu:
+          - text: "{{< fa solid person-chalkboard >}} Team"
+            href: members/team/team.qmd
+          - text: "{{< fa solid users-rectangle >}} Club Members"
+            href: members/members/members.qmd
       - icon: mortarboard-fill  
         text: "Learn"
         menu:
