@@ -1,24 +1,19 @@
 [
   {
-    "listing": "/learn/index.html",
-    "items": [
-      "/learn/rstudio/rstudio/rstudio/index.html"
-    ]
-  },
-  {
     "listing": "/learn/rstudio.html",
     "items": [
-      "/learn/rstudio/rstudio/rstudio/InstallRStudio.html",
-      "/learn/rstudio/rstudio/rstudio/index.html",
-      "/learn/rstudio/rstudio/rstudio/thread.html"
+      "/learn/rstudio/Install-r-studio/index.html",
+      "/learn/rstudio/Multithreading/index.html",
+      "/learn/rstudio/Wrangling/index.html"
     ]
   },
   {
     "listing": "/index.html",
     "items": [
-      "/learn/rstudio/rstudio/rstudio/InstallRStudio.html",
-      "/learn/rstudio/rstudio/rstudio/index.html",
-      "/learn/rstudio/rstudio/rstudio/thread.html",
+      "/learn/rstudio/Install-r-studio/index.html",
+      "/learn/rstudio/Multithreading/index.html",
+      "/learn/rstudio/Wrangling/index.html",
+      "/learn/rstudio/index.html",
       "/events/05_social_media_analysis/index.html",
       "/events/04_environment/index.html",
       "/events/03_wrangle_part2/index.html",
@@ -34,6 +29,12 @@
       "/events/03_wrangle_part2/index.html",
       "/events/02_wrangle/index.html",
       "/events/01_kickoff_event/index.html"
+    ]
+  },
+  {
+    "listing": "/material/index.html",
+    "items": [
+      "/material/IBM_data_analyst/index.html"
     ]
   }
 ]

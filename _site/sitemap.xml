@@ -2,70 +2,78 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://www.hertiecodingclub.com/members.html</loc>
-    <lastmod>2023-03-23T13:14:24.318Z</lastmod>
+    <lastmod>2023-03-25T01:54:25.812Z</lastmod>
   </url>
   <url>
     <loc>https://www.hertiecodingclub.com/register.html</loc>
-    <lastmod>2023-03-23T13:14:24.682Z</lastmod>
+    <lastmod>2023-03-25T01:54:34.429Z</lastmod>
   </url>
   <url>
-    <loc>https://www.hertiecodingclub.com/learn/rstudio/rstudio/rstudio/InstallRStudio.html</loc>
-    <lastmod>2023-03-23T13:14:25.989Z</lastmod>
+    <loc>https://www.hertiecodingclub.com/learn/rstudio/Multithreading/index.html</loc>
+    <lastmod>2023-03-25T01:04:08.591Z</lastmod>
   </url>
   <url>
-    <loc>https://www.hertiecodingclub.com/learn/rstudio/rstudio/rstudio/index.html</loc>
-    <lastmod>2023-03-23T13:14:27.193Z</lastmod>
+    <loc>https://www.hertiecodingclub.com/learn/rstudio/index.html</loc>
+    <lastmod>2023-03-25T01:04:11.559Z</lastmod>
   </url>
   <url>
-    <loc>https://www.hertiecodingclub.com/learn/rstudio/rstudio/rstudio/thread.html</loc>
-    <lastmod>2023-03-23T13:14:30.728Z</lastmod>
+    <loc>https://www.hertiecodingclub.com/learn/rstudio/Wrangling/index.html</loc>
+    <lastmod>2023-03-25T01:04:12.561Z</lastmod>
   </url>
   <url>
-    <loc>https://www.hertiecodingclub.com/learn/index.html</loc>
-    <lastmod>2023-03-23T13:14:31.854Z</lastmod>
+    <loc>https://www.hertiecodingclub.com/learn/rstudio/Install-r-studio/index.html</loc>
+    <lastmod>2023-03-25T01:04:13.618Z</lastmod>
   </url>
   <url>
     <loc>https://www.hertiecodingclub.com/learn/rstudio.html</loc>
-    <lastmod>2023-03-23T13:14:32.330Z</lastmod>
+    <lastmod>2023-03-25T01:04:14.212Z</lastmod>
   </url>
   <url>
     <loc>https://www.hertiecodingclub.com/shiny.html</loc>
-    <lastmod>2023-03-23T13:14:33.510Z</lastmod>
+    <lastmod>2023-03-25T01:04:15.187Z</lastmod>
   </url>
   <url>
     <loc>https://www.hertiecodingclub.com/index.html</loc>
-    <lastmod>2023-03-24T00:47:03.630Z</lastmod>
+    <lastmod>2023-03-26T10:30:13.168Z</lastmod>
   </url>
   <url>
     <loc>https://www.hertiecodingclub.com/about.html</loc>
-    <lastmod>2023-03-23T13:14:36.979Z</lastmod>
+    <lastmod>2023-03-25T01:54:46.252Z</lastmod>
   </url>
   <url>
     <loc>https://www.hertiecodingclub.com/events/index.html</loc>
-    <lastmod>2023-03-23T13:14:37.437Z</lastmod>
+    <lastmod>2023-03-26T09:43:58.208Z</lastmod>
   </url>
   <url>
     <loc>https://www.hertiecodingclub.com/events/02_wrangle/index.html</loc>
-    <lastmod>2023-03-23T13:14:38.489Z</lastmod>
+    <lastmod>2023-03-26T09:43:51.719Z</lastmod>
   </url>
   <url>
     <loc>https://www.hertiecodingclub.com/events/03_wrangle_part2/index.html</loc>
-    <lastmod>2023-03-23T13:14:39.583Z</lastmod>
+    <lastmod>2023-03-25T01:04:22.600Z</lastmod>
   </url>
   <url>
     <loc>https://www.hertiecodingclub.com/events/05_social_media_analysis/index.html</loc>
-    <lastmod>2023-03-23T13:14:40.557Z</lastmod>
+    <lastmod>2023-03-25T01:04:23.566Z</lastmod>
   </url>
   <url>
     <loc>https://www.hertiecodingclub.com/events/01_kickoff_event/index.html</loc>
-    <lastmod>2023-03-23T13:14:41.727Z</lastmod>
+    <lastmod>2023-03-25T01:04:24.471Z</lastmod>
   </url>
   <url>
     <loc>https://www.hertiecodingclub.com/events/04_environment/index.html</loc>
-    <lastmod>2023-03-23T13:14:42.656Z</lastmod>
+    <lastmod>2023-03-25T01:04:25.522Z</lastmod>
   </url>
   <url>
     <loc>https://www.hertiecodingclub.com/learn.html</loc>
-    <lastmod>2023-03-23T13:14:44.524Z</lastmod>
+    <lastmod>2023-03-25T01:04:27.494Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.hertiecodingclub.com/material/index.html</loc>
+    <lastmod>2023-03-26T10:01:58.813Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.hertiecodingclub.com/material/IBM_data_analyst/index.html</loc>
+    <lastmod>2023-03-26T10:01:58.372Z</lastmod>
   </url>
 </urlset>

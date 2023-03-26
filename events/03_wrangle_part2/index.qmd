@@ -9,6 +9,7 @@ image: ftdata.png
 draft: false
 title-block-banner: true
 code-link: true
+include-in-header: meta.html
 filters:
    - lightbox
 lightbox: 

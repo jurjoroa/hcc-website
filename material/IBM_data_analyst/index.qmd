@@ -1,0 +1,47 @@
+---
+title: '{{< animate fadeInDown "IBM Data Analyst certification"delay=.6s >}}'
+subtitle: '{{< animate fadeInDown "Try this course for free and get your certification by IBM in Data Analyst"delay=.6s >}}'
+author: ["Jorge Roa"]
+date: "03-25-2023"
+categories: ["IBM", "Data Analysis", "Course", "Free Certificate"]
+toc: true
+draft: false
+code-link: true
+comments: false
+title-block-banner: true
+image: images/IBM.png
+page-layout: full
+include-in-header: meta.html
+filters:
+   - lightbox
+lightbox: 
+  match: auto
+  effect: fade
+  desc-position: left
+  css-class: "lightwidth"
+---
+
+![](images/IBM_logo.png){width="197" fig-align="center"}
+
+
+
+![](images/IBM_course.jpg)
+
+</br>
+
+<hr class="sep-2" />
+
+"To thrive, companies must leverage data to understand trends, predict outcomes, and innovate. Data analysts are instrumental to helping companies achieve this. Try this course for free and get your certification by IBM in Data Analyst. IBM offers a comprehensive, free Data Analyst course designed for learners to gain essential data analysis skills and industry-recognized credentials. The course covers data science methodologies, data analysis and visualization using Python, common data science tools, and libraries. By the end of the course, students will be able to apply their newly acquired skills to a final project and report. With a growing demand for data analysts, this course provides an excellent opportunity for learners to join the thriving data sector and showcase their expertise with digital credentials from IBM."
+
+</br>
+
+This certification is completely free and is a good option if you want to start learning the tools that a Data analyst must have. 
+
+<hr class="sep-2" />
+
+<center>
+<form action="https://skillsbuild.org/adult-learners/explore-learning/data-analyst">
+<button class="btn-hover color-9" target="_blank"> Go to the course
+</button>
+</form>
+</center>

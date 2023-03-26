@@ -8,7 +8,7 @@ website:
       - text: "{{< fa regular copyright >}} {{< fa solid circle-user >}} 2023 HCC | J.Roa"
         href: https://creativecommons.org/licenses/by/2.0/
     center: 
-      - text: "{{< fa solid gears size=lg >}} Quarto engine"
+      - text: "{{< fa solid rocket size=lg >}} Quarto engine"
         href: https://quarto.org
     right:
       - text: "{{< fa solid square-envelope size=lg >}}"
@@ -40,6 +40,8 @@ website:
         menu:
           - text: "{{< fa brands r-project >}} language"
             href: learn/rstudio.qmd
+      - text: "{{< fa solid meteor >}} Material"
+        href: material/index.qmd
       - icon: bi-calendar3  
         href: events/index.qmd
         text: "Events"

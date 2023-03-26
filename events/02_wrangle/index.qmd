@@ -3,12 +3,13 @@ toc: true
 author: ["Jorge Roa"]
 categories: [Rstudio, Wrangling, Tidyverse]
 date: '2022-11-18'
-title: '{{< animate fadeInDown "Meet Up II: Wrangle dataframes"delay=.6s >}}'
-subtitle: '{{< animate fadeInDown "Tidyverse, packages and exercise (part 1)"delay=.6s >}}'
+title: '{{< animate fadeInDown "Meet Up III: Wrangle dataframes"delay=.6s >}}'
+subtitle: '{{< animate fadeInDown "Exercises (part 2)"delay=.6s >}}'
 image: box.png
 draft: false
 title-block-banner: true
 code-link: true
+include-in-header: meta.html
 filters:
    - lightbox
 lightbox: 

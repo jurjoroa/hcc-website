@@ -1,4 +1,5 @@
 ---
+title: "Events"
 listing:
   - id: Events
     contents: "*/index.qmd"

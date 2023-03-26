@@ -1,5 +1,5 @@
 ---
-title: "About"
+title: "About Us"
 ---
 
 About this site
@@ -9,10 +9,6 @@ About this site
 ```
 
 
-```{=html}
-<iframe 
-        height="70%" 
-     width="100%" src="https://hertie-coding-club.shinyapps.io/HCC-initial-survey/" title="Quarto Documentation"></iframe>
-```
+
 
 

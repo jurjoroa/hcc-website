@@ -1,7 +1,8 @@
 ---
+title: "Learn R"
 listing:
   - id: learn-r
-    contents: "*/rstudio/*.qmd"
+    contents: "*/*/index.qmd"
     type: default
     fields: [image, date, title, subtitle, categories, author, reading-time]  
     sort: "date desc"
@@ -11,6 +12,7 @@ listing:
     page-size: 10
 page-layout: full
 title-block-banner: false
+include-in-header: meta.html
 comments: false
 ---
 

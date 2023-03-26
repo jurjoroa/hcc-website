@@ -1,5 +1,5 @@
 ---
-title: ""
+title: "Hertie Coding Club - Home"
 page-layout: custom
 listing: 
   - id: learn
@@ -23,6 +23,7 @@ listing:
     page-size: 2 
 toc: true
 title-block-banner: false
+
 comments: false
 ---
 
@@ -41,8 +42,8 @@ comments: false
 <div style="
   flex-direction: column;
   width: 100%;
-  height: 96vh;
-  margin-top: -60px;
+  height: 100vh;
+  margin-top: -100px;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -98,10 +99,10 @@ comments: false
 </css-doodle>
 
   <div class="image">
-    <img src="images/hcc_long_wel.png">
+    <img loading="lazy" src="images/hcc_long_wel.png">
   </div>
     <div class="image_mob">
-    <img src="images/hcc_long_wel_smart.png">
+    <img loading="lazy" src="images/hcc_long_wel_smart.png">
   </div>
 
 <button class="btn-21"> <span> Learn more </span> </button>
@@ -114,11 +115,11 @@ comments: false
 
 <div class="intro_f">
   <div class="intro-slideshow">
-  <div class="image-wrapper"><img src="images/Pictures HCC/kick_off_event1.jpeg"></div>
-  <div class="image-wrapper"><img src="images/Pictures HCC/kick_off_event2.jpeg"></div>
-  <div class="image-wrapper"><img src="images/Pictures HCC/kick_off_event3.jpeg"></div>
-  <div class="image-wrapper"><img src="images/Pictures HCC/event2.jpeg"></div>
-  <div class="image-wrapper"><img src="images/Pictures HCC/event3.jpeg"></div>
+  <div class="image-wrapper"><img loading="lazy" src="images/Pictures HCC/kick_off_event1.jpeg"></div>
+  <div class="image-wrapper"><img loading="lazy" src="images/Pictures HCC/kick_off_event2.jpeg"></div>
+  <div class="image-wrapper"><img loading="lazy" src="images/Pictures HCC/kick_off_event3.jpeg"></div>
+  <div class="image-wrapper"><img loading="lazy" src="images/Pictures HCC/event2.jpeg"></div>
+  <div class="image-wrapper"><img loading="lazy" src="images/Pictures HCC/event3.jpeg"></div>
 </div>
   <div class="scroll-text intro-text">
 <div class="quote-wrapper">
@@ -135,7 +136,7 @@ comments: false
 </div>
   <p class="quote-copy" style="color:white;"> <i> Our goal as a club is to help everyone and between us learn coding skills and show that coding is for everyone, no matter our background.  </i>
 </p>
-  <img src="images/hcc_logo_card.png" style="width:150px; margin-bottom:20px;">
+  <img loading="lazy" src="images/hcc_logo_card.png" style="width:150px; margin-bottom:20px;">
 
 </div>
 </div>
@@ -150,7 +151,7 @@ comments: false
 <div class="layout_grid_objectives_mob">
     <div class="quote-container">
         <h1 class="quote-text scroll-text" style="color:white;">Our goal as a club is to help everyone and between us learn coding skills and show that coding is for everyone, no matter our background.</h1>
-        <img src="images/hcc_logo_card.png" style="width:150px; margin-bottom:20px;">
+        <img loading="lazy" src="images/hcc_logo_card.png" style="width:150px; margin-bottom:20px;">
     </div>
     </div>
 </div>
@@ -327,22 +328,22 @@ color: grey">*All the images were generated with Dall-e. </div>
 <h1 class="scroll-text">{{< li kjkiqtxg trigger=loop delay=1000 scale=25 >}}Follow</h1>
 
 <a href="https://twitter.com/HertieCodingCLB">
-  <img src="images/icons/twitter-squared.png" alt="Twitter icon" style="margin: 0 10px; height: 35px;">
+  <img loading="lazy" src="images/icons/twitter-squared.png" alt="Twitter icon" style="margin: 0 10px; height: 35px;">
 </a>
   <a href="mailto:hertiecodingclub@gmail.com">
-    <img src="images/icons/gmail.png" alt="Gmail icon" style="margin: 0 10px; height: 35px;">
+    <img loading="lazy" src="images/icons/gmail.png" alt="Gmail icon" style="margin: 0 10px; height: 35px;">
   </a>
   <a href="http://hertiecodingclub.slack.com">
-    <img src="images/icons/slack-new.png" alt="Slack icon" style="margin: 0 10px; height: 35px;">
+    <img loading="lazy" src="images/icons/slack-new.png" alt="Slack icon" style="margin: 0 10px; height: 35px;">
   </a>
   <a href="https://github.com/Hertie-Coding-Club">
-    <img src="images/icons/github.png" alt="GitHub icon" style="margin: 0 10px; height: 35px;">
+    <img loading="lazy" src="images/icons/github.png" alt="GitHub icon" style="margin: 0 10px; height: 35px;">
   </a>
   <a href="https://www.instagram.com/hertiecodingclub/">
-    <img src="images/icons/instagram-new.png" alt="Instagram icon" style="margin: 0 10px; height: 35px;">
+    <img loading="lazy" src="images/icons/instagram-new.png" alt="Instagram icon" style="margin: 0 10px; height: 35px;">
   </a>
   <a href="https://youtube.com/@hertiecodingclub">
-    <img src="images/icons/youtube-play.png" alt="YouTube icon" style="margin: 0 10px; height: 35px;">
+    <img loading="lazy" src="images/icons/youtube-play.png" alt="YouTube icon" style="margin: 0 10px; height: 35px;">
   </a>
 </div>
 
@@ -361,19 +362,19 @@ color: grey">*All the images were generated with Dall-e. </div>
 
 <div class="social-media" style="display: flex; justify-content: center; align-items: center;">
   <a href="mailto:hertiecodingclub@gmail.com">
-    <img src="images/icons/gmail.png" alt="Gmail icon" style="margin: 0 10px; height: 35px;">
+    <img loading="lazy" src="images/icons/gmail.png" alt="Gmail icon" style="margin: 0 10px; height: 35px;">
   </a>
   <a href="http://hertiecodingclub.slack.com">
-    <img src="images/icons/slack-new.png" alt="Slack icon" style="margin: 0 10px; height: 35px;">
+    <img loading="lazy" src="images/icons/slack-new.png" alt="Slack icon" style="margin: 0 10px; height: 35px;">
   </a>
   <a href="https://github.com/Hertie-Coding-Club">
-    <img src="images/icons/github.png" alt="GitHub icon" style="margin: 0 10px; height: 35px;">
+    <img loading="lazy" src="images/icons/github.png" alt="GitHub icon" style="margin: 0 10px; height: 35px;">
   </a>
   <a href="https://www.instagram.com/hertiecodingclub/">
-    <img src="images/icons/instagram-new.png" alt="Instagram icon" style="margin: 0 10px; height: 35px;">
+    <img loading="lazy" src="images/icons/instagram-new.png" alt="Instagram icon" style="margin: 0 10px; height: 35px;">
   </a>
   <a href="https://youtube.com/@hertiecodingclub">
-    <img src="images/icons/youtube-play.png" alt="YouTube icon" style="margin: 0 10px; height: 35px;">
+    <img loading="lazy" src="images/icons/youtube-play.png" alt="YouTube icon" style="margin: 0 10px; height: 35px;">
   </a>
 </div>
 
@@ -487,10 +488,10 @@ To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
 
 <article>
 
-  <img id="lukas" src="Presentation/images/lukas.jpeg">
-  <img id="lukas" src="Presentation/images/lukas.jpeg">
-  <img id="lukas" src="Presentation/images/lukas.jpeg">
-  <img id="lukas" src="Presentation/images/lukas.jpeg">
+  <img id="lukas" loading="lazy" src="Presentation/images/lukas.jpeg">
+  <img id="lukas" loading="lazy" src="Presentation/images/lukas.jpeg">
+  <img id="lukas" loading="lazy" src="Presentation/images/lukas.jpeg">
+  <img id="lukas" loading="lazy" src="Presentation/images/lukas.jpeg">
 </article>
 
 

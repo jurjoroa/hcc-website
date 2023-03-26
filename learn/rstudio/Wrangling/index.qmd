@@ -1,0 +1,21 @@
+---
+title: '{{< animate fadeInDown "Wrangling"delay=.6s >}}'
+subtitle:  '{{< animate fadeInDown "Proof"delay=.6s >}}'
+author: "Beatriz Milz"
+date: "2022-07-28"
+categories: ["GitHub", "GitHub Actions", "Automations", "RStudio"]
+toc: true
+draft: false
+code-link: true
+title-block-banner: true
+---
+
+
+![](images/appleintel.png){fig-align="center"}
+
+This post is a complementary material for [my talk at rstudio::conf 2022](https://beamilz.com/talks/en/2022-rstudio-conf/) (which is happening **TODAY!!!**)!
+
+I'm writing this really quick, from the hotel room, for anyone interested to see the code used to create the plot that it is on my talk:
+
+
+
