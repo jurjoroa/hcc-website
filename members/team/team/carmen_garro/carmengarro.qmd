@@ -1,0 +1,27 @@
+---
+title: "Carmen Garro"
+page-layout: full
+image: carmen.jpeg
+filters:
+   - lightbox
+lightbox: 
+  match: auto
+  effect: fade
+  desc-position: left
+  css-class: "lightwidth"
+about:
+  template: trestles
+  image-shape: rounded
+  links:
+    - text: "{{< fa brands linkedin >}} LinkedIn"
+      url: "https://linkedin.com/in/jorge-roac"
+    - text: "{{< fa brands github >}} GitHub"
+      url: "https://github.com/jurjoroa"
+    - text: "{{< fa brands twitter >}} Twitter"
+      url: "https://twitter.com/jorgeroac"
+    - text: "{{< fa brands orcid >}} ORCID"
+      url: "https://orcid.org/0000-0002-3972-9793"
+    - text: "{{< fa solid envelopes-bulk >}} Mail"
+      url: "mailto:jurjoo@gmail.com"
+comments: false
+---

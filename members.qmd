@@ -1,0 +1,146 @@
+---
+title: "Members"
+execute:
+  freeze: auto
+filters:
+   - lightbox
+lightbox: 
+  match: auto
+  effect: fade
+  desc-position: left
+  css-class: "lightwidth"
+comments: false
+format:
+  html:
+    code-link: true
+    include-in-header:
+      text: "<script src='js/anime_photos.js, js/background.js, https://s3-us-west-2.amazonaws.com/s.cdpn.io/499416/TweenLite.min.js, https://s3-us-west-2.amazonaws.com/s.cdpn.io/499416/EasePack.min.js, https://s3-us-west-2.amazonaws.com/s.cdpn.io/499416/demo.js' ></script>"
+---
+
+```{=html}
+
+
+<script src='assets/js/anime_photos.js'></script>
+<script src="assets/js/members.js"></script>
+
+```
+
+
+About this site
+
+```{r, echo=FALSE, warning=FALSE}
+library(showtext, quietly = T)
+showtext_auto()
+```
+
+
+
+```{r, warning=FALSE}
+# Load the ggplot2 package
+library(ggplot2)
+
+
+# Create some example data
+x <- 1:10
+y <- x^2
+
+# Create the plot
+ggplot(data = data.frame(x, y), aes(x = x, y = y)) +
+  geom_line() + theme(text = element_text(family = "Arial", size = 20))
+
+
+```
+
+<hr>
+
+
+# Who are we? {auto-animate="true" auto-animate-easing="ease-in-out" background="#517699" style="text-align: left;"}
+
+
+
+
+ <header class="header show-on-scroll">
+   
+  <h1 class="heading"> When the moon hits your eye  </h1>
+        
+  </header>
+     
+
+
+
+
+{{< fa envelope title="Email" >}} 
+
+{{< fa brands twitter title="Twitter" >}} [damoncroberts](https://twitter.com/damoncroberts)
+
+{{< fa brands github title="Github" >}} [DamonCharlesRoberts](https://github.com/damoncharlesroberts)
+
+{{< fa clock title="Office Hours" >}} Wednesdays from 12:15 - 2:15 pm Mountain
+
+{{< fa building-columns title="Office" >}} Ketchum Arts & Sciences, Office 382, Boulder, CO 80309
+
+
+{{< animate fadeInDown "Some text" >}}
+
+
+
+
+```{=HTML}
+
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+      <script>
+         $(document).ready(function(){
+            $('#member1').load("members/member1.html");
+            $('#member2').load("members/member2.html");
+            $('#member3').load("members/member3.html");
+            $('#member4').load("members/member4.html");
+            $('#member5').load("members/member5.html");
+            $('#member6').load("members/member6.html");
+            $('#member7').load("members/member7.html");
+         });
+      </script>
+
+<section id="container">
+    <div class="user-container">
+
+        <!-- Card Two-->
+        <div class="card inline-photo3 show-on-scroll">
+          <div id="member1"></div>
+        </div>
+        <!-- Card Two-->
+        <div class="card inline-photo3 show-on-scroll">
+          <div id="member2"></div>
+        </div>
+        <!-- Card Two-->
+        <div class="card inline-photo3 show-on-scroll">
+          <div id="member3"></div>
+        </div>
+        <!-- Card Two-->
+        <div class="card inline-photo3 show-on-scroll">
+          <div id="member4"></div>
+        </div>
+        <!-- Card Two-->
+        <div class="card inline-photo3 show-on-scroll">
+          <div id="member5"></div>
+        </div>
+        <!-- Card Two-->
+        <div class="card inline-photo3 show-on-scroll">
+          <div id="member6"></div>
+        </div>
+        <div class="card inline-photo3 show-on-scroll">
+          <div id="member7"></div>
+        </div>
+
+    </div>
+</section>
+ 
+```
+
+
+
+
+
+
+
+
+

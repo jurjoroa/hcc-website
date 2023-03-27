@@ -1019,7 +1019,7 @@ display: grid;
   padding: 1rem;
   background-color: #ffffff;
   border-radius: 5px;
-  transition: all 0.5s ease-in-out;
+  transition: all 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
   height: 100%;
   width: 100%;
   line-height: 1.2; 
@@ -1033,7 +1033,17 @@ display: grid;
 .card_team:hover, .card_team:focus, .card_team:active{
   box-shadow: inset 0 100px 1000px 10px #1C93E4;
   cursor: pointer;
+  
 }
+
+
+.card_team:hover {
+  transform: scale(1.1);
+  box-shadow: 10px 10px #BA0020;
+  transition: all .4s ease;
+}
+
+
 
 .card:hover .user-content,
 .card_team:hover .user-content{
@@ -1318,59 +1328,49 @@ display: grid;
 
 
 
-.user-container .card_team:nth-child(1) {
-  background: url("members/team/team/jorgeroa.jpeg") no-repeat;
+.user-container #jorgeroa.card_team {
+  background: url("members/team/team/jorge_roa/jorgeroa.jpeg") no-repeat;
   background-size: 320px 350px;
   background-position: center;
 }
 
-.user-container .card_team:nth-child(2) {
-  background: url("Presentation/images/lukas.jpeg") no-repeat;
+.user-container #lukaswarode.card_team {
+  background: url("members/team/team/lukas_warode/lukas.jpeg") no-repeat;
+  background-size: 340px 360px;
+  background-position: center;
+}
+
+.user-container #rodrigodornelles.card_team {
+  background: url("members/team/team/rodrigo_dornelles/rodrigo.jpg") no-repeat;
   background-size: 400px 400px;
   background-position: center;
 }
 
-.user-container .card_team:nth-child(3) {
-  background: url("Presentation/images/lukas.jpeg") no-repeat;
-  background-size: 400px 400px;
+.user-container #carmengarro.card_team {
+  background: url("members/team/team/carmen_garro/carmen.jpeg") no-repeat;
+  background-size: 310px 350px;
   background-position: center;
 }
-
-.user-container .card_team:nth-child(4) {
-  background: url("Presentation/images/lukas.jpeg") no-repeat;
-  background-size: 400px 400px;
+.user-container #gabrielzech.card_team {
+  background: url("members/team/team/gabriel_zech/gabriel.jpg") no-repeat;
+  background-size: 310px 400px;
   background-position: center;
 }
-.card_team:nth-child(5) {
-  background: url("Presentation/images/lukas.jpeg") no-repeat;
-  background-size: 400px 400px;
-  background-position: center;
-}
-.card_team:nth-child(6) {
-  background: url("Presentation/images/lukas.jpeg") no-repeat;
-  background-size: 400px 400px;
-  background-position: center;
-}
-.user-container .card:nth-child(7) {
-  background: url("Presentation/images/lukas.jpeg") no-repeat;
-  background-size: 400px 400px;
-  background-position: center;
-}
-.user-container .card_team:nth-child(8) {
-  background: url("Presentation/images/lukas.jpeg") no-repeat;
+.user-container #lukaslehmann.card_team {
+  background: url("members/team/team/lukas_lehmann/lukaslehmann.jpeg") no-repeat;
   background-size: 400px 400px;
   background-position: center;
 }
 
 /* Image move up */
-.card_team:nth-child(1):hover,
-.card_team:nth-child(2):hover,
-.card_team:nth-child(3):hover,
-.card_team:nth-child(4):hover,
-.card_team:nth-child(5):hover,
-.card_team:nth-child(6):hover,
-.card_team:nth-child(7):hover,
-.card_team:nth-child(8):hover{
+.user-container .card_team:nth-child(1):hover,
+.user-container .card_team:nth-child(2):hover,
+.user-container .card_team:nth-child(3):hover,
+.user-container .card_team:nth-child(4):hover,
+.user-container .card_team:nth-child(5):hover,
+.user-container .card_team:nth-child(6):hover,
+.user-container .card_team:nth-child(7):hover,
+.user-container .card_team:nth-child(8):hover{
 
 }
 
