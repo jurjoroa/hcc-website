@@ -347,7 +347,18 @@ header:not(.headroom):not(.quarto-title-block).is-visible {
 
 .heading {
   transform: translate(15%, calc(15% + 1em));
+  font-size: 50px;
+  font-weight: bold;
+  margin-right: 100px;
 }
+
+.container{
+    display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
 
 
 .is-visible .heading {
@@ -753,26 +764,48 @@ width: 100%;
 
 .card__content{
   left: 0;
-  width: 100%;
+
   padding: var(--spacing-l);
   position: absolute;
   top: 0;
 }
 
-.card__category{
+.card__category {
   color: #FFFFFF;
-  font-size: 0.9rem;
+  font-size: 1vw;
   margin-bottom: var(--spacing-s);
   text-transform: uppercase;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.5); /* updated text shadow */
 }
 
-.card__heading{
+.card__heading {
   color: #FFFFFF;
-  font-size: 1.9rem;
-  text-shadow: 2px 2px 20px rgba(0,0,0,0.2);
+  font-size: 6.5vw;
+  text-shadow: 2px 2px 20px rgba(0,0,0,0.4);
   line-height: 1.4;
-  word-spacing: 100vw;
 }
+
+
+
+@media (min-width: 540px) {
+  .card__category {
+    font-size: 1.8rem;
+  }
+  .card__heading {
+    font-size: 2.3rem;
+  }
+}
+
+@media (min-width: 960px) {
+  .card__category {
+    font-size: 0.9rem;
+  }
+  .card__heading {
+    font-size: 2rem;
+  }
+}
+
+
 
 
 :root{
@@ -787,12 +820,7 @@ width: 100%;
   --width-container: 1200px;
 }
 
-*{
-  border: 0;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+
 
 
 
@@ -1348,7 +1376,7 @@ display: grid;
 
 .user-container #carmengarro.card_team {
   background: url("members/team/team/carmen_garro/carmen.jpeg") no-repeat;
-  background-size: 310px 350px;
+  background-size: 350px 350px;
   background-position: center;
 }
 .user-container #gabrielzech.card_team {
@@ -2494,4 +2522,6 @@ div.about-entity .title{
   transform: rotate(-45deg);
   opacity: 0.3;
 }
+
+
 

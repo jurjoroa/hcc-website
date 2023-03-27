@@ -1,5 +1,4 @@
 ---
-title: "Members"
 page-layout: full
 execute:
   freeze: auto
@@ -27,11 +26,13 @@ format:
 ```
 
 
- <header class="header show-on-scroll">
-   
-  <h1 class="heading"> Instructors  </h1>
-        
+<div class="container">
+  <header class="header show-on-scroll">
+    <h1 class="heading"> Instructors </h1>
   </header>
+</div>
+
+
 
 
 

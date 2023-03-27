@@ -98,6 +98,20 @@
     "text": "About this site\n\n1 + 1\n\n[1] 2"
   },
   {
+    "objectID": "members/team/team.html",
+    "href": "members/team/team.html",
+    "title": "",
+    "section": "",
+    "text": "Instructors\n\n\n\n\n      \n\n\n    \n\n        \n        \n        \n           Jorge Roa\n        \n        \n        \n        \n        \n           Lukas Warode \n        \n        \n        \n        \n        \n           Carmen Garro\n        \n        \n        \n        \n        \n           Rodrigo Dornelles\n        \n        \n        \n        \n        \n          Gabriel Zech\n        \n        \n        \n        \n        \n          Lukas Lehmann"
+  },
+  {
+    "objectID": "members/members/members.html",
+    "href": "members/members/members.html",
+    "title": "Members",
+    "section": "",
+    "text": "About this site\n\n\n\n\n# Load the ggplot2 package\nlibrary(ggplot2)\n\n\n# Create some example data\nx <- 1:10\ny <- x^2\n\n# Create the plot\nggplot(data = data.frame(x, y), aes(x = x, y = y)) +\n  geom_line() + theme(text = element_text(family = \"Arial\", size = 20))\n\n\n\n\n\n\n\n\nWho are we?\n\nWhen the moon hits your eye\n\n\n damoncroberts\n DamonCharlesRoberts\n Wednesdays from 12:15 - 2:15 pm Mountain\n Ketchum Arts & Sciences, Office 382, Boulder, CO 80309\nSome text"
+  },
+  {
     "objectID": "events/02_wrangle/index.html",
     "href": "events/02_wrangle/index.html",
     "title": "Meet Up III: Wrangle dataframes",
@@ -145,19 +159,5 @@
     "title": "IBM Data Analyst certification",
     "section": "",
     "text": "“To thrive, companies must leverage data to understand trends, predict outcomes, and innovate. Data analysts are instrumental to helping companies achieve this. Try this course for free and get your certification by IBM in Data Analyst. IBM offers a comprehensive, free Data Analyst course designed for learners to gain essential data analysis skills and industry-recognized credentials. The course covers data science methodologies, data analysis and visualization using Python, common data science tools, and libraries. By the end of the course, students will be able to apply their newly acquired skills to a final project and report. With a growing demand for data analysts, this course provides an excellent opportunity for learners to join the thriving data sector and showcase their expertise with digital credentials from IBM.”\n\nThis certification is completely free and is a good option if you want to start learning the tools that a Data analyst must have.\n\n\n\n\nGo to the course"
-  },
-  {
-    "objectID": "members/members/members.html",
-    "href": "members/members/members.html",
-    "title": "Members",
-    "section": "",
-    "text": "About this site\n\n\n\n\n# Load the ggplot2 package\nlibrary(ggplot2)\n\n\n# Create some example data\nx <- 1:10\ny <- x^2\n\n# Create the plot\nggplot(data = data.frame(x, y), aes(x = x, y = y)) +\n  geom_line() + theme(text = element_text(family = \"Arial\", size = 20))\n\n\n\n\n\n\n\n\nWho are we?\n\nWhen the moon hits your eye\n\n\n damoncroberts\n DamonCharlesRoberts\n Wednesdays from 12:15 - 2:15 pm Mountain\n Ketchum Arts & Sciences, Office 382, Boulder, CO 80309\nSome text"
-  },
-  {
-    "objectID": "members/team/team.html",
-    "href": "members/team/team.html",
-    "title": "Members",
-    "section": "",
-    "text": "Instructors\n\n\n\n      \n\n\n    \n\n        \n        \n        \n           Jorge Roa\n        \n        \n        \n        \n        \n           Lukas Warode \n        \n        \n        \n        \n        \n           Carmen Garro\n        \n        \n        \n        \n        \n           Rodrigo Dornelles\n        \n        \n        \n        \n        \n          Gabriel Zech\n        \n        \n        \n        \n        \n          Lukas Lehmann"
   }
 ]
