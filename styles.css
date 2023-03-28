@@ -1066,8 +1066,7 @@ display: grid;
 
 
 .card_team:hover {
-  transform: scale(1.1);
-  box-shadow: 10px 10px #BA0020;
+  box-shadow: 1em 1em 2em .25em #c0041c;
   transition: all .4s ease;
 }
 
@@ -1381,7 +1380,7 @@ display: grid;
 }
 .user-container #gabrielzech.card_team {
   background: url("members/team/team/gabriel_zech/gabriel.jpg") no-repeat;
-  background-size: 310px 400px;
+  background-size: 320px 460px;
   background-position: center;
 }
 .user-container #lukaslehmann.card_team {
