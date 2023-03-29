@@ -285,7 +285,7 @@ article {
   height:430px;
 }
 
-article img#lukas{
+article img.lukas{
   
   width: 0px;
   flex-grow: 1;
@@ -294,8 +294,8 @@ article img#lukas{
   transition: .5s ease;
 }
 
-article img#lukas:hover , img#lukas:focus, img#lukas:active{
-  cursor: crosshair;
+article img.lukas:hover , img.lukas:focus, img.lukas:active{
+  cursor: pointer;
   width:300px;
   opacity: 1;
   filter: contrast(120%);
@@ -310,6 +310,32 @@ article img#lukas:hover , img#lukas:focus, img#lukas:active{
   margin: 0px 10px 30px 20px;
   
 }
+
+
+@media (max-width: 850px) {
+  article {
+    display: flex;
+    width:100%;
+    height:100%;
+  }
+
+  .lukas {
+width: 100%;
+  height: auto;
+  object-fit: cover;
+  opacity: 0.8;
+  transition: 0.5s ease;
+  margin-bottom: 10px;
+  }
+
+  .lukas:hover,
+  .lukas:focus,
+  .lukas:active {
+    width: 100%;
+  }
+}
+
+
 
 
 .inline-photo {

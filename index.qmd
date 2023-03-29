@@ -293,7 +293,7 @@ src="images/hcc_long_welw_1400.png">
       <div class="card__background" style="background-image: url(images/home_cards/members_dalle.jpg)"></div>
       <div class="card__content">
         <p class="card__category">Members</p>
-        <h3 class="card__heading"> How are we?</h3>
+        <h3 class="card__heading"> Who are we?</h3>
       </div>
     </li>
     <a class="card_img" href="../events/index.html">
@@ -471,16 +471,6 @@ To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
 ```
 
 
-{{< fa envelope title="Email" >}} 
-
-{{< fa brands twitter title="Twitter" >}} [damoncroberts](https://twitter.com/damoncroberts)
-
-{{< fa brands github title="Github" >}} [DamonCharlesRoberts](https://github.com/damoncharlesroberts)
-
-{{< fa clock title="Office Hours" >}} Wednesdays from 12:15 - 2:15 pm Mountain
-
-{{< fa building-columns title="Office" >}} Ketchum Arts & Sciences, Office 382, Boulder, CO 80309
-
 </div> 
 
 
@@ -488,11 +478,9 @@ To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
 <div class="layout" style = "font-size: 5px">
 
 <article>
-
-  <img id="lukas"   src="Presentation/images/lukas.jpeg">
-  <img id="lukas"   src="Presentation/images/lukas.jpeg">
-  <img id="lukas"   src="Presentation/images/lukas.jpeg">
-  <img id="lukas"   src="Presentation/images/lukas.jpeg">
+  <img class="lukas" src="images/DSL.jpg" data-url="https://www.hertie-school.org/en/datasciencelab" >
+  <img class="lukas" src="images/MDS.jpg" data-url="https://www.hertie-school.org/en/mds" >
+  <img class="lukas" src="images/hertie.jpg" data-url="https://www.hertie-school.org/en/" >
 </article>
 
 
@@ -508,6 +496,22 @@ To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
 <script src="js/background.js"></script>
 <script src="js/slider.js"></script>
 <script src="js/pagination.js"></script>
+
+<script> 
+
+document.addEventListener('DOMContentLoaded', function () {
+  var images = document.getElementsByClassName('lukas');
+  
+  for (var i = 0; i < images.length; i++) {
+    images[i].addEventListener('mouseup', function (event) {
+      var url = event.target.getAttribute('data-url');
+      window.open(url, '_blank');
+    });
+  }
+});
+
+</script>
+
 ```
 
 <div class="section_white">

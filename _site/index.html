@@ -494,7 +494,7 @@ gtag('config', 'G-HJEMN0LJY7', { 'anonymize_ip': true});
       <div class="card__background" style="background-image: url(images/home_cards/members_dalle.jpg)"></div>
       <div class="card__content">
         <p class="card__category">Members</p>
-        <h3 class="card__heading"> How are we?</h3>
+        <h3 class="card__heading"> Who are we?</h3>
       </div>
     
     </a><a class="card_img" href="../events/index.html">
@@ -879,17 +879,25 @@ No matching items
 <pre><code>[1] 3</code></pre>
 </div>
 </div>
-<p><i class="fa-solid fa-envelope" title="Email" aria-label="envelope"></i></p>
-<p><i class="fa-brands fa-twitter" title="Twitter" aria-label="twitter"></i> <a href="https://twitter.com/damoncroberts">damoncroberts</a></p>
-<p><i class="fa-brands fa-github" title="Github" aria-label="github"></i> <a href="https://github.com/damoncharlesroberts">DamonCharlesRoberts</a></p>
-<p><i class="fa-solid fa-clock" title="Office Hours" aria-label="clock"></i> Wednesdays from 12:15 - 2:15 pm Mountain</p>
-<p><i class="fa-solid fa-building-columns" title="Office" aria-label="building-columns"></i> Ketchum Arts &amp; Sciences, Office 382, Boulder, CO 80309</p>
 </div>
 <div class="layout" style="font-size: 5px">
-<article><img id="lukas" src="Presentation/images/lukas.jpeg"><img id="lukas" src="Presentation/images/lukas.jpeg"><img id="lukas" src="Presentation/images/lukas.jpeg"><img id="lukas" src="Presentation/images/lukas.jpeg"></article>
+<article><img class="lukas" src="images/DSL.jpg" data-url="https://www.hertie-school.org/en/datasciencelab"><img class="lukas" src="images/MDS.jpg" data-url="https://www.hertie-school.org/en/mds"><img class="lukas" src="images/hertie.jpg" data-url="https://www.hertie-school.org/en/"></article>
 </div>
 
-<script src="js/text_obs.js"></script><script src="js/text_obs_achiev.js"></script><script src="js/text.js"></script><script src="js/background.js"></script><script src="js/slider.js"></script><script src="js/pagination.js"></script><div class="section_white">
+<script src="js/text_obs.js"></script><script src="js/text_obs_achiev.js"></script><script src="js/text.js"></script><script src="js/background.js"></script><script src="js/slider.js"></script><script src="js/pagination.js"></script><script> 
+
+document.addEventListener('DOMContentLoaded', function () {
+  var images = document.getElementsByClassName('lukas');
+  
+  for (var i = 0; i < images.length; i++) {
+    images[i].addEventListener('mouseup', function (event) {
+      var url = event.target.getAttribute('data-url');
+      window.open(url, '_blank');
+    });
+  }
+});
+
+</script><div class="section_white">
 
 </div>
 <div class="grid" data-margin-bottom="-20">
