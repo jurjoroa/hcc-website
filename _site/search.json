@@ -105,6 +105,13 @@
     "text": "Instructors\n\n\n\n\n      \n\n\n    \n\n        \n        \n        \n           Jorge Roa\n        \n        \n        \n        \n        \n           Lukas Warode \n        \n        \n        \n        \n        \n           Carmen Garro\n        \n        \n        \n        \n        \n           Rodrigo Dornelles\n        \n        \n        \n        \n        \n          Gabriel Zech\n        \n        \n        \n        \n        \n          Lukas Lehmann"
   },
   {
+    "objectID": "members/team/team/jorge_roa/jorgeroa.html",
+    "href": "members/team/team/jorge_roa/jorgeroa.html",
+    "title": "Jorge Roa",
+    "section": "",
+    "text": "Hello! I’m Jorge! I have a background in public policy and a passion for using data to inform decision-making. My interests include:\n\nData Science for Public Policy: I’m currently pursuing a Master’s degree in Data Science for Public Policy at Hertie School in Berlin, Germany. I believe that data science can be a powerful tool for addressing complex public policy challenges, and I’m excited to continue exploring this field.\nTeaching and Education: I’m passionate about teaching. I’ve worked as a teaching assistant for courses on quantitative methods and public policy evaluation. I’m also the founder of the Hertie Coding Club, a space where students can learn programming skills for data analysis, wrangling and public policy."
+  },
+  {
     "objectID": "members/members/members.html",
     "href": "members/members/members.html",
     "title": "Members",
@@ -154,20 +161,6 @@
     "text": "About this site\n\n1 + 1\n\n[1] 2"
   },
   {
-    "objectID": "material/IBM_data_analyst/index.html",
-    "href": "material/IBM_data_analyst/index.html",
-    "title": "IBM Data Analyst certification",
-    "section": "",
-    "text": "“To thrive, companies must leverage data to understand trends, predict outcomes, and innovate. Data analysts are instrumental to helping companies achieve this. Try this course for free and get your certification by IBM in Data Analyst. IBM offers a comprehensive, free Data Analyst course designed for learners to gain essential data analysis skills and industry-recognized credentials. The course covers data science methodologies, data analysis and visualization using Python, common data science tools, and libraries. By the end of the course, students will be able to apply their newly acquired skills to a final project and report. With a growing demand for data analysts, this course provides an excellent opportunity for learners to join the thriving data sector and showcase their expertise with digital credentials from IBM.”\n\nThis certification is completely free and is a good option if you want to start learning the tools that a Data analyst must have.\n\n\n\n\nGo to the course"
-  },
-  {
-    "objectID": "members/team/team/jorge_roa/jorgeroa.html",
-    "href": "members/team/team/jorge_roa/jorgeroa.html",
-    "title": "Jorge Roa",
-    "section": "",
-    "text": "Hello! I’m Jorge! I have a background in public policy and a passion for using data to inform decision-making. My interests include:\n\nData Science for Public Policy: I’m currently pursuing a Master’s degree in Data Science for Public Policy at Hertie School in Berlin, Germany. I believe that data science can be a powerful tool for addressing complex public policy challenges, and I’m excited to continue exploring this field.\nTeaching and Education: I’m passionate about teaching. I’ve worked as a teaching assistant for courses on quantitative methods and public policy evaluation. I’m also the founder of the Hertie Coding Club, a space where students can learn programming skills for data analysis, wrangling and public policy."
-  },
-  {
     "objectID": "material/freecodecamp/index.html",
     "href": "material/freecodecamp/index.html",
     "title": "freeCodeCamp Certifications",
@@ -180,5 +173,12 @@
     "title": "Dataquest Premium Access",
     "section": "",
     "text": "“Dataquest is a self-learning platform that offers interactive coding challenges and projects to learn essential data science skillsets. Four distinct paths can be chosen with different learning materials: Data Analyst in R, Data Analyst in Python, Data Scientist in Python, or Data Engineer. By completing the learning paths, students will receive certificates and create projects that can be added to their data science portfolio as a demonstration of their skills to potential employers. In order to get access to premium Dataquest account for Fall semester 2021, please contact the Data Science Lab team at datasciencelab@hertie-school.org. The start of every learning path is always focused on building up the foundation of the programming language. Therefore, if you are looking for a place to start, step 1 in Data Analyst or Data Scientist tracks for both R and Python concerns with developing your programming skills from beginner to intermediate level.”\n\nData science training resources\n\n\n\n\nGo to Dataquest"
+  },
+  {
+    "objectID": "material/IBM_data_analyst/index.html",
+    "href": "material/IBM_data_analyst/index.html",
+    "title": "IBM Data Analyst certification",
+    "section": "",
+    "text": "“To thrive, companies must leverage data to understand trends, predict outcomes, and innovate. Data analysts are instrumental to helping companies achieve this. Try this course for free and get your certification by IBM in Data Analyst. IBM offers a comprehensive, free Data Analyst course designed for learners to gain essential data analysis skills and industry-recognized credentials. The course covers data science methodologies, data analysis and visualization using Python, common data science tools, and libraries. By the end of the course, students will be able to apply their newly acquired skills to a final project and report. With a growing demand for data analysts, this course provides an excellent opportunity for learners to join the thriving data sector and showcase their expertise with digital credentials from IBM.”\n\nThis certification is completely free and is a good option if you want to start learning the tools that a Data analyst must have.\n\n\n\n\nGo to the course"
   }
 ]

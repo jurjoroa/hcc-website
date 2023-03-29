@@ -2587,3 +2587,31 @@ div.about-entity .title{
 .quarto-listing-table td.listing-author{
   color: white;
 }
+
+
+@media (max-width: 520px) {
+  
+.quarto-listing-table td.listing-title span{
+  font-size: 12px;
+}
+
+.quarto-listing-table td.listing-subtitle span{
+  font-size: 12px;
+}
+
+.quarto-listing-table td.listing-author{
+  font-size: 12px;
+}
+
+.quarto-listing-table .listing-image img{
+
+width:20vw;
+  
+}
+
+}
+
+
+}
+
+
