@@ -1,0 +1,47 @@
+---
+title: '{{< animate fadeInDown "freeCodeCamp Certifications"delay=.6s >}}'
+subtitle: '{{< animate fadeInDown "Learn to code — for free. Build projects. Earn certifications."delay=.6s >}}'
+author: ["Jorge Roa"]
+date: "03-29-2023"
+categories: ["freeCodeCamp", "Data Analysis", "Course", "Free Certificate"]
+toc: true
+draft: false
+code-link: true
+comments: false
+title-block-banner: true
+image: images/fcc.png
+page-layout: full
+include-in-header: meta.html
+filters:
+   - lightbox
+lightbox: 
+  match: auto
+  effect: fade
+  desc-position: left
+  css-class: "lightwidth"
+---
+
+![](images/FreeCodeCamp_logo.png){fig-align="center"}
+
+
+
+![](images/freeCodeCamp.jpeg)
+
+</br>
+
+<hr class="sep-2" />
+
+freeCodeCamp is a platform that offers free, self-paced, interactive online courses in various areas of computer science, including web development, data science, data analysis, and machine learning. I've used it a couple of times and it's incredible powerful. It can be used by beginners and advanced students, the curriculum includes hands-on projects that help students build practical skills and portfolios. The organization aims to provide accessible, high-quality education to anyone interested in programming.
+
+</br>
+
+This platform is completely free and is a good option if you want to practice and learn different skills.  
+
+<hr class="sep-2" />
+
+<center>
+<form action="https://www.freecodecamp.org">
+<button class="btn-hover color-9-cc" target="_blank"> Go to freeCodeCamp
+</button>
+</form>
+</center>

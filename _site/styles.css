@@ -660,6 +660,10 @@ header:not(.headroom):not(.quarto-title-block).is-visible {
   //border-top: 2px solid #eeeeee;
 }
 
+.layout_table{
+  padding: 10% 6%;
+}
+
 .layout_grid_6{
   padding: 1% 6%;
   display: grid;
@@ -2388,6 +2392,11 @@ hr.sep-2 {
     box-shadow: 0 4px 15px 0 rgba(65, 132, 234, 0.75);
 }
 
+.btn-hover.color-9-cc {
+    background-image: linear-gradient(to right, #1C1C32, #1C1C32);
+    box-shadow: 0 4px 15px 0 rgba(65, 132, 234, 0.75);
+}
+
 
 span.about-link-text{
   color: white;
@@ -2550,3 +2559,31 @@ div.about-entity .title{
 
 
 
+/*
+.layout_table #listing-material{
+    box-shadow: 10px 10px #BA0020;
+
+}
+*/
+
+.quarto-listing-table{
+  background: linear-gradient(to right, #da4453, #89216b);
+    border: 5px solid #da4453 !important;
+    border-radius: 10px;
+}
+
+.quarto-listing-table th{
+  color: white;
+}
+
+.quarto-listing-table td.listing-title span{
+  color: white;
+}
+
+.quarto-listing-table td.listing-subtitle span{
+  color: white;
+}
+
+.quarto-listing-table td.listing-author{
+  color: white;
+}

@@ -1,0 +1,53 @@
+---
+title: '{{< animate fadeInDown "Dataquest Premium Access"delay=.6s >}}'
+subtitle: '{{< animate fadeInDown "Dataquest is platform that offers coding challenges and projects to learn essential data science skillsets."delay=.6s >}}'
+author: ["Hertie School Data Science Lab"]
+date: "03-29-2023"
+categories: ["Dataquest", "Learning", "R", "Python"]
+toc: true
+draft: false
+code-link: true
+comments: false
+title-block-banner: true
+image: images/dataquest.png
+page-layout: full
+include-in-header: meta.html
+filters:
+   - lightbox
+lightbox: 
+  match: auto
+  effect: fade
+  desc-position: left
+  css-class: "lightwidth"
+---
+
+![](images/dq.png){fig-align="center"}
+
+![](images/page.jpg)
+
+</br>
+
+<hr class="sep-2" />
+
+"Dataquest is a self-learning platform that offers interactive coding challenges and projects to learn essential data science skillsets. Four distinct paths can be chosen with different learning materials: Data Analyst in R, Data Analyst in Python, Data Scientist in Python, or Data Engineer. By completing the learning paths, students will receive certificates and create projects that can be added to their data science portfolio as a demonstration of their skills to potential employers. In order to get access to premium Dataquest account for Fall semester 2021, please contact the Data Science Lab team at datasciencelab\@hertie-school.org. The start of every learning path is always focused on building up the foundation of the programming language. Therefore, if you are looking for a place to start, step 1 in Data Analyst or Data Scientist tracks for both R and Python concerns with developing your programming skills from beginner to intermediate level."
+
+</br>
+
+*Data science training resources*
+
+<hr class="sep-2" />
+
+
+<center>
+
+<form action="https://www.dataquest.io/">
+
+<button class="btn-hover color-9-cc" target="_blank">
+
+Go to Dataquest
+
+</button>
+
+</form>
+
+</center>

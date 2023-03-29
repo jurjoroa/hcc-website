@@ -179,6 +179,35 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       window['quarto-listing-loaded']();
     }
   })
+  
+
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-material .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-image','listing-title','listing-subtitle','listing-author',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-title-sort'] }],
+      page: 2,
+    pagination: { item: "<li class='page-item'><a class='page page-link' href='#'></a></li>" },
+      searchColumns: ["listing-date","listing-title","listing-author"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-material'] = new List('listing-material', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
   </script><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-HJEMN0LJY7"></script><script type="text/javascript">
 
 window.dataLayer = window.dataLayer || [];
@@ -193,6 +222,12 @@ gtag('config', 'G-HJEMN0LJY7', { 'anonymize_ip': true});
 <meta property="og:url" content="https://www.hertiecodingclub.com">
 <meta property="og:title" content="Hertie Coding Club - Home">
 <meta property="og:description" content="Welcome to the Hertie Coding Club! Our goal as a club is to help everyone and between us learn coding skills and show that coding is for everyone, no matter our background.">
+<style>:root{--animate-duration:3s;--animate-delay:2s;--animate-repeat:1}</style>
+<style>:root{--animate-duration:3s;--animate-delay:2s;--animate-repeat:1}</style>
+<style>:root{--animate-duration:3s;--animate-delay:2s;--animate-repeat:1}</style>
+<style>:root{--animate-duration:3s;--animate-delay:2s;--animate-repeat:1}</style>
+<style>:root{--animate-duration:3s;--animate-delay:2s;--animate-repeat:1}</style>
+<style>:root{--animate-duration:3s;--animate-delay:2s;--animate-repeat:1}</style>
 <style>:root{--animate-duration:3s;--animate-delay:2s;--animate-repeat:1}</style>
 <style>:root{--animate-duration:3s;--animate-delay:2s;--animate-repeat:1}</style>
 <style>:root{--animate-duration:3s;--animate-delay:2s;--animate-repeat:1}</style>
@@ -739,7 +774,7 @@ No matching items
 </div>
 <nav id="learn-pagination" class="listing-pagination" aria-label="Page Navigation"><ul class="pagination"></ul></nav>
 </div>
-<p><a href="../learn/rstudio.html"> <button type="button" class="btn btn-primary float-end btn-sm">See all posts in English</button></a></p>
+<p><a href="../learn/rstudio.html"> <button type="button" class="btn btn-primary float-end btn-sm">See all</button></a></p>
 </div>
 </div>
 </div>
@@ -865,7 +900,7 @@ No matching items
 </div>
 <nav id="Events-pagination" class="listing-pagination" aria-label="Page Navigation"><ul class="pagination"></ul></nav>
 </div>
-<p><a href="../events/index.html"> <button type="button" class="btn btn-primary float-end btn-sm">See all/Ver todos</button></a></p>
+<p><a href="../events/index.html"> <button type="button" class="btn btn-primary float-end btn-sm">See all</button></a></p>
 </div>
 </div>
 </div>
@@ -878,6 +913,74 @@ No matching items
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 3</code></pre>
 </div>
+</div>
+</div>
+<div class="layout_table">
+<div id="listing-material" class="quarto-listing quarto-listing-container-table">
+
+<table class="quarto-listing-table table">
+<thead><tr>
+<th>
+</th>
+<th>
+Title
+</th>
+<th>
+Subtitle
+</th>
+<th>
+Author
+</th>
+</tr></thead>
+<tbody class="list">
+<tr data-index="0" data-categories="Dataquest,Learning,R,Python" data-listing-date-sort="1680040800000" data-listing-file-modified-sort="1680123440020" data-listing-reading-time-sort="0.805" data-listing-title-sort="{{< animate fadeInDown &quot;Dataquest Premium Access&quot;delay=.6s >}}" data-listing-filename-sort="index.qmd">
+<td class="listing-image">
+<img src="./material/dataquest/images/dataquest.png" style="height: 70px;">
+</td>
+<td class="listing-title">
+<a href="./material/dataquest/index.html" class="title"><span class="animate__animated animate__fadeInDown animate__delay-.6s" style="display: inline-block;">Dataquest Premium Access</span></a>
+</td>
+<td class="listing-subtitle">
+<p><span class="animate__animated animate__fadeInDown animate__delay-.6s" style="display: inline-block;">Dataquest is platform that offers coding challenges and projects to learn essential data science skillsets.</span></p>
+</td>
+<td class="listing-author">
+Hertie School Data Science Lab
+</td>
+</tr>
+<tr data-index="1" data-categories="freeCodeCamp,Data Analysis,Course,Free Certificate" data-listing-date-sort="1680040800000" data-listing-file-modified-sort="1680122597079" data-listing-reading-time-sort="0.52" data-listing-title-sort="{{< animate fadeInDown &quot;freeCodeCamp Certifications&quot;delay=.6s >}}" data-listing-filename-sort="index.qmd">
+<td class="listing-image">
+<img src="./material/freecodecamp/images/fcc.png" style="height: 70px;">
+</td>
+<td class="listing-title">
+<a href="./material/freecodecamp/index.html" class="title"><span class="animate__animated animate__fadeInDown animate__delay-.6s" style="display: inline-block;">freeCodeCamp Certifications</span></a>
+</td>
+<td class="listing-subtitle">
+<p><span class="animate__animated animate__fadeInDown animate__delay-.6s" style="display: inline-block;">Learn to code — for free. Build projects. Earn certifications.</span></p>
+</td>
+<td class="listing-author">
+Jorge Roa
+</td>
+</tr>
+<tr data-index="2" data-categories="IBM,Data Analysis,Course,Free Certificate" data-listing-date-sort="1679698800000" data-listing-file-modified-sort="1679824917432" data-listing-reading-time-sort="0.815" data-listing-title-sort="{{< animate fadeInDown &quot;IBM Data Analyst certification&quot;delay=.6s >}}" data-listing-filename-sort="index.qmd">
+<td class="listing-image">
+<img data-src="./material/IBM_data_analyst/images/IBM.png" style="height: 70px;">
+</td>
+<td class="listing-title">
+<a href="./material/IBM_data_analyst/index.html" class="title"><span class="animate__animated animate__fadeInDown animate__delay-.6s" style="display: inline-block;">IBM Data Analyst certification</span></a>
+</td>
+<td class="listing-subtitle">
+<p><span class="animate__animated animate__fadeInDown animate__delay-.6s" style="display: inline-block;">Try this course for free and get your certification by IBM in Data Analyst</span></p>
+</td>
+<td class="listing-author">
+Jorge Roa
+</td>
+</tr>
+</tbody>
+</table>
+<div class="listing-no-matching d-none">
+No matching items
+</div>
+<nav id="material-pagination" class="listing-pagination" aria-label="Page Navigation"><ul class="pagination"></ul></nav>
 </div>
 </div>
 <div class="layout" style="font-size: 5px">

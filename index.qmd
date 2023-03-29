@@ -20,7 +20,17 @@ listing:
     #categories: cloud
     sort-ui: false
     filter-ui: false
-    page-size: 2 
+    page-size: 2
+  - id: material
+    contents: material/*/index.qmd
+    type: table
+    fields: [image, title, subtitle, author]
+    sort: "date desc"
+    #categories: cloud
+    sort-ui: false
+    filter-ui: false
+    page-size: 2
+    image-height: 70px
 toc: true
 title-block-banner: false
 
@@ -403,7 +413,7 @@ color: grey">*All the images were generated with Dall-e. </div>
 ::: {#learn}
 :::
 
-<a href="../learn/rstudio.html"> <button type="button" class="btn btn-primary float-end btn-sm">See all posts in English</button></a>
+<a href="../learn/rstudio.html"> <button type="button" class="btn btn-primary float-end btn-sm">See all</button></a>
 
 </div> 
 
@@ -444,7 +454,7 @@ font-weight: 700;
 ::: {#Events}
 :::
 
-<a href="../events/index.html"> <button type="button" class="btn btn-primary float-end btn-sm">See all/Ver todos</button></a>
+<a href="../events/index.html"> <button type="button" class="btn btn-primary float-end btn-sm">See all</button></a>
 
 
  </div>
@@ -472,6 +482,14 @@ To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
 
 
 </div> 
+
+
+<div class="layout_table">
+
+::: {#material}
+:::
+
+</div>
 
 
 

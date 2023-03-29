@@ -18,7 +18,10 @@
       "/events/04_environment/index.html",
       "/events/03_wrangle_part2/index.html",
       "/events/02_wrangle/index.html",
-      "/events/01_kickoff_event/index.html"
+      "/events/01_kickoff_event/index.html",
+      "/material/dataquest/index.html",
+      "/material/freecodecamp/index.html",
+      "/material/IBM_data_analyst/index.html"
     ]
   },
   {
@@ -34,6 +37,8 @@
   {
     "listing": "/material/index.html",
     "items": [
+      "/material/dataquest/index.html",
+      "/material/freecodecamp/index.html",
       "/material/IBM_data_analyst/index.html"
     ]
   }
