@@ -2577,16 +2577,22 @@ div.about-entity .title{
 }
 
 .quarto-listing-table td.listing-title span{
-  color: white;
+  color: #90ACE3;
+   text-decoration: underline;
+    font-size: 14px;
 }
 
 .quarto-listing-table td.listing-subtitle span{
   color: white;
+   font-size: 14px;
 }
 
 .quarto-listing-table td.listing-author{
   color: white;
+   font-size: 14px;
 }
+
+
 
 
 @media (max-width: 520px) {

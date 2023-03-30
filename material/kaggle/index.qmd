@@ -1,0 +1,55 @@
+---
+title: '{{< animate fadeInDown "Kaggle"delay=.6s >}}'
+subtitle: '{{< animate fadeInDown "Inside Kaggle you’ll find all the code & data you need to do your data science work."delay=.6s >}}'
+author: ["Jorge Roa"]
+date: "03-30-2023"
+categories: ["Kaggle", "Learning","R", "Python", "Data Science"]
+toc: true
+draft: false
+code-link: true
+comments: false
+title-block-banner: true
+image: images/kaggle.png
+page-layout: full
+include-in-header: meta.html
+filters:
+   - lightbox
+lightbox: 
+  match: auto
+  effect: fade
+  desc-position: left
+  css-class: "lightwidth"
+---
+
+![](images/kaggle.png){fig-align="center"}
+
+![](images/page.jpg)
+
+</br>
+
+
+If you want to play with multiple datasets, practice code, machine learning, enter competitions, among others, then Kaggle is your platform. 
+
+
+<hr class="sep-2" />
+
+Kaggle is a web-based community platform for data scientists, machine learning engineers, and other data enthusiasts to share datasets, collaborate on data science projects, and participate in machine learning competitions.
+
+The platform hosts a variety of data science challenges and competitions, ranging from predicting the outcome of sports events to detecting fraudulent transactions in financial data. The challenges are sponsored by companies and organizations that provide the datasets and offer prizes for the best performing models.
+
+Kaggle offers access to datasets, code notebooks, forums for discussion, and online courses. Kaggle has become a popular platform for data science enthusiasts and professionals alike, and has contributed to the growth and development of the data science community by providing a platform for collaboration, learning, and competition.
+
+
+</br>
+
+
+<hr class="sep-2" />
+
+
+<center>
+<form action="https://www.kaggle.com">
+<button class="btn-hover color-9" target="_blank">
+Go to Kaggle
+</button>
+</form>
+</center>
