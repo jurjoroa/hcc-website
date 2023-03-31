@@ -24,7 +24,7 @@ website:
       - text: "{{< fa brands youtube size=lg >}}"
         href: https://youtube.com/@hertiecodingclub
   navbar:
-    logo: images/hcc_bk_white.png
+    logo: images/hcc_final.png
     href: https://www.hertiecodingclub.com/
     collapse-below: lg
     pinned: true
