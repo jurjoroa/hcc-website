@@ -58,21 +58,8 @@ comments: false
 
 </head>
 
-<div style="
-  flex-direction: column;
-  width: 100%;
-  height: 100vh;
-  margin-top: -100px;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  overflow: hidden;
-  overflow: clip; 
-  contain: content;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: linear-gradient(to right, #000428, #004e92); ">
+<!--  It doesn't work with class. We nned to put style  -->
+<div style=" flex-direction: column; width: 100%; height: 100vh; margin-top: -100px; background-size: cover; background-position: center; background-repeat: no-repeat; overflow: hidden; overflow: clip;  contain: content; display: flex; align-items: center; justify-content: center; background: linear-gradient(to right, #000428, #004e92);">
 
 <css-doodle>
   <style>
@@ -117,14 +104,11 @@ comments: false
   </style>
 </css-doodle>
 
-  <div class="image">
-<img
-src="images/hcc_long_welw_1400.png">
-
+<div class="image">
+<img src="images/hcc_long_welw_1400.png">
   </div>
-    <div class="image_mob">
+<div class="image_mob">
 <img src="images/hcc_long_wel_smartw_1400.png">
-
   </div>
 
 <button class="btn-21"> <span> Learn more </span> </button>
@@ -422,7 +406,7 @@ color: grey">*All the images were generated with Dall-e. </div>
 ::: {#learn}
 :::
 
-<a href="../learn/rstudio.html"> <button type="button" class="btn btn-primary float-end btn-sm">See all</button></a>
+<a href="../learn/rstudio.html"> <button type="button" class="btn btn-primary float-end btn-sm">See all our tools</button></a>
 
 </div> 
 
@@ -463,7 +447,7 @@ font-weight: 700;
 ::: {#Events}
 :::
 
-<a href="../events/index.html"> <button type="button" class="btn btn-primary float-end btn-sm">See all</button></a>
+<a href="../events/index.html"> <button type="button" class="btn btn-primary float-end btn-sm">See all our events</button></a>
 
 
  </div>
@@ -498,14 +482,26 @@ To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
 ::: {#material}
 :::
 
+<a href="../material/index.html"> <button type="button" class="btn btn-primary float-end btn-sm">See all our material</button></a>
+
 </div>
 
 
-<div class="section_white">
 
-</div> 
+<div class="container-footer">
+<div class="layout_hertie">
 
-
+<h1 style="font-size: 5vw;
+display: flex;
+align-items: center;
+align-text: center;
+font-weight: 900;
+background-image: conic-gradient(#bc0525, #968c83, #968c83, #bc0525, #bc0525);
+color: transparent;
+background-clip: text;
+-webkit-background-clip: text;"
+class="scroll-text"> Want to know more about us and what we do?  </h1>
+</div>
 
 <div class="layout" style = "font-size: 5px">
 
@@ -546,12 +542,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
 ```
 
-<div class="section_white">
-
-</div> 
 
 
+<hr class="sep-2" style="margin-top: 50px;"/>
 
+<div style="margin-top: 50px;"/>
 
 ::: {.grid margin-bottom="-20"}
 ::: {.g-col-3}
@@ -559,12 +554,12 @@ document.addEventListener('DOMContentLoaded', function () {
 ![](_site/images/hertie/DSL.png){width="140" fig-align="center"}
 
 :::
-::: {.g-col-5}
+::: {.g-col-6}
 
-![](_site/images/hertie/logo long.png){width="140" fig-align="center"}
+![](_site/images/hcc_final.png){width="140" fig-align="center"}
 
 :::
-::: {.g-col-4}
+::: {.g-col-3}
 
 ![](_site/images/hertie/hertie.png){width="140"  fig-align="center"}
 
@@ -572,7 +567,7 @@ document.addEventListener('DOMContentLoaded', function () {
 :::
 
 
-
+</div>
 
 
 <!-- Important: apply it to html index.html  -->

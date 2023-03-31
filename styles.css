@@ -664,6 +664,11 @@ header:not(.headroom):not(.quarto-title-block).is-visible {
   padding: 10% 6%;
 }
 
+.layout_hertie{
+  padding: 1% 10%;
+  /*background-image: url("images/cool-background.png")*/
+}
+
 .layout_grid_6{
   padding: 1% 6%;
   display: grid;
@@ -1976,9 +1981,15 @@ div.body div.listing-categories div.listing-category{
 
 .nav-footer{
  background: linear-gradient(to right, rgba(0, 4, 40), rgba(0, 78, 146));
-  border-top: solid #c0041c;
-  height: 11vh;
+  height: 9vh;
+  border: none !important; 
+  padding:0 !important; 
+  margin: 0 !important; 
+  border-bottom: none;
 }
+
+
+
 
 .nav-footer a.nav-link{
   color: white!important;
@@ -2096,7 +2107,9 @@ bottom: 0 !important;
               linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 30%),
               linear-gradient(to right, #000428, #004e92);
 }
-  
+    .container-footer {
+  background: linear-gradient(to right, #000428, #004e92);
+}
 
 
   .work-container {
@@ -2621,3 +2634,22 @@ width:20vw;
 }
 
 
+
+.cssdoodle{
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+  margin-top: -100px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  overflow: clip; 
+  contain: content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to right, #000428, #004e92);
+}
+  
+  
