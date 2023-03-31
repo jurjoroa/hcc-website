@@ -496,7 +496,7 @@ display: flex;
 align-items: center;
 align-text: center;
 font-weight: 900;
-background-image: conic-gradient(#bc0525, #968c83, #968c83, #bc0525, #bc0525);
+background-image: conic-gradient(#bc0525, white, white, #bc0525, #bc0525);
 color: transparent;
 background-clip: text;
 -webkit-background-clip: text;"
