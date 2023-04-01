@@ -548,20 +548,22 @@ document.addEventListener('DOMContentLoaded', function () {
 
 <div style="margin-top: 50px;"/>
 
-::: {.grid margin-bottom="-20"}
+
+
+::: {.grid}
 ::: {.g-col-3}
 
-![](_site/images/hertie/DSL.png){width="140" fig-align="center"}
+![](_site/images/hertie/DSL.png){width="150" fig-align="center"}
 
 :::
 ::: {.g-col-6}
 
-![](_site/images/hcc_final.png){width="140" fig-align="center"}
+![](_site/images/hcc_final.png){width="150" fig-align="center"}
 
 :::
 ::: {.g-col-3}
 
-![](_site/images/hertie/hertie.png){width="140"  fig-align="center"}
+![](_site/images/hertie/hertie.png){width="150"  fig-align="center"}
 
 :::
 :::

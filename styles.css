@@ -2652,4 +2652,9 @@ width:20vw;
   background: linear-gradient(to right, #000428, #004e92);
 }
   
-  
+  .column {
+    flex: 1;
+    text-align: center;
+    padding: 0 10px;
+  }
+
