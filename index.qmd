@@ -547,7 +547,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 
-<hr class="sep-2" style="margin-top: 50px;"/>
+<hr class="sep-2-f" style="margin-top: 50px;"/>
 
 <div style="margin-top: 50px;"/>
 

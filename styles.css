@@ -2396,7 +2396,10 @@ hr.sep-2 {
   height: 2px; 
   background-image: linear-gradient(to right, #f0f0f0, #3498db, #c0041c, #f0f0f0)}
   
-
+hr.sep-2-f {
+ border: 1px solid #c0041c;
+  
+}
 
  h1.title.show.title{
   display: none;
