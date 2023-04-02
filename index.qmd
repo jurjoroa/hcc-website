@@ -487,6 +487,9 @@ To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
 </div>
 
 
+<div class="container-footer2">
+
+</div>
 
 <div class="container-footer">
 <div class="layout_hertie">
@@ -568,8 +571,22 @@ document.addEventListener('DOMContentLoaded', function () {
 :::
 :::
 
-
 </div>
+
+<div class="container-footer3">
+<div class="layout_footer">
+  This website, the content and everything related to it is licensed under <a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank"> Creative Commons Attribution-NonCommercial 4.0 International License.</a>
+  
+  <div class="cc-icons-row">
+  <img src="_site/images/cc/cc.svg" alt="CC" class="cc-icon">
+  <img src="_site/images/cc/by.svg" alt="BY" class="cc-icon">
+  <img src="_site/images/cc/nc.svg" alt="NC" class="cc-icon">
+  <img src="_site/images/cc/nd.svg" alt="ND" class="cc-icon">
+ </div> 
+</div>
+</div>
+
+
 
 
 <!-- Important: apply it to html index.html  -->

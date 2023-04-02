@@ -634,8 +634,27 @@ header:not(.headroom):not(.quarto-title-block).is-visible {
 
 
 
+.layout_footer{
+  text-align: center;
+  padding: 1% 6%;
+  font-size: 14px;
+}
 
+@media (max-width: 530px) {
+  
+  .layout_footer{
+  text-align: center;
+  padding: 1% 6%;
+  font-size: 11px;
+}
 
+.cc-icon {
+  width: 14px;
+  height: 14px;
+  margin: 0 5px;
+}
+  
+}
 
 
 
@@ -2109,6 +2128,21 @@ bottom: 0 !important;
 }
     .container-footer {
   background: linear-gradient(to right, #000428, #004e92);
+             
+}
+
+.container-footer2{
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%),
+             linear-gradient(to right, #000428, #004e92);
+  margin-bottom: 0px;
+  height:100px;
+}
+
+.container-footer3{
+  background: linear-gradient(to right, #000428, #004e92);
+  color: white;
+  margin-bottom: 0px;
+  height:100px;
 }
 
 
@@ -2635,26 +2669,14 @@ width:20vw;
 
 
 
-.cssdoodle{
-  flex-direction: column;
-  width: 100%;
-  height: 100vh;
-  margin-top: -100px;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  overflow: hidden;
-  overflow: clip; 
-  contain: content;
+.cc-icons-row {
   display: flex;
-  align-items: center;
   justify-content: center;
-  background: linear-gradient(to right, #000428, #004e92);
+  align-items: center;
 }
-  
-  .column {
-    flex: 1;
-    text-align: center;
-    padding: 0 10px;
-  }
 
+.cc-icon {
+  width: 18px;
+  height: 18px;
+  margin: 0 5px;
+}
