@@ -2688,3 +2688,15 @@ width:20vw;
   height: 18px;
   margin: 0 5px;
 }
+
+
+
+
+header div.quarto-title{
+  color:black !important;
+  background: blue;
+  border: 2.5px solid #c0041c;
+  border-radius: 10px;
+  
+}
+
