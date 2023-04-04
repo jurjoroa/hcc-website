@@ -346,7 +346,7 @@ color: grey">*All the images were generated with Dall-e. </div>
 
 <div style = "margin-top: 35px;"> </div> 
 
-This section includes online resources that provide step-by-step tutorials and guides for the people that is interested in learning code. Feel free to check them out. We are adding resources constantly
+This section includes online resources that provide step-by-step tutorials and guides for the people that is interested in learning code. Feel free to check them out. We are adding resources constantly.
 
 ::: {#Resources}
 :::
