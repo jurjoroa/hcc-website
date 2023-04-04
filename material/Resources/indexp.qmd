@@ -1,0 +1,28 @@
+---
+title: "Resources"
+subtitle: ""
+listing:
+  - id: resources
+    contents: "*/index.qmd"
+    type: grid
+    fields: [image, date, title, subtitle]
+    sort: "date desc"
+    categories: numbered
+    sort-ui: true
+    filter-ui: true
+    page-size: 36
+page-layout: full
+title-block-banner: false
+comments: false
+image: toolbox.png
+toc: true
+---
+
+
+## Resources
+
+::: {#resources}
+:::
+
+
+

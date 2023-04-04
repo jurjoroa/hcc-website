@@ -2,13 +2,9 @@
 title: "Material"
 listing:
   - id: Material
-    contents: "*/index.qmd"
-    type: grid
+    contents: "**/indexp.qmd"
+    type: default
     fields: [image, date, title, subtitle]
-    sort: "date desc"
-    categories: numbered
-    sort-ui: true
-    filter-ui: true
     page-size: 36
 page-layout: full
 title-block-banner: false
@@ -17,10 +13,7 @@ toc: true
 ---
 
 
-## Material
 
-::: {#material}
-:::
 
 
 

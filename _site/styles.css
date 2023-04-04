@@ -1926,6 +1926,11 @@ div.listing-subtitle p span.animate__animated.animate__fadeInDown.animate__delay
   margin-right: 25px;
 }
 
+#listing-Material .listing-title{
+  
+  font-size: 2em;
+}
+
 
 .image-right div.listing-reading-time,
 div.quarto-post.image-right div.body a p.show,

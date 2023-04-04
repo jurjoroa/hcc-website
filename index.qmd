@@ -22,7 +22,7 @@ listing:
     filter-ui: false
     page-size: 2
   - id: material
-    contents: material/*/index.qmd
+    contents: material/Certifications/*/index.qmd
     type: table
     fields: [image, title, subtitle, author]
     sort: "date desc"
@@ -80,7 +80,7 @@ comments: false
 
     border-radius: 50%;
     transform-style: preserve-3d;
-    animation: scale-up 35s linear infinite;
+    animation: scale-up 30s linear infinite;
     animation-delay: calc(@i * -.4s);
 
     @keyframes scale-up {
