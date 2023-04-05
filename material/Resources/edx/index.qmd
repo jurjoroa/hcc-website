@@ -1,0 +1,47 @@
+---
+title: '{{< animate fadeInDown "edX"delay=.6s >}}'
+subtitle: '{{< animate fadeInDown "edX offers varios online courses with free verified certificates"delay=.6s >}}'
+author: ["Jorge Roa"]
+date: "04-05-2023"
+categories: ["edX", "Learning", "R", "Python"]
+toc: true
+draft: false
+code-link: true
+comments: false
+title-block-banner: true
+image: images/edx.png
+page-layout: full
+include-in-header: meta.html
+filters:
+   - lightbox
+lightbox: 
+  match: auto
+  effect: fade
+  desc-position: left
+  css-class: "lightwidth"
+---
+
+![](images/edx.png){fig-align="center"}
+
+![](images/page.jpg)
+
+</br>
+
+<hr class="sep-2" />
+
+edX is an amazing tool to practice code, but also to earn certificates. edX is a non-profit online learning platform that was founded by Harvard University and MIT in 2012. According to their history, it has partnered with universities, organizations, and institutions globally to create a network of educational resources. edX offers paid courses with the option to earn a certificate or credential upon completion; however, you can take the entire course without the certification and start building your portfolio. Check all the courses, the ones that I recommend are teach it by Harvard professors. 
+
+</br>
+
+
+
+<hr class="sep-2" />
+
+
+<center>
+<form action="https://www.edx.org/search?subject=Data%20Analysis%20%26%20Statistics">
+<button class="btn-hover color-9" target="_blank">
+Go to edX
+</button>
+</form>
+</center>

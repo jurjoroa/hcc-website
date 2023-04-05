@@ -1,6 +1,4 @@
 ---
-title: 'Certifications'
-subtitle: ""
 listing:
   - id: certifications
     contents: "*/index.qmd"
@@ -17,6 +15,8 @@ comments: false
 image: cert.png
 toc: true
 ---
+
+These free certifications cover a range of coding languages and technologies, and can help you demonstrate your expertise to potential employers.
 
 
 ## Certifications

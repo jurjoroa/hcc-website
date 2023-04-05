@@ -19,6 +19,9 @@
       "/events/03_wrangle_part2/index.html",
       "/events/02_wrangle/index.html",
       "/events/01_kickoff_event/index.html",
+      "/material/Resources/edx/index.html",
+      "/material/Resources/kaggle/index.html",
+      "/material/Resources/dataquest/index.html",
       "/material/Certifications/cisco_pcap/index.html",
       "/material/Certifications/freecodecamp/index.html",
       "/material/Certifications/IBM_data_analyst/index.html"
@@ -37,6 +40,7 @@
   {
     "listing": "/material/Resources/indexp.html",
     "items": [
+      "/material/Resources/edx/index.html",
       "/material/Resources/kaggle/index.html",
       "/material/Resources/dataquest/index.html"
     ]

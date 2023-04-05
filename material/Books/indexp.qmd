@@ -1,6 +1,4 @@
 ---
-title: "Books"
-subtitle: ""
 listing:
   - id: books
     contents: "*/index.qmd"
@@ -17,6 +15,8 @@ comments: false
 image: books.png
 toc: true
 ---
+
+Discover some useful books on coding and other relevant topics. Happy reading!
 
 
 ## Books

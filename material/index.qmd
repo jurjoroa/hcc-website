@@ -1,6 +1,4 @@
 ---
-title: "Material"
-subtitle: "Use this material"
 listing:
   - id: Material
     contents: "**/indexp.qmd"
@@ -13,8 +11,6 @@ comments: false
 toc: true
 ---
 
+# **Material**
 
-
-
-
-
+Discover some useful books on coding and other relevant topics. Happy reading!

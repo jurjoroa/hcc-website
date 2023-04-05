@@ -21,6 +21,16 @@ listing:
     sort-ui: false
     filter-ui: false
     page-size: 2
+  - id: Resources
+    contents: material/Resources/*/index.qmd
+    type: grid
+    grid-columns: 1
+    fields: [image, subtitle, title]
+    sort: "date desc"
+    #categories: cloud
+    sort-ui: false
+    filter-ui: false
+    page-size: 2
   - id: material
     contents: material/Certifications/*/index.qmd
     type: table
@@ -328,59 +338,19 @@ color: grey">*All the images were generated with Dall-e. </div>
 
 
 
- <div class="social-media-mobile">
-<h1 class="scroll-text">{{< li kjkiqtxg trigger=loop delay=1000 scale=25 >}}Follow</h1>
-
-<a href="https://twitter.com/HertieCodingCLB">
-  <img   src="images/icons/twitter-squared.png" alt="Twitter icon" style="margin: 0 10px; height: 35px;">
-</a>
-  <a href="mailto:hertiecodingclub@gmail.com">
-    <img   src="images/icons/gmail.png" alt="Gmail icon" style="margin: 0 10px; height: 35px;">
-  </a>
-  <a href="http://hertiecodingclub.slack.com">
-    <img   src="images/icons/slack-new.png" alt="Slack icon" style="margin: 0 10px; height: 35px;">
-  </a>
-  <a href="https://github.com/Hertie-Coding-Club">
-    <img   src="images/icons/github.png" alt="GitHub icon" style="margin: 0 10px; height: 35px;">
-  </a>
-  <a href="https://www.instagram.com/hertiecodingclub/">
-    <img   src="images/icons/instagram-new.png" alt="Instagram icon" style="margin: 0 10px; height: 35px;">
-  </a>
-  <a href="https://youtube.com/@hertiecodingclub">
-    <img   src="images/icons/youtube-play.png" alt="YouTube icon" style="margin: 0 10px; height: 35px;">
-  </a>
-</div>
-
-
 
 <div class="layout_grid_learnr">
 
-   <div class="social-media">
-<h1 class="scroll-text social-media">{{< li kjkiqtxg trigger=loop delay=1000 scale=25 >}}Follow</h1>
+<div class="social-media">
+<h1 class="scroll-text">{{< li aefjguud trigger=loop delay=1000 scale=25 >}}Resources</h1>
 
 <div style = "margin-top: 35px;"> </div> 
 
+This section includes online resources that provide step-by-step tutorials and guides for the people that is interested in learning code. Feel free to check them out. We are adding resources constantly
 
-#<a class="twitter-timeline" data-lang="en" data-width="300" data-height="500" data-theme="dark" #href="https://twitter.com/HertieCodingCLB?ref_src=twsrc%5Etfw">Tweets by HertieCodingCLB</a> <script async #src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
+::: {#Resources}
+:::
 
-
-<div class="social-media" style="display: flex; justify-content: center; align-items: center;">
-  <a href="mailto:hertiecodingclub@gmail.com">
-    <img   src="images/icons/gmail.png" alt="Gmail icon" style="margin: 0 10px; height: 35px;">
-  </a>
-  <a href="http://hertiecodingclub.slack.com">
-    <img   src="images/icons/slack-new.png" alt="Slack icon" style="margin: 0 10px; height: 35px;">
-  </a>
-  <a href="https://github.com/Hertie-Coding-Club">
-    <img   src="images/icons/github.png" alt="GitHub icon" style="margin: 0 10px; height: 35px;">
-  </a>
-  <a href="https://www.instagram.com/hertiecodingclub/">
-    <img   src="images/icons/instagram-new.png" alt="Instagram icon" style="margin: 0 10px; height: 35px;">
-  </a>
-  <a href="https://youtube.com/@hertiecodingclub">
-    <img   src="images/icons/youtube-play.png" alt="YouTube icon" style="margin: 0 10px; height: 35px;">
-  </a>
-</div>
 
 </div> 
 
@@ -392,7 +362,7 @@ color: grey">*All the images were generated with Dall-e. </div>
 ::: {.g-col-4}
 :::
 ::: {.g-col-7}
-{{< li qatykyxz trigger=loop delay=1000 scale=50 >}} Learn R
+{{< li azartkjs trigger=loop delay=1000 scale=50 >}} Learn R
 :::
 ::: {.g-col-1}
 :::

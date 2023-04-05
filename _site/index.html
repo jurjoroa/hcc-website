@@ -182,6 +182,35 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   
 
   window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-Resources .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-image','listing-subtitle','listing-title',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      page: 2,
+    pagination: { item: "<li class='page-item'><a class='page page-link' href='#'></a></li>" },
+      searchColumns: ["listing-title","listing-author","listing-date","listing-image","listing-description"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-Resources'] = new List('listing-Resources', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  
+
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
     const listingTargetEl = window.document.querySelector('#listing-material .list');
     if (!listingTargetEl) {
       // No listing discovered, do not attach.
@@ -222,6 +251,12 @@ gtag('config', 'G-HJEMN0LJY7', { 'anonymize_ip': true});
 <meta property="og:url" content="https://www.hertiecodingclub.com">
 <meta property="og:title" content="Hertie Coding Club - Home">
 <meta property="og:description" content="Welcome to the Hertie Coding Club! Our goal as a club is to help everyone and between us learn coding skills and show that coding is for everyone, no matter our background.">
+<style>:root{--animate-duration:3s;--animate-delay:2s;--animate-repeat:1}</style>
+<style>:root{--animate-duration:3s;--animate-delay:2s;--animate-repeat:1}</style>
+<style>:root{--animate-duration:3s;--animate-delay:2s;--animate-repeat:1}</style>
+<style>:root{--animate-duration:3s;--animate-delay:2s;--animate-repeat:1}</style>
+<style>:root{--animate-duration:3s;--animate-delay:2s;--animate-repeat:1}</style>
+<style>:root{--animate-duration:3s;--animate-delay:2s;--animate-repeat:1}</style>
 <style>:root{--animate-duration:3s;--animate-delay:2s;--animate-repeat:1}</style>
 <style>:root{--animate-duration:3s;--animate-delay:2s;--animate-repeat:1}</style>
 <style>:root{--animate-duration:3s;--animate-delay:2s;--animate-repeat:1}</style>
@@ -545,23 +580,73 @@ color: grey">
 Coding is <span class="txt-rotate" data-period="2000" data-rotate="[ &quot;teamwork and growth.&quot;, &quot;potential unlocked.&quot;, &quot;empowering.&quot;, &quot;enjoyable and engaging.&quot;, &quot;for everyone.&quot; ]"></span>
 </h1>
 </div>
-<div class="social-media-mobile">
-<h1 class="scroll-text">
-<lord-icon delay="1000" scale="25" src="https://cdn.lordicon.com/kjkiqtxg.json" trigger="loop"></lord-icon>Follow
-</h1>
-<p><a href="https://twitter.com/HertieCodingCLB"> <img src="images/icons/twitter-squared.png" alt="Twitter icon" style="margin: 0 10px; height: 35px;"></a> <a href="mailto:hertiecodingclub@gmail.com"> <img src="images/icons/gmail.png" alt="Gmail icon" style="margin: 0 10px; height: 35px;"></a> <a href="http://hertiecodingclub.slack.com"> <img src="images/icons/slack-new.png" alt="Slack icon" style="margin: 0 10px; height: 35px;"></a> <a href="https://github.com/Hertie-Coding-Club"> <img src="images/icons/github.png" alt="GitHub icon" style="margin: 0 10px; height: 35px;"></a> <a href="https://www.instagram.com/hertiecodingclub/"> <img src="images/icons/instagram-new.png" alt="Instagram icon" style="margin: 0 10px; height: 35px;"></a> <a href="https://youtube.com/@hertiecodingclub"> <img src="images/icons/youtube-play.png" alt="YouTube icon" style="margin: 0 10px; height: 35px;"></a></p>
-</div>
 <div class="layout_grid_learnr">
 <div class="social-media">
-<h1 class="scroll-text social-media">
-<lord-icon delay="1000" scale="25" src="https://cdn.lordicon.com/kjkiqtxg.json" trigger="loop"></lord-icon>Follow
+<h1 class="scroll-text">
+<lord-icon delay="1000" scale="25" src="https://cdn.lordicon.com/aefjguud.json" trigger="loop"></lord-icon>Resources
 </h1>
 <div style="margin-top: 35px;">
 
 </div>
-<p>#&lt;a class=“twitter-timeline” data-lang=“en” data-width=“300” data-height=“500” data-theme=“dark” #href=“https://twitter.com/HertieCodingCLB?ref_src=twsrc%5Etfw”&gt;Tweets by HertieCodingCLB &lt;script async #src=“https://platform.twitter.com/widgets.js” charset=“utf-8”&gt;</p>
-<div class="social-media" style="display: flex; justify-content: center; align-items: center;">
-<p><a href="mailto:hertiecodingclub@gmail.com"> <img src="images/icons/gmail.png" alt="Gmail icon" style="margin: 0 10px; height: 35px;"></a> <a href="http://hertiecodingclub.slack.com"> <img src="images/icons/slack-new.png" alt="Slack icon" style="margin: 0 10px; height: 35px;"></a> <a href="https://github.com/Hertie-Coding-Club"> <img src="images/icons/github.png" alt="GitHub icon" style="margin: 0 10px; height: 35px;"></a> <a href="https://www.instagram.com/hertiecodingclub/"> <img src="images/icons/instagram-new.png" alt="Instagram icon" style="margin: 0 10px; height: 35px;"></a> <a href="https://youtube.com/@hertiecodingclub"> <img src="images/icons/youtube-play.png" alt="YouTube icon" style="margin: 0 10px; height: 35px;"></a></p>
+<p>This section includes online resources that provide step-by-step tutorials and guides for the people that is interested in learning code. Feel free to check them out. We are adding resources constantly</p>
+<div id="listing-Resources" class="quarto-listing quarto-listing-container-grid">
+<div class="list grid quarto-listing-cols-1">
+<div class="g-col-1" data-index="0" data-categories="edX,Learning,R,Python" data-listing-date-sort="1680645600000" data-listing-file-modified-sort="1680729573251" data-listing-reading-time-sort="0.53">
+<a href="./material/Resources/edx/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img src="./material/Resources/edx/images/edx.png" class="thumbnail-image card-img" style="height: 150px;"></p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+</h5>
+<p><span class="animate__animated animate__fadeInDown animate__delay-.6s" style="display: inline-block;">edX</span></p>
+
+<div class="card-subtitle listing-subtitle">
+<p><span class="animate__animated animate__fadeInDown animate__delay-.6s" style="display: inline-block;">edX offers varios online courses with free verified certificates</span></p>
+</div>
+</div>
+</div>
+</a>
+</div>
+<div class="g-col-1" data-index="1" data-categories="Kaggle,Learning,R,Python,Data Science" data-listing-date-sort="1680127200000" data-listing-file-modified-sort="1680218035522" data-listing-reading-time-sort="0.765">
+<a href="./material/Resources/kaggle/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img src="./material/Resources/kaggle/images/kaggle.png" class="thumbnail-image card-img" style="height: 150px;"></p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+</h5>
+<p><span class="animate__animated animate__fadeInDown animate__delay-.6s" style="display: inline-block;">Kaggle</span></p>
+
+<div class="card-subtitle listing-subtitle">
+<p><span class="animate__animated animate__fadeInDown animate__delay-.6s" style="display: inline-block;">Inside Kaggle you’ll find all the code &amp; data you need to do your data science work.</span></p>
+</div>
+</div>
+</div>
+</a>
+</div>
+<div class="g-col-1" data-index="2" data-categories="Dataquest,Learning,R,Python" data-listing-date-sort="1680040800000" data-listing-file-modified-sort="1680123440020" data-listing-reading-time-sort="0.805">
+<a href="./material/Resources/dataquest/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img data-src="./material/Resources/dataquest/images/dataquest.png" class="thumbnail-image card-img" style="height: 150px;"></p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+</h5>
+<p><span class="animate__animated animate__fadeInDown animate__delay-.6s" style="display: inline-block;">Dataquest Premium Access</span></p>
+
+<div class="card-subtitle listing-subtitle">
+<p><span class="animate__animated animate__fadeInDown animate__delay-.6s" style="display: inline-block;">Dataquest is platform that offers coding challenges and projects to learn essential data science skillsets.</span></p>
+</div>
+</div>
+</div>
+</a>
+</div>
+</div>
+<div class="listing-no-matching d-none">
+No matching items
+</div>
+<nav id="Resources-pagination" class="listing-pagination" aria-label="Page Navigation"><ul class="pagination"></ul></nav>
 </div>
 </div>
 <div>
@@ -571,7 +656,7 @@ Coding is <span class="txt-rotate" data-period="2000" data-rotate="[ &quot;teamw
 
 </div>
 <div class="g-col-7">
-<p><lord-icon delay="1000" scale="50" src="https://cdn.lordicon.com/qatykyxz.json" trigger="loop"></lord-icon> Learn R</p>
+<p><lord-icon delay="1000" scale="50" src="https://cdn.lordicon.com/azartkjs.json" trigger="loop"></lord-icon> Learn R</p>
 </div>
 <div class="g-col-1">
 

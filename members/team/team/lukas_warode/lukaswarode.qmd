@@ -14,14 +14,20 @@ about:
   image-shape: rounded
   links:
     - text: "{{< fa brands linkedin >}} LinkedIn"
-      url: "https://linkedin.com/in/jorge-roac"
+      url: "https://www.linkedin.com/in/lukas-warode-64a84a1a3/"
     - text: "{{< fa brands github >}} GitHub"
-      url: "https://github.com/jurjoroa"
+      url: "https://github.com/lwarode"
     - text: "{{< fa brands twitter >}} Twitter"
-      url: "https://twitter.com/jorgeroac"
+      url: "https://twitter.com/lukas_warode"
     - text: "{{< fa brands orcid >}} ORCID"
-      url: "https://orcid.org/0000-0002-3972-9793"
+      url: "https://orcid.org/0000-0003-0557-0400"
     - text: "{{< fa solid envelopes-bulk >}} Mail"
-      url: "mailto:jurjoo@gmail.com"
+      url: "mailto:lukas.warode@gmx.de"
 comments: false
 ---
+
+
+
+I'm part of the first MDS (2023) cohort, interested in data-driven approaches within the realm of social science and politics. Having a background in political science, I'm located somewhere in the intersection of political research and data science. With the experience of my past research positions, I'm currently working as a data research working student at POLITICO, where I assist the development of an analytical infrastructure.
+
+

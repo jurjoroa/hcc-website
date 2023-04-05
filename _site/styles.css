@@ -700,8 +700,9 @@ header:not(.headroom):not(.quarto-title-block).is-visible {
   padding: 1% 6%;
   //border-top: 2px solid #eeeeee;
   display: grid; 
-  grid-template-columns: .1fr 1.1fr; 
+  grid-template-columns: .5fr 1.1fr; 
   grid-gap: 60px;
+  align-items: center;
 }
 
 .layout_grid_events{
@@ -2362,12 +2363,14 @@ background-color: black;
 display: none;
 }
 
+.social-media{
+  display: flex; 
+  flex-direction: column; 
+  align-items: center;
+}
 
 @media (max-width: 1241px) {
   
-.social-media{
-  display: none;
-}
 
 .social-media-mobile{
   display: flex; 
@@ -2689,14 +2692,4 @@ width:20vw;
   margin: 0 5px;
 }
 
-
-
-
-header div.quarto-title{
-  color:black !important;
-  background: blue;
-  border: 2.5px solid #c0041c;
-  border-radius: 10px;
-  
-}
 

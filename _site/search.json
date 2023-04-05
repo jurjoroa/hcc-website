@@ -105,6 +105,13 @@
     "text": "Instructors\n\n\n\n\n      \n\n\n    \n\n        \n        \n        \n           Jorge Roa\n        \n        \n        \n        \n        \n           Lukas Warode \n        \n        \n        \n        \n        \n           Carmen Garro\n        \n        \n        \n        \n        \n           Rodrigo Dornelles\n        \n        \n        \n        \n        \n          Gabriel Zech\n        \n        \n        \n        \n        \n          Lukas Lehmann"
   },
   {
+    "objectID": "members/team/team/lukas_warode/lukaswarode.html",
+    "href": "members/team/team/lukas_warode/lukaswarode.html",
+    "title": "Lukas Warode",
+    "section": "",
+    "text": "I’m part of the first MDS (2023) cohort, interested in data-driven approaches within the realm of social science and politics. Having a background in political science, I’m located somewhere in the intersection of political research and data science. With the experience of my past research positions, I’m currently working as a data research working student at POLITICO, where I assist the development of an analytical infrastructure."
+  },
+  {
     "objectID": "members/team/team/jorge_roa/jorgeroa.html",
     "href": "members/team/team/jorge_roa/jorgeroa.html",
     "title": "Jorge Roa",
@@ -170,9 +177,23 @@
   {
     "objectID": "material/Resources/indexp.html",
     "href": "material/Resources/indexp.html",
-    "title": "Resources",
+    "title": "",
     "section": "",
-    "text": "Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\n\nInside Kaggle you’ll find all the code & data you need to do your data science work.\n\n\n\nMar 30, 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDataquest is platform that offers coding challenges and projects to learn essential data science skillsets.\n\n\n\nMar 29, 2023\n\n\n\n\n\n\n\n\nNo matching items"
+    "text": "These tools offer a wealth of learning opportunities, including interactive courses, real-world projects, and community forums where you can connect with other learners."
+  },
+  {
+    "objectID": "material/Resources/indexp.html#resources",
+    "href": "material/Resources/indexp.html#resources",
+    "title": "",
+    "section": "Resources",
+    "text": "Resources\n\n\n   \n     \n     \n       Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nedX\n\n\nedX offers varios online courses with free verified certificates\n\n\n\nApr 5, 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nKaggle\n\n\nInside Kaggle you’ll find all the code & data you need to do your data science work.\n\n\n\nMar 30, 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDataquest Premium Access\n\n\nDataquest is platform that offers coding challenges and projects to learn essential data science skillsets.\n\n\n\nMar 29, 2023\n\n\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "material/Resources/edx/index.html",
+    "href": "material/Resources/edx/index.html",
+    "title": "edX",
+    "section": "",
+    "text": "edX is an amazing tool to practice code, but also to earn certificates. edX is a non-profit online learning platform that was founded by Harvard University and MIT in 2012. According to their history, it has partnered with universities, organizations, and institutions globally to create a network of educational resources. edX offers paid courses with the option to earn a certificate or credential upon completion; however, you can take the entire course without the certification and start building your portfolio. Check all the courses, the ones that I recommend are teach it by Harvard professors.\n\n\n\n\n\nGo to edX"
   },
   {
     "objectID": "material/Resources/dataquest/index.html",
@@ -184,16 +205,23 @@
   {
     "objectID": "material/Books/indexp.html",
     "href": "material/Books/indexp.html",
-    "title": "Books",
+    "title": "",
     "section": "",
-    "text": "Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\nNo matching items"
+    "text": "Discover some useful books on coding and other relevant topics. Happy reading!"
+  },
+  {
+    "objectID": "material/Books/indexp.html#books",
+    "href": "material/Books/indexp.html#books",
+    "title": "",
+    "section": "Books",
+    "text": "Books\n\n\n   \n     \n     \n       Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "material/index.html",
     "href": "material/index.html",
-    "title": "Material",
+    "title": "",
     "section": "",
-    "text": "Books\n\n\n\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\nCertifications\n\n\n\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\nResources\n\n\n\n\n\n\n\n \n\n\n\n\nNo matching items"
+    "text": "Material\nDiscover some useful books on coding and other relevant topics. Happy reading!\n\n\n\n\n\n\n\n\n\n  \n\n\n\n\nBooks\n\n\n\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\nCertifications\n\n\n\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\nResources\n\n\n\n\n\n\n\n \n\n\n\n\nNo matching items"
   },
   {
     "objectID": "material/Certifications/index.html",
@@ -205,9 +233,16 @@
   {
     "objectID": "material/Certifications/indexp.html",
     "href": "material/Certifications/indexp.html",
-    "title": "Certifications",
+    "title": "",
     "section": "",
-    "text": "Order By\n       Default\n         \n          Title\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\n\nPCAP: Programming Essentials in Python. Learn programming from scratch and master Python.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nLearn to code — for free. Build projects. Earn certifications.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTry this course for free and get your certification by IBM in Data Analyst\n\n\n\n\n\n\n\nNo matching items"
+    "text": "These free certifications cover a range of coding languages and technologies, and can help you demonstrate your expertise to potential employers."
+  },
+  {
+    "objectID": "material/Certifications/indexp.html#certifications",
+    "href": "material/Certifications/indexp.html#certifications",
+    "title": "",
+    "section": "Certifications",
+    "text": "Certifications\n\n\n   \n     \n     \n       Order By\n       Default\n         \n          Title\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nCISCO Networking Academy\n\n\nPCAP: Programming Essentials in Python. Learn programming from scratch and master Python.\n\n\n\n\n\n\n\n\n\n\n\n\n\nfreeCodeCamp Certifications\n\n\nLearn to code — for free. Build projects. Earn certifications.\n\n\n\n\n\n\n\n\n\n\n\n\n\nIBM Data Analyst certification\n\n\nTry this course for free and get your certification by IBM in Data Analyst\n\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "material/Certifications/freecodecamp/index.html",
