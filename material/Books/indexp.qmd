@@ -3,12 +3,13 @@ listing:
   - id: books
     contents: "*/index.qmd"
     type: grid
-    fields: [image, date, title, subtitle]
+    fields: [image, title]
     sort: "date desc"
     categories: numbered
     sort-ui: true
     filter-ui: true
     page-size: 36
+    image-height: 400px
 page-layout: full
 title-block-banner: false
 comments: false

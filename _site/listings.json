@@ -47,7 +47,9 @@
   },
   {
     "listing": "/material/Books/indexp.html",
-    "items": []
+    "items": [
+      "/material/Books/r_for_ds/index.html"
+    ]
   },
   {
     "listing": "/material/index.html",

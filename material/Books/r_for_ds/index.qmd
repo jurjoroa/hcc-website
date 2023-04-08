@@ -1,0 +1,67 @@
+---
+title: '{{< animate fadeInDown "R for Data Science"delay=.6s >}}'
+subtitle: '{{< animate fadeInDown "You’ll learn how to get your data into R, get it into the most useful structure, transform it, visualise it and model it. In this book, you will find a practicum of skills for data science."delay=.6s >}}'
+author: ["Jorge Roa"]
+date: "03-30-2023"
+categories: ["R", "Learning", "Book"]
+toc: true
+draft: false
+code-link: true
+comments: false
+title-block-banner: true
+image: images/r_for_ds.jpg
+page-layout: full
+include-in-header: meta.html
+filters:
+   - lightbox
+lightbox: 
+  match: auto
+  effect: fade
+  desc-position: left
+  css-class: "lightwidth"
+---
+
+![](images/r_for_ds.jpg){fig-align="center"}
+
+</br>
+
+
+This book is a great way to start in the data science world. When I took 
+
+
+<hr class="sep-2" />
+
+"How great would it be to write your own computer program? Python is a multi-paradigm programming language used by startups and tech giants like Google, Facebook, Netflix, and more. With intuitive, readable syntax, Python is a great first programming language to learn.
+
+Programming skills open you up to careers in almost any industry and are required if you want to continue to more advanced and higher paying software development and engineering roles.
+
+This course is a great place to start learning Python – no prior programming knowledge required. Completing the course earns you a Statement of Achievement. It is split into two parts preparing you for two certifications:
+
+Part 1 (PE1: 35 hours) prepares you for PCEP – Certified Entry-Level Python Programmer Certification.
+Part 2 (PE2: 40 hours) prepares you for PCAP – Certified Associate in Python Programming Certification."
+
+
+You'll learn these core skills:
+
+- Think algorithmically – how to analyze a problem and translate it for a computer to process.
+- Design, develop, and improve multi-module computer programs.
+- Analyze and model real-life problems in Object-Oriented Programming categories.
+- Understand a programmer's work in the software development process.
+- Learn how a program is executed in a computer environment.
+- Gain skills to create and develop your own programming portfolio.
+
+
+</br>
+
+*CISCO Networking Academy*
+
+<hr class="sep-2" />
+
+
+<center>
+<form action="https://r4ds.had.co.nz/">
+<button class="btn-hover color-9" target="_blank">
+Go to R for Data Science
+</button>
+</form>
+</center>
