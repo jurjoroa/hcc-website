@@ -1784,6 +1784,37 @@ code span.dv {
 }
 
 /*card events*/
+
+#listing-books .card-left {
+  border: 0px solid white;
+    background: repeating-radial-gradient(circle at bottom left, #fedc00 0%, #fedc00 5.56%, #fcb712 0%, #fcb712 11.11%, #f7921e 0%, #f7921e 16.67%, #e87f24 0%, #e87f24 22.22%, #dd6227 0%, #dd6227 27.78%, #dc4c27 0%, #dc4c27 33.33%, #ca3435 0%, #ca3435 38.89%, #b82841 0%, #b82841 44.44%, #953751 0%, #953751 50%, #364c88 0%, #364c88 55.56%, #16599d 0%, #16599d 61.11%, #02609e 0%, #02609e 66.67%, #0073a9 0%, #0073a9 72.22%, #008aa4 0%, #008aa4 77.78%, #239a87 0%, #239a87 83.33%, #7cba6d 0%, #7cba6d 88.89%, #becc2f 0%, #becc2f 94.44%, #e0d81d 0%, #e0d81d 100%), repeating-radial-gradient(circle at bottom right, #fedc00 0%, #fedc00 5.56%, #fcb712 0%, #fcb712 11.11%, #f7921e 0%, #f7921e 16.67%, #e87f24 0%, #e87f24 22.22%, #dd6227 0%, #dd6227 27.78%, #dc4c27 0%, #dc4c27 33.33%, #ca3435 0%, #ca3435 38.89%, #b82841 0%, #b82841 44.44%, #953751 0%, #953751 50%, #364c88 0%, #364c88 55.56%, #16599d 0%, #16599d 61.11%, #02609e 0%, #02609e 66.67%, #0073a9 0%, #0073a9 72.22%, #008aa4 0%, #008aa4 77.78%, #239a87 0%, #239a87 83.33%, #7cba6d 0%, #7cba6d 88.89%, #becc2f 0%, #becc2f 94.44%, #e0d81d 0%, #e0d81d 100%);
+    background-blend-mode: overlay;
+    height: 100vh;
+  border-radius: 0px;
+  color: white;
+  font-weight: bold;
+  border: 3.5px solid #BF041C;
+    border-radius: 10px;
+}
+
+
+#listing-books .card-left:before{
+    content: '';
+    background:url('images/hcc_logo_card.png');
+    background-size:cover;
+    position:absolute;
+    width: 100px;
+    height: 27px;
+    margin-left:-10px;
+    bottom: 10px;
+}
+
+#listing-books.card-left:hover {
+  transform: scale(1.1);
+}
+
+
+
 .card-left {
   border: 3.5px solid #BF041C;
   background: #00325E ;
