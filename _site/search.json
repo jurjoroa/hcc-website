@@ -214,7 +214,7 @@
     "href": "material/Books/indexp.html#books",
     "title": "",
     "section": "Books",
-    "text": "Books\n\n\n   \n     \n     \n       Order By\n       Default\n         \n          Title\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nData Visualization: A Practical Introduction\n\n\n\n\n\n\n\n\n\n\n\n\n\nR for Data Science\n\n\n\n\n\n\n\nNo matching items"
+    "text": "Books\n\n\n   \n     \n     \n       Order By\n       Default\n         \n          Title\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nIntroduction to Data Science\n\n\n\n\n\n\n\n\n\n\n\n\n\nData Visualization: A Practical Introduction\n\n\n\n\n\n\n\n\n\n\n\n\n\nR for Data Science\n\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "material/index.html",
@@ -278,5 +278,12 @@
     "title": "Data Visualization: A Practical Introduction",
     "section": "",
     "text": "What I like about this book is that it gives you exercises, practice code, and the theory behind visualization and storytelling. Kieran Healy provides fantastic examples of plots and makes you understand the critical concepts behind ggplot. If you want to have a solid theoretical basis for plots and practical examples, this is your bible now.\n\n“This book is a hands-on introduction to the principles and practice of looking at and presenting data using R and ggplot. R is a powerful, widely used, and freely available programming language for data analysis. You may be interested in exploring ggplot after having used R before, or be entirely new to both R and ggplot and just want to graph your data. I do not assume you have any prior knowledge of R.”\nIf you follow the text and examples in this book, then by the end you will:\n\nUnderstand the basic principles behind effective data visualization.\nHave a practical sense for why some graphs and figures work well, while others may fail to inform or actively mislead.\nKnow how to create a wide range of plots in R using ggplot2.\nKnow how to refine plots for effective presentation.\n\n\n\n\n\n\nGo to Data Visualization"
+  },
+  {
+    "objectID": "material/Books/ids_r/index.html",
+    "href": "material/Books/ids_r/index.html",
+    "title": "Introduction to Data Science",
+    "section": "",
+    "text": "What I like about this book is that it gives you exercises, practice code, and the theory behind visualization and storytelling. Kieran Healy provides fantastic examples of plots and makes you understand the critical concepts behind ggplot. If you want to have a solid theoretical basis for plots and practical examples, this is your bible now.\n\n“This book is meant to be a textbook for a first course in Data Science. No previous knowledge of R is necessary, although some experience with programming may be helpful. The statistical concepts used to answer the case study questions are only briefly introduced, so a Probability and Statistics textbook is highly recommended for in-depth understanding of these concepts. If you read and understand all the chapters and complete all the exercises, you will be well-positioned to perform basic data analysis tasks and you will be prepared to learn the more advanced concepts and skills needed to become an expert.”\n\nPart 1: Basics of R and the tidyverse Learn R throughout the book Building blocks needed to keep learning\nPart 2: Data visualization with ggplot2 Use ggplot2 to generate graphs Describe important data visualization principles\nPart 3: Statistics with R Answer case study questions using probability, inference, and regression Demonstrate the importance of statistics in data analysis\nPart 4: Data wrangling with tidyverse Familiarize the reader with data wrangling Specific skills include web scraping, using regular expressions, and joining and reshaping data tables\nPart 5: Machine learning with caret Introduce machine learning through challenges Use the caret package to build prediction algorithms including K-nearest neighbors and random forests\nPart 6: Productivity tools for data science Brief introduction to productivity tools used in data science projects Tools include RStudio, UNIX/Linux shell, Git and GitHub, and knitr and R Markdown.\n\n\n\n\n\n\nGo to Intro to Data Science"
   }
 ]
