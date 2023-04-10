@@ -130,7 +130,7 @@
   </url>
   <url>
     <loc>https://www.hertiecodingclub.com/material/Books/indexp.html</loc>
-    <lastmod>2023-04-09T17:23:45.437Z</lastmod>
+    <lastmod>2023-04-10T10:05:03.790Z</lastmod>
   </url>
   <url>
     <loc>https://www.hertiecodingclub.com/material/index.html</loc>
@@ -159,5 +159,9 @@
   <url>
     <loc>https://www.hertiecodingclub.com/material/Books/r_for_ds/index.html</loc>
     <lastmod>2023-04-09T17:22:46.075Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.hertiecodingclub.com/material/Books/data_vis/index.html</loc>
+    <lastmod>2023-04-10T10:05:03.193Z</lastmod>
   </url>
 </urlset>

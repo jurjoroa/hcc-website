@@ -48,6 +48,7 @@
   {
     "listing": "/material/Books/indexp.html",
     "items": [
+      "/material/Books/data_vis/index.html",
       "/material/Books/r_for_ds/index.html"
     ]
   },

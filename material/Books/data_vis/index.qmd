@@ -1,0 +1,54 @@
+---
+title: '{{< animate fadeInDown "Data Visualization: A Practical Introduction"delay=.6s >}}'
+subtitle: '{{< animate fadeInDown "Mastering Data Visualization with R and ggplot2: A Hands-On Guide to Effective Communication and Analysis"delay=.6s >}}'
+author: ["Jorge Roa"]
+date: "04-09-2023"
+categories: ["R", "Learning", "Book", "Data Visualization"]
+toc: true
+draft: false
+code-link: true
+comments: false
+title-block-banner: true
+image: images/book.jpeg
+page-layout: full
+include-in-header: meta.html
+filters:
+   - lightbox
+lightbox: 
+  match: auto
+  effect: fade
+  desc-position: left
+  css-class: "lightwidth"
+---
+
+![](images/book.jpeg){fig-align="center" width="300"}
+
+</br>
+
+What I like about this book is that it gives you exercises, practice code, and the theory behind visualization and storytelling. Kieran Healy provides fantastic examples of plots and makes you understand the critical concepts behind ggplot. If you want to have a solid theoretical basis for plots and practical examples, this is your bible now. 
+
+
+<hr class="sep-2" />
+
+"This book is a hands-on introduction to the principles and practice of looking at and presenting data using R and ggplot. R is a powerful, widely used, and freely available programming language for data analysis. You may be interested in exploring ggplot after having used R before, or be entirely new to both R and ggplot and just want to graph your data. I do not assume you have any prior knowledge of R."
+
+If you follow the text and examples in this book, then by the end you will:
+
+- Understand the basic principles behind effective data visualization.
+- Have a practical sense for why some graphs and figures work well, while others may fail to inform or actively mislead.
+- Know how to create a wide range of plots in R using ggplot2.
+- Know how to refine plots for effective presentation.
+
+</br>
+
+
+
+<hr class="sep-2" />
+
+<center>
+<form action="https://socviz.co/index.html#preface">
+<button class="btn-hover color-9" target="_blank">
+Go to Data Visualization
+</button>
+</form>
+</center>

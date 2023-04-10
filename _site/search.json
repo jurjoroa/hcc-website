@@ -214,7 +214,7 @@
     "href": "material/Books/indexp.html#books",
     "title": "",
     "section": "Books",
-    "text": "Books\n\n\n   \n     \n     \n       Order By\n       Default\n         \n          Title\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nR for Data Science\n\n\n\n\n\n\n\nNo matching items"
+    "text": "Books\n\n\n   \n     \n     \n       Order By\n       Default\n         \n          Title\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nData Visualization: A Practical Introduction\n\n\n\n\n\n\n\n\n\n\n\n\n\nR for Data Science\n\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "material/index.html",
@@ -271,5 +271,12 @@
     "title": "R for Data Science",
     "section": "",
     "text": "This book is a great way to start in the data science world. When I took my Introduction to Data Science course, this book was the one that we used. It gives you a clear structure, good practices for coding, and all the basis that you need. —100% recommended.\n\n“R4DS teaches you how to do data science with R: You’ll learn how to get your data into R, get it into the most useful structure, transform it, visualise it and model it. In this book, you will find a practicum of skills for data science. Just as a chemist learns how to clean test tubes and stock a lab, you’ll learn how to clean data and draw plots—and many other things besides. These are the skills that allow data science to happen, and here you will find the best practices for doing each of these things with R. You’ll learn how to use the grammar of graphics, literate programming, and reproducible research to save time. You’ll also learn how to manage cognitive resources to facilitate discoveries when wrangling, visualising, and exploring data.”\n\n\n\n\n\nGo to R for Data Science"
+  },
+  {
+    "objectID": "material/Books/data_vis/index.html",
+    "href": "material/Books/data_vis/index.html",
+    "title": "Data Visualization: A Practical Introduction",
+    "section": "",
+    "text": "What I like about this book is that it gives you exercises, practice code, and the theory behind visualization and storytelling. Kieran Healy provides fantastic examples of plots and makes you understand the critical concepts behind ggplot. If you want to have a solid theoretical basis for plots and practical examples, this is your bible now.\n\n“This book is a hands-on introduction to the principles and practice of looking at and presenting data using R and ggplot. R is a powerful, widely used, and freely available programming language for data analysis. You may be interested in exploring ggplot after having used R before, or be entirely new to both R and ggplot and just want to graph your data. I do not assume you have any prior knowledge of R.”\nIf you follow the text and examples in this book, then by the end you will:\n\nUnderstand the basic principles behind effective data visualization.\nHave a practical sense for why some graphs and figures work well, while others may fail to inform or actively mislead.\nKnow how to create a wide range of plots in R using ggplot2.\nKnow how to refine plots for effective presentation.\n\n\n\n\n\n\nGo to Data Visualization"
   }
 ]
