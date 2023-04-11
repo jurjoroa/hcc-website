@@ -203,6 +203,34 @@
     "text": "“Dataquest is a self-learning platform that offers interactive coding challenges and projects to learn essential data science skillsets. Four distinct paths can be chosen with different learning materials: Data Analyst in R, Data Analyst in Python, Data Scientist in Python, or Data Engineer. By completing the learning paths, students will receive certificates and create projects that can be added to their data science portfolio as a demonstration of their skills to potential employers. In order to get access to premium Dataquest account for Fall semester 2021, please contact the Data Science Lab team at datasciencelab@hertie-school.org. The start of every learning path is always focused on building up the foundation of the programming language. Therefore, if you are looking for a place to start, step 1 in Data Analyst or Data Scientist tracks for both R and Python concerns with developing your programming skills from beginner to intermediate level.”\n\nData science training resources\n\n\n\n\nGo to Dataquest"
   },
   {
+    "objectID": "material/Books/art_ds/index.html",
+    "href": "material/Books/art_ds/index.html",
+    "title": "The Art of Data Science: A Guide for Anyone Who Works with Data",
+    "section": "",
+    "text": "This book is a great way to start in the data science world. When I took my Introduction to Data Science course, this book was the one that we used. It gives you a clear structure, good practices for coding, and all the basis that you need. —100% recommended.\n\n“What we have set out to do in this book is to write down the process of data analysis. What we describe is not a specific “formula” for data analysis—something like “apply this method and then run that test”— but rather is a general process that can be applied in a variety of situations. Through our extensive experience both managing data analysts and conducting our own data analyses, we have carefully observed what produces coherent results and what fails to produce useful insights into data. Our goal is to write down what we have learned in the hopes that others may find it useful.”\n\n\n\n\n\nGo to Art of Data Science"
+  },
+  {
+    "objectID": "material/Books/python_for_ev/index.html",
+    "href": "material/Books/python_for_ev/index.html",
+    "title": "Python for Everybody",
+    "section": "",
+    "text": "What I like about this book is that it gives you exercises, practice code, and the theory behind visualization and storytelling. Kieran Healy provides fantastic examples of plots and makes you understand the critical concepts behind ggplot. If you want to have a solid theoretical basis for plots and practical examples, this is your bible now.\n\n“Python for Everybody is an introduction to the basics of coding in Python 3 with an emphasis on practical usage. It is intended as a foundation for students who are looking to apply Python within other academic subjects as well as in preparation for the serious study of computer science.”\n\nChapter 1: Introduction\nChapter 2: Variables\nChapter 3: Conditionals\nChapter 4: Functions\nChapter 5: Iterations\nChapter 6: Strings\nChapter 7: Files\nChapter 8: Lists\nChapter 9: Dictionaries\nChapter 10: Tuples\nChapter 11: Regex\nChapter 12: Networked Programs\nChapter 13: Python and Web Services\nChapter 14: Objects\nChapter 15: Python and Databases\n\n\n\n\n\n\nGo to Python for everybody"
+  },
+  {
+    "objectID": "material/Books/ggplot2/index.html",
+    "href": "material/Books/ggplot2/index.html",
+    "title": "ggplot2: elegant graphics for data analysis",
+    "section": "",
+    "text": "What I like about this book is that it gives you exercises, practice code, and the theory behind visualization and storytelling. Kieran Healy provides fantastic examples of plots and makes you understand the critical concepts behind ggplot. If you want to have a solid theoretical basis for plots and practical examples, this is your bible now.\n\n“This book provides a hands-on introduction to ggplot2 with lots of example code and graphics. It also explains the grammar on which ggplot2 is based. Like other formal systems, ggplot2 is useful even when you don’t understand the underlying model. However, the more you learn about it, the more effectively you’ll be able to use ggplot2.\nThis book will introduce you to ggplot2 assuming that you’re a novice, unfamiliar with the grammar; teach you the basics so that you can re-create plots you are already familiar with; show you how to use the grammar to create new types of graphics; and eventually turn you into an expert who can build new components to extend the grammar.”\n\n\n\n\n\nGo to ggplot2\n\n\n\nCheck the material of the book on GitHub\n\n\n\nGo to ggplot2’s github repo"
+  },
+  {
+    "objectID": "material/Books/ids_r/index.html",
+    "href": "material/Books/ids_r/index.html",
+    "title": "Introduction to Data Science",
+    "section": "",
+    "text": "What I like about this book is that it gives you exercises, practice code, and the theory behind visualization and storytelling. Kieran Healy provides fantastic examples of plots and makes you understand the critical concepts behind ggplot. If you want to have a solid theoretical basis for plots and practical examples, this is your bible now.\n\n“This book is meant to be a textbook for a first course in Data Science. No previous knowledge of R is necessary, although some experience with programming may be helpful. The statistical concepts used to answer the case study questions are only briefly introduced, so a Probability and Statistics textbook is highly recommended for in-depth understanding of these concepts. If you read and understand all the chapters and complete all the exercises, you will be well-positioned to perform basic data analysis tasks and you will be prepared to learn the more advanced concepts and skills needed to become an expert.”\n\nPart 1: Basics of R and the tidyverse Learn R throughout the book Building blocks needed to keep learning\nPart 2: Data visualization with ggplot2 Use ggplot2 to generate graphs Describe important data visualization principles\nPart 3: Statistics with R Answer case study questions using probability, inference, and regression Demonstrate the importance of statistics in data analysis\nPart 4: Data wrangling with tidyverse Familiarize the reader with data wrangling Specific skills include web scraping, using regular expressions, and joining and reshaping data tables\nPart 5: Machine learning with caret Introduce machine learning through challenges Use the caret package to build prediction algorithms including K-nearest neighbors and random forests\nPart 6: Productivity tools for data science Brief introduction to productivity tools used in data science projects Tools include RStudio, UNIX/Linux shell, Git and GitHub, and knitr and R Markdown.\n\n\n\n\n\n\nGo to Intro to Data Science"
+  },
+  {
     "objectID": "material/Books/indexp.html",
     "href": "material/Books/indexp.html",
     "title": "",
@@ -215,6 +243,41 @@
     "title": "",
     "section": "Books",
     "text": "Books\n\n\n   \n     \n     \n       Order By\n       Default\n         \n          Title\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nThe Art of Data Science: A Guide for Anyone Who Works with Data\n\n\n\n\n\n\n\n\n\n\n\n\n\nExploratory Data Analysis with R\n\n\n\n\n\n\n\n\n\n\n\n\n\nSpatial Data Science with applications in R\n\n\n\n\n\n\n\n\n\n\n\n\n\nggplot2: elegant graphics for data analysis\n\n\n\n\n\n\n\n\n\n\n\n\n\nIntroduction to Data Science\n\n\n\n\n\n\n\n\n\n\n\n\n\nPython for Everybody\n\n\n\n\n\n\n\n\n\n\n\n\n\nWeb Scraping with R\n\n\n\n\n\n\n\n\n\n\n\n\n\nData Visualization: A Practical Introduction\n\n\n\n\n\n\n\n\n\n\n\n\n\nR for Data Science\n\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "material/Books/eda_r/index.html",
+    "href": "material/Books/eda_r/index.html",
+    "title": "Exploratory Data Analysis with R",
+    "section": "",
+    "text": "This book is a great way to start in the data science world. When I took my Introduction to Data Science course, this book was the one that we used. It gives you a clear structure, good practices for coding, and all the basis that you need. —100% recommended.\n\n“This book covers the essential exploratory techniques for summarizing data with R. These techniques are typically applied before formal modeling commences and can help inform the development of more complex statistical models. Exploratory techniques are also important for eliminating or sharpening potential hypotheses about the world that can be addressed by the data you have. We will cover in detail the plotting systems in R as well as some of the basic principles of constructing informative data graphics. We will also cover some of the common multivariate statistical techniques used to visualize high-dimensional data.”\n\n\n\n\n\nGo to Exploratory Data Analysis with R"
+  },
+  {
+    "objectID": "material/Books/webscrapping_r/index.html",
+    "href": "material/Books/webscrapping_r/index.html",
+    "title": "Web Scraping with R",
+    "section": "",
+    "text": "This book is a great way to start in the data science world. When I took my Introduction to Data Science course, this book was the one that we used. It gives you a clear structure, good practices for coding, and all the basis that you need. —100% recommended.\n\n“Web Scraping with R” is a comprehensive guide that provides readers with a practical and comprehensive introduction to web scraping using the R programming language. The book covers a wide range of topics related to web scraping, from the motivation for web scraping, to the techniques and tools used for web scraping, as well as the challenges that come with the process. The book is divided into several chapters, each of which delves into a particular aspect of web scraping using R.”\n\n\n\n\n\nGo to Webscrapping for R"
+  },
+  {
+    "objectID": "material/Books/r_for_ds/index.html",
+    "href": "material/Books/r_for_ds/index.html",
+    "title": "R for Data Science",
+    "section": "",
+    "text": "This book is a great way to start in the data science world. When I took my Introduction to Data Science course, this book was the one that we used. It gives you a clear structure, good practices for coding, and all the basis that you need. —100% recommended.\n\n“R4DS teaches you how to do data science with R: You’ll learn how to get your data into R, get it into the most useful structure, transform it, visualise it and model it. In this book, you will find a practicum of skills for data science. Just as a chemist learns how to clean test tubes and stock a lab, you’ll learn how to clean data and draw plots—and many other things besides. These are the skills that allow data science to happen, and here you will find the best practices for doing each of these things with R. You’ll learn how to use the grammar of graphics, literate programming, and reproducible research to save time. You’ll also learn how to manage cognitive resources to facilitate discoveries when wrangling, visualising, and exploring data.”\n\n\n\n\n\nGo to R for Data Science"
+  },
+  {
+    "objectID": "material/Books/data_vis/index.html",
+    "href": "material/Books/data_vis/index.html",
+    "title": "Data Visualization: A Practical Introduction",
+    "section": "",
+    "text": "What I like about this book is that it gives you exercises, practice code, and the theory behind visualization and storytelling. Kieran Healy provides fantastic examples of plots and makes you understand the critical concepts behind ggplot. If you want to have a solid theoretical basis for plots and practical examples, this is your bible now.\n\n“This book is a hands-on introduction to the principles and practice of looking at and presenting data using R and ggplot. R is a powerful, widely used, and freely available programming language for data analysis. You may be interested in exploring ggplot after having used R before, or be entirely new to both R and ggplot and just want to graph your data. I do not assume you have any prior knowledge of R.”\nIf you follow the text and examples in this book, then by the end you will:\n\nUnderstand the basic principles behind effective data visualization.\nHave a practical sense for why some graphs and figures work well, while others may fail to inform or actively mislead.\nKnow how to create a wide range of plots in R using ggplot2.\nKnow how to refine plots for effective presentation.\n\n\n\n\n\n\nGo to Data Visualization"
+  },
+  {
+    "objectID": "material/Books/spatial_ds/index.html",
+    "href": "material/Books/spatial_ds/index.html",
+    "title": "Spatial Data Science with applications in R",
+    "section": "",
+    "text": "This book is a great way to start in the data science world. When I took my Introduction to Data Science course, this book was the one that we used. It gives you a clear structure, good practices for coding, and all the basis that you need. —100% recommended.\n\n“This book introduces and explains the concepts underlying spatial data: points, lines, polygons, rasters, coverages, geometry attributes, data cubes, reference systems, as well as higher-level concepts including how attributes relate to geometries and how this affects analysis. The relationship of attributes to geometries is known as support, and changing support also changes the characteristics of attributes. Some data generation processes are continuous in space, and may be observed everywhere. Others are discrete, observed in tesselated containers. In modern spatial data analysis, tesellated methods are often used for all data, extending across the legacy partition into point process, geostatistical and lattice models. It is support (and the understanding of support) that underlies the importance of spatial representation. The book aims at data scientists who want to get a grip on using spatial data in their analysis. To exemplify how to do things, it uses R”\n\n\n\n\n\nGo to Spatial Data Science"
   },
   {
     "objectID": "material/index.html",
@@ -264,68 +327,5 @@
     "title": "CISCO Networking Academy",
     "section": "",
     "text": "This is a course offered by the CISCO Networking Academy. What I really like is that at the end it offers a proof of completion. This certification in combination with other tools it’s a good way to start with Python. Here I leave the summary of the CISCO website and the link as well.\n\n“How great would it be to write your own computer program? Python is a multi-paradigm programming language used by startups and tech giants like Google, Facebook, Netflix, and more. With intuitive, readable syntax, Python is a great first programming language to learn.\nProgramming skills open you up to careers in almost any industry and are required if you want to continue to more advanced and higher paying software development and engineering roles.\nThis course is a great place to start learning Python – no prior programming knowledge required. Completing the course earns you a Statement of Achievement. It is split into two parts preparing you for two certifications:\nPart 1 (PE1: 35 hours) prepares you for PCEP – Certified Entry-Level Python Programmer Certification. Part 2 (PE2: 40 hours) prepares you for PCAP – Certified Associate in Python Programming Certification.”\nYou’ll learn these core skills:\n\nThink algorithmically – how to analyze a problem and translate it for a computer to process.\nDesign, develop, and improve multi-module computer programs.\nAnalyze and model real-life problems in Object-Oriented Programming categories.\nUnderstand a programmer’s work in the software development process.\nLearn how a program is executed in a computer environment.\nGain skills to create and develop your own programming portfolio.\n\n\nCISCO Networking Academy\n\n\n\n\nGo to CISCO PCAP"
-  },
-  {
-    "objectID": "material/Books/r_for_ds/index.html",
-    "href": "material/Books/r_for_ds/index.html",
-    "title": "R for Data Science",
-    "section": "",
-    "text": "This book is a great way to start in the data science world. When I took my Introduction to Data Science course, this book was the one that we used. It gives you a clear structure, good practices for coding, and all the basis that you need. —100% recommended.\n\n“R4DS teaches you how to do data science with R: You’ll learn how to get your data into R, get it into the most useful structure, transform it, visualise it and model it. In this book, you will find a practicum of skills for data science. Just as a chemist learns how to clean test tubes and stock a lab, you’ll learn how to clean data and draw plots—and many other things besides. These are the skills that allow data science to happen, and here you will find the best practices for doing each of these things with R. You’ll learn how to use the grammar of graphics, literate programming, and reproducible research to save time. You’ll also learn how to manage cognitive resources to facilitate discoveries when wrangling, visualising, and exploring data.”\n\n\n\n\n\nGo to R for Data Science"
-  },
-  {
-    "objectID": "material/Books/data_vis/index.html",
-    "href": "material/Books/data_vis/index.html",
-    "title": "Data Visualization: A Practical Introduction",
-    "section": "",
-    "text": "What I like about this book is that it gives you exercises, practice code, and the theory behind visualization and storytelling. Kieran Healy provides fantastic examples of plots and makes you understand the critical concepts behind ggplot. If you want to have a solid theoretical basis for plots and practical examples, this is your bible now.\n\n“This book is a hands-on introduction to the principles and practice of looking at and presenting data using R and ggplot. R is a powerful, widely used, and freely available programming language for data analysis. You may be interested in exploring ggplot after having used R before, or be entirely new to both R and ggplot and just want to graph your data. I do not assume you have any prior knowledge of R.”\nIf you follow the text and examples in this book, then by the end you will:\n\nUnderstand the basic principles behind effective data visualization.\nHave a practical sense for why some graphs and figures work well, while others may fail to inform or actively mislead.\nKnow how to create a wide range of plots in R using ggplot2.\nKnow how to refine plots for effective presentation.\n\n\n\n\n\n\nGo to Data Visualization"
-  },
-  {
-    "objectID": "material/Books/ids_r/index.html",
-    "href": "material/Books/ids_r/index.html",
-    "title": "Introduction to Data Science",
-    "section": "",
-    "text": "What I like about this book is that it gives you exercises, practice code, and the theory behind visualization and storytelling. Kieran Healy provides fantastic examples of plots and makes you understand the critical concepts behind ggplot. If you want to have a solid theoretical basis for plots and practical examples, this is your bible now.\n\n“This book is meant to be a textbook for a first course in Data Science. No previous knowledge of R is necessary, although some experience with programming may be helpful. The statistical concepts used to answer the case study questions are only briefly introduced, so a Probability and Statistics textbook is highly recommended for in-depth understanding of these concepts. If you read and understand all the chapters and complete all the exercises, you will be well-positioned to perform basic data analysis tasks and you will be prepared to learn the more advanced concepts and skills needed to become an expert.”\n\nPart 1: Basics of R and the tidyverse Learn R throughout the book Building blocks needed to keep learning\nPart 2: Data visualization with ggplot2 Use ggplot2 to generate graphs Describe important data visualization principles\nPart 3: Statistics with R Answer case study questions using probability, inference, and regression Demonstrate the importance of statistics in data analysis\nPart 4: Data wrangling with tidyverse Familiarize the reader with data wrangling Specific skills include web scraping, using regular expressions, and joining and reshaping data tables\nPart 5: Machine learning with caret Introduce machine learning through challenges Use the caret package to build prediction algorithms including K-nearest neighbors and random forests\nPart 6: Productivity tools for data science Brief introduction to productivity tools used in data science projects Tools include RStudio, UNIX/Linux shell, Git and GitHub, and knitr and R Markdown.\n\n\n\n\n\n\nGo to Intro to Data Science"
-  },
-  {
-    "objectID": "material/Books/python_for_ev/index.html",
-    "href": "material/Books/python_for_ev/index.html",
-    "title": "Python for Everybody",
-    "section": "",
-    "text": "What I like about this book is that it gives you exercises, practice code, and the theory behind visualization and storytelling. Kieran Healy provides fantastic examples of plots and makes you understand the critical concepts behind ggplot. If you want to have a solid theoretical basis for plots and practical examples, this is your bible now.\n\n“Python for Everybody is an introduction to the basics of coding in Python 3 with an emphasis on practical usage. It is intended as a foundation for students who are looking to apply Python within other academic subjects as well as in preparation for the serious study of computer science.”\n\nChapter 1: Introduction\nChapter 2: Variables\nChapter 3: Conditionals\nChapter 4: Functions\nChapter 5: Iterations\nChapter 6: Strings\nChapter 7: Files\nChapter 8: Lists\nChapter 9: Dictionaries\nChapter 10: Tuples\nChapter 11: Regex\nChapter 12: Networked Programs\nChapter 13: Python and Web Services\nChapter 14: Objects\nChapter 15: Python and Databases\n\n\n\n\n\n\nGo to Python for everybody"
-  },
-  {
-    "objectID": "material/Books/ggplot2/index.html",
-    "href": "material/Books/ggplot2/index.html",
-    "title": "ggplot2: elegant graphics for data analysis",
-    "section": "",
-    "text": "What I like about this book is that it gives you exercises, practice code, and the theory behind visualization and storytelling. Kieran Healy provides fantastic examples of plots and makes you understand the critical concepts behind ggplot. If you want to have a solid theoretical basis for plots and practical examples, this is your bible now.\n\n“This book provides a hands-on introduction to ggplot2 with lots of example code and graphics. It also explains the grammar on which ggplot2 is based. Like other formal systems, ggplot2 is useful even when you don’t understand the underlying model. However, the more you learn about it, the more effectively you’ll be able to use ggplot2.\nThis book will introduce you to ggplot2 assuming that you’re a novice, unfamiliar with the grammar; teach you the basics so that you can re-create plots you are already familiar with; show you how to use the grammar to create new types of graphics; and eventually turn you into an expert who can build new components to extend the grammar.”\n\n\n\n\n\nGo to ggplot2\n\n\n\nCheck the material of the book on GitHub\n\n\n\nGo to ggplot2’s github repo"
-  },
-  {
-    "objectID": "material/Books/webscrapping_r/index.html",
-    "href": "material/Books/webscrapping_r/index.html",
-    "title": "Web Scraping with R",
-    "section": "",
-    "text": "This book is a great way to start in the data science world. When I took my Introduction to Data Science course, this book was the one that we used. It gives you a clear structure, good practices for coding, and all the basis that you need. —100% recommended.\n\n“Web Scraping with R” is a comprehensive guide that provides readers with a practical and comprehensive introduction to web scraping using the R programming language. The book covers a wide range of topics related to web scraping, from the motivation for web scraping, to the techniques and tools used for web scraping, as well as the challenges that come with the process. The book is divided into several chapters, each of which delves into a particular aspect of web scraping using R.”\n\n\n\n\n\nGo to Webscrapping for R"
-  },
-  {
-    "objectID": "material/Books/art_ds/index.html",
-    "href": "material/Books/art_ds/index.html",
-    "title": "The Art of Data Science: A Guide for Anyone Who Works with Data",
-    "section": "",
-    "text": "This book is a great way to start in the data science world. When I took my Introduction to Data Science course, this book was the one that we used. It gives you a clear structure, good practices for coding, and all the basis that you need. —100% recommended.\n\n“What we have set out to do in this book is to write down the process of data analysis. What we describe is not a specific “formula” for data analysis—something like “apply this method and then run that test”— but rather is a general process that can be applied in a variety of situations. Through our extensive experience both managing data analysts and conducting our own data analyses, we have carefully observed what produces coherent results and what fails to produce useful insights into data. Our goal is to write down what we have learned in the hopes that others may find it useful.”\n\n\n\n\n\nGo to Art of Data Science"
-  },
-  {
-    "objectID": "material/Books/eda_r/index.html",
-    "href": "material/Books/eda_r/index.html",
-    "title": "Exploratory Data Analysis with R",
-    "section": "",
-    "text": "This book is a great way to start in the data science world. When I took my Introduction to Data Science course, this book was the one that we used. It gives you a clear structure, good practices for coding, and all the basis that you need. —100% recommended.\n\n“This book covers the essential exploratory techniques for summarizing data with R. These techniques are typically applied before formal modeling commences and can help inform the development of more complex statistical models. Exploratory techniques are also important for eliminating or sharpening potential hypotheses about the world that can be addressed by the data you have. We will cover in detail the plotting systems in R as well as some of the basic principles of constructing informative data graphics. We will also cover some of the common multivariate statistical techniques used to visualize high-dimensional data.”\n\n\n\n\n\nGo to Exploratory Data Analysis with R"
-  },
-  {
-    "objectID": "material/Books/spatial_ds/index.html",
-    "href": "material/Books/spatial_ds/index.html",
-    "title": "Spatial Data Science with applications in R",
-    "section": "",
-    "text": "This book is a great way to start in the data science world. When I took my Introduction to Data Science course, this book was the one that we used. It gives you a clear structure, good practices for coding, and all the basis that you need. —100% recommended.\n\n“This book introduces and explains the concepts underlying spatial data: points, lines, polygons, rasters, coverages, geometry attributes, data cubes, reference systems, as well as higher-level concepts including how attributes relate to geometries and how this affects analysis. The relationship of attributes to geometries is known as support, and changing support also changes the characteristics of attributes. Some data generation processes are continuous in space, and may be observed everywhere. Others are discrete, observed in tesselated containers. In modern spatial data analysis, tesellated methods are often used for all data, extending across the legacy partition into point process, geostatistical and lattice models. It is support (and the understanding of support) that underlies the importance of spatial representation. The book aims at data scientists who want to get a grip on using spatial data in their analysis. To exemplify how to do things, it uses R”\n\n\n\n\n\nGo to Spatial Data Science"
   }
 ]
