@@ -1,0 +1,64 @@
+---
+title: '{{< animate fadeInDown "Python for Everybody"delay=.6s >}}'
+subtitle: '{{< animate fadeInDown "A Comprehensive Introduction to Practical Programming with Python 3, Designed for Students and Aspiring Programmers taught by Charles Severance"delay=.6s >}}'
+author: ["Jorge Roa"]
+date: "04-10-2023"
+categories: ["Python", "Learning", "Book"]
+toc: true
+draft: false
+code-link: true
+comments: false
+title-block-banner: true
+image: images/book.jpeg
+page-layout: full
+include-in-header: meta.html
+filters:
+   - lightbox
+lightbox: 
+  match: auto
+  effect: fade
+  desc-position: left
+  css-class: "lightwidth"
+---
+
+![](images/book.jpeg){fig-align="center" width="300"}
+
+</br>
+
+What I like about this book is that it gives you exercises, practice code, and the theory behind visualization and storytelling. Kieran Healy provides fantastic examples of plots and makes you understand the critical concepts behind ggplot. If you want to have a solid theoretical basis for plots and practical examples, this is your bible now. 
+
+
+<hr class="sep-2" />
+
+"Python for Everybody is an introduction to the basics of coding in Python 3 with an emphasis on practical usage. It is intended as a foundation for students who are looking to apply Python within other academic subjects as well as in preparation for the serious study of computer science."
+
+
+- **Chapter 1**: Introduction
+- **Chapter 2**: Variables
+- **Chapter 3**: Conditionals
+- **Chapter 4**: Functions
+- **Chapter 5**: Iterations
+- **Chapter 6**: Strings
+- **Chapter 7**: Files
+- **Chapter 8**: Lists
+- **Chapter 9**: Dictionaries
+- **Chapter 10**: Tuples
+- **Chapter 11**: Regex
+- **Chapter 12**: Networked Programs
+- **Chapter 13**: Python and Web Services
+- **Chapter 14**: Objects
+- **Chapter 15**: Python and Databases
+
+</br>
+
+
+
+<hr class="sep-2" />
+
+<center>
+<form action="https://books.trinket.io/pfe/index.html">
+<button class="btn-hover color-9" target="_blank">
+Go to Python for everybody
+</button>
+</form>
+</center>

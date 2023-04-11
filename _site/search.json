@@ -214,7 +214,7 @@
     "href": "material/Books/indexp.html#books",
     "title": "",
     "section": "Books",
-    "text": "Books\n\n\n   \n     \n     \n       Order By\n       Default\n         \n          Title\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nIntroduction to Data Science\n\n\n\n\n\n\n\n\n\n\n\n\n\nData Visualization: A Practical Introduction\n\n\n\n\n\n\n\n\n\n\n\n\n\nR for Data Science\n\n\n\n\n\n\n\nNo matching items"
+    "text": "Books\n\n\n   \n     \n     \n       Order By\n       Default\n         \n          Title\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nggplot2: elegant graphics for data analysis\n\n\n\n\n\n\n\n\n\n\n\n\n\nIntroduction to Data Science\n\n\n\n\n\n\n\n\n\n\n\n\n\nPython for Everybody\n\n\n\n\n\n\n\n\n\n\n\n\n\nWeb Scraping with R\n\n\n\n\n\n\n\n\n\n\n\n\n\nData Visualization: A Practical Introduction\n\n\n\n\n\n\n\n\n\n\n\n\n\nR for Data Science\n\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "material/index.html",
@@ -285,5 +285,26 @@
     "title": "Introduction to Data Science",
     "section": "",
     "text": "What I like about this book is that it gives you exercises, practice code, and the theory behind visualization and storytelling. Kieran Healy provides fantastic examples of plots and makes you understand the critical concepts behind ggplot. If you want to have a solid theoretical basis for plots and practical examples, this is your bible now.\n\n“This book is meant to be a textbook for a first course in Data Science. No previous knowledge of R is necessary, although some experience with programming may be helpful. The statistical concepts used to answer the case study questions are only briefly introduced, so a Probability and Statistics textbook is highly recommended for in-depth understanding of these concepts. If you read and understand all the chapters and complete all the exercises, you will be well-positioned to perform basic data analysis tasks and you will be prepared to learn the more advanced concepts and skills needed to become an expert.”\n\nPart 1: Basics of R and the tidyverse Learn R throughout the book Building blocks needed to keep learning\nPart 2: Data visualization with ggplot2 Use ggplot2 to generate graphs Describe important data visualization principles\nPart 3: Statistics with R Answer case study questions using probability, inference, and regression Demonstrate the importance of statistics in data analysis\nPart 4: Data wrangling with tidyverse Familiarize the reader with data wrangling Specific skills include web scraping, using regular expressions, and joining and reshaping data tables\nPart 5: Machine learning with caret Introduce machine learning through challenges Use the caret package to build prediction algorithms including K-nearest neighbors and random forests\nPart 6: Productivity tools for data science Brief introduction to productivity tools used in data science projects Tools include RStudio, UNIX/Linux shell, Git and GitHub, and knitr and R Markdown.\n\n\n\n\n\n\nGo to Intro to Data Science"
+  },
+  {
+    "objectID": "material/Books/python_for_ev/index.html",
+    "href": "material/Books/python_for_ev/index.html",
+    "title": "Python for Everybody",
+    "section": "",
+    "text": "What I like about this book is that it gives you exercises, practice code, and the theory behind visualization and storytelling. Kieran Healy provides fantastic examples of plots and makes you understand the critical concepts behind ggplot. If you want to have a solid theoretical basis for plots and practical examples, this is your bible now.\n\n“Python for Everybody is an introduction to the basics of coding in Python 3 with an emphasis on practical usage. It is intended as a foundation for students who are looking to apply Python within other academic subjects as well as in preparation for the serious study of computer science.”\n\nChapter 1: Introduction\nChapter 2: Variables\nChapter 3: Conditionals\nChapter 4: Functions\nChapter 5: Iterations\nChapter 6: Strings\nChapter 7: Files\nChapter 8: Lists\nChapter 9: Dictionaries\nChapter 10: Tuples\nChapter 11: Regex\nChapter 12: Networked Programs\nChapter 13: Python and Web Services\nChapter 14: Objects\nChapter 15: Python and Databases\n\n\n\n\n\n\nGo to Python for everybody"
+  },
+  {
+    "objectID": "material/Books/ggplot2/index.html",
+    "href": "material/Books/ggplot2/index.html",
+    "title": "ggplot2: elegant graphics for data analysis",
+    "section": "",
+    "text": "What I like about this book is that it gives you exercises, practice code, and the theory behind visualization and storytelling. Kieran Healy provides fantastic examples of plots and makes you understand the critical concepts behind ggplot. If you want to have a solid theoretical basis for plots and practical examples, this is your bible now.\n\n“This book provides a hands-on introduction to ggplot2 with lots of example code and graphics. It also explains the grammar on which ggplot2 is based. Like other formal systems, ggplot2 is useful even when you don’t understand the underlying model. However, the more you learn about it, the more effectively you’ll be able to use ggplot2.\nThis book will introduce you to ggplot2 assuming that you’re a novice, unfamiliar with the grammar; teach you the basics so that you can re-create plots you are already familiar with; show you how to use the grammar to create new types of graphics; and eventually turn you into an expert who can build new components to extend the grammar.”\n\n\n\n\n\nGo to ggplot2\n\n\n\nCheck the material of the book on GitHub\n\n\n\nGo to ggplot2’s github repo"
+  },
+  {
+    "objectID": "material/Books/webscrapping_r/index.html",
+    "href": "material/Books/webscrapping_r/index.html",
+    "title": "Web Scraping with R",
+    "section": "",
+    "text": "This book is a great way to start in the data science world. When I took my Introduction to Data Science course, this book was the one that we used. It gives you a clear structure, good practices for coding, and all the basis that you need. —100% recommended.\n\n“Web Scraping with R” is a comprehensive guide that provides readers with a practical and comprehensive introduction to web scraping using the R programming language. The book covers a wide range of topics related to web scraping, from the motivation for web scraping, to the techniques and tools used for web scraping, as well as the challenges that come with the process. The book is divided into several chapters, each of which delves into a particular aspect of web scraping using R.”\n\n\n\n\n\nGo to Webscrapping for R"
   }
 ]

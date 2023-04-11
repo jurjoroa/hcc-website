@@ -1,0 +1,64 @@
+---
+title: '{{< animate fadeInDown "ggplot2: elegant graphics for data analysis"delay=.6s >}}'
+subtitle: '{{< animate fadeInDown "Unlocking the Power of ggplot2: A Comprehensive Guide to Creating and Customizing Stunning Visualizations in R"delay=.6s >}}'
+author: ["Jorge Roa"]
+date: "04-10-2023"
+categories: ["R", "ggplot2", "Book"]
+toc: true
+draft: false
+code-link: true
+comments: false
+title-block-banner: true
+image: images/book.jpg
+page-layout: full
+include-in-header: meta.html
+filters:
+   - lightbox
+lightbox: 
+  match: auto
+  effect: fade
+  desc-position: left
+  css-class: "lightwidth"
+---
+
+![](images/book.jpg){fig-align="center" width="300"}
+
+</br>
+
+What I like about this book is that it gives you exercises, practice code, and the theory behind visualization and storytelling. Kieran Healy provides fantastic examples of plots and makes you understand the critical concepts behind ggplot. If you want to have a solid theoretical basis for plots and practical examples, this is your bible now. 
+
+
+<hr class="sep-2" />
+
+"This book provides a hands-on introduction to ggplot2 with lots of example code and graphics. It also explains the grammar on which ggplot2 is based. Like other formal systems, ggplot2 is useful even when you don’t understand the underlying model. However, the more you learn about it, the more effectively you’ll be able to use ggplot2. 
+
+
+This book will introduce you to ggplot2 assuming that you’re a novice, unfamiliar with the grammar; teach you the basics so that you can re-create plots you are already familiar with; show you how to use the grammar to create new types of graphics; and eventually turn you into an expert who can build new components to extend the grammar."
+
+
+
+</br>
+
+
+
+<hr class="sep-2" />
+
+<center>
+<form action="https://ggplot2-book.org/index.html">
+<button class="btn-hover color-9" target="_blank">
+Go to ggplot2
+</button>
+</form>
+</center>
+
+
+Check the material of the book on GitHub
+
+<center>
+<form action="https://github.com/hadley/ggplot2-book">
+<button class="btn-hover color-9" target="_blank">
+Go to ggplot2's github repo
+</button>
+</form>
+</center>
+

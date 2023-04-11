@@ -2,6 +2,7 @@
 listing:
   - id: books
     contents: "*/index.qmd"
+    grid-columns: 3
     type: grid
     fields: [image, title]
     sort: "date desc"

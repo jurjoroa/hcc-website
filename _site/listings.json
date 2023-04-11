@@ -48,7 +48,10 @@
   {
     "listing": "/material/Books/indexp.html",
     "items": [
+      "/material/Books/ggplot2/index.html",
       "/material/Books/ids_r/index.html",
+      "/material/Books/python_for_ev/index.html",
+      "/material/Books/webscrapping_r/index.html",
       "/material/Books/data_vis/index.html",
       "/material/Books/r_for_ds/index.html"
     ]
