@@ -6,8 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Jorge Roa">
+<meta name="dcterms.date" content="2023-04-11">
 
-<title>indexp</title>
+<title>The Art of Data Science: A Guide for Anyone Who Works with Data</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,27 +25,28 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../../">
-<link href="../../images/hcc.png" rel="icon" type="image/png">
-<script src="../../site_libs/quarto-listing/list.min.js"></script>
-<script src="../../site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="../../site_libs/quarto-html/quarto.js"></script>
-<script src="../../site_libs/quarto-html/popper.min.js"></script>
-<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
-<link href="../../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
-<link href="../../site_libs/quarto-contrib/animate-4.1.1/animate.min.css" rel="stylesheet">
+<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../">
+<link href="../../../images/hcc.png" rel="icon" type="image/png">
+<script src="../../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script src="../../../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../../../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-contrib/animate-4.1.1/animate.min.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -63,35 +66,6 @@ ul.task-list li input[type="checkbox"] {
     "search-submit-button-title": "Submit"
   }
 }</script>
-<script>
-
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-books .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-image','listing-title',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-title","listing-author","listing-date","listing-image","listing-description","listing-categories"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-books'] = new List('listing-books', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-HJEMN0LJY7"></script>
 
 <script type="text/javascript">
@@ -110,7 +84,7 @@ gtag('config', 'G-HJEMN0LJY7', { 'anonymize_ip': true});
 <!-- Open Graph / Facebook -->
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://www.hertiecodingclub.com">
-<meta property="og:title" content="">
+<meta property="og:title" content="The Art of Data Science: A Guide for Anyone Who Works with Data">
 <meta property="og:description" content="Welcome to the Hertie Coding Club! Our goal as a club is to help everyone and between us learn coding skills and show that coding is for everyone, no matter our background.">
 <style>:root{--animate-duration:3s;--animate-delay:2s;--animate-repeat:1}</style>
 <style>:root{--animate-duration:3s;--animate-delay:2s;--animate-repeat:1}</style>
@@ -119,12 +93,9 @@ gtag('config', 'G-HJEMN0LJY7', { 'anonymize_ip': true});
 <style>:root{--animate-duration:3s;--animate-delay:2s;--animate-repeat:1}</style>
 <style>:root{--animate-duration:3s;--animate-delay:2s;--animate-repeat:1}</style>
 <style>:root{--animate-duration:3s;--animate-delay:2s;--animate-repeat:1}</style>
-<style>:root{--animate-duration:3s;--animate-delay:2s;--animate-repeat:1}</style>
-<style>:root{--animate-duration:3s;--animate-delay:2s;--animate-repeat:1}</style>
 
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
-<link rel="stylesheet" href="../../styles.css">
+<link rel="stylesheet" href="../../../styles.css">
 </head>
 
 <body class="nav-fixed">
@@ -134,8 +105,8 @@ gtag('config', 'G-HJEMN0LJY7', { 'anonymize_ip': true});
     <nav class="navbar navbar-expand-lg navbar-dark ">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container">
-    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
-    <img src="../../images/hcc_final.png" alt="" class="navbar-logo">
+    <a href="../../../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../../../images/hcc_final.png" alt="" class="navbar-logo">
     </a>
   </div>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
@@ -144,7 +115,7 @@ gtag('config', 'G-HJEMN0LJY7', { 'anonymize_ip': true});
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../index.html"><i class="bi bi-house-fill" role="img">
+    <a class="nav-link" href="../../../index.html"><i class="bi bi-house-fill" role="img">
 </i> 
  <span class="menu-text">Home</span></a>
   </li>  
@@ -154,11 +125,11 @@ gtag('config', 'G-HJEMN0LJY7', { 'anonymize_ip': true});
     </a>
     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-fa-solid-people-group--members">    
         <li>
-    <a class="dropdown-item" href="../../members/team/team.html">
+    <a class="dropdown-item" href="../../../members/team/team.html">
  <span class="dropdown-text"><i class="fa-solid fa-person-chalkboard" aria-label="person-chalkboard"></i> Team</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../members/members/members.html">
+    <a class="dropdown-item" href="../../../members/members/members.html">
  <span class="dropdown-text"><i class="fa-solid fa-users-rectangle" aria-label="users-rectangle"></i> Club Members</span></a>
   </li>  
     </ul>
@@ -171,27 +142,27 @@ gtag('config', 'G-HJEMN0LJY7', { 'anonymize_ip': true});
     </a>
     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-learn">    
         <li>
-    <a class="dropdown-item" href="../../learn/rstudio.html">
+    <a class="dropdown-item" href="../../../learn/rstudio.html">
  <span class="dropdown-text"><i class="fa-brands fa-r-project" aria-label="r-project"></i> language</span></a>
   </li>  
     </ul>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="../../material/index.html">
+    <a class="nav-link" href="../../../material/index.html">
  <span class="menu-text"><i class="fa-solid fa-meteor" aria-label="meteor"></i> Material</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../events/index.html"><i class="bi bi-calendar3" role="img">
+    <a class="nav-link" href="../../../events/index.html"><i class="bi bi-calendar3" role="img">
 </i> 
  <span class="menu-text">Events</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../register.html"><i class="bi bi-fingerprint" role="img">
+    <a class="nav-link" href="../../../register.html"><i class="bi bi-fingerprint" role="img">
 </i> 
  <span class="menu-text">Register</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../about.html"><i class="bi bi-info-square-fill" role="img">
+    <a class="nav-link" href="../../../about.html"><i class="bi bi-info-square-fill" role="img">
 </i> 
  <span class="menu-text">About us</span></a>
   </li>  
@@ -205,179 +176,73 @@ gtag('config', 'G-HJEMN0LJY7', { 'anonymize_ip': true});
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-page">
+      <h1 class="title"><span class="animate__animated animate__fadeInDown animate__delay-.6s" style="display: inline-block;">The Art of Data Science: A Guide for Anyone Who Works with Data</span></h1>
+            <p class="subtitle lead"><span class="animate__animated animate__fadeInDown animate__delay-.6s" style="display: inline-block;">Comprehensive guide to data analysis that emphasizes the artistic and creative aspects of the process, while also incorporating technical skills and a data science approach.</span></p>
+                                <div class="quarto-categories">
+                <div class="quarto-category">R</div>
+                <div class="quarto-category">Data Analysis</div>
+                <div class="quarto-category">Book</div>
+                <div class="quarto-category">EDA</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Jorge Roa </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">April 11, 2023</p>
+      </div>
+    </div>
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#books" id="toc-books" class="nav-link active" data-scroll-target="#books">Books</a></li>
-  </ul>
-</nav>
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(9)</span></div><div class="category" data-category="Book">Book <span class="quarto-category-count">(7)</span></div><div class="category" data-category="Data Analysis">Data Analysis <span class="quarto-category-count">(2)</span></div><div class="category" data-category="Data Visualization">Data Visualization <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Data Wrangling">Data Wrangling <span class="quarto-category-count">(1)</span></div><div class="category" data-category="EDA">EDA <span class="quarto-category-count">(2)</span></div><div class="category" data-category="Learning">Learning <span class="quarto-category-count">(6)</span></div><div class="category" data-category="Python">Python <span class="quarto-category-count">(1)</span></div><div class="category" data-category="R">R <span class="quarto-category-count">(8)</span></div><div class="category" data-category="Spatia Analysis">Spatia Analysis <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Spatial data">Spatial data <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Webscrapping">Webscrapping <span class="quarto-category-count">(1)</span></div><div class="category" data-category="ggplot2">ggplot2 <span class="quarto-category-count">(1)</span></div></div></div>
-<!-- main -->
-<main class="content column-page-left" id="quarto-document-content">
-
-
-
-<p>Discover some useful books on coding and other relevant topics. Happy reading!</p>
-<section id="books" class="level2">
-<h2 class="anchored" data-anchor-id="books">Books</h2>
-<div id="listing-books" class="quarto-listing quarto-listing-container-grid">
-<div class="listing-actions-group">
-   <div class="input-group input-group-sm quarto-listing-sort">
-     <span class="input-group-text"><i class="bi bi-sort-down"></i></span>
-     <select id="listing-books-sort" class="form-select" aria-label="Order By" onchange="window['quarto-listings']['listing-books'].sort(this.options[this.selectedIndex].value, { order: this.options[this.selectedIndex].getAttribute('data-direction')})">
-       <option value="" disabled="" selected="" hidden="">Order By</option>
-       <option value="index" data-direction="asc">Default</option>
-         <option value="listing-title" data-direction="asc">
-          Title
-        </option>
-     </select>
-  </div>
-    <div class="input-group input-group-sm quarto-listing-filter">
-      <span class="input-group-text"><i class="bi bi-search"></i></span>
-      <input type="text" class="search form-control" placeholder="Filter">
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
     </div>
-</div>
-<div class="list grid quarto-listing-cols-3">
-<div class="g-col-1" data-index="0" data-categories="R,Data Analysis,Book,EDA" data-listing-date-sort="1681164000000" data-listing-file-modified-sort="1681217036854" data-listing-reading-time-sort="0.83">
-<a href="../../material/Books/art_ds/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img src="../../material/Books/art_ds/images/book.jpg" class="thumbnail-image card-img" style="height: 400px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-<p><span class="animate__animated animate__fadeInDown animate__delay-.6s" style="display: inline-block;">The Art of Data Science: A Guide for Anyone Who Works with Data</span></p>
-</h5>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="1" data-categories="R,Learning,Data Analysis,EDA" data-listing-date-sort="1681164000000" data-listing-file-modified-sort="1681212001751" data-listing-reading-time-sort="0.785">
-<a href="../../material/Books/eda_r/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img src="../../material/Books/eda_r/images/book.jpg" class="thumbnail-image card-img" style="height: 400px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-<p><span class="animate__animated animate__fadeInDown animate__delay-.6s" style="display: inline-block;">Exploratory Data Analysis with R</span></p>
-</h5>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="2" data-categories="R,Spatial data,Spatia Analysis" data-listing-date-sort="1681164000000" data-listing-file-modified-sort="1681214337912" data-listing-reading-time-sort="1.025">
-<a href="../../material/Books/spatial_ds/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img src="../../material/Books/spatial_ds/images/book.jpeg" class="thumbnail-image card-img" style="height: 400px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-<p><span class="animate__animated animate__fadeInDown animate__delay-.6s" style="display: inline-block;">Spatial Data Science with applications in R</span></p>
-</h5>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="3" data-categories="R,ggplot2,Book" data-listing-date-sort="1681077600000" data-listing-file-modified-sort="1681161442343" data-listing-reading-time-sort="0.99">
-<a href="../../material/Books/ggplot2/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img src="../../material/Books/ggplot2/images/book.jpg" class="thumbnail-image card-img" style="height: 400px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-<p><span class="animate__animated animate__fadeInDown animate__delay-.6s" style="display: inline-block;">ggplot2: elegant graphics for data analysis</span></p>
-</h5>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="4" data-categories="R,Learning,Book,Data Wrangling" data-listing-date-sort="1681077600000" data-listing-file-modified-sort="1681123998756" data-listing-reading-time-sort="1.72">
-<a href="../../material/Books/ids_r/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img src="../../material/Books/ids_r/images/book.png" class="thumbnail-image card-img" style="height: 400px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-<p><span class="animate__animated animate__fadeInDown animate__delay-.6s" style="display: inline-block;">Introduction to Data Science</span></p>
-</h5>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="5" data-categories="Python,Learning,Book" data-listing-date-sort="1681077600000" data-listing-file-modified-sort="1681159304547" data-listing-reading-time-sort="0.85">
-<a href="../../material/Books/python_for_ev/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img src="../../material/Books/python_for_ev/images/book.jpeg" class="thumbnail-image card-img" style="height: 400px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-<p><span class="animate__animated animate__fadeInDown animate__delay-.6s" style="display: inline-block;">Python for Everybody</span></p>
-</h5>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="6" data-categories="R,Learning,Book,Webscrapping" data-listing-date-sort="1681077600000" data-listing-file-modified-sort="1681163451831" data-listing-reading-time-sort="0.715">
-<a href="../../material/Books/webscrapping_r/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img src="../../material/Books/webscrapping_r/images/rvest.jpg" class="thumbnail-image card-img" style="height: 400px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-<p><span class="animate__animated animate__fadeInDown animate__delay-.6s" style="display: inline-block;">Web Scraping with R</span></p>
-</h5>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="7" data-categories="R,Learning,Book,Data Visualization" data-listing-date-sort="1680991200000" data-listing-file-modified-sort="1681121101808" data-listing-reading-time-sort="1.035">
-<a href="../../material/Books/data_vis/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img src="../../material/Books/data_vis/images/book.jpeg" class="thumbnail-image card-img" style="height: 400px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-<p><span class="animate__animated animate__fadeInDown animate__delay-.6s" style="display: inline-block;">Data Visualization: A Practical Introduction</span></p>
-</h5>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="8" data-categories="R,Learning,Book" data-listing-date-sort="1680991200000" data-listing-file-modified-sort="1681060964711" data-listing-reading-time-sort="0.975">
-<a href="../../material/Books/r_for_ds/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img src="../../material/Books/r_for_ds/images/r_for_ds.jpg" class="thumbnail-image card-img" style="height: 400px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-<p><span class="animate__animated animate__fadeInDown animate__delay-.6s" style="display: inline-block;">R for Data Science</span></p>
-</h5>
-</div>
-</div>
-</a>
-</div>
-</div>
-<div class="listing-no-matching d-none">
-No matching items
-</div>
-</div>
+<!-- main -->
+<main class="content quarto-banner-title-block column-page" id="quarto-document-content">
 
 
 
-</section>
+
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="images/book.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="images/book.jpg" class="img-fluid figure-img" width="300"></a></p>
+</figure>
+</div>
+<p><br></p>
+<p>This book is a great way to start in the data science world. When I took my Introduction to Data Science course, this book was the one that we used. It gives you a clear structure, good practices for coding, and all the basis that you need. —100% recommended.</p>
+<hr class="sep-2">
+<p>“What we have set out to do in this book is to write down the process of data analysis. What we describe is not a specific “formula” for data analysis—something like “apply this method and then run that test”— but rather is a general process that can be applied in a variety of situations. Through our extensive experience both managing data analysts and conducting our own data analyses, we have carefully observed what produces coherent results and what fails to produce useful insights into data. Our goal is to write down what we have learned in the hopes that others may find it useful.”</p>
+<p><br></p>
+<hr class="sep-2">
+<center>
+<form action="https://bookdown.org/rdpeng/artofdatascience/">
+<button class="btn-hover color-9" target="_blank">
+Go to Art of Data Science
+</button>
+</form>
+</center>
+
+
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -669,8 +534,9 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>
   </div>
 </footer>
+<script>var lightboxQuarto = GLightbox({"skin":"lightwidth","closeEffect":"fade","loop":true,"descPosition":"left","selector":".lightbox","openEffect":"fade"});</script>
 
 
 
-<script src="../../site_libs/quarto-html/zenscroll-min.js"></script>
+<script src="../../../site_libs/quarto-html/zenscroll-min.js"></script>
 </body></html>

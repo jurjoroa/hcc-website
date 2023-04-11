@@ -48,6 +48,9 @@
   {
     "listing": "/material/Books/indexp.html",
     "items": [
+      "/material/Books/art_ds/index.html",
+      "/material/Books/eda_r/index.html",
+      "/material/Books/spatial_ds/index.html",
       "/material/Books/ggplot2/index.html",
       "/material/Books/ids_r/index.html",
       "/material/Books/python_for_ev/index.html",

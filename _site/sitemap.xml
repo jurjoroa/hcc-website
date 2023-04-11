@@ -130,7 +130,7 @@
   </url>
   <url>
     <loc>https://www.hertiecodingclub.com/material/Books/indexp.html</loc>
-    <lastmod>2023-04-10T21:50:54.547Z</lastmod>
+    <lastmod>2023-04-11T12:44:00.062Z</lastmod>
   </url>
   <url>
     <loc>https://www.hertiecodingclub.com/material/index.html</loc>
@@ -158,7 +158,7 @@
   </url>
   <url>
     <loc>https://www.hertiecodingclub.com/material/Books/r_for_ds/index.html</loc>
-    <lastmod>2023-04-10T21:38:46.995Z</lastmod>
+    <lastmod>2023-04-11T12:40:00.255Z</lastmod>
   </url>
   <url>
     <loc>https://www.hertiecodingclub.com/material/Books/data_vis/index.html</loc>
@@ -170,7 +170,7 @@
   </url>
   <url>
     <loc>https://www.hertiecodingclub.com/material/Books/python_for_ev/index.html</loc>
-    <lastmod>2023-04-10T20:43:52.494Z</lastmod>
+    <lastmod>2023-04-11T12:33:34.132Z</lastmod>
   </url>
   <url>
     <loc>https://www.hertiecodingclub.com/material/Books/ggplot2/index.html</loc>
@@ -179,5 +179,17 @@
   <url>
     <loc>https://www.hertiecodingclub.com/material/Books/webscrapping_r/index.html</loc>
     <lastmod>2023-04-10T21:50:53.222Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.hertiecodingclub.com/material/Books/art_ds/index.html</loc>
+    <lastmod>2023-04-11T12:43:59.091Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.hertiecodingclub.com/material/Books/eda_r/index.html</loc>
+    <lastmod>2023-04-11T11:20:04.051Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.hertiecodingclub.com/material/Books/spatial_ds/index.html</loc>
+    <lastmod>2023-04-11T11:59:00.922Z</lastmod>
   </url>
 </urlset>

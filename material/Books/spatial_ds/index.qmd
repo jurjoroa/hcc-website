@@ -1,0 +1,47 @@
+---
+title: '{{< animate fadeInDown "Spatial Data Science with applications in R"delay=.6s >}}'
+subtitle: '{{< animate fadeInDown "Mastering Spatial Data Analysis for Data analysts and Data Scientists: Essential Concepts, Techniques, and R-based Applications"delay=.6s >}}'
+author: ["Jorge Roa"]
+date: "04-11-2023"
+categories: ["R", "Spatial data", "Spatia Analysis"]
+toc: true
+draft: false
+code-link: true
+comments: false
+title-block-banner: true
+image: images/book.jpeg
+page-layout: full
+include-in-header: meta.html
+filters:
+   - lightbox
+lightbox: 
+  match: auto
+  effect: fade
+  desc-position: left
+  css-class: "lightwidth"
+---
+
+![](images/book.jpeg){fig-align="center" width="300"}
+
+</br>
+
+This book is a great way to start in the data science world. When I took my Introduction to Data Science course, this book was the one that we used. It gives you a clear structure, good practices for coding, and all the basis that you need. —100% recommended.
+
+
+<hr class="sep-2" />
+
+"This book introduces and explains the concepts underlying spatial data: points, lines, polygons, rasters, coverages, geometry attributes, data cubes, reference systems, as well as higher-level concepts including how attributes relate to geometries and how this affects analysis. The relationship of attributes to geometries is known as support, and changing support also changes the characteristics of attributes. Some data generation processes are continuous in space, and may be observed everywhere. Others are discrete, observed in tesselated containers. In modern spatial data analysis, tesellated methods are often used for all data, extending across the legacy partition into point process, geostatistical and lattice models. It is support (and the understanding of support) that underlies the importance of spatial representation. The book aims at data scientists who want to get a grip on using spatial data in their analysis. To exemplify how to do things, it uses R"
+
+</br>
+
+
+
+<hr class="sep-2" />
+
+<center>
+<form action="https://r-spatial.org/book/">
+<button class="btn-hover color-9" target="_blank">
+Go to Spatial Data Science
+</button>
+</form>
+</center>

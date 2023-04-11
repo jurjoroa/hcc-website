@@ -1,0 +1,47 @@
+---
+title: '{{< animate fadeInDown "The Art of Data Science: A Guide for Anyone Who Works with Data"delay=.6s >}}'
+subtitle: '{{< animate fadeInDown "Comprehensive guide to data analysis that emphasizes the artistic and creative aspects of the process, while also incorporating technical skills and a data science approach."delay=.6s >}}'
+author: ["Jorge Roa"]
+date: "04-11-2023"
+categories: ["R", "Data Analysis", "Book", "EDA"]
+toc: true
+draft: false
+code-link: true
+comments: false
+title-block-banner: true
+image: images/book.jpg
+page-layout: full
+include-in-header: meta.html
+filters:
+   - lightbox
+lightbox: 
+  match: auto
+  effect: fade
+  desc-position: left
+  css-class: "lightwidth"
+---
+
+![](images/book.jpg){fig-align="center" width="300"}
+
+</br>
+
+This book is a great way to start in the data science world. When I took my Introduction to Data Science course, this book was the one that we used. It gives you a clear structure, good practices for coding, and all the basis that you need. —100% recommended.
+
+
+<hr class="sep-2" />
+
+"What we have set out to do in this book is to write down the process of data analysis. What we describe is not a specific “formula” for data analysis—something like “apply this method and then run that test”— but rather is a general process that can be applied in a variety of situations. Through our extensive experience both managing data analysts and conducting our own data analyses, we have carefully observed what produces coherent results and what fails to produce useful insights into data. Our goal is to write down what we have learned in the hopes that others may find it useful."
+
+</br>
+
+
+
+<hr class="sep-2" />
+
+<center>
+<form action="https://bookdown.org/rdpeng/artofdatascience/">
+<button class="btn-hover color-9" target="_blank">
+Go to Art of Data Science
+</button>
+</form>
+</center>

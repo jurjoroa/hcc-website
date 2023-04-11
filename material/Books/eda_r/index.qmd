@@ -1,0 +1,47 @@
+---
+title: '{{< animate fadeInDown "Exploratory Data Analysis with R"delay=.6s >}}'
+subtitle: '{{< animate fadeInDown "Unlocking the Power of Exploratory Data Analysis with R: A Step-by-Step Guide to Summarizing, Visualizing, and Testing Hypotheses for Effective Model Development and Data-Driven Insights"delay=.6s >}}'
+author: ["Jorge Roa"]
+date: "04-11-2023"
+categories: ["R", "Learning", "Data Analysis", "EDA"]
+toc: true
+draft: false
+code-link: true
+comments: false
+title-block-banner: true
+image: images/book.jpg
+page-layout: full
+include-in-header: meta.html
+filters:
+   - lightbox
+lightbox: 
+  match: auto
+  effect: fade
+  desc-position: left
+  css-class: "lightwidth"
+---
+
+![](images/book.jpg){fig-align="center" width="300"}
+
+</br>
+
+This book is a great way to start in the data science world. When I took my Introduction to Data Science course, this book was the one that we used. It gives you a clear structure, good practices for coding, and all the basis that you need. —100% recommended.
+
+
+<hr class="sep-2" />
+
+"This book covers the essential exploratory techniques for summarizing data with R. These techniques are typically applied before formal modeling commences and can help inform the development of more complex statistical models. Exploratory techniques are also important for eliminating or sharpening potential hypotheses about the world that can be addressed by the data you have. We will cover in detail the plotting systems in R as well as some of the basic principles of constructing informative data graphics. We will also cover some of the common multivariate statistical techniques used to visualize high-dimensional data."
+
+</br>
+
+
+
+<hr class="sep-2" />
+
+<center>
+<form action="https://bookdown.org/rdpeng/exdata/">
+<button class="btn-hover color-9" target="_blank">
+Go to Exploratory Data Analysis with R
+</button>
+</form>
+</center>
