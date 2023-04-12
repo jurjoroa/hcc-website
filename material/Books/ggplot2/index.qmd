@@ -39,7 +39,7 @@ This book is one of the classics when we discuss about data visualization. ggplo
 "This book provides a hands-on introduction to ggplot2 with lots of example code and graphics. It also explains the grammar on which ggplot2 is based. Like other formal systems, ggplot2 is useful even when you don’t understand the underlying model. However, the more you learn about it, the more effectively you’ll be able to use ggplot2. This book will introduce you to ggplot2 assuming that you’re a novice, unfamiliar with the grammar; teach you the basics so that you can re-create plots you are already familiar with; show you how to use the grammar to create new types of graphics; and eventually turn you into an expert who can build new components to extend the grammar."
 
 
-<hr class="sep-2" />
+
 
 <center>
 <form action="https://ggplot2-book.org/index.html">
@@ -49,5 +49,10 @@ Go to ggplot2
 </form>
 </center>
 
+<hr class="sep-2" />
 
 
+::: {.callout-tip}
+## Cite
+Hadley, W. (2016). *ggplot2: elegant graphics for data analysis.* Hadley Wickham.
+:::

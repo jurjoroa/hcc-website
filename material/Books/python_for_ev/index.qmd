@@ -59,7 +59,7 @@ Probably Charles Severance is one of the most famous people that teaches Python.
 | **Chapter 15**: Python and Databases|
 
 
-<hr class="sep-2" />
+
 
 <center>
 <form action="https://books.trinket.io/pfe/index.html">
@@ -76,3 +76,12 @@ Go to website PFE
 </button>
 </form>
 </center>
+
+
+<hr class="sep-2" />
+
+::: {.callout-tip}
+## Cite
+Severance, C. R. (2020). *Python for everybody*. Charles Severance.
+:::
+

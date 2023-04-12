@@ -42,7 +42,7 @@ One of the things that I like about R is how flexible it is as a tool or a "swis
 "This book introduces and explains the concepts underlying spatial data: points, lines, polygons, rasters, coverages, geometry attributes, data cubes, reference systems, as well as higher-level concepts including how attributes relate to geometries and how this affects analysis. The relationship of attributes to geometries is known as support, and changing support also changes the characteristics of attributes. Some data generation processes are continuous in space, and may be observed everywhere. Others are discrete, observed in tesselated containers. In modern spatial data analysis, tesellated methods are often used for all data, extending across the legacy partition into point process, geostatistical and lattice models. It is support (and the understanding of support) that underlies the importance of spatial representation. The book aims at data scientists who want to get a grip on using spatial data in their analysis. To exemplify how to do things, it uses R"
 
 
-<hr class="sep-2" />
+
 
 <center>
 <form action="https://r-spatial.org/book/">
@@ -51,3 +51,10 @@ Go to Spatial Data Science
 </button>
 </form>
 </center>
+
+<hr class="sep-2" />
+
+::: {.callout-tip}
+## Cite
+Pebesma, E., & Bivand, R. (2023). *Spatial Data Science: With Applications in R.* CRC Press.
+:::

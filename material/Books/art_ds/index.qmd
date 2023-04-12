@@ -42,7 +42,6 @@ More than a book, this is a guide to follow in the general data science processe
 "What we have set out to do in this book is to write down the process of data analysis. What we describe is not a specific “formula” for data analysis—something like “apply this method and then run that test”— but rather is a general process that can be applied in a variety of situations. Through our extensive experience both managing data analysts and conducting our own data analyses, we have carefully observed what produces coherent results and what fails to produce useful insights into data. Our goal is to write down what we have learned in the hopes that others may find it useful."
 
 
-<hr class="sep-2" />
 
 <center>
 <form action="https://bookdown.org/rdpeng/artofdatascience/">
@@ -51,3 +50,11 @@ Go to Art of Data Science
 </button>
 </form>
 </center>
+
+<hr class="sep-2" />
+
+::: {.callout-tip}
+## Cite
+Peng, R. D., & Matsui, E. (2016). *The Art of Data Science: A guide for anyone who works with Data.* (No Title).
+:::
+

@@ -63,7 +63,7 @@ If you don't have any experience with R, this is an excellent way to start. Rafa
 |   Tools include RStudio, UNIX/Linux shell, Git and GitHub, and knitr and R Markdown.|
 
 
-<hr class="sep-2" />
+
 
 <center>
 <form action="http://rafalab.dfci.harvard.edu/dsbook/">
@@ -72,3 +72,12 @@ Go to Intro to Data Science
 </button>
 </form>
 </center>
+
+<hr class="sep-2" />
+
+::: {.callout-tip}
+## Cite
+Irizarry, R. A. (2019). *Introduction to data science: Data analysis and prediction algorithms with R.* CRC Press.
+:::
+
+

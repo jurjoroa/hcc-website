@@ -48,8 +48,6 @@ If you follow the text and examples in this book, then by the end you will:
 - Know how to refine plots for effective presentation.
 
 
-<hr class="sep-2" />
-
 <center>
 <form action="https://socviz.co/index.html#preface">
 <button class="btn-hover color-9" target="_blank">
@@ -57,3 +55,10 @@ Go to Data Visualization
 </button>
 </form>
 </center>
+
+<hr class="sep-2" />
+
+::: {.callout-tip}
+## Cite
+Healy, K. (2018). *Data visualization: a practical introduction.* Princeton University Press.
+:::

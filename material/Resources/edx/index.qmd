@@ -10,6 +10,7 @@ code-link: true
 include-in-header: meta.html
 comments: false
 title-block-banner: true
+#bibliography: sample.bib
 image: images/edx.png
 page-layout: full
 filters:
@@ -29,14 +30,9 @@ lightbox:
 
 <hr class="sep-2" />
 
-edX is an amazing tool to practice code, but also to earn certificates. edX is a non-profit online learning platform that was founded by Harvard University and MIT in 2012. According to their history, it has partnered with universities, organizations, and institutions globally to create a network of educational resources. edX offers paid courses with the option to earn a certificate or credential upon completion; however, you can take the entire course without the certification and start building your portfolio. Check all the courses, the ones that I recommend are teach it by Harvard professors. 
-
-</br>
-
-
+edX is an amazing tool to practice code, but also to earn certificates. edX is a non-profit online learning platform that was founded by Harvard University and MIT in 2012. According to their history, it has partnered with universities, organizations, and institutions globally to create a network of educational resources. edX offers paid courses with the option to earn a certificate or credential upon completion; however, you can take the entire course without the certification and start building your portfolio. Check all the courses, the ones that I recommend are teach it by Harvard professors.
 
 <hr class="sep-2" />
-
 
 <center>
 <form action="https://www.edx.org/search?subject=Data%20Analysis%20%26%20Statistics">
@@ -45,3 +41,9 @@ Go to edX
 </button>
 </form>
 </center>
+
+
+::: {.callout-tip collapse="true"}
+## Cite
+Roa, J. (2023, April 5). *EdX*. Hertie Coding Club. [URL](https://www.hertiecodingclub.com/material/resources/edx/)
+:::
