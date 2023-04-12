@@ -21,19 +21,25 @@ lightbox:
   css-class: "lightwidth"
 ---
 
+
+<div class="books">
+
 ![](images/book.jpeg){fig-align="center" width="300"}
 
-</br>
-
-This book is a great way to start in the data science world. When I took my Introduction to Data Science course, this book was the one that we used. It gives you a clear structure, good practices for coding, and all the basis that you need. —100% recommended.
-
+</div>
 
 <hr class="sep-2" />
 
+<h1 class="book_aut"> Authors
+  <span style="font-size: 1em;">Edzer Pebesma</span>
+  <span style="font-size: 1em;">Roger Bivand</span>
+</h1>
+
+<hr class="sep-2" />
+
+One of the things that I like about R is how flexible it is as a tool or a "swiss knife" because you can employ different tools that before weren't possible. One of them is Spatial Analysis and this book provides a robust theoretical and practical background using R for Spatial analysis. It's updated and delivers clear examples of how spatial data is super useful for data analysis and other purposes. 
+
 "This book introduces and explains the concepts underlying spatial data: points, lines, polygons, rasters, coverages, geometry attributes, data cubes, reference systems, as well as higher-level concepts including how attributes relate to geometries and how this affects analysis. The relationship of attributes to geometries is known as support, and changing support also changes the characteristics of attributes. Some data generation processes are continuous in space, and may be observed everywhere. Others are discrete, observed in tesselated containers. In modern spatial data analysis, tesellated methods are often used for all data, extending across the legacy partition into point process, geostatistical and lattice models. It is support (and the understanding of support) that underlies the importance of spatial representation. The book aims at data scientists who want to get a grip on using spatial data in their analysis. To exemplify how to do things, it uses R"
-
-</br>
-
 
 
 <hr class="sep-2" />

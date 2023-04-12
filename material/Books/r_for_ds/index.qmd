@@ -3,7 +3,7 @@ title: '{{< animate fadeInDown "R for Data Science"delay=.6s >}}'
 subtitle: '{{< animate fadeInDown "You’ll learn how to get your data into R, get it into the most useful structure, transform it, visualise it and model it. In this book, you will find a practicum of skills for data science."delay=.6s >}}'
 author: ["Jorge Roa"]
 date: "04-09-2023"
-categories: ["R", "Learning", "Book"]
+categories: ["R", "Learning", "Data Science"]
 toc: true
 draft: false
 code-link: true
@@ -21,19 +21,25 @@ lightbox:
   css-class: "lightwidth"
 ---
 
+
+<div class="books">
+
 ![](images/r_for_ds.jpg){fig-align="center" width="300"}
 
-</br>
-
-This book is a great way to start in the data science world. When I took my Introduction to Data Science course, this book was the one that we used. It gives you a clear structure, good practices for coding, and all the basis that you need. —100% recommended.
-
+</div>
 
 <hr class="sep-2" />
 
+<h1 class="book_aut"> Author
+  <span style="font-size: 1em;">Hadley Wickham</span>
+    <span style="font-size: 1em;">Garrett Grolemund</span>
+</h1>
+
+<hr class="sep-2" />
+
+This book is a great way to start in the data science world. When I took my Introduction to Data Science course, this book was the one that we used. It gives you a clear structure, good practices for coding, and all the basis that you need. —100% recommended.
+
 "R4DS teaches you how to do data science with R: You’ll learn how to get your data into R, get it into the most useful structure, transform it, visualise it and model it. In this book, you will find a practicum of skills for data science. Just as a chemist learns how to clean test tubes and stock a lab, you’ll learn how to clean data and draw plots—and many other things besides. These are the skills that allow data science to happen, and here you will find the best practices for doing each of these things with R. You’ll learn how to use the grammar of graphics, literate programming, and reproducible research to save time. You’ll also learn how to manage cognitive resources to facilitate discoveries when wrangling, visualising, and exploring data."
-
-</br>
-
 
 
 <hr class="sep-2" />

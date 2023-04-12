@@ -21,19 +21,25 @@ lightbox:
   css-class: "lightwidth"
 ---
 
+
+<div class="books">
+
 ![](images/book.jpg){fig-align="center" width="300"}
 
-</br>
-
-This book is a great way to start in the data science world. When I took my Introduction to Data Science course, this book was the one that we used. It gives you a clear structure, good practices for coding, and all the basis that you need. —100% recommended.
-
+</div>
 
 <hr class="sep-2" />
 
+<h1 class="book_aut"> Author
+  <span style="font-size: 1em;">Roger D. Peng</span>
+    <span style="font-size: 1em;">Elizabeth Matsui</span>
+</h1>
+
+<hr class="sep-2" />
+
+More than a book, this is a guide to follow in the general data science processes. It's totally worth it because it gives you a series of steps to start from the scratch to answer a research question or a hypothesis. 
+
 "What we have set out to do in this book is to write down the process of data analysis. What we describe is not a specific “formula” for data analysis—something like “apply this method and then run that test”— but rather is a general process that can be applied in a variety of situations. Through our extensive experience both managing data analysts and conducting our own data analyses, we have carefully observed what produces coherent results and what fails to produce useful insights into data. Our goal is to write down what we have learned in the hopes that others may find it useful."
-
-</br>
-
 
 
 <hr class="sep-2" />

@@ -21,19 +21,25 @@ lightbox:
   css-class: "lightwidth"
 ---
 
+
+<div class="books">
+
 ![](images/rvest.png){fig-align="center" width="300"}
 
-</br>
-
-This book is a great way to start in the data science world. When I took my Introduction to Data Science course, this book was the one that we used. It gives you a clear structure, good practices for coding, and all the basis that you need. —100% recommended.
-
+</div>
 
 <hr class="sep-2" />
 
+<h1 class="book_aut"> Author
+  <span style="font-size: 1em;">Steve Pittard</span>
+</h1>
+
+<hr class="sep-2" />
+
+
+This book has recent material and methods to learn web scrapping with R using the tidyverse. It has a modern approach to getting different data types from the web and introduces API which is one fantastic option to retrieve data. I also like that it contains an example using the web scraped data doing sentiment analysis. Happy reading!
+
 "Web Scraping with R" is a comprehensive guide that provides readers with a practical and comprehensive introduction to web scraping using the R programming language. The book covers a wide range of topics related to web scraping, from the motivation for web scraping, to the techniques and tools used for web scraping, as well as the challenges that come with the process. The book is divided into several chapters, each of which delves into a particular aspect of web scraping using R."
-
-</br>
-
 
 
 <hr class="sep-2" />
@@ -41,7 +47,11 @@ This book is a great way to start in the data science world. When I took my Intr
 <center>
 <form action="https://steviep42.github.io/webscraping/book/">
 <button class="btn-hover color-9" target="_blank">
-Go to Webscrapping for R
+Go to Webscraping for R 
 </button>
 </form>
 </center>
+
+
+
+
