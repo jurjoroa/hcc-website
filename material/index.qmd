@@ -1,4 +1,5 @@
 ---
+title: "Material"
 listing:
   - id: Material
     contents: "**/indexp.qmd"
@@ -7,10 +8,16 @@ listing:
     page-size: 36
 page-layout: full
 title-block-banner: false
+include-in-header: meta.html
 comments: false
 toc: true
 ---
 
+
 # **Material**
 
-Discover some useful books on coding and other relevant topics. Happy reading!
+Here you can find material that covers books, free certifications, projects for your portfolio and some helpful resources to start or sharp your coding skills. 
+
+
+
+

@@ -1,4 +1,5 @@
 ---
+title: "Team"
 page-layout: full
 execute:
   freeze: auto

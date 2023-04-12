@@ -43,7 +43,7 @@ listing:
     image-height: 70px
 toc: true
 title-block-banner: false
-
+include-in-header: meta.html
 comments: false
 ---
 
