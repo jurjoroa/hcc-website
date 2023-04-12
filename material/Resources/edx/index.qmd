@@ -7,11 +7,11 @@ categories: ["edX", "Learning", "R", "Python"]
 toc: true
 draft: false
 code-link: true
+include-in-header: meta.html
 comments: false
 title-block-banner: true
 image: images/edx.png
 page-layout: full
-include-in-header: meta.html
 filters:
    - lightbox
 lightbox: 

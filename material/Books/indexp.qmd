@@ -1,4 +1,5 @@
 ---
+title: "Books"
 listing:
   - id: books
     contents: "*/index.qmd"
@@ -12,6 +13,7 @@ listing:
     page-size: 36
     image-height: 400px
 page-layout: full
+include-in-header: meta.html
 title-block-banner: false
 comments: false
 image: books.png

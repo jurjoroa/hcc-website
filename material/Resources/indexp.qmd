@@ -1,4 +1,5 @@
 ---
+title: "Resources"
 listing:
   - id: resources
     contents: "*/index.qmd"
@@ -14,6 +15,8 @@ title-block-banner: false
 comments: false
 image: toolbox.png
 toc: true
+include-in-header: meta.html
+
 ---
 
 These tools offer a wealth of learning opportunities, including interactive courses, real-world projects, and community forums where you can connect with other learners.

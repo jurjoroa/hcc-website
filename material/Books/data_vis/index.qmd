@@ -3,7 +3,7 @@ title: '{{< animate fadeInDown "Data Visualization: A Practical Introduction"del
 subtitle: '{{< animate fadeInDown "Mastering Data Visualization with R and ggplot2: A Hands-On Guide to Effective Communication and Analysis"delay=.6s >}}'
 author: ["Jorge Roa"]
 date: "04-09-2023"
-categories: ["R", "Learning", "Book", "Data Visualization"]
+categories: ["R", "Learning", "Data Visualization"]
 toc: true
 draft: false
 code-link: true

@@ -3,7 +3,7 @@ title: '{{< animate fadeInDown "ggplot2: elegant graphics for data analysis"dela
 subtitle: '{{< animate fadeInDown "Unlocking the Power of ggplot2: A Comprehensive Guide to Creating and Customizing Stunning Visualizations in R"delay=.6s >}}'
 author: ["Jorge Roa"]
 date: "04-10-2023"
-categories: ["R", "ggplot2", "Book"]
+categories: ["R", "ggplot2", "Data Visualization"]
 toc: true
 draft: false
 code-link: true

@@ -1,4 +1,5 @@
 ---
+title: "Certifications"
 listing:
   - id: certifications
     contents: "*/index.qmd"
@@ -11,6 +12,7 @@ listing:
     page-size: 36
 page-layout: full
 title-block-banner: false
+include-in-header: meta.html
 comments: false
 image: cert.png
 toc: true

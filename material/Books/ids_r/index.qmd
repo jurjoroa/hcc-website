@@ -3,7 +3,7 @@ title: '{{< animate fadeInDown "Introduction to Data Science"delay=.6s >}}'
 subtitle: '{{< animate fadeInDown "Master Real-World Data Analysis Challenges with Concepts, Skills, and Case Studies: An Introduction to Data Science taught by Rafael A. Irizarry"delay=.6s >}}'
 author: ["Jorge Roa"]
 date: "04-10-2023"
-categories: ["R", "Learning", "Book", "Data Wrangling"]
+categories: ["R", "Learning", "Data Wrangling"]
 toc: true
 draft: false
 code-link: true

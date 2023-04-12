@@ -9,7 +9,7 @@ draft: false
 code-link: true
 comments: false
 title-block-banner: true
-image: images/rvest.jpg
+image: images/rvest.png
 page-layout: full
 include-in-header: meta.html
 filters:
@@ -21,7 +21,7 @@ lightbox:
   css-class: "lightwidth"
 ---
 
-![](images/rvest.jpg){fig-align="center" width="300"}
+![](images/rvest.png){fig-align="center" width="300"}
 
 </br>
 

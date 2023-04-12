@@ -3,7 +3,7 @@ title: '{{< animate fadeInDown "Spatial Data Science with applications in R"dela
 subtitle: '{{< animate fadeInDown "Mastering Spatial Data Analysis for Data analysts and Data Scientists: Essential Concepts, Techniques, and R-based Applications"delay=.6s >}}'
 author: ["Jorge Roa"]
 date: "04-11-2023"
-categories: ["R", "Spatial data", "Spatia Analysis"]
+categories: ["R", "Spatial Data", "Spatial Analysis"]
 toc: true
 draft: false
 code-link: true
