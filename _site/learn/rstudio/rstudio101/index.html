@@ -234,6 +234,13 @@ gtag('config', 'G-HJEMN0LJY7', { 'anonymize_ip': true});
   <li><a href="#step-1-opening-a-new-project" id="toc-step-1-opening-a-new-project" class="nav-link" data-scroll-target="#step-1-opening-a-new-project">Step 1: Opening a new project</a></li>
   <li><a href="#step-2-create-our-first-project" id="toc-step-2-create-our-first-project" class="nav-link" data-scroll-target="#step-2-create-our-first-project">Step 2: Create our first project</a></li>
   </ul></li>
+  <li><a href="#working-directory-important" id="toc-working-directory-important" class="nav-link" data-scroll-target="#working-directory-important">Working directory IMPORTANT!</a>
+  <ul class="collapse">
+  <li><a href="#benefits" id="toc-benefits" class="nav-link" data-scroll-target="#benefits">Benefits</a>
+  <ul class="collapse">
+  <li><a href="#what-happens-if-i-dont-create-a-folder-for-my-project" id="toc-what-happens-if-i-dont-create-a-folder-for-my-project" class="nav-link" data-scroll-target="#what-happens-if-i-dont-create-a-folder-for-my-project">What happens if I don’t create a folder for my project?</a></li>
+  </ul></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -313,8 +320,30 @@ gtag('config', 'G-HJEMN0LJY7', { 'anonymize_ip': true});
 </tr>
 </tbody>
 </table>
+</section>
+</section>
+<section id="working-directory-important" class="level1">
+<h1>Working directory IMPORTANT!</h1>
+<p>In R, the working directory is the folder or directory where R will look for files and where it will save output files. I firmly believe setting the working directory is one of the most critical steps when working with R, as it can save you time and prevent errors.</p>
+<section id="benefits" class="level2">
+<h2 class="anchored" data-anchor-id="benefits">Benefits</h2>
+<ul>
+<li><p>Setting the working directory <code>wd()</code> makes it easier to read and write files in your R script.</p></li>
+<li><p>When you set the working directory to the folder where your data files are stored, you can simply specify the file names without having to write out the full file path.</p></li>
+<li><p>This makes your code more readable and easier to maintain.</p></li>
+<li><p>Setting the working directory can make it easier to share your code with others.</p></li>
+<li><p>If you provide your code to someone else, they may not have the same file paths on their computer as you do.</p></li>
+<li><p>By setting the working directory, you can ensure that your code will work on someone else’s computer without having to modify the file paths in the code.</p></li>
+<li><p>Overall, setting the working directory is an important step when working with R, as it can save you time, prevent errors, and make your code more portable.</p></li>
+</ul>
+<section id="what-happens-if-i-dont-create-a-folder-for-my-project" class="level3">
+<h3 class="anchored" data-anchor-id="what-happens-if-i-dont-create-a-folder-for-my-project">What happens if I don’t create a folder for my project?</h3>
+<ul>
+<li>If you do not set the working directory in an appropiate wat, R may look for files in the wrong location, which can lead to errors and a lot of time wasted</li>
+</ul>
 
 
+</section>
 </section>
 </section>
 
@@ -608,7 +637,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>
   </div>
 </footer>
-<script>var lightboxQuarto = GLightbox({"openEffect":"fade","selector":".lightbox","loop":true,"skin":"lightwidth","closeEffect":"fade","descPosition":"left"});</script>
+<script>var lightboxQuarto = GLightbox({"closeEffect":"fade","openEffect":"fade","loop":true,"skin":"lightwidth","descPosition":"left","selector":".lightbox"});</script>
 
 
 

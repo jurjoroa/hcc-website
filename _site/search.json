@@ -7,6 +7,27 @@
     "text": "About this site\n\n\n\n\n# Load the ggplot2 package\nlibrary(ggplot2)\n\n\n# Create some example data\nx <- 1:10\ny <- x^2\n\n# Create the plot\nggplot(data = data.frame(x, y), aes(x = x, y = y)) +\n  geom_line() + theme(text = element_text(family = \"Arial\", size = 20))\n\n\n\n\n\n\n\n\nWho are we?\n\nWhen the moon hits your eye\n\n\n damoncroberts\n DamonCharlesRoberts\n Wednesdays from 12:15 - 2:15 pm Mountain\n Ketchum Arts & Sciences, Office 382, Boulder, CO 80309\nSome text"
   },
   {
+    "objectID": "learn/rstudio/rstudio101/index.html",
+    "href": "learn/rstudio/rstudio101/index.html",
+    "title": "RStudio 101",
+    "section": "",
+    "text": "This document shows you how we can enable the use of multiple cores on Macs with Intel/Apple silicon chips (M1 and M2)."
+  },
+  {
+    "objectID": "learn/rstudio/rstudio101/index.html#step-1-opening-a-new-project",
+    "href": "learn/rstudio/rstudio101/index.html#step-1-opening-a-new-project",
+    "title": "RStudio 101",
+    "section": "Step 1: Opening a new project",
+    "text": "Step 1: Opening a new project\n\n\n\n\n\n\nWe will go to File tab and click in “New Project”.\n\n\n\n\n1.-Create Project\n2.-Project Type\n\n\n\n\n\n\n\n\nHere you have three options: since you are creating a new project, choose New Directory.\nSelect the type of project, as you can see, we have different options; or now, we will choose New Project"
+  },
+  {
+    "objectID": "learn/rstudio/rstudio101/index.html#step-2-create-our-first-project",
+    "href": "learn/rstudio/rstudio101/index.html#step-2-create-our-first-project",
+    "title": "RStudio 101",
+    "section": "Step 2: Create our first project",
+    "text": "Step 2: Create our first project\n\nOnce we open a new project, we need to decide where we want to store our project and all the code we will generate. I’ll talk about this later, but putting a project in a separate folder is good practice to have everything ordered.\n\n\n\n\n\n\nYour name project should be precise and not too long. In our case, we will name it “Hertie Coding Club R”\n\n\n\n3.-Choose folder\n4.-Icon project in project folder\n\n\n\n\n\n\n\n\nHere we show the folder in where we will save our project\nOnce you created your project, it should appear an icon like this within your folder."
+  },
+  {
     "objectID": "learn/rstudio/Multithreading/index.html",
     "href": "learn/rstudio/Multithreading/index.html",
     "title": "Enable Multithread with data.table in Mac/Intel chips",
@@ -70,13 +91,6 @@
     "text": "This post is a complementary material for my talk at rstudio::conf 2022 (which is happening TODAY!!!)!\nI’m writing this really quick, from the hotel room, for anyone interested to see the code used to create the plot that it is on my talk:"
   },
   {
-    "objectID": "learn/rstudio/Wrangling/index.html",
-    "href": "learn/rstudio/Wrangling/index.html",
-    "title": "Wrangling",
-    "section": "",
-    "text": "This post is a complementary material for my talk at rstudio::conf 2022 (which is happening TODAY!!!)!\nI’m writing this really quick, from the hotel room, for anyone interested to see the code used to create the plot that it is on my talk:"
-  },
-  {
     "objectID": "learn/rstudio/Install-r-studio/index.html",
     "href": "learn/rstudio/Install-r-studio/index.html",
     "title": "Install R and Rstudio: why R rocks 💻 🔥",
@@ -88,7 +102,7 @@
     "href": "learn/rstudio.html",
     "title": "Learn R",
     "section": "",
-    "text": "Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n  \n\n\n\n\n\nLearn the basics of R: open a project, setting a working directory and navigate RStudio interface\n\n\n\n\nRstudio\n\n\nInterface\n\n\n \n\n\n\n\nApr 12, 2023\n\n\nJorge Roa\n\n\n1 min\n\n\n\n\n\n\n  \n\n\n\n\n\nUnlock the power of data analysis and statistical computing with R and RStudio! Whether you are a student of public policy or a seasoned professional.\n\n\n\n\nR\n\n\nRStudio\n\n\nAccesibility\n\n\nInstall\n\n\n \n\n\n\n\nMar 2, 2023\n\n\nJorge Roa\n\n\n2 min\n\n\n\n\n\n\n  \n\n\n\n\n\nMultithreading offers faster and more efficient data processing, allowing for quicker analysis of complex datasets.\n\n\n\n\nGitHub\n\n\nGitHub Actions\n\n\nAutomations\n\n\nRStudio\n\n\nPosit\n\n\n \n\n\n\n\nJul 28, 2022\n\n\nJorge Roa, Fernando Alarid-Escudero\n\n\n3 min\n\n\n\n\n\n\nNo matching items"
+    "text": "Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n  \n\n\n\n\n\nLearn the basics of R: open a project, setting a working directory and navigate RStudio interface\n\n\n\n\nRstudio\n\n\nInterface\n\n\n \n\n\n\n\nApr 12, 2023\n\n\nJorge Roa\n\n\n4 min\n\n\n\n\n\n\n  \n\n\n\n\n\nUnlock the power of data analysis and statistical computing with R and RStudio! Whether you are a student of public policy or a seasoned professional.\n\n\n\n\nR\n\n\nRStudio\n\n\nAccesibility\n\n\nInstall\n\n\n \n\n\n\n\nMar 2, 2023\n\n\nJorge Roa\n\n\n2 min\n\n\n\n\n\n\n  \n\n\n\n\n\nMultithreading offers faster and more efficient data processing, allowing for quicker analysis of complex datasets.\n\n\n\n\nGitHub\n\n\nGitHub Actions\n\n\nAutomations\n\n\nRStudio\n\n\nPosit\n\n\n \n\n\n\n\nJul 28, 2022\n\n\nJorge Roa, Fernando Alarid-Escudero\n\n\n3 min\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "about.html",
@@ -322,31 +336,10 @@
     "text": "This is a course offered by the CISCO Networking Academy. What I really like is that at the end it offers a proof of completion. This certification in combination with other tools it’s a good way to start with Python. Here I leave the summary of the CISCO website and the link as well.\n\n“How great would it be to write your own computer program? Python is a multi-paradigm programming language used by startups and tech giants like Google, Facebook, Netflix, and more. With intuitive, readable syntax, Python is a great first programming language to learn.\nProgramming skills open you up to careers in almost any industry and are required if you want to continue to more advanced and higher paying software development and engineering roles.\nThis course is a great place to start learning Python – no prior programming knowledge required. Completing the course earns you a Statement of Achievement. It is split into two parts preparing you for two certifications:\nPart 1 (PE1: 35 hours) prepares you for PCEP – Certified Entry-Level Python Programmer Certification. Part 2 (PE2: 40 hours) prepares you for PCAP – Certified Associate in Python Programming Certification.”\nYou’ll learn these core skills:\n\nThink algorithmically – how to analyze a problem and translate it for a computer to process.\nDesign, develop, and improve multi-module computer programs.\nAnalyze and model real-life problems in Object-Oriented Programming categories.\nUnderstand a programmer’s work in the software development process.\nLearn how a program is executed in a computer environment.\nGain skills to create and develop your own programming portfolio.\n\n\nCISCO Networking Academy\n\n\n\n\nGo to CISCO PCAP"
   },
   {
-    "objectID": "learn/rstudio/rstudio101/index.html",
-    "href": "learn/rstudio/rstudio101/index.html",
+    "objectID": "learn/rstudio/rstudio101/index.html#benefits",
+    "href": "learn/rstudio/rstudio101/index.html#benefits",
     "title": "RStudio 101",
-    "section": "",
-    "text": "This document shows you how we can enable the use of multiple cores on Macs with Intel/Apple silicon chips (M1 and M2)."
-  },
-  {
-    "objectID": "learn/rstudio/rstudio101/index.html#opening-a-new-project",
-    "href": "learn/rstudio/rstudio101/index.html#opening-a-new-project",
-    "title": "RStudio 101",
-    "section": "Opening a new project",
-    "text": "Opening a new project\n\n\n\n\n\n\nWe will go to File tab and click in “New Project”.\n\n\nSteps\n\n\n1.-Create Project\n2.-Project Type\n\n\n\n\n\n\n\n\nHere you have three options: since you are creating a new project, choose New Directory.\nSelect the type of project, as you can see, we have different options; or now, we will choose New Project"
-  },
-  {
-    "objectID": "learn/rstudio/rstudio101/index.html#step-1-opening-a-new-project",
-    "href": "learn/rstudio/rstudio101/index.html#step-1-opening-a-new-project",
-    "title": "RStudio 101",
-    "section": "Step 1: Opening a new project",
-    "text": "Step 1: Opening a new project\n\n\n\n\n\n\nWe will go to File tab and click in “New Project”.\n\n\n\n\n1.-Create Project\n2.-Project Type\n\n\n\n\n\n\n\n\nHere you have three options: since you are creating a new project, choose New Directory.\nSelect the type of project, as you can see, we have different options; or now, we will choose New Project"
-  },
-  {
-    "objectID": "learn/rstudio/rstudio101/index.html#step-2-create-our-first-project",
-    "href": "learn/rstudio/rstudio101/index.html#step-2-create-our-first-project",
-    "title": "RStudio 101",
-    "section": "Step 2: Create our first project",
-    "text": "Step 2: Create our first project\n\nOnce we open a new project, we need to decide where we want to store our project and all the code we will generate. I’ll talk about this later, but putting a project in a separate folder is good practice to have everything ordered.\n\n\n\n\n\n\nYour name project should be precise and not too long. In our case, we will name it “Hertie Coding Club R”\n\n\n\n3.-Choose folder\n4.-Icon project in project folder\n\n\n\n\n\n\n\n\nHere we show the folder in where we will save our project\nOnce you created your project, it should appear an icon like this within your folder."
+    "section": "Benefits",
+    "text": "Benefits\n\nSetting the working directory wd() makes it easier to read and write files in your R script.\nWhen you set the working directory to the folder where your data files are stored, you can simply specify the file names without having to write out the full file path.\nThis makes your code more readable and easier to maintain.\nSetting the working directory can make it easier to share your code with others.\nIf you provide your code to someone else, they may not have the same file paths on their computer as you do.\nBy setting the working directory, you can ensure that your code will work on someone else’s computer without having to modify the file paths in the code.\nOverall, setting the working directory is an important step when working with R, as it can save you time, prevent errors, and make your code more portable.\n\n\nWhat happens if I don’t create a folder for my project?\n\nIf you do not set the working directory in an appropiate wat, R may look for files in the wrong location, which can lead to errors and a lot of time wasted"
   }
 ]

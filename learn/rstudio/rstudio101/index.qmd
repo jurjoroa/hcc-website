@@ -37,26 +37,39 @@ This is the window that appears to us when we open R. As you can see, there are 
 
 -   We will go to File tab and click in "New Project".
 
-| 1.-Create Project | 2.-Project Type |
-|------|------|
-|![](images/rstudio3.png){fig-align="center"}|![](images/rstudio4.png){fig-align="center"}|
-|  Here you have three options: since you are creating a new project, choose New Directory. |   Select the type of project, as you can see, we have different options; or now, we will choose New Project   |
-
+| 1.-Create Project                                                                        | 2.-Project Type                                                                                           |
+|------------------------------------|------------------------------------|
+| ![](images/rstudio3.png){fig-align="center"}                                             | ![](images/rstudio4.png){fig-align="center"}                                                              |
+| Here you have three options: since you are creating a new project, choose New Directory. | Select the type of project, as you can see, we have different options; or now, we will choose New Project |
 
 ## Step 2: Create our first project
 
--   Once we open a new project, we need to decide where we want to store our project and all the code we will generate. I'll talk about this later, but putting a project in a separate folder is good practice to have everything ordered. 
-
+-   Once we open a new project, we need to decide where we want to store our project and all the code we will generate. I'll talk about this later, but putting a project in a separate folder is good practice to have everything ordered.
 
 ![](images/rstudio5.png){fig-align="center"}
 
 Your name project should be precise and not too long. In our case, we will name it "Hertie Coding Club R"
 
+| 3.-Choose folder                                          | 4.-Icon project in project folder                                                     |
+|------------------------------------|------------------------------------|
+| ![](images/rstudio6.png){fig-align="center"}              | ![](images/rstudio7.png){fig-align="center"}                                          |
+| Here we show the folder in where we will save our project | Once you created your project, it should appear an icon like this within your folder. |
 
+# Working directory IMPORTANT!
 
-| 3.-Choose folder | 4.-Icon project in project folder |
-|------|------|
-|![](images/rstudio6.png){fig-align="center"}|![](images/rstudio7.png){fig-align="center"}|
-|  Here we show the folder in where we will save our project |   Once you created your project, it should appear an icon like this within your folder.   |
+In R, the working directory is the folder or directory where R will look for files and where it will save output files. I firmly believe setting the working directory is one of the most critical steps when working with R, as it can save you time and prevent errors.
 
+## Benefits
 
+-   Setting the working directory `wd()` makes it easier to read and write files in your R script.
+-   When you set the working directory to the folder where your data files are stored, you can simply specify the file names without having to write out the full file path.
+-   This makes your code more readable and easier to maintain.
+
+-   Setting the working directory can make it easier to share your code with others.
+-   If you provide your code to someone else, they may not have the same file paths on their computer as you do.
+-   By setting the working directory, you can ensure that your code will work on someone else's computer without having to modify the file paths in the code.
+-   Overall, setting the working directory is an important step when working with R, as it can save you time, prevent errors, and make your code more portable.
+
+### What happens if I don't create a folder for my project?
+
+-   If you do not set the working directory in an appropiate wat, R may look for files in the wrong location, which can lead to errors and a lot of time wasted
