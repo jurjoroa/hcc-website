@@ -28,6 +28,48 @@
     "text": "Step 2: Create our first project\n\nOnce we open a new project, we need to decide where we want to store our project and all the code we will generate. I’ll talk about this later, but putting a project in a separate folder is good practice to have everything ordered.\n\n\n\n\n\nYour name project should be precise and not too long. In our case, we will name it “Hertie Coding Club R”\n\n\n3.-Choose folder\n4.-Icon project in project folder\n\n\n\n\n\n\n\nHere we show the folder in where we will save our project\nOnce you created your project, it should appear an icon like this within your folder."
   },
   {
+    "objectID": "learn/rstudio/rstudio101/index.html#benefits",
+    "href": "learn/rstudio/rstudio101/index.html#benefits",
+    "title": "RStudio 101",
+    "section": "Benefits",
+    "text": "Benefits\n\n\n\n\n\n\nBenefits\n\n\n\n\nSetting the working directory wd() makes it easier to read and write files in your R script.\nWhen you set the working directory to the folder where your data files are stored, you can simply specify the file names without having to write out the full file path.\nThis makes your code more readable and easier to maintain.\nSetting the working directory can make it easier to share your code with others since they would load the code from the project folder.\n\n\n\n\n\n\n\n\n\nWhat happens if I don’t create a folder for my project?\n\n\n\n\nIf you do not appropriately set the working directory, R may look for files in the wrong location, which can lead to errors and a lot of time wasted"
+  },
+  {
+    "objectID": "learn/rstudio/rstudio101/index.html#create-a-script",
+    "href": "learn/rstudio/rstudio101/index.html#create-a-script",
+    "title": "RStudio 101",
+    "section": "Create a script",
+    "text": "Create a script\nWe will create our first R Script. For that please go to Fil -> New File -> R Script\n\n\n\n\nOnce we create our script, it will show us a window with a tab called “Untitled1”. Now, we need to save that script in our analysis folder. For that, we need to go to File -> Save As. Next, we need to select the folder within our project where we want to save our script. Following the good practices recommended here, I’ll keep it in my analysis folder. I’m naming my script as “first_script”.\n\n\nFile -> R Script"
+  },
+  {
+    "objectID": "learn/rstudio/rstudio101/index.html#source",
+    "href": "learn/rstudio/rstudio101/index.html#source",
+    "title": "RStudio 101",
+    "section": "Source",
+    "text": "Source\n\n\n\n\nThe source pane is the main workspace for creating and editing R scripts, and it provides features for syntax highlighting, code completion, and error checking.\n\nOne of the key features of the source pane is syntax highlighting, which makes it easier to read and understand R code by using different colors and fonts to differentiate between different elements of the code, such as keywords, comments, and functions.\n\nWith this commands, you can select your code and run your code.\n\n\n\n\n\n\n“Command + Return\n“Control + Enter”\n\n\nThis code will excute and it will be showed in the console."
+  },
+  {
+    "objectID": "learn/rstudio/rstudio101/index.html#console",
+    "href": "learn/rstudio/rstudio101/index.html#console",
+    "title": "RStudio 101",
+    "section": "Console",
+    "text": "Console\nWhen a user types in a command in the console, like for example assigning a variable or running a function, R processes the command and generates the output, which is displayed in the console. The console is a critical tool for debugging R code, as it allows users to see the output of their commands and to identify errors and bugs in their code. In summary:\n\nThe console is the heart of R.\nHere R actually evaluates your code.\nTry to write most of your code in a document in the Source. Only type directly into the Console to de-bug or do quick analyses.\nWhen ready: > and If waiting: +\nCancel commands by pressing Esc. to finish a running process.\n\n\n\n\n\n\n\n\n\nIn the last pictures, for example, we evaluated the expression\n\n2 + 2\n\n[1] 4\n\n\nAs you can see, in our console it shows the operation that we ran. (Remember the commands to run your code). One of the shortcuts that I use often is the ↑ key. Pressing the top arrow shows the last code that you executed; pretty useful if you don’t want to rerun your code"
+  },
+  {
+    "objectID": "learn/rstudio/rstudio101/index.html#environmenthistory",
+    "href": "learn/rstudio/rstudio101/index.html#environmenthistory",
+    "title": "RStudio 101",
+    "section": "Environment/History",
+    "text": "Environment/History\nIn R, the environment refers to the collection of variables and their values that are currently stored in the memory. Each time a user creates a variable or loads data into R, those variables and data are stored in the environment. One of the things that I like about using RStudio as a IDE is practically this nice way of putting all the varaibles, data functions and every object that you are loading in your environment. In summary, the environment can be thought of as a workspace where the user can manipulate and analyze the data.\nThe Environment tab of this panel shows you the names of all the objects that you have been creating. For example, you can see information like the number of observations and rows in data objects; lists, funtions, etc."
+  },
+  {
+    "objectID": "learn/rstudio/rstudio101/index.html#files-and-more",
+    "href": "learn/rstudio/rstudio101/index.html#files-and-more",
+    "title": "RStudio 101",
+    "section": "Files and more",
+    "text": "Files and more\nIn R, files and directories helps you managing data, plots and code. This pane provides access to the files and directories on the user’s computer. If you can see close, it will show your current working directory; this helps you to check if you are working in the correct directory. Users can navigate through the file system, create new files and directories, and open or delete existing files. The pane also provides features for searching and filtering files, as well as organizing them into projects. I personally use it to preview plots, install packages and check documentation."
+  },
+  {
     "objectID": "learn/rstudio/Multithreading/index.html",
     "href": "learn/rstudio/Multithreading/index.html",
     "title": "Enable Multithread with data.table in Mac/Intel chips",
@@ -334,61 +376,5 @@
     "title": "CISCO Networking Academy",
     "section": "",
     "text": "This is a course offered by the CISCO Networking Academy. What I really like is that at the end it offers a proof of completion. This certification in combination with other tools it’s a good way to start with Python. Here I leave the summary of the CISCO website and the link as well.\n\n“How great would it be to write your own computer program? Python is a multi-paradigm programming language used by startups and tech giants like Google, Facebook, Netflix, and more. With intuitive, readable syntax, Python is a great first programming language to learn.\nProgramming skills open you up to careers in almost any industry and are required if you want to continue to more advanced and higher paying software development and engineering roles.\nThis course is a great place to start learning Python – no prior programming knowledge required. Completing the course earns you a Statement of Achievement. It is split into two parts preparing you for two certifications:\nPart 1 (PE1: 35 hours) prepares you for PCEP – Certified Entry-Level Python Programmer Certification. Part 2 (PE2: 40 hours) prepares you for PCAP – Certified Associate in Python Programming Certification.”\nYou’ll learn these core skills:\n\nThink algorithmically – how to analyze a problem and translate it for a computer to process.\nDesign, develop, and improve multi-module computer programs.\nAnalyze and model real-life problems in Object-Oriented Programming categories.\nUnderstand a programmer’s work in the software development process.\nLearn how a program is executed in a computer environment.\nGain skills to create and develop your own programming portfolio.\n\n\nCISCO Networking Academy\n\n\n\n\nGo to CISCO PCAP"
-  },
-  {
-    "objectID": "learn/rstudio/rstudio101/index.html#benefits",
-    "href": "learn/rstudio/rstudio101/index.html#benefits",
-    "title": "RStudio 101",
-    "section": "Benefits",
-    "text": "Benefits\n\n\n\n\n\n\nBenefits\n\n\n\n\nSetting the working directory wd() makes it easier to read and write files in your R script.\nWhen you set the working directory to the folder where your data files are stored, you can simply specify the file names without having to write out the full file path.\nThis makes your code more readable and easier to maintain.\nSetting the working directory can make it easier to share your code with others since they would load the code from the project folder.\n\n\n\n\n\n\n\n\n\nWhat happens if I don’t create a folder for my project?\n\n\n\n\nIf you do not appropriately set the working directory, R may look for files in the wrong location, which can lead to errors and a lot of time wasted"
-  },
-  {
-    "objectID": "learn/rstudio/rstudio101/index.html#negoita-2021",
-    "href": "learn/rstudio/rstudio101/index.html#negoita-2021",
-    "title": "RStudio 101",
-    "section": "",
-    "text": "Personally, I like this approach:\n\n\n\n\n\n\ndata/: for processed data\ndata-raw/: for raw data and intermediate datasets (Internet, f.e.)\nfigures/: for save your plots\nanalysis/: for save your scripts\ndocuments/: for outlines, drafts, other text\nR/: for functions\n\nThis structure is based on these proposed coding framework.\n\n\n\nAlarid et. al. (2019)\n\n\nI’ve been working with this folder structure for a while, and it’s super helpful because once you are used to it, it’s super fast to search your outputs, scripts, etc. If you want to know more about these approach and why a coding framework is important, please take a look to this work lead by Fernando Alarid-Escudero and other scholars"
-  },
-  {
-    "objectID": "learn/rstudio/rstudio101/index.html#folder-in-your-projects",
-    "href": "learn/rstudio/rstudio101/index.html#folder-in-your-projects",
-    "title": "RStudio 101",
-    "section": "# Folder in your projects",
-    "text": "# Folder in your projects\nThere are multiple ways to decide which folders you should have with your r project.\nSome of them look like this:\n\n\nhttps://martinctc.github.io\n\n\n\n\n\nNegoita 2021\n\n\n\n\n\nPersonally, I like this approach:\n\n\n\n\n\n\ndata/: for processed data\ndata-raw/: for raw data and intermediate datasets (Internet, f.e.)\nfigures/: for save your plots\nanalysis/: for save your scripts\ndocuments/: for outlines, drafts, other text\nR/: for functions\n\n\nThis structure is based on these proposed coding framework.\n\n\nAlarid et. al. (2019)\n\n\n\nI’ve been working with this folder structure for a while, and it’s super helpful because once you are used to it, it’s super fast to search your outputs, scripts, etc. If you want to know more about these approach and why a coding framework is important, please take a look to this work lead by Fernando Alarid-Escudero and other scholars"
-  },
-  {
-    "objectID": "learn/rstudio/rstudio101/index.html#create-a-script",
-    "href": "learn/rstudio/rstudio101/index.html#create-a-script",
-    "title": "RStudio 101",
-    "section": "Create a script",
-    "text": "Create a script\nWe will create our first R Script. For that please go to Fil -> New File -> R Script\n\n\n\n\nOnce we create our script, it will show us a window with a tab called “Untitled1”. Now, we need to save that script in our analysis folder. For that, we need to go to File -> Save As. Next, we need to select the folder within our project where we want to save our script. Following the good practices recommended here, I’ll keep it in my analysis folder. I’m naming my script as “first_script”.\n\n\nFile -> R Script"
-  },
-  {
-    "objectID": "learn/rstudio/rstudio101/index.html#source",
-    "href": "learn/rstudio/rstudio101/index.html#source",
-    "title": "RStudio 101",
-    "section": "Source",
-    "text": "Source\n\n\n\n\nThe source pane is the main workspace for creating and editing R scripts, and it provides features for syntax highlighting, code completion, and error checking.\n\nOne of the key features of the source pane is syntax highlighting, which makes it easier to read and understand R code by using different colors and fonts to differentiate between different elements of the code, such as keywords, comments, and functions.\n\nWith this commands, you can select your code and run your code.\n\n\n\n\n\n\n“Command + Return\n“Control + Enter”\n\n\nThis code will excute and it will be showed in the console."
-  },
-  {
-    "objectID": "learn/rstudio/rstudio101/index.html#console",
-    "href": "learn/rstudio/rstudio101/index.html#console",
-    "title": "RStudio 101",
-    "section": "Console",
-    "text": "Console\nWhen a user types in a command in the console, like for example assigning a variable or running a function, R processes the command and generates the output, which is displayed in the console. The console is a critical tool for debugging R code, as it allows users to see the output of their commands and to identify errors and bugs in their code. In summary:\n\nThe console is the heart of R.\nHere R actually evaluates your code.\nTry to write most of your code in a document in the Source. Only type directly into the Console to de-bug or do quick analyses.\nWhen ready: > and If waiting: +\nCancel commands by pressing Esc. to finish a running process.\n\n\n\n\n\n\n\n\n\nIn the last pictures, for example, we evaluated the expression\n\n2 + 2\n\n[1] 4\n\n\nAs you can see, in our console it shows the operation that we ran. (Remember the commands to run your code). One of the shortcuts that I use often is the ↑ key. Pressing the top arrow shows the last code that you executed; pretty useful if you don’t want to rerun your code"
-  },
-  {
-    "objectID": "learn/rstudio/rstudio101/index.html#environmenthistory",
-    "href": "learn/rstudio/rstudio101/index.html#environmenthistory",
-    "title": "RStudio 101",
-    "section": "Environment/History",
-    "text": "Environment/History\nIn R, the environment refers to the collection of variables and their values that are currently stored in the memory. Each time a user creates a variable or loads data into R, those variables and data are stored in the environment. One of the things that I like about using RStudio as a IDE is practically this nice way of putting all the varaibles, data functions and every object that you are loading in your environment. In summary, the environment can be thought of as a workspace where the user can manipulate and analyze the data.\nThe Environment tab of this panel shows you the names of all the objects that you have been creating. For example, you can see information like the number of observations and rows in data objects; lists, funtions, etc."
-  },
-  {
-    "objectID": "learn/rstudio/rstudio101/index.html#files-and-more",
-    "href": "learn/rstudio/rstudio101/index.html#files-and-more",
-    "title": "RStudio 101",
-    "section": "Files and more",
-    "text": "Files and more\nIn R, files and directories helps you managing data, plots and code. This pane provides access to the files and directories on the user’s computer. If you can see close, it will show your current working directory; this helps you to check if you are working in the correct directory. Users can navigate through the file system, create new files and directories, and open or delete existing files. The pane also provides features for searching and filtering files, as well as organizing them into projects. I personally use it to preview plots, install packages and check documentation."
   }
 ]

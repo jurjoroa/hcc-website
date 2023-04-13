@@ -249,5 +249,5 @@ Negoita, L. (2021, July 5). *How to organize your analyses with R studio project
 
 
 ::: {.callout-note}
-Cite this page: 
+Cite this page: Roa, J. (2023, April 12). *RStudio 101*. Hertie Coding Club. [URL](https://www.hertiecodingclub.com/learn/rstudio/rstudio101/)
 :::
