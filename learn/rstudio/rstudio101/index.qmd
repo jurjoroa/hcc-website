@@ -21,15 +21,19 @@ lightbox:
   css-class: "lightwidth"
 ---
 
-This document shows you how we can enable the use of multiple cores on Macs with Intel/Apple silicon chips (M1 and M2).
-
 # Welcome to RStudio
+
+------------------------------------------------------------------------
 
 ![](images/rstudio1.png){fig-align="center"}
 
 This is the window that appears to us when we open R. As you can see, there are multiple things that we will check. But, first we are going to create our first project.
 
+</br>
+
 # Creating our first project
+
+------------------------------------------------------------------------
 
 ## Step 1: Opening a new project
 
@@ -41,6 +45,8 @@ This is the window that appears to us when we open R. As you can see, there are 
 |------------------------------------|------------------------------------|
 | ![](images/rstudio3.png){fig-align="center"}                                             | ![](images/rstudio4.png){fig-align="center"}                                                              |
 | Here you have three options: since you are creating a new project, choose New Directory. | Select the type of project, as you can see, we have different options; or now, we will choose New Project |
+
+</br>
 
 ## Step 2: Create our first project
 
@@ -55,21 +61,193 @@ Your name project should be precise and not too long. In our case, we will name 
 | ![](images/rstudio6.png){fig-align="center"}              | ![](images/rstudio7.png){fig-align="center"}                                          |
 | Here we show the folder in where we will save our project | Once you created your project, it should appear an icon like this within your folder. |
 
+</br>
+
 # Working directory IMPORTANT!
+
+------------------------------------------------------------------------
 
 In R, the working directory is the folder or directory where R will look for files and where it will save output files. I firmly believe setting the working directory is one of the most critical steps when working with R, as it can save you time and prevent errors.
 
+</br>
+
 ## Benefits
 
+::: {.callout-tip}
+## **Benefits**
 -   Setting the working directory `wd()` makes it easier to read and write files in your R script.
 -   When you set the working directory to the folder where your data files are stored, you can simply specify the file names without having to write out the full file path.
 -   This makes your code more readable and easier to maintain.
+-   Setting the working directory can make it easier to share your code with others since they would load the code from the project folder.
+:::
 
--   Setting the working directory can make it easier to share your code with others.
--   If you provide your code to someone else, they may not have the same file paths on their computer as you do.
--   By setting the working directory, you can ensure that your code will work on someone else's computer without having to modify the file paths in the code.
--   Overall, setting the working directory is an important step when working with R, as it can save you time, prevent errors, and make your code more portable.
 
-### What happens if I don't create a folder for my project?
+::: {.callout-important}
+## **What happens if I don't create a folder for my project?**
+-   If you do not appropriately set the working directory, R may look for files in the wrong location, which can lead to errors and a lot of time wasted
+:::
 
--   If you do not set the working directory in an appropiate wat, R may look for files in the wrong location, which can lead to errors and a lot of time wasted
+</br>
+
+# Folder in your projects
+
+------------------------------------------------------------------------
+
+
+There are multiple ways to decide which folders you should have with your r project.
+
+Some of them look like this: 
+
+![https://martinctc.github.io](images/folder.jpg){fig-align="center"} 
+
+![Negoita 2021](images/folder2.png){fig-align="center"} 
+
+------------------------------------------------------------------------
+
+</br>
+
+Personally, I like this approach:
+
+![](images/folder3.png){fig-align="center"} 
+
+-   **data/:** for processed data
+-   **data-raw/:** for raw data and intermediate datasets (Internet, f.e.)
+-   **figures/:** for save your plots
+-   **analysis/:** for save your scripts
+-   **documents/:** for outlines, drafts, other text
+-   **R/:** for functions
+
+</br>
+
+This structure is based on these proposed coding framework. 
+
+![Alarid et. al. (2019)](images/rstudio21.png){fig-align="center"} 
+
+I've been working with this folder structure for a while, and it's super helpful because once you are used to it, it's super fast to search your outputs, scripts, etc. If you want to know more about these approach and why a coding framework is important, please take a look to this work lead by [Fernando Alarid-Escudero and other scholars](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6871515/)
+
+</br>
+
+# Rstudio: taking our first steps.
+
+------------------------------------------------------------------------
+
+
+## Create a script
+
+We will create our first R Script. For that please go to Fil -> New File -> R Script
+
+![](images/rstudio11.png){fig-align="center"} 
+
+Once we create our script, it will show us a window with a tab called "Untitled1". Now, we need to save that script in our analysis folder. For that, we need to go to File -> Save As. Next, we need to select the folder within our project where we want to save our script. Following the good practices recommended here, I'll keep it in my analysis folder. I'm naming my script as "first_script".  
+
+
+![File -> R Script](images/rstudio12.png){fig-align="center"} 
+
+![](images/rstudio13.png){fig-align="center"} 
+
+</br>
+
+# RStudio Panes
+
+------------------------------------------------------------------------
+
+
+It's important that you have a really clear idea about the RStudio panes concept. This panes allow users to divide the workflow. Each pane can display different types of information, such as code, console output, plots, help files, and data frames. It enables users to organize their workspace in a more efficient way and to customize their RStudio according to their needs. We will explain every R section.
+
+![Main Grafic User Interface](images/rstudio14.png){fig-align="center"} 
+
+</br>
+
+## Source
+
+![](images/rstudio16.png){fig-align="center"} 
+
+
+The source pane is the main workspace for creating and editing R scripts, and it provides features for syntax highlighting, code completion, and error checking.
+
+- One of the key features of the source pane is syntax highlighting, which makes it easier to read and understand R code by using different colors and fonts to differentiate between different elements of the code, such as keywords, comments, and functions. 
+
+With this commands, you can select your code and run your code.
+
+| ![](images/apple.png){width="30"} | ![](images/windows.png){width="30"} |
+|:---------------------------------:|:-----------------------------------:|
+|    **"Command + Return**    | **"Control + Enter"** |
+
+
+This code will excute and it will be showed in the console. 
+
+
+</br>
+
+## Console
+
+When a user types in a command in the console, like for example assigning a variable or running a function, R processes the command and generates the output, which is displayed in the console. The console is a critical tool for debugging R code, as it allows users to see the output of their commands and to identify errors and bugs in their code. In summary: 
+
+-   The console is the heart of R.
+-   Here R actually evaluates your code.
+-   Try to write most of your code in a document in the Source. Only type directly into the Console to de-bug or do quick analyses.
+-   When ready: \> and If waiting: +
+-   Cancel commands by pressing Esc. to finish a running process.
+
+
+![](images/rstudio17.png){fig-align="center"} 
+
+
+![](images/rstudio17_1.png){fig-align="center"} 
+
+In the last pictures, for example, we evaluated the expression
+
+```{r, warning=FALSE}
+
+2 + 2
+
+```
+
+
+As you can see, in our console it shows the operation that we ran. (Remember the commands to run your code). One of the shortcuts that I use often is the ↑ key. Pressing the top arrow shows the last code that you executed; pretty useful if you don't want to rerun your code 
+
+
+</br>
+
+## Environment/History
+
+
+In R, the environment refers to the collection of variables and their values that are currently stored in the memory. Each time a user creates a variable or loads data into R, those variables and data are stored in the environment. One of the things that I like about using RStudio as a IDE is practically this nice way of putting all the varaibles, data functions and every object that you are loading in your environment. In summary, the environment can be thought of as a workspace where the user can manipulate and analyze the data.
+
+The Environment tab of this panel shows you the names of all the objects that you have been creating. For example, you can see information like the number of observations and rows in data objects; lists, funtions, etc. 
+
+
+![](images/rstudio18.png){fig-align="center"} 
+
+
+![](images/rstudio18_1.png){fig-align="center"} 
+
+
+</br>
+
+
+## Files and more
+
+In R, files and directories helps you managing data, plots and code. This pane provides access to the files and directories on the user's computer. If you can see close, it will show your current working directory; this helps you to check if you are working in the correct directory. Users can navigate through the file system, create new files and directories, and open or delete existing files. The pane also provides features for searching and filtering files, as well as organizing them into projects. I personally use it to preview plots, install packages and check documentation. 
+
+![](images/rstudio19.png){fig-align="center"} 
+
+![](images/rstudio19_1.png){fig-align="center"} 
+
+
+# References
+
+------------------------------------------------------------------------
+
+::: {.callout-tip}
+## References
+
+Alarid-Escudero, F., Krijkamp, E. M., Pechlivanoglou, P., Jalal, H., Kao, S. Z., Yang, A., & Enns, E. A. (2019). *A Need for Change! A Coding Framework for Improving Transparency in Decision Modeling.* PharmacoEconomics, 37(11), 1329–1339. [URL](https://doi.org/10.1007/s40273-019-00837-x)
+
+Negoita, L. (2021, July 5). *How to organize your analyses with R studio projects.* R (for ecology). [URL](https://www.rforecology.com/post/organizing-your-r-studio-projects/)
+:::
+
+
+::: {.callout-note}
+Cite this page: 
+:::

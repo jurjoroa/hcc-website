@@ -3,7 +3,7 @@ title:  '{{< animate fadeInDown "Enable Multithread with data.table in Mac/Intel
 subtitle: '{{< animate fadeInDown "Multithreading offers faster and more efficient data processing, allowing for quicker analysis of complex datasets."delay=.6s >}}'
 author: ["Jorge Roa", "Fernando Alarid-Escudero"]
 date: "2022-07-28"
-categories: ["GitHub", "GitHub Actions", "Automations", "RStudio", "Posit"]
+categories: ["Multithread", "Data table"]
 toc: true
 draft: false
 code-link: true

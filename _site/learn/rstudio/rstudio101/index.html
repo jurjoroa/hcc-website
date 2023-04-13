@@ -1,14 +1,11 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
-
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.2.280">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-
 <meta name="author" content="Jorge Roa">
 <meta name="dcterms.date" content="2023-04-12">
-
 <title>RStudio 101</title>
 <style>
 code{white-space: pre-wrap;}
@@ -22,8 +19,70 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1.6em;
   vertical-align: middle;
 }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
-
 
 <script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="../../../site_libs/clipboard/clipboard.min.js"></script>
@@ -46,8 +105,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="../../../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <link href="../../../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
 <link href="../../../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
-<link href="../../../site_libs/quarto-contrib/animate-4.1.1/animate.min.css" rel="stylesheet">
-<script id="quarto-search-options" type="application/json">{
+<link href="../../../site_libs/quarto-contrib/animate-4.1.1/animate.min.css" rel="stylesheet"><script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
   "collapse-after": 3,
@@ -65,35 +123,24 @@ ul.task-list li input[type="checkbox"] {
     "search-detached-cancel-button-title": "Cancel",
     "search-submit-button-title": "Submit"
   }
-}</script>
-<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-HJEMN0LJY7"></script>
-
-<script type="text/javascript">
+}</script><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-HJEMN0LJY7"></script><script type="text/javascript">
 
 window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 gtag('config', 'G-HJEMN0LJY7', { 'anonymize_ip': true});
-</script>
-<style>html{ scroll-behavior: smooth; }</style>
-<!-- Primary Meta Tags -->
-<title>Hertie Coding Club - Everybody can learn to code</title>
+</script><style>html{ scroll-behavior: smooth; }</style>
+<!-- Primary Meta Tags --><title>Hertie Coding Club - Everybody can learn to code</title>
 <meta name="title" content="Hertie Coding Club - Everybody can learn to code">
 <meta name="description" content="Welcome to the Hertie Coding Club! Our goal as a club is to help everyone and between us learn coding skills and show that coding is for everyone, no matter our background.">
-
-<!-- Open Graph / Facebook -->
-<meta property="og:type" content="website">
+<!-- Open Graph / Facebook --><meta property="og:type" content="website">
 <meta property="og:url" content="https://www.hertiecodingclub.com">
 <meta property="og:title" content="RStudio 101">
 <meta property="og:description" content="Welcome to the Hertie Coding Club! Our goal as a club is to help everyone and between us learn coding skills and show that coding is for everyone, no matter our background.">
-
-<!-- Primary Meta Tags -->
-<title>Hertie Coding Club - Enable Multithread with data.table in Mac/Intel chips</title>
+<!-- Primary Meta Tags --><title>Hertie Coding Club - Enable Multithread with data.table in Mac/Intel chips</title>
 <meta name="title" content="Hertie Coding Club - Enable Multithread with data.table in Mac/Intel chips">
 <meta name="description" content="Multithreading offers faster and more efficient data processing, allowing for quicker analysis of complex datasets.">
-
-<!-- Open Graph / Facebook -->
-<meta property="og:type" content="website">
+<!-- Open Graph / Facebook --><meta property="og:type" content="website">
 <meta property="og:url" content="https://www.hertiecodingclub.com/learn/rstudio/rstudio/rstudio/installrstudio">
 <meta property="og:title" content="Hertie Coding Club - Enable Multithread with data.table in Mac/Intel chips">
 <meta property="og:description" content="Multithreading offers faster and more efficient data processing, allowing for quicker analysis of complex datasets.">
@@ -104,28 +151,22 @@ gtag('config', 'G-HJEMN0LJY7', { 'anonymize_ip': true});
 <style>:root{--animate-duration:3s;--animate-delay:2s;--animate-repeat:1}</style>
 <style>:root{--animate-duration:3s;--animate-delay:2s;--animate-repeat:1}</style>
 <style>:root{--animate-duration:3s;--animate-delay:2s;--animate-repeat:1}</style>
-
-
 <link rel="stylesheet" href="../../../styles.css">
 </head>
-
 <body class="nav-fixed">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg navbar-dark ">
-      <div class="navbar-container container-fluid">
+  <header id="quarto-header" class="headroom fixed-top"><nav class="navbar navbar-expand-lg navbar-dark "><div class="navbar-container container-fluid">
       <div class="navbar-brand-container">
     <a href="../../../index.html" class="navbar-brand navbar-brand-logo">
-    <img src="../../../images/hcc_final.png" alt="" class="navbar-logo">
-    </a>
+    <img src="../../../images/hcc_final.png" alt="" class="navbar-logo"></a>
   </div>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
-  <li class="nav-item">
+<li class="nav-item">
     <a class="nav-link" href="../../../index.html"><i class="bi bi-house-fill" role="img">
 </i> 
  <span class="menu-text">Home</span></a>
@@ -134,8 +175,8 @@ gtag('config', 'G-HJEMN0LJY7', { 'anonymize_ip': true});
     <a class="nav-link dropdown-toggle" href="#" id="nav-menu-fa-solid-people-group--members" role="button" data-bs-toggle="dropdown" aria-expanded="false">
  <span class="menu-text"><i class="fa-solid fa-people-group" aria-label="people-group"></i> Members</span>
     </a>
-    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-fa-solid-people-group--members">    
-        <li>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-fa-solid-people-group--members">
+<li>
     <a class="dropdown-item" href="../../../members/team/team.html">
  <span class="dropdown-text"><i class="fa-solid fa-person-chalkboard" aria-label="person-chalkboard"></i> Team</span></a>
   </li>  
@@ -144,20 +185,20 @@ gtag('config', 'G-HJEMN0LJY7', { 'anonymize_ip': true});
  <span class="dropdown-text"><i class="fa-solid fa-users-rectangle" aria-label="users-rectangle"></i> Club Members</span></a>
   </li>  
     </ul>
-  </li>
+</li>
   <li class="nav-item dropdown ">
     <a class="nav-link dropdown-toggle" href="#" id="nav-menu-learn" role="button" data-bs-toggle="dropdown" aria-expanded="false">
       <i class="bi bi-mortarboard-fill" role="img">
 </i> 
  <span class="menu-text">Learn</span>
     </a>
-    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-learn">    
-        <li>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-learn">
+<li>
     <a class="dropdown-item" href="../../../learn/rstudio.html">
  <span class="dropdown-text"><i class="fa-brands fa-r-project" aria-label="r-project"></i> language</span></a>
   </li>  
     </ul>
-  </li>
+</li>
   <li class="nav-item">
     <a class="nav-link" href="../../../material/index.html">
  <span class="menu-text"><i class="fa-solid fa-meteor" aria-label="meteor"></i> Material</span></a>
@@ -178,17 +219,13 @@ gtag('config', 'G-HJEMN0LJY7', { 'anonymize_ip': true});
  <span class="menu-text">About us</span></a>
   </li>  
 </ul>
-              <div class="quarto-toggle-container">
+<div class="quarto-toggle-container">
                   <a href="" class="quarto-color-scheme-toggle nav-link" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
               </div>
               <div id="quarto-search" class="" title="Search"></div>
           </div> <!-- /navcollapse -->
       </div> <!-- /container-fluid -->
-    </nav>
-</header>
-<!-- content -->
-<header id="title-block-header" class="quarto-title-block default page-columns page-full">
-  <div class="quarto-title-banner page-columns page-full">
+    </nav></header><!-- content --><header id="title-block-header" class="quarto-title-block default page-columns page-full"><div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
       <h1 class="title"><span class="animate__animated animate__fadeInDown animate__delay-.6s" style="display: inline-block;">RStudio 101</span></h1>
             <p class="subtitle lead"><span class="animate__animated animate__fadeInDown animate__delay-.6s" style="display: inline-block;">Learn the basics of R: open a project, setting a working directory and navigate RStudio interface</span></p>
@@ -224,61 +261,66 @@ gtag('config', 'G-HJEMN0LJY7', { 'anonymize_ip': true});
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
+        <nav id="TOC" role="doc-toc" class="toc-active"><h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#welcome-to-rstudio" id="toc-welcome-to-rstudio" class="nav-link active" data-scroll-target="#welcome-to-rstudio">Welcome to RStudio</a></li>
-  <li><a href="#creating-our-first-project" id="toc-creating-our-first-project" class="nav-link" data-scroll-target="#creating-our-first-project">Creating our first project</a>
+<li><a href="#welcome-to-rstudio" id="toc-welcome-to-rstudio" class="nav-link active" data-scroll-target="#welcome-to-rstudio">Welcome to RStudio</a></li>
+  <li>
+<a href="#creating-our-first-project" id="toc-creating-our-first-project" class="nav-link" data-scroll-target="#creating-our-first-project">Creating our first project</a>
   <ul class="collapse">
-  <li><a href="#step-1-opening-a-new-project" id="toc-step-1-opening-a-new-project" class="nav-link" data-scroll-target="#step-1-opening-a-new-project">Step 1: Opening a new project</a></li>
+<li><a href="#step-1-opening-a-new-project" id="toc-step-1-opening-a-new-project" class="nav-link" data-scroll-target="#step-1-opening-a-new-project">Step 1: Opening a new project</a></li>
   <li><a href="#step-2-create-our-first-project" id="toc-step-2-create-our-first-project" class="nav-link" data-scroll-target="#step-2-create-our-first-project">Step 2: Create our first project</a></li>
-  </ul></li>
-  <li><a href="#working-directory-important" id="toc-working-directory-important" class="nav-link" data-scroll-target="#working-directory-important">Working directory IMPORTANT!</a>
-  <ul class="collapse">
-  <li><a href="#benefits" id="toc-benefits" class="nav-link" data-scroll-target="#benefits">Benefits</a>
-  <ul class="collapse">
-  <li><a href="#what-happens-if-i-dont-create-a-folder-for-my-project" id="toc-what-happens-if-i-dont-create-a-folder-for-my-project" class="nav-link" data-scroll-target="#what-happens-if-i-dont-create-a-folder-for-my-project">What happens if I don’t create a folder for my project?</a></li>
-  </ul></li>
-  </ul></li>
   </ul>
-</nav>
+</li>
+  <li>
+<a href="#working-directory-important" id="toc-working-directory-important" class="nav-link" data-scroll-target="#working-directory-important">Working directory IMPORTANT!</a>
+  <ul class="collapse">
+<li><a href="#benefits" id="toc-benefits" class="nav-link" data-scroll-target="#benefits">Benefits</a></li>
+  </ul>
+</li>
+  <li><a href="#folder-in-your-projects" id="toc-folder-in-your-projects" class="nav-link" data-scroll-target="#folder-in-your-projects">Folder in your projects</a></li>
+  <li>
+<a href="#rstudio-taking-our-first-steps." id="toc-rstudio-taking-our-first-steps." class="nav-link" data-scroll-target="#rstudio-taking-our-first-steps.">Rstudio: taking our first steps.</a>
+  <ul class="collapse">
+<li><a href="#create-a-script" id="toc-create-a-script" class="nav-link" data-scroll-target="#create-a-script">Create a script</a></li>
+  </ul>
+</li>
+  <li>
+<a href="#rstudio-panes" id="toc-rstudio-panes" class="nav-link" data-scroll-target="#rstudio-panes">RStudio Panes</a>
+  <ul class="collapse">
+<li><a href="#source" id="toc-source" class="nav-link" data-scroll-target="#source">Source</a></li>
+  <li><a href="#console" id="toc-console" class="nav-link" data-scroll-target="#console">Console</a></li>
+  <li><a href="#environmenthistory" id="toc-environmenthistory" class="nav-link" data-scroll-target="#environmenthistory">Environment/History</a></li>
+  <li><a href="#files-and-more" id="toc-files-and-more" class="nav-link" data-scroll-target="#files-and-more">Files and more</a></li>
+  </ul>
+</li>
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
+  </ul></nav>
     </div>
 <!-- main -->
-<main class="content quarto-banner-title-block" id="quarto-document-content">
-
-
-
-
-<p>This document shows you how we can enable the use of multiple cores on Macs with Intel/Apple silicon chips (M1 and M2).</p>
-<section id="welcome-to-rstudio" class="level1">
-<h1>Welcome to RStudio</h1>
+<main class="content quarto-banner-title-block" id="quarto-document-content"><section id="welcome-to-rstudio" class="level1"><h1>Welcome to RStudio</h1>
+<hr>
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="images/rstudio1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="images/rstudio1.png" class="img-fluid figure-img"></a></p>
+<figure class="figure"><p><a href="images/rstudio1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="images/rstudio1.png" class="img-fluid figure-img"></a></p>
 </figure>
 </div>
 <p>This is the window that appears to us when we open R. As you can see, there are multiple things that we will check. But, first we are going to create our first project.</p>
-</section>
-<section id="creating-our-first-project" class="level1">
-<h1>Creating our first project</h1>
-<section id="step-1-opening-a-new-project" class="level2">
-<h2 class="anchored" data-anchor-id="step-1-opening-a-new-project">Step 1: Opening a new project</h2>
+<p></p>
+</section><section id="creating-our-first-project" class="level1"><h1>Creating our first project</h1>
+<hr>
+<section id="step-1-opening-a-new-project" class="level2"><h2 class="anchored" data-anchor-id="step-1-opening-a-new-project">Step 1: Opening a new project</h2>
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="images/rstudio2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="images/rstudio2.png" class="img-fluid figure-img"></a></p>
+<figure class="figure"><p><a href="images/rstudio2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="images/rstudio2.png" class="img-fluid figure-img"></a></p>
 </figure>
 </div>
 <ul>
 <li>We will go to File tab and click in “New Project”.</li>
 </ul>
 <table class="table">
-<thead>
-<tr class="header">
+<thead><tr class="header">
 <th>1.-Create Project</th>
 <th>2.-Project Type</th>
-</tr>
-</thead>
+</tr></thead>
 <tbody>
 <tr class="odd">
 <td><a href="images/rstudio3.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img src="images/rstudio3.png" class="img-fluid" data-fig-align="center"></a></td>
@@ -290,25 +332,21 @@ gtag('config', 'G-HJEMN0LJY7', { 'anonymize_ip': true});
 </tr>
 </tbody>
 </table>
-</section>
-<section id="step-2-create-our-first-project" class="level2">
-<h2 class="anchored" data-anchor-id="step-2-create-our-first-project">Step 2: Create our first project</h2>
+<p></p>
+</section><section id="step-2-create-our-first-project" class="level2"><h2 class="anchored" data-anchor-id="step-2-create-our-first-project">Step 2: Create our first project</h2>
 <ul>
 <li>Once we open a new project, we need to decide where we want to store our project and all the code we will generate. I’ll talk about this later, but putting a project in a separate folder is good practice to have everything ordered.</li>
 </ul>
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="images/rstudio5.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5"><img src="images/rstudio5.png" class="img-fluid figure-img"></a></p>
+<figure class="figure"><p><a href="images/rstudio5.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5"><img src="images/rstudio5.png" class="img-fluid figure-img"></a></p>
 </figure>
 </div>
 <p>Your name project should be precise and not too long. In our case, we will name it “Hertie Coding Club R”</p>
 <table class="table">
-<thead>
-<tr class="header">
+<thead><tr class="header">
 <th>3.-Choose folder</th>
 <th>4.-Icon project in project folder</th>
-</tr>
-</thead>
+</tr></thead>
 <tbody>
 <tr class="odd">
 <td><a href="images/rstudio6.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6"><img src="images/rstudio6.png" class="img-fluid" data-fig-align="center"></a></td>
@@ -320,35 +358,220 @@ gtag('config', 'G-HJEMN0LJY7', { 'anonymize_ip': true});
 </tr>
 </tbody>
 </table>
-</section>
-</section>
-<section id="working-directory-important" class="level1">
-<h1>Working directory IMPORTANT!</h1>
+<p></p>
+</section></section><section id="working-directory-important" class="level1"><h1>Working directory IMPORTANT!</h1>
+<hr>
 <p>In R, the working directory is the folder or directory where R will look for files and where it will save output files. I firmly believe setting the working directory is one of the most critical steps when working with R, as it can save you time and prevent errors.</p>
-<section id="benefits" class="level2">
-<h2 class="anchored" data-anchor-id="benefits">Benefits</h2>
+<p></p>
+<section id="benefits" class="level2"><h2 class="anchored" data-anchor-id="benefits">Benefits</h2>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+<strong>Benefits</strong>
+</div>
+</div>
+<div class="callout-body-container callout-body">
 <ul>
-<li><p>Setting the working directory <code>wd()</code> makes it easier to read and write files in your R script.</p></li>
-<li><p>When you set the working directory to the folder where your data files are stored, you can simply specify the file names without having to write out the full file path.</p></li>
-<li><p>This makes your code more readable and easier to maintain.</p></li>
-<li><p>Setting the working directory can make it easier to share your code with others.</p></li>
-<li><p>If you provide your code to someone else, they may not have the same file paths on their computer as you do.</p></li>
-<li><p>By setting the working directory, you can ensure that your code will work on someone else’s computer without having to modify the file paths in the code.</p></li>
-<li><p>Overall, setting the working directory is an important step when working with R, as it can save you time, prevent errors, and make your code more portable.</p></li>
+<li>Setting the working directory <code>wd()</code> makes it easier to read and write files in your R script.</li>
+<li>When you set the working directory to the folder where your data files are stored, you can simply specify the file names without having to write out the full file path.</li>
+<li>This makes your code more readable and easier to maintain.</li>
+<li>Setting the working directory can make it easier to share your code with others since they would load the code from the project folder.</li>
 </ul>
-<section id="what-happens-if-i-dont-create-a-folder-for-my-project" class="level3">
-<h3 class="anchored" data-anchor-id="what-happens-if-i-dont-create-a-folder-for-my-project">What happens if I don’t create a folder for my project?</h3>
+</div>
+</div>
+<div class="callout-important callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+<strong>What happens if I don’t create a folder for my project?</strong>
+</div>
+</div>
+<div class="callout-body-container callout-body">
 <ul>
-<li>If you do not set the working directory in an appropiate wat, R may look for files in the wrong location, which can lead to errors and a lot of time wasted</li>
+<li>If you do not appropriately set the working directory, R may look for files in the wrong location, which can lead to errors and a lot of time wasted</li>
 </ul>
+</div>
+</div>
+<p></p>
+</section></section><section id="folder-in-your-projects" class="level1"><h1>Folder in your projects</h1>
+<hr>
+<p>There are multiple ways to decide which folders you should have with your r project.</p>
+<p>Some of them look like this:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><a href="images/folder.jpg" class="lightbox" title="https://martinctc.github.io" data-gallery="quarto-lightbox-gallery-8"><img src="images/folder.jpg" class="img-fluid figure-img"></a></p>
+<p></p><figcaption class="figure-caption">https://martinctc.github.io</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><a href="images/folder2.png" class="lightbox" title="Negoita 2021" data-gallery="quarto-lightbox-gallery-9"><img src="images/folder2.png" class="img-fluid figure-img"></a></p>
+<p></p><figcaption class="figure-caption">Negoita 2021</figcaption><p></p>
+</figure>
+</div>
+<hr>
+<p></p>
+<p>Personally, I like this approach:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><a href="images/folder3.png" class="lightbox" data-gallery="quarto-lightbox-gallery-10"><img src="images/folder3.png" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
+<ul>
+<li>
+<strong>data/:</strong> for processed data</li>
+<li>
+<strong>data-raw/:</strong> for raw data and intermediate datasets (Internet, f.e.)</li>
+<li>
+<strong>figures/:</strong> for save your plots</li>
+<li>
+<strong>analysis/:</strong> for save your scripts</li>
+<li>
+<strong>documents/:</strong> for outlines, drafts, other text</li>
+<li>
+<strong>R/:</strong> for functions</li>
+</ul>
+<p></p>
+<p>This structure is based on these proposed coding framework.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><a href="images/rstudio21.png" class="lightbox" title="Alarid et. al.&nbsp;(2019)" data-gallery="quarto-lightbox-gallery-11"><img src="images/rstudio21.png" class="img-fluid figure-img"></a></p>
+<p></p><figcaption class="figure-caption">Alarid et. al.&nbsp;(2019)</figcaption><p></p>
+</figure>
+</div>
+<p>I’ve been working with this folder structure for a while, and it’s super helpful because once you are used to it, it’s super fast to search your outputs, scripts, etc. If you want to know more about these approach and why a coding framework is important, please take a look to this work lead by <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6871515/">Fernando Alarid-Escudero and other scholars</a></p>
+<p></p>
+</section><section id="rstudio-taking-our-first-steps." class="level1"><h1>Rstudio: taking our first steps.</h1>
+<hr>
+<section id="create-a-script" class="level2"><h2 class="anchored" data-anchor-id="create-a-script">Create a script</h2>
+<p>We will create our first R Script. For that please go to Fil -&gt; New File -&gt; R Script</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><a href="images/rstudio11.png" class="lightbox" data-gallery="quarto-lightbox-gallery-12"><img src="images/rstudio11.png" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
+<p>Once we create our script, it will show us a window with a tab called “Untitled1”. Now, we need to save that script in our analysis folder. For that, we need to go to File -&gt; Save As. Next, we need to select the folder within our project where we want to save our script. Following the good practices recommended here, I’ll keep it in my analysis folder. I’m naming my script as “first_script”.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><a href="images/rstudio12.png" class="lightbox" title="File -> R Script" data-gallery="quarto-lightbox-gallery-13"><img src="images/rstudio12.png" class="img-fluid figure-img"></a></p>
+<p></p><figcaption class="figure-caption">File -&gt; R Script</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><a href="images/rstudio13.png" class="lightbox" data-gallery="quarto-lightbox-gallery-14"><img src="images/rstudio13.png" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
+<p></p>
+</section></section><section id="rstudio-panes" class="level1"><h1>RStudio Panes</h1>
+<hr>
+<p>It’s important that you have a really clear idea about the RStudio panes concept. This panes allow users to divide the workflow. Each pane can display different types of information, such as code, console output, plots, help files, and data frames. It enables users to organize their workspace in a more efficient way and to customize their RStudio according to their needs. We will explain every R section.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><a href="images/rstudio14.png" class="lightbox" title="Main Grafic User Interface" data-gallery="quarto-lightbox-gallery-15"><img src="images/rstudio14.png" class="img-fluid figure-img"></a></p>
+<p></p><figcaption class="figure-caption">Main Grafic User Interface</figcaption><p></p>
+</figure>
+</div>
+<p></p>
+<section id="source" class="level2"><h2 class="anchored" data-anchor-id="source">Source</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><a href="images/rstudio16.png" class="lightbox" data-gallery="quarto-lightbox-gallery-16"><img src="images/rstudio16.png" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
+<p>The source pane is the main workspace for creating and editing R scripts, and it provides features for syntax highlighting, code completion, and error checking.</p>
+<ul>
+<li>One of the key features of the source pane is syntax highlighting, which makes it easier to read and understand R code by using different colors and fonts to differentiate between different elements of the code, such as keywords, comments, and functions.</li>
+</ul>
+<p>With this commands, you can select your code and run your code.</p>
+<table class="table">
+<thead><tr class="header">
+<th style="text-align: center;"><a href="images/apple.png" class="lightbox" data-gallery="quarto-lightbox-gallery-17"><img src="images/apple.png" class="img-fluid" width="30"></a></th>
+<th style="text-align: center;"><a href="images/windows.png" class="lightbox" data-gallery="quarto-lightbox-gallery-18"><img src="images/windows.png" class="img-fluid" width="30"></a></th>
+</tr></thead>
+<tbody><tr class="odd">
+<td style="text-align: center;"><strong>“Command + Return</strong></td>
+<td style="text-align: center;"><strong>“Control + Enter”</strong></td>
+</tr></tbody>
+</table>
+<p>This code will excute and it will be showed in the console.</p>
+<p></p>
+</section><section id="console" class="level2"><h2 class="anchored" data-anchor-id="console">Console</h2>
+<p>When a user types in a command in the console, like for example assigning a variable or running a function, R processes the command and generates the output, which is displayed in the console. The console is a critical tool for debugging R code, as it allows users to see the output of their commands and to identify errors and bugs in their code. In summary:</p>
+<ul>
+<li>The console is the heart of R.</li>
+<li>Here R actually evaluates your code.</li>
+<li>Try to write most of your code in a document in the Source. Only type directly into the Console to de-bug or do quick analyses.</li>
+<li>When ready: &gt; and If waiting: +</li>
+<li>Cancel commands by pressing Esc. to finish a running process.</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><a href="images/rstudio17.png" class="lightbox" data-gallery="quarto-lightbox-gallery-19"><img src="images/rstudio17.png" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><a href="images/rstudio17_1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-20"><img src="images/rstudio17_1.png" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
+<p>In the last pictures, for example, we evaluated the expression</p>
+<div class="cell">
+<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fl">2</span> <span class="op">+</span> <span class="fl">2</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 4</code></pre>
+</div>
+</div>
+<p>As you can see, in our console it shows the operation that we ran. (Remember the commands to run your code). One of the shortcuts that I use often is the ↑ key. Pressing the top arrow shows the last code that you executed; pretty useful if you don’t want to rerun your code</p>
+<p></p>
+</section><section id="environmenthistory" class="level2"><h2 class="anchored" data-anchor-id="environmenthistory">Environment/History</h2>
+<p>In R, the environment refers to the collection of variables and their values that are currently stored in the memory. Each time a user creates a variable or loads data into R, those variables and data are stored in the environment. One of the things that I like about using RStudio as a IDE is practically this nice way of putting all the varaibles, data functions and every object that you are loading in your environment. In summary, the environment can be thought of as a workspace where the user can manipulate and analyze the data.</p>
+<p>The Environment tab of this panel shows you the names of all the objects that you have been creating. For example, you can see information like the number of observations and rows in data objects; lists, funtions, etc.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><a href="images/rstudio18.png" class="lightbox" data-gallery="quarto-lightbox-gallery-21"><img src="images/rstudio18.png" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><a href="images/rstudio18_1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-22"><img src="images/rstudio18_1.png" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
+<p></p>
+</section><section id="files-and-more" class="level2"><h2 class="anchored" data-anchor-id="files-and-more">Files and more</h2>
+<p>In R, files and directories helps you managing data, plots and code. This pane provides access to the files and directories on the user’s computer. If you can see close, it will show your current working directory; this helps you to check if you are working in the correct directory. Users can navigate through the file system, create new files and directories, and open or delete existing files. The pane also provides features for searching and filtering files, as well as organizing them into projects. I personally use it to preview plots, install packages and check documentation.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><a href="images/rstudio19.png" class="lightbox" data-gallery="quarto-lightbox-gallery-23"><img src="images/rstudio19.png" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><a href="images/rstudio19_1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-24"><img src="images/rstudio19_1.png" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
+</section></section><section id="references" class="level1"><h1>References</h1>
+<hr>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+References
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Alarid-Escudero, F., Krijkamp, E. M., Pechlivanoglou, P., Jalal, H., Kao, S. Z., Yang, A., &amp; Enns, E. A. (2019). <em>A Need for Change! A Coding Framework for Improving Transparency in Decision Modeling.</em> PharmacoEconomics, 37(11), 1329–1339. <a href="https://doi.org/10.1007/s40273-019-00837-x">URL</a></p>
+<p>Negoita, L. (2021, July 5). <em>How to organize your analyses with R studio projects.</em> R (for ecology). <a href="https://www.rforecology.com/post/organizing-your-r-studio-projects/">URL</a></p>
+</div>
+</div>
+<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Cite this page:</p>
+</div>
+</div>
 
 
-</section>
-</section>
-</section>
-
-</main> <!-- /main -->
-<script id="quarto-html-after-body" type="application/javascript">
+</section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
     const mode = bsSheetEl.getAttribute("data-mode");
@@ -597,25 +820,24 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
-<footer class="footer">
-  <div class="nav-footer">
+<footer class="footer"><div class="nav-footer">
     <div class="nav-footer-left">
       <ul class="footer-items list-unstyled">
-    <li class="nav-item">
+<li class="nav-item">
     <a class="nav-link" href="https://creativecommons.org/licenses/by/2.0/"><i class="fa-regular fa-copyright" aria-label="copyright"></i> <i class="fa-solid fa-circle-user" aria-label="circle-user"></i> 2023 HCC | J.Roa</a>
   </li>  
 </ul>
-    </div>   
+</div>   
       <div class="nav-footer-center">
         <ul class="footer-items list-unstyled">
-    <li class="nav-item">
+<li class="nav-item">
     <a class="nav-link" href="https://quarto.org"><i class="fa-solid fa-rocket fa-lg" aria-label="rocket"></i> Quarto engine</a>
   </li>  
 </ul>
-      </div>
+</div>
     <div class="nav-footer-right">
       <ul class="footer-items list-unstyled">
-    <li class="nav-item">
+<li class="nav-item">
     <a class="nav-link" href="mailto:hertiecodingclub@gmail.com"><i class="fa-solid fa-square-envelope fa-lg" aria-label="square-envelope"></i></a>
   </li>  
     <li class="nav-item">
@@ -634,11 +856,9 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     <a class="nav-link" href="https://youtube.com/@hertiecodingclub"><i class="fa-brands fa-youtube fa-lg" aria-label="youtube"></i></a>
   </li>  
 </ul>
-    </div>
+</div>
   </div>
-</footer>
-<script>var lightboxQuarto = GLightbox({"closeEffect":"fade","openEffect":"fade","loop":true,"skin":"lightwidth","descPosition":"left","selector":".lightbox"});</script>
-
+</footer><script>var lightboxQuarto = GLightbox({"skin":"lightwidth","closeEffect":"fade","loop":true,"descPosition":"left","selector":".lightbox","openEffect":"fade"});</script>
 
 
 <script src="../../../site_libs/quarto-html/zenscroll-min.js"></script>

@@ -2774,3 +2774,8 @@ background-clip: text;
   border-bottom: 3px solid #BA0020; /* Change this value to increase or decrease the thickness of the cell borders */
   
 }
+
+figcaption {
+  text-align: center;
+
+}
