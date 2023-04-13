@@ -2754,5 +2754,23 @@ background-clip: text;
 -webkit-background-clip: text;
 }
 
+.table{
+  --bs-table-accent-bg: transparent;
+  --bs-table-striped-color: #6c757d;
+  --bs-table-striped-bg: rgba(0, 0, 0, 0.05);
+  --bs-table-active-color: #6c757d;
+  --bs-table-active-bg: rgba(0, 0, 0, 0.1);
+  --bs-table-hover-color: #6c757d;
+  --bs-table-hover-bg: rgba(0, 0, 0, 0.075);
+  width: 100%;
+  margin-bottom: 1rem;
+  color: #004e92;
+  vertical-align: top;
+  border-color: #BA0020;
+}
 
-
+.table td,
+.table th {
+  border-bottom: 3px solid #BA0020; /* Change this value to increase or decrease the thickness of the cell borders */
+  
+}
