@@ -1,0 +1,851 @@
+---
+title:  '{{< animate fadeInDown "Understanding R Objects: Data Structures and Classes in R"delay=.6s >}}'
+subtitle: '{{< animate fadeInDown "This is why R is so powerful: all kind of objects and possibilites"delay=.6s >}}'
+author: ["Jorge Roa"]
+date: "2023-04-16"
+categories: ["Rstudio", "Objects"]
+toc: true
+draft: false
+code-link: true
+code-copy: true
+title-block-banner: true
+comments: false
+image: images/objects.png
+include-in-header: meta.html
+filters:
+   - lightbox
+lightbox: 
+  match: auto
+  effect: fade
+  desc-position: left
+  css-class: "lightwidth"
+listing: 
+  - id: eda
+    contents: "material/Books/eda_r/index.qmd"
+    type: grid
+---
+
+# Objects in R
+
+------------------------------------------------------------------------
+
+One of the things that define R as an amazing tool to do multiple things are objects. R work with objects that essentialy are data structures that can hold values, but also othr types of data and can be assigned names for easy reference. Objects in R are useful because we can organize and store data in meaningful ways. One of the most importants thigns when you are learning R is understand how to work with these objects because you will have the confidence and knowledge to use it at your better convenience. There are several types of objects in R, including vectors, matrices, data frames, lists, and factors, each with their own characteristics and uses.
+
+::: callout-warning
+-   To create an object, give it a name followed by the assignment operator, followed by the value/data type.
+-   Assignment operator \<-
+-   Shortcut: "Alt + -" on PC, "Option + -" on Mac
+:::
+
+ 
+
+![](images/dataStructures.png){fig-align="center"}
+
+ 
+
+In this image, you can see the different types of objects that we have and this is the best way to visualize. However, to really understand what is going on, you need to start writing code and start trying using this different type of objects to know them better. In the next lines, I'll write explanations, examples and exercises.
+
+# Vectors
+
+------------------------------------------------------------------------
+
+![](images/vector.png){fig-align="center" width="300"}
+
+Vectors are one-dimensional arrays of data that contain elements of the same data type, such as numbers or characters. They are a fundamental building block in R and are used extensively in data analysis and statistical computing.
+
+::: callout-tip
+Vectors can be created using the c() function, or by using functions such as seq() and rep(). Vectors can be manipulated using R's built-in vectorized functions, such as sum(), mean(), length(), and many more.
+:::
+
+ 
+
+In R, you can assign a name to an object using the assignment operator "\<-" or the equal sign "=". Here are multiple way to assign a name to an object.
+
+```{r}
+
+x <- 2
+
+x = 2
+
+assign("x", 2)
+```
+
+ 
+
+## Create a numeric vector
+
+```{r}
+
+x <- c(1, 2, 3, 4, 5)
+
+x
+
+```
+
+ 
+
+## Access elements of a vector
+
+Returns the second element of x, which is 2
+
+```{r}
+
+x[2] 
+
+```
+
+ 
+
+## Perform arithmetic operations
+
+Adds 2 to each element of x, resulting in the vector c(3, 4, 5, 6, 7)
+
+```{r}
+
+x + 2 
+
+
+```
+
+ 
+
+## Find the length of a vector:
+
+```{r}
+
+length(x) 
+
+```
+
+ 
+
+## Modify a vector
+
+Changes the third element of x to 10
+
+```{r}
+
+x[3] <- 10
+
+x
+
+```
+
+ 
+
+## Apply functions to a vector
+
+Returns the sum of the elements in x, which is 22
+
+```{r}
+
+sum(x) 
+
+```
+
+Returns the mean (average) of the elements in x, which is 4.4
+
+```{r}
+
+mean(x)
+
+```
+
+Returns the maximum value in x, which is 10
+
+```{r}
+
+max(x)
+
+```
+
+Returns the minimum value in x, which is 1
+
+```{r}
+
+min(x)
+
+```
+
+ 
+
+In addition to numeric values, you can put a wide variety of other data types in a vector in R. Here are some examples:
+
+
+## Character values
+
+```{r}
+
+names <- c("Hertie School", "Berlin", "Public Policy")
+
+names
+
+```
+
+ 
+
+## Logical values
+
+```{r}
+
+flags <- c(TRUE, FALSE, TRUE)
+
+flags
+```
+
+ 
+
+## Times:
+
+```{r}
+
+times <- as.POSIXct(c("2022-01-01 10:00:00", "2022-01-01 11:00:00", "2022-01-01 12:00:00"))
+
+times
+
+```
+
+ 
+
+# Exercises
+
+------------------------------------------------------------------------
+
+1.-Create a numeric vector x with values 1 through 10. Then, calculate the sum of the first 5 elements of x.
+
+**Answer**
+
+```{r, eval=FALSE, }
+#| code-fold: true
+
+# Create a numeric vector containing the numbers 1 through 10
+x <- 1:10
+
+# Find the sum of the first five elements of the vector x using indexing
+sum(x[1:5])
+
+
+```
+
+------------------------------------------------------------------------
+
+2.-Create a character vector names with the names of your three favorite foods. Then, use indexing to extract the second element of names.
+
+**Answer**
+
+```{r, eval=FALSE, }
+#| code-fold: true
+
+# Create a character vector containing the names "pizza", "tacos", and "soup"
+names <- c("pizza", "tacos", "soup")
+
+# Extract the second element of the vector using indexing
+names[2]
+
+
+
+```
+
+------------------------------------------------------------------------
+
+3.-Create a logical vector flags with values TRUE, FALSE, TRUE, TRUE. Then, use the which() function to find the positions of the TRUE values in flags.
+
+**Answer**
+
+```{r, eval=FALSE, }
+#| code-fold: true
+
+# create a logical vector containing the values TRUE, FALSE, TRUE, and TRUE
+flags <- c(TRUE, FALSE, TRUE, TRUE)
+
+# use the which() function to find the indices of the TRUE values in the vector
+which(flags)
+
+
+
+```
+
+------------------------------------------------------------------------
+
+4.-Create a date vector dates with the dates "2022-01-01", "2022-02-01", "2022-03-01", "2022-04-01", "2022-05-01". Then, use the month() function to extract the month of the second date in dates.
+
+**Answer**
+
+```{r, eval=FALSE, }
+#| code-fold: true
+
+# Create a Date vector containing five dates using the as.Date() function
+dates <- as.Date(c("2022-01-01", "2022-02-01", "2022-03-01", "2022-04-01", "2022-05-01"))
+
+# Extract the second element of the vector using indexing and find its month using the month() function
+month(dates[2])
+
+
+
+```
+
+------------------------------------------------------------------------
+
+5.-Create a vector x with values 1, 2, 3, 4, 5, and a vector y with values 6, 7, 8, 9, 10. Then, concatenate x and y into a single vector z.
+
+**Answer**
+
+```{r, eval=FALSE, }
+#| code-fold: true
+
+# Create two numeric vectors containing 
+# the numbers 1 through 5 and 6 through 10, respectively
+x <- c(1:5)
+y <- c(6:10)
+
+# Concatenate the two vectors to create a 
+# new vector called z using the c() function
+z <- c(x, y)
+
+
+```
+
+ 
+
+# Lists
+
+------------------------------------------------------------------------
+
+![](images/list.png){fig-align="center" width="300"}
+
+
+A list allow you to store multiple objects of different types. Lists are similar to vectors in that they can store multiple elements, but unlike vectors, the elements of a list can be of different types, such as numeric, character, or even other lists. Each element of a list can be named, allowing you to access and manipulate specific elements of the list by name.
+
+Lists are handy since they can allow you to store different outputs simultaneously. For example, when you are running models, the results are stored in lists and you can access to them by specifying `[[]]` and the name of the list inside of the squared brackets. 
+
+
+
+
+## A list with different type of vectors
+
+```{r}
+
+
+my_list <- list(numbers = c(1, 2, 3), names = c("Alejandro", "Eduardo", "Fernanda"), statement = c(TRUE, FALSE, TRUE))
+
+my_list
+
+```
+
+## Access an element of the list using indexing
+
+We can access an element of the list using indexing, which is really useful when you are doing functions and storing results or calling them. 
+
+Here this returns the second element of my_list, which is the character vector "names"
+
+```{r}
+
+
+my_list[[2]]
+
+
+```
+
+
+or also we can access an element of the list using named indexing:
+
+```{r}
+
+
+my_list[["names"]]
+
+
+```
+
+
+## Add a new element to the list:
+
+Adds a new numeric vector "ages" to my_list
+```{r}
+
+my_list[["ages"]] <- c(25, 30, 35)
+
+```
+
+
+We can do the same even with a dataframe inside a list
+
+```{r}
+
+df <- data.frame(name = c("Alejandro", "Eduardo", "Marifer"), 
+                 age = c(30, 27, 17)) # Create the dataframe
+
+my_list[["my_df"]] <- df
+
+my_list
+```
+
+
+
+## Create a nested list with two elements:
+
+```{r}
+nested_list <- list(numbers = c(1, 2, 3), list_2 = list(letter = "A", number = 42))
+
+nested_list
+
+```
+
+
+For access a nested element of the list:
+
+```{r}
+
+nested_list[["list_2"]][["number"]]  
+
+
+```
+
+
+As you can see, we can access the outputs of the list we want. This is useful since you can apply functions to retrieve your data from a nested list or access to a specific output of your model, for example. 
+
+
+# Exercises
+
+------------------------------------------------------------------------
+
+1.-Create a list with three elements: a numeric vector, a character vector, and a logical vector. Then, add a new element to the list containing a data frame with three columns: "name", "age", and "gender".
+
+**Answer**
+
+```{r, eval=FALSE, }
+#| code-fold: true
+
+
+# Create a list with three elements: 
+# a numeric vector, a character vector, and a logical vector
+l_exercise1 <- list(numbers = c(1, 2, 3), 
+                    names = c("Alice", "Bob", "Charlie"), 
+                    logical = c(TRUE, FALSE, TRUE))
+
+# Create a data frame with three columns
+df <- data.frame(name = c("Alice", "Bob", "Charlie"), 
+                 age = c(25, 30, 35), 
+                 gender = c("F", "M", "M"))
+
+# Add the data frame as a fourth element 
+# to the list using the [[]] operator
+l_exercise1[["df"]] <- df
+
+
+
+```
+
+------------------------------------------------------------------------
+
+2.-Create a nested list with two elements: a character vector containing the names of three countries, and a list containing the populations and areas of those countries.
+
+**Answer**
+
+```{r, eval=FALSE, }
+#| code-fold: true
+
+# The first element is a character vector containing the names of three countries
+# The second element is a list containing two named vectors: population and area
+
+l_exercise2 <- list(countries = c("USA", "China", "India"), 
+                    data = list(population = c(328, 1394, 1380), 
+                                area = c(9.8, 9.6, 3.3)))
+
+```
+
+------------------------------------------------------------------------
+
+3.- Create a list with four elements: two numeric vectors, a character vector, and a data frame. Then, extract the second element of the character vector and the third column of the data frame.
+
+**Answer**
+
+```{r, eval=FALSE, }
+#| code-fold: true
+
+
+# Create a list with four elements: two numeric vectors, a character vector, and a data frame
+l_exercise3 <- list(x = c(1, 2, 3), y = c(4, 5, 6), 
+                    names = c("Guillermo", "Alonso", "Chivo"), 
+                    df = data.frame(name = c("Guillermo", "Alonso", "Chivo"), 
+                                    age = c(25, 21, 45), 
+                                    gender = c("M", "M", "M")))
+
+# Extract the second element of the names vector using the [[]] operator
+l_exercise3[["names"]][2]
+
+# Extract the third column of the df data frame using the [[]] operator
+l_exercise3[["df"]][3]
+
+
+
+
+```
+
+------------------------------------------------------------------------
+
+4.-Create a list with two elements: a numeric vector and a data frame. Then, use the str() function to display the structure of the list.
+
+**Answer**
+
+```{r, eval=FALSE, }
+#| code-fold: true
+
+# Create a list with two elements: a numeric vector and a data frame
+my_list <- list(x = c(1, 2, 3), 
+                df = data.frame(name = c("Trejo", "Adame", "Rose"), 
+                                age = c(25, 30, 35), 
+                                gender = c("M", "M", "F")))
+
+# Display the structure of the list using the str() function
+str(my_list)
+
+
+
+
+```
+
+------------------------------------------------------------------------
+
+5.-Create a list with three elements: a numeric vector, a character vector, and a logical vector. Then, use the names() function to assign names to the elements of the list.
+
+**Answer**
+
+```{r, eval=FALSE, }
+#| code-fold: true
+
+# Create a list with three elements: a numeric vector, a character vector, and a logical vector
+l_exercise5 <- list(numbers = c(1, 2, 3), 
+                    names = c("Mariana", "Bobby", "Niurka", "Ricardo"), 
+                    logical = c(TRUE, FALSE, TRUE))
+
+# Use the names() function to assign names to the elements of the list
+names(l_exercise5) <- c("num", "nam", "log")
+
+
+
+
+```
+
+------------------------------------------------------------------------
+
+6.-Create a list with three elements: a numeric vector, a character vector, and a logical vector. Then, use the length() function to find the length of the character vector.
+
+**Answer**
+
+```{r, eval=FALSE, }
+#| code-fold: true
+
+# Create a list with three elements: a numeric vector, a character vector, and a logical vector
+l_exercise6 <- list(numbers = c(1, 2, 3), 
+                names = c("Mariana", "Bobby", "Niurka"), 
+                logical = c(TRUE, FALSE, TRUE))
+
+# Use the length() function to find the length of the "names" vector
+length(l_exercise6[["names"]])
+
+
+```
+
+ 
+
+# Matrices and arrays
+
+------------------------------------------------------------------------
+
+![](images/matrix_array.png){fig-align="center" width="300"}
+
+A matrix is a two-dimensional data structure that contains a fixed number of rows and columns. As it showed in the image, matrix can have the same functions as a dataframe, but the difference is how you approach to this object. For example, the elements of a matrix must all be of the same data type, such as numeric or character. Matrices are similar to data frames, but they do not have column names or row names. Usually, this ones are used to mathematic operations or modeling. 
+Arrays, on the other hand, can have any number of dimensions, even including two dimensions for matrices. Arrays can contain elements of different data types, and they are useful for storing and manipulating large amounts of data with complex structures.
+
+
+## Createing a matrix
+
+Create a matrix with three rows and four columns:
+
+```{r}
+
+
+m_example <- matrix(1:12, nrow = 3, ncol = 4)
+
+m_example
+
+```
+
+## Access an element of the matrix using indexing
+
+Returns the element in the second row and third column of my_matrix, which is 7
+
+```{r}
+
+
+m_example[2, 3] 
+
+```
+
+
+## Modify an element of the matrix
+
+Changes the element in the first row and fourth column of my_matrix to 20
+
+```{r}
+
+m_example[1, 4] <- 20  
+
+m_example
+
+```
+
+
+## Create an array with three dimensions
+
+```{r}
+
+arr_example <- array(1:24, dim = c(2, 3, 4))
+
+arr_example
+
+```
+
+
+## Access an element of the array using indexing
+
+Returns the element in the second row, third column, and fourth layer of my_array, which is 23
+
+```{r}
+
+arr_example[2, 3, 4]
+
+
+```
+
+## Modify an element of the array
+
+Changes the element in the second row, second column, and first layer of arr_example to 10
+
+```{r}
+
+arr_example[2, 2, 1] <- 10 
+
+arr_example
+
+```
+
+
+# Exercises
+
+------------------------------------------------------------------------
+
+1.-Create a matrix with four rows and three columns, where each element is the square of its row number.
+
+**Answer**
+
+```{r, eval=FALSE, }
+#| code-fold: true
+
+# Create a matrix with 4 rows and 3 columns 
+# containing the squares of the numbers 1 through 4
+m_exercise1 <- matrix((1:4)^2, nrow = 4, ncol = 3)
+
+# Display the matrix
+m_exercise1
+
+# Output
+
+#      [,1] [,2] [,3]
+# [1,]    1    1    1
+# [2,]    4    4    4
+# [3,]    9    9    9
+# [4,]   16   16   16
+
+```
+
+------------------------------------------------------------------------
+
+2.-Create a three-dimensional array with dimensions 2 x 3 x 4, where each element is the sum of its three indices.
+
+**Answer**
+
+```{r, eval=FALSE, }
+#| code-fold: true
+
+l_exercise2 <- list(countries = c("USA", "China", "India"), 
+                    data = list(population = c(328, 1394, 1380), 
+                                area = c(9.8, 9.6, 3.3)))
+
+# $countries
+# [1] "USA"   "China" "India"
+# 
+# $data
+# $data$population
+# [1]  328 1394 1380
+# 
+# $data$area
+# [1] 9.8 9.6 3.3
+
+```
+
+------------------------------------------------------------------------
+
+3.-Create a matrix with five rows and two columns, where each element is a random number between 1 and 10.
+
+**Answer**
+
+```{r, eval=FALSE, }
+#| code-fold: true
+
+# Create a 5 x 2 matrix with random values between 1 and 10
+m_exercise3 <- matrix(sample(1:10, 10), nrow = 5, ncol = 2)
+
+# Display the matrix
+m_exercise3
+
+
+# Output
+
+#      [,1] [,2]
+# [1,]    3    8
+# [2,]    4    9
+# [3,]    2    7
+# [4,]    6    1
+# [5,]    5   10
+
+
+```
+
+------------------------------------------------------------------------
+
+4.-Use matrix multiplication to multiply a matrix of dimensions 3 x 2 by a matrix of dimensions 2 x 3.
+
+Hint: Use `%*%` for matrix multiplication.
+
+**Answer**
+
+```{r, eval=FALSE, }
+#| code-fold: true
+
+# cCeate a 3 x 2 matrix containing the numbers 1 through 6
+m_exercise4_1 <- matrix(c(1, 2, 3, 4, 5, 6), nrow = 3, ncol = 2)
+
+# Create a 2 x 3 matrix containing the numbers 1 through 6 in a different order
+m_exercise4_2 <- matrix(c(2, 1, 4, 3, 6, 5), nrow = 2, ncol = 3)
+
+# Perform matrix multiplication on the two matrices
+m_multiplication <- m_exercise4_1 %*% m_exercise4_2
+
+# Display the result of the matrix multiplication
+m_multiplication
+
+# Output
+#      [,1] [,2] [,3]
+# [1,]    6   16   26
+# [2,]    9   23   37
+# [3,]   12   30   48
+
+```
+
+------------------------------------------------------------------------
+
+5.-Use indexing to extract a 2 x 3 sub-array from a 3 x 4 array.
+
+**Answer**
+
+```{r, eval=FALSE, }
+#| code-fold: true
+
+# Create a 3 x 4 array containing the numbers 1 through 12
+array_exercise5 <- array(1:12, dim = c(3, 4))
+
+# Extract a 2 x 3 sub-array from rows 2 and 3 and columns 2 through 4
+sub_array_ex5 <- array_exercise5[2:3, 2:4]
+
+# Display the sub-array
+sub_array_ex5
+
+
+# Output
+
+#      [,1] [,2] [,3]
+# [1,]    5    8   11
+# [2,]    6    9   12
+
+```
+
+ 
+
+# Data Frame
+
+------------------------------------------------------------------------
+
+![](images/df.png){fig-align="center" width="300"}
+
+A data frame is the a common object, specially for people that does data wrangling and analyze data. Thos popular object is a tabular data structure where the rows represent observations and columns represent variables.
+
+::: callout-warning
+Data Frames must have columns representing a vector of the same length. If you try to merge a vector of 5 elements and a vector of 4 elements, it will give you an error. 
+:::
+
+## Create a Data Frame: multiple ways
+
+`%*%`
+
+1.- Using `data.frame()` function: This is the most common way to create a data frame in R. You can put as many vectros (variables) as you want. 
+
+```{r}
+
+df <- data.frame(x = c(1, 2, 3), 
+                 y = c("a", "b", "c"), 
+                 z = c(TRUE, FALSE, TRUE))
+
+```
+
+
+2.- Using `read_csv2()`  function: You can also create a data frame by importing data from an external file using the `read.table()` or read.csv() function.
+
+```{r, eval=FALSE}
+
+df <- read.table("data.txt", header = TRUE)
+
+```
+
+3.- Using `read_excel()` function from the `readxl` package
+
+```{r, eval=FALSE}
+
+library(readxl)
+df <- read_excel("data.xlsx")
+
+```
+
+4.- Using `tibble()` function from the tibble package
+
+```{r, eval=FALSE}
+
+library(tibble)
+df <- tibble(x = c(1, 2, 3), y = c("a", "b", "c"), z = c(TRUE, FALSE, TRUE))
+
+```
+
+You can check our other tutorials to handle dataframes and start practicing. We also recommend this books 
+
+
+::: {#eda}
+:::
+
+
+
+# References
+
+------------------------------------------------------------------------
+
+::: callout-tip
+## References
+
+Alarid-Escudero, F., Krijkamp, E. M., Pechlivanoglou, P., Jalal, H., Kao, S. Z., Yang, A., & Enns, E. A. (2019). *A Need for Change! A Coding Framework for Improving Transparency in Decision Modeling.* PharmacoEconomics, 37(11), 1329--1339. [URL](https://doi.org/10.1007/s40273-019-00837-x)
+
+Negoita, L. (2021, July 5). *How to organize your analyses with R studio projects.* R (for ecology). [URL](https://www.rforecology.com/post/organizing-your-r-studio-projects/)
+:::
+
+::: callout-note
+Cite this page: Roa, J. (2023, April 16). *Understanding R Objects: Data Structures and Classes in R*. Hertie Coding Club. [URL](https://www.hertiecodingclub.com/learn/rstudio/rstudio101/)
+:::

@@ -2,6 +2,7 @@
   {
     "listing": "/learn/rstudio.html",
     "items": [
+      "/learn/rstudio/objects/index.html",
       "/learn/rstudio/rstudio101/index.html",
       "/learn/rstudio/Install-r-studio/index.html",
       "/learn/rstudio/Multithreading/index.html"
@@ -10,6 +11,7 @@
   {
     "listing": "/index.html",
     "items": [
+      "/learn/rstudio/objects/index.html",
       "/learn/rstudio/rstudio101/index.html",
       "/learn/rstudio/Install-r-studio/index.html",
       "/learn/rstudio/Multithreading/index.html",
@@ -74,5 +76,9 @@
       "/material/Certifications/freecodecamp/index.html",
       "/material/Certifications/IBM_data_analyst/index.html"
     ]
+  },
+  {
+    "listing": "/learn/rstudio/objects/index.html",
+    "items": []
   }
 ]
