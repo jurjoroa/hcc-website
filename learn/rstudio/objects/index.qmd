@@ -21,8 +21,8 @@ lightbox:
   css-class: "lightwidth"
 listing: 
   - id: eda
-    contents: "material/Books/eda_r/index.qmd"
-    type: grid
+    template: gallery.ejs
+    contents: gallery.yml
 ---
 
 # Objects in R
@@ -787,9 +787,8 @@ Data Frames must have columns representing a vector of the same length. If you t
 
 ## Create a Data Frame: multiple ways
 
-`%*%`
 
-1.- Using `data.frame()` function: This is the most common way to create a data frame in R. You can put as many vectros (variables) as you want. 
+1.- Using `data.frame()` function: This is the most common way to create a data frame in R. You can put as many vectors (variables) as you want. 
 
 ```{r}
 

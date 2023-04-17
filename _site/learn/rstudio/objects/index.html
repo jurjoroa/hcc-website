@@ -135,9 +135,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     }
 
     const options = {
-      valueNames: [{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      valueNames: ['listing-category','listing-description','listing-tiles',{ data: ['index'] },{ data: ['categories'] }],
       
-      searchColumns: [],
+      searchColumns: ["listing-category","listing-description","listing-tiles"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -998,8 +998,7 @@ Warning
 </div>
 </div>
 <section id="create-a-data-frame-multiple-ways" class="level2"><h2 class="anchored" data-anchor-id="create-a-data-frame-multiple-ways">Create a Data Frame: multiple ways</h2>
-<p><code>%*%</code></p>
-<p>1.- Using <code><a href="https://rdrr.io/r/base/data.frame.html">data.frame()</a></code> function: This is the most common way to create a data frame in R. You can put as many vectros (variables) as you want.</p>
+<p>1.- Using <code><a href="https://rdrr.io/r/base/data.frame.html">data.frame()</a></code> function: This is the most common way to create a data frame in R. You can put as many vectors (variables) as you want.</p>
 <div class="cell">
 <div class="sourceCode" id="cb67"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">df</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html">data.frame</a></span><span class="op">(</span>x <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fl">2</span>, <span class="fl">3</span><span class="op">)</span>, </span>
 <span>                 y <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"a"</span>, <span class="st">"b"</span>, <span class="st">"c"</span><span class="op">)</span>, </span>
@@ -1020,9 +1019,23 @@ Warning
 <span><span class="va">df</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://tibble.tidyverse.org/reference/tibble.html">tibble</a></span><span class="op">(</span>x <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fl">2</span>, <span class="fl">3</span><span class="op">)</span>, y <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"a"</span>, <span class="st">"b"</span>, <span class="st">"c"</span><span class="op">)</span>, z <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="cn">TRUE</span>, <span class="cn">FALSE</span>, <span class="cn">TRUE</span><span class="op">)</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>You can check our other tutorials to handle dataframes and start practicing. We also recommend this books</p>
-<div id="listing-eda" class="quarto-listing quarto-listing-container-grid">
-<div class="list grid quarto-listing-cols-3">
-
+<div id="listing-eda" class="quarto-listing quarto-listing-container-custom">
+<h2 class="anchored">Articles &amp; Reports</h2>
+<p>Write a single markdown file and create output in a variety of formats.
+</p>
+<div class="list grid" style="column-gap: 10px;">
+  <div class="card border-2 rounded-3 g-col-12 g-col-sm-6 g-col-md-4 mb-2" data-index="0">
+    <div class="card-header py-1 px-2 border-bottom border-1 bg-light">
+      <small class="card-text text-nowrap inline-block">
+        <a href="https://www.hertiecodingclub.com/material/books/eda_r/" class="listing-title">HTML</a> <span class="text-muted listing-subtitle">for web publishing</span>
+      </small>
+      <a href="https://github.com/jurjoroa/hcc-website/blob/JorgeRoa/material/Books/eda_r/index.qmd" title="View source code" class="source-code card-text float-end inline-block">
+        <i class="bi-code-slash"></i>
+      </a>
+    </div>
+    <a href="https://www.hertiecodingclub.com/material/books/eda_r/">
+      <img src="images/objects.png" alt="" class="card-img-top"></a>
+  </div>
 </div>
 <div class="listing-no-matching d-none">
 No matching items
@@ -1347,7 +1360,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </ul>
 </div>
   </div>
-</footer><script>var lightboxQuarto = GLightbox({"loop":true,"openEffect":"fade","selector":".lightbox","closeEffect":"fade","skin":"lightwidth","descPosition":"left"});</script>
+</footer><script>var lightboxQuarto = GLightbox({"loop":true,"selector":".lightbox","skin":"lightwidth","closeEffect":"fade","descPosition":"left","openEffect":"fade"});</script>
 
 
 <script src="../../../site_libs/quarto-html/zenscroll-min.js"></script>
