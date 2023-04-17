@@ -1,0 +1,23 @@
+---
+title:  '{{< animate fadeInDown "PDF to text"delay=.6s >}}'
+subtitle: '{{< animate fadeInDown "Multithreading offers faster and more efficient data processing, allowing for quicker analysis of complex datasets."delay=.6s >}}'
+author: ["Jorge Roa"]
+date: "2023-04-18"
+categories: ["PDF", "Text", "Transform"]
+toc: true
+draft: false
+code-link: true
+code-copy: true
+title-block-banner: true
+image: images/apple_intel_f.png
+include-in-header: meta.html
+---
+
+![](images/appleintel.png){fig-align="center"}
+
+This document shows you how we can enable the use of multiple cores on Macs with Intel/Apple silicon chips (M1 and M2).
+
+------------------------------------------------------------------------
+
+
+

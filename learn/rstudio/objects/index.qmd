@@ -1,6 +1,6 @@
 ---
-title:  '{{< animate fadeInDown "Understanding R Objects: Data Structures and Classes in R"delay=.6s >}}'
-subtitle: '{{< animate fadeInDown "This is why R is so powerful: all kind of objects and possibilites"delay=.6s >}}'
+title:  '{{< animate fadeInDown "Understanding R Objects: Naming, Data Structures and Classes in R"delay=.6s >}}'
+subtitle: '{{< animate fadeInDown "This is why R is so powerful: all kind of objects and possibilites. Naming objects, understand structures is crucial to learn"delay=.6s >}}'
 author: ["Jorge Roa"]
 date: "2023-04-16"
 categories: ["Rstudio", "Objects"]
@@ -44,6 +44,91 @@ One of the things that define R as an amazing tool to do multiple things are obj
  
 
 In this image, you can see the different types of objects that we have and this is the best way to visualize. However, to really understand what is going on, you need to start writing code and start trying using this different type of objects to know them better. In the next lines, I'll write explanations, examples and exercises.
+
+
+ 
+
+
+# Naming Objects
+
+It can be headache naming objects in R since you need to have the creativity to write a short but precise name for your object. Here are some reasons why naming objects in R is so essential. 
+
+- **Use descriptive names**: Choose names that describe the contents or purpose of the object. Avoid using single-letter variable names or abbreviations that are unclear or confusing. For example, use "number_of_widgets" instead of "n" or "num_wgts".
+
+- **Use lowercase letters**: R is case-sensitive, so it's a good practice to use lowercase letters for object names to avoid confusion.
+
+- **Use underscores to separate words**: Use underscores to separate words in object. For example, use "customer_id" instead of "customerId".
+
+- **Avoid using reserved words**: Avoid using reserved words such as "if", "else", "while", "repeat", "function", "for", etc. as object names since they can be take as functions that have exactly the same name.
+
+- **Keep names short but meaningful**: Object names should be short and easy to type, but also meaningful and descriptive. Avoid overly long names that are cumbersome to type and read.
+
+
+Personally, I like to name my objects according to the next table:
+
+![Alarid et. al. (2019)](images/name.png){fig-align="center"}
+
+I like it since it gives you structure and clarity about how to name your objects. For example:
+
+```{r}
+
+#If we have a vector, I will tart with v_number
+
+v_number <- c(1,5,7)
+
+```
+
+This logics applies the same with matrices, arrays, data frames, etc. It's a good practice to follow this criteria since is going to be much easier to identify your objects in your environment. 
+
+ 
+
+# Single Values
+
+## Numeric values
+
+A numeric object can be stored as a number.
+
+
+```{r}
+
+x <- 6
+
+class(x)
+
+x
+
+```
+
+## Character values
+
+Stores a sequence of characters, such as letters, numbers, and symbols. A character value is created by enclosing the sequence of characters within quotation marks, either single or double. 
+
+
+```{r}
+
+character <- "Welcome to the Hertie Coding Club"   # creating a character value
+
+
+```
+
+
+Character values can be combined using the `paste()` or `paste0()` functions, which concatenate two or more character values into a single character value.
+
+```{r}
+
+x <- "Welcome to"
+y <- "the Hertie Coding Club"
+z <- paste(x, y, sep = ": ")
+
+
+class(z)
+
+z
+
+
+```
+
+ 
 
 # Vectors
 
@@ -825,24 +910,23 @@ df <- tibble(x = c(1, 2, 3), y = c("a", "b", "c"), z = c(TRUE, FALSE, TRUE))
 
 ```
 
-You can check our other tutorials to handle dataframes and start practicing. We also recommend this books 
-
+You can check our other tutorials to handle data frames and start practicing. We also recommend these books from the website for you to go into more detail. 
 
 ::: {#eda}
 :::
 
-
+------------------------------------------------------------------------
 
 # References
 
 ------------------------------------------------------------------------
 
-::: callout-tip
+
+::: {.callout-tip}
 ## References
 
-Alarid-Escudero, F., Krijkamp, E. M., Pechlivanoglou, P., Jalal, H., Kao, S. Z., Yang, A., & Enns, E. A. (2019). *A Need for Change! A Coding Framework for Improving Transparency in Decision Modeling.* PharmacoEconomics, 37(11), 1329--1339. [URL](https://doi.org/10.1007/s40273-019-00837-x)
+Alarid-Escudero, F., Krijkamp, E. M., Pechlivanoglou, P., Jalal, H., Kao, S. Z., Yang, A., & Enns, E. A. (2019). *A Need for Change! A Coding Framework for Improving Transparency in Decision Modeling.* PharmacoEconomics, 37(11), 1329–1339. [URL](https://doi.org/10.1007/s40273-019-00837-x)
 
-Negoita, L. (2021, July 5). *How to organize your analyses with R studio projects.* R (for ecology). [URL](https://www.rforecology.com/post/organizing-your-r-studio-projects/)
 :::
 
 ::: callout-note

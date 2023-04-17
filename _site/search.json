@@ -7,6 +7,13 @@
     "text": "About this site\n\n\n\n\n# Load the ggplot2 package\nlibrary(ggplot2)\n\n\n# Create some example data\nx <- 1:10\ny <- x^2\n\n# Create the plot\nggplot(data = data.frame(x, y), aes(x = x, y = y)) +\n  geom_line() + theme(text = element_text(family = \"Arial\", size = 20))\n\n\n\n\n\n\n\n\nWho are we?\n\nWhen the moon hits your eye\n\n\n damoncroberts\n DamonCharlesRoberts\n Wednesdays from 12:15 - 2:15 pm Mountain\n Ketchum Arts & Sciences, Office 382, Boulder, CO 80309\nSome text"
   },
   {
+    "objectID": "learn/python/pdf_to_text/index.html",
+    "href": "learn/python/pdf_to_text/index.html",
+    "title": "PDF to text",
+    "section": "",
+    "text": "This document shows you how we can enable the use of multiple cores on Macs with Intel/Apple silicon chips (M1 and M2)."
+  },
+  {
     "objectID": "learn/rstudio/rstudio101/index.html",
     "href": "learn/rstudio/rstudio101/index.html",
     "title": "RStudio 101",
@@ -128,156 +135,163 @@
   {
     "objectID": "learn/rstudio/objects/index.html",
     "href": "learn/rstudio/objects/index.html",
-    "title": "Understanding R Objects: Data Structures and Classes in R",
+    "title": "Understanding R Objects: Naming, Data Structures and Classes in R",
     "section": "",
     "text": "One of the things that define R as an amazing tool to do multiple things are objects. R work with objects that essentialy are data structures that can hold values, but also othr types of data and can be assigned names for easy reference. Objects in R are useful because we can organize and store data in meaningful ways. One of the most importants thigns when you are learning R is understand how to work with these objects because you will have the confidence and knowledge to use it at your better convenience. There are several types of objects in R, including vectors, matrices, data frames, lists, and factors, each with their own characteristics and uses.\n\n\n\n\n\n\nWarning\n\n\n\n\nTo create an object, give it a name followed by the assignment operator, followed by the value/data type.\nAssignment operator <-\nShortcut: “Alt + -” on PC, “Option + -” on Mac\n\n\n\n \n\n\n\n\n \nIn this image, you can see the different types of objects that we have and this is the best way to visualize. However, to really understand what is going on, you need to start writing code and start trying using this different type of objects to know them better. In the next lines, I’ll write explanations, examples and exercises."
   },
   {
+    "objectID": "learn/rstudio/objects/index.html#numeric-values",
+    "href": "learn/rstudio/objects/index.html#numeric-values",
+    "title": "Understanding R Objects: Naming, Data Structures and Classes in R",
+    "section": "Numeric values",
+    "text": "Numeric values\nA numeric object can be stored as a number.\n\nx <- 6\n\nclass(x)\n\n[1] \"numeric\"\n\nx\n\n[1] 6"
+  },
+  {
+    "objectID": "learn/rstudio/objects/index.html#character-values",
+    "href": "learn/rstudio/objects/index.html#character-values",
+    "title": "Understanding R Objects: Naming, Data Structures and Classes in R",
+    "section": "Character values",
+    "text": "Character values\nStores a sequence of characters, such as letters, numbers, and symbols. A character value is created by enclosing the sequence of characters within quotation marks, either single or double.\n\ncharacter <- \"Welcome to the Hertie Coding Club\"   # creating a character value\n\nCharacter values can be combined using the paste() or paste0() functions, which concatenate two or more character values into a single character value.\n\nx <- \"Welcome to\"\ny <- \"the Hertie Coding Club\"\nz <- paste(x, y, sep = \": \")\n\n\nclass(z)\n\n[1] \"character\"\n\nz\n\n[1] \"Welcome to: the Hertie Coding Club\""
+  },
+  {
     "objectID": "learn/rstudio/objects/index.html#create-a-numeric-vector",
     "href": "learn/rstudio/objects/index.html#create-a-numeric-vector",
-    "title": "Understanding R Objects: Data Structures and Classes in R",
+    "title": "Understanding R Objects: Naming, Data Structures and Classes in R",
     "section": "Create a numeric vector",
     "text": "Create a numeric vector\n\nx <- c(1, 2, 3, 4, 5)\n\nx\n\n[1] 1 2 3 4 5"
   },
   {
     "objectID": "learn/rstudio/objects/index.html#access-elements-of-a-vector",
     "href": "learn/rstudio/objects/index.html#access-elements-of-a-vector",
-    "title": "Understanding R Objects: Data Structures and Classes in R",
+    "title": "Understanding R Objects: Naming, Data Structures and Classes in R",
     "section": "Access elements of a vector",
     "text": "Access elements of a vector\nReturns the second element of x, which is 2\n\nx[2] \n\n[1] 2"
   },
   {
     "objectID": "learn/rstudio/objects/index.html#perform-arithmetic-operations",
     "href": "learn/rstudio/objects/index.html#perform-arithmetic-operations",
-    "title": "Understanding R Objects: Data Structures and Classes in R",
+    "title": "Understanding R Objects: Naming, Data Structures and Classes in R",
     "section": "Perform arithmetic operations",
     "text": "Perform arithmetic operations\nAdds 2 to each element of x, resulting in the vector c(3, 4, 5, 6, 7)\n\nx + 2 \n\n[1] 3 4 5 6 7"
   },
   {
     "objectID": "learn/rstudio/objects/index.html#find-the-length-of-a-vector",
     "href": "learn/rstudio/objects/index.html#find-the-length-of-a-vector",
-    "title": "Understanding R Objects: Data Structures and Classes in R",
+    "title": "Understanding R Objects: Naming, Data Structures and Classes in R",
     "section": "Find the length of a vector:",
     "text": "Find the length of a vector:\n\nlength(x) \n\n[1] 5"
   },
   {
     "objectID": "learn/rstudio/objects/index.html#modify-a-vector",
     "href": "learn/rstudio/objects/index.html#modify-a-vector",
-    "title": "Understanding R Objects: Data Structures and Classes in R",
+    "title": "Understanding R Objects: Naming, Data Structures and Classes in R",
     "section": "Modify a vector",
     "text": "Modify a vector\nChanges the third element of x to 10\n\nx[3] <- 10\n\nx\n\n[1]  1  2 10  4  5"
   },
   {
     "objectID": "learn/rstudio/objects/index.html#apply-functions-to-a-vector",
     "href": "learn/rstudio/objects/index.html#apply-functions-to-a-vector",
-    "title": "Understanding R Objects: Data Structures and Classes in R",
+    "title": "Understanding R Objects: Naming, Data Structures and Classes in R",
     "section": "Apply functions to a vector",
     "text": "Apply functions to a vector\nReturns the sum of the elements in x, which is 22\n\nsum(x) \n\n[1] 22\n\n\nReturns the mean (average) of the elements in x, which is 4.4\n\nmean(x)\n\n[1] 4.4\n\n\nReturns the maximum value in x, which is 10\n\nmax(x)\n\n[1] 10\n\n\nReturns the minimum value in x, which is 1\n\nmin(x)\n\n[1] 1\n\n\n \nIn addition to numeric values, you can put a wide variety of other data types in a vector in R. Here are some examples:"
   },
   {
-    "objectID": "learn/rstudio/objects/index.html#character-values",
-    "href": "learn/rstudio/objects/index.html#character-values",
-    "title": "Understanding R Objects: Data Structures and Classes in R",
+    "objectID": "learn/rstudio/objects/index.html#character-values-1",
+    "href": "learn/rstudio/objects/index.html#character-values-1",
+    "title": "Understanding R Objects: Naming, Data Structures and Classes in R",
     "section": "Character values",
     "text": "Character values\n\nnames <- c(\"Hertie School\", \"Berlin\", \"Public Policy\")\n\nnames\n\n[1] \"Hertie School\" \"Berlin\"        \"Public Policy\""
   },
   {
     "objectID": "learn/rstudio/objects/index.html#logical-values",
     "href": "learn/rstudio/objects/index.html#logical-values",
-    "title": "Understanding R Objects: Data Structures and Classes in R",
+    "title": "Understanding R Objects: Naming, Data Structures and Classes in R",
     "section": "Logical values",
     "text": "Logical values\n\nflags <- c(TRUE, FALSE, TRUE)\n\nflags\n\n[1]  TRUE FALSE  TRUE"
   },
   {
     "objectID": "learn/rstudio/objects/index.html#times",
     "href": "learn/rstudio/objects/index.html#times",
-    "title": "Understanding R Objects: Data Structures and Classes in R",
+    "title": "Understanding R Objects: Naming, Data Structures and Classes in R",
     "section": "Times:",
     "text": "Times:\n\ntimes <- as.POSIXct(c(\"2022-01-01 10:00:00\", \"2022-01-01 11:00:00\", \"2022-01-01 12:00:00\"))\n\ntimes\n\n[1] \"2022-01-01 10:00:00 CET\" \"2022-01-01 11:00:00 CET\"\n[3] \"2022-01-01 12:00:00 CET\""
   },
   {
     "objectID": "learn/rstudio/objects/index.html#a-list-with-different-type-of-vectors",
     "href": "learn/rstudio/objects/index.html#a-list-with-different-type-of-vectors",
-    "title": "Understanding R Objects: Data Structures and Classes in R",
+    "title": "Understanding R Objects: Naming, Data Structures and Classes in R",
     "section": "A list with different type of vectors",
     "text": "A list with different type of vectors\n\nmy_list <- list(numbers = c(1, 2, 3), names = c(\"Alejandro\", \"Eduardo\", \"Fernanda\"), statement = c(TRUE, FALSE, TRUE))\n\nmy_list\n\n$numbers\n[1] 1 2 3\n\n$names\n[1] \"Alejandro\" \"Eduardo\"   \"Fernanda\" \n\n$statement\n[1]  TRUE FALSE  TRUE"
   },
   {
     "objectID": "learn/rstudio/objects/index.html#access-an-element-of-the-list-using-indexing",
     "href": "learn/rstudio/objects/index.html#access-an-element-of-the-list-using-indexing",
-    "title": "Understanding R Objects: Data Structures and Classes in R",
+    "title": "Understanding R Objects: Naming, Data Structures and Classes in R",
     "section": "Access an element of the list using indexing",
     "text": "Access an element of the list using indexing\nWe can access an element of the list using indexing, which is really useful when you are doing functions and storing results or calling them.\nHere this returns the second element of my_list, which is the character vector “names”\n\nmy_list[[2]]\n\n[1] \"Alejandro\" \"Eduardo\"   \"Fernanda\" \n\n\nor also we can access an element of the list using named indexing:\n\nmy_list[[\"names\"]]\n\n[1] \"Alejandro\" \"Eduardo\"   \"Fernanda\""
   },
   {
     "objectID": "learn/rstudio/objects/index.html#add-a-new-element-to-the-list",
     "href": "learn/rstudio/objects/index.html#add-a-new-element-to-the-list",
-    "title": "Understanding R Objects: Data Structures and Classes in R",
+    "title": "Understanding R Objects: Naming, Data Structures and Classes in R",
     "section": "Add a new element to the list:",
     "text": "Add a new element to the list:\nAdds a new numeric vector “ages” to my_list\n\nmy_list[[\"ages\"]] <- c(25, 30, 35)\n\nWe can do the same even with a dataframe inside a list\n\ndf <- data.frame(name = c(\"Alejandro\", \"Eduardo\", \"Marifer\"), \n                 age = c(30, 27, 17)) # Create the dataframe\n\nmy_list[[\"my_df\"]] <- df\n\nmy_list\n\n$numbers\n[1] 1 2 3\n\n$names\n[1] \"Alejandro\" \"Eduardo\"   \"Fernanda\" \n\n$statement\n[1]  TRUE FALSE  TRUE\n\n$ages\n[1] 25 30 35\n\n$my_df\n       name age\n1 Alejandro  30\n2   Eduardo  27\n3   Marifer  17"
   },
   {
     "objectID": "learn/rstudio/objects/index.html#create-a-nested-list-with-two-elements",
     "href": "learn/rstudio/objects/index.html#create-a-nested-list-with-two-elements",
-    "title": "Understanding R Objects: Data Structures and Classes in R",
+    "title": "Understanding R Objects: Naming, Data Structures and Classes in R",
     "section": "Create a nested list with two elements:",
     "text": "Create a nested list with two elements:\n\nnested_list <- list(numbers = c(1, 2, 3), list_2 = list(letter = \"A\", number = 42))\n\nnested_list\n\n$numbers\n[1] 1 2 3\n\n$list_2\n$list_2$letter\n[1] \"A\"\n\n$list_2$number\n[1] 42\n\n\nFor access a nested element of the list:\n\nnested_list[[\"list_2\"]][[\"number\"]]  \n\n[1] 42\n\n\nAs you can see, we can access the outputs of the list we want. This is useful since you can apply functions to retrieve your data from a nested list or access to a specific output of your model, for example."
   },
   {
     "objectID": "learn/rstudio/objects/index.html#createing-a-matrix",
     "href": "learn/rstudio/objects/index.html#createing-a-matrix",
-    "title": "Understanding R Objects: Data Structures and Classes in R",
+    "title": "Understanding R Objects: Naming, Data Structures and Classes in R",
     "section": "Createing a matrix",
     "text": "Createing a matrix\nCreate a matrix with three rows and four columns:\n\nm_example <- matrix(1:12, nrow = 3, ncol = 4)\n\nm_example\n\n     [,1] [,2] [,3] [,4]\n[1,]    1    4    7   10\n[2,]    2    5    8   11\n[3,]    3    6    9   12"
   },
   {
     "objectID": "learn/rstudio/objects/index.html#access-an-element-of-the-matrix-using-indexing",
     "href": "learn/rstudio/objects/index.html#access-an-element-of-the-matrix-using-indexing",
-    "title": "Understanding R Objects: Data Structures and Classes in R",
+    "title": "Understanding R Objects: Naming, Data Structures and Classes in R",
     "section": "Access an element of the matrix using indexing",
     "text": "Access an element of the matrix using indexing\nReturns the element in the second row and third column of my_matrix, which is 7\n\nm_example[2, 3] \n\n[1] 8"
   },
   {
     "objectID": "learn/rstudio/objects/index.html#modify-an-element-of-the-matrix",
     "href": "learn/rstudio/objects/index.html#modify-an-element-of-the-matrix",
-    "title": "Understanding R Objects: Data Structures and Classes in R",
+    "title": "Understanding R Objects: Naming, Data Structures and Classes in R",
     "section": "Modify an element of the matrix",
     "text": "Modify an element of the matrix\nChanges the element in the first row and fourth column of my_matrix to 20\n\nm_example[1, 4] <- 20  \n\nm_example\n\n     [,1] [,2] [,3] [,4]\n[1,]    1    4    7   20\n[2,]    2    5    8   11\n[3,]    3    6    9   12"
   },
   {
     "objectID": "learn/rstudio/objects/index.html#create-an-array-with-three-dimensions",
     "href": "learn/rstudio/objects/index.html#create-an-array-with-three-dimensions",
-    "title": "Understanding R Objects: Data Structures and Classes in R",
+    "title": "Understanding R Objects: Naming, Data Structures and Classes in R",
     "section": "Create an array with three dimensions",
     "text": "Create an array with three dimensions\n\narr_example <- array(1:24, dim = c(2, 3, 4))\n\narr_example\n\n, , 1\n\n     [,1] [,2] [,3]\n[1,]    1    3    5\n[2,]    2    4    6\n\n, , 2\n\n     [,1] [,2] [,3]\n[1,]    7    9   11\n[2,]    8   10   12\n\n, , 3\n\n     [,1] [,2] [,3]\n[1,]   13   15   17\n[2,]   14   16   18\n\n, , 4\n\n     [,1] [,2] [,3]\n[1,]   19   21   23\n[2,]   20   22   24"
   },
   {
     "objectID": "learn/rstudio/objects/index.html#access-an-element-of-the-array-using-indexing",
     "href": "learn/rstudio/objects/index.html#access-an-element-of-the-array-using-indexing",
-    "title": "Understanding R Objects: Data Structures and Classes in R",
+    "title": "Understanding R Objects: Naming, Data Structures and Classes in R",
     "section": "Access an element of the array using indexing",
     "text": "Access an element of the array using indexing\nReturns the element in the second row, third column, and fourth layer of my_array, which is 23\n\narr_example[2, 3, 4]\n\n[1] 24"
   },
   {
     "objectID": "learn/rstudio/objects/index.html#modify-an-element-of-the-array",
     "href": "learn/rstudio/objects/index.html#modify-an-element-of-the-array",
-    "title": "Understanding R Objects: Data Structures and Classes in R",
+    "title": "Understanding R Objects: Naming, Data Structures and Classes in R",
     "section": "Modify an element of the array",
     "text": "Modify an element of the array\nChanges the element in the second row, second column, and first layer of arr_example to 10\n\narr_example[2, 2, 1] <- 10 \n\narr_example\n\n, , 1\n\n     [,1] [,2] [,3]\n[1,]    1    3    5\n[2,]    2   10    6\n\n, , 2\n\n     [,1] [,2] [,3]\n[1,]    7    9   11\n[2,]    8   10   12\n\n, , 3\n\n     [,1] [,2] [,3]\n[1,]   13   15   17\n[2,]   14   16   18\n\n, , 4\n\n     [,1] [,2] [,3]\n[1,]   19   21   23\n[2,]   20   22   24"
   },
   {
     "objectID": "learn/rstudio/objects/index.html#create-a-data-frame-multiple-ways",
     "href": "learn/rstudio/objects/index.html#create-a-data-frame-multiple-ways",
-    "title": "Understanding R Objects: Data Structures and Classes in R",
+    "title": "Understanding R Objects: Naming, Data Structures and Classes in R",
     "section": "Create a Data Frame: multiple ways",
-    "text": "Create a Data Frame: multiple ways\n1.- Using data.frame() function: This is the most common way to create a data frame in R. You can put as many vectors (variables) as you want.\n\ndf <- data.frame(x = c(1, 2, 3), \n                 y = c(\"a\", \"b\", \"c\"), \n                 z = c(TRUE, FALSE, TRUE))\n\n2.- Using read_csv2() function: You can also create a data frame by importing data from an external file using the read.table() or read.csv() function.\n\ndf <- read.table(\"data.txt\", header = TRUE)\n\n3.- Using read_excel() function from the readxl package\n\nlibrary(readxl)\ndf <- read_excel(\"data.xlsx\")\n\n4.- Using tibble() function from the tibble package\n\nlibrary(tibble)\ndf <- tibble(x = c(1, 2, 3), y = c(\"a\", \"b\", \"c\"), z = c(TRUE, FALSE, TRUE))\n\nYou can check our other tutorials to handle dataframes and start practicing. We also recommend this books\n\nArticles & Reports\nWrite a single markdown file and create output in a variety of formats.\n\n\n  \n    \n      \n        HTML for web publishing\n      \n      \n        \n      \n    \n    \n      \n  \n\n\nNo matching items"
-  },
-  {
-    "objectID": "learn/rstudio/index.html",
-    "href": "learn/rstudio/index.html",
-    "title": "How important is GitHub Actions to RStudio/Posit?",
-    "section": "",
-    "text": "This post is a complementary material for my talk at rstudio::conf 2022 (which is happening TODAY!!!)!\nI’m writing this really quick, from the hotel room, for anyone interested to see the code used to create the plot that it is on my talk:"
+    "text": "Create a Data Frame: multiple ways\n1.- Using data.frame() function: This is the most common way to create a data frame in R. You can put as many vectors (variables) as you want.\n\ndf <- data.frame(x = c(1, 2, 3), \n                 y = c(\"a\", \"b\", \"c\"), \n                 z = c(TRUE, FALSE, TRUE))\n\n2.- Using read_csv2() function: You can also create a data frame by importing data from an external file using the read.table() or read.csv() function.\n\ndf <- read.table(\"data.txt\", header = TRUE)\n\n3.- Using read_excel() function from the readxl package\n\nlibrary(readxl)\ndf <- read_excel(\"data.xlsx\")\n\n4.- Using tibble() function from the tibble package\n\nlibrary(tibble)\ndf <- tibble(x = c(1, 2, 3), y = c(\"a\", \"b\", \"c\"), z = c(TRUE, FALSE, TRUE))\n\nYou can check our other tutorials to handle data frames and start practicing. We also recommend these books from the website for you to go into more detail.\n\n\n  \n    \n      \n  \n  \n    \n      \n  \n\n\nNo matching items"
   },
   {
     "objectID": "learn/rstudio/Install-r-studio/index.html",
@@ -287,11 +301,18 @@
     "text": "Install R and Rstudio: why R rocks\n\n\n\n\n\n\n\n\n\nR provides a versatile and powerful toolset for users of all skill levels, making it the go-to choice if you’re looking for a cutting-edge solution for your data analysis needs. R has everything you need to advance your data analysis, regardless of your experience level or where you are in your career. We assure you won’t be disappointed, so why not join the millions of happy users who have already switched to R?\nR is a free, open-source programming language that is widely used in data analysis and statistical computing. RStudio is an integrated development environment (IDE) that makes it easier to write and run R code. Installing R and RStudio is straightforward and can be done in a few simple steps:\n\nWhy R?\nDue to its many benefits in statistical computing and data analysis, R is a strong and flexible programming language that has gained popularity recently. Here are some of the main benefits of using R:\n\nOpen source software: R is open source, so users can access and alter the source code to tailor the program to their needs.\n\n\n\n\n\n\n\n\n\n\n\n\n\nPackages: Users can use R’s extensive package library to add functionality for specialized tasks like tables, visualization, and data manipulation. Right now, there are more than 18,000 packages available.\n\n\n\n\n\n\n\nEasy to use: R has an intuitive user interface that makes it simple for new users to learn and offers advanced features for seasoned users.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nStep 1: Install R\nFirst, you need to install R on your computer. You can download the latest version of R from the Comprehensive R Archive Network (CRAN) website. Follow these steps:\n\nGo to the CRAN website and click on the “Download R for (Windows/MacOS/Linux)” link.\nChoose your operating system from the list and click on the corresponding link to download the installation file.\nOnce the file is downloaded, run the installation program and follow the instructions.\n\n\n\nStep 2: Install RStudio\nThe latest version of RStudio can be downloaded from the RStudio website. After you have installed R, you can install RStudio, an optional but highly recommended IDE for R. The following actions should be taken.\n\nVisit the RStudio website and select “RStudio Desktop” from the list of available products.\nFrom the list, select your operating system, and then click the link to download the installation file.\nRun the installation program after the file has been downloaded, then adhere to the prompts.\n\n\n\nStep 3: Launch RStudio\nOnce you have installed R and RStudio, you can launch RStudio by double-clicking on its icon . When you first launch RStudio, you will be prompted to select a version of R to use. If you have installed only one version of R, it should be automatically selected. Otherwise, you can choose the version of R that you want to use.\n\n\n\n\n\n\nReady\n\n\n\nYou’ve now successfully installed R and RStudio on your computer. Now that R and RStudio are installed, you can begin writing and running R code."
   },
   {
+    "objectID": "learn/python.html",
+    "href": "learn/python.html",
+    "title": "Learn Python",
+    "section": "",
+    "text": "Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n  \n\n\n\n\n\nMultithreading offers faster and more efficient data processing, allowing for quicker analysis of complex datasets.\n\n\n\n\nPDF\n\n\nText\n\n\nTransform\n\n\n \n\n\n\n\nApr 18, 2023\n\n\nJorge Roa\n\n\n0 min\n\n\n\n\n\n\nNo matching items"
+  },
+  {
     "objectID": "learn/rstudio.html",
     "href": "learn/rstudio.html",
     "title": "Learn R",
     "section": "",
-    "text": "Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n  \n\n\n\n\n\nThis is why R is so powerful: all kind of objects and possibilites\n\n\n\n\nRstudio\n\n\nObjects\n\n\n \n\n\n\n\nApr 16, 2023\n\n\nJorge Roa\n\n\n15 min\n\n\n\n\n\n\n  \n\n\n\n\n\nLearn the basics of R: open a project, setting a working directory and navigate RStudio interface\n\n\n\n\nRstudio\n\n\nInterface\n\n\n \n\n\n\n\nApr 12, 2023\n\n\nJorge Roa\n\n\n8 min\n\n\n\n\n\n\n  \n\n\n\n\n\nUnlock the power of data analysis and statistical computing with R and RStudio! Whether you are a student of public policy or a seasoned professional.\n\n\n\n\nR\n\n\nRStudio\n\n\nAccesibility\n\n\nInstall\n\n\n \n\n\n\n\nMar 2, 2023\n\n\nJorge Roa\n\n\n2 min\n\n\n\n\n\n\n  \n\n\n\n\n\nMultithreading offers faster and more efficient data processing, allowing for quicker analysis of complex datasets.\n\n\n\n\nMultithread\n\n\nData table\n\n\n \n\n\n\n\nJul 28, 2022\n\n\nJorge Roa, Fernando Alarid-Escudero\n\n\n3 min\n\n\n\n\n\n\nNo matching items"
+    "text": "Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n  \n\n\n\n\n\nMultithreading offers faster and more efficient data processing, allowing for quicker analysis of complex datasets.\n\n\n\n\nPDF\n\n\nText\n\n\nTransform\n\n\n \n\n\n\n\nApr 18, 2023\n\n\nJorge Roa\n\n\n0 min\n\n\n\n\n\n\n  \n\n\n\n\n\nThis is why R is so powerful: all kind of objects and possibilites. Naming objects, understand structures is crucial to learn\n\n\n\n\nRstudio\n\n\nObjects\n\n\n \n\n\n\n\nApr 16, 2023\n\n\nJorge Roa\n\n\n17 min\n\n\n\n\n\n\n  \n\n\n\n\n\nLearn the basics of R: open a project, setting a working directory and navigate RStudio interface\n\n\n\n\nRstudio\n\n\nInterface\n\n\n \n\n\n\n\nApr 12, 2023\n\n\nJorge Roa\n\n\n8 min\n\n\n\n\n\n\n  \n\n\n\n\n\nUnlock the power of data analysis and statistical computing with R and RStudio! Whether you are a student of public policy or a seasoned professional.\n\n\n\n\nR\n\n\nRStudio\n\n\nAccesibility\n\n\nInstall\n\n\n \n\n\n\n\nMar 2, 2023\n\n\nJorge Roa\n\n\n2 min\n\n\n\n\n\n\n  \n\n\n\n\n\nMultithreading offers faster and more efficient data processing, allowing for quicker analysis of complex datasets.\n\n\n\n\nMultithread\n\n\nData table\n\n\n \n\n\n\n\nJul 28, 2022\n\n\nJorge Roa, Fernando Alarid-Escudero\n\n\n3 min\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "about.html",

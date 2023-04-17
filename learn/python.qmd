@@ -1,0 +1,22 @@
+---
+title: "Learn Python"
+listing:
+  - id: learn-Python
+    contents: "python/*/index.qmd"
+    type: default
+    fields: [image, date, title, subtitle, categories, author, reading-time]  
+    sort: "date desc"
+    # categories: cloud
+    sort-ui: true
+    filter-ui: true
+    page-size: 10
+page-layout: full
+title-block-banner: false
+include-in-header: meta.html
+comments: false
+---
+
+## Learn Python
+
+::: {#learn-Python}
+:::
