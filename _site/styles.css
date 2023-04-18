@@ -2492,7 +2492,7 @@ span.about-link-text{
 
 
 /* apply style to the first icon */
-a.about-link:nth-child(1){
+a.about-link:nth-child(1) {
   background-color: #0762B8;
   border: 1px solid #0762B8 !important;
   border-radius: 20px !important;

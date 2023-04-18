@@ -14,14 +14,17 @@ about:
   image-shape: rounded
   links:
     - text: "{{< fa brands linkedin >}} LinkedIn"
-      url: "https://linkedin.com/in/jorge-roac"
-    - text: "{{< fa brands github >}} GitHub"
-      url: "https://github.com/jurjoroa"
-    - text: "{{< fa brands twitter >}} Twitter"
-      url: "https://twitter.com/jorgeroac"
-    - text: "{{< fa brands orcid >}} ORCID"
-      url: "https://orcid.org/0000-0002-3972-9793"
+      url: "https://www.linkedin.com/in/gabrielzech/"
     - text: "{{< fa solid envelopes-bulk >}} Mail"
-      url: "mailto:jurjoo@gmail.com"
+      url: "mailto:g.dev@posteo.net"
 comments: false
 ---
+
+ 
+
+I have been working as a project manager in the field of data science for public policy research since 2019. Having helped set up a Data Science Lab at the Bertelsmann Stiftung, I am particularly interested in how to systematically develop an organisation's infrastructure, governance and culture in the field of data science. Going forward I want to further focus on working at the intersection between management and technical teams.
+
+
+
+
+

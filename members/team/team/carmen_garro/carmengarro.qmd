@@ -14,14 +14,16 @@ about:
   image-shape: rounded
   links:
     - text: "{{< fa brands linkedin >}} LinkedIn"
-      url: "https://linkedin.com/in/jorge-roac"
-    - text: "{{< fa brands github >}} GitHub"
-      url: "https://github.com/jurjoroa"
-    - text: "{{< fa brands twitter >}} Twitter"
-      url: "https://twitter.com/jorgeroac"
-    - text: "{{< fa brands orcid >}} ORCID"
-      url: "https://orcid.org/0000-0002-3972-9793"
+      url: "https://www.linkedin.com/in/carmen-garro-c/"
     - text: "{{< fa solid envelopes-bulk >}} Mail"
-      url: "mailto:jurjoo@gmail.com"
+      url: "mailto:carmengarro95@gmail.com"
 comments: false
 ---
+
+ 
+
+I am Carmen, from Costa Rica. I did my undergrad in Statistics. I have worked in the internacional organization and public sectors. My intereses are in evidence made decision making, specially in public policy formulation.
+
+
+
+
