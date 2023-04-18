@@ -2,7 +2,7 @@
 title: "Learn R"
 listing:
   - id: learn-r
-    contents: "*/*/index.qmd"
+    contents: "rstudio/*/index.qmd"
     type: default
     fields: [image, date, title, subtitle, categories, author, reading-time]  
     sort: "date desc"
