@@ -3,7 +3,7 @@ title: "Hertie Coding Club - Home"
 page-layout: custom
 listing: 
   - id: learn
-    contents: learn/**/*/*.qmd
+    contents: learn/rstudio/*/*.qmd
     type: default
     fields: [image, date, title, subtitle, categories, author, reading-time]
     sort: "date desc"
