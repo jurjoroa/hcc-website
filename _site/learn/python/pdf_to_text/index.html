@@ -22,6 +22,69 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1.6em;
   vertical-align: middle;
 }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
 
@@ -192,7 +255,7 @@ gtag('config', 'G-HJEMN0LJY7', { 'anonymize_ip': true});
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
       <h1 class="title"><span class="animate__animated animate__fadeInDown animate__delay-.6s" style="display: inline-block;">PDF to text</span></h1>
-            <p class="subtitle lead"><span class="animate__animated animate__fadeInDown animate__delay-.6s" style="display: inline-block;">Multithreading offers faster and more efficient data processing, allowing for quicker analysis of complex datasets.</span></p>
+            <p class="subtitle lead"><span class="animate__animated animate__fadeInDown animate__delay-.6s" style="display: inline-block;">Stop using webites to transform your PDFs into text. Do it by your own with Python and extract text and tables from your documents.</span></p>
                                 <div class="quarto-categories">
                 <div class="quarto-category">PDF</div>
                 <div class="quarto-category">Text</div>
@@ -226,7 +289,16 @@ gtag('config', 'G-HJEMN0LJY7', { 'anonymize_ip': true});
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#install-packages" id="toc-install-packages" class="nav-link active" data-scroll-target="#install-packages">Install packages</a></li>
+  <li><a href="#extract-data-from-a-pdf-document" id="toc-extract-data-from-a-pdf-document" class="nav-link" data-scroll-target="#extract-data-from-a-pdf-document">Extract data from a PDF document</a></li>
+  <li><a href="#extract-tables-from-a-pdf-document" id="toc-extract-tables-from-a-pdf-document" class="nav-link" data-scroll-target="#extract-tables-from-a-pdf-document">Extract tables from a PDF document</a></li>
+  <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion">Conclusion</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content quarto-banner-title-block" id="quarto-document-content">
@@ -236,13 +308,441 @@ gtag('config', 'G-HJEMN0LJY7', { 'anonymize_ip': true});
 
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/appleintel.png" class="img-fluid figure-img"></p>
+<p><img src="images/pdf_to_text.png" class="img-fluid figure-img"></p>
 </figure>
 </div>
-<p>This document shows you how we can enable the use of multiple cores on Macs with Intel/Apple silicon chips (M1 and M2).</p>
+<p>The ability to extract and manipulate data from PDF files is an essential skill for anyone who works with digital documents. For example: organizations, governments, universities, and businesses use themas tools to publish data. Just imagine this: I’ve often seen governments publish their data in pdfs as tables. As a public policy maker or as a data analyst, that can be painful; imagine translate all that information by hand or using paid tools as PDFTables or Convert from PDF to Excel online. This is where Python and the <code>pdfplumber</code> and <code>tabulate</code> libraries comes in handy: it allows us to extract text, tables, and other data from PDF files with ease, making it a valuable tool for data analysis and processing. I would also add that this skill is useful as a crucial step for Natural Language Processing since a lot of potential inputs right now are just in pdf texts.</p>
+<p>In the next lines, I’ll show how we can extract text from PDF documents that also includes tables. This approach is easy to understand and reliable, so, anyone can posses and domain this skill; you just need a little bit of knowledge about Python and how we can work with objects.</p>
+<div class="callout-warning callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Important
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The next approach applies only to PDF documents that have text inside and are not scanned documents. If you have a pdf document that are scanned text, then Optical character recognition (OCR) algorithms are necessary to realize this task. This method can be implemented in another entry within the Hertie Coding Club.</p>
+</div>
+</div>
+<p>&nbsp;</p>
+<p>If you are working within your Python environment, please install this packages. Otherwise, I’ll give you the google collab where you can run Python code without installing it in your computer.</p>
+<div class="callout-important callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Checkout
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>If you are running the code locally, please be sure that you have installed the latest Java version since tabulate works within this framework. <code>tabulate</code> library uses Java to render the results.</p>
+</div>
+</div>
+<section id="install-packages" class="level2">
+<h2 class="anchored" data-anchor-id="install-packages">Install packages</h2>
+<div class="cell" data-execution_count="1">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>pip install pdfplumber <span class="co">#Library used to extract text from pdf documents</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>pip install pandas <span class="co">#Library to manipulate dataframes</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>pip install tabula<span class="op">-</span>py tabulate <span class="co">#Library to extract tables from PDF documents. </span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="extract-data-from-a-pdf-document" class="level2">
+<h2 class="anchored" data-anchor-id="extract-data-from-a-pdf-document">Extract data from a PDF document</h2>
+<p>This is the <a href="https://www.hertie-school.org/fileadmin/1_Study/11_Scholarships_FinancialAid/US_loans/03_MPP_Study__Examination___Admission_Rules.pdf">document</a> that we will use to this example. It’s a document from the Hertie School that describes the Study, Examination, and Admission Rules in 2016 for the MPP program. Here our goal will be extract all the content from it and put it in a dataframe.</p>
+<div class="cell" data-execution_count="2">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Import libraries</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pdfplumber <span class="im">as</span> pp</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="co">#Set PDF file name</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>pdf <span class="op">=</span> <span class="st">'MPP_Study_Example.pdf'</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="co">#Open PDF file and extract data from each page</span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> pp.<span class="bu">open</span>(pdf) <span class="im">as</span> book:</span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>    <span class="co">#Initialize an empty list to store text</span></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>    page_data <span class="op">=</span> []</span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>    <span class="co">#Loop over each page in the PDF file</span></span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> page_no, page <span class="kw">in</span> <span class="bu">enumerate</span>(book.pages, start <span class="op">=</span> <span class="dv">1</span>):</span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>        <span class="co">#Extract text from page</span></span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>        data <span class="op">=</span> page.extract_text()</span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>        <span class="co">#Append page data to list</span></span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>        page_data.append([pdf, data.strip(), page_no])</span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a><span class="co">#Create pandas DataFrame from page data and set column names</span></span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>df_text <span class="op">=</span> pd.DataFrame(page_data, columns<span class="op">=</span>[<span class="st">'file_name'</span>, <span class="st">'text'</span>, <span class="st">'page_number'</span>])</span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a><span class="co">#Display DataFrame</span></span>
+<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(df_text)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>               file_name                                               text   
+0  MPP_Study_Example.pdf  Master of Public Policy\nStudy, Examination, a...  \
+1  MPP_Study_Example.pdf  I. Study Rules\n§ 1 Object\nThese study rules ...   
+2  MPP_Study_Example.pdf  (3) Advanced Curriculum\nIn the second year of...   
+3  MPP_Study_Example.pdf  § 6 Examination Committee\n(1) An Examination ...   
+4  MPP_Study_Example.pdf  (4) Upon written request, the Examination Comm...   
+5  MPP_Study_Example.pdf  (5) Students can request to be ranked in relat...   
+6  MPP_Study_Example.pdf  (2) In addition to the degree certificate, stu...   
+7  MPP_Study_Example.pdf  (2) If the Examination Committee comes to the ...   
+8  MPP_Study_Example.pdf  2. a high level of proficiency in written and ...   
+
+   page_number  
+0            1  
+1            2  
+2            3  
+3            4  
+4            5  
+5            6  
+6            7  
+7            8  
+8            9  </code></pre>
+</div>
+</div>
+<p>We have three columns. The first one shows the document’s name where we extracted the text. The second column contains the text, and the third one the number of pages. Of course, you can modify the code and the variable names according to your necessities.</p>
+<p>If you want to save your dataframe, remember this functions:</p>
+<div class="cell" data-execution_count="3">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Save the dataframe to a CSV file</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>df_text.to_csv(<span class="st">'df_text_pdf.csv'</span>, index<span class="op">=</span><span class="va">False</span>)</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Save the dataframe to an Excel file</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>df_text.to_excel(<span class="st">'df_text_pdf.xlsx'</span>, index<span class="op">=</span><span class="va">False</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>If you look close, there is a table in page number 5. <code>PDFplumber</code> renders that as text and not in a table format. One approach to this would be use now the <code>tabulate</code> library to extract exclsuively tables from our document. The table inside the document is not clear or doesn’t have a completely table format. However, we can still apply our function to extract that table and approach it to a nice table format.</p>
+<div class="cell" data-execution_count="4">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Import required libraries</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> tabula</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> tabula <span class="im">import</span> read_pdf</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> tabulate <span class="im">import</span> tabulate</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="co">#Set the path to the PDF file</span></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>pdf_path <span class="op">=</span> <span class="st">'MPP_Study_Example.pdf'</span></span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a><span class="co">#Read all tables from the PDF file into a list of DataFrames</span></span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>df_list <span class="op">=</span> tabula.read_pdf(pdf_path, pages<span class="op">=</span><span class="st">"all"</span>, multiple_tables<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a><span class="co">#Print the list of DataFrames</span></span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(df_list)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[    (2)   
+0   NaN  \
+1   (3)   
+2   NaN   
+3   NaN   
+4   NaN   
+5   NaN   
+6   (4)   
+7   NaN   
+8   NaN   
+9   (5)   
+10  NaN   
+11  (6)   
+12  NaN   
+13  NaN   
+14  NaN   
+15  (7)   
+16  NaN   
+17  NaN   
+18  (8)   
+
+   The Academic Senate of the Hertie School of Governance elects the faculty members for a  
+0   two-year term and the student representative f...                                       
+1   The Examination Committee meets in camera and ...                                       
+2   the Committee are obliged to maintain secrecy ...                                       
+3   them in their capacity as members of the Commi...                                       
+4   individual students. The members shall also no...                                       
+5                                                end.                                       
+6   The Examination Committee is responsible for t...                                       
+7   shall ensure the timely fulfilment of the regu...                                       
+8                                           involved.                                       
+9   The Examination Committee makes and accepts su...                                       
+10                             the Examination Rules.                                       
+11  Credits earned by a student at another univers...                                       
+12  Examination Committee. The Committee shall app...                                       
+13  regard to study contents, learning objectives,...                                       
+14                           examination requirement.                                       
+15  A student’s professional experience shall be r...                                       
+16  Examination Committee. The Committee shall app...                                       
+17  relevant in respect to contents and learning o...                                       
+18  The Examination Committee shall decide in all ...                                       ,    German Numerical Alphanumeric    Definition
+0   Grade     Grade        Grade           NaN
+1     1,0   100-96%           A+           NaN
+2     NaN       NaN          NaN     excellent
+3     1,3    95-91%            A           NaN
+4     1,7    90-86%           A-           NaN
+5     NaN       NaN          NaN     very good
+6     2,0    85-81%           B+           NaN
+7     2,3    80-76%            B           NaN
+8     NaN       NaN          NaN          good
+9     2,7    75-71%            B           NaN
+10    3,0    70-66%           B-           NaN
+11    NaN       NaN          NaN  satisfactory
+12    3,3    65-61%           C+           NaN
+13    3,7    60-56%            C           NaN
+14    NaN       NaN          NaN    sufficient
+15    4,0    55-50%           C-           NaN
+16    5,0     49-0%            F          fail,    (2) A failed requirement can be repeated twice only if it leads to a failed examination (i.e. if the
+0   weighted average grade of all requirements is ...                                                  
+1   The student shall be given one opportunity to ...                                                  
+2                         of the subsequent semester.                                                  
+3   (3) For the last repetition of an examination ...                                                  
+4                                appoint two graders.                                                  
+5   (4) The regulations concerning the master thes...                                                  
+6                                  § 11 Master Thesis                                                  
+7   (1) Students submit their master thesis to the...                                                  
+8   The submission date shall be determined for ea...                                                  
+9                                          Committee.                                                  
+10  (2) The master thesis shall be supervised by a...                                                  
+11  the Examination Committee can appoint a member...                                                  
+12                                        supervisor.                                                  
+13  (3) The written master thesis is graded by the...                                                  
+14  thesis supervisor and one member of the core f...                                                  
+15  thesis is constituted by the arithmetic mean o...                                                  
+16                                  Thesis Committee.                                                  
+17  (4) Students who fail their written master the...                                                  ,    (1)   
+0  NaN  \
+1  NaN   
+2  (2)   
+
+  The Admissions Committee decides on admissions in accordance with the guidelines laid  
+0  down by the Dean as well as on the basis of mo...                                     
+1                                         Committee.                                     
+2  The Committee consists of at least six members...                                     ]</code></pre>
+</div>
+</div>
+<p>As you can see, we have a list with three dataframes. Our library recognized 3 tables, however, there is just really one at page 5. Now let’s just keep with the one that matter to us.</p>
+<div class="cell" data-execution_count="5">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(df_list[<span class="dv">1</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>   German Numerical Alphanumeric    Definition
+0   Grade     Grade        Grade           NaN
+1     1,0   100-96%           A+           NaN
+2     NaN       NaN          NaN     excellent
+3     1,3    95-91%            A           NaN
+4     1,7    90-86%           A-           NaN
+5     NaN       NaN          NaN     very good
+6     2,0    85-81%           B+           NaN
+7     2,3    80-76%            B           NaN
+8     NaN       NaN          NaN          good
+9     2,7    75-71%            B           NaN
+10    3,0    70-66%           B-           NaN
+11    NaN       NaN          NaN  satisfactory
+12    3,3    65-61%           C+           NaN
+13    3,7    60-56%            C           NaN
+14    NaN       NaN          NaN    sufficient
+15    4,0    55-50%           C-           NaN
+16    5,0     49-0%            F          fail</code></pre>
+</div>
+</div>
+<p>Here is our table or interest. Let’s do some wrangling to clean it.</p>
+<div class="cell" data-execution_count="6">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Extract the second table from the list and skip the header row</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>df_table <span class="op">=</span> df_list[<span class="dv">1</span>].iloc[<span class="dv">1</span>:]</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a><span class="co">#Replace commas with dots and convert to numeric values</span></span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>df_table[<span class="st">"German"</span>] <span class="op">=</span> pd.to_numeric(df_table[<span class="st">"German"</span>].<span class="bu">str</span>.replace(<span class="st">','</span>, <span class="st">'.'</span>), </span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>                                                              errors<span class="op">=</span><span class="st">'coerce'</span>)</span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a><span class="co">#Rename columns</span></span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>df_table <span class="op">=</span> df_table.rename(columns<span class="op">=</span>{<span class="st">'German'</span>: <span class="st">'Grade'</span>, <span class="st">'Numerical'</span>: <span class="st">'Percentage'</span>})</span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a><span class="co">#Define a function to map grades to categories. We are doing this</span></span>
+<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a><span class="co">#since if we use a statement, our code will be larger.</span></span>
+<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> grade(score):</span>
+<span id="cb9-14"><a href="#cb9-14" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> score <span class="op">&gt;=</span> <span class="dv">1</span> <span class="kw">and</span> score <span class="op">&lt;=</span> <span class="fl">1.3</span>:</span>
+<span id="cb9-15"><a href="#cb9-15" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="st">'excellent'</span></span>
+<span id="cb9-16"><a href="#cb9-16" aria-hidden="true" tabindex="-1"></a>    <span class="cf">elif</span> score <span class="op">&gt;</span> <span class="fl">1.3</span> <span class="kw">and</span> score <span class="op">&lt;=</span> <span class="dv">2</span>:</span>
+<span id="cb9-17"><a href="#cb9-17" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="st">'very good'</span></span>
+<span id="cb9-18"><a href="#cb9-18" aria-hidden="true" tabindex="-1"></a>    <span class="cf">elif</span> score <span class="op">&gt;</span> <span class="dv">2</span> <span class="kw">and</span> score <span class="op">&lt;=</span> <span class="fl">2.7</span>:</span>
+<span id="cb9-19"><a href="#cb9-19" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="st">'good'</span></span>
+<span id="cb9-20"><a href="#cb9-20" aria-hidden="true" tabindex="-1"></a>    <span class="cf">elif</span> score <span class="op">&gt;</span> <span class="fl">2.7</span> <span class="kw">and</span> score <span class="op">&lt;=</span> <span class="fl">3.3</span>:</span>
+<span id="cb9-21"><a href="#cb9-21" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="st">'satisfactory'</span></span>
+<span id="cb9-22"><a href="#cb9-22" aria-hidden="true" tabindex="-1"></a>    <span class="cf">elif</span> score <span class="op">&gt;</span> <span class="fl">3.3</span> <span class="kw">and</span> score <span class="op">&lt;</span> <span class="dv">4</span>:</span>
+<span id="cb9-23"><a href="#cb9-23" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="st">'sufficient'</span></span>
+<span id="cb9-24"><a href="#cb9-24" aria-hidden="true" tabindex="-1"></a>    <span class="cf">elif</span> score <span class="op">&gt;=</span> <span class="dv">4</span>:</span>
+<span id="cb9-25"><a href="#cb9-25" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="st">'fail'</span></span>
+<span id="cb9-26"><a href="#cb9-26" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span>:</span>
+<span id="cb9-27"><a href="#cb9-27" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> np.nan</span>
+<span id="cb9-28"><a href="#cb9-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-29"><a href="#cb9-29" aria-hidden="true" tabindex="-1"></a><span class="co">#Apply the grade function to create a new column with grade categories</span></span>
+<span id="cb9-30"><a href="#cb9-30" aria-hidden="true" tabindex="-1"></a>df_table[<span class="st">'Grade Category'</span>] <span class="op">=</span> df_table[<span class="st">'Grade'</span>].<span class="bu">apply</span>(grade)</span>
+<span id="cb9-31"><a href="#cb9-31" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-32"><a href="#cb9-32" aria-hidden="true" tabindex="-1"></a><span class="co">#Drop rows with missing grade categories</span></span>
+<span id="cb9-33"><a href="#cb9-33" aria-hidden="true" tabindex="-1"></a>df_table <span class="op">=</span> df_table.dropna(subset<span class="op">=</span>[<span class="st">'Grade Category'</span>])</span>
+<span id="cb9-34"><a href="#cb9-34" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-35"><a href="#cb9-35" aria-hidden="true" tabindex="-1"></a><span class="co">#Drop the "Definition" column</span></span>
+<span id="cb9-36"><a href="#cb9-36" aria-hidden="true" tabindex="-1"></a>df_table <span class="op">=</span> df_table.drop(<span class="st">'Definition'</span>, axis<span class="op">=</span><span class="dv">1</span>)</span>
+<span id="cb9-37"><a href="#cb9-37" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-38"><a href="#cb9-38" aria-hidden="true" tabindex="-1"></a><span class="co">#Extract minimum and maximum percentage values to replace the Percentage. </span></span>
+<span id="cb9-39"><a href="#cb9-39" aria-hidden="true" tabindex="-1"></a><span class="co">#Here we use some regex to obtain just the numbers within a "-"</span></span>
+<span id="cb9-40"><a href="#cb9-40" aria-hidden="true" tabindex="-1"></a>df_table[[<span class="st">'Min%'</span>, <span class="st">'Max%'</span>]] <span class="op">=</span> df_table[<span class="st">'Percentage'</span>].<span class="bu">str</span>.extract(<span class="vs">r'(\d+)-(\d+)%'</span>)</span>
+<span id="cb9-41"><a href="#cb9-41" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-42"><a href="#cb9-42" aria-hidden="true" tabindex="-1"></a><span class="co">#Convert percentage values to float</span></span>
+<span id="cb9-43"><a href="#cb9-43" aria-hidden="true" tabindex="-1"></a>df_table[[<span class="st">'Min%'</span>, <span class="st">'Max%'</span>]] <span class="op">=</span> df_table[[<span class="st">'Min%'</span>, <span class="st">'Max%'</span>]].astype(<span class="bu">float</span>) <span class="op">/</span> <span class="dv">100</span></span>
+<span id="cb9-44"><a href="#cb9-44" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-45"><a href="#cb9-45" aria-hidden="true" tabindex="-1"></a><span class="co">#Drop the original "Percentage" column</span></span>
+<span id="cb9-46"><a href="#cb9-46" aria-hidden="true" tabindex="-1"></a>df_table_final <span class="op">=</span> df_table.drop(<span class="st">'Percentage'</span>, axis <span class="op">=</span> <span class="dv">1</span>)</span>
+<span id="cb9-47"><a href="#cb9-47" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-48"><a href="#cb9-48" aria-hidden="true" tabindex="-1"></a><span class="co">#Print the final table</span></span>
+<span id="cb9-49"><a href="#cb9-49" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(df_table_final)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>    Grade Alphanumeric Grade Category  Min%  Max%
+1     1.0           A+      excellent  1.00  0.96
+3     1.3            A      excellent  0.95  0.91
+4     1.7           A-      very good  0.90  0.86
+6     2.0           B+      very good  0.85  0.81
+7     2.3            B           good  0.80  0.76
+9     2.7            B           good  0.75  0.71
+10    3.0           B-   satisfactory  0.70  0.66
+12    3.3           C+   satisfactory  0.65  0.61
+13    3.7            C     sufficient  0.60  0.56
+15    4.0           C-           fail  0.55  0.50
+16    5.0            F           fail  0.49  0.00</code></pre>
+</div>
+</div>
+<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Remember
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>To save a dataframe or your table, use this functions:</p>
+<div class="cell" data-execution_count="7">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Save the dataframe to a CSV file</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>df_table_final.to_csv(<span class="st">'df_text_pdf.csv'</span>, index<span class="op">=</span><span class="va">False</span>)</span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Save the dataframe to an Excel file</span></span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>df_table_final.to_excel(<span class="st">'df_text_pdf.xlsx'</span>, index<span class="op">=</span><span class="va">False</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+</section>
+<section id="extract-tables-from-a-pdf-document" class="level2">
+<h2 class="anchored" data-anchor-id="extract-tables-from-a-pdf-document">Extract tables from a PDF document</h2>
+<p>As you can see, the last example was just a form to deal with a tabl when we don’t have a clear pattern of it in a document. Generally, we need another tool to extract a table from a document since it will be much easier because of the <code>tabula</code> library it’s trained just to recognize tables. Now, we will use another document with cleaner tables, and the library can work even better. We will use a <a href="https://sedl.org/afterschool/toolkits/science/pdf/ast_sci_data_tables_sample.pdf">document</a> that contains text but also much cleaner tables.</p>
+<div class="cell" data-execution_count="8">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> tabula</span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> tabula <span class="im">import</span> read_pdf</span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> tabulate <span class="im">import</span> tabulate</span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>df_list_example2 <span class="op">=</span> tabula.read_pdf(<span class="st">'ast_sci_data_tables_sample.pdf'</span>, </span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a>                                    pages<span class="op">=</span><span class="st">"all"</span>, multiple_tables <span class="op">=</span> <span class="va">True</span>)</span>
+<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a><span class="co">#We use len to determine how many tables the document has</span></span>
+<span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a><span class="bu">len</span>(df_list_example2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="5">
+<pre><code>3</code></pre>
+</div>
+</div>
+<p>We have for tables. Let’s see them closer:</p>
+<div class="cell" data-execution_count="9">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(df_list_example2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[   Number of Coils Number of Paperclips
+0                5              3, 5, 4
+1               10              7, 8, 6
+2               15           11, 10, 12
+3               20           15, 13, 14,     Speed (mph)           Driver                         Car     Engine   
+0       407.447  Craig Breedlove           Spirit of America     GE J47  \
+1       413.199        Tom Green            Wingfoot Express     WE J46   
+2       434.220       Art Arfons               Green Monster     GE J79   
+3       468.719  Craig Breedlove           Spirit of America     GE J79   
+4       526.277  Craig Breedlove           Spirit of America     GE J79   
+5       536.712       Art Arfons               Green Monster     GE J79   
+6       555.127  Craig Breedlove  Spirit of America, Sonic 1     GE J79   
+7       576.553       Art Arfons               Green Monster     GE J79   
+8       600.601  Craig Breedlove  Spirit of America, Sonic 1     GE J79   
+9       622.407    Gary Gabelich                  Blue Flame     Rocket   
+10      633.468    Richard Noble                    Thrust 2  RR RG 146   
+11      763.035       Andy Green                  Thrust SSC    RR Spey   
+
+        Date  
+0     8/5/63  
+1    10/2/64  
+2    10/5/64  
+3   10/13/64  
+4   10/15/65  
+5   10/27/65  
+6    11/2/65  
+7    11/7/65  
+8   11/15/65  
+9   10/23/70  
+10   10/4/83  
+11  10/15/97  ,    Time (drops of water)  Distance (cm)
+0                      1        10,11,9
+1                      2     29, 31, 30
+2                      3     59, 58, 61
+3                      4   102, 100, 98
+4                      5  122, 125, 127]</code></pre>
+</div>
+</div>
+<p>Looks good! Let’s say that I just want the second table, so, I use the index of the list to keep with my dataframe.</p>
+<div class="cell" data-execution_count="10">
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(df_list_example2[<span class="dv">1</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>    Speed (mph)           Driver                         Car     Engine   
+0       407.447  Craig Breedlove           Spirit of America     GE J47  \
+1       413.199        Tom Green            Wingfoot Express     WE J46   
+2       434.220       Art Arfons               Green Monster     GE J79   
+3       468.719  Craig Breedlove           Spirit of America     GE J79   
+4       526.277  Craig Breedlove           Spirit of America     GE J79   
+5       536.712       Art Arfons               Green Monster     GE J79   
+6       555.127  Craig Breedlove  Spirit of America, Sonic 1     GE J79   
+7       576.553       Art Arfons               Green Monster     GE J79   
+8       600.601  Craig Breedlove  Spirit of America, Sonic 1     GE J79   
+9       622.407    Gary Gabelich                  Blue Flame     Rocket   
+10      633.468    Richard Noble                    Thrust 2  RR RG 146   
+11      763.035       Andy Green                  Thrust SSC    RR Spey   
+
+        Date  
+0     8/5/63  
+1    10/2/64  
+2    10/5/64  
+3   10/13/64  
+4   10/15/65  
+5   10/27/65  
+6    11/2/65  
+7    11/7/65  
+8   11/15/65  
+9   10/23/70  
+10   10/4/83  
+11  10/15/97  </code></pre>
+</div>
+</div>
+</section>
+<section id="conclusion" class="level1">
+<h1>Conclusion</h1>
 <hr>
+<p>Now, we can use this for our own purposes. Asou can see, the process was much straight forward. In conclusion, this is just one approach of multiple ones since there are different libraries depending of what you want to do. However, I like this libraries since are easy to understand. Finally, if you want to reproduce this code, here I leave a Google Colab notebook for you to input your pdf’s and get the text out of it. This step is super interesting and I would say necessary to start a pipeline for NLP models, analysis of text, etc.</p>
+<p>&nbsp;</p>
+<div style="text-align:center;">
+<p><a href="https://colab.research.google.com/drive/1qBVCIpBReACYi1Pi81bOWZNw66XsY2mA?usp=sharing"><img src="https://colab.research.google.com/assets/colab-badge.svg" width="250"></a></p>
+</div>
+<p>&nbsp; &nbsp;</p>
+<hr>
+<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Reference
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Cite this page: Roa, J. (2023, April 18). <em>PDF to text</em>. Hertie Coding Club. <a href="https://www.hertiecodingclub.com/learn/python/pdf_to_text/">URL</a></p>
+</div>
+</div>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
