@@ -34,7 +34,7 @@
   </url>
   <url>
     <loc>https://www.hertiecodingclub.com/learn/rstudio.html</loc>
-    <lastmod>2023-04-18T14:06:10.755Z</lastmod>
+    <lastmod>2023-04-19T00:25:52.712Z</lastmod>
   </url>
   <url>
     <loc>https://www.hertiecodingclub.com/shiny.html</loc>
@@ -42,7 +42,7 @@
   </url>
   <url>
     <loc>https://www.hertiecodingclub.com/index.html</loc>
-    <lastmod>2023-04-18T14:06:15.327Z</lastmod>
+    <lastmod>2023-04-19T00:25:54.551Z</lastmod>
   </url>
   <url>
     <loc>https://www.hertiecodingclub.com/about.html</loc>
@@ -191,5 +191,9 @@
   <url>
     <loc>https://www.hertiecodingclub.com/material/Certifications/cisco_pcap/index.html</loc>
     <lastmod>2023-04-18T14:06:47.173Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.hertiecodingclub.com/learn/rstudio/social_media_scraping/index.html</loc>
+    <lastmod>2023-04-19T00:25:49.318Z</lastmod>
   </url>
 </urlset>

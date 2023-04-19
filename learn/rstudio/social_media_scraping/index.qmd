@@ -1,0 +1,93 @@
+---
+title:  '{{< animate fadeInDown "Introduction to Social Media Scraping"delay=.6s >}}'
+subtitle: '{{< animate fadeInDown "Learn the basic tools for scraping Twitter Data in R"delay=.6s >}}'
+author: ["Lukas Lehmann"]
+date: "2023-04-18"
+categories: ["Twitter", "Webscraping", "Text"]
+toc: true
+draft: false
+code-link: true
+code-copy: true
+title-block-banner: true
+comments: false
+image: images/Social.png
+include-in-header: meta.html
+filters:
+   - lightbox
+lightbox: 
+  match: auto
+  effect: fade
+  desc-position: left
+  css-class: "lightwidth"
+---
+
+
+
+
+
+# Loading in packages and authorizing rtweet
+
+------------------------------------------------------------------------
+
+So the first thing we want to do is load in the packages we'll be using to scrape and manipulate our data. The most important of those is rtweet, which is the one we'll be using to interact with the Twitter API.
+
+In order to scrape tweets, you'll need a Twitter developer account and have to make a Twitter app. This is actually a pretty simple process (and won't require any coding). Here's a step-by-step guide: https://jtr13.github.io/cc21fall2/scrape-twitter-data-using-r.html
+
+
+```{r, warning=FALSE}
+
+pacman::p_load(rtweet, tidyverse, ggplot2, utils, tm, SnowballC, caTools, 
+               rpart, topicmodels, tidytext, wordcloud, lexicon, reshape2,
+               sentimentr)
+
+```
+
+Running the code above (without the #'s) will prompt a dialogue box to pop up on your screen asking you for a bearer token. You can find that on the Twitter developer page. I made the last two lines into comments so that this can be knit into HTML smoothly.
+
+
+
+# Scraping Tweets
+
+------------------------------------------------------------------------
+
+
+We'll be make two datasets: one containing tweets just from US President Biden's Twitter account and the other scraping the most recent (English language) tweets from all Twitter accounts mentioning the word "green." 
+
+```{r scrape}
+# green <- search_tweets("green", n = 2000, lang = "en", retryonratelimit = TRUE)
+# biden_tweets <- get_timeline("POTUS", n = 2000, retryonratelimit = TRUE)
+biden_tweets <- read_csv("https://raw.githubusercontent.com/lukaslehmann-R/common_files/main/biden_tweets.csv")
+green <- read_csv("https://raw.githubusercontent.com/lukaslehmann-R/common_files/main/green.csv")
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# References
+
+------------------------------------------------------------------------
+
+::: {.callout-tip}
+## References
+
+Alarid-Escudero, F., Krijkamp, E. M., Pechlivanoglou, P., Jalal, H., Kao, S. Z., Yang, A., & Enns, E. A. (2019). *A Need for Change! A Coding Framework for Improving Transparency in Decision Modeling.* PharmacoEconomics, 37(11), 1329–1339. [URL](https://doi.org/10.1007/s40273-019-00837-x)
+
+Negoita, L. (2021, July 5). *How to organize your analyses with R studio projects.* R (for ecology). [URL](https://www.rforecology.com/post/organizing-your-r-studio-projects/)
+:::
+
+
+::: {.callout-note}
+Cite this page: Roa, J. (2023, April 12). *RStudio 101*. Hertie Coding Club. [URL](https://www.hertiecodingclub.com/learn/rstudio/rstudio101/)
+:::
