@@ -61,6 +61,7 @@
   {
     "listing": "/material/Books/indexp.html",
     "items": [
+      "/material/Books/data_management/index.html",
       "/material/Books/art_ds/index.html",
       "/material/Books/eda_r/index.html",
       "/material/Books/spatial_ds/index.html",

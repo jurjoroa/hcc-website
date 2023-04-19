@@ -3,7 +3,7 @@ title: '{{< animate fadeInDown "The Art of Data Science: A Guide for Anyone Who 
 subtitle: '{{< animate fadeInDown "Comprehensive guide to data analysis that emphasizes the artistic and creative aspects of the process, while also incorporating technical skills and a data science approach."delay=.6s >}}'
 author: ["Jorge Roa"]
 date: "04-11-2023"
-categories: ["R", "Data Analysis", "Book", "EDA"]
+categories: ["R", "Data Analysis", "EDA"]
 toc: true
 draft: false
 code-link: true

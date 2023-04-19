@@ -1,0 +1,68 @@
+---
+title: '{{< animate fadeInDown "Data Management for Social Scientists: From Files to Databases"delay=.6s >}}'
+subtitle: '{{< animate fadeInDown "Maximizing the Potential of the Data Revolution for Social Science Research: A Comprehensive Guide to Effective Data Management Techniques"delay=.6s >}}'
+author: ["Jorge Roa"]
+date: "04-19-2023"
+categories: ["R", "Data Management"]
+toc: true
+draft: false
+code-link: true
+comments: false
+title-block-banner: true
+image: images/book.jpg
+page-layout: full
+include-in-header: meta.html
+filters:
+   - lightbox
+lightbox: 
+  match: auto
+  effect: fade
+  desc-position: left
+  css-class: "lightwidth"
+---
+
+
+<div class="books">
+
+![](images/book.jpg){fig-align="center" width="300"}
+
+</div>
+
+<hr class="sep-2" />
+
+<h1 class="book_aut"> Author
+  <span style="font-size: 1em;">Nils B. Weidmann</span>
+</h1>
+
+<hr class="sep-2" />
+
+Data management knowledge is critical for understanding the data that we want to handle. This excellent book provides a broad approach to why data management is essential. Also, it offers us all the chapters and exercises in a repo to replicate them. 
+
+"The 'data revolution' offers many new opportunities for research in the social sciences. Increasingly, social and political interactions can be recorded digitally, leading to vast amounts of new data available for research. This poses new challenges for organizing and processing research data. This comprehensive introduction covers the entire range of data management techniques, from flat files to database management systems. It demonstrates how established techniques and technologies from computer science can be applied in social science projects, drawing on a wide range of different applied examples. This book covers simple tools such as spreadsheets and file-based data storage and processing, as well as more powerful data management software like relational databases. It goes on to address advanced topics such as spatial data, text as data, and network data. This book is one of the first to discuss questions of practical data management specifically for social science projects."
+
+
+
+<center>
+<form action="https://www.cambridge.org/core/books/data-management-for-social-scientists/33356BF6DE034B25239DCF7C436CBFCD">
+<button class="btn-hover color-9" target="_blank">
+Go to Data Management
+</button>
+</form>
+</center>
+
+<center>
+<form action="https://dmbook.org">
+<button class="btn-hover color-9-3" target="_blank">
+Go to Repo of the book
+</button>
+</form>
+</center>
+
+
+<hr class="sep-2" />
+
+::: {.callout-tip}
+## Cite
+Weidmann, N. (2023). Data Management for Social Scientists: From Files to Databases (Methodological Tools in the Social Sciences). Cambridge: Cambridge University Press. doi:10.1017/9781108990424
+:::
+

@@ -3,7 +3,7 @@ title: '{{< animate fadeInDown "Web Scraping with R"delay=.6s >}}'
 subtitle: '{{< animate fadeInDown "Web Scraping with R: From Novice to Expert - Your Complete Guide to Web Data Extraction and Analysis using R Programming"delay=.6s >}}'
 author: ["Jorge Roa"]
 date: "04-10-2023"
-categories: ["R", "Learning", "Book", "Webscrapping"]
+categories: ["R", "Webscraping"]
 toc: true
 draft: false
 code-link: true
@@ -37,7 +37,7 @@ lightbox:
 <hr class="sep-2" />
 
 
-This book has recent material and methods to learn web scrapping with R using the tidyverse. It has a modern approach to getting different data types from the web and introduces API which is one fantastic option to retrieve data. I also like that it contains an example using the web scraped data doing sentiment analysis. Happy reading!
+This book has recent material and methods to learn web scraping with R using the tidyverse. It has a modern approach to getting different data types from the web and introduces API which is one fantastic option to retrieve data. I also like that it contains an example using the web scraped data doing sentiment analysis. Happy reading!
 
 "Web Scraping with R" is a comprehensive guide that provides readers with a practical and comprehensive introduction to web scraping using the R programming language. The book covers a wide range of topics related to web scraping, from the motivation for web scraping, to the techniques and tools used for web scraping, as well as the challenges that come with the process. The book is divided into several chapters, each of which delves into a particular aspect of web scraping using R."
 

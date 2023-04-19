@@ -2481,9 +2481,16 @@ hr.sep-2-f {
     box-shadow: 0 4px 15px 0 rgba(65, 132, 234, 0.75);
 }
 
+
+
 .btn-hover.color-9-2 {
 background-image: linear-gradient(to right, #7e00e8, #ff7f00, #ff1bff, #9d00ff);
 box-shadow: 0 4px 15px 0 rgba(207, 39, 219, 0.75);
+}
+
+.btn-hover.color-9-3 {
+    background-image: linear-gradient(to right, #ff9f43, #ff6b6b, #ff9f43, #ff6b6b);
+    box-shadow: 0 4px 15px 0 rgba(0, 210, 255, 0.75);
 }
 
 span.about-link-text{
@@ -2801,12 +2808,15 @@ figcaption {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-weight: 900;
+  font-weight: 600;
   color: white;
-  font-size: 9vw;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    font-family: 'Your Font', sans-serif; /* replace 'Your Font' with the name of the font you want to use */
+  font-size: 9.5vw;
   letter-spacing: 2px;
-  animation: fade-in-down 1.2s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;}
+  animation: fade-in-down 1.2s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+background-clip: text;
+-webkit-background-clip: text;"
+}
 
 @keyframes fade-in-down {
   from { opacity: 0; top: -100%; } /* start with opacity 0 and the text outside the header on the top */
