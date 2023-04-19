@@ -52,10 +52,10 @@ website:
         href: events/index.qmd
         text: "Events"
       - icon: fingerprint  
-        href: register.qmd
+        href: register/register.qmd
         text: "Register"
       - icon: info-square-fill
-        href: about.qmd
+        href: about_us/index.qmd
         text: "About us"
      
 comments:

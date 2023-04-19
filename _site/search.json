@@ -315,6 +315,62 @@
     "text": "Create a Data Frame: multiple ways\n1.- Using data.frame() function: This is the most common way to create a data frame in R. You can put as many vectors (variables) as you want.\n\ndf <- data.frame(x = c(1, 2, 3), \n                 y = c(\"a\", \"b\", \"c\"), \n                 z = c(TRUE, FALSE, TRUE))\n\n2.- Using read_csv2() function: You can also create a data frame by importing data from an external file using the read.table() or read.csv() function.\n\ndf <- read.table(\"data.txt\", header = TRUE)\n\n3.- Using read_excel() function from the readxl package\n\nlibrary(readxl)\ndf <- read_excel(\"data.xlsx\")\n\n4.- Using tibble() function from the tibble package\n\nlibrary(tibble)\ndf <- tibble(x = c(1, 2, 3), y = c(\"a\", \"b\", \"c\"), z = c(TRUE, FALSE, TRUE))\n\nYou can check our other tutorials to handle data frames and start practicing. We also recommend these books from the website for you to go into more detail.\n\n\n  \n    \n      \n  \n  \n    \n      \n  \n\n\nNo matching items"
   },
   {
+    "objectID": "learn/rstudio/social_media_scraping/index.html",
+    "href": "learn/rstudio/social_media_scraping/index.html",
+    "title": "Introduction to Social Media Scraping",
+    "section": "",
+    "text": "NEWS\n\n\n\nWith the next Twitter regulations, The free package comes with rate-limited access to v2 tweet posting and media upload endpoints, with a posting limit of 1,500 tweets per month at the app level. If you want to access to posting tweets are up to 3,000 per month, and for reading, it’s up to 10,000 tweets per month, you will need to pay 100 USD per month. However, you can sill acces to databases and use this tutorial to analyze text in general."
+  },
+  {
+    "objectID": "learn/rstudio/social_media_scraping/index.html#loading-in-packages-and-authorizing-rtweet",
+    "href": "learn/rstudio/social_media_scraping/index.html#loading-in-packages-and-authorizing-rtweet",
+    "title": "Introduction to Social Media Scraping",
+    "section": "Loading in packages and authorizing rtweet",
+    "text": "Loading in packages and authorizing rtweet\nSo the first thing we want to do is load in the packages we’ll be using to scrape and manipulate our data. The most important of those is rtweet, which is the one we’ll be using to interact with the Twitter API.\nIn order to scrape tweets, you’ll need a Twitter developer account and have to make a Twitter app. This is actually a pretty simple process (and won’t require any coding). Here’s a step-by-step guide\n\npacman::p_load(rtweet, tidyverse, ggplot2, utils, tm, SnowballC, caTools, \n               rpart, topicmodels, tidytext, wordcloud, lexicon, reshape2,\n               sentimentr)\n\nRunning the code above (without the #’s) will prompt a dialogue box to pop up on your screen asking you for a bearer token. You can find that on the Twitter developer page. I made the last two lines into comments so that this can be knit into HTML smoothly."
+  },
+  {
+    "objectID": "learn/rstudio/social_media_scraping/index.html#corpus",
+    "href": "learn/rstudio/social_media_scraping/index.html#corpus",
+    "title": "Introduction to Social Media Scraping",
+    "section": "Corpus",
+    "text": "Corpus\nIn natural language processing (NLP), a corpus is a collection of written or spoken language that is used as a basis for analysis. A corpus can be made up of many different types of texts, including books, articles, speeches, social media posts, and more. Here, we will make a corpus of documents using just the full_text part of green tweets\n\ncorpus1 <- Corpus(VectorSource(green$full_text))\n\nNow we need to clean our text a bit. Change to lower case and remove punctuation!\n\ncorpus1 <- tm_map(corpus1, tolower)\ncorpus1 <- tm_map(corpus1, removePunctuation)\n#We need to remove stop words to get meaningful results from this exercise. \n#We'll remove words like \"me\", \"is\", \"was\"\nstopwords(\"english\")[1:50]\n\n [1] \"i\"          \"me\"         \"my\"         \"myself\"     \"we\"        \n [6] \"our\"        \"ours\"       \"ourselves\"  \"you\"        \"your\"      \n[11] \"yours\"      \"yourself\"   \"yourselves\" \"he\"         \"him\"       \n[16] \"his\"        \"himself\"    \"she\"        \"her\"        \"hers\"      \n[21] \"herself\"    \"it\"         \"its\"        \"itself\"     \"they\"      \n[26] \"them\"       \"their\"      \"theirs\"     \"themselves\" \"what\"      \n[31] \"which\"      \"who\"        \"whom\"       \"this\"       \"that\"      \n[36] \"these\"      \"those\"      \"am\"         \"is\"         \"are\"       \n[41] \"was\"        \"were\"       \"be\"         \"been\"       \"being\"     \n[46] \"have\"       \"has\"        \"had\"        \"having\"     \"do\"        \n\ncorpus1 <- tm_map(corpus1, removeWords, (stopwords(\"english\")))\n#We need to clean the words in the corpus further by \"stemming\" words\n#A word like \"understand\" and \"understands\" will both become \"understand\"\ncorpus1 <- tm_map(corpus1, stemDocument)"
+  },
+  {
+    "objectID": "learn/rstudio/social_media_scraping/index.html#document-term-matrix",
+    "href": "learn/rstudio/social_media_scraping/index.html#document-term-matrix",
+    "title": "Introduction to Social Media Scraping",
+    "section": "Document Term Matrix",
+    "text": "Document Term Matrix\nSo, a DTM is a way of representing a collection of text documents quantitativelythat allows us to do some cool stuff with them. It’s basically a matrix where the rows correspond to the documents in the collection, and the columns correspond to the unique words or terms that appear in the documents. Each cell in the matrix represents the frequency of a particular term in a particular document.\n\n#creates a document term matrix, which is necessary for building a topic model\nDTM1 <- DocumentTermMatrix(corpus1)\n#Here we can see the most frequently used terms\nfrequent_ge_20 <- findFreqTerms(DTM1, lowfreq = 100)\nfrequent_ge_20\n\n [1] \"amp\"       \"green\"     \"like\"      \"store\"     \"day\"       \"…\"        \n [7] \"’s\"        \"light\"     \"one\"       \"year\"      \"figur\"     \"red\"      \n[13] \"buddha\"    \"fasc1nat\"  \"four\"      \"f…\"        \"philippin\" \"pray\"     \n[19] \"purchas\"   \"spent\"     \"woman\""
+  },
+  {
+    "objectID": "learn/rstudio/social_media_scraping/index.html#lets-create-the-topic-model-well-start-with-5-topics",
+    "href": "learn/rstudio/social_media_scraping/index.html#lets-create-the-topic-model-well-start-with-5-topics",
+    "title": "Introduction to Social Media Scraping",
+    "section": "Let’s create the topic model! We’ll start with 5 topics",
+    "text": "Let’s create the topic model! We’ll start with 5 topics\nThe code snippet performs topic modeling on a corpus of text data represented as a Document-Term Matrix (DTM) using the Latent Dirichlet Allocation (LDA) algorithm. The LDA() function from the topic models package is used to create a model with 7 topics and a specified random seed for reproducibility. The resulting model is stored in the green_lda1 object.\n\n#Perform LDA topic modeling on a Document-Term Matrix (DTM) with 7 topics\ngreen_lda1 <- LDA(DTM1, k = 7, control = list(seed = 1234))\n\n#Print the model summary\ngreen_lda1\n\nA LDA_VEM topic model with 7 topics.\n\n#Convert the model's beta matrix to a tidy format\ngreen_topics1 <- tidy(green_lda1, matrix = \"beta\")\n\ngreen_top_terms1 <- green_topics1 %>%\n  group_by(topic) %>% #Group the terms by topic\n  slice_max(beta, n = 10) %>% #Top 10 terms with the highest probabilities\n  ungroup() %>% #Remove the grouping attribute from the data frame\n  arrange(topic, -beta) #Sort the data frame by topic index and term probability"
+  },
+  {
+    "objectID": "learn/rstudio/social_media_scraping/index.html#word-cloud-of-biden-tweets",
+    "href": "learn/rstudio/social_media_scraping/index.html#word-cloud-of-biden-tweets",
+    "title": "Introduction to Social Media Scraping",
+    "section": "Word Cloud of Biden Tweets",
+    "text": "Word Cloud of Biden Tweets\n\nCode# Create custom color palette\nmy_palette <- brewer.pal(8, \"Dark2\")\n\n# Create word cloud with larger font size and custom layout\nwordcloud(words_data2$word, \n          words_data2$n, \n          max.words = 200, \n          colors = my_palette, \n          scale = c(5, 0.3),\n          random.order = FALSE,\n          rot.per = 0.25,\n          random.color = TRUE,\n          main = \"Word Cloud of Biden Tweets\")"
+  },
+  {
+    "objectID": "learn/rstudio/social_media_scraping/index.html#comparison-cloud-of-biden-tweets-by-sentiment",
+    "href": "learn/rstudio/social_media_scraping/index.html#comparison-cloud-of-biden-tweets-by-sentiment",
+    "title": "Introduction to Social Media Scraping",
+    "section": "Comparison Cloud of Biden Tweets by Sentiment",
+    "text": "Comparison Cloud of Biden Tweets by Sentiment\nNow let’s make a word cloud from those tweets but highlight which words are positive and which are negative\n\n#Select and tokenize words\nwords_data <- biden_tweets %>% \n  select(text) %>%\n  unnest_tokens(word, text) \n\n#Get sentiment scores for each word using the bing lexicon\nsentiment_scores <- words_data2 %>%\n  inner_join(get_sentiments(\"bing\"))\n\n#Count the number of words in each sentiment category\nsentiment_counts <- sentiment_scores %>%\n  count(sentiment, sort = TRUE)\n\n#Create a list of profanity words to remove from the dataset\nprofanity_list <- unique(tolower(lexicon::profanity_alvarez))\n\n#Filter out stop words and profanity words from the dataset\nfiltered_words_data <- words_data %>%\n  filter(!word %in% c('https', 't.co', 'he\\'s', 'i\\'m', 'it\\'s', profanity_list))\n\n#Get sentiment scores for each filtered word using the bing lexicon\nfiltered_sentiment_scores <- filtered_words_data %>%\n  inner_join(get_sentiments(\"bing\"))"
+  },
+  {
+    "objectID": "learn/rstudio/social_media_scraping/index.html#cloud",
+    "href": "learn/rstudio/social_media_scraping/index.html#cloud",
+    "title": "Introduction to Social Media Scraping",
+    "section": "Cloud",
+    "text": "Cloud\n\nCode#Count the number of filtered words with each sentiment score\nword_sentiment_counts <- filtered_sentiment_scores %>%\n  count(word, sentiment, sort = TRUE) %>%\n  acast(word ~ sentiment, value.var = \"n\", fill = 0)\n\n#Create a comparison cloud using the word and sentiment counts\ncomparison.cloud(word_sentiment_counts, \n                  colors = c(\"red\", \"blue\"),\n                  max.words = Inf)"
+  },
+  {
     "objectID": "learn/rstudio/Install-r-studio/index.html",
     "href": "learn/rstudio/Install-r-studio/index.html",
     "title": "Install R and Rstudio: why R rocks 💻 🔥",
@@ -333,14 +389,7 @@
     "href": "learn/rstudio.html",
     "title": "Learn R",
     "section": "",
-    "text": "Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n  \n\n\n\n\n\nLearn the basic tools for scraping Twitter Data in R\n\n\n\n\nTwitter\n\n\nWebscraping\n\n\nText\n\n\n \n\n\n\n\nApr 18, 2023\n\n\nLukas Lehmann\n\n\n1 min\n\n\n\n\n\n\n  \n\n\n\n\n\nThis is why R is so powerful: all kind of objects and possibilites. Naming objects, understand structures is crucial to learn\n\n\n\n\nRstudio\n\n\nObjects\n\n\n \n\n\n\n\nApr 16, 2023\n\n\nJorge Roa\n\n\n17 min\n\n\n\n\n\n\n  \n\n\n\n\n\nLearn the basics of R: open a project, setting a working directory and navigate RStudio interface\n\n\n\n\nRstudio\n\n\nInterface\n\n\n \n\n\n\n\nApr 12, 2023\n\n\nJorge Roa\n\n\n8 min\n\n\n\n\n\n\n  \n\n\n\n\n\nUnlock the power of data analysis and statistical computing with R and RStudio! Whether you are a student of public policy or a seasoned professional.\n\n\n\n\nR\n\n\nRStudio\n\n\nAccesibility\n\n\nInstall\n\n\n \n\n\n\n\nMar 2, 2023\n\n\nJorge Roa\n\n\n2 min\n\n\n\n\n\n\n  \n\n\n\n\n\nMultithreading offers faster and more efficient data processing, allowing for quicker analysis of complex datasets.\n\n\n\n\nMultithread\n\n\nData table\n\n\n \n\n\n\n\nJul 28, 2022\n\n\nJorge Roa, Fernando Alarid-Escudero\n\n\n3 min\n\n\n\n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About Us",
-    "section": "",
-    "text": "About this site\n\n1 + 1\n\n[1] 2"
+    "text": "Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n  \n\n\n\n\n\nLearn the basic tools for scraping Twitter Data in R\n\n\n\n\nTwitter\n\n\nWebscraping\n\n\nText\n\n\n \n\n\n\n\nApr 18, 2023\n\n\nLukas Lehmann\n\n\n11 min\n\n\n\n\n\n\n  \n\n\n\n\n\nThis is why R is so powerful: all kind of objects and possibilites. Naming objects, understand structures is crucial to learn\n\n\n\n\nRstudio\n\n\nObjects\n\n\n \n\n\n\n\nApr 16, 2023\n\n\nJorge Roa\n\n\n17 min\n\n\n\n\n\n\n  \n\n\n\n\n\nLearn the basics of R: open a project, setting a working directory and navigate RStudio interface\n\n\n\n\nRstudio\n\n\nInterface\n\n\n \n\n\n\n\nApr 12, 2023\n\n\nJorge Roa\n\n\n8 min\n\n\n\n\n\n\n  \n\n\n\n\n\nUnlock the power of data analysis and statistical computing with R and RStudio! Whether you are a student of public policy or a seasoned professional.\n\n\n\n\nR\n\n\nRStudio\n\n\nAccesibility\n\n\nInstall\n\n\n \n\n\n\n\nMar 2, 2023\n\n\nJorge Roa\n\n\n2 min\n\n\n\n\n\n\n  \n\n\n\n\n\nMultithreading offers faster and more efficient data processing, allowing for quicker analysis of complex datasets.\n\n\n\n\nMultithread\n\n\nData table\n\n\n \n\n\n\n\nJul 28, 2022\n\n\nJorge Roa, Fernando Alarid-Escudero\n\n\n3 min\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "members/team/team.html",
@@ -350,6 +399,13 @@
     "text": "Instructors\n\n\n\n\n      \n\n\n    \n\n        \n        \n        \n           Jorge Roa\n        \n        \n        \n        \n        \n           Lukas Warode \n        \n        \n        \n        \n        \n           Carmen Garro\n        \n        \n        \n        \n        \n           Rodrigo Dornelles\n        \n        \n        \n        \n        \n          Gabriel Zech\n        \n        \n        \n        \n        \n          Lukas Lehmann"
   },
   {
+    "objectID": "members/team/team/gabriel_zech/gabrielzech.html",
+    "href": "members/team/team/gabriel_zech/gabrielzech.html",
+    "title": "Gabriel Zech",
+    "section": "",
+    "text": "I have been working as a project manager in the field of data science for public policy research since 2019. Having helped set up a Data Science Lab at the Bertelsmann Stiftung, I am particularly interested in how to systematically develop an organisation’s infrastructure, governance and culture in the field of data science. Going forward I want to further focus on working at the intersection between management and technical teams."
+  },
+  {
     "objectID": "members/team/team/lukas_warode/lukaswarode.html",
     "href": "members/team/team/lukas_warode/lukaswarode.html",
     "title": "Lukas Warode",
@@ -357,11 +413,25 @@
     "text": "I’m part of the first MDS (2023) cohort, interested in data-driven approaches within the realm of social science and politics. Having a background in political science, I’m located somewhere in the intersection of political research and data science. With the experience of my past research positions, I’m currently working as a data research working student at POLITICO, where I assist the development of an analytical infrastructure."
   },
   {
+    "objectID": "members/team/team/rodrigo_dornelles/rodrigodornelles.html",
+    "href": "members/team/team/rodrigo_dornelles/rodrigodornelles.html",
+    "title": "Rodrigo Dornelles",
+    "section": "",
+    "text": "Initially a lawyer with experience in criminal law, strategic litigation, and public law, I’ve now developed a strong passion for harnessing data analysis and data science to serve the public good. My diverse roles have included Research Assistant at the Hertie School Data Science Lab, Visiting Scholar at UC Berkeley, Attorney at Conectas Human Rights, and Chief Advisor at the Penitentiary Administration in Maranhão, Brazil.\nMy multidisciplinary background in law, public policy, and public management drives me to address complex social challenges such as public security, access to justice, and enhancing government effectiveness. I’m particularly fascinated with natural language processing (NLP), data wrangling, and web scraping as they enable me to extract valuable insights from intricate data sources. I’m always eager to collaborate with like-minded professionals to create innovative solutions that leave a lasting, positive impact on communities worldwide, with a special focus on Latin America."
+  },
+  {
     "objectID": "members/team/team/jorge_roa/jorgeroa.html",
     "href": "members/team/team/jorge_roa/jorgeroa.html",
     "title": "Jorge Roa",
     "section": "",
     "text": "Hello! I’m Jorge! I have a background in public policy and a passion for using data to inform decision-making. My interests include:\n\nData Science for Public Policy: I’m currently pursuing a Master’s degree in Data Science for Public Policy at Hertie School in Berlin, Germany. I believe that data science can be a powerful tool for addressing complex public policy challenges, and I’m excited to continue exploring this field.\nTeaching and Education: I’m passionate about teaching. I’ve worked as a teaching assistant for courses on quantitative methods and public policy evaluation. I’m also the founder of the Hertie Coding Club, a space where students can learn programming skills for data analysis, wrangling and public policy."
+  },
+  {
+    "objectID": "members/team/team/carmen_garro/carmengarro.html",
+    "href": "members/team/team/carmen_garro/carmengarro.html",
+    "title": "Carmen Garro",
+    "section": "",
+    "text": "I am Carmen, from Costa Rica. I did my undergrad in Statistics. I have worked in the internacional organization and public sectors. My intereses are in evidence made decision making, specially in public policy formulation."
   },
   {
     "objectID": "members/members/members.html",
@@ -565,40 +635,5 @@
     "title": "CISCO Networking Academy",
     "section": "",
     "text": "This is a course offered by the CISCO Networking Academy. What I really like is that at the end it offers a proof of completion. This certification in combination with other tools it’s a good way to start with Python. Here I leave the summary of the CISCO website and the link as well.\n\n“How great would it be to write your own computer program? Python is a multi-paradigm programming language used by startups and tech giants like Google, Facebook, Netflix, and more. With intuitive, readable syntax, Python is a great first programming language to learn.\nProgramming skills open you up to careers in almost any industry and are required if you want to continue to more advanced and higher paying software development and engineering roles.\nThis course is a great place to start learning Python – no prior programming knowledge required. Completing the course earns you a Statement of Achievement. It is split into two parts preparing you for two certifications:\nPart 1 (PE1: 35 hours) prepares you for PCEP – Certified Entry-Level Python Programmer Certification. Part 2 (PE2: 40 hours) prepares you for PCAP – Certified Associate in Python Programming Certification.”\nYou’ll learn these core skills:\n\nThink algorithmically – how to analyze a problem and translate it for a computer to process.\nDesign, develop, and improve multi-module computer programs.\nAnalyze and model real-life problems in Object-Oriented Programming categories.\nUnderstand a programmer’s work in the software development process.\nLearn how a program is executed in a computer environment.\nGain skills to create and develop your own programming portfolio.\n\n\nCISCO Networking Academy\n\n\n\n\nGo to CISCO PCAP"
-  },
-  {
-    "objectID": "members/team/team/gabriel_zech/gabrielzech.html",
-    "href": "members/team/team/gabriel_zech/gabrielzech.html",
-    "title": "Gabriel Zech",
-    "section": "",
-    "text": "I have been working as a project manager in the field of data science for public policy research since 2019. Having helped set up a Data Science Lab at the Bertelsmann Stiftung, I am particularly interested in how to systematically develop an organisation’s infrastructure, governance and culture in the field of data science. Going forward I want to further focus on working at the intersection between management and technical teams."
-  },
-  {
-    "objectID": "members/team/team/carmen_garro/carmengarro.html",
-    "href": "members/team/team/carmen_garro/carmengarro.html",
-    "title": "Carmen Garro",
-    "section": "",
-    "text": "I am Carmen, from Costa Rica. I did my undergrad in Statistics. I have worked in the internacional organization and public sectors. My intereses are in evidence made decision making, specially in public policy formulation."
-  },
-  {
-    "objectID": "members/team/team/rodrigo_dornelles/rodrigodornelles.html",
-    "href": "members/team/team/rodrigo_dornelles/rodrigodornelles.html",
-    "title": "Rodrigo Dornelles",
-    "section": "",
-    "text": "Initially a lawyer with experience in criminal law, strategic litigation, and public law, I’ve now developed a strong passion for harnessing data analysis and data science to serve the public good. My diverse roles have included Research Assistant at the Hertie School Data Science Lab, Visiting Scholar at UC Berkeley, Attorney at Conectas Human Rights, and Chief Advisor at the Penitentiary Administration in Maranhão, Brazil.\nMy multidisciplinary background in law, public policy, and public management drives me to address complex social challenges such as public security, access to justice, and enhancing government effectiveness. I’m particularly fascinated with natural language processing (NLP), data wrangling, and web scraping as they enable me to extract valuable insights from intricate data sources. I’m always eager to collaborate with like-minded professionals to create innovative solutions that leave a lasting, positive impact on communities worldwide, with a special focus on Latin America."
-  },
-  {
-    "objectID": "learn/rstudio/social_media_scraping/index.html",
-    "href": "learn/rstudio/social_media_scraping/index.html",
-    "title": "Introduction to Social Media Scraping",
-    "section": "",
-    "text": "Loading in packages and authorizing rtweet\n\nSo the first thing we want to do is load in the packages we’ll be using to scrape and manipulate our data. The most important of those is rtweet, which is the one we’ll be using to interact with the Twitter API.\nIn order to scrape tweets, you’ll need a Twitter developer account and have to make a Twitter app. This is actually a pretty simple process (and won’t require any coding). Here’s a step-by-step guide: https://jtr13.github.io/cc21fall2/scrape-twitter-data-using-r.html\n\npacman::p_load(rtweet, tidyverse, ggplot2, utils, tm, SnowballC, caTools, \n               rpart, topicmodels, tidytext, wordcloud, lexicon, reshape2,\n               sentimentr)\n\nRunning the code above (without the #’s) will prompt a dialogue box to pop up on your screen asking you for a bearer token. You can find that on the Twitter developer page. I made the last two lines into comments so that this can be knit into HTML smoothly.\nScraping Tweets\n\nWe’ll be make two datasets: one containing tweets just from US President Biden’s Twitter account and the other scraping the most recent (English language) tweets from all Twitter accounts mentioning the word “green.”\n\n# green <- search_tweets(\"green\", n = 2000, lang = \"en\", retryonratelimit = TRUE)\n# biden_tweets <- get_timeline(\"POTUS\", n = 2000, retryonratelimit = TRUE)\nbiden_tweets <- read_csv(\"https://raw.githubusercontent.com/lukaslehmann-R/common_files/main/biden_tweets.csv\")\n\nRows: 2000 Columns: 43\n── Column specification ────────────────────────────────────────────────────────\nDelimiter: \",\"\nchr   (5): text, full_text, source, in_reply_to_screen_name, lang\ndbl  (11): id, id_str, in_reply_to_status_id, in_reply_to_status_id_str, in_...\nlgl  (26): truncated, entities, geo, coordinates, place, contributors, is_qu...\ndttm  (1): created_at\n\nℹ Use `spec()` to retrieve the full column specification for this data.\nℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.\n\ngreen <- read_csv(\"https://raw.githubusercontent.com/lukaslehmann-R/common_files/main/green.csv\")\n\nRows: 2000 Columns: 43\n── Column specification ────────────────────────────────────────────────────────\nDelimiter: \",\"\nchr   (5): text, full_text, source, in_reply_to_screen_name, lang\ndbl  (11): id, id_str, in_reply_to_status_id, in_reply_to_status_id_str, in_...\nlgl  (26): truncated, entities, geo, coordinates, place, contributors, is_qu...\ndttm  (1): created_at\n\nℹ Use `spec()` to retrieve the full column specification for this data.\nℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.\n\n\nReferences\n\n\n\n\n\n\n\nReferences\n\n\n\nAlarid-Escudero, F., Krijkamp, E. M., Pechlivanoglou, P., Jalal, H., Kao, S. Z., Yang, A., & Enns, E. A. (2019). A Need for Change! A Coding Framework for Improving Transparency in Decision Modeling. PharmacoEconomics, 37(11), 1329–1339. URL\nNegoita, L. (2021, July 5). How to organize your analyses with R studio projects. R (for ecology). URL\n\n\n\n\n\n\n\n\nNote\n\n\n\nCite this page: Roa, J. (2023, April 12). RStudio 101. Hertie Coding Club. URL"
-  },
-  {
-    "objectID": "learn/rstudio/social_media_scraping/index.html#scraping-tweets",
-    "href": "learn/rstudio/social_media_scraping/index.html#scraping-tweets",
-    "title": "Introduction to Social Media Scraping",
-    "section": "Scraping Tweets",
-    "text": "Scraping Tweets\nWe’ll be make two datasets: one containing tweets just from US President Biden’s Twitter account and the other scraping the most recent (English language) tweets from all Twitter accounts mentioning the word “green.”\n\n# green <- search_tweets(\"green\", n = 2000, lang = \"en\", retryonratelimit = TRUE)\n# biden_tweets <- get_timeline(\"POTUS\", n = 2000, retryonratelimit = TRUE)\nbiden_tweets <- read_csv(\"https://raw.githubusercontent.com/lukaslehmann-R/common_files/main/biden_tweets.csv\")\ngreen <- read_csv(\"https://raw.githubusercontent.com/lukaslehmann-R/common_files/main/green.csv\")"
   }
 ]

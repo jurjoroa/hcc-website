@@ -2764,14 +2764,14 @@ background-clip: text;
   --bs-table-hover-bg: rgba(0, 0, 0, 0.075);
   width: 100%;
   margin-bottom: 1rem;
-  color: #004e92;
+  color: black;
   vertical-align: top;
   border-color: #BA0020;
 }
 
 .table td,
 .table th {
-  border-bottom: 3px solid #BA0020; /* Change this value to increase or decrease the thickness of the cell borders */
+  border-bottom: 2px solid #BA0020; /* Change this value to increase or decrease the thickness of the cell borders */
   
 }
 
@@ -2779,3 +2779,37 @@ figcaption {
   text-align: center;
 
 }
+
+.pagedtable-wrapper{
+  font-size: 16px;
+}
+
+
+.header_about{
+   width:100%;
+   margin-top: -150px;
+   height:700px;
+   opacity:.9;
+   background-image:url('images/brandenburg.jpg');
+   background-size:cover;
+   background-position:bottom;
+   position: relative;
+}
+
+.header_about h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-weight: 900;
+  color: white;
+  font-size: 9vw;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  letter-spacing: 2px;
+  animation: fade-in-down 1.2s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;}
+
+@keyframes fade-in-down {
+  from { opacity: 0; top: -100%; } /* start with opacity 0 and the text outside the header on the top */
+  to { opacity: 1; top: 50%; } /* end with opacity 1 and the text centered in the header */
+}
+
