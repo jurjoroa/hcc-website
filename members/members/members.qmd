@@ -34,63 +34,17 @@ format:
 ```
 
 
-About this site
-
-```{r, echo=FALSE, warning=FALSE}
-library(showtext, quietly = T)
-showtext_auto()
-```
-
-
-
-```{r, warning=FALSE}
-# Load the ggplot2 package
-library(ggplot2)
-
-
-# Create some example data
-x <- 1:10
-y <- x^2
-
-# Create the plot
-ggplot(data = data.frame(x, y), aes(x = x, y = y)) +
-  geom_line() + theme(text = element_text(family = "Arial", size = 20))
-
-
-```
-
 <hr>
-
-
-# Who are we? {auto-animate="true" auto-animate-easing="ease-in-out" background="#517699" style="text-align: left;"}
 
 
 
 
  <header class="header show-on-scroll">
    
-  <h1 class="heading"> When the moon hits your eye  </h1>
+  <h1 class="heading" style="color: white;"> Club members  </h1>
         
   </header>
      
-
-
-
-
-{{< fa envelope title="Email" >}} 
-
-{{< fa brands twitter title="Twitter" >}} [damoncroberts](https://twitter.com/damoncroberts)
-
-{{< fa brands github title="Github" >}} [DamonCharlesRoberts](https://github.com/damoncharlesroberts)
-
-{{< fa clock title="Office Hours" >}} Wednesdays from 12:15 - 2:15 pm Mountain
-
-{{< fa building-columns title="Office" >}} Ketchum Arts & Sciences, Office 382, Boulder, CO 80309
-
-
-{{< animate fadeInDown "Some text" >}}
-
-
 
 
 ```{=HTML}

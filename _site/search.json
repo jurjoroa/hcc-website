@@ -438,7 +438,7 @@
     "href": "members/members/members.html",
     "title": "Members",
     "section": "",
-    "text": "About this site\n\n\n\n\n# Load the ggplot2 package\nlibrary(ggplot2)\n\n\n# Create some example data\nx <- 1:10\ny <- x^2\n\n# Create the plot\nggplot(data = data.frame(x, y), aes(x = x, y = y)) +\n  geom_line() + theme(text = element_text(family = \"Arial\", size = 20))\n\n\n\n\n\n\n\n\nWho are we?\n\nWhen the moon hits your eye\n\n\n damoncroberts\n DamonCharlesRoberts\n Wednesdays from 12:15 - 2:15 pm Mountain\n Ketchum Arts & Sciences, Office 382, Boulder, CO 80309\nSome text"
+    "text": "Club members"
   },
   {
     "objectID": "events/02_wrangle/index.html",

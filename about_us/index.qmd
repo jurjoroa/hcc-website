@@ -76,7 +76,7 @@ comments: false
       <br>
       <h1>
 <lord-icon
-    src="https://cdn.lordicon.com/qbaenubu.json"
+    src="https://cdn.lordicon.com/secxpvll.json"
     trigger="loop"
     delay="250"
     style="width:100px;height:100px">
@@ -94,6 +94,79 @@ comments: false
     </div>
   </div>
 </div>
+
+</br>
+
+<div class="containerabout4">
+  <div class="about4">
+    <div class="left4">
+      <br>
+      <h1>
+<lord-icon
+    src="https://cdn.lordicon.com/sglcptvj.json"
+    trigger="loop"
+    delay="250"
+    style="width:100px;height:100px">
+</lord-icon>
+        Our Team
+      </h1>
+      <hr>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      </p>
+    </div>
+    <div class="right4">
+      <img src="images/Pictures HCC/event4.jpg">
+    </div>
+  </div>
+</div>
+
+</br>
+
+<div class="containerabout5">
+  <div class="about5">
+    <div class="left5">
+ <h1>
+<lord-icon
+    src="https://cdn.lordicon.com/fpjgsroh.json"
+    trigger="loop"
+    delay="250"
+    style="width:100px;height:100px">
+</lord-icon>
+        Our Team
+      </h1>
+      <hr>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </div>
+    <div class="right5">
+      <img src="images/DSL.jpg">
+    </div>
+    <div class="clear"></div>
+  </div>
+</div>
+
+
+</br>
+
+<div class="final_layout_container">
+
+<center>
+
+<div class="image_about" style="margin-top:100px;">
+<img src="images/hcc_long_welw_1400.png">
+  </div>
+<div class="image_mob_about" style="margin-top:100px;">
+<img src="images/hcc_long_wel_smartw_1400.png">
+  </div>
+
+</center>
+
+</div>
+
+
+
+
+
 ```
 
 
@@ -105,7 +178,9 @@ comments: false
   const aboutUs = document.querySelector('.about');
   const section2 = document.querySelector('.about2');
   const section3 = document.querySelector('.about3'); // Added third section
-
+  const section4 = document.querySelector('.about4'); // Added third section
+  const section5 = document.querySelector('.about5'); // Added third section
+  const image_about = document.querySelector('.final_layout_container'); // Added third section
   window.addEventListener('scroll', () => {
     if (isElementInViewport(aboutUs)) {
       aboutUs.classList.add('show');
@@ -115,6 +190,15 @@ comments: false
     }
     if (isElementInViewport(section3)) { // Added condition for third section
       section3.classList.add('show');
+    }
+    if (isElementInViewport(section4)) { // Added condition for third section
+      section4.classList.add('show');
+    }
+    if (isElementInViewport(section5)) { // Added condition for third section
+      section5.classList.add('show');
+    }
+    if (isElementInViewport(section5)) { // Added condition for third section
+      image_about.classList.add('show');
     }
   });
 
