@@ -18,6 +18,15 @@ format:
       text: "<script src='js/anime_photos.js, js/background.js, https://s3-us-west-2.amazonaws.com/s.cdpn.io/499416/TweenLite.min.js, https://s3-us-west-2.amazonaws.com/s.cdpn.io/499416/EasePack.min.js, https://s3-us-west-2.amazonaws.com/s.cdpn.io/499416/demo.js' ></script>"
 ---
 
+<style>
+  body {
+  background: linear-gradient(to right, #000428, #004e92);
+}
+  
+</style>
+
+
+
 ```{=html}
 
 
@@ -29,7 +38,7 @@ format:
 
 <div class="container">
   <header class="header show-on-scroll">
-    <h1 class="heading"> Instructors </h1>
+    <h1 class="heading" style="color: white;"> Instructors </h1>
   </header>
 </div>
 

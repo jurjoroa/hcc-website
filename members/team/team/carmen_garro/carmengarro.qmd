@@ -20,6 +20,14 @@ about:
 comments: false
 ---
 
+<style>
+  body {
+  background: linear-gradient(to right, #000428, #004e92);
+}
+  
+</style>
+
+
  
 
 I am Carmen, from Costa Rica. I did my undergrad in Statistics. I have worked in the internacional organization and public sectors. My intereses are in evidence made decision making, specially in public policy formulation.

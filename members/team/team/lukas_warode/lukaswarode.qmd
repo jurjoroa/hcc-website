@@ -26,7 +26,12 @@ about:
 comments: false
 ---
 
-
+<style>
+  body {
+  background: linear-gradient(to right, #000428, #004e92);
+}
+  
+</style>
 
 I'm part of the first MDS (2023) cohort, interested in data-driven approaches within the realm of social science and politics. Having a background in political science, I'm located somewhere in the intersection of political research and data science. With the experience of my past research positions, I'm currently working as a data research working student at POLITICO, where I assist the development of an analytical infrastructure.
 
