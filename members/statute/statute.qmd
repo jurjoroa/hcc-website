@@ -11,84 +11,163 @@ comments: false
   background: linear-gradient(to right, #000428, #004e92);
   color: white !important;
 }
-  
+
+nav#TOC.toc-active h2#toc-title, nav#TOC.toc-active ul{
+color: white;
+}
+
 </style>
 
+<hr>
 
+ 
 
-Article I: Name
+# Article I: Name {style="color: white; text-align: center;"}
+
+<hr>
+
 The name of the organization shall be the Hertie Coding Club (HCC).
 
-Article II: Purpose
+
+
+ 
+
+# Article II: Purpose {style="color: white; text-align: center; "}
+
+<hr>
+
 The purpose of the Hertie Coding Club is to provide an inclusive and supportive environment for individuals within the Hertie community to learn, develop, and apply coding skills in data analysis, visualization, and policy-making.
 
-Article III: Membership
-Section 1: Eligibility
+ 
+
+
+# Article III: Membership {style="color: white; text-align: center; "}
+
+<hr>
+
+## Section 1: Eligibility {style="color: white; text-align: center;"}
 Membership in the Hertie Coding Club is open to all members of the Hertie community, including students, faculty, staff, and alumni, regardless of their background or experience in coding.
 
-Section 2: Responsibilities
+## Section 2: Responsibilities {style="color: white; text-align: center;"}
 Members are expected to actively participate in club activities, contribute to a positive learning environment, and maintain a respectful attitude towards fellow members.
 
-Article IV: Executive Committee
-Section 1: Composition
+ 
+
+# Article IV: Executive Committee {style="color: white; text-align: center;"}
+
+<hr>
+
+## Section 1: Composition {style="color: white; text-align: center;"}
 The Executive Committee shall consist of the following positions: President, Vice President, Secretary, Treasurer, and Communications Officer.
 
-Section 2: Duties
+## Section 2: Duties {style="color: white; text-align: center;"}
 
-    President: Oversee club operations, lead meetings, and represent the club within the Hertie community and beyond.
-    Vice President: Assist the President and assume their duties in their absence, coordinate club activities, and manage subcommittees.
-    Secretary: Maintain club records, meeting minutes, and membership information; schedule meetings and notify members of upcoming events.
-    Treasurer: Manage club finances, including budgeting, fundraising, and allocation of resources.
-    Communications Officer: Oversee club communications, promote events and activities, and maintain the club's online presence.
+- President: Oversee club operations, lead meetings, and represent the club within the Hertie community and beyond.
+- Vice President: Assist the President and assume their duties in their absence, coordinate club activities, and manage subcommittees.
+- Secretary: Maintain club records, meeting minutes, and membership information; schedule meetings and notify members of upcoming events.
+- Treasurer: Manage club finances, including budgeting, fundraising, and allocation of resources.
+- Communications Officer: Oversee club communications, promote events and activities, and maintain the club's online presence.
 
-Section 3: Elections
+## Section 3: Elections {style="color: white; text-align: center;"}
 Elections shall be held annually during the last meeting of the academic year. All club members are eligible to run for a position and vote in the election. The candidate receiving the most votes for each position shall be elected.
 
-Article V: Meetings
-Section 1: Frequency
+ 
+
+# Article V: Meetings {style="color: white; text-align: center;"}
+
+<hr>
+
+## Section 1: Frequency {style="color: white; text-align: center; "}
 Regular club meetings shall be held weekly during the academic year. Additional meetings, workshops, or events may be scheduled as needed.
 
-Section 2: Quorum
+## Section 2: Quorum {style="color: white; text-align: center;"}
 A quorum shall consist of at least 50% of the club's active membership. Decisions shall be made by a majority vote of members present at a meeting with a quorum.
 
-Article VI: Subcommittees
+ 
+
+# Article VI: Subcommittees {style="color: white; text-align: center;"}
+
+<hr>
+
 Subcommittees may be formed for specific purposes, such as organizing events, developing curriculum, or managing club projects. Subcommittee membership is open to all club members.
 
-Article VII: Amendments
+ 
+
+# Article VII: Amendments {style="color: white; text-align: center;"}
+
+<hr>
+
 Proposed amendments to the constitution must be submitted in writing to the Executive Committee. Amendments shall be approved by a two-thirds majority vote of members present at a meeting with a quorum.
 
-Article VIII: Dissolution
+ 
+
+# Article VIII: Dissolution {style="color: white; text-align: center; "}
+
+<hr>
+
 In the event of the club's dissolution, any remaining funds shall be donated to a charity or organization related to coding and education, as determined by the Executive Committee.
 
+ 
 
-Article IX: Non-Discrimination Policy
+# Article IX: Non-Discrimination Policy {style="color: white; text-align: center;"}
+
+<hr>
+
 The Hertie Coding Club is committed to maintaining an inclusive and diverse environment for all its members. The club shall not discriminate on the basis of race, color, religion, national origin, gender, sexual orientation, age, disability, or any other characteristic protected by law. All members shall be treated fairly and equitably, with respect and dignity.
 
-Article X: Code of Conduct
+<hr>
+
+ 
+
+# Article X: Code of Conduct {style="color: white; text-align: center;"}
+
+<hr>
+
 All members are expected to adhere to a code of conduct that promotes a safe, inclusive, and productive learning environment. This includes, but is not limited to, the following principles:
 
-    Respect: Treat fellow members with courtesy, dignity, and respect, and demonstrate sensitivity to the opinions and perspectives of others.
-    Integrity: Act honestly and ethically in all club activities and avoid engaging in any behavior that could compromise the reputation or integrity of the club.
-    Collaboration: Work collaboratively with fellow members, support one another in learning and skill development, and share knowledge and resources.
-    Responsibility: Attend meetings and events regularly, participate actively, and fulfill the duties and responsibilities associated with one's role within the club.
+- Respect: Treat fellow members with courtesy, dignity, and respect, and demonstrate sensitivity to the opinions and perspectives of others.
+- Integrity: Act honestly and ethically in all club activities and avoid engaging in any behavior that could compromise the reputation or integrity of the club.
+- Collaboration: Work collaboratively with fellow members, support one another in learning and skill development, and share knowledge and resources.
+- Responsibility: Attend meetings and events regularly, participate actively, and fulfill the duties and responsibilities associated with one's role within the club.
 
 Violations of the code of conduct may result in disciplinary action, including suspension or expulsion from the club, as determined by the Executive Committee.
 
-Article XI: Advisor
+ 
+
+# Article XI: Advisor {style="color: white; text-align: center;"}
+
+<hr>
+
 The club shall have a faculty or staff advisor who will serve as a resource and mentor for the Executive Committee and club members. The advisor shall provide guidance on club activities, facilitate connections with the Hertie community and external organizations, and support the club's overall mission and goals.
 
-Article XII: Financial Management
-Section 1: Budget
+ 
+
+# Article XII: Financial Management {style="color: white; text-align: center; "}
+
+<hr>
+
+## Section 1: Budget {style="color: white; text-align: center;"}
 The Treasurer shall prepare an annual budget for the club, detailing anticipated revenues and expenses for the academic year. The budget shall be approved by the Executive Committee and presented to the club membership for review.
 
-Section 2: Fundraising
+## Section 2: Fundraising {style="color: white; text-align: center;"}
 The club may engage in fundraising activities to support its operations and initiatives. All fundraising activities shall be conducted in accordance with applicable laws, regulations, and Hertie community guidelines.
 
-Section 3: Financial Reporting
+## Section 3: Financial Reporting {style="color: white; text-align: center;"}
 The Treasurer shall provide regular financial reports to the Executive Committee and club membership, detailing the club's financial status and transactions.
 
-Article XIII: Partnerships and Collaborations
+ 
+
+# Article XIII: Partnerships and Collaborations {style="color: white; text-align: center;"}
+
+<hr>
+
 The Hertie Coding Club may seek partnerships and collaborations with other clubs, organizations, or institutions to advance its mission and objectives. Such partnerships shall be established and maintained in a manner that upholds the club's values and the interests of the Hertie community.
 
-Article XIV: Ratification
+ 
+
+# Article XIV: Ratification {style="color: white; text-align: center;"}
+
+<hr>
+
 This constitution shall be considered ratified and in effect upon approval by a two-thirds majority vote of the club's founding members.
+
