@@ -22,6 +22,18 @@ format:
   body {
   background: linear-gradient(to right, #000428, #004e92);
 }
+
+section#academic-advisors.level1 h1{
+color: white;
+}
+
+nav#TOC.toc-active h2#toc-title, nav#TOC.toc-active ul{
+color: white;
+}
+
+</style>
+
+ 
   
 </style>
 
@@ -34,18 +46,18 @@ format:
 ```
 
 
-<hr>
+ 
 
 
+# Members  {style="color: transparent;"}
 
-
- <header class="header show-on-scroll">
-   
-  <h1 class="heading" style="color: white;"> Club members  </h1>
-        
+<div class="container">
+  <header class="header show-on-scroll">
+    <h1 class="heading" style="color: white;"> Members </h1>
   </header>
+</div>
      
-
+<hr>
 
 ```{=HTML}
 
@@ -97,9 +109,6 @@ format:
 </section>
  
 ```
-
-
-
 
 
 
