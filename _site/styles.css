@@ -2821,22 +2821,22 @@ figcaption {
    background-size:cover;
    background-position:bottom;
    position: relative;
+   display: grid;
+  place-items: center;
+  text-align: center;
 }
 
 .header_about h1 {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  position: absolute; /* change position to relative to position the text relative to the container */
   font-weight: 600;
+  margin-top: -400px;
   color: white;
-    font-family: 'Your Font', sans-serif; /* replace 'Your Font' with the name of the font you want to use */
-  font-size: 9.5vw;
+  font-family: 'Your Font', sans-serif; /* replace 'Your Font' with the name of the font you want to use */
+  font-size: 100px;
   letter-spacing: 2px;
   animation: fade-in-down 1.2s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
-background-clip: text;
--webkit-background-clip: text;"
 }
+
 
 @keyframes fade-in-down {
   from { opacity: 0; top: -100%; } /* start with opacity 0 and the text outside the header on the top */

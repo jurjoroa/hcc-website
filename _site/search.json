@@ -392,11 +392,74 @@
     "text": "Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n  \n\n\n\n\n\nLearn the basic tools for scraping Twitter Data in R\n\n\n\n\nTwitter\n\n\nWebscraping\n\n\nText\n\n\n \n\n\n\n\nApr 18, 2023\n\n\nLukas Lehmann\n\n\n11 min\n\n\n\n\n\n\n  \n\n\n\n\n\nThis is why R is so powerful: all kind of objects and possibilites. Naming objects, understand structures is crucial to learn\n\n\n\n\nRstudio\n\n\nObjects\n\n\n \n\n\n\n\nApr 16, 2023\n\n\nJorge Roa\n\n\n17 min\n\n\n\n\n\n\n  \n\n\n\n\n\nLearn the basics of R: open a project, setting a working directory and navigate RStudio interface\n\n\n\n\nRstudio\n\n\nInterface\n\n\n \n\n\n\n\nApr 12, 2023\n\n\nJorge Roa\n\n\n8 min\n\n\n\n\n\n\n  \n\n\n\n\n\nUnlock the power of data analysis and statistical computing with R and RStudio! Whether you are a student of public policy or a seasoned professional.\n\n\n\n\nR\n\n\nRStudio\n\n\nAccesibility\n\n\nInstall\n\n\n \n\n\n\n\nMar 2, 2023\n\n\nJorge Roa\n\n\n2 min\n\n\n\n\n\n\n  \n\n\n\n\n\nMultithreading offers faster and more efficient data processing, allowing for quicker analysis of complex datasets.\n\n\n\n\nMultithread\n\n\nData table\n\n\n \n\n\n\n\nJul 28, 2022\n\n\nJorge Roa, Fernando Alarid-Escudero\n\n\n3 min\n\n\n\n\n\n\nNo matching items"
   },
   {
-    "objectID": "members/statute/statute.html",
-    "href": "members/statute/statute.html",
+    "objectID": "members/statute/statute.html#section-1-eligibility",
+    "href": "members/statute/statute.html#section-1-eligibility",
     "title": "Hertie Coding Club Statutes",
-    "section": "",
-    "text": "<brZ"
+    "section": "Section 1: Eligibility",
+    "text": "Section 1: Eligibility\nMembership in the Hertie Coding Club is open to all members of the Hertie community, including students, faculty, staff, and alumni, regardless of their background or experience in coding."
+  },
+  {
+    "objectID": "members/statute/statute.html#section-2-responsibilities",
+    "href": "members/statute/statute.html#section-2-responsibilities",
+    "title": "Hertie Coding Club Statutes",
+    "section": "Section 2: Responsibilities",
+    "text": "Section 2: Responsibilities\nMembers are expected to actively participate in club activities, contribute to a positive learning environment, and maintain a respectful attitude towards fellow members."
+  },
+  {
+    "objectID": "members/statute/statute.html#section-1-composition",
+    "href": "members/statute/statute.html#section-1-composition",
+    "title": "Hertie Coding Club Statutes",
+    "section": "Section 1: Composition",
+    "text": "Section 1: Composition\nThe Executive Committee shall consist of the following positions: President, Vice President, Secretary, Treasurer, and Communications Officer."
+  },
+  {
+    "objectID": "members/statute/statute.html#section-2-duties",
+    "href": "members/statute/statute.html#section-2-duties",
+    "title": "Hertie Coding Club Statutes",
+    "section": "Section 2: Duties",
+    "text": "Section 2: Duties\n\nPresident: Oversee club operations, lead meetings, and represent the club within the Hertie community and beyond.\nVice President: Assist the President and assume their duties in their absence, coordinate club activities, and manage subcommittees.\nSecretary: Maintain club records, meeting minutes, and membership information; schedule meetings and notify members of upcoming events.\nTreasurer: Manage club finances, including budgeting, fundraising, and allocation of resources.\nCommunications Officer: Oversee club communications, promote events and activities, and maintain the club’s online presence."
+  },
+  {
+    "objectID": "members/statute/statute.html#section-3-elections",
+    "href": "members/statute/statute.html#section-3-elections",
+    "title": "Hertie Coding Club Statutes",
+    "section": "Section 3: Elections",
+    "text": "Section 3: Elections\nElections shall be held annually during the last meeting of the academic year. All club members are eligible to run for a position and vote in the election. The candidate receiving the most votes for each position shall be elected."
+  },
+  {
+    "objectID": "members/statute/statute.html#section-1-frequency",
+    "href": "members/statute/statute.html#section-1-frequency",
+    "title": "Hertie Coding Club Statutes",
+    "section": "Section 1: Frequency",
+    "text": "Section 1: Frequency\nRegular club meetings shall be held weekly during the academic year. Additional meetings, workshops, or events may be scheduled as needed."
+  },
+  {
+    "objectID": "members/statute/statute.html#section-2-quorum",
+    "href": "members/statute/statute.html#section-2-quorum",
+    "title": "Hertie Coding Club Statutes",
+    "section": "Section 2: Quorum",
+    "text": "Section 2: Quorum\nA quorum shall consist of at least 50% of the club’s active membership. Decisions shall be made by a majority vote of members present at a meeting with a quorum."
+  },
+  {
+    "objectID": "members/statute/statute.html#section-1-budget",
+    "href": "members/statute/statute.html#section-1-budget",
+    "title": "Hertie Coding Club Statutes",
+    "section": "Section 1: Budget",
+    "text": "Section 1: Budget\nThe Treasurer shall prepare an annual budget for the club, detailing anticipated revenues and expenses for the academic year. The budget shall be approved by the Executive Committee and presented to the club membership for review."
+  },
+  {
+    "objectID": "members/statute/statute.html#section-2-fundraising",
+    "href": "members/statute/statute.html#section-2-fundraising",
+    "title": "Hertie Coding Club Statutes",
+    "section": "Section 2: Fundraising",
+    "text": "Section 2: Fundraising\nThe club may engage in fundraising activities to support its operations and initiatives. All fundraising activities shall be conducted in accordance with applicable laws, regulations, and Hertie community guidelines."
+  },
+  {
+    "objectID": "members/statute/statute.html#section-3-financial-reporting",
+    "href": "members/statute/statute.html#section-3-financial-reporting",
+    "title": "Hertie Coding Club Statutes",
+    "section": "Section 3: Financial Reporting",
+    "text": "Section 3: Financial Reporting\nThe Treasurer shall provide regular financial reports to the Executive Committee and club membership, detailing the club’s financial status and transactions."
   },
   {
     "objectID": "members/team/team.html",
@@ -649,75 +712,5 @@
     "title": "CISCO Networking Academy",
     "section": "",
     "text": "This is a course offered by the CISCO Networking Academy. What I really like is that at the end it offers a proof of completion. This certification in combination with other tools it’s a good way to start with Python. Here I leave the summary of the CISCO website and the link as well.\n\n“How great would it be to write your own computer program? Python is a multi-paradigm programming language used by startups and tech giants like Google, Facebook, Netflix, and more. With intuitive, readable syntax, Python is a great first programming language to learn.\nProgramming skills open you up to careers in almost any industry and are required if you want to continue to more advanced and higher paying software development and engineering roles.\nThis course is a great place to start learning Python – no prior programming knowledge required. Completing the course earns you a Statement of Achievement. It is split into two parts preparing you for two certifications:\nPart 1 (PE1: 35 hours) prepares you for PCEP – Certified Entry-Level Python Programmer Certification. Part 2 (PE2: 40 hours) prepares you for PCAP – Certified Associate in Python Programming Certification.”\nYou’ll learn these core skills:\n\nThink algorithmically – how to analyze a problem and translate it for a computer to process.\nDesign, develop, and improve multi-module computer programs.\nAnalyze and model real-life problems in Object-Oriented Programming categories.\nUnderstand a programmer’s work in the software development process.\nLearn how a program is executed in a computer environment.\nGain skills to create and develop your own programming portfolio.\n\n\nCISCO Networking Academy\n\n\n\n\nGo to CISCO PCAP"
-  },
-  {
-    "objectID": "members/statute/statute.html#section-1-eligibility",
-    "href": "members/statute/statute.html#section-1-eligibility",
-    "title": "Hertie Coding Club Statutes",
-    "section": "Section 1: Eligibility",
-    "text": "Section 1: Eligibility\nMembership in the Hertie Coding Club is open to all members of the Hertie community, including students, faculty, staff, and alumni, regardless of their background or experience in coding."
-  },
-  {
-    "objectID": "members/statute/statute.html#section-2-responsibilities",
-    "href": "members/statute/statute.html#section-2-responsibilities",
-    "title": "Hertie Coding Club Statutes",
-    "section": "Section 2: Responsibilities",
-    "text": "Section 2: Responsibilities\nMembers are expected to actively participate in club activities, contribute to a positive learning environment, and maintain a respectful attitude towards fellow members."
-  },
-  {
-    "objectID": "members/statute/statute.html#section-1-composition",
-    "href": "members/statute/statute.html#section-1-composition",
-    "title": "Hertie Coding Club Statutes",
-    "section": "Section 1: Composition",
-    "text": "Section 1: Composition\nThe Executive Committee shall consist of the following positions: President, Vice President, Secretary, Treasurer, and Communications Officer."
-  },
-  {
-    "objectID": "members/statute/statute.html#section-2-duties",
-    "href": "members/statute/statute.html#section-2-duties",
-    "title": "Hertie Coding Club Statutes",
-    "section": "Section 2: Duties",
-    "text": "Section 2: Duties\n\nPresident: Oversee club operations, lead meetings, and represent the club within the Hertie community and beyond.\nVice President: Assist the President and assume their duties in their absence, coordinate club activities, and manage subcommittees.\nSecretary: Maintain club records, meeting minutes, and membership information; schedule meetings and notify members of upcoming events.\nTreasurer: Manage club finances, including budgeting, fundraising, and allocation of resources.\nCommunications Officer: Oversee club communications, promote events and activities, and maintain the club’s online presence."
-  },
-  {
-    "objectID": "members/statute/statute.html#section-3-elections",
-    "href": "members/statute/statute.html#section-3-elections",
-    "title": "Hertie Coding Club Statutes",
-    "section": "Section 3: Elections",
-    "text": "Section 3: Elections\nElections shall be held annually during the last meeting of the academic year. All club members are eligible to run for a position and vote in the election. The candidate receiving the most votes for each position shall be elected."
-  },
-  {
-    "objectID": "members/statute/statute.html#section-1-frequency",
-    "href": "members/statute/statute.html#section-1-frequency",
-    "title": "Hertie Coding Club Statutes",
-    "section": "Section 1: Frequency",
-    "text": "Section 1: Frequency\nRegular club meetings shall be held weekly during the academic year. Additional meetings, workshops, or events may be scheduled as needed."
-  },
-  {
-    "objectID": "members/statute/statute.html#section-2-quorum",
-    "href": "members/statute/statute.html#section-2-quorum",
-    "title": "Hertie Coding Club Statutes",
-    "section": "Section 2: Quorum",
-    "text": "Section 2: Quorum\nA quorum shall consist of at least 50% of the club’s active membership. Decisions shall be made by a majority vote of members present at a meeting with a quorum."
-  },
-  {
-    "objectID": "members/statute/statute.html#section-1-budget",
-    "href": "members/statute/statute.html#section-1-budget",
-    "title": "Hertie Coding Club Statutes",
-    "section": "Section 1: Budget",
-    "text": "Section 1: Budget\nThe Treasurer shall prepare an annual budget for the club, detailing anticipated revenues and expenses for the academic year. The budget shall be approved by the Executive Committee and presented to the club membership for review."
-  },
-  {
-    "objectID": "members/statute/statute.html#section-2-fundraising",
-    "href": "members/statute/statute.html#section-2-fundraising",
-    "title": "Hertie Coding Club Statutes",
-    "section": "Section 2: Fundraising",
-    "text": "Section 2: Fundraising\nThe club may engage in fundraising activities to support its operations and initiatives. All fundraising activities shall be conducted in accordance with applicable laws, regulations, and Hertie community guidelines."
-  },
-  {
-    "objectID": "members/statute/statute.html#section-3-financial-reporting",
-    "href": "members/statute/statute.html#section-3-financial-reporting",
-    "title": "Hertie Coding Club Statutes",
-    "section": "Section 3: Financial Reporting",
-    "text": "Section 3: Financial Reporting\nThe Treasurer shall provide regular financial reports to the Executive Committee and club membership, detailing the club’s financial status and transactions."
   }
 ]
