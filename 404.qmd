@@ -4,7 +4,7 @@ comments: false
 ---
 
 <div style="display: grid; align-items: center; justify-content: center; margin-top: -50px;">
-  <iframe width="400" height="250" src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1" frameborder="0" allowfullscreen></iframe>
+  <iframe width="400" height="250" src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1" frameborder="0" allowfullscreen autoplay></iframe>
 </div>
 
 <h1 style="font-size: 70px;
