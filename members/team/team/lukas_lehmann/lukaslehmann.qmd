@@ -14,15 +14,13 @@ about:
   image-shape: rounded
   links:
     - text: "{{< fa brands linkedin >}} LinkedIn"
-      url: "https://linkedin.com/in/jorge-roac"
+      url: "https://www.linkedin.com/in/lukas-lehmann-01/"
     - text: "{{< fa brands github >}} GitHub"
-      url: "https://github.com/jurjoroa"
+      url: "https://github.com/lukaslehmann-R"
     - text: "{{< fa brands twitter >}} Twitter"
-      url: "https://twitter.com/jorgeroac"
-    - text: "{{< fa brands orcid >}} ORCID"
-      url: "https://orcid.org/0000-0002-3972-9793"
+      url: "https://twitter.com/LukasLehmann20"
     - text: "{{< fa solid envelopes-bulk >}} Mail"
-      url: "mailto:jurjoo@gmail.com"
+      url: "mailto:L.Lehmann@students.hertie-school.org"
 comments: false
 ---
 
@@ -33,5 +31,7 @@ comments: false
   
 </style>
 
+ 
 
+Lukas is a first-year MIA student from the United States concentrating in International Security. He is particularly interested in corruption and how civil society organizations impact democratization around the world. Before coming to the Hertie School, he worked as a media analyst in Washington, D.C., where he leveraged his self-taught data analysis skills in the R programming language.
 
