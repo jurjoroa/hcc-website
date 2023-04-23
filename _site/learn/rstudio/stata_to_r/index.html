@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 <meta name="author" content="Jorge Roa">
 <meta name="dcterms.date" content="2023-04-23">
-<title>Making the Transition: A Guide for Switching from Stata to R</title>
+<title>Making the Transition? A Guide for switching from Stata to R</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -132,15 +132,15 @@ gtag('config', 'G-HJEMN0LJY7', { 'anonymize_ip': true});
 <meta name="description" content="Welcome to the Hertie Coding Club! Our goal as a club is to help everyone and between us learn coding skills and show that coding is for everyone, no matter our background.">
 <!-- Open Graph / Facebook --><meta property="og:type" content="website">
 <meta property="og:url" content="https://www.hertiecodingclub.com">
-<meta property="og:title" content="Making the Transition: A Guide for Switching from Stata to R">
+<meta property="og:title" content="Making the Transition? A Guide for switching from Stata to R">
 <meta property="og:description" content="Welcome to the Hertie Coding Club! Our goal as a club is to help everyone and between us learn coding skills and show that coding is for everyone, no matter our background.">
-<!-- Primary Meta Tags --><title>Hertie Coding Club - Install R and Rstudio: why R rocks</title>
-<meta name="title" content="Hertie Coding Club - Install R and Rstudio: why R rocks">
-<meta name="description" content="Unlock the power of data analysis and statistical computing with R and RStudio! Whether you are a student of public policy or a seasoned professional.">
+<!-- Primary Meta Tags --><title>Hertie Coding Club - Making the Transition? A Guide for switching from Stata to R</title>
+<meta name="title" content="Hertie Coding Club - Making the Transition? A Guide for switching from Stata to R">
+<meta name="description" content="If you use Stata for your analysis, but you are courios or want to switch to the R world, this is your guide for it.">
 <!-- Open Graph / Facebook --><meta property="og:type" content="website">
-<meta property="og:url" content="https://www.hertiecodingclub.com/learn/rstudio/rstudio/rstudio/installrstudio">
-<meta property="og:title" content="Hertie Coding Club - Install R and Rstudio: why R rocks">
-<meta property="og:description" content="Unlock the power of data analysis and statistical computing with R and RStudio! Whether you are a student of public policy or a seasoned professional.">
+<meta property="og:url" content="https://www.hertiecodingclub.com/learn/rstudio/rstudio/rstudio/stata_to_r">
+<meta property="og:title" content="Hertie Coding Club - Making the Transition? A Guide for switching from Stata to R">
+<meta property="og:description" content="If you use Stata for your analysis, but you are courios or want to switch to the R world, this is your guide for it.">
 <style>:root{--animate-duration:3s;--animate-delay:2s;--animate-repeat:1}</style>
 <style>:root{--animate-duration:3s;--animate-delay:2s;--animate-repeat:1}</style>
 <style>:root{--animate-duration:3s;--animate-delay:2s;--animate-repeat:1}</style>
@@ -231,8 +231,8 @@ gtag('config', 'G-HJEMN0LJY7', { 'anonymize_ip': true});
       </div> <!-- /container-fluid -->
     </nav></header><!-- content --><header id="title-block-header" class="quarto-title-block default page-columns page-full"><div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title"><span class="animate__animated animate__fadeInDown animate__delay-.6s" style="display: inline-block;">Making the Transition: A Guide for Switching from Stata to R</span></h1>
-            <p class="subtitle lead"><span class="animate__animated animate__fadeInDown animate__delay-.6s" style="display: inline-block;">If you use Stata for your analysis, but you want to switch to the R world, this is your guide for it.</span></p>
+      <h1 class="title"><span class="animate__animated animate__fadeInDown animate__delay-.6s" style="display: inline-block;">Making the Transition? A Guide for switching from Stata to R</span></h1>
+            <p class="subtitle lead"><span class="animate__animated animate__fadeInDown animate__delay-.6s" style="display: inline-block;">If you use Stata for your analysis, but you are curious or want to switch to the R world, this is your guide for it.</span></p>
                                 <div class="quarto-categories">
                 <div class="quarto-category">R</div>
                 <div class="quarto-category">Stata</div>
@@ -289,6 +289,8 @@ gtag('config', 'G-HJEMN0LJY7', { 'anonymize_ip': true});
   <li><a href="#value-labels" id="toc-value-labels" class="nav-link" data-scroll-target="#value-labels">Value labels</a></li>
   <li><a href="#group-variables" id="toc-group-variables" class="nav-link" data-scroll-target="#group-variables">Group variables</a></li>
   <li><a href="#merge-two-datasets" id="toc-merge-two-datasets" class="nav-link" data-scroll-target="#merge-two-datasets">Merge two datasets</a></li>
+  <li><a href="#create-sequenceids" id="toc-create-sequenceids" class="nav-link" data-scroll-target="#create-sequenceids">Create sequence/ids</a></li>
+  <li><a href="#drop-variables" id="toc-drop-variables" class="nav-link" data-scroll-target="#drop-variables">Drop variables</a></li>
   </ul>
 </li>
   </ul></nav>
@@ -308,7 +310,8 @@ div.sourceCode {
 <hr>
 <p>Who doesn’t remember their first love? In my case, in the coding world, my first love was Stata. I clearly remember my first job as a research assistant to Laura Atuesta. Learning Stata implied an important learning curve since this language was used in my university for my classes, my work, and research. I did my bachelor’s thesis with Stata, and, being honest, I just have great memories using Stata because it was the first time that I’ve feel capable of doing multiple things. There my curiosity for data science and coding started. However, like any other Story love (that may be doesn’t end well), I met R. I would say with this language my interest and passion for coding exploded. Since then, I stopped using Stata and fall in love completely for R. Syntaxis, open-source building community and the approach that you can have with this language are just one of the multiple reasons why I decided to keep learning with R. It doesn’t matter what happens, Stata will be always in the bottom of my heart and my first love since it was the first coding language that I learned.</p>
 <p>Because of this and because I know that different people and scholars are using Stata and they are curious about what R offers, here is an essential guide of commands for doing some data wrangling, analysis, and running some models. Of course, I don’t cover plenty of things, but this is just to show the differences between using R and Stata. I’m sorry if I don’t use the new Stata approaches since I learned the version 11º or 12º and now the are in the 17º version, however, the commands still can be useful.</p>
-<p>&nbsp;</p>
+<p>&nbsp; &nbsp;</p>
+<p>We are going to work a lot with the <code>dplyr</code>package. You need to load the package just once when you open your environment.</p>
 <section id="working-directory" class="level1"><h1>Working directory</h1>
 <hr>
 <div class="columns">
@@ -773,10 +776,16 @@ div.sourceCode {
 <figure class="figure"><p><img src="images/stata.png" height="34" class="figure-img"></p>
 </figure>
 </div>
-<div class="sourceCode" id="cb25"><pre class="sourceCode stata code-with-copy"><code class="sourceCode stata"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="co">/* Value labels for the codes */</span></span>
-<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a><span class="kw">collapse</span> (<span class="kw">mean</span>) var1, <span class="kw">by</span>(var2, var3)</span>
-<span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb25-4"><a href="#cb25-4" aria-hidden="true" tabindex="-1"></a><span class="ot">list</span> var2 var3 var1</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb25"><pre class="sourceCode stata code-with-copy"><code class="sourceCode stata"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="co">/* Exact match on the key variable(s). */</span></span>
+<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a><span class="kw">use</span> dataset1.dta, <span class="kw">clear</span></span>
+<span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a><span class="kw">merge</span> 1:1 id <span class="kw">using</span> dataset2.dta</span>
+<span id="cb25-4"><a href="#cb25-4" aria-hidden="true" tabindex="-1"></a><span class="co">/* Each observation in the first dataset */</span></span>
+<span id="cb25-5"><a href="#cb25-5" aria-hidden="true" tabindex="-1"></a><span class="kw">merge</span> 1:<span class="fu">m</span> id <span class="kw">using</span> dataset2.dta</span>
+<span id="cb25-6"><a href="#cb25-6" aria-hidden="true" tabindex="-1"></a><span class="co">/* Each observation in the second dataset */</span></span>
+<span id="cb25-7"><a href="#cb25-7" aria-hidden="true" tabindex="-1"></a><span class="kw">merge</span> <span class="fu">m</span>:1 id <span class="kw">using</span> dataset2.dta</span>
+<span id="cb25-8"><a href="#cb25-8" aria-hidden="true" tabindex="-1"></a><span class="co">/* Each observation many-to-many merge */</span></span>
+<span id="cb25-9"><a href="#cb25-9" aria-hidden="true" tabindex="-1"></a><span class="kw">merge</span> <span class="fu">m</span>:1 id <span class="kw">using</span> dataset2.dta</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Remember that we need to have our data1 in the same path</p>
 </div><div class="column" style="width:10%;">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure"><p><img src="images/arrow.png" height="40" class="figure-img"></p>
@@ -791,11 +800,93 @@ div.sourceCode {
 <div class="sourceCode" id="cb26"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co">#Load dplyr package</span></span>
 <span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://dplyr.tidyverse.org">dplyr</a></span><span class="op">)</span></span>
 <span></span>
-<span><span class="co">#We group the data by variables 2 and 3, </span></span>
-<span><span class="co">#calculate the mean of variable 1</span></span>
-<span><span class="va">df_data_group</span> <span class="op">&lt;-</span> <span class="va">df_data</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
-<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/group_by.html">group_by</a></span><span class="op">(</span><span class="va">var2</span>, <span class="va">var3</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
-<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/summarise.html">summarise</a></span><span class="op">(</span>mean_var1 <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/mean.html">mean</a></span><span class="op">(</span><span class="va">var1</span><span class="op">)</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span><span class="co">#1:1 using inner join</span></span>
+<span><span class="va">df_merged_inner</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate-joins.html">inner_join</a></span><span class="op">(</span><span class="va">df_1</span>, <span class="va">df_1</span>, </span>
+<span>                              by <span class="op">=</span> <span class="st">"id1"</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co">#1:m using left join</span></span>
+<span><span class="va">df_merged_left</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate-joins.html">left_join</a></span><span class="op">(</span><span class="va">df_1</span>, <span class="va">df_1</span>, </span>
+<span>                            by <span class="op">=</span> <span class="st">"id1"</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co">#m:1 using right join</span></span>
+<span><span class="va">df_merged_right</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate-joins.html">right_join</a></span><span class="op">(</span><span class="va">df_1</span>, <span class="va">df_1</span>, </span>
+<span>                              by <span class="op">=</span> <span class="st">"id1"</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co">#m:m using full join</span></span>
+<span><span class="va">df_merged_full</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate-joins.html">full_join</a></span><span class="op">(</span><span class="va">df_1</span>, <span class="va">df_1</span>, </span>
+<span>                            by <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"id1"</span>, </span>
+<span>                                   <span class="st">"id2"</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="co">#You can merge with more tha one variable</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</div>
+</section><section id="create-sequenceids" class="level2"><h2 class="anchored" data-anchor-id="create-sequenceids">Create sequence/ids</h2>
+<div class="columns">
+<div class="column" style="width:45%;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="images/stata.png" height="34" class="figure-img"></p>
+</figure>
+</div>
+<div class="sourceCode" id="cb27"><pre class="sourceCode stata code-with-copy"><code class="sourceCode stata"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="co">/* Sequence of numbers from 1 to n */</span></span>
+<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a><span class="kw">gen</span> <span class="fu">seq</span> = <span class="dt">_n</span></span>
+<span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-4"><a href="#cb27-4" aria-hidden="true" tabindex="-1"></a><span class="co">/* Sequence with the total number of </span></span>
+<span id="cb27-5"><a href="#cb27-5" aria-hidden="true" tabindex="-1"></a><span class="co">observations */</span></span>
+<span id="cb27-6"><a href="#cb27-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-7"><a href="#cb27-7" aria-hidden="true" tabindex="-1"></a><span class="kw">gen</span> total_seq = _N</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div><div class="column" style="width:10%;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="images/arrow.png" height="40" class="figure-img"></p>
+</figure>
+</div>
+</div><div class="column" style="width:45%;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="images/studio.png" height="34" class="figure-img"></p>
+</figure>
+</div>
+<div class="cell">
+<div class="sourceCode" id="cb28"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">v_seq</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/seq.html">seq</a></span><span class="op">(</span>from <span class="op">=</span> <span class="fl">1</span>, to <span class="op">=</span> <span class="fl">10</span>, by <span class="op">=</span> <span class="fl">1</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co">#Load dplyr package</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://dplyr.tidyverse.org">dplyr</a></span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">df_final</span> <span class="op">&lt;-</span> <span class="va">df</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span>id <span class="op">=</span> <span class="fl">1</span><span class="op">:</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/context.html">n</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</div>
+</section><section id="drop-variables" class="level2"><h2 class="anchored" data-anchor-id="drop-variables">Drop variables</h2>
+<div class="columns">
+<div class="column" style="width:45%;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="images/stata.png" height="34" class="figure-img"></p>
+</figure>
+</div>
+<div class="sourceCode" id="cb29"><pre class="sourceCode stata code-with-copy"><code class="sourceCode stata"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="co">/* Drop variable */</span></span>
+<span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a><span class="kw">drop</span> var1 var2</span>
+<span id="cb29-3"><a href="#cb29-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-4"><a href="#cb29-4" aria-hidden="true" tabindex="-1"></a><span class="co">/* Drop all variable and keep */</span></span>
+<span id="cb29-5"><a href="#cb29-5" aria-hidden="true" tabindex="-1"></a><span class="kw">drop</span> <span class="dt">_all</span></span>
+<span id="cb29-6"><a href="#cb29-6" aria-hidden="true" tabindex="-1"></a><span class="kw">keep</span> var1 var2 var3</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div><div class="column" style="width:10%;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="images/arrow.png" height="40" class="figure-img"></p>
+</figure>
+</div>
+</div><div class="column" style="width:45%;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="images/studio.png" height="34" class="figure-img"></p>
+</figure>
+</div>
+<div class="cell">
+<div class="sourceCode" id="cb30"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co">#Load dplyr package</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://dplyr.tidyverse.org">dplyr</a></span><span class="op">)</span></span>
+<span></span>
+<span><span class="co">#Drop some variabls</span></span>
+<span><span class="va">df_new_data</span> <span class="op">&lt;-</span> <span class="va">df_old</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op">(</span><span class="op">-</span><span class="va">var1</span>, <span class="op">-</span><span class="va">var2</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co">#Keep specific variables</span></span>
+<span><span class="va">df_new_data</span> <span class="op">&lt;-</span> <span class="va">df_old</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op">(</span><span class="va">var1</span>, <span class="va">var2</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 </div>

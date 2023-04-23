@@ -23,6 +23,8 @@ about:
       url: "https://orcid.org/0000-0002-3972-9793"
     - text: "{{< fa solid envelopes-bulk >}} Mail"
       url: "mailto:jurjoo@gmail.com"
+    - text: "{{< fa solid film >}} Letterboxd"
+      url: "https://letterboxd.com/JorgeRoa/"
 comments: false
 ---
 

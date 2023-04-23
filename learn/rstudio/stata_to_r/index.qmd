@@ -1,6 +1,6 @@
 ---
-title: '{{< animate fadeInDown "Making the Transition: A Guide for Switching from Stata to R"delay=.6s >}}'
-subtitle: '{{< animate fadeInDown "If you use Stata for your analysis, but you want to switch to the R world, this is your guide for it."delay=.6s >}}'
+title: '{{< animate fadeInDown "Making the Transition? A Guide for switching from Stata to R"delay=.6s >}}'
+subtitle: '{{< animate fadeInDown "If you use Stata for your analysis, but you are curious or want to switch to the R world, this is your guide for it."delay=.6s >}}'
 author: ["Jorge Roa"]
 date: "04-23-2023"
 categories: ["R", "Stata", "Transition"]
@@ -31,6 +31,9 @@ Because of this and because I know that different people and scholars are using 
 
 
  
+ 
+
+We are going to work a lot with the `dplyr`package. You need to load the package just once when you open your environment.
 
 # Working directory
 
@@ -580,12 +583,18 @@ df_data_group <- df_data %>%
 ![](images/stata.png){fig-align="center" height="34"}
 
 ``` stata
-/* Value labels for the codes */
-collapse (mean) var1, by(var2, var3)
+/* Exact match on the key variable(s). */
+use dataset1.dta, clear
+merge 1:1 id using dataset2.dta
+/* Each observation in the first dataset */
+merge 1:m id using dataset2.dta
+/* Each observation in the second dataset */
+merge m:1 id using dataset2.dta
+/* Each observation many-to-many merge */
+merge m:1 id using dataset2.dta
 
-list var2 var3 var1
 ```
-
+Remember that we need to have our data1 in the same path
 :::
 
 ::: {.column width="10%"}
@@ -599,14 +608,110 @@ list var2 var3 var1
 #Load dplyr package
 library(dplyr)
 
-#We group the data by variables 2 and 3, 
-#calculate the mean of variable 1
-df_data_group <- df_data %>%
-  group_by(var2, var3) %>%
-  summarise(mean_var1 = mean(var1))
+#1:1 using inner join
+df_merged_inner <- inner_join(df_1, df_1, 
+                              by = "id1")
+
+#1:m using left join
+df_merged_left <- left_join(df_1, df_1, 
+                            by = "id1")
+
+#m:1 using right join
+df_merged_right <- right_join(df_1, df_1, 
+                              by = "id1")
+
+#m:m using full join
+df_merged_full <- full_join(df_1, df_1, 
+                            by = c("id1", 
+                                   "id2"))
+#You can merge with more tha one variable
+
+```
+
+:::
+:::
+
+
+## Create sequence/ids
+
+
+::: columns
+::: {.column width="45%"}
+![](images/stata.png){fig-align="center" height="34"}
+
+``` stata
+/* Sequence of numbers from 1 to n */
+gen seq = _n
+
+/* Sequence with the total number of 
+observations */
+
+gen total_seq = _N
+
+```
+:::
+
+
+::: {.column width="10%"}
+![](images/arrow.png){fig-align="center" height="40"}
+:::
+
+::: {.column width="45%"}
+![](images/studio.png){fig-align="center" height="34"}
+```{r, eval=FALSE}
+
+v_seq <- seq(from = 1, to = 10, by = 1)
+
+#Load dplyr package
+library(dplyr)
+
+df_final <- df %>%
+  mutate(id = 1:n())
+
+```
+
+:::
+:::
+
+
+## Drop variables
+
+
+::: columns
+::: {.column width="45%"}
+![](images/stata.png){fig-align="center" height="34"}
+
+``` stata
+/* Drop variable */
+drop var1 var2
+
+/* Drop all variable and keep */
+drop _all
+keep var1 var2 var3
+
+```
+:::
+
+::: {.column width="10%"}
+![](images/arrow.png){fig-align="center" height="40"}
+:::
+
+::: {.column width="45%"}
+![](images/studio.png){fig-align="center" height="34"}
+```{r, eval=FALSE}
+
+#Load dplyr package
+library(dplyr)
+
+#Drop some variabls
+df_new_data <- df_old %>% select(-var1, -var2)
+
+#Keep specific variables
+df_new_data <- df_old %>% select(var1, var2)
 
 
 ```
 
 :::
 :::
+
