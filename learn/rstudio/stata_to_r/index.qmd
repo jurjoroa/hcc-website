@@ -1,0 +1,612 @@
+---
+title: '{{< animate fadeInDown "Making the Transition: A Guide for Switching from Stata to R"delay=.6s >}}'
+subtitle: '{{< animate fadeInDown "If you use Stata for your analysis, but you want to switch to the R world, this is your guide for it."delay=.6s >}}'
+author: ["Jorge Roa"]
+date: "04-23-2023"
+categories: ["R", "Stata", "Transition"]
+toc: true
+draft: false
+code-link: true
+title-block-banner: true
+image: images/rstudio_stata.png
+include-in-header: meta.html
+---
+
+<style>
+
+div.sourceCode {
+  font-size: .7em;
+}
+
+</style>
+
+
+![](images/rstudio_stata.png){fig-align="center"}
+
+------------------------------------------------------------------------
+
+Who doesn't remember their first love? In my case, in the coding world, my first love was Stata. I clearly remember my first job as a research assistant to Laura Atuesta. Learning Stata implied an important learning curve since this language was used in my university for my classes, my work, and research. I did my bachelor's thesis with Stata, and, being honest, I just have great memories using Stata because it was the first time that I've feel capable of doing multiple things. There my curiosity for data science and coding started. However, like any other Story love (that may be doesn't end well), I met R. I would say with this language my interest and passion for coding exploded. Since then, I stopped using Stata and fall in love completely for R. Syntaxis, open-source building community and the approach that you can have with this language are just one of the multiple reasons why I decided to keep learning with R. It doesn't matter what happens, Stata will be always in the bottom of my heart and my first love since it was the first coding language that I learned.
+
+Because of this and because I know that different people and scholars are using Stata and they are curious about what R offers, here is an essential guide of commands for doing some data wrangling, analysis, and running some models. Of course, I don't cover plenty of things, but this is just to show the differences between using R and Stata. I'm sorry if I don't use the new Stata approaches since I learned the version 11º or 12º and now the are in the 17º version, however, the commands still can be useful. 
+
+
+ 
+
+# Working directory
+
+------------------------------------------------------------------------
+
+::: columns
+::: {.column width="45%"}
+![](images/stata.png){fig-align="center" height="34"}
+
+``` stata
+/*Working directory path*/
+pwd 
+
+/*Changes the working directory path*/
+cd c:\myfolder\data 
+
+```
+:::
+
+::: {.column width="10%"}
+![](images/arrow.png){fig-align="center" height="40"}
+:::
+
+::: {.column width="45%"}
+![](images/studio.png){fig-align="center" height="34"}
+```{r, eval=FALSE}
+#Working directory path
+getwd()
+
+#Changes the working directory path
+setwd("my_path") 
+
+```
+:::
+:::
+
+
+ 
+
+# Packages
+
+------------------------------------------------------------------------
+
+::: columns
+::: {.column width="45%"}
+![](images/stata.png){fig-align="center" height="34"}
+
+``` stata
+/*Install package*/
+ssc install abc
+
+
+
+```
+Once is installed, we don't need to "load it"
+
+:::
+
+::: {.column width="10%"}
+![](images/arrow.png){fig-align="center" height="40"}
+:::
+
+::: {.column width="45%"}
+![](images/studio.png){fig-align="center" height="34"}
+```{r, eval=FALSE}
+#Working directory path
+install.packages("tidyverse")
+
+#Load library
+library(tidyverse)
+
+```
+:::
+:::
+
+ 
+
+
+# Help
+
+------------------------------------------------------------------------
+
+::: columns
+::: {.column width="45%"}
+![](images/stata.png){fig-align="center" height="34"}
+
+``` stata
+/*Get help with the command regression*/
+help regress
+
+
+```
+
+:::
+
+::: {.column width="10%"}
+![](images/arrow.png){fig-align="center" height="40"}
+:::
+
+::: {.column width="45%"}
+![](images/studio.png){fig-align="center" height="34"}
+```{r, eval=FALSE}
+#Help with mutate function from dplyr package
+?mutate()
+
+```
+:::
+:::
+
+
+ 
+
+
+# Load Data
+
+------------------------------------------------------------------------
+
+ 
+
+## CSV Files
+
+::: columns
+::: {.column width="45%"}
+![](images/stata.png){fig-align="center" height="34"}
+
+``` stata
+/*Import csv file*/
+import delimited "my_data.csv", clear
+
+
+
+```
+
+:::
+
+::: {.column width="10%"}
+![](images/arrow.png){fig-align="center" height="40"}
+:::
+
+::: {.column width="45%"}
+![](images/studio.png){fig-align="center" height="34"}
+```{r, eval=FALSE}
+
+library(readr)
+
+#Use read_csv2
+df_data <- read_csv2("data.csv")
+
+#Using read.table function with comma separator
+df_data <- read.table("my_data.csv", 
+                      sep = ",", 
+                      header = TRUE)
+
+
+```
+:::
+:::
+
+ 
+
+## Excel Files
+
+::: columns
+::: {.column width="45%"}
+![](images/stata.png){fig-align="center" height="34"}
+
+``` stata
+/*Import excel file*/
+import excel "df_data.xlsx", 
+sheet("Sheet1") firstrow clear
+
+```
+
+:::
+
+::: {.column width="10%"}
+![](images/arrow.png){fig-align="center" height="40"}
+:::
+
+::: {.column width="45%"}
+![](images/studio.png){fig-align="center" height="34"}
+```{r, eval=FALSE}
+
+#With readxl package
+library(readxl)
+df_data <- read_excel("my_data.xlsx", 
+                      sheet = "Sheet1")
+
+#With openxlsx package
+library(openxlsx)
+df_data <- read.xlsx("my_data.xlsx", 
+                     sheet = "Sheet1")
+
+
+
+```
+:::
+:::
+
+ 
+
+## Stata Files (.dta)
+
+::: columns
+::: {.column width="45%"}
+![](images/stata.png){fig-align="center" height="34"}
+
+``` stata
+/*Import excel file*/
+use "df_data.dta", clear
+
+```
+
+:::
+
+::: {.column width="10%"}
+![](images/arrow.png){fig-align="center" height="40"}
+:::
+
+::: {.column width="45%"}
+![](images/studio.png){fig-align="center" height="34"}
+```{r, eval=FALSE}
+
+#Load the package
+library(haven)            
+
+df_data <- read_dta("df_data.dta")
+
+```
+:::
+:::
+
+
+ 
+
+
+# Explore Data
+
+------------------------------------------------------------------------
+
+Remember the difference between R and Stata. While in R you need to specify which object (or data) you want to work with, in Stata, the variables are loaded, so it's easier to work with them. 
+
+
+
+
+::: columns
+::: {.column width="45%"}
+![](images/stata.png){fig-align="center" height="34"}
+
+``` stata
+/* Provides the structure of the dataset */
+describe
+
+/*Basic descriptive statistics */
+summarize variable1 variable2
+
+/*Lists the variables in the dataset */
+ds
+
+/* First 10 observations */
+list in 1/10 
+
+/* Last 10 observations */
+list in -1/10
+
+/* Show first 10 observations of the */
+/*  first three variables of our data */
+list var1-var3 in 1/10
+
+
+
+
+
+
+/*View data */
+browse 
+
+```
+
+:::
+
+::: {.column width="10%"}
+![](images/arrow.png){fig-align="center" height="40"}
+:::
+
+::: {.column width="45%"}
+![](images/studio.png){fig-align="center" height="34"}
+```{r, eval=FALSE}
+
+#Provides the structure of our data 
+str(df_data)
+
+#Basic descriptive statistics
+summary(df_data)
+
+#Lists the variables of our data 
+names(df_data)
+
+#Show first 10 observations of our data 
+head(df_data, n = 10)
+
+#Show last 10 observations of our data 
+tail(df_data, n = 10)
+
+#Show first 10 observations of the 
+# first three variables of our data 
+df_data[1:10, 1:3]
+
+# With dplyr, this would be other option
+library(dplyr)
+df_data %>% slice(1:10) %>% select(1:3)
+
+#View data
+View(df_data) 
+
+```
+:::
+:::
+
+
+ 
+
+## Missing Data
+
+
+::: columns
+::: {.column width="45%"}
+![](images/stata.png){fig-align="center" height="34"}
+
+``` stata
+/* Provides the structure of the dataset */
+missing variable1 variable2 variable3
+
+
+```
+
+:::
+
+::: {.column width="10%"}
+![](images/arrow.png){fig-align="center" height="40"}
+:::
+
+::: {.column width="45%"}
+![](images/studio.png){fig-align="center" height="34"}
+```{r, eval=FALSE}
+#Check missing data for our entire database
+is.na(df_data)
+
+#Check missing data for our entire database
+is.na(df_data$variable1)
+
+```
+:::
+:::
+
+
+ 
+
+## Rename variables
+
+
+::: columns
+::: {.column width="45%"}
+![](images/stata.png){fig-align="center" height="34"}
+
+``` stata
+/* How to rename */
+rename oldname newname
+
+rename lastname lastname2
+rename firstname firstname2
+rename studentstatus studentstatus2
+rename averagescoregrade avgscore
+
+
+```
+
+:::
+
+::: {.column width="10%"}
+![](images/arrow.png){fig-align="center" height="40"}
+:::
+
+::: {.column width="45%"}
+![](images/studio.png){fig-align="center" height="34"}
+```{r, eval=FALSE}
+#Rename the variables of our data
+names(df_data) <- c("newvar1", "newvar2")
+
+#With the dplyr package
+
+library(dplyr)
+df_data_final <- rename(df_data, 
+                        newvar1 = var1, 
+                        newvar2 = var2)
+```
+:::
+:::
+
+
+ 
+
+## Label variables
+
+
+::: columns
+::: {.column width="45%"}
+![](images/stata.png){fig-align="center" height="34"}
+
+``` stata
+label variable w "Weight"
+label variable y "Output"
+label variable x1 "Predictor 1"
+label variable x2 "Predictor 2"
+label variable age "Age"
+label variable sex "Gender"
+
+```
+
+:::
+
+::: {.column width="10%"}
+![](images/arrow.png){fig-align="center" height="40"}
+:::
+
+::: {.column width="45%"}
+![](images/studio.png){fig-align="center" height="34"}
+```{r, eval=FALSE}
+#Load labelled package
+library(labelled)
+
+#Define the value labels for the codes
+labels <- c("Option 1", "Option 2", 
+            "Option 3", "Option 4", 
+            "Option 5")
+df_data$code <- labelled(df_data$code, 
+                         labels = labels)
+
+```
+:::
+:::
+
+ 
+
+## Value labels
+
+
+::: columns
+::: {.column width="45%"}
+![](images/stata.png){fig-align="center" height="34"}
+
+``` stata
+/* Value labels for the codes */
+label define label1 1 "Option 1" 
+2 "Option 2" 3 "Option 3" 4 "Option 4" 
+5 "Option 5"
+
+/* Assign the value labels to the codes */
+label values code label1
+
+```
+
+:::
+
+::: {.column width="10%"}
+![](images/arrow.png){fig-align="center" height="40"}
+:::
+
+::: {.column width="45%"}
+![](images/studio.png){fig-align="center" height="34"}
+```{r, eval=FALSE}
+#Load labelled package
+library(labelled)
+
+#Define the value labels for the codes
+labels <- c("Option 1", "Option 2", 
+            "Option 3", "Option 4", 
+            "Option 5")
+df_data$code <- labelled(df_data$code, 
+                         labels = labels)
+
+
+#Define the value labels for the codes
+labels <- c("Option 1", "Option 2", 
+            "Option 3", "Option 4", 
+            "Option 5")
+df_data$code <- factor(df_data$code, 
+                       levels = 1:5, 
+                       labels = labels)
+
+
+```
+
+In this approach, you can assign values to numeric or character variables
+:::
+:::
+
+
+ 
+
+## Group variables
+
+
+::: columns
+::: {.column width="45%"}
+![](images/stata.png){fig-align="center" height="34"}
+
+``` stata
+/* Value labels for the codes */
+collapse (mean) var1, by(var2, var3)
+
+list var2 var3 var1
+```
+
+:::
+
+::: {.column width="10%"}
+![](images/arrow.png){fig-align="center" height="40"}
+:::
+
+::: {.column width="45%"}
+![](images/studio.png){fig-align="center" height="34"}
+```{r, eval=FALSE}
+
+#Load dplyr package
+library(dplyr)
+
+#We group the data by variables 2 and 3, 
+#calculate the mean of variable 1
+df_data_group <- df_data %>%
+  group_by(var2, var3) %>%
+  summarise(mean_var1 = mean(var1))
+
+
+```
+
+:::
+:::
+
+ 
+
+## Merge two datasets
+
+
+::: columns
+::: {.column width="45%"}
+![](images/stata.png){fig-align="center" height="34"}
+
+``` stata
+/* Value labels for the codes */
+collapse (mean) var1, by(var2, var3)
+
+list var2 var3 var1
+```
+
+:::
+
+::: {.column width="10%"}
+![](images/arrow.png){fig-align="center" height="40"}
+:::
+
+::: {.column width="45%"}
+![](images/studio.png){fig-align="center" height="34"}
+```{r, eval=FALSE}
+
+#Load dplyr package
+library(dplyr)
+
+#We group the data by variables 2 and 3, 
+#calculate the mean of variable 1
+df_data_group <- df_data %>%
+  group_by(var2, var3) %>%
+  summarise(mean_var1 = mean(var1))
+
+
+```
+
+:::
+:::

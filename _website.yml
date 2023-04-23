@@ -8,8 +8,8 @@ website:
       - text: "{{< fa regular copyright >}} {{< fa solid circle-user >}} 2023 HCC | J.Roa"
         href: https://creativecommons.org/licenses/by/2.0/
     center: 
-      - text: "{{< fa solid rocket size=lg >}} Quarto engine"
-        href: https://quarto.org
+      - text: "{{< fa brands phoenix-framework size=lg >}} Quarto engine"
+        href: https://quarto.org 
     right:
       - text: "{{< fa solid square-envelope size=lg >}}"
         href: mailto:hertiecodingclub@gmail.com
@@ -56,9 +56,8 @@ website:
       - icon: fingerprint  
         href: register/register.qmd
         text: "Register"
-      - icon: info-square-fill
+      - text: "{{< fa solid laptop-code >}} About us"
         href: about_us/index.qmd
-        text: "About us"
      
 comments:
   giscus:

@@ -12,6 +12,7 @@
   {
     "listing": "/learn/rstudio.html",
     "items": [
+      "/learn/rstudio/stata_to_r/index.html",
       "/learn/rstudio/social_media_scraping/index.html",
       "/learn/rstudio/objects/index.html",
       "/learn/rstudio/rstudio101/index.html",
@@ -22,6 +23,7 @@
   {
     "listing": "/index.html",
     "items": [
+      "/learn/rstudio/stata_to_r/index.html",
       "/learn/rstudio/social_media_scraping/index.html",
       "/learn/rstudio/objects/index.html",
       "/learn/rstudio/rstudio101/index.html",

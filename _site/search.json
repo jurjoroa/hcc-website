@@ -389,7 +389,7 @@
     "href": "learn/rstudio.html",
     "title": "Learn R",
     "section": "",
-    "text": "Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n  \n\n\n\n\n\nLearn the basic tools for scraping Twitter Data in R\n\n\n\n\nTwitter\n\n\nWebscraping\n\n\nText\n\n\n \n\n\n\n\nApr 18, 2023\n\n\nLukas Lehmann\n\n\n11 min\n\n\n\n\n\n\n  \n\n\n\n\n\nThis is why R is so powerful: all kind of objects and possibilites. Naming objects, understand structures is crucial to learn\n\n\n\n\nRstudio\n\n\nObjects\n\n\n \n\n\n\n\nApr 16, 2023\n\n\nJorge Roa\n\n\n17 min\n\n\n\n\n\n\n  \n\n\n\n\n\nLearn the basics of R: open a project, setting a working directory and navigate RStudio interface\n\n\n\n\nRstudio\n\n\nInterface\n\n\n \n\n\n\n\nApr 12, 2023\n\n\nJorge Roa\n\n\n8 min\n\n\n\n\n\n\n  \n\n\n\n\n\nUnlock the power of data analysis and statistical computing with R and RStudio! Whether you are a student of public policy or a seasoned professional.\n\n\n\n\nR\n\n\nRStudio\n\n\nAccesibility\n\n\nInstall\n\n\n \n\n\n\n\nMar 2, 2023\n\n\nJorge Roa\n\n\n2 min\n\n\n\n\n\n\n  \n\n\n\n\n\nMultithreading offers faster and more efficient data processing, allowing for quicker analysis of complex datasets.\n\n\n\n\nMultithread\n\n\nData table\n\n\n \n\n\n\n\nJul 28, 2022\n\n\nJorge Roa, Fernando Alarid-Escudero\n\n\n3 min\n\n\n\n\n\n\nNo matching items"
+    "text": "Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n  \n\n\n\n\n\nIf you use Stata for your analysis, but you want to switch to the R world, this is your guide for it.\n\n\n\n\nR\n\n\nStata\n\n\nTransition\n\n\n \n\n\n\n\nApr 23, 2023\n\n\nJorge Roa\n\n\n6 min\n\n\n\n\n\n\n  \n\n\n\n\n\nLearn the basic tools for scraping Twitter Data in R\n\n\n\n\nTwitter\n\n\nWebscraping\n\n\nText\n\n\n \n\n\n\n\nApr 18, 2023\n\n\nLukas Lehmann\n\n\n11 min\n\n\n\n\n\n\n  \n\n\n\n\n\nThis is why R is so powerful: all kind of objects and possibilites. Naming objects, understand structures is crucial to learn\n\n\n\n\nRstudio\n\n\nObjects\n\n\n \n\n\n\n\nApr 16, 2023\n\n\nJorge Roa\n\n\n17 min\n\n\n\n\n\n\n  \n\n\n\n\n\nLearn the basics of R: open a project, setting a working directory and navigate RStudio interface\n\n\n\n\nRstudio\n\n\nInterface\n\n\n \n\n\n\n\nApr 12, 2023\n\n\nJorge Roa\n\n\n8 min\n\n\n\n\n\n\n  \n\n\n\n\n\nUnlock the power of data analysis and statistical computing with R and RStudio! Whether you are a student of public policy or a seasoned professional.\n\n\n\n\nR\n\n\nRStudio\n\n\nAccesibility\n\n\nInstall\n\n\n \n\n\n\n\nMar 2, 2023\n\n\nJorge Roa\n\n\n2 min\n\n\n\n\n\n\n  \n\n\n\n\n\nMultithreading offers faster and more efficient data processing, allowing for quicker analysis of complex datasets.\n\n\n\n\nMultithread\n\n\nData table\n\n\n \n\n\n\n\nJul 28, 2022\n\n\nJorge Roa, Fernando Alarid-Escudero\n\n\n3 min\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "members/statute/statute.html#section-1-eligibility",
@@ -712,5 +712,75 @@
     "title": "CISCO Networking Academy",
     "section": "",
     "text": "This is a course offered by the CISCO Networking Academy. What I really like is that at the end it offers a proof of completion. This certification in combination with other tools it’s a good way to start with Python. Here I leave the summary of the CISCO website and the link as well.\n\n“How great would it be to write your own computer program? Python is a multi-paradigm programming language used by startups and tech giants like Google, Facebook, Netflix, and more. With intuitive, readable syntax, Python is a great first programming language to learn.\nProgramming skills open you up to careers in almost any industry and are required if you want to continue to more advanced and higher paying software development and engineering roles.\nThis course is a great place to start learning Python – no prior programming knowledge required. Completing the course earns you a Statement of Achievement. It is split into two parts preparing you for two certifications:\nPart 1 (PE1: 35 hours) prepares you for PCEP – Certified Entry-Level Python Programmer Certification. Part 2 (PE2: 40 hours) prepares you for PCAP – Certified Associate in Python Programming Certification.”\nYou’ll learn these core skills:\n\nThink algorithmically – how to analyze a problem and translate it for a computer to process.\nDesign, develop, and improve multi-module computer programs.\nAnalyze and model real-life problems in Object-Oriented Programming categories.\nUnderstand a programmer’s work in the software development process.\nLearn how a program is executed in a computer environment.\nGain skills to create and develop your own programming portfolio.\n\n\nCISCO Networking Academy\n\n\n\n\nGo to CISCO PCAP"
+  },
+  {
+    "objectID": "learn/rstudio/stata_to_r/index.html",
+    "href": "learn/rstudio/stata_to_r/index.html",
+    "title": "Making the Transition: A Guide for Switching from Stata to R",
+    "section": "",
+    "text": "Who doesn’t remember their first love? In my case, in the coding world, my first love was Stata. I clearly remember my first job as a research assistant to Laura Atuesta. Learning Stata implied an important learning curve since this language was used in my university for my classes, my work, and research. I did my bachelor’s thesis with Stata, and, being honest, I just have great memories using Stata because it was the first time that I’ve feel capable of doing multiple things. There my curiosity for data science and coding started. However, like any other Story love (that may be doesn’t end well), I met R. I would say with this language my interest and passion for coding exploded. Since then, I stopped using Stata and fall in love completely for R. Syntaxis, open-source building community and the approach that you can have with this language are just one of the multiple reasons why I decided to keep learning with R. It doesn’t matter what happens, Stata will be always in the bottom of my heart and my first love since it was the first coding language that I learned.\nBecause of this and because I know that different people and scholars are using Stata and they are curious about what R offers, here is an essential guide of commands for doing some data wrangling, analysis, and running some models. Of course, I don’t cover plenty of things, but this is just to show the differences between using R and Stata. I’m sorry if I don’t use the new Stata approaches since I learned the version 11º or 12º and now the are in the 17º version, however, the commands still can be useful."
+  },
+  {
+    "objectID": "learn/rstudio/stata_to_r/index.html#csv-files",
+    "href": "learn/rstudio/stata_to_r/index.html#csv-files",
+    "title": "Making the Transition: A Guide for Switching from Stata to R",
+    "section": "CSV Files",
+    "text": "CSV Files\n\n\n\n\n\n\n/*Import csv file*/\nimport delimited \"my_data.csv\", clear\n\n\n\n\n\n\n\n\n\n\n\n\n\nlibrary(readr)\n\n#Use read_csv2\ndf_data <- read_csv2(\"data.csv\")\n\n#Using read.table function with comma separator\ndf_data <- read.table(\"my_data.csv\", \n                      sep = \",\", \n                      header = TRUE)"
+  },
+  {
+    "objectID": "learn/rstudio/stata_to_r/index.html#excel-files",
+    "href": "learn/rstudio/stata_to_r/index.html#excel-files",
+    "title": "Making the Transition: A Guide for Switching from Stata to R",
+    "section": "Excel Files",
+    "text": "Excel Files\n\n\n\n\n\n\n/*Import excel file*/\nimport excel \"df_data.xlsx\", \nsheet(\"Sheet1\") firstrow clear\n\n\n\n\n\n\n\n\n\n\n\n#With readxl package\nlibrary(readxl)\ndf_data <- read_excel(\"my_data.xlsx\", \n                      sheet = \"Sheet1\")\n\n#With openxlsx package\nlibrary(openxlsx)\ndf_data <- read.xlsx(\"my_data.xlsx\", \n                     sheet = \"Sheet1\")"
+  },
+  {
+    "objectID": "learn/rstudio/stata_to_r/index.html#stata-files-.dta",
+    "href": "learn/rstudio/stata_to_r/index.html#stata-files-.dta",
+    "title": "Making the Transition: A Guide for Switching from Stata to R",
+    "section": "Stata Files (.dta)",
+    "text": "Stata Files (.dta)\n\n\n\n\n\n\n/*Import excel file*/\nuse \"df_data.dta\", clear\n\n\n\n\n\n\n\n\n\n\n\n#Load the package\nlibrary(haven)            \n\ndf_data <- read_dta(\"df_data.dta\")"
+  },
+  {
+    "objectID": "learn/rstudio/stata_to_r/index.html#missing-data",
+    "href": "learn/rstudio/stata_to_r/index.html#missing-data",
+    "title": "Making the Transition: A Guide for Switching from Stata to R",
+    "section": "Missing Data",
+    "text": "Missing Data\n\n\n\n\n\n\n/* Provides the structure of the dataset */\nmissing variable1 variable2 variable3\n\n\n\n\n\n\n\n\n\n\n\n\n#Check missing data for our entire database\nis.na(df_data)\n\n#Check missing data for our entire database\nis.na(df_data$variable1)"
+  },
+  {
+    "objectID": "learn/rstudio/stata_to_r/index.html#rename-variables",
+    "href": "learn/rstudio/stata_to_r/index.html#rename-variables",
+    "title": "Making the Transition: A Guide for Switching from Stata to R",
+    "section": "Rename variables",
+    "text": "Rename variables\n\n\n\n\n\n\n/* How to rename */\nrename oldname newname\n\nrename lastname lastname2\nrename firstname firstname2\nrename studentstatus studentstatus2\nrename averagescoregrade avgscore\n\n\n\n\n\n\n\n\n\n\n\n\n#Rename the variables of our data\nnames(df_data) <- c(\"newvar1\", \"newvar2\")\n\n#With the dplyr package\n\nlibrary(dplyr)\ndf_data_final <- rename(df_data, \n                        newvar1 = var1, \n                        newvar2 = var2)"
+  },
+  {
+    "objectID": "learn/rstudio/stata_to_r/index.html#label-variables",
+    "href": "learn/rstudio/stata_to_r/index.html#label-variables",
+    "title": "Making the Transition: A Guide for Switching from Stata to R",
+    "section": "Label variables",
+    "text": "Label variables\n\n\n\n\n\n\nlabel variable w \"Weight\"\nlabel variable y \"Output\"\nlabel variable x1 \"Predictor 1\"\nlabel variable x2 \"Predictor 2\"\nlabel variable age \"Age\"\nlabel variable sex \"Gender\"\n\n\n\n\n\n\n\n\n\n\n\n#Load labelled package\nlibrary(labelled)\n\n#Define the value labels for the codes\nlabels <- c(\"Option 1\", \"Option 2\", \n            \"Option 3\", \"Option 4\", \n            \"Option 5\")\ndf_data$code <- labelled(df_data$code, \n                         labels = labels)"
+  },
+  {
+    "objectID": "learn/rstudio/stata_to_r/index.html#value-labels",
+    "href": "learn/rstudio/stata_to_r/index.html#value-labels",
+    "title": "Making the Transition: A Guide for Switching from Stata to R",
+    "section": "Value labels",
+    "text": "Value labels\n\n\n\n\n\n\n/* Value labels for the codes */\nlabel define label1 1 \"Option 1\" \n2 \"Option 2\" 3 \"Option 3\" 4 \"Option 4\" \n5 \"Option 5\"\n\n/* Assign the value labels to the codes */\nlabel values code label1\n\n\n\n\n\n\n\n\n\n\n\n#Load labelled package\nlibrary(labelled)\n\n#Define the value labels for the codes\nlabels <- c(\"Option 1\", \"Option 2\", \n            \"Option 3\", \"Option 4\", \n            \"Option 5\")\ndf_data$code <- labelled(df_data$code, \n                         labels = labels)\n\n\n#Define the value labels for the codes\nlabels <- c(\"Option 1\", \"Option 2\", \n            \"Option 3\", \"Option 4\", \n            \"Option 5\")\ndf_data$code <- factor(df_data$code, \n                       levels = 1:5, \n                       labels = labels)\n\nIn this approach, you can assign values to numeric or character variables"
+  },
+  {
+    "objectID": "learn/rstudio/stata_to_r/index.html#group-variables",
+    "href": "learn/rstudio/stata_to_r/index.html#group-variables",
+    "title": "Making the Transition: A Guide for Switching from Stata to R",
+    "section": "Group variables",
+    "text": "Group variables\n\n\n\n\n\n\n/* Value labels for the codes */\ncollapse (mean) var1, by(var2, var3)\n\nlist var2 var3 var1\n\n\n\n\n\n\n\n\n\n\n\n#Load dplyr package\nlibrary(dplyr)\n\n#We group the data by variables 2 and 3, \n#calculate the mean of variable 1\ndf_data_group <- df_data %>%\n  group_by(var2, var3) %>%\n  summarise(mean_var1 = mean(var1))"
+  },
+  {
+    "objectID": "learn/rstudio/stata_to_r/index.html#merge-two-datasets",
+    "href": "learn/rstudio/stata_to_r/index.html#merge-two-datasets",
+    "title": "Making the Transition: A Guide for Switching from Stata to R",
+    "section": "Merge two datasets",
+    "text": "Merge two datasets\n\n\n\n\n\n\n/* Value labels for the codes */\ncollapse (mean) var1, by(var2, var3)\n\nlist var2 var3 var1\n\n\n\n\n\n\n\n\n\n\n\n#Load dplyr package\nlibrary(dplyr)\n\n#We group the data by variables 2 and 3, \n#calculate the mean of variable 1\ndf_data_group <- df_data %>%\n  group_by(var2, var3) %>%\n  summarise(mean_var1 = mean(var1))"
   }
 ]
