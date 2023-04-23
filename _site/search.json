@@ -448,6 +448,69 @@
     "text": "Merge two datasets\n\n\n\n\n\n\n/* Exact match on the key variable(s). */\nuse dataset1.dta, clear\nmerge 1:1 id using dataset2.dta\n/* Each observation in the first dataset */\nmerge 1:m id using dataset2.dta\n/* Each observation in the second dataset */\nmerge m:1 id using dataset2.dta\n/* Each observation many-to-many merge */\nmerge m:1 id using dataset2.dta\nRemember that we need to have our data1 in the same path\n\n\n\n\n\n\n\n\n\n\n\n#Load dplyr package\nlibrary(dplyr)\n\n#1:1 using inner join\ndf_merged_inner <- inner_join(df_1, df_1, \n                              by = \"id1\")\n\n#1:m using left join\ndf_merged_left <- left_join(df_1, df_1, \n                            by = \"id1\")\n\n#m:1 using right join\ndf_merged_right <- right_join(df_1, df_1, \n                              by = \"id1\")\n\n#m:m using full join\ndf_merged_full <- full_join(df_1, df_1, \n                            by = c(\"id1\", \n                                   \"id2\"))\n#You can merge with more tha one variable"
   },
   {
+    "objectID": "learn/rstudio/stata_to_r/index.html#create-sequenceids",
+    "href": "learn/rstudio/stata_to_r/index.html#create-sequenceids",
+    "title": "Making the Transition? A Guide for switching from Stata to R",
+    "section": "Create sequence/ids",
+    "text": "Create sequence/ids\n\n\n\n\n\n\n/* Sequence of numbers from 1 to n */\ngen seq = _n\n\n/* Sequence with the total number of \nobservations */\n\ngen total_seq = _N\n\n\n\n\n\n\n\n\n\n\n\nv_seq <- seq(from = 1, to = 10, by = 1)\n\n#Load dplyr package\nlibrary(dplyr)\n\ndf_final <- df %>%\n  mutate(id = 1:n())"
+  },
+  {
+    "objectID": "learn/rstudio/stata_to_r/index.html#drop-variables",
+    "href": "learn/rstudio/stata_to_r/index.html#drop-variables",
+    "title": "Making the Transition? A Guide for switching from Stata to R",
+    "section": "Drop variables",
+    "text": "Drop variables\n\n\n\n\n\n\n/* Drop variable */\ndrop var1 var2\n\n/* Drop all variable and keep */\ndrop _all\nkeep var1 var2 var3\n\n\n\n\n\n\n\n\n\n\n\n#Load dplyr package\nlibrary(dplyr)\n\n#Drop some variables\ndf_new_data <- df_old %>% select(-var1, -var2)\n\n#Keep specific variables\ndf_new_data <- df_old %>% select(var1, var2)"
+  },
+  {
+    "objectID": "learn/rstudio/stata_to_r/index.html#summary",
+    "href": "learn/rstudio/stata_to_r/index.html#summary",
+    "title": "Making the Transition? A Guide for switching from Stata to R",
+    "section": "Summary",
+    "text": "Summary\n\n\n\n\n\n\n/* Summary of variables of interest*/\nsummarize var1 var2 var3\n\n\n\n\n\n\n\n\n\n\n\n\n#Summary for entire data\nsummary(dataset)\n\n#Summary for a variable\nsummary(dataset$variable)"
+  },
+  {
+    "objectID": "learn/rstudio/stata_to_r/index.html#linear-model",
+    "href": "learn/rstudio/stata_to_r/index.html#linear-model",
+    "title": "Making the Transition? A Guide for switching from Stata to R",
+    "section": "Linear Model",
+    "text": "Linear Model\n\n\n\n\n\n\n/* Fit a linear model */\nregress mpg weight length foreign\n\n/* Print summary */\nestimates table\n\n\n\n\n\n\n\n\n\n\n\n#Fit a linear model\nmodel_lm <- lm(mpg ~ wt + qsec + vs, \n               data = df_my_data)\n\n#Print summary\nsummary(model_lm)"
+  },
+  {
+    "objectID": "learn/rstudio/stata_to_r/index.html#logistic-model",
+    "href": "learn/rstudio/stata_to_r/index.html#logistic-model",
+    "title": "Making the Transition? A Guide for switching from Stata to R",
+    "section": "Logistic Model",
+    "text": "Logistic Model\n\n\n\n\n\n\n/* Fit a logistic regression model */\nlogit foreign weight length\n\n/* Print summary */\nestimates table\n\n\n\n\n\n\n\n\n\n\n\n#Fit a logistic regression model\nmodel_log <- glm(vs ~ wt + qsec, \n                 data = df_my_data, \n                 family = binomial())\n\n#Print summary\nsummary(model)"
+  },
+  {
+    "objectID": "learn/rstudio/stata_to_r/index.html#poisson-model",
+    "href": "learn/rstudio/stata_to_r/index.html#poisson-model",
+    "title": "Making the Transition? A Guide for switching from Stata to R",
+    "section": "Poisson Model",
+    "text": "Poisson Model\n\n\n\n\n\n\n/* Fit a Poisson regression model */\npoisson accidents weight length foreign\n\n/* Print summary */\nestimates table\n\n\n\n\n\n\n\n\n\n\n\n#Fit a Poisson regression model\nmodel_poiss <- glm(am ~ wt + hp, \n                   data = df_my_data, \n                   family = poisson())\n\n#Print summary\nsummary(model)"
+  },
+  {
+    "objectID": "learn/rstudio/stata_to_r/index.html#scatter-plot",
+    "href": "learn/rstudio/stata_to_r/index.html#scatter-plot",
+    "title": "Making the Transition? A Guide for switching from Stata to R",
+    "section": "Scatter plot",
+    "text": "Scatter plot\n\n\n\n\n\n\n/* Create scatter plot */\nscatter price mpg\n\n\n\n\n\n\n\n\n\n\n\n# Load data and ggplot2\nlibrary(ggplot2)\ndata(df_my_data)\n\n#Create scatter plot\nggplot(df_my_data, aes(x = mpg, y = wt)) + \n  geom_point() + #Here is the scatter\n  xlab(\"Miles per gallon\") +\n  ylab(\"Weight\")"
+  },
+  {
+    "objectID": "learn/rstudio/stata_to_r/index.html#line-plot",
+    "href": "learn/rstudio/stata_to_r/index.html#line-plot",
+    "title": "Making the Transition? A Guide for switching from Stata to R",
+    "section": "Line plot",
+    "text": "Line plot\n\n\n\n\n\n\n/* Create Line plot */\ntwoway line le_w le_y, xlabel(1950(10)2010)\n\n\n\n\n\n\n\n\n\n\n\n# Load data and ggplot2\nlibrary(ggplot2)\ndata(df_my_data)\n\n#Create line plot\nggplot(df_my_data, aes(x = year, y = pop)) + \n  geom_line() + #Here is the line\n  xlab(\"Year\") +\n  ylab(\"Population\")"
+  },
+  {
+    "objectID": "learn/rstudio/stata_to_r/index.html#bar-plot",
+    "href": "learn/rstudio/stata_to_r/index.html#bar-plot",
+    "title": "Making the Transition? A Guide for switching from Stata to R",
+    "section": "Bar plot",
+    "text": "Bar plot\n\n\n\n\n\n\n/* Create a Bar plot */\ngraph bar (count) rep78, over(foreign)\n\n\n\n\n\n\n\n\n\n\n\n# Load data and ggplot2\nlibrary(ggplot2)\ndata(df_my_data)\n\n#Create bar chart\nggplot(data = df_my_data, \n       aes(x = factor(cyl))) +\n  geom_bar() + #Here is the bar\n  xlab(\"Number of cylinders\") +\n  ylab(\"Count\")\n\n\n\n \nI also want to provide a good cheat sheet that contains more information about the differences between Stata and R."
+  },
+  {
     "objectID": "learn/python.html",
     "href": "learn/python.html",
     "title": "Learn Python",
@@ -789,82 +852,5 @@
     "title": "CISCO Networking Academy",
     "section": "",
     "text": "This is a course offered by the CISCO Networking Academy. What I really like is that at the end it offers a proof of completion. This certification in combination with other tools it’s a good way to start with Python. Here I leave the summary of the CISCO website and the link as well.\n\n“How great would it be to write your own computer program? Python is a multi-paradigm programming language used by startups and tech giants like Google, Facebook, Netflix, and more. With intuitive, readable syntax, Python is a great first programming language to learn.\nProgramming skills open you up to careers in almost any industry and are required if you want to continue to more advanced and higher paying software development and engineering roles.\nThis course is a great place to start learning Python – no prior programming knowledge required. Completing the course earns you a Statement of Achievement. It is split into two parts preparing you for two certifications:\nPart 1 (PE1: 35 hours) prepares you for PCEP – Certified Entry-Level Python Programmer Certification. Part 2 (PE2: 40 hours) prepares you for PCAP – Certified Associate in Python Programming Certification.”\nYou’ll learn these core skills:\n\nThink algorithmically – how to analyze a problem and translate it for a computer to process.\nDesign, develop, and improve multi-module computer programs.\nAnalyze and model real-life problems in Object-Oriented Programming categories.\nUnderstand a programmer’s work in the software development process.\nLearn how a program is executed in a computer environment.\nGain skills to create and develop your own programming portfolio.\n\n\nCISCO Networking Academy\n\n\n\n\nGo to CISCO PCAP"
-  },
-  {
-    "objectID": "learn/rstudio/stata_to_r/index.html#create-sequenceids",
-    "href": "learn/rstudio/stata_to_r/index.html#create-sequenceids",
-    "title": "Making the Transition? A Guide for switching from Stata to R",
-    "section": "Create sequence/ids",
-    "text": "Create sequence/ids\n\n\n\n\n\n\n/* Sequence of numbers from 1 to n */\ngen seq = _n\n\n/* Sequence with the total number of \nobservations */\n\ngen total_seq = _N\n\n\n\n\n\n\n\n\n\n\n\nv_seq <- seq(from = 1, to = 10, by = 1)\n\n#Load dplyr package\nlibrary(dplyr)\n\ndf_final <- df %>%\n  mutate(id = 1:n())"
-  },
-  {
-    "objectID": "learn/rstudio/stata_to_r/index.html#drop-variables",
-    "href": "learn/rstudio/stata_to_r/index.html#drop-variables",
-    "title": "Making the Transition? A Guide for switching from Stata to R",
-    "section": "Drop variables",
-    "text": "Drop variables\n\n\n\n\n\n\n/* Drop variable */\ndrop var1 var2\n\n/* Drop all variable and keep */\ndrop _all\nkeep var1 var2 var3\n\n\n\n\n\n\n\n\n\n\n\n#Load dplyr package\nlibrary(dplyr)\n\n#Drop some variables\ndf_new_data <- df_old %>% select(-var1, -var2)\n\n#Keep specific variables\ndf_new_data <- df_old %>% select(var1, var2)"
-  },
-  {
-    "objectID": "learn/rstudio/stata_to_r/index.html#drop-variables-1",
-    "href": "learn/rstudio/stata_to_r/index.html#drop-variables-1",
-    "title": "Making the Transition? A Guide for switching from Stata to R",
-    "section": "Drop variables",
-    "text": "Drop variables\n\n\n\n\n\n\n/* Sequence of numbers from 1 to n */\ngen seq = _n\n\n/* Sequence with the total number of \nobservations */\n\ngen total_seq = _N\n\n\n\n\n\n\n\n\n\n\n\n#Load dplyr package\nlibrary(dplyr)\n\n#Drop some variabls\ndf_new_data <- df_old %>% select(-var1, -var2)\n\n#Keep specific variables\ndf_new_data <- df_old %>% select(var1, var2)"
-  },
-  {
-    "objectID": "learn/rstudio/stata_to_r/index.html#summary",
-    "href": "learn/rstudio/stata_to_r/index.html#summary",
-    "title": "Making the Transition? A Guide for switching from Stata to R",
-    "section": "Summary",
-    "text": "Summary\n\n\n\n\n\n\n/* Summary of variables of interest*/\nsummarize var1 var2 var3\n\n\n\n\n\n\n\n\n\n\n\n\n#Summary for entire data\nsummary(dataset)\n\n#Summary for a variable\nsummary(dataset$variable)"
-  },
-  {
-    "objectID": "learn/rstudio/stata_to_r/index.html#linear-model",
-    "href": "learn/rstudio/stata_to_r/index.html#linear-model",
-    "title": "Making the Transition? A Guide for switching from Stata to R",
-    "section": "Linear Model",
-    "text": "Linear Model\n\n\n\n\n\n\n/* Fit a linear model */\nregress mpg weight length foreign\n\n/* Print summary */\nestimates table\n\n\n\n\n\n\n\n\n\n\n\n#Fit a linear model\nmodel_lm <- lm(mpg ~ wt + qsec + vs, \n               data = df_my_data)\n\n#Print summary\nsummary(model_lm)"
-  },
-  {
-    "objectID": "learn/rstudio/stata_to_r/index.html#logistic-model",
-    "href": "learn/rstudio/stata_to_r/index.html#logistic-model",
-    "title": "Making the Transition? A Guide for switching from Stata to R",
-    "section": "Logistic Model",
-    "text": "Logistic Model\n\n\n\n\n\n\n/* Fit a logistic regression model */\nlogit foreign weight length\n\n/* Print summary */\nestimates table\n\n\n\n\n\n\n\n\n\n\n\n#Fit a logistic regression model\nmodel_log <- glm(vs ~ wt + qsec, \n                 data = df_my_data, \n                 family = binomial())\n\n#Print summary\nsummary(model)"
-  },
-  {
-    "objectID": "learn/rstudio/stata_to_r/index.html#poisson-model",
-    "href": "learn/rstudio/stata_to_r/index.html#poisson-model",
-    "title": "Making the Transition? A Guide for switching from Stata to R",
-    "section": "Poisson Model",
-    "text": "Poisson Model\n\n\n\n\n\n\n/* Fit a Poisson regression model */\npoisson accidents weight length foreign\n\n/* Print summary */\nestimates table\n\n\n\n\n\n\n\n\n\n\n\n#Fit a Poisson regression model\nmodel_poiss <- glm(am ~ wt + hp, \n                   data = df_my_data, \n                   family = poisson())\n\n#Print summary\nsummary(model)"
-  },
-  {
-    "objectID": "learn/rstudio/stata_to_r/index.html#scatter-plot",
-    "href": "learn/rstudio/stata_to_r/index.html#scatter-plot",
-    "title": "Making the Transition? A Guide for switching from Stata to R",
-    "section": "Scatter plot",
-    "text": "Scatter plot\n\n\n\n\n\n\n/* Create scatter plot */\nscatter price mpg\n\n\n\n\n\n\n\n\n\n\n\n# Load data and ggplot2\nlibrary(ggplot2)\ndata(df_my_data)\n\n#Create scatter plot\nggplot(df_my_data, aes(x = mpg, y = wt)) + \n  geom_point() + #Here is the scatter\n  xlab(\"Miles per gallon\") +\n  ylab(\"Weight\")"
-  },
-  {
-    "objectID": "learn/rstudio/stata_to_r/index.html#line-plot",
-    "href": "learn/rstudio/stata_to_r/index.html#line-plot",
-    "title": "Making the Transition? A Guide for switching from Stata to R",
-    "section": "Line plot",
-    "text": "Line plot\n\n\n\n\n\n\n/* Create Line plot */\ntwoway line le_w le_y, xlabel(1950(10)2010)\n\n\n\n\n\n\n\n\n\n\n\n# Load data and ggplot2\nlibrary(ggplot2)\ndata(df_my_data)\n\n#Create line plot\nggplot(df_my_data, aes(x = year, y = pop)) + \n  geom_line() + #Here is the line\n  xlab(\"Year\") +\n  ylab(\"Population\")"
-  },
-  {
-    "objectID": "learn/rstudio/stata_to_r/index.html#line-plot-1",
-    "href": "learn/rstudio/stata_to_r/index.html#line-plot-1",
-    "title": "Making the Transition? A Guide for switching from Stata to R",
-    "section": "Line plot",
-    "text": "Line plot\n\n\n\n\n\n\n/* Create a Bar plot */\ngraph bar (count) rep78, over(foreign)\n\n\n\n\n\n\n\n\n\n\n\n# Load data and ggplot2\nlibrary(ggplot2)\ndata(df_my_data)\n\n#Create bar chart\nggplot(data = df_my_data, aes(x = factor(cyl))) +\n  geom_bar() + #Here is the bar\n  xlab(\"Number of cylinders\") +\n  ylab(\"Count\")"
-  },
-  {
-    "objectID": "learn/rstudio/stata_to_r/index.html#bar-plot",
-    "href": "learn/rstudio/stata_to_r/index.html#bar-plot",
-    "title": "Making the Transition? A Guide for switching from Stata to R",
-    "section": "Bar plot",
-    "text": "Bar plot\n\n\n\n\n\n\n/* Create a Bar plot */\ngraph bar (count) rep78, over(foreign)\n\n\n\n\n\n\n\n\n\n\n\n# Load data and ggplot2\nlibrary(ggplot2)\ndata(df_my_data)\n\n#Create bar chart\nggplot(data = df_my_data, \n       aes(x = factor(cyl))) +\n  geom_bar() + #Here is the bar\n  xlab(\"Number of cylinders\") +\n  ylab(\"Count\")\n\n\n\n \nI also want to provide a good cheat sheet that contains more information about the differences between Stata and R."
   }
 ]
