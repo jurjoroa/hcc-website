@@ -100,6 +100,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
 <link href="../../../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script src="../../../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../../../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <link href="../../../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
 <link href="../../../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
 <link href="../../../site_libs/quarto-contrib/animate-4.1.1/animate.min.css" rel="stylesheet"><script id="quarto-search-options" type="application/json">{
@@ -299,8 +302,20 @@ gtag('config', 'G-HJEMN0LJY7', { 'anonymize_ip': true});
   <ul class="collapse">
 <li><a href="#summary" id="toc-summary" class="nav-link" data-scroll-target="#summary">Summary</a></li>
   <li><a href="#linear-model" id="toc-linear-model" class="nav-link" data-scroll-target="#linear-model">Linear Model</a></li>
+  <li><a href="#logistic-model" id="toc-logistic-model" class="nav-link" data-scroll-target="#logistic-model">Logistic Model</a></li>
+  <li><a href="#poisson-model" id="toc-poisson-model" class="nav-link" data-scroll-target="#poisson-model">Poisson Model</a></li>
   </ul>
 </li>
+  <li>
+<a href="#plots" id="toc-plots" class="nav-link" data-scroll-target="#plots">Plots</a>
+  <ul class="collapse">
+<li><a href="#scatter-plot" id="toc-scatter-plot" class="nav-link" data-scroll-target="#scatter-plot">Scatter plot</a></li>
+  <li><a href="#line-plot" id="toc-line-plot" class="nav-link" data-scroll-target="#line-plot">Line plot</a></li>
+  <li><a href="#bar-plot" id="toc-bar-plot" class="nav-link" data-scroll-target="#bar-plot">Bar plot</a></li>
+  </ul>
+</li>
+  <li><a href="#cheat-sheet-stata-to-r" id="toc-cheat-sheet-stata-to-r" class="nav-link" data-scroll-target="#cheat-sheet-stata-to-r">Cheat Sheet: Stata to R</a></li>
+  <li><a href="#rstata" id="toc-rstata" class="nav-link" data-scroll-target="#rstata">RStata</a></li>
   <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion">Conclusion</a></li>
   <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
   </ul></nav>
@@ -314,7 +329,7 @@ div.sourceCode {
 
 </style>
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="images/rstudio_stata.png" class="img-fluid figure-img"></p>
+<figure class="figure"><p><a href="images/rstudio_stata.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="images/rstudio_stata.png" class="img-fluid figure-img"></a></p>
 </figure>
 </div>
 <hr>
@@ -327,7 +342,7 @@ div.sourceCode {
 <div class="columns">
 <div class="column" style="width:45%;">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="images/stata.png" height="34" class="figure-img"></p>
+<figure class="figure"><p><a href="images/stata.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="images/stata.png" height="34" class="figure-img"></a></p>
 </figure>
 </div>
 <div class="sourceCode" id="cb1"><pre class="sourceCode stata code-with-copy"><code class="sourceCode stata"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">/*Working directory path*/</span></span>
@@ -337,12 +352,12 @@ div.sourceCode {
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>cd c:\myfolder\<span class="kw">data</span> </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div><div class="column" style="width:10%;">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="images/arrow.png" height="40" class="figure-img"></p>
+<figure class="figure"><p><a href="images/arrow.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img src="images/arrow.png" height="40" class="figure-img"></a></p>
 </figure>
 </div>
 </div><div class="column" style="width:45%;">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="images/studio.png" height="34" class="figure-img"></p>
+<figure class="figure"><p><a href="images/studio.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4"><img src="images/studio.png" height="34" class="figure-img"></a></p>
 </figure>
 </div>
 <div class="cell">
@@ -360,7 +375,7 @@ div.sourceCode {
 <div class="columns">
 <div class="column" style="width:45%;">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="images/stata.png" height="34" class="figure-img"></p>
+<figure class="figure"><p><a href="images/stata.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5"><img src="images/stata.png" height="34" class="figure-img"></a></p>
 </figure>
 </div>
 <div class="sourceCode" id="cb3"><pre class="sourceCode stata code-with-copy"><code class="sourceCode stata"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co">/*Install package*/</span></span>
@@ -370,12 +385,12 @@ div.sourceCode {
 <p>Once is installed, we don’t need to “load it”</p>
 </div><div class="column" style="width:10%;">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="images/arrow.png" height="40" class="figure-img"></p>
+<figure class="figure"><p><a href="images/arrow.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6"><img src="images/arrow.png" height="40" class="figure-img"></a></p>
 </figure>
 </div>
 </div><div class="column" style="width:45%;">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="images/studio.png" height="34" class="figure-img"></p>
+<figure class="figure"><p><a href="images/studio.png" class="lightbox" data-gallery="quarto-lightbox-gallery-7"><img src="images/studio.png" height="34" class="figure-img"></a></p>
 </figure>
 </div>
 <div class="cell">
@@ -393,7 +408,7 @@ div.sourceCode {
 <div class="columns">
 <div class="column" style="width:45%;">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="images/stata.png" height="34" class="figure-img"></p>
+<figure class="figure"><p><a href="images/stata.png" class="lightbox" data-gallery="quarto-lightbox-gallery-8"><img src="images/stata.png" height="34" class="figure-img"></a></p>
 </figure>
 </div>
 <div class="sourceCode" id="cb5"><pre class="sourceCode stata code-with-copy"><code class="sourceCode stata"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co">/*Get help with the command regression*/</span></span>
@@ -401,12 +416,12 @@ div.sourceCode {
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div><div class="column" style="width:10%;">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="images/arrow.png" height="40" class="figure-img"></p>
+<figure class="figure"><p><a href="images/arrow.png" class="lightbox" data-gallery="quarto-lightbox-gallery-9"><img src="images/arrow.png" height="40" class="figure-img"></a></p>
 </figure>
 </div>
 </div><div class="column" style="width:45%;">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="images/studio.png" height="34" class="figure-img"></p>
+<figure class="figure"><p><a href="images/studio.png" class="lightbox" data-gallery="quarto-lightbox-gallery-10"><img src="images/studio.png" height="34" class="figure-img"></a></p>
 </figure>
 </div>
 <div class="cell">
@@ -423,7 +438,7 @@ div.sourceCode {
 <div class="columns">
 <div class="column" style="width:45%;">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="images/stata.png" height="34" class="figure-img"></p>
+<figure class="figure"><p><a href="images/stata.png" class="lightbox" data-gallery="quarto-lightbox-gallery-11"><img src="images/stata.png" height="34" class="figure-img"></a></p>
 </figure>
 </div>
 <div class="sourceCode" id="cb7"><pre class="sourceCode stata code-with-copy"><code class="sourceCode stata"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co">/*Import csv file*/</span></span>
@@ -432,12 +447,12 @@ div.sourceCode {
 <span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div><div class="column" style="width:10%;">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="images/arrow.png" height="40" class="figure-img"></p>
+<figure class="figure"><p><a href="images/arrow.png" class="lightbox" data-gallery="quarto-lightbox-gallery-12"><img src="images/arrow.png" height="40" class="figure-img"></a></p>
 </figure>
 </div>
 </div><div class="column" style="width:45%;">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="images/studio.png" height="34" class="figure-img"></p>
+<figure class="figure"><p><a href="images/studio.png" class="lightbox" data-gallery="quarto-lightbox-gallery-13"><img src="images/studio.png" height="34" class="figure-img"></a></p>
 </figure>
 </div>
 <div class="cell">
@@ -458,7 +473,7 @@ div.sourceCode {
 <div class="columns">
 <div class="column" style="width:45%;">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="images/stata.png" height="34" class="figure-img"></p>
+<figure class="figure"><p><a href="images/stata.png" class="lightbox" data-gallery="quarto-lightbox-gallery-14"><img src="images/stata.png" height="34" class="figure-img"></a></p>
 </figure>
 </div>
 <div class="sourceCode" id="cb9"><pre class="sourceCode stata code-with-copy"><code class="sourceCode stata"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co">/*Import excel file*/</span></span>
@@ -466,12 +481,12 @@ div.sourceCode {
 <span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>sheet(<span class="st">"Sheet1"</span>) firstrow <span class="kw">clear</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div><div class="column" style="width:10%;">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="images/arrow.png" height="40" class="figure-img"></p>
+<figure class="figure"><p><a href="images/arrow.png" class="lightbox" data-gallery="quarto-lightbox-gallery-15"><img src="images/arrow.png" height="40" class="figure-img"></a></p>
 </figure>
 </div>
 </div><div class="column" style="width:45%;">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="images/studio.png" height="34" class="figure-img"></p>
+<figure class="figure"><p><a href="images/studio.png" class="lightbox" data-gallery="quarto-lightbox-gallery-16"><img src="images/studio.png" height="34" class="figure-img"></a></p>
 </figure>
 </div>
 <div class="cell">
@@ -492,19 +507,19 @@ div.sourceCode {
 <div class="columns">
 <div class="column" style="width:45%;">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="images/stata.png" height="34" class="figure-img"></p>
+<figure class="figure"><p><a href="images/stata.png" class="lightbox" data-gallery="quarto-lightbox-gallery-17"><img src="images/stata.png" height="34" class="figure-img"></a></p>
 </figure>
 </div>
 <div class="sourceCode" id="cb11"><pre class="sourceCode stata code-with-copy"><code class="sourceCode stata"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co">/*Import excel file*/</span></span>
 <span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="kw">use</span> <span class="st">"df_data.dta"</span>, <span class="kw">clear</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div><div class="column" style="width:10%;">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="images/arrow.png" height="40" class="figure-img"></p>
+<figure class="figure"><p><a href="images/arrow.png" class="lightbox" data-gallery="quarto-lightbox-gallery-18"><img src="images/arrow.png" height="40" class="figure-img"></a></p>
 </figure>
 </div>
 </div><div class="column" style="width:45%;">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="images/studio.png" height="34" class="figure-img"></p>
+<figure class="figure"><p><a href="images/studio.png" class="lightbox" data-gallery="quarto-lightbox-gallery-19"><img src="images/studio.png" height="34" class="figure-img"></a></p>
 </figure>
 </div>
 <div class="cell">
@@ -522,7 +537,7 @@ div.sourceCode {
 <div class="columns">
 <div class="column" style="width:45%;">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="images/stata.png" height="34" class="figure-img"></p>
+<figure class="figure"><p><a href="images/stata.png" class="lightbox" data-gallery="quarto-lightbox-gallery-20"><img src="images/stata.png" height="34" class="figure-img"></a></p>
 </figure>
 </div>
 <div class="sourceCode" id="cb13"><pre class="sourceCode stata code-with-copy"><code class="sourceCode stata"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co">/* Provides the structure of the dataset */</span></span>
@@ -553,12 +568,12 @@ div.sourceCode {
 <span id="cb13-26"><a href="#cb13-26" aria-hidden="true" tabindex="-1"></a>browse </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div><div class="column" style="width:10%;">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="images/arrow.png" height="40" class="figure-img"></p>
+<figure class="figure"><p><a href="images/arrow.png" class="lightbox" data-gallery="quarto-lightbox-gallery-21"><img src="images/arrow.png" height="40" class="figure-img"></a></p>
 </figure>
 </div>
 </div><div class="column" style="width:45%;">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="images/studio.png" height="34" class="figure-img"></p>
+<figure class="figure"><p><a href="images/studio.png" class="lightbox" data-gallery="quarto-lightbox-gallery-22"><img src="images/studio.png" height="34" class="figure-img"></a></p>
 </figure>
 </div>
 <div class="cell">
@@ -595,7 +610,7 @@ div.sourceCode {
 <div class="columns">
 <div class="column" style="width:45%;">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="images/stata.png" height="34" class="figure-img"></p>
+<figure class="figure"><p><a href="images/stata.png" class="lightbox" data-gallery="quarto-lightbox-gallery-23"><img src="images/stata.png" height="34" class="figure-img"></a></p>
 </figure>
 </div>
 <div class="sourceCode" id="cb15"><pre class="sourceCode stata code-with-copy"><code class="sourceCode stata"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co">/* Provides the structure of the dataset */</span></span>
@@ -603,12 +618,12 @@ div.sourceCode {
 <span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div><div class="column" style="width:10%;">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="images/arrow.png" height="40" class="figure-img"></p>
+<figure class="figure"><p><a href="images/arrow.png" class="lightbox" data-gallery="quarto-lightbox-gallery-24"><img src="images/arrow.png" height="40" class="figure-img"></a></p>
 </figure>
 </div>
 </div><div class="column" style="width:45%;">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="images/studio.png" height="34" class="figure-img"></p>
+<figure class="figure"><p><a href="images/studio.png" class="lightbox" data-gallery="quarto-lightbox-gallery-25"><img src="images/studio.png" height="34" class="figure-img"></a></p>
 </figure>
 </div>
 <div class="cell">
@@ -625,7 +640,7 @@ div.sourceCode {
 <div class="columns">
 <div class="column" style="width:45%;">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="images/stata.png" height="34" class="figure-img"></p>
+<figure class="figure"><p><a href="images/stata.png" class="lightbox" data-gallery="quarto-lightbox-gallery-26"><img src="images/stata.png" height="34" class="figure-img"></a></p>
 </figure>
 </div>
 <div class="sourceCode" id="cb17"><pre class="sourceCode stata code-with-copy"><code class="sourceCode stata"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="co">/* How to rename */</span></span>
@@ -638,12 +653,12 @@ div.sourceCode {
 <span id="cb17-8"><a href="#cb17-8" aria-hidden="true" tabindex="-1"></a></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div><div class="column" style="width:10%;">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="images/arrow.png" height="40" class="figure-img"></p>
+<figure class="figure"><p><a href="images/arrow.png" class="lightbox" data-gallery="quarto-lightbox-gallery-27"><img src="images/arrow.png" height="40" class="figure-img"></a></p>
 </figure>
 </div>
 </div><div class="column" style="width:45%;">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="images/studio.png" height="34" class="figure-img"></p>
+<figure class="figure"><p><a href="images/studio.png" class="lightbox" data-gallery="quarto-lightbox-gallery-28"><img src="images/studio.png" height="34" class="figure-img"></a></p>
 </figure>
 </div>
 <div class="cell">
@@ -664,7 +679,7 @@ div.sourceCode {
 <div class="columns">
 <div class="column" style="width:45%;">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="images/stata.png" height="34" class="figure-img"></p>
+<figure class="figure"><p><a href="images/stata.png" class="lightbox" data-gallery="quarto-lightbox-gallery-29"><img src="images/stata.png" height="34" class="figure-img"></a></p>
 </figure>
 </div>
 <div class="sourceCode" id="cb19"><pre class="sourceCode stata code-with-copy"><code class="sourceCode stata"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="kw">label</span> <span class="kw">variable</span> <span class="fu">w</span> <span class="st">"Weight"</span></span>
@@ -675,12 +690,12 @@ div.sourceCode {
 <span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a><span class="kw">label</span> <span class="kw">variable</span> sex <span class="st">"Gender"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div><div class="column" style="width:10%;">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="images/arrow.png" height="40" class="figure-img"></p>
+<figure class="figure"><p><a href="images/arrow.png" class="lightbox" data-gallery="quarto-lightbox-gallery-30"><img src="images/arrow.png" height="40" class="figure-img"></a></p>
 </figure>
 </div>
 </div><div class="column" style="width:45%;">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="images/studio.png" height="34" class="figure-img"></p>
+<figure class="figure"><p><a href="images/studio.png" class="lightbox" data-gallery="quarto-lightbox-gallery-31"><img src="images/studio.png" height="34" class="figure-img"></a></p>
 </figure>
 </div>
 <div class="cell">
@@ -701,7 +716,7 @@ div.sourceCode {
 <div class="columns">
 <div class="column" style="width:45%;">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="images/stata.png" height="34" class="figure-img"></p>
+<figure class="figure"><p><a href="images/stata.png" class="lightbox" data-gallery="quarto-lightbox-gallery-32"><img src="images/stata.png" height="34" class="figure-img"></a></p>
 </figure>
 </div>
 <div class="sourceCode" id="cb21"><pre class="sourceCode stata code-with-copy"><code class="sourceCode stata"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="co">/* Value labels for the codes */</span></span>
@@ -713,12 +728,12 @@ div.sourceCode {
 <span id="cb21-7"><a href="#cb21-7" aria-hidden="true" tabindex="-1"></a><span class="kw">label</span> <span class="kw">values</span> code label1</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div><div class="column" style="width:10%;">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="images/arrow.png" height="40" class="figure-img"></p>
+<figure class="figure"><p><a href="images/arrow.png" class="lightbox" data-gallery="quarto-lightbox-gallery-33"><img src="images/arrow.png" height="40" class="figure-img"></a></p>
 </figure>
 </div>
 </div><div class="column" style="width:45%;">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="images/studio.png" height="34" class="figure-img"></p>
+<figure class="figure"><p><a href="images/studio.png" class="lightbox" data-gallery="quarto-lightbox-gallery-34"><img src="images/studio.png" height="34" class="figure-img"></a></p>
 </figure>
 </div>
 <div class="cell">
@@ -749,7 +764,7 @@ div.sourceCode {
 <div class="columns">
 <div class="column" style="width:45%;">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="images/stata.png" height="34" class="figure-img"></p>
+<figure class="figure"><p><a href="images/stata.png" class="lightbox" data-gallery="quarto-lightbox-gallery-35"><img src="images/stata.png" height="34" class="figure-img"></a></p>
 </figure>
 </div>
 <div class="sourceCode" id="cb23"><pre class="sourceCode stata code-with-copy"><code class="sourceCode stata"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="co">/* Value labels for the codes */</span></span>
@@ -758,12 +773,12 @@ div.sourceCode {
 <span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a><span class="ot">list</span> var2 var3 var1</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div><div class="column" style="width:10%;">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="images/arrow.png" height="40" class="figure-img"></p>
+<figure class="figure"><p><a href="images/arrow.png" class="lightbox" data-gallery="quarto-lightbox-gallery-36"><img src="images/arrow.png" height="40" class="figure-img"></a></p>
 </figure>
 </div>
 </div><div class="column" style="width:45%;">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="images/studio.png" height="34" class="figure-img"></p>
+<figure class="figure"><p><a href="images/studio.png" class="lightbox" data-gallery="quarto-lightbox-gallery-37"><img src="images/studio.png" height="34" class="figure-img"></a></p>
 </figure>
 </div>
 <div class="cell">
@@ -783,7 +798,7 @@ div.sourceCode {
 <div class="columns">
 <div class="column" style="width:45%;">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="images/stata.png" height="34" class="figure-img"></p>
+<figure class="figure"><p><a href="images/stata.png" class="lightbox" data-gallery="quarto-lightbox-gallery-38"><img src="images/stata.png" height="34" class="figure-img"></a></p>
 </figure>
 </div>
 <div class="sourceCode" id="cb25"><pre class="sourceCode stata code-with-copy"><code class="sourceCode stata"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="co">/* Exact match on the key variable(s). */</span></span>
@@ -798,12 +813,12 @@ div.sourceCode {
 <p>Remember that we need to have our data1 in the same path</p>
 </div><div class="column" style="width:10%;">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="images/arrow.png" height="40" class="figure-img"></p>
+<figure class="figure"><p><a href="images/arrow.png" class="lightbox" data-gallery="quarto-lightbox-gallery-39"><img src="images/arrow.png" height="40" class="figure-img"></a></p>
 </figure>
 </div>
 </div><div class="column" style="width:45%;">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="images/studio.png" height="34" class="figure-img"></p>
+<figure class="figure"><p><a href="images/studio.png" class="lightbox" data-gallery="quarto-lightbox-gallery-40"><img src="images/studio.png" height="34" class="figure-img"></a></p>
 </figure>
 </div>
 <div class="cell">
@@ -834,7 +849,7 @@ div.sourceCode {
 <div class="columns">
 <div class="column" style="width:45%;">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="images/stata.png" height="34" class="figure-img"></p>
+<figure class="figure"><p><a href="images/stata.png" class="lightbox" data-gallery="quarto-lightbox-gallery-41"><img src="images/stata.png" height="34" class="figure-img"></a></p>
 </figure>
 </div>
 <div class="sourceCode" id="cb27"><pre class="sourceCode stata code-with-copy"><code class="sourceCode stata"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="co">/* Sequence of numbers from 1 to n */</span></span>
@@ -846,12 +861,12 @@ div.sourceCode {
 <span id="cb27-7"><a href="#cb27-7" aria-hidden="true" tabindex="-1"></a><span class="kw">gen</span> total_seq = _N</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div><div class="column" style="width:10%;">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="images/arrow.png" height="40" class="figure-img"></p>
+<figure class="figure"><p><a href="images/arrow.png" class="lightbox" data-gallery="quarto-lightbox-gallery-42"><img src="images/arrow.png" height="40" class="figure-img"></a></p>
 </figure>
 </div>
 </div><div class="column" style="width:45%;">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="images/studio.png" height="34" class="figure-img"></p>
+<figure class="figure"><p><a href="images/studio.png" class="lightbox" data-gallery="quarto-lightbox-gallery-43"><img src="images/studio.png" height="34" class="figure-img"></a></p>
 </figure>
 </div>
 <div class="cell">
@@ -869,7 +884,7 @@ div.sourceCode {
 <div class="columns">
 <div class="column" style="width:45%;">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="images/stata.png" height="34" class="figure-img"></p>
+<figure class="figure"><p><a href="images/stata.png" class="lightbox" data-gallery="quarto-lightbox-gallery-44"><img src="images/stata.png" height="34" class="figure-img"></a></p>
 </figure>
 </div>
 <div class="sourceCode" id="cb29"><pre class="sourceCode stata code-with-copy"><code class="sourceCode stata"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="co">/* Drop variable */</span></span>
@@ -880,12 +895,12 @@ div.sourceCode {
 <span id="cb29-6"><a href="#cb29-6" aria-hidden="true" tabindex="-1"></a><span class="kw">keep</span> var1 var2 var3</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div><div class="column" style="width:10%;">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="images/arrow.png" height="40" class="figure-img"></p>
+<figure class="figure"><p><a href="images/arrow.png" class="lightbox" data-gallery="quarto-lightbox-gallery-45"><img src="images/arrow.png" height="40" class="figure-img"></a></p>
 </figure>
 </div>
 </div><div class="column" style="width:45%;">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="images/studio.png" height="34" class="figure-img"></p>
+<figure class="figure"><p><a href="images/studio.png" class="lightbox" data-gallery="quarto-lightbox-gallery-46"><img src="images/studio.png" height="34" class="figure-img"></a></p>
 </figure>
 </div>
 <div class="cell">
@@ -904,7 +919,7 @@ div.sourceCode {
 <div class="columns">
 <div class="column" style="width:45%;">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="images/stata.png" height="34" class="figure-img"></p>
+<figure class="figure"><p><a href="images/stata.png" class="lightbox" data-gallery="quarto-lightbox-gallery-47"><img src="images/stata.png" height="34" class="figure-img"></a></p>
 </figure>
 </div>
 <div class="sourceCode" id="cb31"><pre class="sourceCode stata code-with-copy"><code class="sourceCode stata"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="co">/* Cross-tabulate 3 variables*/</span></span>
@@ -915,12 +930,12 @@ div.sourceCode {
 <span id="cb31-6"><a href="#cb31-6" aria-hidden="true" tabindex="-1"></a><span class="kw">tabulate</span> var1 var2, <span class="ot">row</span> col</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div><div class="column" style="width:10%;">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="images/arrow.png" height="40" class="figure-img"></p>
+<figure class="figure"><p><a href="images/arrow.png" class="lightbox" data-gallery="quarto-lightbox-gallery-48"><img src="images/arrow.png" height="40" class="figure-img"></a></p>
 </figure>
 </div>
 </div><div class="column" style="width:45%;">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="images/studio.png" height="34" class="figure-img"></p>
+<figure class="figure"><p><a href="images/studio.png" class="lightbox" data-gallery="quarto-lightbox-gallery-49"><img src="images/studio.png" height="34" class="figure-img"></a></p>
 </figure>
 </div>
 <div class="cell">
@@ -933,13 +948,14 @@ div.sourceCode {
 </div>
 </div>
 </div>
+<p>&nbsp;</p>
 </section><section id="statistics" class="level1"><h1>Statistics</h1>
 <hr>
 <section id="summary" class="level2"><h2 class="anchored" data-anchor-id="summary">Summary</h2>
 <div class="columns">
 <div class="column" style="width:45%;">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="images/stata.png" height="34" class="figure-img"></p>
+<figure class="figure"><p><a href="images/stata.png" class="lightbox" data-gallery="quarto-lightbox-gallery-50"><img src="images/stata.png" height="34" class="figure-img"></a></p>
 </figure>
 </div>
 <div class="sourceCode" id="cb33"><pre class="sourceCode stata code-with-copy"><code class="sourceCode stata"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="co">/* Summary of variables of interest*/</span></span>
@@ -947,12 +963,12 @@ div.sourceCode {
 <span id="cb33-3"><a href="#cb33-3" aria-hidden="true" tabindex="-1"></a></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div><div class="column" style="width:10%;">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="images/arrow.png" height="40" class="figure-img"></p>
+<figure class="figure"><p><a href="images/arrow.png" class="lightbox" data-gallery="quarto-lightbox-gallery-51"><img src="images/arrow.png" height="40" class="figure-img"></a></p>
 </figure>
 </div>
 </div><div class="column" style="width:45%;">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="images/studio.png" height="34" class="figure-img"></p>
+<figure class="figure"><p><a href="images/studio.png" class="lightbox" data-gallery="quarto-lightbox-gallery-52"><img src="images/studio.png" height="34" class="figure-img"></a></p>
 </figure>
 </div>
 <div class="cell">
@@ -968,7 +984,7 @@ div.sourceCode {
 <div class="columns">
 <div class="column" style="width:45%;">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="images/stata.png" height="34" class="figure-img"></p>
+<figure class="figure"><p><a href="images/stata.png" class="lightbox" data-gallery="quarto-lightbox-gallery-53"><img src="images/stata.png" height="34" class="figure-img"></a></p>
 </figure>
 </div>
 <div class="sourceCode" id="cb35"><pre class="sourceCode stata code-with-copy"><code class="sourceCode stata"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="co">/* Fit a linear model */</span></span>
@@ -978,17 +994,18 @@ div.sourceCode {
 <span id="cb35-5"><a href="#cb35-5" aria-hidden="true" tabindex="-1"></a><span class="kw">estimates</span> <span class="kw">table</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div><div class="column" style="width:10%;">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="images/arrow.png" height="40" class="figure-img"></p>
+<figure class="figure"><p><a href="images/arrow.png" class="lightbox" data-gallery="quarto-lightbox-gallery-54"><img src="images/arrow.png" height="40" class="figure-img"></a></p>
 </figure>
 </div>
 </div><div class="column" style="width:45%;">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="images/studio.png" height="34" class="figure-img"></p>
+<figure class="figure"><p><a href="images/studio.png" class="lightbox" data-gallery="quarto-lightbox-gallery-55"><img src="images/studio.png" height="34" class="figure-img"></a></p>
 </figure>
 </div>
 <div class="cell">
 <div class="sourceCode" id="cb36"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co">#Fit a linear model</span></span>
-<span><span class="va">model_lm</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/lm.html">lm</a></span><span class="op">(</span><span class="va">mpg</span> <span class="op">~</span> <span class="va">wt</span> <span class="op">+</span> <span class="va">qsec</span> <span class="op">+</span> <span class="va">vs</span>, data <span class="op">=</span> <span class="va">df_my_data</span><span class="op">)</span></span>
+<span><span class="va">model_lm</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/lm.html">lm</a></span><span class="op">(</span><span class="va">mpg</span> <span class="op">~</span> <span class="va">wt</span> <span class="op">+</span> <span class="va">qsec</span> <span class="op">+</span> <span class="va">vs</span>, </span>
+<span>               data <span class="op">=</span> <span class="va">df_my_data</span><span class="op">)</span></span>
 <span></span>
 <span><span class="co">#Print summary</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/base/summary.html">summary</a></span><span class="op">(</span><span class="va">model_lm</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -996,9 +1013,193 @@ div.sourceCode {
 </div>
 </div>
 <p>&nbsp;</p>
-</section></section><section id="conclusion" class="level1"><h1>Conclusion</h1>
+</section><section id="logistic-model" class="level2"><h2 class="anchored" data-anchor-id="logistic-model">Logistic Model</h2>
+<div class="columns">
+<div class="column" style="width:45%;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><a href="images/stata.png" class="lightbox" data-gallery="quarto-lightbox-gallery-56"><img src="images/stata.png" height="34" class="figure-img"></a></p>
+</figure>
+</div>
+<div class="sourceCode" id="cb37"><pre class="sourceCode stata code-with-copy"><code class="sourceCode stata"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a><span class="co">/* Fit a logistic regression model */</span></span>
+<span id="cb37-2"><a href="#cb37-2" aria-hidden="true" tabindex="-1"></a><span class="kw">logit</span> foreign <span class="kw">weight</span> <span class="fu">length</span></span>
+<span id="cb37-3"><a href="#cb37-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb37-4"><a href="#cb37-4" aria-hidden="true" tabindex="-1"></a><span class="co">/* Print summary */</span></span>
+<span id="cb37-5"><a href="#cb37-5" aria-hidden="true" tabindex="-1"></a><span class="kw">estimates</span> <span class="kw">table</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div><div class="column" style="width:10%;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><a href="images/arrow.png" class="lightbox" data-gallery="quarto-lightbox-gallery-57"><img src="images/arrow.png" height="40" class="figure-img"></a></p>
+</figure>
+</div>
+</div><div class="column" style="width:45%;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><a href="images/studio.png" class="lightbox" data-gallery="quarto-lightbox-gallery-58"><img src="images/studio.png" height="34" class="figure-img"></a></p>
+</figure>
+</div>
+<div class="cell">
+<div class="sourceCode" id="cb38"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co">#Fit a logistic regression model</span></span>
+<span><span class="va">model_log</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/glm.html">glm</a></span><span class="op">(</span><span class="va">vs</span> <span class="op">~</span> <span class="va">wt</span> <span class="op">+</span> <span class="va">qsec</span>, </span>
+<span>                 data <span class="op">=</span> <span class="va">df_my_data</span>, </span>
+<span>                 family <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/stats/family.html">binomial</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co">#Print summary</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/summary.html">summary</a></span><span class="op">(</span><span class="va">model</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+</section><section id="poisson-model" class="level2"><h2 class="anchored" data-anchor-id="poisson-model">Poisson Model</h2>
+<div class="columns">
+<div class="column" style="width:45%;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><a href="images/stata.png" class="lightbox" data-gallery="quarto-lightbox-gallery-59"><img src="images/stata.png" height="34" class="figure-img"></a></p>
+</figure>
+</div>
+<div class="sourceCode" id="cb39"><pre class="sourceCode stata code-with-copy"><code class="sourceCode stata"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a><span class="co">/* Fit a Poisson regression model */</span></span>
+<span id="cb39-2"><a href="#cb39-2" aria-hidden="true" tabindex="-1"></a><span class="kw">poisson</span> accidents <span class="kw">weight</span> <span class="fu">length</span> foreign</span>
+<span id="cb39-3"><a href="#cb39-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-4"><a href="#cb39-4" aria-hidden="true" tabindex="-1"></a><span class="co">/* Print summary */</span></span>
+<span id="cb39-5"><a href="#cb39-5" aria-hidden="true" tabindex="-1"></a><span class="kw">estimates</span> <span class="kw">table</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div><div class="column" style="width:10%;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><a href="images/arrow.png" class="lightbox" data-gallery="quarto-lightbox-gallery-60"><img src="images/arrow.png" height="40" class="figure-img"></a></p>
+</figure>
+</div>
+</div><div class="column" style="width:45%;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><a href="images/studio.png" class="lightbox" data-gallery="quarto-lightbox-gallery-61"><img src="images/studio.png" height="34" class="figure-img"></a></p>
+</figure>
+</div>
+<div class="cell">
+<div class="sourceCode" id="cb40"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co">#Fit a Poisson regression model</span></span>
+<span><span class="va">model_poiss</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/glm.html">glm</a></span><span class="op">(</span><span class="va">am</span> <span class="op">~</span> <span class="va">wt</span> <span class="op">+</span> <span class="va">hp</span>, </span>
+<span>                   data <span class="op">=</span> <span class="va">df_my_data</span>, </span>
+<span>                   family <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/stats/family.html">poisson</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co">#Print summary</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/summary.html">summary</a></span><span class="op">(</span><span class="va">model</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+</section></section><section id="plots" class="level1"><h1>Plots</h1>
 <hr>
-<p>In conclusion, social media scraping using R and Twitter is a powerful method for collecting and analyzing data from Twitter. The rtweet package in R provides a convenient and efficient way to access Twitter’s REST API and retrieve large amounts of data, such as tweets, retweets, and user information.Using R and rtweet, researchers and data analysts can perform a wide range of analyses on Twitter data, including sentiment analysis, network analysis, and time series analysis. These analyses can provide insights into user behavior, sentiment, and trends on Twitter, which can be useful for a variety of applications, such as market research, political analysis, and social media monitoring.</p>
+<section id="scatter-plot" class="level2"><h2 class="anchored" data-anchor-id="scatter-plot">Scatter plot</h2>
+<div class="columns">
+<div class="column" style="width:45%;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><a href="images/stata.png" class="lightbox" data-gallery="quarto-lightbox-gallery-62"><img src="images/stata.png" height="34" class="figure-img"></a></p>
+</figure>
+</div>
+<div class="sourceCode" id="cb41"><pre class="sourceCode stata code-with-copy"><code class="sourceCode stata"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a><span class="co">/* Create scatter plot */</span></span>
+<span id="cb41-2"><a href="#cb41-2" aria-hidden="true" tabindex="-1"></a><span class="kw">scatter</span> price mpg</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div><div class="column" style="width:10%;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><a href="images/arrow.png" class="lightbox" data-gallery="quarto-lightbox-gallery-63"><img src="images/arrow.png" height="40" class="figure-img"></a></p>
+</figure>
+</div>
+</div><div class="column" style="width:45%;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><a href="images/studio.png" class="lightbox" data-gallery="quarto-lightbox-gallery-64"><img src="images/studio.png" height="34" class="figure-img"></a></p>
+</figure>
+</div>
+<div class="cell">
+<div class="sourceCode" id="cb42"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># Load data and ggplot2</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://ggplot2.tidyverse.org">ggplot2</a></span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/utils/data.html">data</a></span><span class="op">(</span><span class="va">df_my_data</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co">#Create scatter plot</span></span>
+<span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">df_my_data</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">mpg</span>, y <span class="op">=</span> <span class="va">wt</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span> </span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_point.html">geom_point</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span> <span class="co">#Here is the scatter</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">xlab</a></span><span class="op">(</span><span class="st">"Miles per gallon"</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">ylab</a></span><span class="op">(</span><span class="st">"Weight"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+</section><section id="line-plot" class="level2"><h2 class="anchored" data-anchor-id="line-plot">Line plot</h2>
+<div class="columns">
+<div class="column" style="width:45%;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><a href="images/stata.png" class="lightbox" data-gallery="quarto-lightbox-gallery-65"><img src="images/stata.png" height="34" class="figure-img"></a></p>
+</figure>
+</div>
+<div class="sourceCode" id="cb43"><pre class="sourceCode stata code-with-copy"><code class="sourceCode stata"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a><span class="co">/* Create Line plot */</span></span>
+<span id="cb43-2"><a href="#cb43-2" aria-hidden="true" tabindex="-1"></a><span class="kw">twoway</span> <span class="kw">line</span> le_w le_y, <span class="kw">xlabel</span>(1950(10)2010)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div><div class="column" style="width:10%;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><a href="images/arrow.png" class="lightbox" data-gallery="quarto-lightbox-gallery-66"><img src="images/arrow.png" height="40" class="figure-img"></a></p>
+</figure>
+</div>
+</div><div class="column" style="width:45%;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><a href="images/studio.png" class="lightbox" data-gallery="quarto-lightbox-gallery-67"><img src="images/studio.png" height="34" class="figure-img"></a></p>
+</figure>
+</div>
+<div class="cell">
+<div class="sourceCode" id="cb44"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># Load data and ggplot2</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://ggplot2.tidyverse.org">ggplot2</a></span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/utils/data.html">data</a></span><span class="op">(</span><span class="va">df_my_data</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co">#Create line plot</span></span>
+<span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">df_my_data</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">year</span>, y <span class="op">=</span> <span class="va">pop</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span> </span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_path.html">geom_line</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span> <span class="co">#Here is the line</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">xlab</a></span><span class="op">(</span><span class="st">"Year"</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">ylab</a></span><span class="op">(</span><span class="st">"Population"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+</section><section id="bar-plot" class="level2"><h2 class="anchored" data-anchor-id="bar-plot">Bar plot</h2>
+<div class="columns">
+<div class="column" style="width:45%;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><a href="images/stata.png" class="lightbox" data-gallery="quarto-lightbox-gallery-68"><img src="images/stata.png" height="34" class="figure-img"></a></p>
+</figure>
+</div>
+<div class="sourceCode" id="cb45"><pre class="sourceCode stata code-with-copy"><code class="sourceCode stata"><span id="cb45-1"><a href="#cb45-1" aria-hidden="true" tabindex="-1"></a><span class="co">/* Create a Bar plot */</span></span>
+<span id="cb45-2"><a href="#cb45-2" aria-hidden="true" tabindex="-1"></a><span class="kw">graph</span> <span class="bn">bar</span> (<span class="fu">count</span>) rep78, <span class="bn">over</span>(foreign)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div><div class="column" style="width:10%;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><a href="images/arrow.png" class="lightbox" data-gallery="quarto-lightbox-gallery-69"><img src="images/arrow.png" height="40" class="figure-img"></a></p>
+</figure>
+</div>
+</div><div class="column" style="width:45%;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><a href="images/studio.png" class="lightbox" data-gallery="quarto-lightbox-gallery-70"><img src="images/studio.png" height="34" class="figure-img"></a></p>
+</figure>
+</div>
+<div class="cell">
+<div class="sourceCode" id="cb46"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># Load data and ggplot2</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://ggplot2.tidyverse.org">ggplot2</a></span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/utils/data.html">data</a></span><span class="op">(</span><span class="va">df_my_data</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co">#Create bar chart</span></span>
+<span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span>data <span class="op">=</span> <span class="va">df_my_data</span>, </span>
+<span>       <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/factor.html">factor</a></span><span class="op">(</span><span class="va">cyl</span><span class="op">)</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_bar.html">geom_bar</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span> <span class="co">#Here is the bar</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">xlab</a></span><span class="op">(</span><span class="st">"Number of cylinders"</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">ylab</a></span><span class="op">(</span><span class="st">"Count"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+<p>I also want to provide a good cheat sheet that contains more information about the differences between Stata and R.</p>
+</section></section><section id="cheat-sheet-stata-to-r" class="level1"><h1>Cheat Sheet: Stata to R</h1>
+<hr>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><a href="images/cheatsheet1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-71"><img src="images/cheatsheet1.png" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><a href="images/cheatsheet2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-72"><img src="images/cheatsheet2.png" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
+<p>&nbsp;</p>
+</section><section id="rstata" class="level1"><h1>RStata</h1>
+<p>Believe it or not, R has a package called <code>RStata</code>. This package Stata interface allows the user to execute Stata commands (both inline and from a .do file) from R. I leave <a href="https://github.com/lbraglia/RStata">here</a>the package. Looks interesting; however, I personally prefer to use a language as expected.</p>
+</section><section id="conclusion" class="level1"><h1>Conclusion</h1>
+<hr>
+<p>In conclusion, the decision to transition from one to the other should be made based on the user’s specific needs and preferences. This notebook shows you the differences between Stata and R. At the end, use the language you prefer, but in my own experience, R was a life changer.</p>
 <p>&nbsp;</p>
 </section><section id="references" class="level1"><h1>References</h1>
 <hr>
@@ -1305,7 +1506,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </ul>
 </div>
   </div>
-</footer>
+</footer><script>var lightboxQuarto = GLightbox({"openEffect":"fade","closeEffect":"fade","skin":"lightwidth","selector":".lightbox","loop":true,"descPosition":"left"});</script>
 
 
 <script src="../../../site_libs/quarto-html/zenscroll-min.js"></script>

@@ -459,7 +459,7 @@
     "href": "learn/rstudio.html",
     "title": "Learn R",
     "section": "",
-    "text": "Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n  \n\n\n\n\n\nIf you use Stata for your analysis, but you are curious or want to switch to the R world, this is your guide for it.\n\n\n\n\nR\n\n\nStata\n\n\nTransition\n\n\n \n\n\n\n\nApr 23, 2023\n\n\nJorge Roa\n\n\n9 min\n\n\n\n\n\n\n  \n\n\n\n\n\nLearn the basic tools for scraping Twitter Data in R\n\n\n\n\nTwitter\n\n\nWebscraping\n\n\nText\n\n\n \n\n\n\n\nApr 18, 2023\n\n\nLukas Lehmann\n\n\n11 min\n\n\n\n\n\n\n  \n\n\n\n\n\nThis is why R is so powerful: all kind of objects and possibilites. Naming objects, understand structures is crucial to learn\n\n\n\n\nRstudio\n\n\nObjects\n\n\n \n\n\n\n\nApr 16, 2023\n\n\nJorge Roa\n\n\n17 min\n\n\n\n\n\n\n  \n\n\n\n\n\nLearn the basics of R: open a project, setting a working directory and navigate RStudio interface\n\n\n\n\nRstudio\n\n\nInterface\n\n\n \n\n\n\n\nApr 12, 2023\n\n\nJorge Roa\n\n\n8 min\n\n\n\n\n\n\n  \n\n\n\n\n\nUnlock the power of data analysis and statistical computing with R and RStudio! Whether you are a student of public policy or a seasoned professional.\n\n\n\n\nR\n\n\nRStudio\n\n\nAccesibility\n\n\nInstall\n\n\n \n\n\n\n\nMar 2, 2023\n\n\nJorge Roa\n\n\n2 min\n\n\n\n\n\n\n  \n\n\n\n\n\nMultithreading offers faster and more efficient data processing, allowing for quicker analysis of complex datasets.\n\n\n\n\nMultithread\n\n\nData table\n\n\n \n\n\n\n\nJul 28, 2022\n\n\nJorge Roa, Fernando Alarid-Escudero\n\n\n3 min\n\n\n\n\n\n\nNo matching items"
+    "text": "Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n  \n\n\n\n\n\nIf you use Stata for your analysis, but you are curious or want to switch to the R world, this is your guide for it.\n\n\n\n\nR\n\n\nStata\n\n\nTransition\n\n\n \n\n\n\n\nApr 23, 2023\n\n\nJorge Roa\n\n\n11 min\n\n\n\n\n\n\n  \n\n\n\n\n\nLearn the basic tools for scraping Twitter Data in R\n\n\n\n\nTwitter\n\n\nWebscraping\n\n\nText\n\n\n \n\n\n\n\nApr 18, 2023\n\n\nLukas Lehmann\n\n\n11 min\n\n\n\n\n\n\n  \n\n\n\n\n\nThis is why R is so powerful: all kind of objects and possibilites. Naming objects, understand structures is crucial to learn\n\n\n\n\nRstudio\n\n\nObjects\n\n\n \n\n\n\n\nApr 16, 2023\n\n\nJorge Roa\n\n\n17 min\n\n\n\n\n\n\n  \n\n\n\n\n\nLearn the basics of R: open a project, setting a working directory and navigate RStudio interface\n\n\n\n\nRstudio\n\n\nInterface\n\n\n \n\n\n\n\nApr 12, 2023\n\n\nJorge Roa\n\n\n8 min\n\n\n\n\n\n\n  \n\n\n\n\n\nUnlock the power of data analysis and statistical computing with R and RStudio! Whether you are a student of public policy or a seasoned professional.\n\n\n\n\nR\n\n\nRStudio\n\n\nAccesibility\n\n\nInstall\n\n\n \n\n\n\n\nMar 2, 2023\n\n\nJorge Roa\n\n\n2 min\n\n\n\n\n\n\n  \n\n\n\n\n\nMultithreading offers faster and more efficient data processing, allowing for quicker analysis of complex datasets.\n\n\n\n\nMultithread\n\n\nData table\n\n\n \n\n\n\n\nJul 28, 2022\n\n\nJorge Roa, Fernando Alarid-Escudero\n\n\n3 min\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "members/statute/statute.html#section-1-eligibility",
@@ -823,6 +823,48 @@
     "href": "learn/rstudio/stata_to_r/index.html#linear-model",
     "title": "Making the Transition? A Guide for switching from Stata to R",
     "section": "Linear Model",
-    "text": "Linear Model\n\n\n\n\n\n\n/* Fit a linear model */\nregress mpg weight length foreign\n\n/* Print summary */\nestimates table\n\n\n\n\n\n\n\n\n\n\n\n#Fit a linear model\nmodel_lm <- lm(mpg ~ wt + qsec + vs, data = df_my_data)\n\n#Print summary\nsummary(model_lm)"
+    "text": "Linear Model\n\n\n\n\n\n\n/* Fit a linear model */\nregress mpg weight length foreign\n\n/* Print summary */\nestimates table\n\n\n\n\n\n\n\n\n\n\n\n#Fit a linear model\nmodel_lm <- lm(mpg ~ wt + qsec + vs, \n               data = df_my_data)\n\n#Print summary\nsummary(model_lm)"
+  },
+  {
+    "objectID": "learn/rstudio/stata_to_r/index.html#logistic-model",
+    "href": "learn/rstudio/stata_to_r/index.html#logistic-model",
+    "title": "Making the Transition? A Guide for switching from Stata to R",
+    "section": "Logistic Model",
+    "text": "Logistic Model\n\n\n\n\n\n\n/* Fit a logistic regression model */\nlogit foreign weight length\n\n/* Print summary */\nestimates table\n\n\n\n\n\n\n\n\n\n\n\n#Fit a logistic regression model\nmodel_log <- glm(vs ~ wt + qsec, \n                 data = df_my_data, \n                 family = binomial())\n\n#Print summary\nsummary(model)"
+  },
+  {
+    "objectID": "learn/rstudio/stata_to_r/index.html#poisson-model",
+    "href": "learn/rstudio/stata_to_r/index.html#poisson-model",
+    "title": "Making the Transition? A Guide for switching from Stata to R",
+    "section": "Poisson Model",
+    "text": "Poisson Model\n\n\n\n\n\n\n/* Fit a Poisson regression model */\npoisson accidents weight length foreign\n\n/* Print summary */\nestimates table\n\n\n\n\n\n\n\n\n\n\n\n#Fit a Poisson regression model\nmodel_poiss <- glm(am ~ wt + hp, \n                   data = df_my_data, \n                   family = poisson())\n\n#Print summary\nsummary(model)"
+  },
+  {
+    "objectID": "learn/rstudio/stata_to_r/index.html#scatter-plot",
+    "href": "learn/rstudio/stata_to_r/index.html#scatter-plot",
+    "title": "Making the Transition? A Guide for switching from Stata to R",
+    "section": "Scatter plot",
+    "text": "Scatter plot\n\n\n\n\n\n\n/* Create scatter plot */\nscatter price mpg\n\n\n\n\n\n\n\n\n\n\n\n# Load data and ggplot2\nlibrary(ggplot2)\ndata(df_my_data)\n\n#Create scatter plot\nggplot(df_my_data, aes(x = mpg, y = wt)) + \n  geom_point() + #Here is the scatter\n  xlab(\"Miles per gallon\") +\n  ylab(\"Weight\")"
+  },
+  {
+    "objectID": "learn/rstudio/stata_to_r/index.html#line-plot",
+    "href": "learn/rstudio/stata_to_r/index.html#line-plot",
+    "title": "Making the Transition? A Guide for switching from Stata to R",
+    "section": "Line plot",
+    "text": "Line plot\n\n\n\n\n\n\n/* Create Line plot */\ntwoway line le_w le_y, xlabel(1950(10)2010)\n\n\n\n\n\n\n\n\n\n\n\n# Load data and ggplot2\nlibrary(ggplot2)\ndata(df_my_data)\n\n#Create line plot\nggplot(df_my_data, aes(x = year, y = pop)) + \n  geom_line() + #Here is the line\n  xlab(\"Year\") +\n  ylab(\"Population\")"
+  },
+  {
+    "objectID": "learn/rstudio/stata_to_r/index.html#line-plot-1",
+    "href": "learn/rstudio/stata_to_r/index.html#line-plot-1",
+    "title": "Making the Transition? A Guide for switching from Stata to R",
+    "section": "Line plot",
+    "text": "Line plot\n\n\n\n\n\n\n/* Create a Bar plot */\ngraph bar (count) rep78, over(foreign)\n\n\n\n\n\n\n\n\n\n\n\n# Load data and ggplot2\nlibrary(ggplot2)\ndata(df_my_data)\n\n#Create bar chart\nggplot(data = df_my_data, aes(x = factor(cyl))) +\n  geom_bar() + #Here is the bar\n  xlab(\"Number of cylinders\") +\n  ylab(\"Count\")"
+  },
+  {
+    "objectID": "learn/rstudio/stata_to_r/index.html#bar-plot",
+    "href": "learn/rstudio/stata_to_r/index.html#bar-plot",
+    "title": "Making the Transition? A Guide for switching from Stata to R",
+    "section": "Bar plot",
+    "text": "Bar plot\n\n\n\n\n\n\n/* Create a Bar plot */\ngraph bar (count) rep78, over(foreign)\n\n\n\n\n\n\n\n\n\n\n\n# Load data and ggplot2\nlibrary(ggplot2)\ndata(df_my_data)\n\n#Create bar chart\nggplot(data = df_my_data, \n       aes(x = factor(cyl))) +\n  geom_bar() + #Here is the bar\n  xlab(\"Number of cylinders\") +\n  ylab(\"Count\")\n\n\n\n \nI also want to provide a good cheat sheet that contains more information about the differences between Stata and R."
   }
 ]
