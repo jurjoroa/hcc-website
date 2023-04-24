@@ -393,7 +393,7 @@ Resources</h1>
 ::: {#learn}
 :::
 
-<a href="../learn/rstudio.html"> <button type="button" class="btn btn-primary float-end btn-sm">See all our tools</button></a>
+<a href="../learn/rstudio.html"> <button type="button" class="btn btn-primary float-end btn-sm color-9">See all our tools</button></a>
 
 </div> 
 
