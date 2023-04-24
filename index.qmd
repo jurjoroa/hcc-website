@@ -348,39 +348,45 @@ color: grey">*All the images were generated with Dall-e. </div>
 </div> 
 
 
-
-
 <div class="layout_grid_learnr">
 
 <div class="social-media">
-<h1 class="scroll-text">{{< li aefjguud trigger=loop delay=1000 scale=25 >}}Resources</h1>
+<h1 class="scroll-text back_resource" style="display: flex; align-items: center; justify-content: center; border-radius: 10px; font-weight: 700;
+  color: white;
+  font-size: 50px;">
 
-<div style = "margin-top: 35px;"> </div> 
+<lord-icon
+    src="https://cdn.lordicon.com/ckatldkn.json"
+    trigger="loop"
+    delay="250"
+    style="width:100px;height:100px">
+</lord-icon>
 
-This section includes online resources that provide step-by-step tutorials and guides for the people that is interested in learning code. Feel free to check them out. We are adding resources constantly.
+Resources</h1>
 
 ::: {#Resources}
 :::
 
-
 </div> 
 
-
   <div>
-<h1 class="scroll-text">
-  
-::: {.grid}
-::: {.g-col-4}
-:::
-::: {.g-col-7}
-{{< li azartkjs trigger=loop delay=1000 scale=50 >}} Learn R
-:::
-::: {.g-col-1}
-:::
-:::
+<h1 class="scroll-text back_resource" style="display: flex; align-items: center; justify-content: center; border-radius: 10px;
+  font-weight: 900;
+  color: white;
+  font-size: 50px;">
+
+<lord-icon
+    src="https://cdn.lordicon.com/azartkjs.json"
+    trigger="loop"
+    delay="250"
+    style="width:100px;height:100px">
+</lord-icon>
+
+ Learn R
+
 
 </h1> 
-  
+
 
 <div class="image-grid">
 
