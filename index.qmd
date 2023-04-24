@@ -21,6 +21,17 @@ listing:
     sort-ui: false
     filter-ui: false
     page-size: 2
+  - id: books
+    contents: material/Books/*/index.qmd
+    type: grid
+    grid-columns: 4
+    fields: [image, title]
+    sort: "date desc"
+    #categories: cloud
+    sort-ui: false
+    filter-ui: false
+    page-size: 4
+    image-height: 400px
   - id: Resources
     contents: material/Resources/*/index.qmd
     type: grid
@@ -34,7 +45,7 @@ listing:
   - id: material
     contents: material/Certifications/*/index.qmd
     type: table
-    fields: [image, title, subtitle, author]
+    fields: [image, title, subtitle]
     sort: "date desc"
     #categories: cloud
     sort-ui: false
@@ -429,30 +440,53 @@ font-weight: 700;
 
 <hr class="sep-2" />
 
+<div class="layout_grid_books">
 
 
 
-<div class="layout_grid" id="main">
+ <div class="events">
 
 
-This is a Quarto website.
+ <div class="social-media-mobile3">
+ 
+ <h1 class="scroll-text book_style_mob"> Books </h1>
+  
+  <div style="justify-self: end;"> 
 
-To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
+::: {#books}
+:::
 
-```{r}
-1 + 1 + 1
-```
+<a href="../books/index.html"> <button type="button" class="btn btn-primary float-end btn-sm">See all our books</button></a>
 
+
+ </div>
+  
+</div> 
 
 </div> 
 
+<h1 class="scroll-text book_style_desktop"> Books </h1>
+ 
+</div>
+
+</div>
+
+<hr class="sep-2" />
+
 
 <div class="layout_table">
+
+<h1 class="scroll-text certification_style_desktop"> Certifications </h1>
+<h1 class="scroll-text certification_style_mobile"> Certifications </h1>
 
 ::: {#material}
 :::
 
 <a href="../material/index.html"> <button type="button" class="btn btn-primary float-end btn-sm">See all our material</button></a>
+
+</br>
+
+
 
 </div>
 

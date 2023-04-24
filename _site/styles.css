@@ -700,7 +700,7 @@ header:not(.headroom):not(.quarto-title-block).is-visible {
 }
 
 .layout_table{
-  padding: 10% 6%;
+  padding: 3% 12%;
 }
 
 .layout_hertie{
@@ -729,6 +729,12 @@ header:not(.headroom):not(.quarto-title-block).is-visible {
   padding: 1% 6%;
   display: grid; 
   grid-template-columns: 1.5fr 1.5fr; 
+}
+
+.layout_grid_books{
+  padding: 1% 6%;
+  display: grid; 
+  grid-template-columns: 2fr 1fr; 
 }
 
 .section_white{
@@ -2221,6 +2227,25 @@ bottom: 0 !important;
 }
 
 
+@media (max-width: 1100px) {
+  
+  .layout_grid_books{
+  padding: 1% 6%;
+  //border-top: 2px solid #eeeeee;
+  display: grid; 
+  grid-template-columns: 5fr; 
+}
+
+.social-media-mobile3{
+  display: flex; 
+  flex-direction: column; 
+  align-items: left;
+}
+
+
+}
+
+
 @media (max-width: 700px) {
   
 .social-media-mobile2{
@@ -2703,9 +2728,8 @@ div.about-entity .title{
 */
 
 .quarto-listing-table{
-  background: linear-gradient(to right, #ad5389, #3c1053);
-    border: 3px solid white !important;
-    border-radius: 10px;
+  background: linear-gradient(to left, #000428, #004e92);
+    border: 3px solid #BA0020 !important;
 }
 
 .quarto-listing-table th{
@@ -2713,19 +2737,19 @@ div.about-entity .title{
 }
 
 .quarto-listing-table td.listing-title span{
-  color: #90ACE3;
+  color: #0070c9;
    text-decoration: underline;
-    font-size: 14px;
+    font-size: 20px;
 }
 
 .quarto-listing-table td.listing-subtitle span{
   color: white;
-   font-size: 14px;
+   font-size: 20px;
 }
 
 .quarto-listing-table td.listing-author{
   color: white;
-   font-size: 14px;
+   font-size: 20px;
 }
 
 
@@ -3451,6 +3475,97 @@ div.quarto-about-trestles.column-page div.about-contents{
 
 
 
-/*Error 404*/
 
+#listing-books .card-left .animate__delay-\.6s{
+  font-size: 15px;
+  
+}
+
+
+.book_style_mob{
+display: none;
+  
+}
+
+
+.book_style_desktop{
+  font-size: 90px;
+margin-top:20px;
+display: flex;
+justify-content: center;
+align-items: center;
+font-weight: 700;
+ background-image: repeating-linear-gradient(315deg, #00FFFF2E 92%, #073AFF00 100%),repeating-radial-gradient(75% 75% at 238% 218%, #00FFFF12 30%, #073AFF14 39%),radial-gradient(99% 99% at 109% 2%, #00C9FFFF 0%, #073AFF00 100%),radial-gradient(99% 99% at 21% 78%, #7B00FFFF 0%, #073AFF00 100%),radial-gradient(160% 154% at 711px -303px, #2000FFFF 0%, #073AFFFF 100%);
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+.certification_style_desktop{
+  font-size: 70px;
+margin-top:-20px;
+display: flex;
+justify-content: center;
+align-items: center;
+font-weight: 700;
+ background-image: repeating-linear-gradient(315deg, #00FFFF2E 92%, #073AFF00 100%),repeating-radial-gradient(75% 75% at 238% 218%, #00FFFF12 30%, #073AFF14 39%),radial-gradient(99% 99% at 109% 2%, #00C9FFFF 0%, #073AFF00 100%),radial-gradient(99% 99% at 21% 78%, #7B00FFFF 0%, #073AFF00 100%),radial-gradient(160% 154% at 711px -303px, #2000FFFF 0%, #073AFFFF 100%);
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+.certification_style_mobile{
+display: none;
+}
+
+
+@media only screen and (max-width: 1100px) {
+
+
+.book_style_mob{
+  font-size: 90px;
+margin-top:20px;
+display: flex;
+justify-content: center;
+align-items: center;
+font-weight: 700;
+ background-image: repeating-linear-gradient(315deg, #00FFFF2E 92%, #073AFF00 100%),repeating-radial-gradient(75% 75% at 238% 218%, #00FFFF12 30%, #073AFF14 39%),radial-gradient(99% 99% at 109% 2%, #00C9FFFF 0%, #073AFF00 100%),radial-gradient(99% 99% at 21% 78%, #7B00FFFF 0%, #073AFF00 100%),radial-gradient(160% 154% at 711px -303px, #2000FFFF 0%, #073AFFFF 100%);
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  
+}
+
+.book_style_desktop{
+display: none;
+}
+
+
+}
+
+
+
+@media only screen and (max-width: 800px) {
+
+
+.certification_style_desktop{
+display: none;
+}
+
+
+
+.certification_style_mobile{
+  font-size: 30px;
+margin-top:-20px;
+display: flex;
+justify-content: center;
+align-items: center;
+font-weight: 700;
+ background-image: repeating-linear-gradient(315deg, #00FFFF2E 92%, #073AFF00 100%),repeating-radial-gradient(75% 75% at 238% 218%, #00FFFF12 30%, #073AFF14 39%),radial-gradient(99% 99% at 109% 2%, #00C9FFFF 0%, #073AFF00 100%),radial-gradient(99% 99% at 21% 78%, #7B00FFFF 0%, #073AFF00 100%),radial-gradient(160% 154% at 711px -303px, #2000FFFF 0%, #073AFFFF 100%);
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+}
 

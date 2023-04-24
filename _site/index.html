@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.2.280">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
 <title>Hertie Coding Club - Home</title>
 <style>
 code{white-space: pre-wrap;}
@@ -17,70 +20,8 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1.6em;
   vertical-align: middle;
 }
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-    color: #aaaaaa;
-  }
-pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
-code span.al { color: #ff0000; font-weight: bold; } /* Alert */
-code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
-code span.at { color: #7d9029; } /* Attribute */
-code span.bn { color: #40a070; } /* BaseN */
-code span.bu { color: #008000; } /* BuiltIn */
-code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
-code span.ch { color: #4070a0; } /* Char */
-code span.cn { color: #880000; } /* Constant */
-code span.co { color: #60a0b0; font-style: italic; } /* Comment */
-code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
-code span.do { color: #ba2121; font-style: italic; } /* Documentation */
-code span.dt { color: #902000; } /* DataType */
-code span.dv { color: #40a070; } /* DecVal */
-code span.er { color: #ff0000; font-weight: bold; } /* Error */
-code span.ex { } /* Extension */
-code span.fl { color: #40a070; } /* Float */
-code span.fu { color: #06287e; } /* Function */
-code span.im { color: #008000; font-weight: bold; } /* Import */
-code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
-code span.kw { color: #007020; font-weight: bold; } /* Keyword */
-code span.op { color: #666666; } /* Operator */
-code span.ot { color: #007020; } /* Other */
-code span.pp { color: #bc7a00; } /* Preprocessor */
-code span.sc { color: #4070a0; } /* SpecialChar */
-code span.ss { color: #bb6688; } /* SpecialString */
-code span.st { color: #4070a0; } /* String */
-code span.va { color: #19177c; } /* Variable */
-code span.vs { color: #4070a0; } /* VerbatimString */
-code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
+
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="site_libs/clipboard/clipboard.min.js"></script>
@@ -103,7 +44,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <link href="site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
 <link href="site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
 <link href="site_libs/quarto-contrib/animate-4.1.1/animate.min.css" rel="stylesheet">
-<script src="site_libs/quarto-contrib/lord-icon-bundle-3.4.2/bundle.js"></script><script id="quarto-search-options" type="application/json">{
+<script src="site_libs/quarto-contrib/lord-icon-bundle-3.4.2/bundle.js"></script>
+<script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
   "collapse-after": 3,
@@ -121,7 +63,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     "search-detached-cancel-button-title": "Cancel",
     "search-submit-button-title": "Submit"
   }
-}</script><script>
+}</script>
+<script>
 
   window.document.addEventListener("DOMContentLoaded", function (_event) {
     const listingTargetEl = window.document.querySelector('#listing-learn .list');
@@ -182,6 +125,35 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   
 
   window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-books .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-image','listing-title',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      page: 4,
+    pagination: { item: "<li class='page-item'><a class='page page-link' href='#'></a></li>" },
+      searchColumns: ["listing-title","listing-author","listing-date","listing-image","listing-description"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-books'] = new List('listing-books', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  
+
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
     const listingTargetEl = window.document.querySelector('#listing-Resources .list');
     if (!listingTargetEl) {
       // No listing discovered, do not attach.
@@ -218,7 +190,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     }
 
     const options = {
-      valueNames: ['listing-image','listing-title','listing-subtitle','listing-author',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-title-sort'] }],
+      valueNames: ['listing-image','listing-title','listing-subtitle',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-title-sort'] }],
       page: 2,
     pagination: { item: "<li class='page-item'><a class='page page-link' href='#'></a></li>" },
       searchColumns: ["listing-date","listing-title","listing-author"],
@@ -237,17 +209,24 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       window['quarto-listing-loaded']();
     }
   })
-  </script><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-HJEMN0LJY7"></script><script type="text/javascript">
+  </script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-HJEMN0LJY7"></script>
+
+<script type="text/javascript">
 
 window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 gtag('config', 'G-HJEMN0LJY7', { 'anonymize_ip': true});
-</script><style>html{ scroll-behavior: smooth; }</style>
-<!-- Primary Meta Tags --><title>Hertie Coding Club - Everybody can learn to code</title>
+</script>
+<style>html{ scroll-behavior: smooth; }</style>
+<!-- Primary Meta Tags -->
+<title>Hertie Coding Club - Everybody can learn to code</title>
 <meta name="title" content="Hertie Coding Club - Everybody can learn to code">
 <meta name="description" content="Welcome to the Hertie Coding Club! Our goal as a club is to help everyone and between us learn coding skills and show that coding is for everyone, no matter our background.">
-<!-- Open Graph / Facebook --><meta property="og:type" content="website">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
 <meta property="og:url" content="https://www.hertiecodingclub.com">
 <meta property="og:title" content="Hertie Coding Club - Home">
 <meta property="og:description" content="Welcome to the Hertie Coding Club! Our goal as a club is to help everyone and between us learn coding skills and show that coding is for everyone, no matter our background.">
@@ -280,22 +259,39 @@ gtag('config', 'G-HJEMN0LJY7', { 'anonymize_ip': true});
 <style>:root{--animate-duration:3s;--animate-delay:2s;--animate-repeat:1}</style>
 <style>:root{--animate-duration:3s;--animate-delay:2s;--animate-repeat:1}</style>
 <style>:root{--animate-duration:3s;--animate-delay:2s;--animate-repeat:1}</style>
-<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script><link rel="stylesheet" href="styles.css">
+<style>:root{--animate-duration:3s;--animate-delay:2s;--animate-repeat:1}</style>
+<style>:root{--animate-duration:3s;--animate-delay:2s;--animate-repeat:1}</style>
+<style>:root{--animate-duration:3s;--animate-delay:2s;--animate-repeat:1}</style>
+<style>:root{--animate-duration:3s;--animate-delay:2s;--animate-repeat:1}</style>
+<style>:root{--animate-duration:3s;--animate-delay:2s;--animate-repeat:1}</style>
+<style>:root{--animate-duration:3s;--animate-delay:2s;--animate-repeat:1}</style>
+<style>:root{--animate-duration:3s;--animate-delay:2s;--animate-repeat:1}</style>
+<style>:root{--animate-duration:3s;--animate-delay:2s;--animate-repeat:1}</style>
+<style>:root{--animate-duration:3s;--animate-delay:2s;--animate-repeat:1}</style>
+<style>:root{--animate-duration:3s;--animate-delay:2s;--animate-repeat:1}</style>
+
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<link rel="stylesheet" href="styles.css">
 </head>
+
 <body class="nav-fixed">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top"><nav class="navbar navbar-expand-lg navbar-dark "><div class="navbar-container container-fluid">
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
       <div class="navbar-brand-container">
     <a href="./index.html" class="navbar-brand navbar-brand-logo">
-    <img src="./images/hcc_final.png" alt="" class="navbar-logo"></a>
+    <img src="./images/hcc_final.png" alt="" class="navbar-logo">
+    </a>
   </div>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
-<li class="nav-item">
+  <li class="nav-item">
     <a class="nav-link active" href="./index.html" aria-current="page"><i class="bi bi-house-fill" role="img">
 </i> 
  <span class="menu-text">Home</span></a>
@@ -304,8 +300,8 @@ gtag('config', 'G-HJEMN0LJY7', { 'anonymize_ip': true});
     <a class="nav-link dropdown-toggle" href="#" id="nav-menu-fa-solid-people-group--members" role="button" data-bs-toggle="dropdown" aria-expanded="false">
  <span class="menu-text"><i class="fa-solid fa-people-group" aria-label="people-group"></i> Members</span>
     </a>
-    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-fa-solid-people-group--members">
-<li>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-fa-solid-people-group--members">    
+        <li>
     <a class="dropdown-item" href="./members/team/team.html">
  <span class="dropdown-text"><i class="fa-solid fa-person-chalkboard" aria-label="person-chalkboard"></i> Team</span></a>
   </li>  
@@ -318,15 +314,15 @@ gtag('config', 'G-HJEMN0LJY7', { 'anonymize_ip': true});
  <span class="dropdown-text"><i class="fa-solid fa-scale-balanced" aria-label="scale-balanced"></i> Club Statutes</span></a>
   </li>  
     </ul>
-</li>
+  </li>
   <li class="nav-item dropdown ">
     <a class="nav-link dropdown-toggle" href="#" id="nav-menu-learn" role="button" data-bs-toggle="dropdown" aria-expanded="false">
       <i class="bi bi-mortarboard-fill" role="img">
 </i> 
  <span class="menu-text">Learn</span>
     </a>
-    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-learn">
-<li>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-learn">    
+        <li>
     <a class="dropdown-item" href="./learn/rstudio.html">
  <span class="dropdown-text"><i class="fa-brands fa-r-project" aria-label="r-project"></i> language</span></a>
   </li>  
@@ -335,7 +331,7 @@ gtag('config', 'G-HJEMN0LJY7', { 'anonymize_ip': true});
  <span class="dropdown-text"><i class="fa-brands fa-python" aria-label="python"></i> Python</span></a>
   </li>  
     </ul>
-</li>
+  </li>
   <li class="nav-item">
     <a class="nav-link" href="./material/index.html">
  <span class="menu-text"><i class="fa-solid fa-meteor" aria-label="meteor"></i> Material</span></a>
@@ -355,18 +351,22 @@ gtag('config', 'G-HJEMN0LJY7', { 'anonymize_ip': true});
  <span class="menu-text"><i class="fa-solid fa-laptop-code" aria-label="laptop-code"></i> About us</span></a>
   </li>  
 </ul>
-<div class="quarto-toggle-container">
+              <div class="quarto-toggle-container">
                   <a href="" class="quarto-color-scheme-toggle nav-link" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
               </div>
               <div id="quarto-search" class="" title="Search"></div>
           </div> <!-- /navcollapse -->
       </div> <!-- /container-fluid -->
-    </nav></header><!-- content --><div id="quarto-content" class="quarto-container page-layout-custom page-navbar">
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-layout-custom page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
 <!-- main -->
 
-<header id="title-block-header" class="quarto-title-block default"><div class="quarto-title">
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
 <h1 class="title">Hertie Coding Club - Home</h1>
 </div>
 
@@ -380,17 +380,30 @@ gtag('config', 'G-HJEMN0LJY7', { 'anonymize_ip': true});
   </div>
   
 
-</header><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-<link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet">
-<!-- Microsoft Clarity --><script type="text/javascript">
+</header>
+
+
+
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet">  
+
+<!-- Microsoft Clarity -->
+<script type="text/javascript">
     (function(c,l,a,r,i,t,y){
         c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
         t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
         y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
     })(window, document, "clarity", "script", "gh3qhfx6uq");
-</script><!--  It doesn't work with class. We nned to put style  --><div style=" flex-direction: column; width: 100%; height: 100vh; margin-top: -100px; background-size: cover; background-position: center; background-repeat: no-repeat; overflow: hidden; overflow: clip;  contain: content; display: flex; align-items: center; justify-content: center; background: linear-gradient(to right, #000428, #004e92);">
+</script>
 
-<css-doodle><style>
+
+
+<!--  It doesn't work with class. We nned to put style  -->
+<div style=" flex-direction: column; width: 100%; height: 100vh; margin-top: -100px; background-size: cover; background-position: center; background-repeat: no-repeat; overflow: hidden; overflow: clip;  contain: content; display: flex; align-items: center; justify-content: center; background: linear-gradient(to right, #000428, #004e92);">
+
+<css-doodle>
+  <style>
     @grid: 50x1 / 50vmin;
     :container {
       perspective: 23vmin;
@@ -429,12 +442,15 @@ gtag('config', 'G-HJEMN0LJY7', { 'anonymize_ip': true});
         transform: translate3d(0, 0, 1vmin);
       }
     }
-  </style></css-doodle><div class="image">
+  </style>
+</css-doodle>
+
+<div class="image">
 <img src="images/hcc_long_welw_1400.png">
-</div>
+  </div>
 <div class="image_mob">
 <img src="images/hcc_long_wel_smartw_1400.png">
-</div>
+  </div>
 
 <button class="btn-21"> <span> Learn more </span> </button>
 
@@ -456,17 +472,25 @@ gtag('config', 'G-HJEMN0LJY7', { 'anonymize_ip': true});
 <div class="quote-wrapper">
 <div class="quote-content">
   <div class="quote-img">
-<svg xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewbox="0 0 100 125" space="preserve" class="svg-quote"><g><g><path fill="#FFFFFF" fill-rule="evenodd" clip-rule="evenodd" d="M6.438,50.5v35.875h35.875V50.5h-20.5c0-11.321,9.179-20.5,20.5-20.5V14.625    C22.498,14.625,6.438,30.686,6.438,50.5z M93.562,30V14.625c-19.814,0-35.875,16.061-35.875,35.875v35.875h35.875V50.5h-20.5    C73.062,39.179,82.241,30,93.562,30z"></path></g></g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewbox="0 0 100 125" space="preserve" class="svg-quote">
+  <g>
+    <g>
+      <path fill="#FFFFFF" fill-rule="evenodd" clip-rule="evenodd" d="M6.438,50.5v35.875h35.875V50.5h-20.5c0-11.321,9.179-20.5,20.5-20.5V14.625    C22.498,14.625,6.438,30.686,6.438,50.5z M93.562,30V14.625c-19.814,0-35.875,16.061-35.875,35.875v35.875h35.875V50.5h-20.5    C73.062,39.179,82.241,30,93.562,30z"></path>
+    </g>
+  </g>
+</svg>
+
 </div>
   <p class="quote-copy" style="color:white;"> <i> Our goal as a club is to help everyone and between us learn coding skills and show that coding is for everyone, no matter our background.  </i>
 </p>
   <img src="images/hcc_logo_card.png" style="width:150px; margin-bottom:20px;">
+
 </div>
 </div>
   </div>
   <div class="intro-header">
     <h1 class="scroll-text">We are the <br> Hertie Coding Club</h1>
-    <p class="scroll-text">Everybody can learn to code</p>
+    <p class="scroll-text" "="">Everybody can learn to code</p>
   </div>
 </div>
 
@@ -475,7 +499,7 @@ gtag('config', 'G-HJEMN0LJY7', { 'anonymize_ip': true});
     <div class="quote-container">
         <h1 class="quote-text scroll-text" style="color:white;">Our goal as a club is to help everyone and between us learn coding skills and show that coding is for everyone, no matter our background.</h1>
         <img src="images/hcc_logo_card.png" style="width:150px; margin-bottom:20px;">
-</div>
+    </div>
     </div>
 </div>
 
@@ -484,7 +508,9 @@ gtag('config', 'G-HJEMN0LJY7', { 'anonymize_ip': true});
 <div class="achievements">
   <div class="work">
     <div class="work-icon">
-<lord-icon src="https://cdn.lordicon.com/zjscbpdr.json" trigger="loop" delay="250" colors="primary:#30c9e8,secondary:#104891,tertiary:#c71f16,quaternary:#ebe6ef" style="width:100px;height:100px"></lord-icon><p class="work-heading scroll-text">Skill Development</p>
+<lord-icon src="https://cdn.lordicon.com/zjscbpdr.json" trigger="loop" delay="250" colors="primary:#30c9e8,secondary:#104891,tertiary:#c71f16,quaternary:#ebe6ef" style="width:100px;height:100px">
+</lord-icon>
+      <p class="work-heading scroll-text">Skill Development</p>
     </div>
     <div class="work-description">
       <p class="work-text scroll-text">Teach essential coding skills in R and other languages for data analysis and visualization to boost members' policy analysis abilities.</p>
@@ -492,7 +518,9 @@ gtag('config', 'G-HJEMN0LJY7', { 'anonymize_ip': true});
   </div>
   <div class="work">
     <div class="work-icon">
-<lord-icon src="https://cdn.lordicon.com/flvisirw.json" trigger="loop" delay="250" colors="primary:#d1e3fa,secondary:#ee66aa,tertiary:#f4a09c" style="width:100px;height:100px"></lord-icon><p class="work-heading scroll-text">Collaborative Learning</p>
+<lord-icon src="https://cdn.lordicon.com/flvisirw.json" trigger="loop" delay="250" colors="primary:#d1e3fa,secondary:#ee66aa,tertiary:#f4a09c" style="width:100px;height:100px">
+</lord-icon>
+      <p class="work-heading scroll-text">Collaborative Learning</p>
     </div>
     <div class="work-description">
       <p class="work-text scroll-text">Foster a supportive and inclusive learning atmosphere where club members can help each other overcome the challenges of the coding learning curve and develop their skills collectively.</p>
@@ -500,7 +528,9 @@ gtag('config', 'G-HJEMN0LJY7', { 'anonymize_ip': true});
   </div>
   <div class="work">
     <div class="work-icon">
-      <lord-icon src="https://cdn.lordicon.com/ckatldkn.json" trigger="loop" delay="250" colors="primary:#646e78,secondary:#c71f16,tertiary:#ebe6ef" style="width:100px;height:100px"></lord-icon><p class="work-heading scroll-text">Adaptive Curriculum</p>
+      <lord-icon src="https://cdn.lordicon.com/ckatldkn.json" trigger="loop" delay="250" colors="primary:#646e78,secondary:#c71f16,tertiary:#ebe6ef" style="width:100px;height:100px">
+</lord-icon>
+      <p class="work-heading scroll-text">Adaptive Curriculum</p>
     </div>
     <div class="work-description">
       <p class="work-text scroll-text">Regularly assess and adapt the club's programming curriculum to reflect the evolving needs of the Hertie community and the broader industry landscape, ensuring club members are prepared with relevant languages and tools.</p>
@@ -508,7 +538,9 @@ gtag('config', 'G-HJEMN0LJY7', { 'anonymize_ip': true});
   </div>
   <div class="work">
     <div class="work-icon">
-<lord-icon src="https://cdn.lordicon.com/jkzrgmvk.json" trigger="loop" delay="400" colors="primary:#f1485b,secondary:#33546d,tertiary:#30c9e8,quaternary:#fffdfd" style="width:100px;height:100px"></lord-icon><p class="work-heading scroll-text">Community Building</p>
+<lord-icon src="https://cdn.lordicon.com/jkzrgmvk.json" trigger="loop" delay="400" colors="primary:#f1485b,secondary:#33546d,tertiary:#30c9e8,quaternary:#fffdfd" style="width:100px;height:100px">
+</lord-icon>
+      <p class="work-heading scroll-text">Community Building</p>
     </div>
     <div class="work-description">
       <p class="work-text scroll-text">Establish the club as a hub for coding enthusiasts, within the Hertie community and abroad, promoting collaboration, networking, and knowledge sharing.</p>
@@ -516,7 +548,9 @@ gtag('config', 'G-HJEMN0LJY7', { 'anonymize_ip': true});
   </div>
   <div class="work">
     <div class="work-icon">
-<lord-icon src="https://cdn.lordicon.com/gkstbnbz.json" trigger="loop" delay="1000" style="width:100px;height:100px"></lord-icon><p class="work-heading scroll-text">Real-World Application</p>
+<lord-icon src="https://cdn.lordicon.com/gkstbnbz.json" trigger="loop" delay="1000" style="width:100px;height:100px">
+</lord-icon>
+      <p class="work-heading scroll-text">Real-World Application</p>
     </div>
     <div class="work-description">
       <p class="work-text scroll-text">Encourage club members to apply their coding skills to real-world policy problems, empowering them to make data-driven decisions and contribute to better policy design and analysis.</p>
@@ -544,9 +578,13 @@ gtag('config', 'G-HJEMN0LJY7', { 'anonymize_ip': true});
 </div>
 
 
-<script src="js/doodle.js"></script><script src="https://cdn.lordicon.com/ritcuqlt.js"></script><style>
+<script src="js/doodle.js"></script>
+<script src="https://cdn.lordicon.com/ritcuqlt.js"></script>
+
+<style>
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Roboto:wght@100&family=Urbanist:wght@100;900&display=swap');
 </style>
+
 <div class="layout_grid_cards">
    <div class="cardg">
     <a class="card_img" href="../material/index.html">
@@ -574,7 +612,7 @@ gtag('config', 'G-HJEMN0LJY7', { 'anonymize_ip': true});
       <div class="card__background" style="background-image:url(images/home_cards/data_dalle.jpg)"></div>
       <div class="card__content">
         <p class="card__category">Events</p>
-        <h3 class="card__heading">Our events at  the Hertie School</h3>
+        <h3 class="card__heading">Our events at <br> the Hertie School</h3>
       </div>
     </a>
 </div>
@@ -602,16 +640,16 @@ Coding is <span class="txt-rotate" data-period="2000" data-rotate="[ &quot;teamw
 <p>This section includes online resources that provide step-by-step tutorials and guides for the people that is interested in learning code. Feel free to check them out. We are adding resources constantly.</p>
 <div id="listing-Resources" class="quarto-listing quarto-listing-container-grid">
 <div class="list grid quarto-listing-cols-1">
-<div class="g-col-1" data-index="0" data-categories="edX,Learning,R,Python" data-listing-date-sort="1680645600000" data-listing-file-modified-sort="1681333885058" data-listing-reading-time-sort="0.58">
+<div class="g-col-1" data-index="0" data-categories="edX,Learning,R,Python" data-listing-date-sort="1680645600000" data-listing-file-modified-sort="1682290925133" data-listing-reading-time-sort="0.58">
 <a href="./material/Resources/edx/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
-<img src="./material/Resources/edx/images/edx.png" class="thumbnail-image card-img" style="height: 150px;"></p>
+<img src="./material/Resources/edx/images/edx.png" class="thumbnail-image card-img" style="height: 150px;">
+</p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
-</h5>
 <p><span class="animate__animated animate__fadeInDown animate__delay-.6s" style="display: inline-block;">edX</span></p>
-
+</h5>
 <div class="card-subtitle listing-subtitle">
 <p><span class="animate__animated animate__fadeInDown animate__delay-.6s" style="display: inline-block;">edX offers varios online courses with free verified certificates</span></p>
 </div>
@@ -619,16 +657,16 @@ Coding is <span class="txt-rotate" data-period="2000" data-rotate="[ &quot;teamw
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="1" data-categories="Kaggle,Learning,R,Python,Data Science" data-listing-date-sort="1680127200000" data-listing-file-modified-sort="1680218035522" data-listing-reading-time-sort="0.765">
+<div class="g-col-1" data-index="1" data-categories="Kaggle,Learning,R,Python,Data Science" data-listing-date-sort="1680127200000" data-listing-file-modified-sort="1682290925135" data-listing-reading-time-sort="0.765">
 <a href="./material/Resources/kaggle/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
-<img src="./material/Resources/kaggle/images/kaggle.png" class="thumbnail-image card-img" style="height: 150px;"></p>
+<img src="./material/Resources/kaggle/images/kaggle.png" class="thumbnail-image card-img" style="height: 150px;">
+</p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
-</h5>
 <p><span class="animate__animated animate__fadeInDown animate__delay-.6s" style="display: inline-block;">Kaggle</span></p>
-
+</h5>
 <div class="card-subtitle listing-subtitle">
 <p><span class="animate__animated animate__fadeInDown animate__delay-.6s" style="display: inline-block;">Inside Kaggle you’ll find all the code &amp; data you need to do your data science work.</span></p>
 </div>
@@ -636,16 +674,16 @@ Coding is <span class="txt-rotate" data-period="2000" data-rotate="[ &quot;teamw
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="2" data-categories="Dataquest,Learning,R,Python" data-listing-date-sort="1680040800000" data-listing-file-modified-sort="1680123440020" data-listing-reading-time-sort="0.805">
+<div class="g-col-1" data-index="2" data-categories="Dataquest,Learning,R,Python" data-listing-date-sort="1680040800000" data-listing-file-modified-sort="1682290925132" data-listing-reading-time-sort="0.805">
 <a href="./material/Resources/dataquest/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
-<img data-src="./material/Resources/dataquest/images/dataquest.png" class="thumbnail-image card-img" style="height: 150px;"></p>
+<img data-src="./material/Resources/dataquest/images/dataquest.png" class="thumbnail-image card-img" style="height: 150px;">
+</p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
-</h5>
 <p><span class="animate__animated animate__fadeInDown animate__delay-.6s" style="display: inline-block;">Dataquest Premium Access</span></p>
-
+</h5>
 <div class="card-subtitle listing-subtitle">
 <p><span class="animate__animated animate__fadeInDown animate__delay-.6s" style="display: inline-block;">Dataquest is platform that offers coding challenges and projects to learn essential data science skillsets.</span></p>
 </div>
@@ -657,7 +695,9 @@ Coding is <span class="txt-rotate" data-period="2000" data-rotate="[ &quot;teamw
 <div class="listing-no-matching d-none">
 No matching items
 </div>
-<nav id="Resources-pagination" class="listing-pagination" aria-label="Page Navigation"><ul class="pagination"></ul></nav>
+<nav id="Resources-pagination" class="listing-pagination" aria-label="Page Navigation">
+  <ul class="pagination"></ul>
+</nav>
 </div>
 </div>
 <div>
@@ -677,16 +717,15 @@ No matching items
 <div class="image-grid">
 <div id="listing-learn" class="quarto-listing quarto-listing-container-default">
 <div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="R,Stata,Transition" data-listing-date-sort="1682200800000" data-listing-file-modified-sort="1682290576591" data-listing-reading-time-sort="11.26">
+<div class="quarto-post image-right" data-index="0" data-categories="R,Stata,Transition" data-listing-date-sort="1682200800000" data-listing-file-modified-sort="1682290925113" data-listing-reading-time-sort="11.26">
 <div class="thumbnail">
-<p><a href="./learn/rstudio/stata_to_r/index.html"> <img src="./learn/rstudio/stata_to_r/images/rstudio_stata.png" class="thumnail-image"></a></p>
+<p><a href="./learn/rstudio/stata_to_r/index.html"> <img src="./learn/rstudio/stata_to_r/images/rstudio_stata.png" class="thumnail-image"> </a></p>
 </div>
 <div class="body">
 <a href="./learn/rstudio/stata_to_r/index.html">
 <h3 class="no-anchor listing-title">
-</h3>
 <p><span class="animate__animated animate__fadeInDown animate__delay-.6s" style="display: inline-block;">Making the Transition? A Guide for switching from Stata to R</span></p>
-
+</h3>
 <div class="listing-subtitle">
 <p><span class="animate__animated animate__fadeInDown animate__delay-.6s" style="display: inline-block;">If you use Stata for your analysis, but you are curious or want to switch to the R world, this is your guide for it.</span></p>
 </div>
@@ -718,16 +757,15 @@ Jorge Roa
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="1" data-categories="Twitter,Webscraping,Text" data-listing-date-sort="1681768800000" data-listing-file-modified-sort="1681914474442" data-listing-reading-time-sort="11.905">
+<div class="quarto-post image-right" data-index="1" data-categories="Twitter,Webscraping,Text" data-listing-date-sort="1681768800000" data-listing-file-modified-sort="1682290925096" data-listing-reading-time-sort="11.905">
 <div class="thumbnail">
-<p><a href="./learn/rstudio/social_media_scraping/index.html"> <img src="./learn/rstudio/social_media_scraping/images/Social.png" class="thumnail-image"></a></p>
+<p><a href="./learn/rstudio/social_media_scraping/index.html"> <img src="./learn/rstudio/social_media_scraping/images/Social.png" class="thumnail-image"> </a></p>
 </div>
 <div class="body">
 <a href="./learn/rstudio/social_media_scraping/index.html">
 <h3 class="no-anchor listing-title">
-</h3>
 <p><span class="animate__animated animate__fadeInDown animate__delay-.6s" style="display: inline-block;">Introduction to Social Media Scraping</span></p>
-
+</h3>
 <div class="listing-subtitle">
 <p><span class="animate__animated animate__fadeInDown animate__delay-.6s" style="display: inline-block;">Learn the basic tools for scraping Twitter Data in R</span></p>
 </div>
@@ -759,16 +797,15 @@ Lukas Lehmann
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="2" data-categories="Rstudio,Objects" data-listing-date-sort="1681596000000" data-listing-file-modified-sort="1681766649457" data-listing-reading-time-sort="17.48">
+<div class="quarto-post image-right" data-index="2" data-categories="Rstudio,Objects" data-listing-date-sort="1681596000000" data-listing-file-modified-sort="1682290925089" data-listing-reading-time-sort="17.48">
 <div class="thumbnail">
-<p><a href="./learn/rstudio/objects/index.html"> <img src="./learn/rstudio/objects/images/objects.png" class="thumnail-image"></a></p>
+<p><a href="./learn/rstudio/objects/index.html"> <img src="./learn/rstudio/objects/images/objects.png" class="thumnail-image"> </a></p>
 </div>
 <div class="body">
 <a href="./learn/rstudio/objects/index.html">
 <h3 class="no-anchor listing-title">
-</h3>
 <p><span class="animate__animated animate__fadeInDown animate__delay-.6s" style="display: inline-block;">Understanding R Objects: Naming, Data Structures and Classes in R</span></p>
-
+</h3>
 <div class="listing-subtitle">
 <p><span class="animate__animated animate__fadeInDown animate__delay-.6s" style="display: inline-block;">This is why R is so powerful: all kind of objects and possibilites. Naming objects, understand structures is crucial to learn</span></p>
 </div>
@@ -797,16 +834,15 @@ Jorge Roa
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="3" data-categories="Rstudio,Interface" data-listing-date-sort="1681250400000" data-listing-file-modified-sort="1681429446157" data-listing-reading-time-sort="8.82">
+<div class="quarto-post image-right" data-index="3" data-categories="Rstudio,Interface" data-listing-date-sort="1681250400000" data-listing-file-modified-sort="1682290925095" data-listing-reading-time-sort="8.82">
 <div class="thumbnail">
-<p><a href="./learn/rstudio/rstudio101/index.html"> <img data-src="./learn/rstudio/rstudio101/images/coding.png" class="thumnail-image"></a></p>
+<p><a href="./learn/rstudio/rstudio101/index.html"> <img data-src="./learn/rstudio/rstudio101/images/coding.png" class="thumnail-image"> </a></p>
 </div>
 <div class="body">
 <a href="./learn/rstudio/rstudio101/index.html">
 <h3 class="no-anchor listing-title">
-</h3>
 <p><span class="animate__animated animate__fadeInDown animate__delay-.6s" style="display: inline-block;">RStudio 101</span></p>
-
+</h3>
 <div class="listing-subtitle">
 <p><span class="animate__animated animate__fadeInDown animate__delay-.6s" style="display: inline-block;">Learn the basics of R: open a project, setting a working directory and navigate RStudio interface</span></p>
 </div>
@@ -835,16 +871,15 @@ Jorge Roa
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="4" data-categories="R,RStudio,Accesibility,Install" data-listing-date-sort="1677711600000" data-listing-file-modified-sort="1679834601100" data-listing-reading-time-sort="2.88">
+<div class="quarto-post image-right" data-index="4" data-categories="R,RStudio,Accesibility,Install" data-listing-date-sort="1677711600000" data-listing-file-modified-sort="1682290924987" data-listing-reading-time-sort="2.88">
 <div class="thumbnail">
-<p><a href="./learn/rstudio/Install-r-studio/index.html"> <img data-src="./learn/rstudio/Install-r-studio/images/r-rstudio-logos.png" class="thumnail-image"></a></p>
+<p><a href="./learn/rstudio/Install-r-studio/index.html"> <img data-src="./learn/rstudio/Install-r-studio/images/r-rstudio-logos.png" class="thumnail-image"> </a></p>
 </div>
 <div class="body">
 <a href="./learn/rstudio/Install-r-studio/index.html">
 <h3 class="no-anchor listing-title">
-</h3>
 <p><span class="animate__animated animate__fadeInDown animate__delay-.6s" style="display: inline-block;">Install R and Rstudio: why R rocks 💻 🔥</span></p>
-
+</h3>
 <div class="listing-subtitle">
 <p><span class="animate__animated animate__fadeInDown animate__delay-.6s" style="display: inline-block;">Unlock the power of data analysis and statistical computing with R and RStudio! Whether you are a student of public policy or a seasoned professional.</span></p>
 </div>
@@ -879,16 +914,15 @@ Jorge Roa
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="5" data-categories="Multithread,Data table" data-listing-date-sort="1658959200000" data-listing-file-modified-sort="1681414366687" data-listing-reading-time-sort="3.935">
+<div class="quarto-post image-right" data-index="5" data-categories="Multithread,Data table" data-listing-date-sort="1658959200000" data-listing-file-modified-sort="1682290925036" data-listing-reading-time-sort="3.935">
 <div class="thumbnail">
-<p><a href="./learn/rstudio/Multithreading/index.html"> <img data-src="./learn/rstudio/Multithreading/images/apple_intel_f.png" class="thumnail-image"></a></p>
+<p><a href="./learn/rstudio/Multithreading/index.html"> <img data-src="./learn/rstudio/Multithreading/images/apple_intel_f.png" class="thumnail-image"> </a></p>
 </div>
 <div class="body">
 <a href="./learn/rstudio/Multithreading/index.html">
 <h3 class="no-anchor listing-title">
-</h3>
 <p><span class="animate__animated animate__fadeInDown animate__delay-.6s" style="display: inline-block;">Enable Multithread with data.table in Mac/Intel chips</span></p>
-
+</h3>
 <div class="listing-subtitle">
 <p><span class="animate__animated animate__fadeInDown animate__delay-.6s" style="display: inline-block;">Multithreading offers faster and more efficient data processing, allowing for quicker analysis of complex datasets.</span></p>
 </div>
@@ -921,7 +955,9 @@ Jorge Roa, Fernando Alarid-Escudero
 <div class="listing-no-matching d-none">
 No matching items
 </div>
-<nav id="learn-pagination" class="listing-pagination" aria-label="Page Navigation"><ul class="pagination"></ul></nav>
+<nav id="learn-pagination" class="listing-pagination" aria-label="Page Navigation">
+  <ul class="pagination"></ul>
+</nav>
 </div>
 <p><a href="../learn/rstudio.html"> <button type="button" class="btn btn-primary float-end btn-sm">See all our tools</button></a></p>
 </div>
@@ -948,16 +984,16 @@ Events
 <div style="justify-self: end;">
 <div id="listing-Events" class="quarto-listing quarto-listing-container-grid">
 <div class="list grid quarto-listing-cols-2">
-<div class="g-col-1" data-index="0" data-categories="Rstudio,Twitter,Wrangling" data-listing-date-sort="1679007600000" data-listing-file-modified-sort="1679699113315" data-listing-reading-time-sort="0.33">
+<div class="g-col-1" data-index="0" data-categories="Rstudio,Twitter,Wrangling" data-listing-date-sort="1679007600000" data-listing-file-modified-sort="1682290924972" data-listing-reading-time-sort="0.33">
 <a href="./events/05_social_media_analysis/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
-<img src="./events/05_social_media_analysis/Social-Media.png" class="thumbnail-image card-img" style="height: 150px;"></p>
+<img src="./events/05_social_media_analysis/Social-Media.png" class="thumbnail-image card-img" style="height: 150px;">
+</p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
-</h5>
 <p><span class="animate__animated animate__fadeInDown animate__delay-.6s" style="display: inline-block;">Social Media Scraping</span></p>
-
+</h5>
 <div class="card-attribution card-text-small end">
 <div class="listing-date">
 Mar 17, 2023
@@ -967,16 +1003,16 @@ Mar 17, 2023
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="1" data-categories="Python,Environment,VSC Code" data-listing-date-sort="1677193200000" data-listing-file-modified-sort="1679699016967" data-listing-reading-time-sort="0.555">
+<div class="g-col-1" data-index="1" data-categories="Python,Environment,VSC Code" data-listing-date-sort="1677193200000" data-listing-file-modified-sort="1682290924968" data-listing-reading-time-sort="0.555">
 <a href="./events/04_environment/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
-<img src="./events/04_environment/python_pills.png" class="thumbnail-image card-img" style="height: 150px;"></p>
+<img src="./events/04_environment/python_pills.png" class="thumbnail-image card-img" style="height: 150px;">
+</p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
-</h5>
 <p><span class="animate__animated animate__fadeInDown animate__delay-.6s" style="display: inline-block;">Setting up your environment in Python</span></p>
-
+</h5>
 <div class="card-attribution card-text-small end">
 <div class="listing-date">
 Feb 24, 2023
@@ -986,16 +1022,16 @@ Feb 24, 2023
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="2" data-categories="Rstudio,Wrangling,Tidyverse" data-listing-date-sort="1669244400000" data-listing-file-modified-sort="1679698622211" data-listing-reading-time-sort="0.415">
+<div class="g-col-1" data-index="2" data-categories="Rstudio,Wrangling,Tidyverse" data-listing-date-sort="1669244400000" data-listing-file-modified-sort="1682290924965" data-listing-reading-time-sort="0.415">
 <a href="./events/03_wrangle_part2/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
-<img data-src="./events/03_wrangle_part2/ftdata.png" class="thumbnail-image card-img" style="height: 150px;"></p>
+<img data-src="./events/03_wrangle_part2/ftdata.png" class="thumbnail-image card-img" style="height: 150px;">
+</p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
-</h5>
 <p><span class="animate__animated animate__fadeInDown animate__delay-.6s" style="display: inline-block;">Meet Up III: Wrangle dataframes</span></p>
-
+</h5>
 <div class="card-attribution card-text-small end">
 <div class="listing-date">
 Nov 24, 2022
@@ -1005,16 +1041,16 @@ Nov 24, 2022
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="3" data-categories="Rstudio,Wrangling,Tidyverse" data-listing-date-sort="1668726000000" data-listing-file-modified-sort="1679823829077" data-listing-reading-time-sort="0.51">
+<div class="g-col-1" data-index="3" data-categories="Rstudio,Wrangling,Tidyverse" data-listing-date-sort="1668726000000" data-listing-file-modified-sort="1682290924965" data-listing-reading-time-sort="0.51">
 <a href="./events/02_wrangle/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
-<img data-src="./events/02_wrangle/box.png" class="thumbnail-image card-img" style="height: 150px;"></p>
+<img data-src="./events/02_wrangle/box.png" class="thumbnail-image card-img" style="height: 150px;">
+</p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
-</h5>
 <p><span class="animate__animated animate__fadeInDown animate__delay-.6s" style="display: inline-block;">Meet Up III: Wrangle dataframes</span></p>
-
+</h5>
 <div class="card-attribution card-text-small end">
 <div class="listing-date">
 Nov 18, 2022
@@ -1024,16 +1060,16 @@ Nov 18, 2022
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="4" data-categories="Rstudio" data-listing-date-sort="1667516400000" data-listing-file-modified-sort="1679698113042" data-listing-reading-time-sort="0.5">
+<div class="g-col-1" data-index="4" data-categories="Rstudio" data-listing-date-sort="1667516400000" data-listing-file-modified-sort="1682290924961" data-listing-reading-time-sort="0.5">
 <a href="./events/01_kickoff_event/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
-<img data-src="./events/01_kickoff_event/kick-boxer.png" class="thumbnail-image card-img" style="height: 150px;"></p>
+<img data-src="./events/01_kickoff_event/kick-boxer.png" class="thumbnail-image card-img" style="height: 150px;">
+</p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
-</h5>
 <p><span class="animate__animated animate__fadeInDown animate__delay-.6s" style="display: inline-block;">Kick-Off Event: Hertie Coding Club</span></p>
-
+</h5>
 <div class="card-attribution card-text-small end">
 <div class="listing-date">
 Nov 4, 2022
@@ -1047,28 +1083,194 @@ Nov 4, 2022
 <div class="listing-no-matching d-none">
 No matching items
 </div>
-<nav id="Events-pagination" class="listing-pagination" aria-label="Page Navigation"><ul class="pagination"></ul></nav>
+<nav id="Events-pagination" class="listing-pagination" aria-label="Page Navigation">
+  <ul class="pagination"></ul>
+</nav>
 </div>
 <p><a href="../events/index.html"> <button type="button" class="btn btn-primary float-end btn-sm">See all our events</button></a></p>
 </div>
 </div>
 </div>
 <hr class="sep-2">
-<div id="main" class="layout_grid">
-<p>This is a Quarto website.</p>
-<p>To learn more about Quarto websites visit <a href="https://quarto.org/docs/websites" class="uri">https://quarto.org/docs/websites</a>.</p>
-<div class="cell">
-<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fl">1</span> <span class="op">+</span> <span class="fl">1</span> <span class="op">+</span> <span class="fl">1</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 3</code></pre>
+<div class="layout_grid_books">
+<div class="events">
+<div class="social-media-mobile3">
+<h1 class="scroll-text book_style_mob">
+Books
+</h1>
+<div style="justify-self: end;">
+<div id="listing-books" class="quarto-listing quarto-listing-container-grid">
+<div class="list grid quarto-listing-cols-4">
+<div class="g-col-1" data-index="0" data-categories="R,Data Management" data-listing-date-sort="1681855200000" data-listing-file-modified-sort="1682290925115" data-listing-reading-time-sort="1.22">
+<a href="./material/Books/data_management/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img src="./material/Books/data_management/images/book.jpg" class="thumbnail-image card-img" style="height: 400px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+<p><span class="animate__animated animate__fadeInDown animate__delay-.6s" style="display: inline-block;">Data Management for Social Scientists: From Files to Databases</span></p>
+</h5>
+</div>
+</div>
+</a>
+</div>
+<div class="g-col-1" data-index="1" data-categories="R,Data Analysis,EDA" data-listing-date-sort="1681164000000" data-listing-file-modified-sort="1682290925114" data-listing-reading-time-sort="0.995">
+<a href="./material/Books/art_ds/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img src="./material/Books/art_ds/images/book.jpg" class="thumbnail-image card-img" style="height: 400px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+<p><span class="animate__animated animate__fadeInDown animate__delay-.6s" style="display: inline-block;">The Art of Data Science: A Guide for Anyone Who Works with Data</span></p>
+</h5>
+</div>
+</div>
+</a>
+</div>
+<div class="g-col-1" data-index="2" data-categories="R,Learning,Data Analysis,EDA" data-listing-date-sort="1681164000000" data-listing-file-modified-sort="1682290925116" data-listing-reading-time-sort="0.86">
+<a href="./material/Books/eda_r/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img src="./material/Books/eda_r/images/book.jpg" class="thumbnail-image card-img" style="height: 400px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+<p><span class="animate__animated animate__fadeInDown animate__delay-.6s" style="display: inline-block;">Exploratory Data Analysis with R</span></p>
+</h5>
+</div>
+</div>
+</a>
+</div>
+<div class="g-col-1" data-index="3" data-categories="R,Spatial Data,Spatial Analysis" data-listing-date-sort="1681164000000" data-listing-file-modified-sort="1682290925121" data-listing-reading-time-sort="1.29">
+<a href="./material/Books/spatial_ds/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img src="./material/Books/spatial_ds/images/book.jpeg" class="thumbnail-image card-img" style="height: 400px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+<p><span class="animate__animated animate__fadeInDown animate__delay-.6s" style="display: inline-block;">Spatial Data Science with applications in R</span></p>
+</h5>
+</div>
+</div>
+</a>
+</div>
+<div class="g-col-1" data-index="4" data-categories="R,ggplot2,Data Visualization" data-listing-date-sort="1681077600000" data-listing-file-modified-sort="1682290925117" data-listing-reading-time-sort="1">
+<a href="./material/Books/ggplot2/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img data-src="./material/Books/ggplot2/images/book.jpg" class="thumbnail-image card-img" style="height: 400px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+<p><span class="animate__animated animate__fadeInDown animate__delay-.6s" style="display: inline-block;">ggplot2: elegant graphics for data analysis</span></p>
+</h5>
+</div>
+</div>
+</a>
+</div>
+<div class="g-col-1" data-index="5" data-categories="R,Learning,Data Wrangling" data-listing-date-sort="1681077600000" data-listing-file-modified-sort="1682290925118" data-listing-reading-time-sort="1.74">
+<a href="./material/Books/ids_r/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img data-src="./material/Books/ids_r/images/book.png" class="thumbnail-image card-img" style="height: 400px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+<p><span class="animate__animated animate__fadeInDown animate__delay-.6s" style="display: inline-block;">Introduction to Data Science</span></p>
+</h5>
+</div>
+</div>
+</a>
+</div>
+<div class="g-col-1" data-index="6" data-categories="Python,Learning" data-listing-date-sort="1681077600000" data-listing-file-modified-sort="1682290925119" data-listing-reading-time-sort="1.06">
+<a href="./material/Books/python_for_ev/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img data-src="./material/Books/python_for_ev/images/book.jpeg" class="thumbnail-image card-img" style="height: 400px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+<p><span class="animate__animated animate__fadeInDown animate__delay-.6s" style="display: inline-block;">Python for Everybody</span></p>
+</h5>
+</div>
+</div>
+</a>
+</div>
+<div class="g-col-1" data-index="7" data-categories="R,Webscraping" data-listing-date-sort="1681077600000" data-listing-file-modified-sort="1682290925122" data-listing-reading-time-sort="0.885">
+<a href="./material/Books/webscrapping_r/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img data-src="./material/Books/webscrapping_r/images/rvest.png" class="thumbnail-image card-img" style="height: 400px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+<p><span class="animate__animated animate__fadeInDown animate__delay-.6s" style="display: inline-block;">Web Scraping with R</span></p>
+</h5>
+</div>
+</div>
+</a>
+</div>
+<div class="g-col-1" data-index="8" data-categories="R,Learning,Data Visualization" data-listing-date-sort="1680991200000" data-listing-file-modified-sort="1682290925116" data-listing-reading-time-sort="1.14">
+<a href="./material/Books/data_vis/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img data-src="./material/Books/data_vis/images/book.jpeg" class="thumbnail-image card-img" style="height: 400px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+<p><span class="animate__animated animate__fadeInDown animate__delay-.6s" style="display: inline-block;">Data Visualization: A Practical Introduction</span></p>
+</h5>
+</div>
+</div>
+</a>
+</div>
+<div class="g-col-1" data-index="9" data-categories="R,Learning,Data Science" data-listing-date-sort="1680991200000" data-listing-file-modified-sort="1682290925120" data-listing-reading-time-sort="1.165">
+<a href="./material/Books/r_for_ds/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img data-src="./material/Books/r_for_ds/images/r_for_ds.jpg" class="thumbnail-image card-img" style="height: 400px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+<p><span class="animate__animated animate__fadeInDown animate__delay-.6s" style="display: inline-block;">R for Data Science</span></p>
+</h5>
+</div>
+</div>
+</a>
+</div>
+</div>
+<div class="listing-no-matching d-none">
+No matching items
+</div>
+<nav id="books-pagination" class="listing-pagination" aria-label="Page Navigation">
+  <ul class="pagination"></ul>
+</nav>
+</div>
+<p><a href="../books/index.html"> <button type="button" class="btn btn-primary float-end btn-sm">See all our books</button></a></p>
 </div>
 </div>
 </div>
+<h1 class="scroll-text book_style_desktop">
+Books
+</h1>
+</div>
+
+<hr class="sep-2">
 <div class="layout_table">
+<h1 class="scroll-text certification_style_desktop">
+Certifications
+</h1>
+<h1 class="scroll-text certification_style_mobile">
+Certifications
+</h1>
 <div id="listing-material" class="quarto-listing quarto-listing-container-table">
 
 <table class="quarto-listing-table table">
-<thead><tr>
+<thead>
+<tr>
 <th>
 </th>
 <th>
@@ -1077,12 +1279,10 @@ Title
 <th>
 Subtitle
 </th>
-<th>
-Author
-</th>
-</tr></thead>
+</tr>
+</thead>
 <tbody class="list">
-<tr data-index="0" data-categories="CISCO,Learning,Python" data-listing-date-sort="1680127200000" data-listing-file-modified-sort="1680214869346" data-listing-reading-time-sort="1.335" data-listing-title-sort="{{< animate fadeInDown &quot;CISCO Networking Academy&quot;delay=.6s >}}" data-listing-filename-sort="index.qmd">
+<tr data-index="0" data-categories="CISCO,Learning,Python" data-listing-date-sort="1680127200000" data-listing-file-modified-sort="1682290925126" data-listing-reading-time-sort="1.335" data-listing-title-sort="{{< animate fadeInDown &quot;CISCO Networking Academy&quot;delay=.6s >}}" data-listing-filename-sort="index.qmd">
 <td class="listing-image">
 <img src="./material/Certifications/cisco_pcap/images/cisco.png" style="height: 70px;">
 </td>
@@ -1092,11 +1292,8 @@ Author
 <td class="listing-subtitle">
 <p><span class="animate__animated animate__fadeInDown animate__delay-.6s" style="display: inline-block;">PCAP: Programming Essentials in Python. Learn programming from scratch and master Python.</span></p>
 </td>
-<td class="listing-author">
-Jorge Roa
-</td>
 </tr>
-<tr data-index="1" data-categories="freeCodeCamp,Data Analysis,Course,Free Certificate" data-listing-date-sort="1680040800000" data-listing-file-modified-sort="1680122597079" data-listing-reading-time-sort="0.52" data-listing-title-sort="{{< animate fadeInDown &quot;freeCodeCamp Certifications&quot;delay=.6s >}}" data-listing-filename-sort="index.qmd">
+<tr data-index="1" data-categories="freeCodeCamp,Data Analysis,Course,Free Certificate" data-listing-date-sort="1680040800000" data-listing-file-modified-sort="1682290925130" data-listing-reading-time-sort="0.52" data-listing-title-sort="{{< animate fadeInDown &quot;freeCodeCamp Certifications&quot;delay=.6s >}}" data-listing-filename-sort="index.qmd">
 <td class="listing-image">
 <img src="./material/Certifications/freecodecamp/images/fcc.png" style="height: 70px;">
 </td>
@@ -1106,11 +1303,8 @@ Jorge Roa
 <td class="listing-subtitle">
 <p><span class="animate__animated animate__fadeInDown animate__delay-.6s" style="display: inline-block;">Learn to code — for free. Build projects. Earn certifications.</span></p>
 </td>
-<td class="listing-author">
-Jorge Roa
-</td>
 </tr>
-<tr data-index="2" data-categories="IBM,Data Analysis,Course,Free Certificate" data-listing-date-sort="1679698800000" data-listing-file-modified-sort="1679824917432" data-listing-reading-time-sort="0.815" data-listing-title-sort="{{< animate fadeInDown &quot;IBM Data Analyst certification&quot;delay=.6s >}}" data-listing-filename-sort="index.qmd">
+<tr data-index="2" data-categories="IBM,Data Analysis,Course,Free Certificate" data-listing-date-sort="1679698800000" data-listing-file-modified-sort="1682290925124" data-listing-reading-time-sort="0.815" data-listing-title-sort="{{< animate fadeInDown &quot;IBM Data Analyst certification&quot;delay=.6s >}}" data-listing-filename-sort="index.qmd">
 <td class="listing-image">
 <img data-src="./material/Certifications/IBM_data_analyst/images/IBM.png" style="height: 70px;">
 </td>
@@ -1120,18 +1314,19 @@ Jorge Roa
 <td class="listing-subtitle">
 <p><span class="animate__animated animate__fadeInDown animate__delay-.6s" style="display: inline-block;">Try this course for free and get your certification by IBM in Data Analyst</span></p>
 </td>
-<td class="listing-author">
-Jorge Roa
-</td>
 </tr>
 </tbody>
+
 </table>
 <div class="listing-no-matching d-none">
 No matching items
 </div>
-<nav id="material-pagination" class="listing-pagination" aria-label="Page Navigation"><ul class="pagination"></ul></nav>
+<nav id="material-pagination" class="listing-pagination" aria-label="Page Navigation">
+  <ul class="pagination"></ul>
+</nav>
 </div>
 <p><a href="../material/index.html"> <button type="button" class="btn btn-primary float-end btn-sm">See all our material</button></a></p>
+<p><br></p>
 </div>
 <div class="container-footer2">
 
@@ -1151,10 +1346,19 @@ Want to know more about us and what we do?
 </h1>
 </div>
 <div class="layout" style="font-size: 5px">
-<article><img class="lukas" src="images/DSL.jpg" data-url="https://www.hertie-school.org/en/datasciencelab"><img class="lukas" src="images/MDS.jpg" data-url="https://www.hertie-school.org/en/mds"><img class="lukas" src="images/hertie.jpg" data-url="https://www.hertie-school.org/en/"></article>
+<article>
+<img class="lukas" src="images/DSL.jpg" data-url="https://www.hertie-school.org/en/datasciencelab"> <img class="lukas" src="images/MDS.jpg" data-url="https://www.hertie-school.org/en/mds"> <img class="lukas" src="images/hertie.jpg" data-url="https://www.hertie-school.org/en/">
+</article>
 </div>
 
-<script src="js/text_obs.js"></script><script src="js/text_obs_achiev.js"></script><script src="js/text.js"></script><script src="js/background.js"></script><script src="js/slider.js"></script><script src="js/pagination.js"></script><script> 
+<script src="js/text_obs.js"></script>
+<script src="js/text_obs_achiev.js"></script>
+<script src="js/text.js"></script>
+<script src="js/background.js"></script>
+<script src="js/slider.js"></script>
+<script src="js/pagination.js"></script>
+
+<script> 
 
 document.addEventListener('DOMContentLoaded', function () {
   var images = document.getElementsByClassName('lukas');
@@ -1167,24 +1371,29 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 });
 
-</script><hr class="sep-2-f" style="margin-top: 50px;">
+</script>
+
+<hr class="sep-2-f" style="margin-top: 50px;">
 <div style="margin-top: 50px;">
 <div class="grid">
 <div class="g-col-3">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="_site/images/hertie/DSL.png" class="img-fluid figure-img" width="150"></p>
+<figure class="figure">
+<p><img src="_site/images/hertie/DSL.png" class="img-fluid figure-img" width="150"></p>
 </figure>
 </div>
 </div>
 <div class="g-col-6">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="_site/images/hcc_final.png" class="img-fluid figure-img" width="150"></p>
+<figure class="figure">
+<p><img src="_site/images/hcc_final.png" class="img-fluid figure-img" width="150"></p>
 </figure>
 </div>
 </div>
 <div class="g-col-3">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="_site/images/hertie/hertie.png" class="img-fluid figure-img" width="150"></p>
+<figure class="figure">
+<p><img src="_site/images/hertie/hertie.png" class="img-fluid figure-img" width="150"></p>
 </figure>
 </div>
 </div>
@@ -1194,7 +1403,7 @@ document.addEventListener('DOMContentLoaded', function () {
 <div class="layout_footer">
 <p>This website, the content and everything related to it is licensed under <a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank"> Creative Commons Attribution-NonCommercial 4.0 International License.</a></p>
 <div class="cc-icons-row">
-<img src="_site/images/cc/cc.svg" alt="CC" class="cc-icon"><img src="_site/images/cc/by.svg" alt="BY" class="cc-icon"><img src="_site/images/cc/nc.svg" alt="NC" class="cc-icon"><img src="_site/images/cc/nd.svg" alt="ND" class="cc-icon">
+<img src="_site/images/cc/cc.svg" alt="CC" class="cc-icon"> <img src="_site/images/cc/by.svg" alt="BY" class="cc-icon"> <img src="_site/images/cc/nc.svg" alt="NC" class="cc-icon"> <img src="_site/images/cc/nd.svg" alt="ND" class="cc-icon">
 </div>
 </div>
 </div>
@@ -1460,24 +1669,25 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
-<footer class="footer"><div class="nav-footer">
+<footer class="footer">
+  <div class="nav-footer">
     <div class="nav-footer-left">
       <ul class="footer-items list-unstyled">
-<li class="nav-item">
+    <li class="nav-item">
     <a class="nav-link" href="https://creativecommons.org/licenses/by/2.0/"><i class="fa-regular fa-copyright" aria-label="copyright"></i> <i class="fa-solid fa-circle-user" aria-label="circle-user"></i> 2023 HCC | J.Roa</a>
   </li>  
 </ul>
-</div>   
+    </div>   
       <div class="nav-footer-center">
         <ul class="footer-items list-unstyled">
-<li class="nav-item">
+    <li class="nav-item">
     <a class="nav-link" href="https://quarto.org"><i class="fa-brands fa-phoenix-framework fa-lg" aria-label="phoenix-framework"></i> Quarto engine</a>
   </li>  
 </ul>
-</div>
+      </div>
     <div class="nav-footer-right">
       <ul class="footer-items list-unstyled">
-<li class="nav-item">
+    <li class="nav-item">
     <a class="nav-link" href="mailto:hertiecodingclub@gmail.com"><i class="fa-solid fa-square-envelope fa-lg" aria-label="square-envelope"></i></a>
   </li>  
     <li class="nav-item">
@@ -1496,9 +1706,10 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     <a class="nav-link" href="https://youtube.com/@hertiecodingclub"><i class="fa-brands fa-youtube fa-lg" aria-label="youtube"></i></a>
   </li>  
 </ul>
-</div>
+    </div>
   </div>
 </footer>
+
 
 
 <script src="site_libs/quarto-html/zenscroll-min.js"></script>
