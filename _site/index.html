@@ -75,7 +75,7 @@ ul.task-list li input[type="checkbox"] {
     const options = {
       valueNames: ['listing-image','listing-date','listing-title','listing-subtitle','listing-categories','listing-author','listing-reading-time',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
       page: 3,
-    pagination: { item: "<li class='page-item'><button class='page page-link' type='button'></button></li>" },
+    pagination: { item: "<li class='page-item'><a class='page page-link' href='#'></a></li>" },
       searchColumns: ["listing-date","listing-title","listing-author","listing-subtitle","listing-image","listing-description"],
     };
 
@@ -104,7 +104,7 @@ ul.task-list li input[type="checkbox"] {
     const options = {
       valueNames: ['listing-image','listing-date','listing-title',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
       page: 2,
-    pagination: { item: "<li class='page-item'><button class='page page-link' type='button'></button></li>" },
+    pagination: { item: "<li class='page-item'><a class='page page-link' href='#'></a></li>" },
       searchColumns: ["listing-title","listing-author","listing-date","listing-image","listing-description"],
     };
 
@@ -133,7 +133,7 @@ ul.task-list li input[type="checkbox"] {
     const options = {
       valueNames: ['listing-image','listing-title',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
       page: 4,
-    pagination: { item: "<li class='page-item'><button class='page page-link' type='button'></button></li>" },
+    pagination: { item: "<li class='page-item'><a class='page page-link' href='#'></a></li>" },
       searchColumns: ["listing-title","listing-author","listing-date","listing-image","listing-description"],
     };
 
@@ -162,7 +162,7 @@ ul.task-list li input[type="checkbox"] {
     const options = {
       valueNames: ['listing-image','listing-subtitle','listing-title',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
       page: 2,
-    pagination: { item: "<li class='page-item'><button class='page page-link' type='button'></button></li>" },
+    pagination: { item: "<li class='page-item'><a class='page page-link' href='#'></a></li>" },
       searchColumns: ["listing-title","listing-author","listing-date","listing-image","listing-description"],
     };
 
@@ -191,7 +191,7 @@ ul.task-list li input[type="checkbox"] {
     const options = {
       valueNames: ['listing-image','listing-title','listing-subtitle',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-title-sort'] }],
       page: 2,
-    pagination: { item: "<li class='page-item'><button class='page page-link' type='button'></button></li>" },
+    pagination: { item: "<li class='page-item'><a class='page page-link' href='#'></a></li>" },
       searchColumns: ["listing-date","listing-title","listing-author"],
     };
 
@@ -229,6 +229,8 @@ gtag('config', 'G-HJEMN0LJY7', { 'anonymize_ip': true});
 <meta property="og:url" content="https://www.hertiecodingclub.com">
 <meta property="og:title" content="Hertie Coding Club - Home">
 <meta property="og:description" content="Welcome to the Hertie Coding Club! Our goal as a club is to help everyone and between us learn coding skills and show that coding is for everyone, no matter our background.">
+<style>:root{--animate-duration:3s;--animate-delay:2s;--animate-repeat:1}</style>
+<style>:root{--animate-duration:3s;--animate-delay:2s;--animate-repeat:1}</style>
 <style>:root{--animate-duration:3s;--animate-delay:2s;--animate-repeat:1}</style>
 <style>:root{--animate-duration:3s;--animate-delay:2s;--animate-repeat:1}</style>
 <style>:root{--animate-duration:3s;--animate-delay:2s;--animate-repeat:1}</style>
@@ -1274,7 +1276,18 @@ Subtitle
 </tr>
 </thead>
 <tbody class="list">
-<tr data-index="0" data-categories="CISCO,Learning,Python" data-listing-date-sort="1680127200000" data-listing-file-modified-sort="1682290925126" data-listing-reading-time-sort="1.335" data-listing-title-sort="{{< animate fadeInDown &quot;CISCO Networking Academy&quot;delay=.6s >}}" data-listing-filename-sort="index.qmd">
+<tr data-index="0" data-categories="Google,Data Science,Course,Free Certificate" data-listing-date-sort="1682373600000" data-listing-file-modified-sort="1682482718127" data-listing-reading-time-sort="1.755" data-listing-title-sort="{{< animate fadeInDown &quot;Google Data Scientist Certification&quot;delay=.6s >}}" data-listing-filename-sort="index.qmd">
+<td class="listing-image">
+<img src="./material/Certifications/google_cert_ds/images/logo-Google.png" style="height: 70px;">
+</td>
+<td class="listing-title">
+<a href="./material/Certifications/google_cert_ds/index.html" class="title"><span class="animate__animated animate__fadeInDown animate__delay-.6s" style="display: inline-block;">Google Data Scientist Certification</span></a>
+</td>
+<td class="listing-subtitle">
+<p><span class="animate__animated animate__fadeInDown animate__delay-.6s" style="display: inline-block;">Free Certification Courses in Data Science using Python from Google</span></p>
+</td>
+</tr>
+<tr data-index="1" data-categories="CISCO,Learning,Python" data-listing-date-sort="1680127200000" data-listing-file-modified-sort="1682290925126" data-listing-reading-time-sort="1.335" data-listing-title-sort="{{< animate fadeInDown &quot;CISCO Networking Academy&quot;delay=.6s >}}" data-listing-filename-sort="index.qmd">
 <td class="listing-image">
 <img src="./material/Certifications/cisco_pcap/images/cisco.png" style="height: 70px;">
 </td>
@@ -1285,9 +1298,9 @@ Subtitle
 <p><span class="animate__animated animate__fadeInDown animate__delay-.6s" style="display: inline-block;">PCAP: Programming Essentials in Python. Learn programming from scratch and master Python.</span></p>
 </td>
 </tr>
-<tr data-index="1" data-categories="freeCodeCamp,Data Analysis,Course,Free Certificate" data-listing-date-sort="1680040800000" data-listing-file-modified-sort="1682290925130" data-listing-reading-time-sort="0.52" data-listing-title-sort="{{< animate fadeInDown &quot;freeCodeCamp Certifications&quot;delay=.6s >}}" data-listing-filename-sort="index.qmd">
+<tr data-index="2" data-categories="freeCodeCamp,Data Analysis,Course,Free Certificate" data-listing-date-sort="1680040800000" data-listing-file-modified-sort="1682290925130" data-listing-reading-time-sort="0.52" data-listing-title-sort="{{< animate fadeInDown &quot;freeCodeCamp Certifications&quot;delay=.6s >}}" data-listing-filename-sort="index.qmd">
 <td class="listing-image">
-<img src="./material/Certifications/freecodecamp/images/fcc.png" style="height: 70px;">
+<img data-src="./material/Certifications/freecodecamp/images/fcc.png" style="height: 70px;">
 </td>
 <td class="listing-title">
 <a href="./material/Certifications/freecodecamp/index.html" class="title"><span class="animate__animated animate__fadeInDown animate__delay-.6s" style="display: inline-block;">freeCodeCamp Certifications</span></a>
@@ -1296,7 +1309,7 @@ Subtitle
 <p><span class="animate__animated animate__fadeInDown animate__delay-.6s" style="display: inline-block;">Learn to code — for free. Build projects. Earn certifications.</span></p>
 </td>
 </tr>
-<tr data-index="2" data-categories="IBM,Data Analysis,Course,Free Certificate" data-listing-date-sort="1679698800000" data-listing-file-modified-sort="1682290925124" data-listing-reading-time-sort="0.815" data-listing-title-sort="{{< animate fadeInDown &quot;IBM Data Analyst certification&quot;delay=.6s >}}" data-listing-filename-sort="index.qmd">
+<tr data-index="3" data-categories="IBM,Data Analysis,Course,Free Certificate" data-listing-date-sort="1679698800000" data-listing-file-modified-sort="1682290925124" data-listing-reading-time-sort="0.815" data-listing-title-sort="{{< animate fadeInDown &quot;IBM Data Analyst certification&quot;delay=.6s >}}" data-listing-filename-sort="index.qmd">
 <td class="listing-image">
 <img data-src="./material/Certifications/IBM_data_analyst/images/IBM.png" style="height: 70px;">
 </td>

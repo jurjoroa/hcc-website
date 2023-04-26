@@ -1,0 +1,106 @@
+---
+title: '{{< animate fadeInDown "Google Data Scientist Certification"delay=.6s >}}'
+subtitle: '{{< animate fadeInDown "Free Certification Courses in Data Science using Python from Google"delay=.6s >}}'
+author: ["Jorge Roa"]
+date: "04-25-2023"
+categories: ["Google", "Data Science", "Course", "Free Certificate"]
+toc: true
+draft: false
+code-link: true
+comments: false
+title-block-banner: true
+image: images/logo-Google.png
+page-layout: full
+include-in-header: meta.html
+filters:
+   - lightbox
+lightbox: 
+  match: auto
+  effect: fade
+  desc-position: left
+  css-class: "lightwidth"
+---
+
+![](images/google.png){width="197" fig-align="center"}
+
+
+
+![](images/page.png)
+
+</br>
+
+<hr class="sep-2" />
+
+"Google Digital Garage is a nonprofit program designed to help people improve their digital skills. It offers free training, courses and certifications via an online learning platform. Google Digital Garage was created by Google in 2015.Discover a range of free learning content designed to help your business or in your career. You can learn by selecting individual modules, or dive right in and take an entire course end-to-end."
+
+</br>
+
+This certification is entirely free, and it consists of a series of four different courses that will strengthen your skills in data science using Python.
+
+<hr class="sep-2" />
+
+
+```{=HTML}
+<style>
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+@media only screen and (max-width: 767px) {
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .container {
+    display: block;
+  }
+}
+
+</style>
+
+<div class="container">
+  <div class="grid-container">
+    <div>
+      <form action="https://learndigital.withgoogle.com/digitalunlocked/course/learn-python-basics-for-data-analysis">
+        <button class="btn-hover color-9" target="_blank"> 1.- Python basics
+        </button>
+      </form>
+    </div>
+    
+    <div>
+      <form action="https://learndigital.withgoogle.com/digitalunlocked/course/data-science-foundations">
+        <button class="btn-hover color-9" target="_blank"> 2.- Data Science Foundations
+        </button>
+      </form>
+    </div>
+    
+    <div>
+      <form action="https://learndigital.withgoogle.com/digitalunlocked/course/data-science-with-python">
+        <button class="btn-hover color-9" target="_blank"> 3.- Data Science with Python
+        </button>
+      </form>
+    </div>
+    
+    <div>
+      <form action="https://learndigital.withgoogle.com/digitalunlocked/course/machine-learning-crash-course">
+        <button class="btn-hover color-9" target="_blank"> 4.- ML Crash Course
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
+
+
+
+```
+	
+	
