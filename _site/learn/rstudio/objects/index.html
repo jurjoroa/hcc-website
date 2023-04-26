@@ -174,7 +174,113 @@ gtag('config', 'G-HJEMN0LJY7', { 'anonymize_ip': true});
 <meta property="og:url" content="https://www.hertiecodingclub.com/learn/rstudio/rstudio101/">
 <meta property="og:title" content="Hertie Coding Club - RStudio 101">
 <meta property="og:description" content="Learn the basics of R: open a project, setting a working directory and navigate RStudio interface">
-<style>:root{--animate-duration:3s;--animate-delay:2s;--animate-repeat:1}</style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/6.65.7/codemirror.min.css">
+<style>
+  .CodeMirror pre {
+    background-color: unset !important;
+  }
+  .btn-webr {
+    background-color: #EEEEEE;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+</style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/6.65.7/codemirror.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/6.65.7/mode/r/r.js"></script><script type="module">
+
+  // Start a timer
+  const initializeWebRTimerStart = performance.now();
+
+  // Determine if we need to install R packages
+  var installRPackagesList = ['ggplot2', 'dplyr'];
+  // Check to see if we have an empty array, if we do set to skip the installation.
+  var setupRPackages = !(installRPackagesList.indexOf("") !== -1);
+
+  // Display a startup message?
+  var showStartupMessage = false;
+  var showHeaderMessage = false;
+  if (showStartupMessage) {
+
+    // Create the outermost div element
+    var quartoTitleMeta = document.createElement("div");
+    quartoTitleMeta.classList.add("quarto-title-meta");
+
+    // Create the first inner div element
+    var firstInnerDiv = document.createElement("div");
+
+    // Create the second inner div element with "WebR Status" heading 
+    // and contents
+    var secondInnerDiv = document.createElement("div");
+    secondInnerDiv.classList.add("quarto-title-meta-heading");
+    secondInnerDiv.innerText = "WebR Status";
+
+    // Add another inner div
+    var secondInnerDivContents = document.createElement("div");
+    secondInnerDivContents.classList.add("quarto-title-meta-contents");
+
+    // Describe the WebR state
+    var startupMessageWebR = document.createElement("p");
+    startupMessageWebR.innerText = "🟡 Loading...";
+    startupMessageWebR.setAttribute("id", "startup");
+
+    // Put everything together
+    secondInnerDivContents.appendChild(startupMessageWebR);
+
+    // Add a status indicator for COOP and COEP Headers
+    if (showHeaderMessage) {
+      var crossOriginMessage = document.createElement("p");
+      crossOriginMessage.innerText = `${crossOriginIsolated ? '🟢' : '🟡'} COOP & COEP Headers`;
+      crossOriginMessage.setAttribute("id", "coop-coep-header");
+      secondInnerDivContents.appendChild(crossOriginMessage);
+    }
+
+    firstInnerDiv.appendChild(secondInnerDiv);
+    firstInnerDiv.appendChild(secondInnerDivContents);
+    quartoTitleMeta.appendChild(firstInnerDiv);
+
+    // Add new element as last child in header element
+    var header = document.getElementsByTagName("header")[0];
+    header.appendChild(quartoTitleMeta);
+  }
+
+  // Retrieve the webr.mjs
+  import { WebR } from "https://webr.r-wasm.org/v0.1.1/webr.mjs";
+  
+  // Populate WebR options with defaults or new values based on 
+  // webr meta
+  globalThis.webR = new WebR({
+    "baseURL": "",
+    "serviceWorkerUrl": "",
+    "homedir": "/home/web_user"
+  });
+
+  // Initialization WebR
+  await globalThis.webR.init();
+
+  // Setup a shelter
+  globalThis.webRCodeShelter = await new globalThis.webR.Shelter();
+
+  // Installing Packages
+  if (showStartupMessage && setupRPackages) {
+    // If initialized, but we have packages to install switch status
+    startupMessageWebR.innerText = "🟡 Installing package dependencies..."
+    // Install packages
+    await globalThis.webR.installPackages(installRPackagesList)
+  }
+
+  // Switch to allowing code to be executed
+  document.querySelectorAll(".btn-webr").forEach((btn) => {
+    btn.innerText = "Run code";
+    btn.disabled = false;
+  });
+
+  // Stop timer
+  const initializeWebRTimerEnd = performance.now();
+
+  if (showStartupMessage) {
+    // If initialized, switch to a green light
+    startupMessageWebR.innerText = "🟢 Ready!"
+  }
+</script><style>:root{--animate-duration:3s;--animate-delay:2s;--animate-repeat:1}</style>
 <style>:root{--animate-duration:3s;--animate-delay:2s;--animate-repeat:1}</style>
 <style>:root{--animate-duration:3s;--animate-delay:2s;--animate-repeat:1}</style>
 <style>:root{--animate-duration:3s;--animate-delay:2s;--animate-repeat:1}</style>
@@ -401,24 +507,19 @@ Warning
 </figure>
 </div>
 <p>I like it since it gives you structure and clarity about how to name your objects. For example:</p>
-<div class="cell">
-<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co">#If we have a vector, I will tart with v_number</span></span>
-<span></span>
-<span><span class="va">v_number</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">1</span>,<span class="fl">5</span>,<span class="fl">7</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
 <p>This logics applies the same with matrices, arrays, data frames, etc. It’s a good practice to follow this criteria since is going to be much easier to identify your objects in your environment.</p>
 <p>&nbsp;</p>
 </section><section id="single-values" class="level1"><h1>Single Values</h1>
 <section id="numeric-values" class="level2"><h2 class="anchored" data-anchor-id="numeric-values">Numeric values</h2>
 <p>A numeric object can be stored as a number.</p>
 <div class="cell">
-<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">x</span> <span class="op">&lt;-</span> <span class="fl">6</span></span>
+<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">x</span> <span class="op">&lt;-</span> <span class="fl">6</span></span>
 <span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/base/class.html">class</a></span><span class="op">(</span><span class="va">x</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "numeric"</code></pre>
 </div>
-<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">x</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">x</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 6</code></pre>
 </div>
@@ -426,11 +527,11 @@ Warning
 </section><section id="character-values" class="level2"><h2 class="anchored" data-anchor-id="character-values">Character values</h2>
 <p>Stores a sequence of characters, such as letters, numbers, and symbols. A character value is created by enclosing the sequence of characters within quotation marks, either single or double.</p>
 <div class="cell">
-<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">character</span> <span class="op">&lt;-</span> <span class="st">"Welcome to the Hertie Coding Club"</span>   <span class="co"># creating a character value</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">character</span> <span class="op">&lt;-</span> <span class="st">"Welcome to the Hertie Coding Club"</span>   <span class="co"># creating a character value</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Character values can be combined using the <code><a href="https://rdrr.io/r/base/paste.html">paste()</a></code> or <code><a href="https://rdrr.io/r/base/paste.html">paste0()</a></code> functions, which concatenate two or more character values into a single character value.</p>
 <div class="cell">
-<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">x</span> <span class="op">&lt;-</span> <span class="st">"Welcome to"</span></span>
+<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">x</span> <span class="op">&lt;-</span> <span class="st">"Welcome to"</span></span>
 <span><span class="va">y</span> <span class="op">&lt;-</span> <span class="st">"the Hertie Coding Club"</span></span>
 <span><span class="va">z</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/paste.html">paste</a></span><span class="op">(</span><span class="va">x</span>, <span class="va">y</span>, sep <span class="op">=</span> <span class="st">": "</span><span class="op">)</span></span>
 <span></span>
@@ -439,7 +540,7 @@ Warning
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "character"</code></pre>
 </div>
-<div class="sourceCode" id="cb9"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">z</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">z</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "Welcome to: the Hertie Coding Club"</code></pre>
 </div>
@@ -468,7 +569,7 @@ Tip
 <p>&nbsp;</p>
 <p>In R, you can assign a name to an object using the assignment operator “&lt;-” or the equal sign “=”. Here are multiple way to assign a name to an object.</p>
 <div class="cell">
-<div class="sourceCode" id="cb11"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">x</span> <span class="op">&lt;-</span> <span class="fl">2</span></span>
+<div class="sourceCode" id="cb10"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">x</span> <span class="op">&lt;-</span> <span class="fl">2</span></span>
 <span></span>
 <span><span class="va">x</span> <span class="op">=</span> <span class="fl">2</span></span>
 <span></span>
@@ -477,7 +578,7 @@ Tip
 <p>&nbsp;</p>
 <section id="create-a-numeric-vector" class="level2"><h2 class="anchored" data-anchor-id="create-a-numeric-vector">Create a numeric vector</h2>
 <div class="cell">
-<div class="sourceCode" id="cb12"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">x</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fl">2</span>, <span class="fl">3</span>, <span class="fl">4</span>, <span class="fl">5</span><span class="op">)</span></span>
+<div class="sourceCode" id="cb11"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">x</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fl">2</span>, <span class="fl">3</span>, <span class="fl">4</span>, <span class="fl">5</span><span class="op">)</span></span>
 <span></span>
 <span><span class="va">x</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -488,7 +589,7 @@ Tip
 </section><section id="access-elements-of-a-vector" class="level2"><h2 class="anchored" data-anchor-id="access-elements-of-a-vector">Access elements of a vector</h2>
 <p>Returns the second element of x, which is 2</p>
 <div class="cell">
-<div class="sourceCode" id="cb14"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">x</span><span class="op">[</span><span class="fl">2</span><span class="op">]</span> </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb13"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">x</span><span class="op">[</span><span class="fl">2</span><span class="op">]</span> </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 2</code></pre>
 </div>
@@ -497,7 +598,7 @@ Tip
 </section><section id="perform-arithmetic-operations" class="level2"><h2 class="anchored" data-anchor-id="perform-arithmetic-operations">Perform arithmetic operations</h2>
 <p>Adds 2 to each element of x, resulting in the vector c(3, 4, 5, 6, 7)</p>
 <div class="cell">
-<div class="sourceCode" id="cb16"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">x</span> <span class="op">+</span> <span class="fl">2</span> </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb15"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">x</span> <span class="op">+</span> <span class="fl">2</span> </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 3 4 5 6 7</code></pre>
 </div>
@@ -505,7 +606,7 @@ Tip
 <p>&nbsp;</p>
 </section><section id="find-the-length-of-a-vector" class="level2"><h2 class="anchored" data-anchor-id="find-the-length-of-a-vector">Find the length of a vector:</h2>
 <div class="cell">
-<div class="sourceCode" id="cb18"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/length.html">length</a></span><span class="op">(</span><span class="va">x</span><span class="op">)</span> </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb17"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/length.html">length</a></span><span class="op">(</span><span class="va">x</span><span class="op">)</span> </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 5</code></pre>
 </div>
@@ -514,7 +615,7 @@ Tip
 </section><section id="modify-a-vector" class="level2"><h2 class="anchored" data-anchor-id="modify-a-vector">Modify a vector</h2>
 <p>Changes the third element of x to 10</p>
 <div class="cell">
-<div class="sourceCode" id="cb20"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">x</span><span class="op">[</span><span class="fl">3</span><span class="op">]</span> <span class="op">&lt;-</span> <span class="fl">10</span></span>
+<div class="sourceCode" id="cb19"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">x</span><span class="op">[</span><span class="fl">3</span><span class="op">]</span> <span class="op">&lt;-</span> <span class="fl">10</span></span>
 <span></span>
 <span><span class="va">x</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -525,28 +626,28 @@ Tip
 </section><section id="apply-functions-to-a-vector" class="level2"><h2 class="anchored" data-anchor-id="apply-functions-to-a-vector">Apply functions to a vector</h2>
 <p>Returns the sum of the elements in x, which is 22</p>
 <div class="cell">
-<div class="sourceCode" id="cb22"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/sum.html">sum</a></span><span class="op">(</span><span class="va">x</span><span class="op">)</span> </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb21"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/sum.html">sum</a></span><span class="op">(</span><span class="va">x</span><span class="op">)</span> </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 22</code></pre>
 </div>
 </div>
 <p>Returns the mean (average) of the elements in x, which is 4.4</p>
 <div class="cell">
-<div class="sourceCode" id="cb24"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/mean.html">mean</a></span><span class="op">(</span><span class="va">x</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb23"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/mean.html">mean</a></span><span class="op">(</span><span class="va">x</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 4.4</code></pre>
 </div>
 </div>
 <p>Returns the maximum value in x, which is 10</p>
 <div class="cell">
-<div class="sourceCode" id="cb26"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/Extremes.html">max</a></span><span class="op">(</span><span class="va">x</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb25"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/Extremes.html">max</a></span><span class="op">(</span><span class="va">x</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 10</code></pre>
 </div>
 </div>
 <p>Returns the minimum value in x, which is 1</p>
 <div class="cell">
-<div class="sourceCode" id="cb28"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/Extremes.html">min</a></span><span class="op">(</span><span class="va">x</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb27"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/Extremes.html">min</a></span><span class="op">(</span><span class="va">x</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 1</code></pre>
 </div>
@@ -555,7 +656,7 @@ Tip
 <p>In addition to numeric values, you can put a wide variety of other data types in a vector in R. Here are some examples:</p>
 </section><section id="character-values-1" class="level2"><h2 class="anchored" data-anchor-id="character-values-1">Character values</h2>
 <div class="cell">
-<div class="sourceCode" id="cb30"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">names</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"Hertie School"</span>, <span class="st">"Berlin"</span>, <span class="st">"Public Policy"</span><span class="op">)</span></span>
+<div class="sourceCode" id="cb29"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">names</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"Hertie School"</span>, <span class="st">"Berlin"</span>, <span class="st">"Public Policy"</span><span class="op">)</span></span>
 <span></span>
 <span><span class="va">names</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -565,7 +666,7 @@ Tip
 <p>&nbsp;</p>
 </section><section id="logical-values" class="level2"><h2 class="anchored" data-anchor-id="logical-values">Logical values</h2>
 <div class="cell">
-<div class="sourceCode" id="cb32"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">flags</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="cn">TRUE</span>, <span class="cn">FALSE</span>, <span class="cn">TRUE</span><span class="op">)</span></span>
+<div class="sourceCode" id="cb31"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">flags</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="cn">TRUE</span>, <span class="cn">FALSE</span>, <span class="cn">TRUE</span><span class="op">)</span></span>
 <span></span>
 <span><span class="va">flags</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -575,7 +676,7 @@ Tip
 <p>&nbsp;</p>
 </section><section id="times" class="level2"><h2 class="anchored" data-anchor-id="times">Times:</h2>
 <div class="cell">
-<div class="sourceCode" id="cb34"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">times</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/as.POSIXlt.html">as.POSIXct</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"2022-01-01 10:00:00"</span>, <span class="st">"2022-01-01 11:00:00"</span>, <span class="st">"2022-01-01 12:00:00"</span><span class="op">)</span><span class="op">)</span></span>
+<div class="sourceCode" id="cb33"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">times</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/as.POSIXlt.html">as.POSIXct</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"2022-01-01 10:00:00"</span>, <span class="st">"2022-01-01 11:00:00"</span>, <span class="st">"2022-01-01 12:00:00"</span><span class="op">)</span><span class="op">)</span></span>
 <span></span>
 <span><span class="va">times</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -587,9 +688,83 @@ Tip
 </section></section><section id="exercises" class="level1"><h1>Exercises</h1>
 <hr>
 <p>1.-Create a numeric vector x with values 1 through 10. Then, calculate the sum of the first 5 elements of x.</p>
-<p><strong>Answer</strong></p>
+<button class="btn btn-default btn-webr" disabled="" type="button" id="webr-run-button-1">Loading webR...</button>
+<div id="webr-editor-1"></div>
+<div id="webr-code-output-1"><pre style="visibility: hidden"></pre></div>
+<script type="module">
+  const runButton = document.getElementById("webr-run-button-1");
+  const outputDiv = document.getElementById("webr-code-output-1");
+  const editorDiv = document.getElementById("webr-editor-1");
+
+  const editor = CodeMirror((elt) => {
+    elt.style.border = "1px solid #eee";
+    elt.style.height = "auto";
+    editorDiv.append(elt);
+  },{
+    value: `
+`,
+    lineNumbers: true,
+    mode: "r",
+    theme: "light default",
+    viewportMargin: Infinity,
+  });
+
+  runButton.onclick = async () => {
+    runButton.disabled = true;
+    let canvas = undefined;
+    await globalThis.webR.init();
+    await webR.evalRVoid("canvas(width=504, height=360)");
+    const result = await webRCodeShelter.captureR(editor.getValue(), {
+      withAutoprint: true,
+      captureStreams: true,
+      captureConditions: false,
+      env: webR.objs.emptyEnv,
+    });
+    try {
+      await webR.evalRVoid("dev.off()");
+      const out = result.output.filter(
+        evt => evt.type == "stdout" || evt.type == "stderr"
+      ).map((evt) => evt.data).join("\n");
+
+      const msgs = await webR.flush();
+      msgs.forEach(msg => {
+        if (msg.type === "canvasExec"){
+          if (!canvas) {
+            canvas = document.createElement("canvas");
+            canvas.setAttribute("width", 2 * 504);
+            canvas.setAttribute("height", 2 * 360);
+            canvas.style.width="700px";
+            canvas.style.display="block";
+            canvas.style.margin="auto";
+          }
+          Function(`this.getContext("2d").${msg.data}`).bind(canvas)();
+        }
+      });
+
+      outputDiv.innerHTML = "";
+      const pre = document.createElement("pre");
+      if (/\S/.test(out)) {
+        const code = document.createElement("code");
+        code.innerText = out;
+        pre.appendChild(code);
+      } else {
+        pre.style.visibility = "hidden";
+      }
+      outputDiv.appendChild(pre);
+
+      if (canvas) {
+        const p = document.createElement("p");
+        p.appendChild(canvas);
+        outputDiv.appendChild(p);
+      }
+    } finally {
+      webRCodeShelter.purge();
+      runButton.disabled = false;
+    }
+  }
+</script><p><strong>Answer</strong></p>
 <div class="cell">
-<details><summary>Code</summary><div class="sourceCode" id="cb36"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># Create a numeric vector containing the numbers 1 through 10</span></span>
+<details><summary>Code</summary><div class="sourceCode" id="cb35"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># Create a numeric vector containing the numbers 1 through 10</span></span>
 <span><span class="va">x</span> <span class="op">&lt;-</span> <span class="fl">1</span><span class="op">:</span><span class="fl">10</span></span>
 <span></span>
 <span><span class="co"># Find the sum of the first five elements of the vector x using indexing</span></span>
@@ -598,9 +773,83 @@ Tip
 </div>
 <hr>
 <p>2.-Create a character vector names with the names of your three favorite foods. Then, use indexing to extract the second element of names.</p>
-<p><strong>Answer</strong></p>
+<button class="btn btn-default btn-webr" disabled="" type="button" id="webr-run-button-2">Loading webR...</button>
+<div id="webr-editor-2"></div>
+<div id="webr-code-output-2"><pre style="visibility: hidden"></pre></div>
+<script type="module">
+  const runButton = document.getElementById("webr-run-button-2");
+  const outputDiv = document.getElementById("webr-code-output-2");
+  const editorDiv = document.getElementById("webr-editor-2");
+
+  const editor = CodeMirror((elt) => {
+    elt.style.border = "1px solid #eee";
+    elt.style.height = "auto";
+    editorDiv.append(elt);
+  },{
+    value: `
+`,
+    lineNumbers: true,
+    mode: "r",
+    theme: "light default",
+    viewportMargin: Infinity,
+  });
+
+  runButton.onclick = async () => {
+    runButton.disabled = true;
+    let canvas = undefined;
+    await globalThis.webR.init();
+    await webR.evalRVoid("canvas(width=504, height=360)");
+    const result = await webRCodeShelter.captureR(editor.getValue(), {
+      withAutoprint: true,
+      captureStreams: true,
+      captureConditions: false,
+      env: webR.objs.emptyEnv,
+    });
+    try {
+      await webR.evalRVoid("dev.off()");
+      const out = result.output.filter(
+        evt => evt.type == "stdout" || evt.type == "stderr"
+      ).map((evt) => evt.data).join("\n");
+
+      const msgs = await webR.flush();
+      msgs.forEach(msg => {
+        if (msg.type === "canvasExec"){
+          if (!canvas) {
+            canvas = document.createElement("canvas");
+            canvas.setAttribute("width", 2 * 504);
+            canvas.setAttribute("height", 2 * 360);
+            canvas.style.width="700px";
+            canvas.style.display="block";
+            canvas.style.margin="auto";
+          }
+          Function(`this.getContext("2d").${msg.data}`).bind(canvas)();
+        }
+      });
+
+      outputDiv.innerHTML = "";
+      const pre = document.createElement("pre");
+      if (/\S/.test(out)) {
+        const code = document.createElement("code");
+        code.innerText = out;
+        pre.appendChild(code);
+      } else {
+        pre.style.visibility = "hidden";
+      }
+      outputDiv.appendChild(pre);
+
+      if (canvas) {
+        const p = document.createElement("p");
+        p.appendChild(canvas);
+        outputDiv.appendChild(p);
+      }
+    } finally {
+      webRCodeShelter.purge();
+      runButton.disabled = false;
+    }
+  }
+</script><p><strong>Answer</strong></p>
 <div class="cell">
-<details><summary>Code</summary><div class="sourceCode" id="cb37"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># Create a character vector containing the names "pizza", "tacos", and "soup"</span></span>
+<details><summary>Code</summary><div class="sourceCode" id="cb36"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># Create a character vector containing the names "pizza", "tacos", and "soup"</span></span>
 <span><span class="va">names</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"pizza"</span>, <span class="st">"tacos"</span>, <span class="st">"soup"</span><span class="op">)</span></span>
 <span></span>
 <span><span class="co"># Extract the second element of the vector using indexing</span></span>
@@ -609,9 +858,83 @@ Tip
 </div>
 <hr>
 <p>3.-Create a logical vector flags with values TRUE, FALSE, TRUE, TRUE. Then, use the which() function to find the positions of the TRUE values in flags.</p>
-<p><strong>Answer</strong></p>
+<button class="btn btn-default btn-webr" disabled="" type="button" id="webr-run-button-3">Loading webR...</button>
+<div id="webr-editor-3"></div>
+<div id="webr-code-output-3"><pre style="visibility: hidden"></pre></div>
+<script type="module">
+  const runButton = document.getElementById("webr-run-button-3");
+  const outputDiv = document.getElementById("webr-code-output-3");
+  const editorDiv = document.getElementById("webr-editor-3");
+
+  const editor = CodeMirror((elt) => {
+    elt.style.border = "1px solid #eee";
+    elt.style.height = "auto";
+    editorDiv.append(elt);
+  },{
+    value: `
+`,
+    lineNumbers: true,
+    mode: "r",
+    theme: "light default",
+    viewportMargin: Infinity,
+  });
+
+  runButton.onclick = async () => {
+    runButton.disabled = true;
+    let canvas = undefined;
+    await globalThis.webR.init();
+    await webR.evalRVoid("canvas(width=504, height=360)");
+    const result = await webRCodeShelter.captureR(editor.getValue(), {
+      withAutoprint: true,
+      captureStreams: true,
+      captureConditions: false,
+      env: webR.objs.emptyEnv,
+    });
+    try {
+      await webR.evalRVoid("dev.off()");
+      const out = result.output.filter(
+        evt => evt.type == "stdout" || evt.type == "stderr"
+      ).map((evt) => evt.data).join("\n");
+
+      const msgs = await webR.flush();
+      msgs.forEach(msg => {
+        if (msg.type === "canvasExec"){
+          if (!canvas) {
+            canvas = document.createElement("canvas");
+            canvas.setAttribute("width", 2 * 504);
+            canvas.setAttribute("height", 2 * 360);
+            canvas.style.width="700px";
+            canvas.style.display="block";
+            canvas.style.margin="auto";
+          }
+          Function(`this.getContext("2d").${msg.data}`).bind(canvas)();
+        }
+      });
+
+      outputDiv.innerHTML = "";
+      const pre = document.createElement("pre");
+      if (/\S/.test(out)) {
+        const code = document.createElement("code");
+        code.innerText = out;
+        pre.appendChild(code);
+      } else {
+        pre.style.visibility = "hidden";
+      }
+      outputDiv.appendChild(pre);
+
+      if (canvas) {
+        const p = document.createElement("p");
+        p.appendChild(canvas);
+        outputDiv.appendChild(p);
+      }
+    } finally {
+      webRCodeShelter.purge();
+      runButton.disabled = false;
+    }
+  }
+</script><p><strong>Answer</strong></p>
 <div class="cell">
-<details><summary>Code</summary><div class="sourceCode" id="cb38"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># create a logical vector containing the values TRUE, FALSE, TRUE, and TRUE</span></span>
+<details><summary>Code</summary><div class="sourceCode" id="cb37"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># create a logical vector containing the values TRUE, FALSE, TRUE, and TRUE</span></span>
 <span><span class="va">flags</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="cn">TRUE</span>, <span class="cn">FALSE</span>, <span class="cn">TRUE</span>, <span class="cn">TRUE</span><span class="op">)</span></span>
 <span></span>
 <span><span class="co"># use the which() function to find the indices of the TRUE values in the vector</span></span>
@@ -622,7 +945,7 @@ Tip
 <p>4.-Create a date vector dates with the dates “2022-01-01”, “2022-02-01”, “2022-03-01”, “2022-04-01”, “2022-05-01”. Then, use the month() function to extract the month of the second date in dates.</p>
 <p><strong>Answer</strong></p>
 <div class="cell">
-<details><summary>Code</summary><div class="sourceCode" id="cb39"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># Create a Date vector containing five dates using the as.Date() function</span></span>
+<details><summary>Code</summary><div class="sourceCode" id="cb38"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># Create a Date vector containing five dates using the as.Date() function</span></span>
 <span><span class="va">dates</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/as.Date.html">as.Date</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"2022-01-01"</span>, <span class="st">"2022-02-01"</span>, <span class="st">"2022-03-01"</span>, <span class="st">"2022-04-01"</span>, <span class="st">"2022-05-01"</span><span class="op">)</span><span class="op">)</span></span>
 <span></span>
 <span><span class="co"># Extract the second element of the vector using indexing and find its month using the month() function</span></span>
@@ -631,9 +954,83 @@ Tip
 </div>
 <hr>
 <p>5.-Create a vector x with values 1, 2, 3, 4, 5, and a vector y with values 6, 7, 8, 9, 10. Then, concatenate x and y into a single vector z.</p>
-<p><strong>Answer</strong></p>
+<button class="btn btn-default btn-webr" disabled="" type="button" id="webr-run-button-4">Loading webR...</button>
+<div id="webr-editor-4"></div>
+<div id="webr-code-output-4"><pre style="visibility: hidden"></pre></div>
+<script type="module">
+  const runButton = document.getElementById("webr-run-button-4");
+  const outputDiv = document.getElementById("webr-code-output-4");
+  const editorDiv = document.getElementById("webr-editor-4");
+
+  const editor = CodeMirror((elt) => {
+    elt.style.border = "1px solid #eee";
+    elt.style.height = "auto";
+    editorDiv.append(elt);
+  },{
+    value: `
+`,
+    lineNumbers: true,
+    mode: "r",
+    theme: "light default",
+    viewportMargin: Infinity,
+  });
+
+  runButton.onclick = async () => {
+    runButton.disabled = true;
+    let canvas = undefined;
+    await globalThis.webR.init();
+    await webR.evalRVoid("canvas(width=504, height=360)");
+    const result = await webRCodeShelter.captureR(editor.getValue(), {
+      withAutoprint: true,
+      captureStreams: true,
+      captureConditions: false,
+      env: webR.objs.emptyEnv,
+    });
+    try {
+      await webR.evalRVoid("dev.off()");
+      const out = result.output.filter(
+        evt => evt.type == "stdout" || evt.type == "stderr"
+      ).map((evt) => evt.data).join("\n");
+
+      const msgs = await webR.flush();
+      msgs.forEach(msg => {
+        if (msg.type === "canvasExec"){
+          if (!canvas) {
+            canvas = document.createElement("canvas");
+            canvas.setAttribute("width", 2 * 504);
+            canvas.setAttribute("height", 2 * 360);
+            canvas.style.width="700px";
+            canvas.style.display="block";
+            canvas.style.margin="auto";
+          }
+          Function(`this.getContext("2d").${msg.data}`).bind(canvas)();
+        }
+      });
+
+      outputDiv.innerHTML = "";
+      const pre = document.createElement("pre");
+      if (/\S/.test(out)) {
+        const code = document.createElement("code");
+        code.innerText = out;
+        pre.appendChild(code);
+      } else {
+        pre.style.visibility = "hidden";
+      }
+      outputDiv.appendChild(pre);
+
+      if (canvas) {
+        const p = document.createElement("p");
+        p.appendChild(canvas);
+        outputDiv.appendChild(p);
+      }
+    } finally {
+      webRCodeShelter.purge();
+      runButton.disabled = false;
+    }
+  }
+</script><p><strong>Answer</strong></p>
 <div class="cell">
-<details><summary>Code</summary><div class="sourceCode" id="cb40"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># Create two numeric vectors containing </span></span>
+<details><summary>Code</summary><div class="sourceCode" id="cb39"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># Create two numeric vectors containing </span></span>
 <span><span class="co"># the numbers 1 through 5 and 6 through 10, respectively</span></span>
 <span><span class="va">x</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">1</span><span class="op">:</span><span class="fl">5</span><span class="op">)</span></span>
 <span><span class="va">y</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">6</span><span class="op">:</span><span class="fl">10</span><span class="op">)</span></span>
@@ -654,7 +1051,7 @@ Tip
 <p>Lists are handy since they can allow you to store different outputs simultaneously. For example, when you are running models, the results are stored in lists and you can access to them by specifying <code>[[]]</code> and the name of the list inside of the squared brackets.</p>
 <section id="a-list-with-different-type-of-vectors" class="level2"><h2 class="anchored" data-anchor-id="a-list-with-different-type-of-vectors">A list with different type of vectors</h2>
 <div class="cell">
-<div class="sourceCode" id="cb41"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">my_list</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span><span class="op">(</span>numbers <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fl">2</span>, <span class="fl">3</span><span class="op">)</span>, names <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"Alejandro"</span>, <span class="st">"Eduardo"</span>, <span class="st">"Fernanda"</span><span class="op">)</span>, statement <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="cn">TRUE</span>, <span class="cn">FALSE</span>, <span class="cn">TRUE</span><span class="op">)</span><span class="op">)</span></span>
+<div class="sourceCode" id="cb40"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">my_list</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span><span class="op">(</span>numbers <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fl">2</span>, <span class="fl">3</span><span class="op">)</span>, names <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"Alejandro"</span>, <span class="st">"Eduardo"</span>, <span class="st">"Fernanda"</span><span class="op">)</span>, statement <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="cn">TRUE</span>, <span class="cn">FALSE</span>, <span class="cn">TRUE</span><span class="op">)</span><span class="op">)</span></span>
 <span></span>
 <span><span class="va">my_list</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -672,14 +1069,14 @@ $statement
 <p>We can access an element of the list using indexing, which is really useful when you are doing functions and storing results or calling them.</p>
 <p>Here this returns the second element of my_list, which is the character vector “names”</p>
 <div class="cell">
-<div class="sourceCode" id="cb43"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">my_list</span><span class="op">[[</span><span class="fl">2</span><span class="op">]</span><span class="op">]</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb42"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">my_list</span><span class="op">[[</span><span class="fl">2</span><span class="op">]</span><span class="op">]</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "Alejandro" "Eduardo"   "Fernanda" </code></pre>
 </div>
 </div>
 <p>or also we can access an element of the list using named indexing:</p>
 <div class="cell">
-<div class="sourceCode" id="cb45"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">my_list</span><span class="op">[[</span><span class="st">"names"</span><span class="op">]</span><span class="op">]</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb44"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">my_list</span><span class="op">[[</span><span class="st">"names"</span><span class="op">]</span><span class="op">]</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "Alejandro" "Eduardo"   "Fernanda" </code></pre>
 </div>
@@ -687,11 +1084,11 @@ $statement
 </section><section id="add-a-new-element-to-the-list" class="level2"><h2 class="anchored" data-anchor-id="add-a-new-element-to-the-list">Add a new element to the list:</h2>
 <p>Adds a new numeric vector “ages” to my_list</p>
 <div class="cell">
-<div class="sourceCode" id="cb47"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">my_list</span><span class="op">[[</span><span class="st">"ages"</span><span class="op">]</span><span class="op">]</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">25</span>, <span class="fl">30</span>, <span class="fl">35</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb46"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">my_list</span><span class="op">[[</span><span class="st">"ages"</span><span class="op">]</span><span class="op">]</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">25</span>, <span class="fl">30</span>, <span class="fl">35</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>We can do the same even with a dataframe inside a list</p>
 <div class="cell">
-<div class="sourceCode" id="cb48"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">df</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html">data.frame</a></span><span class="op">(</span>name <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"Alejandro"</span>, <span class="st">"Eduardo"</span>, <span class="st">"Marifer"</span><span class="op">)</span>, </span>
+<div class="sourceCode" id="cb47"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">df</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html">data.frame</a></span><span class="op">(</span>name <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"Alejandro"</span>, <span class="st">"Eduardo"</span>, <span class="st">"Marifer"</span><span class="op">)</span>, </span>
 <span>                 age <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">30</span>, <span class="fl">27</span>, <span class="fl">17</span><span class="op">)</span><span class="op">)</span> <span class="co"># Create the dataframe</span></span>
 <span></span>
 <span><span class="va">my_list</span><span class="op">[[</span><span class="st">"my_df"</span><span class="op">]</span><span class="op">]</span> <span class="op">&lt;-</span> <span class="va">df</span></span>
@@ -719,7 +1116,7 @@ $my_df
 </div>
 </section><section id="create-a-nested-list-with-two-elements" class="level2"><h2 class="anchored" data-anchor-id="create-a-nested-list-with-two-elements">Create a nested list with two elements:</h2>
 <div class="cell">
-<div class="sourceCode" id="cb50"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">nested_list</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span><span class="op">(</span>numbers <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fl">2</span>, <span class="fl">3</span><span class="op">)</span>, list_2 <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span><span class="op">(</span>letter <span class="op">=</span> <span class="st">"A"</span>, number <span class="op">=</span> <span class="fl">42</span><span class="op">)</span><span class="op">)</span></span>
+<div class="sourceCode" id="cb49"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">nested_list</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span><span class="op">(</span>numbers <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fl">2</span>, <span class="fl">3</span><span class="op">)</span>, list_2 <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span><span class="op">(</span>letter <span class="op">=</span> <span class="st">"A"</span>, number <span class="op">=</span> <span class="fl">42</span><span class="op">)</span><span class="op">)</span></span>
 <span></span>
 <span><span class="va">nested_list</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -736,7 +1133,7 @@ $list_2$number
 </div>
 <p>For access a nested element of the list:</p>
 <div class="cell">
-<div class="sourceCode" id="cb52"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">nested_list</span><span class="op">[[</span><span class="st">"list_2"</span><span class="op">]</span><span class="op">]</span><span class="op">[[</span><span class="st">"number"</span><span class="op">]</span><span class="op">]</span>  </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb51"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">nested_list</span><span class="op">[[</span><span class="st">"list_2"</span><span class="op">]</span><span class="op">]</span><span class="op">[[</span><span class="st">"number"</span><span class="op">]</span><span class="op">]</span>  </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 42</code></pre>
 </div>
@@ -745,9 +1142,83 @@ $list_2$number
 </section></section><section id="exercises-1" class="level1"><h1>Exercises</h1>
 <hr>
 <p>1.-Create a list with three elements: a numeric vector, a character vector, and a logical vector. Then, add a new element to the list containing a data frame with three columns: “name”, “age”, and “gender”.</p>
-<p><strong>Answer</strong></p>
+<button class="btn btn-default btn-webr" disabled="" type="button" id="webr-run-button-5">Loading webR...</button>
+<div id="webr-editor-5"></div>
+<div id="webr-code-output-5"><pre style="visibility: hidden"></pre></div>
+<script type="module">
+  const runButton = document.getElementById("webr-run-button-5");
+  const outputDiv = document.getElementById("webr-code-output-5");
+  const editorDiv = document.getElementById("webr-editor-5");
+
+  const editor = CodeMirror((elt) => {
+    elt.style.border = "1px solid #eee";
+    elt.style.height = "auto";
+    editorDiv.append(elt);
+  },{
+    value: `
+`,
+    lineNumbers: true,
+    mode: "r",
+    theme: "light default",
+    viewportMargin: Infinity,
+  });
+
+  runButton.onclick = async () => {
+    runButton.disabled = true;
+    let canvas = undefined;
+    await globalThis.webR.init();
+    await webR.evalRVoid("canvas(width=504, height=360)");
+    const result = await webRCodeShelter.captureR(editor.getValue(), {
+      withAutoprint: true,
+      captureStreams: true,
+      captureConditions: false,
+      env: webR.objs.emptyEnv,
+    });
+    try {
+      await webR.evalRVoid("dev.off()");
+      const out = result.output.filter(
+        evt => evt.type == "stdout" || evt.type == "stderr"
+      ).map((evt) => evt.data).join("\n");
+
+      const msgs = await webR.flush();
+      msgs.forEach(msg => {
+        if (msg.type === "canvasExec"){
+          if (!canvas) {
+            canvas = document.createElement("canvas");
+            canvas.setAttribute("width", 2 * 504);
+            canvas.setAttribute("height", 2 * 360);
+            canvas.style.width="700px";
+            canvas.style.display="block";
+            canvas.style.margin="auto";
+          }
+          Function(`this.getContext("2d").${msg.data}`).bind(canvas)();
+        }
+      });
+
+      outputDiv.innerHTML = "";
+      const pre = document.createElement("pre");
+      if (/\S/.test(out)) {
+        const code = document.createElement("code");
+        code.innerText = out;
+        pre.appendChild(code);
+      } else {
+        pre.style.visibility = "hidden";
+      }
+      outputDiv.appendChild(pre);
+
+      if (canvas) {
+        const p = document.createElement("p");
+        p.appendChild(canvas);
+        outputDiv.appendChild(p);
+      }
+    } finally {
+      webRCodeShelter.purge();
+      runButton.disabled = false;
+    }
+  }
+</script><p><strong>Answer</strong></p>
 <div class="cell">
-<details><summary>Code</summary><div class="sourceCode" id="cb54"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># Create a list with three elements: </span></span>
+<details><summary>Code</summary><div class="sourceCode" id="cb53"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># Create a list with three elements: </span></span>
 <span><span class="co"># a numeric vector, a character vector, and a logical vector</span></span>
 <span><span class="va">l_exercise1</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span><span class="op">(</span>numbers <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fl">2</span>, <span class="fl">3</span><span class="op">)</span>, </span>
 <span>                    names <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"Alice"</span>, <span class="st">"Bob"</span>, <span class="st">"Charlie"</span><span class="op">)</span>, </span>
@@ -765,9 +1236,83 @@ $list_2$number
 </div>
 <hr>
 <p>2.-Create a nested list with two elements: a character vector containing the names of three countries, and a list containing the populations and areas of those countries.</p>
-<p><strong>Answer</strong></p>
+<button class="btn btn-default btn-webr" disabled="" type="button" id="webr-run-button-6">Loading webR...</button>
+<div id="webr-editor-6"></div>
+<div id="webr-code-output-6"><pre style="visibility: hidden"></pre></div>
+<script type="module">
+  const runButton = document.getElementById("webr-run-button-6");
+  const outputDiv = document.getElementById("webr-code-output-6");
+  const editorDiv = document.getElementById("webr-editor-6");
+
+  const editor = CodeMirror((elt) => {
+    elt.style.border = "1px solid #eee";
+    elt.style.height = "auto";
+    editorDiv.append(elt);
+  },{
+    value: `
+`,
+    lineNumbers: true,
+    mode: "r",
+    theme: "light default",
+    viewportMargin: Infinity,
+  });
+
+  runButton.onclick = async () => {
+    runButton.disabled = true;
+    let canvas = undefined;
+    await globalThis.webR.init();
+    await webR.evalRVoid("canvas(width=504, height=360)");
+    const result = await webRCodeShelter.captureR(editor.getValue(), {
+      withAutoprint: true,
+      captureStreams: true,
+      captureConditions: false,
+      env: webR.objs.emptyEnv,
+    });
+    try {
+      await webR.evalRVoid("dev.off()");
+      const out = result.output.filter(
+        evt => evt.type == "stdout" || evt.type == "stderr"
+      ).map((evt) => evt.data).join("\n");
+
+      const msgs = await webR.flush();
+      msgs.forEach(msg => {
+        if (msg.type === "canvasExec"){
+          if (!canvas) {
+            canvas = document.createElement("canvas");
+            canvas.setAttribute("width", 2 * 504);
+            canvas.setAttribute("height", 2 * 360);
+            canvas.style.width="700px";
+            canvas.style.display="block";
+            canvas.style.margin="auto";
+          }
+          Function(`this.getContext("2d").${msg.data}`).bind(canvas)();
+        }
+      });
+
+      outputDiv.innerHTML = "";
+      const pre = document.createElement("pre");
+      if (/\S/.test(out)) {
+        const code = document.createElement("code");
+        code.innerText = out;
+        pre.appendChild(code);
+      } else {
+        pre.style.visibility = "hidden";
+      }
+      outputDiv.appendChild(pre);
+
+      if (canvas) {
+        const p = document.createElement("p");
+        p.appendChild(canvas);
+        outputDiv.appendChild(p);
+      }
+    } finally {
+      webRCodeShelter.purge();
+      runButton.disabled = false;
+    }
+  }
+</script><p><strong>Answer</strong></p>
 <div class="cell">
-<details><summary>Code</summary><div class="sourceCode" id="cb55"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># The first element is a character vector containing the names of three countries</span></span>
+<details><summary>Code</summary><div class="sourceCode" id="cb54"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># The first element is a character vector containing the names of three countries</span></span>
 <span><span class="co"># The second element is a list containing two named vectors: population and area</span></span>
 <span></span>
 <span><span class="va">l_exercise2</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span><span class="op">(</span>countries <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"USA"</span>, <span class="st">"China"</span>, <span class="st">"India"</span><span class="op">)</span>, </span>
@@ -777,9 +1322,83 @@ $list_2$number
 </div>
 <hr>
 <p>3.- Create a list with four elements: two numeric vectors, a character vector, and a data frame. Then, extract the second element of the character vector and the third column of the data frame.</p>
-<p><strong>Answer</strong></p>
+<button class="btn btn-default btn-webr" disabled="" type="button" id="webr-run-button-7">Loading webR...</button>
+<div id="webr-editor-7"></div>
+<div id="webr-code-output-7"><pre style="visibility: hidden"></pre></div>
+<script type="module">
+  const runButton = document.getElementById("webr-run-button-7");
+  const outputDiv = document.getElementById("webr-code-output-7");
+  const editorDiv = document.getElementById("webr-editor-7");
+
+  const editor = CodeMirror((elt) => {
+    elt.style.border = "1px solid #eee";
+    elt.style.height = "auto";
+    editorDiv.append(elt);
+  },{
+    value: `
+`,
+    lineNumbers: true,
+    mode: "r",
+    theme: "light default",
+    viewportMargin: Infinity,
+  });
+
+  runButton.onclick = async () => {
+    runButton.disabled = true;
+    let canvas = undefined;
+    await globalThis.webR.init();
+    await webR.evalRVoid("canvas(width=504, height=360)");
+    const result = await webRCodeShelter.captureR(editor.getValue(), {
+      withAutoprint: true,
+      captureStreams: true,
+      captureConditions: false,
+      env: webR.objs.emptyEnv,
+    });
+    try {
+      await webR.evalRVoid("dev.off()");
+      const out = result.output.filter(
+        evt => evt.type == "stdout" || evt.type == "stderr"
+      ).map((evt) => evt.data).join("\n");
+
+      const msgs = await webR.flush();
+      msgs.forEach(msg => {
+        if (msg.type === "canvasExec"){
+          if (!canvas) {
+            canvas = document.createElement("canvas");
+            canvas.setAttribute("width", 2 * 504);
+            canvas.setAttribute("height", 2 * 360);
+            canvas.style.width="700px";
+            canvas.style.display="block";
+            canvas.style.margin="auto";
+          }
+          Function(`this.getContext("2d").${msg.data}`).bind(canvas)();
+        }
+      });
+
+      outputDiv.innerHTML = "";
+      const pre = document.createElement("pre");
+      if (/\S/.test(out)) {
+        const code = document.createElement("code");
+        code.innerText = out;
+        pre.appendChild(code);
+      } else {
+        pre.style.visibility = "hidden";
+      }
+      outputDiv.appendChild(pre);
+
+      if (canvas) {
+        const p = document.createElement("p");
+        p.appendChild(canvas);
+        outputDiv.appendChild(p);
+      }
+    } finally {
+      webRCodeShelter.purge();
+      runButton.disabled = false;
+    }
+  }
+</script><p><strong>Answer</strong></p>
 <div class="cell">
-<details><summary>Code</summary><div class="sourceCode" id="cb56"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># Create a list with four elements: two numeric vectors, a character vector, and a data frame</span></span>
+<details><summary>Code</summary><div class="sourceCode" id="cb55"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># Create a list with four elements: two numeric vectors, a character vector, and a data frame</span></span>
 <span><span class="va">l_exercise3</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span><span class="op">(</span>x <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fl">2</span>, <span class="fl">3</span><span class="op">)</span>, y <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">4</span>, <span class="fl">5</span>, <span class="fl">6</span><span class="op">)</span>, </span>
 <span>                    names <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"Guillermo"</span>, <span class="st">"Alonso"</span>, <span class="st">"Chivo"</span><span class="op">)</span>, </span>
 <span>                    df <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html">data.frame</a></span><span class="op">(</span>name <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"Guillermo"</span>, <span class="st">"Alonso"</span>, <span class="st">"Chivo"</span><span class="op">)</span>, </span>
@@ -795,9 +1414,83 @@ $list_2$number
 </div>
 <hr>
 <p>4.-Create a list with two elements: a numeric vector and a data frame. Then, use the str() function to display the structure of the list.</p>
-<p><strong>Answer</strong></p>
+<button class="btn btn-default btn-webr" disabled="" type="button" id="webr-run-button-8">Loading webR...</button>
+<div id="webr-editor-8"></div>
+<div id="webr-code-output-8"><pre style="visibility: hidden"></pre></div>
+<script type="module">
+  const runButton = document.getElementById("webr-run-button-8");
+  const outputDiv = document.getElementById("webr-code-output-8");
+  const editorDiv = document.getElementById("webr-editor-8");
+
+  const editor = CodeMirror((elt) => {
+    elt.style.border = "1px solid #eee";
+    elt.style.height = "auto";
+    editorDiv.append(elt);
+  },{
+    value: `
+`,
+    lineNumbers: true,
+    mode: "r",
+    theme: "light default",
+    viewportMargin: Infinity,
+  });
+
+  runButton.onclick = async () => {
+    runButton.disabled = true;
+    let canvas = undefined;
+    await globalThis.webR.init();
+    await webR.evalRVoid("canvas(width=504, height=360)");
+    const result = await webRCodeShelter.captureR(editor.getValue(), {
+      withAutoprint: true,
+      captureStreams: true,
+      captureConditions: false,
+      env: webR.objs.emptyEnv,
+    });
+    try {
+      await webR.evalRVoid("dev.off()");
+      const out = result.output.filter(
+        evt => evt.type == "stdout" || evt.type == "stderr"
+      ).map((evt) => evt.data).join("\n");
+
+      const msgs = await webR.flush();
+      msgs.forEach(msg => {
+        if (msg.type === "canvasExec"){
+          if (!canvas) {
+            canvas = document.createElement("canvas");
+            canvas.setAttribute("width", 2 * 504);
+            canvas.setAttribute("height", 2 * 360);
+            canvas.style.width="700px";
+            canvas.style.display="block";
+            canvas.style.margin="auto";
+          }
+          Function(`this.getContext("2d").${msg.data}`).bind(canvas)();
+        }
+      });
+
+      outputDiv.innerHTML = "";
+      const pre = document.createElement("pre");
+      if (/\S/.test(out)) {
+        const code = document.createElement("code");
+        code.innerText = out;
+        pre.appendChild(code);
+      } else {
+        pre.style.visibility = "hidden";
+      }
+      outputDiv.appendChild(pre);
+
+      if (canvas) {
+        const p = document.createElement("p");
+        p.appendChild(canvas);
+        outputDiv.appendChild(p);
+      }
+    } finally {
+      webRCodeShelter.purge();
+      runButton.disabled = false;
+    }
+  }
+</script><p><strong>Answer</strong></p>
 <div class="cell">
-<details><summary>Code</summary><div class="sourceCode" id="cb57"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># Create a list with two elements: a numeric vector and a data frame</span></span>
+<details><summary>Code</summary><div class="sourceCode" id="cb56"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># Create a list with two elements: a numeric vector and a data frame</span></span>
 <span><span class="va">my_list</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span><span class="op">(</span>x <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fl">2</span>, <span class="fl">3</span><span class="op">)</span>, </span>
 <span>                df <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html">data.frame</a></span><span class="op">(</span>name <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"Trejo"</span>, <span class="st">"Adame"</span>, <span class="st">"Rose"</span><span class="op">)</span>, </span>
 <span>                                age <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">25</span>, <span class="fl">30</span>, <span class="fl">35</span><span class="op">)</span>, </span>
@@ -809,9 +1502,83 @@ $list_2$number
 </div>
 <hr>
 <p>5.-Create a list with three elements: a numeric vector, a character vector, and a logical vector. Then, use the names() function to assign names to the elements of the list.</p>
-<p><strong>Answer</strong></p>
+<button class="btn btn-default btn-webr" disabled="" type="button" id="webr-run-button-9">Loading webR...</button>
+<div id="webr-editor-9"></div>
+<div id="webr-code-output-9"><pre style="visibility: hidden"></pre></div>
+<script type="module">
+  const runButton = document.getElementById("webr-run-button-9");
+  const outputDiv = document.getElementById("webr-code-output-9");
+  const editorDiv = document.getElementById("webr-editor-9");
+
+  const editor = CodeMirror((elt) => {
+    elt.style.border = "1px solid #eee";
+    elt.style.height = "auto";
+    editorDiv.append(elt);
+  },{
+    value: `
+`,
+    lineNumbers: true,
+    mode: "r",
+    theme: "light default",
+    viewportMargin: Infinity,
+  });
+
+  runButton.onclick = async () => {
+    runButton.disabled = true;
+    let canvas = undefined;
+    await globalThis.webR.init();
+    await webR.evalRVoid("canvas(width=504, height=360)");
+    const result = await webRCodeShelter.captureR(editor.getValue(), {
+      withAutoprint: true,
+      captureStreams: true,
+      captureConditions: false,
+      env: webR.objs.emptyEnv,
+    });
+    try {
+      await webR.evalRVoid("dev.off()");
+      const out = result.output.filter(
+        evt => evt.type == "stdout" || evt.type == "stderr"
+      ).map((evt) => evt.data).join("\n");
+
+      const msgs = await webR.flush();
+      msgs.forEach(msg => {
+        if (msg.type === "canvasExec"){
+          if (!canvas) {
+            canvas = document.createElement("canvas");
+            canvas.setAttribute("width", 2 * 504);
+            canvas.setAttribute("height", 2 * 360);
+            canvas.style.width="700px";
+            canvas.style.display="block";
+            canvas.style.margin="auto";
+          }
+          Function(`this.getContext("2d").${msg.data}`).bind(canvas)();
+        }
+      });
+
+      outputDiv.innerHTML = "";
+      const pre = document.createElement("pre");
+      if (/\S/.test(out)) {
+        const code = document.createElement("code");
+        code.innerText = out;
+        pre.appendChild(code);
+      } else {
+        pre.style.visibility = "hidden";
+      }
+      outputDiv.appendChild(pre);
+
+      if (canvas) {
+        const p = document.createElement("p");
+        p.appendChild(canvas);
+        outputDiv.appendChild(p);
+      }
+    } finally {
+      webRCodeShelter.purge();
+      runButton.disabled = false;
+    }
+  }
+</script><p><strong>Answer</strong></p>
 <div class="cell">
-<details><summary>Code</summary><div class="sourceCode" id="cb58"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># Create a list with three elements: a numeric vector, a character vector, and a logical vector</span></span>
+<details><summary>Code</summary><div class="sourceCode" id="cb57"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># Create a list with three elements: a numeric vector, a character vector, and a logical vector</span></span>
 <span><span class="va">l_exercise5</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span><span class="op">(</span>numbers <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fl">2</span>, <span class="fl">3</span><span class="op">)</span>, </span>
 <span>                    names <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"Mariana"</span>, <span class="st">"Bobby"</span>, <span class="st">"Niurka"</span>, <span class="st">"Ricardo"</span><span class="op">)</span>, </span>
 <span>                    logical <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="cn">TRUE</span>, <span class="cn">FALSE</span>, <span class="cn">TRUE</span><span class="op">)</span><span class="op">)</span></span>
@@ -822,9 +1589,83 @@ $list_2$number
 </div>
 <hr>
 <p>6.-Create a list with three elements: a numeric vector, a character vector, and a logical vector. Then, use the length() function to find the length of the character vector.</p>
-<p><strong>Answer</strong></p>
+<button class="btn btn-default btn-webr" disabled="" type="button" id="webr-run-button-10">Loading webR...</button>
+<div id="webr-editor-10"></div>
+<div id="webr-code-output-10"><pre style="visibility: hidden"></pre></div>
+<script type="module">
+  const runButton = document.getElementById("webr-run-button-10");
+  const outputDiv = document.getElementById("webr-code-output-10");
+  const editorDiv = document.getElementById("webr-editor-10");
+
+  const editor = CodeMirror((elt) => {
+    elt.style.border = "1px solid #eee";
+    elt.style.height = "auto";
+    editorDiv.append(elt);
+  },{
+    value: `
+`,
+    lineNumbers: true,
+    mode: "r",
+    theme: "light default",
+    viewportMargin: Infinity,
+  });
+
+  runButton.onclick = async () => {
+    runButton.disabled = true;
+    let canvas = undefined;
+    await globalThis.webR.init();
+    await webR.evalRVoid("canvas(width=504, height=360)");
+    const result = await webRCodeShelter.captureR(editor.getValue(), {
+      withAutoprint: true,
+      captureStreams: true,
+      captureConditions: false,
+      env: webR.objs.emptyEnv,
+    });
+    try {
+      await webR.evalRVoid("dev.off()");
+      const out = result.output.filter(
+        evt => evt.type == "stdout" || evt.type == "stderr"
+      ).map((evt) => evt.data).join("\n");
+
+      const msgs = await webR.flush();
+      msgs.forEach(msg => {
+        if (msg.type === "canvasExec"){
+          if (!canvas) {
+            canvas = document.createElement("canvas");
+            canvas.setAttribute("width", 2 * 504);
+            canvas.setAttribute("height", 2 * 360);
+            canvas.style.width="700px";
+            canvas.style.display="block";
+            canvas.style.margin="auto";
+          }
+          Function(`this.getContext("2d").${msg.data}`).bind(canvas)();
+        }
+      });
+
+      outputDiv.innerHTML = "";
+      const pre = document.createElement("pre");
+      if (/\S/.test(out)) {
+        const code = document.createElement("code");
+        code.innerText = out;
+        pre.appendChild(code);
+      } else {
+        pre.style.visibility = "hidden";
+      }
+      outputDiv.appendChild(pre);
+
+      if (canvas) {
+        const p = document.createElement("p");
+        p.appendChild(canvas);
+        outputDiv.appendChild(p);
+      }
+    } finally {
+      webRCodeShelter.purge();
+      runButton.disabled = false;
+    }
+  }
+</script><p><strong>Answer</strong></p>
 <div class="cell">
-<details><summary>Code</summary><div class="sourceCode" id="cb59"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># Create a list with three elements: a numeric vector, a character vector, and a logical vector</span></span>
+<details><summary>Code</summary><div class="sourceCode" id="cb58"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># Create a list with three elements: a numeric vector, a character vector, and a logical vector</span></span>
 <span><span class="va">l_exercise6</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span><span class="op">(</span>numbers <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fl">2</span>, <span class="fl">3</span><span class="op">)</span>, </span>
 <span>                names <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"Mariana"</span>, <span class="st">"Bobby"</span>, <span class="st">"Niurka"</span><span class="op">)</span>, </span>
 <span>                logical <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="cn">TRUE</span>, <span class="cn">FALSE</span>, <span class="cn">TRUE</span><span class="op">)</span><span class="op">)</span></span>
@@ -844,7 +1685,7 @@ $list_2$number
 <section id="createing-a-matrix" class="level2"><h2 class="anchored" data-anchor-id="createing-a-matrix">Createing a matrix</h2>
 <p>Create a matrix with three rows and four columns:</p>
 <div class="cell">
-<div class="sourceCode" id="cb60"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">m_example</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/matrix.html">matrix</a></span><span class="op">(</span><span class="fl">1</span><span class="op">:</span><span class="fl">12</span>, nrow <span class="op">=</span> <span class="fl">3</span>, ncol <span class="op">=</span> <span class="fl">4</span><span class="op">)</span></span>
+<div class="sourceCode" id="cb59"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">m_example</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/matrix.html">matrix</a></span><span class="op">(</span><span class="fl">1</span><span class="op">:</span><span class="fl">12</span>, nrow <span class="op">=</span> <span class="fl">3</span>, ncol <span class="op">=</span> <span class="fl">4</span><span class="op">)</span></span>
 <span></span>
 <span><span class="va">m_example</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -857,7 +1698,7 @@ $list_2$number
 </section><section id="access-an-element-of-the-matrix-using-indexing" class="level2"><h2 class="anchored" data-anchor-id="access-an-element-of-the-matrix-using-indexing">Access an element of the matrix using indexing</h2>
 <p>Returns the element in the second row and third column of my_matrix, which is 7</p>
 <div class="cell">
-<div class="sourceCode" id="cb62"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">m_example</span><span class="op">[</span><span class="fl">2</span>, <span class="fl">3</span><span class="op">]</span> </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb61"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">m_example</span><span class="op">[</span><span class="fl">2</span>, <span class="fl">3</span><span class="op">]</span> </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 8</code></pre>
 </div>
@@ -865,7 +1706,7 @@ $list_2$number
 </section><section id="modify-an-element-of-the-matrix" class="level2"><h2 class="anchored" data-anchor-id="modify-an-element-of-the-matrix">Modify an element of the matrix</h2>
 <p>Changes the element in the first row and fourth column of my_matrix to 20</p>
 <div class="cell">
-<div class="sourceCode" id="cb64"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">m_example</span><span class="op">[</span><span class="fl">1</span>, <span class="fl">4</span><span class="op">]</span> <span class="op">&lt;-</span> <span class="fl">20</span>  </span>
+<div class="sourceCode" id="cb63"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">m_example</span><span class="op">[</span><span class="fl">1</span>, <span class="fl">4</span><span class="op">]</span> <span class="op">&lt;-</span> <span class="fl">20</span>  </span>
 <span></span>
 <span><span class="va">m_example</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -877,7 +1718,7 @@ $list_2$number
 </div>
 </section><section id="create-an-array-with-three-dimensions" class="level2"><h2 class="anchored" data-anchor-id="create-an-array-with-three-dimensions">Create an array with three dimensions</h2>
 <div class="cell">
-<div class="sourceCode" id="cb66"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">arr_example</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/array.html">array</a></span><span class="op">(</span><span class="fl">1</span><span class="op">:</span><span class="fl">24</span>, dim <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">2</span>, <span class="fl">3</span>, <span class="fl">4</span><span class="op">)</span><span class="op">)</span></span>
+<div class="sourceCode" id="cb65"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">arr_example</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/array.html">array</a></span><span class="op">(</span><span class="fl">1</span><span class="op">:</span><span class="fl">24</span>, dim <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">2</span>, <span class="fl">3</span>, <span class="fl">4</span><span class="op">)</span><span class="op">)</span></span>
 <span></span>
 <span><span class="va">arr_example</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -909,7 +1750,7 @@ $list_2$number
 </section><section id="access-an-element-of-the-array-using-indexing" class="level2"><h2 class="anchored" data-anchor-id="access-an-element-of-the-array-using-indexing">Access an element of the array using indexing</h2>
 <p>Returns the element in the second row, third column, and fourth layer of my_array, which is 23</p>
 <div class="cell">
-<div class="sourceCode" id="cb68"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">arr_example</span><span class="op">[</span><span class="fl">2</span>, <span class="fl">3</span>, <span class="fl">4</span><span class="op">]</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb67"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">arr_example</span><span class="op">[</span><span class="fl">2</span>, <span class="fl">3</span>, <span class="fl">4</span><span class="op">]</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 24</code></pre>
 </div>
@@ -917,7 +1758,7 @@ $list_2$number
 </section><section id="modify-an-element-of-the-array" class="level2"><h2 class="anchored" data-anchor-id="modify-an-element-of-the-array">Modify an element of the array</h2>
 <p>Changes the element in the second row, second column, and first layer of arr_example to 10</p>
 <div class="cell">
-<div class="sourceCode" id="cb70"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">arr_example</span><span class="op">[</span><span class="fl">2</span>, <span class="fl">2</span>, <span class="fl">1</span><span class="op">]</span> <span class="op">&lt;-</span> <span class="fl">10</span> </span>
+<div class="sourceCode" id="cb69"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">arr_example</span><span class="op">[</span><span class="fl">2</span>, <span class="fl">2</span>, <span class="fl">1</span><span class="op">]</span> <span class="op">&lt;-</span> <span class="fl">10</span> </span>
 <span></span>
 <span><span class="va">arr_example</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -949,9 +1790,83 @@ $list_2$number
 </section></section><section id="exercises-2" class="level1"><h1>Exercises</h1>
 <hr>
 <p>1.-Create a matrix with four rows and three columns, where each element is the square of its row number.</p>
-<p><strong>Answer</strong></p>
+<button class="btn btn-default btn-webr" disabled="" type="button" id="webr-run-button-11">Loading webR...</button>
+<div id="webr-editor-11"></div>
+<div id="webr-code-output-11"><pre style="visibility: hidden"></pre></div>
+<script type="module">
+  const runButton = document.getElementById("webr-run-button-11");
+  const outputDiv = document.getElementById("webr-code-output-11");
+  const editorDiv = document.getElementById("webr-editor-11");
+
+  const editor = CodeMirror((elt) => {
+    elt.style.border = "1px solid #eee";
+    elt.style.height = "auto";
+    editorDiv.append(elt);
+  },{
+    value: `
+`,
+    lineNumbers: true,
+    mode: "r",
+    theme: "light default",
+    viewportMargin: Infinity,
+  });
+
+  runButton.onclick = async () => {
+    runButton.disabled = true;
+    let canvas = undefined;
+    await globalThis.webR.init();
+    await webR.evalRVoid("canvas(width=504, height=360)");
+    const result = await webRCodeShelter.captureR(editor.getValue(), {
+      withAutoprint: true,
+      captureStreams: true,
+      captureConditions: false,
+      env: webR.objs.emptyEnv,
+    });
+    try {
+      await webR.evalRVoid("dev.off()");
+      const out = result.output.filter(
+        evt => evt.type == "stdout" || evt.type == "stderr"
+      ).map((evt) => evt.data).join("\n");
+
+      const msgs = await webR.flush();
+      msgs.forEach(msg => {
+        if (msg.type === "canvasExec"){
+          if (!canvas) {
+            canvas = document.createElement("canvas");
+            canvas.setAttribute("width", 2 * 504);
+            canvas.setAttribute("height", 2 * 360);
+            canvas.style.width="700px";
+            canvas.style.display="block";
+            canvas.style.margin="auto";
+          }
+          Function(`this.getContext("2d").${msg.data}`).bind(canvas)();
+        }
+      });
+
+      outputDiv.innerHTML = "";
+      const pre = document.createElement("pre");
+      if (/\S/.test(out)) {
+        const code = document.createElement("code");
+        code.innerText = out;
+        pre.appendChild(code);
+      } else {
+        pre.style.visibility = "hidden";
+      }
+      outputDiv.appendChild(pre);
+
+      if (canvas) {
+        const p = document.createElement("p");
+        p.appendChild(canvas);
+        outputDiv.appendChild(p);
+      }
+    } finally {
+      webRCodeShelter.purge();
+      runButton.disabled = false;
+    }
+  }
+</script><p><strong>Answer</strong></p>
 <div class="cell">
-<details><summary>Code</summary><div class="sourceCode" id="cb72"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># Create a matrix with 4 rows and 3 columns </span></span>
+<details><summary>Code</summary><div class="sourceCode" id="cb71"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># Create a matrix with 4 rows and 3 columns </span></span>
 <span><span class="co"># containing the squares of the numbers 1 through 4</span></span>
 <span><span class="va">m_exercise1</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/matrix.html">matrix</a></span><span class="op">(</span><span class="op">(</span><span class="fl">1</span><span class="op">:</span><span class="fl">4</span><span class="op">)</span><span class="op">^</span><span class="fl">2</span>, nrow <span class="op">=</span> <span class="fl">4</span>, ncol <span class="op">=</span> <span class="fl">3</span><span class="op">)</span></span>
 <span></span>
@@ -969,9 +1884,83 @@ $list_2$number
 </div>
 <hr>
 <p>2.-Create a three-dimensional array with dimensions 2 x 3 x 4, where each element is the sum of its three indices.</p>
-<p><strong>Answer</strong></p>
+<button class="btn btn-default btn-webr" disabled="" type="button" id="webr-run-button-12">Loading webR...</button>
+<div id="webr-editor-12"></div>
+<div id="webr-code-output-12"><pre style="visibility: hidden"></pre></div>
+<script type="module">
+  const runButton = document.getElementById("webr-run-button-12");
+  const outputDiv = document.getElementById("webr-code-output-12");
+  const editorDiv = document.getElementById("webr-editor-12");
+
+  const editor = CodeMirror((elt) => {
+    elt.style.border = "1px solid #eee";
+    elt.style.height = "auto";
+    editorDiv.append(elt);
+  },{
+    value: `
+`,
+    lineNumbers: true,
+    mode: "r",
+    theme: "light default",
+    viewportMargin: Infinity,
+  });
+
+  runButton.onclick = async () => {
+    runButton.disabled = true;
+    let canvas = undefined;
+    await globalThis.webR.init();
+    await webR.evalRVoid("canvas(width=504, height=360)");
+    const result = await webRCodeShelter.captureR(editor.getValue(), {
+      withAutoprint: true,
+      captureStreams: true,
+      captureConditions: false,
+      env: webR.objs.emptyEnv,
+    });
+    try {
+      await webR.evalRVoid("dev.off()");
+      const out = result.output.filter(
+        evt => evt.type == "stdout" || evt.type == "stderr"
+      ).map((evt) => evt.data).join("\n");
+
+      const msgs = await webR.flush();
+      msgs.forEach(msg => {
+        if (msg.type === "canvasExec"){
+          if (!canvas) {
+            canvas = document.createElement("canvas");
+            canvas.setAttribute("width", 2 * 504);
+            canvas.setAttribute("height", 2 * 360);
+            canvas.style.width="700px";
+            canvas.style.display="block";
+            canvas.style.margin="auto";
+          }
+          Function(`this.getContext("2d").${msg.data}`).bind(canvas)();
+        }
+      });
+
+      outputDiv.innerHTML = "";
+      const pre = document.createElement("pre");
+      if (/\S/.test(out)) {
+        const code = document.createElement("code");
+        code.innerText = out;
+        pre.appendChild(code);
+      } else {
+        pre.style.visibility = "hidden";
+      }
+      outputDiv.appendChild(pre);
+
+      if (canvas) {
+        const p = document.createElement("p");
+        p.appendChild(canvas);
+        outputDiv.appendChild(p);
+      }
+    } finally {
+      webRCodeShelter.purge();
+      runButton.disabled = false;
+    }
+  }
+</script><p><strong>Answer</strong></p>
 <div class="cell">
-<details><summary>Code</summary><div class="sourceCode" id="cb73"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">l_exercise2</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span><span class="op">(</span>countries <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"USA"</span>, <span class="st">"China"</span>, <span class="st">"India"</span><span class="op">)</span>, </span>
+<details><summary>Code</summary><div class="sourceCode" id="cb72"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">l_exercise2</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span><span class="op">(</span>countries <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"USA"</span>, <span class="st">"China"</span>, <span class="st">"India"</span><span class="op">)</span>, </span>
 <span>                    data <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span><span class="op">(</span>population <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">328</span>, <span class="fl">1394</span>, <span class="fl">1380</span><span class="op">)</span>, </span>
 <span>                                area <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">9.8</span>, <span class="fl">9.6</span>, <span class="fl">3.3</span><span class="op">)</span><span class="op">)</span><span class="op">)</span></span>
 <span></span>
@@ -988,9 +1977,83 @@ $list_2$number
 </div>
 <hr>
 <p>3.-Create a matrix with five rows and two columns, where each element is a random number between 1 and 10.</p>
-<p><strong>Answer</strong></p>
+<button class="btn btn-default btn-webr" disabled="" type="button" id="webr-run-button-13">Loading webR...</button>
+<div id="webr-editor-13"></div>
+<div id="webr-code-output-13"><pre style="visibility: hidden"></pre></div>
+<script type="module">
+  const runButton = document.getElementById("webr-run-button-13");
+  const outputDiv = document.getElementById("webr-code-output-13");
+  const editorDiv = document.getElementById("webr-editor-13");
+
+  const editor = CodeMirror((elt) => {
+    elt.style.border = "1px solid #eee";
+    elt.style.height = "auto";
+    editorDiv.append(elt);
+  },{
+    value: `
+`,
+    lineNumbers: true,
+    mode: "r",
+    theme: "light default",
+    viewportMargin: Infinity,
+  });
+
+  runButton.onclick = async () => {
+    runButton.disabled = true;
+    let canvas = undefined;
+    await globalThis.webR.init();
+    await webR.evalRVoid("canvas(width=504, height=360)");
+    const result = await webRCodeShelter.captureR(editor.getValue(), {
+      withAutoprint: true,
+      captureStreams: true,
+      captureConditions: false,
+      env: webR.objs.emptyEnv,
+    });
+    try {
+      await webR.evalRVoid("dev.off()");
+      const out = result.output.filter(
+        evt => evt.type == "stdout" || evt.type == "stderr"
+      ).map((evt) => evt.data).join("\n");
+
+      const msgs = await webR.flush();
+      msgs.forEach(msg => {
+        if (msg.type === "canvasExec"){
+          if (!canvas) {
+            canvas = document.createElement("canvas");
+            canvas.setAttribute("width", 2 * 504);
+            canvas.setAttribute("height", 2 * 360);
+            canvas.style.width="700px";
+            canvas.style.display="block";
+            canvas.style.margin="auto";
+          }
+          Function(`this.getContext("2d").${msg.data}`).bind(canvas)();
+        }
+      });
+
+      outputDiv.innerHTML = "";
+      const pre = document.createElement("pre");
+      if (/\S/.test(out)) {
+        const code = document.createElement("code");
+        code.innerText = out;
+        pre.appendChild(code);
+      } else {
+        pre.style.visibility = "hidden";
+      }
+      outputDiv.appendChild(pre);
+
+      if (canvas) {
+        const p = document.createElement("p");
+        p.appendChild(canvas);
+        outputDiv.appendChild(p);
+      }
+    } finally {
+      webRCodeShelter.purge();
+      runButton.disabled = false;
+    }
+  }
+</script><p><strong>Answer</strong></p>
 <div class="cell">
-<details><summary>Code</summary><div class="sourceCode" id="cb74"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># Create a 5 x 2 matrix with random values between 1 and 10</span></span>
+<details><summary>Code</summary><div class="sourceCode" id="cb73"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># Create a 5 x 2 matrix with random values between 1 and 10</span></span>
 <span><span class="va">m_exercise3</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/matrix.html">matrix</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/sample.html">sample</a></span><span class="op">(</span><span class="fl">1</span><span class="op">:</span><span class="fl">10</span>, <span class="fl">10</span><span class="op">)</span>, nrow <span class="op">=</span> <span class="fl">5</span>, ncol <span class="op">=</span> <span class="fl">2</span><span class="op">)</span></span>
 <span></span>
 <span><span class="co"># Display the matrix</span></span>
@@ -1010,9 +2073,83 @@ $list_2$number
 <hr>
 <p>4.-Use matrix multiplication to multiply a matrix of dimensions 3 x 2 by a matrix of dimensions 2 x 3.</p>
 <p>Hint: Use <code>%*%</code> for matrix multiplication.</p>
-<p><strong>Answer</strong></p>
+<button class="btn btn-default btn-webr" disabled="" type="button" id="webr-run-button-14">Loading webR...</button>
+<div id="webr-editor-14"></div>
+<div id="webr-code-output-14"><pre style="visibility: hidden"></pre></div>
+<script type="module">
+  const runButton = document.getElementById("webr-run-button-14");
+  const outputDiv = document.getElementById("webr-code-output-14");
+  const editorDiv = document.getElementById("webr-editor-14");
+
+  const editor = CodeMirror((elt) => {
+    elt.style.border = "1px solid #eee";
+    elt.style.height = "auto";
+    editorDiv.append(elt);
+  },{
+    value: `
+`,
+    lineNumbers: true,
+    mode: "r",
+    theme: "light default",
+    viewportMargin: Infinity,
+  });
+
+  runButton.onclick = async () => {
+    runButton.disabled = true;
+    let canvas = undefined;
+    await globalThis.webR.init();
+    await webR.evalRVoid("canvas(width=504, height=360)");
+    const result = await webRCodeShelter.captureR(editor.getValue(), {
+      withAutoprint: true,
+      captureStreams: true,
+      captureConditions: false,
+      env: webR.objs.emptyEnv,
+    });
+    try {
+      await webR.evalRVoid("dev.off()");
+      const out = result.output.filter(
+        evt => evt.type == "stdout" || evt.type == "stderr"
+      ).map((evt) => evt.data).join("\n");
+
+      const msgs = await webR.flush();
+      msgs.forEach(msg => {
+        if (msg.type === "canvasExec"){
+          if (!canvas) {
+            canvas = document.createElement("canvas");
+            canvas.setAttribute("width", 2 * 504);
+            canvas.setAttribute("height", 2 * 360);
+            canvas.style.width="700px";
+            canvas.style.display="block";
+            canvas.style.margin="auto";
+          }
+          Function(`this.getContext("2d").${msg.data}`).bind(canvas)();
+        }
+      });
+
+      outputDiv.innerHTML = "";
+      const pre = document.createElement("pre");
+      if (/\S/.test(out)) {
+        const code = document.createElement("code");
+        code.innerText = out;
+        pre.appendChild(code);
+      } else {
+        pre.style.visibility = "hidden";
+      }
+      outputDiv.appendChild(pre);
+
+      if (canvas) {
+        const p = document.createElement("p");
+        p.appendChild(canvas);
+        outputDiv.appendChild(p);
+      }
+    } finally {
+      webRCodeShelter.purge();
+      runButton.disabled = false;
+    }
+  }
+</script><p><strong>Answer</strong></p>
 <div class="cell">
-<details><summary>Code</summary><div class="sourceCode" id="cb75"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># cCeate a 3 x 2 matrix containing the numbers 1 through 6</span></span>
+<details><summary>Code</summary><div class="sourceCode" id="cb74"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># cCeate a 3 x 2 matrix containing the numbers 1 through 6</span></span>
 <span><span class="va">m_exercise4_1</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/matrix.html">matrix</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fl">2</span>, <span class="fl">3</span>, <span class="fl">4</span>, <span class="fl">5</span>, <span class="fl">6</span><span class="op">)</span>, nrow <span class="op">=</span> <span class="fl">3</span>, ncol <span class="op">=</span> <span class="fl">2</span><span class="op">)</span></span>
 <span></span>
 <span><span class="co"># Create a 2 x 3 matrix containing the numbers 1 through 6 in a different order</span></span>
@@ -1033,9 +2170,83 @@ $list_2$number
 </div>
 <hr>
 <p>5.-Use indexing to extract a 2 x 3 sub-array from a 3 x 4 array.</p>
-<p><strong>Answer</strong></p>
+<button class="btn btn-default btn-webr" disabled="" type="button" id="webr-run-button-15">Loading webR...</button>
+<div id="webr-editor-15"></div>
+<div id="webr-code-output-15"><pre style="visibility: hidden"></pre></div>
+<script type="module">
+  const runButton = document.getElementById("webr-run-button-15");
+  const outputDiv = document.getElementById("webr-code-output-15");
+  const editorDiv = document.getElementById("webr-editor-15");
+
+  const editor = CodeMirror((elt) => {
+    elt.style.border = "1px solid #eee";
+    elt.style.height = "auto";
+    editorDiv.append(elt);
+  },{
+    value: `
+`,
+    lineNumbers: true,
+    mode: "r",
+    theme: "light default",
+    viewportMargin: Infinity,
+  });
+
+  runButton.onclick = async () => {
+    runButton.disabled = true;
+    let canvas = undefined;
+    await globalThis.webR.init();
+    await webR.evalRVoid("canvas(width=504, height=360)");
+    const result = await webRCodeShelter.captureR(editor.getValue(), {
+      withAutoprint: true,
+      captureStreams: true,
+      captureConditions: false,
+      env: webR.objs.emptyEnv,
+    });
+    try {
+      await webR.evalRVoid("dev.off()");
+      const out = result.output.filter(
+        evt => evt.type == "stdout" || evt.type == "stderr"
+      ).map((evt) => evt.data).join("\n");
+
+      const msgs = await webR.flush();
+      msgs.forEach(msg => {
+        if (msg.type === "canvasExec"){
+          if (!canvas) {
+            canvas = document.createElement("canvas");
+            canvas.setAttribute("width", 2 * 504);
+            canvas.setAttribute("height", 2 * 360);
+            canvas.style.width="700px";
+            canvas.style.display="block";
+            canvas.style.margin="auto";
+          }
+          Function(`this.getContext("2d").${msg.data}`).bind(canvas)();
+        }
+      });
+
+      outputDiv.innerHTML = "";
+      const pre = document.createElement("pre");
+      if (/\S/.test(out)) {
+        const code = document.createElement("code");
+        code.innerText = out;
+        pre.appendChild(code);
+      } else {
+        pre.style.visibility = "hidden";
+      }
+      outputDiv.appendChild(pre);
+
+      if (canvas) {
+        const p = document.createElement("p");
+        p.appendChild(canvas);
+        outputDiv.appendChild(p);
+      }
+    } finally {
+      webRCodeShelter.purge();
+      runButton.disabled = false;
+    }
+  }
+</script><p><strong>Answer</strong></p>
 <div class="cell">
-<details><summary>Code</summary><div class="sourceCode" id="cb76"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># Create a 3 x 4 array containing the numbers 1 through 12</span></span>
+<details><summary>Code</summary><div class="sourceCode" id="cb75"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># Create a 3 x 4 array containing the numbers 1 through 12</span></span>
 <span><span class="va">array_exercise5</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/array.html">array</a></span><span class="op">(</span><span class="fl">1</span><span class="op">:</span><span class="fl">12</span>, dim <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">3</span>, <span class="fl">4</span><span class="op">)</span><span class="op">)</span></span>
 <span></span>
 <span><span class="co"># Extract a 2 x 3 sub-array from rows 2 and 3 and columns 2 through 4</span></span>
@@ -1076,22 +2287,22 @@ Warning
 <section id="create-a-data-frame-multiple-ways" class="level2"><h2 class="anchored" data-anchor-id="create-a-data-frame-multiple-ways">Create a Data Frame: multiple ways</h2>
 <p>1.- Using <code><a href="https://rdrr.io/r/base/data.frame.html">data.frame()</a></code> function: This is the most common way to create a data frame in R. You can put as many vectors (variables) as you want.</p>
 <div class="cell">
-<div class="sourceCode" id="cb77"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">df</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html">data.frame</a></span><span class="op">(</span>x <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fl">2</span>, <span class="fl">3</span><span class="op">)</span>, </span>
+<div class="sourceCode" id="cb76"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">df</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html">data.frame</a></span><span class="op">(</span>x <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fl">2</span>, <span class="fl">3</span><span class="op">)</span>, </span>
 <span>                 y <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"a"</span>, <span class="st">"b"</span>, <span class="st">"c"</span><span class="op">)</span>, </span>
 <span>                 z <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="cn">TRUE</span>, <span class="cn">FALSE</span>, <span class="cn">TRUE</span><span class="op">)</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>2.- Using <code>read_csv2()</code> function: You can also create a data frame by importing data from an external file using the <code><a href="https://rdrr.io/r/utils/read.table.html">read.table()</a></code> or read.csv() function.</p>
 <div class="cell">
-<div class="sourceCode" id="cb78"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">df</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/utils/read.table.html">read.table</a></span><span class="op">(</span><span class="st">"data.txt"</span>, header <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb77"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">df</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/utils/read.table.html">read.table</a></span><span class="op">(</span><span class="st">"data.txt"</span>, header <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>3.- Using <code><a href="https://readxl.tidyverse.org/reference/read_excel.html">read_excel()</a></code> function from the <code>readxl</code> package</p>
 <div class="cell">
-<div class="sourceCode" id="cb79"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://readxl.tidyverse.org">readxl</a></span><span class="op">)</span></span>
+<div class="sourceCode" id="cb78"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://readxl.tidyverse.org">readxl</a></span><span class="op">)</span></span>
 <span><span class="va">df</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://readxl.tidyverse.org/reference/read_excel.html">read_excel</a></span><span class="op">(</span><span class="st">"data.xlsx"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>4.- Using <code><a href="https://tibble.tidyverse.org/reference/tibble.html">tibble()</a></code> function from the tibble package</p>
 <div class="cell">
-<div class="sourceCode" id="cb80"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://tibble.tidyverse.org/">tibble</a></span><span class="op">)</span></span>
+<div class="sourceCode" id="cb79"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://tibble.tidyverse.org/">tibble</a></span><span class="op">)</span></span>
 <span><span class="va">df</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://tibble.tidyverse.org/reference/tibble.html">tibble</a></span><span class="op">(</span>x <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fl">2</span>, <span class="fl">3</span><span class="op">)</span>, y <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"a"</span>, <span class="st">"b"</span>, <span class="st">"c"</span><span class="op">)</span>, z <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="cn">TRUE</span>, <span class="cn">FALSE</span>, <span class="cn">TRUE</span><span class="op">)</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>You can check our other tutorials to handle data frames and start practicing. We also recommend these books from the website for you to go into more detail.</p>
@@ -1429,7 +2640,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </ul>
 </div>
   </div>
-</footer><script>var lightboxQuarto = GLightbox({"descPosition":"left","openEffect":"fade","closeEffect":"fade","selector":".lightbox","skin":"lightwidth","loop":true});</script>
+</footer><script>var lightboxQuarto = GLightbox({"openEffect":"fade","closeEffect":"fade","skin":"lightwidth","selector":".lightbox","descPosition":"left","loop":true});</script>
 
 
 <script src="../../../site_libs/quarto-html/zenscroll-min.js"></script>

@@ -12,13 +12,20 @@ title-block-banner: true
 comments: false
 image: images/objects.png
 include-in-header: meta.html
+format: html
+engine: knitr
 filters:
    - lightbox
+   - webr
 lightbox: 
   match: auto
   effect: fade
   desc-position: left
   css-class: "lightwidth"
+webr:
+  packages: ['ggplot2', 'dplyr']
+  show-startup-message: false
+  show-header-message: false
 listing: 
   - id: eda
     template: gallery.ejs
@@ -28,6 +35,7 @@ listing:
 # Objects in R
 
 ------------------------------------------------------------------------
+
 
 One of the things that define R as an amazing tool to do multiple things are objects. R work with objects that essentialy are data structures that can hold values, but also othr types of data and can be assigned names for easy reference. Objects in R are useful because we can organize and store data in meaningful ways. One of the most importants thigns when you are learning R is understand how to work with these objects because you will have the confidence and knowledge to use it at your better convenience. There are several types of objects in R, including vectors, matrices, data frames, lists, and factors, each with their own characteristics and uses.
 
@@ -69,14 +77,6 @@ Personally, I like to name my objects according to the next table:
 ![Alarid et. al. (2019)](images/name.png){fig-align="center"}
 
 I like it since it gives you structure and clarity about how to name your objects. For example:
-
-```{r}
-
-#If we have a vector, I will tart with v_number
-
-v_number <- c(1,5,7)
-
-```
 
 This logics applies the same with matrices, arrays, data frames, etc. It's a good practice to follow this criteria since is going to be much easier to identify your objects in your environment. 
 
@@ -298,6 +298,11 @@ times
 
 1.-Create a numeric vector x with values 1 through 10. Then, calculate the sum of the first 5 elements of x.
 
+```{webr-r}
+
+
+```
+
 **Answer**
 
 ```{r, eval=FALSE, }
@@ -315,6 +320,11 @@ sum(x[1:5])
 ------------------------------------------------------------------------
 
 2.-Create a character vector names with the names of your three favorite foods. Then, use indexing to extract the second element of names.
+
+```{webr-r}
+
+
+```
 
 **Answer**
 
@@ -334,6 +344,11 @@ names[2]
 ------------------------------------------------------------------------
 
 3.-Create a logical vector flags with values TRUE, FALSE, TRUE, TRUE. Then, use the which() function to find the positions of the TRUE values in flags.
+
+```{webr-r}
+
+
+```
 
 **Answer**
 
@@ -372,6 +387,12 @@ month(dates[2])
 ------------------------------------------------------------------------
 
 5.-Create a vector x with values 1, 2, 3, 4, 5, and a vector y with values 6, 7, 8, 9, 10. Then, concatenate x and y into a single vector z.
+
+```{webr-r}
+
+
+```
+
 
 **Answer**
 
@@ -496,6 +517,11 @@ As you can see, we can access the outputs of the list we want. This is useful si
 
 1.-Create a list with three elements: a numeric vector, a character vector, and a logical vector. Then, add a new element to the list containing a data frame with three columns: "name", "age", and "gender".
 
+```{webr-r}
+
+
+```
+
 **Answer**
 
 ```{r, eval=FALSE, }
@@ -525,6 +551,12 @@ l_exercise1[["df"]] <- df
 
 2.-Create a nested list with two elements: a character vector containing the names of three countries, and a list containing the populations and areas of those countries.
 
+```{webr-r}
+
+
+```
+
+
 **Answer**
 
 ```{r, eval=FALSE, }
@@ -542,6 +574,11 @@ l_exercise2 <- list(countries = c("USA", "China", "India"),
 ------------------------------------------------------------------------
 
 3.- Create a list with four elements: two numeric vectors, a character vector, and a data frame. Then, extract the second element of the character vector and the third column of the data frame.
+
+```{webr-r}
+
+
+```
 
 **Answer**
 
@@ -571,6 +608,11 @@ l_exercise3[["df"]][3]
 
 4.-Create a list with two elements: a numeric vector and a data frame. Then, use the str() function to display the structure of the list.
 
+```{webr-r}
+
+
+```
+
 **Answer**
 
 ```{r, eval=FALSE, }
@@ -594,6 +636,12 @@ str(my_list)
 
 5.-Create a list with three elements: a numeric vector, a character vector, and a logical vector. Then, use the names() function to assign names to the elements of the list.
 
+```{webr-r}
+
+
+```
+
+
 **Answer**
 
 ```{r, eval=FALSE, }
@@ -615,6 +663,12 @@ names(l_exercise5) <- c("num", "nam", "log")
 ------------------------------------------------------------------------
 
 6.-Create a list with three elements: a numeric vector, a character vector, and a logical vector. Then, use the length() function to find the length of the character vector.
+
+```{webr-r}
+
+
+```
+
 
 **Answer**
 
@@ -723,6 +777,11 @@ arr_example
 
 1.-Create a matrix with four rows and three columns, where each element is the square of its row number.
 
+```{webr-r}
+
+
+```
+
 **Answer**
 
 ```{r, eval=FALSE, }
@@ -749,6 +808,11 @@ m_exercise1
 
 2.-Create a three-dimensional array with dimensions 2 x 3 x 4, where each element is the sum of its three indices.
 
+```{webr-r}
+
+
+```
+
 **Answer**
 
 ```{r, eval=FALSE, }
@@ -773,6 +837,11 @@ l_exercise2 <- list(countries = c("USA", "China", "India"),
 ------------------------------------------------------------------------
 
 3.-Create a matrix with five rows and two columns, where each element is a random number between 1 and 10.
+
+```{webr-r}
+
+
+```
 
 **Answer**
 
@@ -804,6 +873,11 @@ m_exercise3
 
 Hint: Use `%*%` for matrix multiplication.
 
+```{webr-r}
+
+
+```
+
 **Answer**
 
 ```{r, eval=FALSE, }
@@ -832,6 +906,11 @@ m_multiplication
 ------------------------------------------------------------------------
 
 5.-Use indexing to extract a 2 x 3 sub-array from a 3 x 4 array.
+
+```{webr-r}
+
+
+```
 
 **Answer**
 
