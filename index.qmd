@@ -24,13 +24,13 @@ listing:
   - id: books
     contents: material/Books/*/index.qmd
     type: grid
-    grid-columns: 4
+    grid-columns: 3
     fields: [image, title]
     sort: "date desc"
     #categories: cloud
     sort-ui: false
     filter-ui: false
-    page-size: 4
+    page-size: 3
     image-height: 400px
   - id: Resources
     contents: material/Resources/*/index.qmd
@@ -393,7 +393,7 @@ Resources</h1>
 ::: {#learn}
 :::
 
-<a href="../learn/rstudio.html"> <button type="button" class="btn btn-primary float-end btn-sm color-9">See all our tools</button></a>
+<a href="../learn/rstudio.html"> <button type="button" class="btn btn-primary float-end btn-sm">See all our tools</button></a>
 
 </div> 
 
