@@ -40,9 +40,17 @@ listing:
 One of the things that define R as an amazing tool to do multiple things are objects. R work with objects that essentialy are data structures that can hold values, but also othr types of data and can be assigned names for easy reference. Objects in R are useful because we can organize and store data in meaningful ways. One of the most importants thigns when you are learning R is understand how to work with these objects because you will have the confidence and knowledge to use it at your better convenience. There are several types of objects in R, including vectors, matrices, data frames, lists, and factors, each with their own characteristics and uses.
 
 ::: callout-warning
+# Assign objects
 -   To create an object, give it a name followed by the assignment operator, followed by the value/data type.
 -   Assignment operator \<-
 -   Shortcut: "Alt + -" on PC, "Option + -" on Mac
+:::
+
+::: callout-tip
+# Execute R code in the website
+-   You can execute R code within our website!!
+-   You can install plots with this code `webr::install("ggplot2")`. However, it may take 2 minutes to run. 
+-   You can check in this [link](<https://github.com/r-wasm/webr-repo/blob/main/repo-packages>) which packages are available and datasets
 :::
 
  

@@ -90,11 +90,19 @@ color: white;
         </div>
         </a>
         
+        <a href="../team/team/valeria_gracia/valeriagracia.html">
+        <div id="valeriagracia" class="card_team inline-photo3 show-on-scroll">
+          <div class="hover_esp_team"> Valeria Gracia</div>
+        </div>
+        </a>
+        
         <a href="../team/team/carmen_garro/carmengarro.html">
         <div id="carmengarro" class="card_team inline-photo3 show-on-scroll">
           <div class="hover_esp_team"> Carmen Garro</div>
         </div>
         </a>
+        
+
         
         <a href="../team/team/rodrigo_dornelles/rodrigodornelles.html">
         <div id="rodrigodornelles" class="card_team inline-photo3 show-on-scroll">

@@ -158,7 +158,7 @@
     "href": "learn/rstudio/objects/index.html",
     "title": "Understanding R Objects: Naming, Data Structures and Classes in R",
     "section": "",
-    "text": "One of the things that define R as an amazing tool to do multiple things are objects. R work with objects that essentialy are data structures that can hold values, but also othr types of data and can be assigned names for easy reference. Objects in R are useful because we can organize and store data in meaningful ways. One of the most importants thigns when you are learning R is understand how to work with these objects because you will have the confidence and knowledge to use it at your better convenience. There are several types of objects in R, including vectors, matrices, data frames, lists, and factors, each with their own characteristics and uses.\n\n\n\n\n\n\nWarning\n\n\n\n\nTo create an object, give it a name followed by the assignment operator, followed by the value/data type.\nAssignment operator <-\nShortcut: “Alt + -” on PC, “Option + -” on Mac\n\n\n\n \n\n\n\n\n \nIn this image, you can see the different types of objects that we have and this is the best way to visualize. However, to really understand what is going on, you need to start writing code and start trying using this different type of objects to know them better. In the next lines, I’ll write explanations, examples and exercises."
+    "text": "One of the things that define R as an amazing tool to do multiple things are objects. R work with objects that essentialy are data structures that can hold values, but also othr types of data and can be assigned names for easy reference. Objects in R are useful because we can organize and store data in meaningful ways. One of the most importants thigns when you are learning R is understand how to work with these objects because you will have the confidence and knowledge to use it at your better convenience. There are several types of objects in R, including vectors, matrices, data frames, lists, and factors, each with their own characteristics and uses.\n\n\n\n\n\n\nAssign objects\n\n\n\n\nTo create an object, give it a name followed by the assignment operator, followed by the value/data type.\nAssignment operator <-\nShortcut: “Alt + -” on PC, “Option + -” on Mac\n\n\n\n\n\n\n\n\n\nExecute R code in the website\n\n\n\n\nYou can execute R code within our website!!\nYou can install plots with this code webr::install(\"ggplot2\"). However, it may take 2 minutes to run.\nYou can check in this link which packages are available and datasets\n\n\n\n \n\n\n\n\n \nIn this image, you can see the different types of objects that we have and this is the best way to visualize. However, to really understand what is going on, you need to start writing code and start trying using this different type of objects to know them better. In the next lines, I’ll write explanations, examples and exercises."
   },
   {
     "objectID": "learn/rstudio/objects/index.html#numeric-values",
@@ -599,7 +599,7 @@
     "href": "members/team/team.html",
     "title": "Team",
     "section": "",
-    "text": "Academic Advisors\n\n\n\nAcademic Advisors\n\n\n\n\n\n\n\n\n\n\n\nInstructors\n\n\n\nInstructors\n\n\n\n\n\n      \n\n\n    \n\n        \n        \n        \n           Jorge Roa\n        \n        \n        \n        \n        \n           Lukas Warode \n        \n        \n        \n        \n        \n           Carmen Garro\n        \n        \n        \n        \n        \n           Rodrigo Dornelles\n        \n        \n        \n        \n        \n          Gabriel Zech\n        \n        \n        \n        \n        \n          Lukas Lehmann"
+    "text": "Academic Advisors\n\n\n\nAcademic Advisors\n\n\n\n\n\n\n\n\n\n\n\nInstructors\n\n\n\nInstructors\n\n\n\n\n\n      \n\n\n    \n\n        \n        \n        \n           Jorge Roa\n        \n        \n        \n        \n        \n           Lukas Warode \n        \n        \n        \n        \n        \n           Valeria Gracia\n        \n        \n        \n        \n        \n           Carmen Garro\n        \n        \n        \n\n        \n        \n        \n           Rodrigo Dornelles\n        \n        \n        \n        \n        \n          Gabriel Zech\n        \n        \n        \n        \n        \n          Lukas Lehmann"
   },
   {
     "objectID": "members/team/team/gabriel_zech/gabrielzech.html",
@@ -635,6 +635,13 @@
     "title": "Jorge Roa",
     "section": "",
     "text": "Hello! I’m Jorge! I have a background in public policy and a passion for using data to inform decision-making. My interests include:\n\nData Science for Public Policy: I’m currently pursuing a Master’s degree in Data Science for Public Policy at Hertie School in Berlin, Germany. I believe that data science can be a powerful tool for addressing complex public policy challenges, and I’m excited to continue exploring this field.\nTeaching and Education: I’m passionate about teaching. I’ve worked as a teaching assistant for courses on quantitative methods and public policy evaluation. I’m also the founder of the Hertie Coding Club, a space where students can learn programming skills for data analysis, wrangling and public policy."
+  },
+  {
+    "objectID": "members/team/team/valeria_gracia/valeriagracia.html",
+    "href": "members/team/team/valeria_gracia/valeriagracia.html",
+    "title": "Valeria Gracia",
+    "section": "",
+    "text": "I am a doctoral student in Health Policy at Stanford University and a Fulbright-García Robles scholar. Before beginning my PhD at Stanford in 2022, I worked as a research assistant at the Center for Research and Teaching in Economics (CIDE) in Mexico. My research interest is to identify cost-effective air pollution mitigation strategies to support decision making. I have experience coding in R, Matlab, C++, Python, LaTeX and would like to learn more. I love cats (I have four), hiking, swimming and teaching. I’m excited to be a part of the Hertie Coding Club and learn from you and share my knowledge and skills with you too!"
   },
   {
     "objectID": "members/team/team/carmen_garro/carmengarro.html",

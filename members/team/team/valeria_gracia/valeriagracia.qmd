@@ -1,0 +1,43 @@
+---
+title: "Valeria Gracia"
+page-layout: full
+image: valeriagracia.jpg
+filters:
+   - lightbox
+lightbox: 
+  match: auto
+  effect: fade
+  desc-position: left
+  css-class: "lightwidth"
+about:
+  template: trestles
+  image-shape: rounded
+  links:
+    - text: "{{< fa brands linkedin >}} LinkedIn"
+      url: "https://www.linkedin.com/in/vgraciaol/"
+    - text: "{{< fa brands github >}} GitHub"
+      url: "https://github.com/vgraciaol"
+    - text: "{{< fa brands twitter >}} Twitter"
+      url: "https://twitter.com/vgraciaol"
+    - text: "{{< fa brands orcid >}} ORCID"
+      url: "https://orcid.org/0000-0003-4853-2922"
+    - text: "{{< fa solid envelopes-bulk >}} Mail"
+      url: "mailto:vgracia@stanford.edu"
+    - text: "{{< fa solid film >}} Letterboxd"
+      url: "https://letterboxd.com/vgraciaol/"
+comments: false
+---
+
+<style>
+  body {
+  background: linear-gradient(to right, #000428, #004e92);
+}
+  
+</style>
+
+ 
+
+
+I am a doctoral student in Health Policy at Stanford University and a Fulbright-García Robles scholar. Before beginning my PhD at Stanford in 2022, I worked as a research assistant at the Center for Research and Teaching in Economics (CIDE) in Mexico. My research interest is to identify cost-effective air pollution mitigation strategies to support decision making. I have experience coding in R, Matlab, C++, Python, LaTeX and would like to learn more. I love cats (I have four), hiking, swimming and teaching. I'm excited to be a part of the Hertie Coding Club and learn from you and share my knowledge and skills with you too!
+
+
