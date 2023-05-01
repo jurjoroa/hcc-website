@@ -1,6 +1,6 @@
 format:
   html:
-    highlight-style: cyborg #change text from code chunks to white. 
+    highlight-style: github-dark #change text from code chunks to white. 
     smooth-scroll: true
     include-in-header: meta.html
     theme: 

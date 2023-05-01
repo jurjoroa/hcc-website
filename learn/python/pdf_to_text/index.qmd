@@ -14,8 +14,8 @@ include-in-header: meta.html
 jupyter: python3
 execute:
   freeze: true
----
 
+---
 
 ![](images/pdf_to_text.png){fig-align="center"}
 
