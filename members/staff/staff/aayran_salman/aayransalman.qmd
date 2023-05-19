@@ -1,0 +1,38 @@
+---
+title: "Aayran Salman"
+page-layout: full
+image: aayransalman.jpeg
+filters:
+   - lightbox
+lightbox: 
+  match: auto
+  effect: fade
+  desc-position: left
+  css-class: "lightwidth"
+about:
+  template: trestles
+  image-shape: rounded
+  links:
+    - text: "{{< fa brands linkedin >}} LinkedIn"
+      url: "https://www.linkedin.com/in/aaryansalman"
+    - text: "{{< fa brands github >}} Mail"
+      url: "mailto:aaryan@globalcitizenshipfoundation.org"
+    - text: "{{< fa brands twitter >}} Twitter"
+      url: "https://www.linkedin.com/in/aaryansalman"
+    - text: "{{< fa solid envelopes-bulk >}} Website"
+      url: "https://www.globalcitizenshipfoundation.org/"
+comments: false
+---
+
+<style>
+  body {
+  background: linear-gradient(to right, #000428, #004e92);
+}
+  
+</style>
+
+
+ 
+
+I am a global citizen currently living in Berlin. I serve as the Director-General and President of the Global Citizenship Foundations in the EU and India. In addition, I have the privilege of being part of the International Advisory Board of Dublin City University's Educational Disadvantage Centre. Currently, I am pursuing a Master of Public Policy degree at the Hertie School. Throughout my career, I have worked as an educator and social entrepreneur, with a strong passion for Hybrid Learning, Global Sustainability, Social and Emotional Learning, Debate Education, and Global Citizenship Education. Personally, I firmly believe in harnessing the power of data for the betterment of society.
+

@@ -1477,6 +1477,12 @@ display: grid;
   background-position: center;
 }
 
+.user-container #aayransalman.card_team {
+  background: url("members/staff/staff/aayran_salman/aayransalman.jpeg") no-repeat;
+  background-size:300px 500px;
+  background-position: center;
+}
+
 /* Image move up */
 .user-container .card_team:nth-child(1):hover,
 .user-container .card_team:nth-child(2):hover,

@@ -130,6 +130,39 @@ color: white;
 
 
 
+# Staff {style="color: transparent;"}
+
+<div class="container">
+  <header class="header show-on-scroll">
+    <h1 class="heading" style="color: white;"> Staff </h1>
+  </header>
+</div>
+
+<hr>
+
+
+
+```{=HTML}
+
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<section id="container">
+    <div class="user-container">
+
+        <!-- Card Two-->
+        <a href="../staff/staff/aayran_salman/aayransalman.html">
+        <div id="aayransalman" class="card_team inline-photo3 show-on-scroll">
+          <div class="hover_esp_team"> Aayran Salman</div>
+        </div>
+        </a>
+        
+
+    </div>
+</section>
+ 
+```
+
+
 
 
 

@@ -44,5 +44,6 @@ Hello! I'm Jorge! I have a background in public policy and a passion for using d
 
 - Teaching and Education: I'm passionate about teaching. I've worked as a teaching assistant for courses on quantitative methods and public policy evaluation. I'm also the founder of the Hertie Coding Club, a space where students can learn programming skills for data analysis, wrangling and public policy.
 
+- Memberships: I'm part of the Gastric Cancer Group from the Cancer Intervention and Surveillance Modeling Network (CISNET); Trainee member of the Society for Medical Decision Making (SMDM) and a member of Stanford's Data Science x Decision Science DS^2 group.
 
 
