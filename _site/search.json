@@ -1,12 +1,5 @@
 [
   {
-    "objectID": "members.html",
-    "href": "members.html",
-    "title": "Members",
-    "section": "",
-    "text": "About this site\n\n\n\n\n# Load the ggplot2 package\nlibrary(ggplot2)\n\n\n# Create some example data\nx <- 1:10\ny <- x^2\n\n# Create the plot\nggplot(data = data.frame(x, y), aes(x = x, y = y)) +\n  geom_line() + theme(text = element_text(family = \"Arial\", size = 20))\n\n\n\n\n\n\n\n\nWho are we?\n\nWhen the moon hits your eye\n\n\n damoncroberts\n DamonCharlesRoberts\n Wednesdays from 12:15 - 2:15 pm Mountain\n Ketchum Arts & Sciences, Office 382, Boulder, CO 80309\nSome text"
-  },
-  {
     "objectID": "learn/python/pdf_to_text/index.html",
     "href": "learn/python/pdf_to_text/index.html",
     "title": "PDF to text",
@@ -658,6 +651,13 @@
     "text": "Members\n\n\n\nMembers"
   },
   {
+    "objectID": "members/staff/staff/aayran_salman/aayransalman.html",
+    "href": "members/staff/staff/aayran_salman/aayransalman.html",
+    "title": "Aayran Salman",
+    "section": "",
+    "text": "I am a global citizen currently living in Berlin. I serve as the Director-General and President of the Global Citizenship Foundations in the EU and India. In addition, I have the privilege of being part of the International Advisory Board of Dublin City University’s Educational Disadvantage Centre. Currently, I am pursuing a Master of Public Policy degree at the Hertie School. Throughout my career, I have worked as an educator and social entrepreneur, with a strong passion for Hybrid Learning, Global Sustainability, Social and Emotional Learning, Debate Education, and Global Citizenship Education. Personally, I firmly believe in harnessing the power of data for the betterment of society."
+  },
+  {
     "objectID": "events/02_wrangle/index.html",
     "href": "events/02_wrangle/index.html",
     "title": "Meet Up III: Wrangle dataframes",
@@ -781,7 +781,14 @@
     "href": "material/Books/indexp.html#books",
     "title": "Books",
     "section": "Books",
-    "text": "Books\n\n\n   \n     \n     \n       Order By\n       Default\n         \n          Title\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nData Management for Social Scientists: From Files to Databases\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe Art of Data Science: A Guide for Anyone Who Works with Data\n\n\n\n\n\n\n\n\n\n\n\n\n\nExploratory Data Analysis with R\n\n\n\n\n\n\n\n\n\n\n\n\n\nSpatial Data Science with applications in R\n\n\n\n\n\n\n\n\n\n\n\n\n\nggplot2: elegant graphics for data analysis\n\n\n\n\n\n\n\n\n\n\n\n\n\nIntroduction to Data Science\n\n\n\n\n\n\n\n\n\n\n\n\n\nPython for Everybody\n\n\n\n\n\n\n\n\n\n\n\n\n\nWeb Scraping with R\n\n\n\n\n\n\n\n\n\n\n\n\n\nData Visualization: A Practical Introduction\n\n\n\n\n\n\n\n\n\n\n\n\n\nR for Data Science\n\n\n\n\n\n\n\nNo matching items"
+    "text": "Books\n\n\n   \n     \n     \n       Order By\n       Default\n         \n          Title\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nTelling Stories with Data: Applications in R\n\n\n\n\n\n\n\n\n\n\n\n\n\nData Management for Social Scientists: From Files to Databases\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe Art of Data Science: A Guide for Anyone Who Works with Data\n\n\n\n\n\n\n\n\n\n\n\n\n\nExploratory Data Analysis with R\n\n\n\n\n\n\n\n\n\n\n\n\n\nSpatial Data Science with applications in R\n\n\n\n\n\n\n\n\n\n\n\n\n\nggplot2: elegant graphics for data analysis\n\n\n\n\n\n\n\n\n\n\n\n\n\nIntroduction to Data Science\n\n\n\n\n\n\n\n\n\n\n\n\n\nPython for Everybody\n\n\n\n\n\n\n\n\n\n\n\n\n\nWeb Scraping with R\n\n\n\n\n\n\n\n\n\n\n\n\n\nData Visualization: A Practical Introduction\n\n\n\n\n\n\n\n\n\n\n\n\n\nR for Data Science\n\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "material/Books/stories_with_data/index.html",
+    "href": "material/Books/stories_with_data/index.html",
+    "title": "Telling Stories with Data: Applications in R",
+    "section": "",
+    "text": "Authors Rohan Alexander\n\n\n“This book will help you tell stories with data. It establishes a foundation on which you can build and share knowledge about an aspect of the world that interests you based on data that you observe. Telling stories in small groups around a fire played a critical role in the development of humans and society (Wiessner 2014). Today our stories, based on data, can influence millions. In this book we will explore, prod, push, manipulate, knead, and ultimately, try to understand the implications of, data. A variety of features drive the choices in this book.”\n\n\n\nGo to Telling Stories with Data\n\n\n\n\n\n\n\n\n\n\nCite\n\n\n\nAlexander, R. (2023). Telling Stories with Data: With Applications in R (1st ed.). Chapman and Hall/CRC. https://doi.org/10.1201/9781003229407"
   },
   {
     "objectID": "material/Books/eda_r/index.html",
@@ -866,12 +873,5 @@
     "title": "CISCO Networking Academy",
     "section": "",
     "text": "This is a course offered by the CISCO Networking Academy. What I really like is that at the end it offers a proof of completion. This certification in combination with other tools it’s a good way to start with Python. Here I leave the summary of the CISCO website and the link as well.\n\n“How great would it be to write your own computer program? Python is a multi-paradigm programming language used by startups and tech giants like Google, Facebook, Netflix, and more. With intuitive, readable syntax, Python is a great first programming language to learn.\nProgramming skills open you up to careers in almost any industry and are required if you want to continue to more advanced and higher paying software development and engineering roles.\nThis course is a great place to start learning Python – no prior programming knowledge required. Completing the course earns you a Statement of Achievement. It is split into two parts preparing you for two certifications:\nPart 1 (PE1: 35 hours) prepares you for PCEP – Certified Entry-Level Python Programmer Certification. Part 2 (PE2: 40 hours) prepares you for PCAP – Certified Associate in Python Programming Certification.”\nYou’ll learn these core skills:\n\nThink algorithmically – how to analyze a problem and translate it for a computer to process.\nDesign, develop, and improve multi-module computer programs.\nAnalyze and model real-life problems in Object-Oriented Programming categories.\nUnderstand a programmer’s work in the software development process.\nLearn how a program is executed in a computer environment.\nGain skills to create and develop your own programming portfolio.\n\n\nCISCO Networking Academy\n\n\n\n\nGo to CISCO PCAP"
-  },
-  {
-    "objectID": "members/staff/staff/aayran_salman/aayransalman.html",
-    "href": "members/staff/staff/aayran_salman/aayransalman.html",
-    "title": "Aayran Salman",
-    "section": "",
-    "text": "I am a global citizen currently living in Berlin. I serve as the Director-General and President of the Global Citizenship Foundations in the EU and India. In addition, I have the privilege of being part of the International Advisory Board of Dublin City University’s Educational Disadvantage Centre. Currently, I am pursuing a Master of Public Policy degree at the Hertie School. Throughout my career, I have worked as an educator and social entrepreneur, with a strong passion for Hybrid Learning, Global Sustainability, Social and Emotional Learning, Debate Education, and Global Citizenship Education. Personally, I firmly believe in harnessing the power of data for the betterment of society."
   }
 ]

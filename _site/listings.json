@@ -34,6 +34,7 @@
       "/events/03_wrangle_part2/index.html",
       "/events/02_wrangle/index.html",
       "/events/01_kickoff_event/index.html",
+      "/material/Books/stories_with_data/index.html",
       "/material/Books/data_management/index.html",
       "/material/Books/art_ds/index.html",
       "/material/Books/eda_r/index.html",
@@ -74,6 +75,7 @@
   {
     "listing": "/material/Books/indexp.html",
     "items": [
+      "/material/Books/stories_with_data/index.html",
       "/material/Books/data_management/index.html",
       "/material/Books/art_ds/index.html",
       "/material/Books/eda_r/index.html",

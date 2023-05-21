@@ -15,7 +15,7 @@ about:
   links:
     - text: "{{< fa brands linkedin >}} LinkedIn"
       url: "https://www.linkedin.com/in/aaryansalman"
-    - text: "{{< fa brands github >}} Mail"
+    - text: "{{< fa solid envelopes-bulk >}} Mail"
       url: "mailto:aaryan@globalcitizenshipfoundation.org"
     - text: "{{< fa brands twitter >}} Twitter"
       url: "https://www.linkedin.com/in/aaryansalman"

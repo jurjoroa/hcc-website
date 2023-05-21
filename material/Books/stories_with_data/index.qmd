@@ -1,0 +1,56 @@
+---
+title: '{{< animate fadeInDown "Telling Stories with Data: Applications in R"delay=.6s >}}'
+subtitle: '{{< animate fadeInDown "This book will help you tell stories with data. It establishes a foundation on which you can build and share knowledge about an aspect of the world that interests you based on data that you observe."delay=.6s >}}'
+author: ["Jorge Roa"]
+date: "05-22-2023"
+categories: ["R", "Visualization", "EDA"]
+toc: true
+draft: false
+code-link: true
+comments: false
+title-block-banner: true
+image: images/book.png
+page-layout: full
+include-in-header: meta.html
+filters:
+   - lightbox
+lightbox: 
+  match: auto
+  effect: fade
+  desc-position: left
+  css-class: "lightwidth"
+---
+
+
+<div class="books">
+
+![](images/book.png){fig-align="center" width="300"}
+
+</div>
+
+<hr class="sep-2" />
+
+<h1 class="book_aut"> Authors
+  <span style="font-size: 1em;">Rohan Alexander</span>
+</h1>
+
+<hr class="sep-2" />
+
+"This book will help you tell stories with data. It establishes a foundation on which you can build and share knowledge about an aspect of the world that interests you based on data that you observe. Telling stories in small groups around a fire played a critical role in the development of humans and society (Wiessner 2014). Today our stories, based on data, can influence millions. In this book we will explore, prod, push, manipulate, knead, and ultimately, try to understand the implications of, data. A variety of features drive the choices in this book."
+
+
+<center>
+<form action="https://tellingstorieswithdata.com">
+<button class="btn-hover color-9" target="_blank">
+Go to Telling Stories with Data
+</button>
+</form>
+</center>
+
+<hr class="sep-2" />
+
+
+::: {.callout-tip}
+## Cite
+Alexander, R. (2023). Telling Stories with Data: With Applications in R (1st ed.). Chapman and Hall/CRC. https://doi.org/10.1201/9781003229407
+:::
