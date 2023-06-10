@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.2.280">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
 <meta name="author" content="Lukas Lehmann">
 <meta name="dcterms.date" content="2023-04-18">
+
 <title>Introduction to Social Media Scraping</title>
 <style>
 code{white-space: pre-wrap;}
@@ -84,6 +87,7 @@ code span.vs { color: #4070a0; } /* VerbatimString */
 code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
+
 <script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="../../../site_libs/clipboard/clipboard.min.js"></script>
 <script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
@@ -107,7 +111,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <link href="../../../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <link href="../../../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
 <link href="../../../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
-<link href="../../../site_libs/quarto-contrib/animate-4.1.1/animate.min.css" rel="stylesheet"><script id="quarto-search-options" type="application/json">{
+<link href="../../../site_libs/quarto-contrib/animate-4.1.1/animate.min.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
   "collapse-after": 3,
@@ -125,51 +130,70 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     "search-detached-cancel-button-title": "Cancel",
     "search-submit-button-title": "Submit"
   }
-}</script><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-HJEMN0LJY7"></script><script type="text/javascript">
+}</script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-HJEMN0LJY7"></script>
+
+<script type="text/javascript">
 
 window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 gtag('config', 'G-HJEMN0LJY7', { 'anonymize_ip': true});
-</script><style>html{ scroll-behavior: smooth; }</style>
-<!-- Primary Meta Tags --><title>Hertie Coding Club - Everybody can learn to code</title>
+</script>
+<style>html{ scroll-behavior: smooth; }</style>
+<!-- Primary Meta Tags -->
+<title>Hertie Coding Club - Everybody can learn to code</title>
 <meta name="title" content="Hertie Coding Club - Everybody can learn to code">
 <meta name="description" content="Welcome to the Hertie Coding Club! Our goal as a club is to help everyone and between us learn coding skills and show that coding is for everyone, no matter our background.">
-<!-- Open Graph / Facebook --><meta property="og:type" content="website">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
 <meta property="og:url" content="https://www.hertiecodingclub.com">
 <meta property="og:title" content="Introduction to Social Media Scraping">
 <meta property="og:description" content="Welcome to the Hertie Coding Club! Our goal as a club is to help everyone and between us learn coding skills and show that coding is for everyone, no matter our background.">
-<!-- Primary Meta Tags --><title>Hertie Coding Club - RStudio 101</title>
+
+<!-- Primary Meta Tags -->
+<title>Hertie Coding Club - RStudio 101</title>
 <meta name="title" content="Hertie Coding Club - Enable Multithread with data.table in Mac/Intel chips">
 <meta name="description" content="Learn the basics of R: open a project, setting a working directory and navigate RStudio interface">
-<!-- Open Graph / Facebook --><meta property="og:type" content="website">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
 <meta property="og:url" content="https://www.hertiecodingclub.com/learn/rstudio/rstudio101/">
 <meta property="og:title" content="Hertie Coding Club - RStudio 101">
 <meta property="og:description" content="Learn the basics of R: open a project, setting a working directory and navigate RStudio interface">
+
 <link href="../../../site_libs/pagedtable-1.1/css/pagedtable.css" rel="stylesheet">
-<script src="../../../site_libs/pagedtable-1.1/js/pagedtable.js"></script><style>:root{--animate-duration:3s;--animate-delay:2s;--animate-repeat:1}</style>
+<script src="../../../site_libs/pagedtable-1.1/js/pagedtable.js"></script>
 <style>:root{--animate-duration:3s;--animate-delay:2s;--animate-repeat:1}</style>
 <style>:root{--animate-duration:3s;--animate-delay:2s;--animate-repeat:1}</style>
 <style>:root{--animate-duration:3s;--animate-delay:2s;--animate-repeat:1}</style>
 <style>:root{--animate-duration:3s;--animate-delay:2s;--animate-repeat:1}</style>
 <style>:root{--animate-duration:3s;--animate-delay:2s;--animate-repeat:1}</style>
 <style>:root{--animate-duration:3s;--animate-delay:2s;--animate-repeat:1}</style>
+<style>:root{--animate-duration:3s;--animate-delay:2s;--animate-repeat:1}</style>
+
+
 <link rel="stylesheet" href="../../../styles.css">
 </head>
+
 <body class="nav-fixed">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top"><nav class="navbar navbar-expand-lg navbar-dark "><div class="navbar-container container-fluid">
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
       <div class="navbar-brand-container">
     <a href="../../../index.html" class="navbar-brand navbar-brand-logo">
-    <img src="../../../images/hcc_final.png" alt="" class="navbar-logo"></a>
+    <img src="../../../images/hcc_final.png" alt="" class="navbar-logo">
+    </a>
   </div>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
-<li class="nav-item">
+  <li class="nav-item">
     <a class="nav-link" href="../../../index.html"><i class="bi bi-house-fill" role="img">
 </i> 
  <span class="menu-text">Home</span></a>
@@ -178,8 +202,8 @@ gtag('config', 'G-HJEMN0LJY7', { 'anonymize_ip': true});
     <a class="nav-link dropdown-toggle" href="#" id="nav-menu-fa-solid-people-group--members" role="button" data-bs-toggle="dropdown" aria-expanded="false">
  <span class="menu-text"><i class="fa-solid fa-people-group" aria-label="people-group"></i> Members</span>
     </a>
-    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-fa-solid-people-group--members">
-<li>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-fa-solid-people-group--members">    
+        <li>
     <a class="dropdown-item" href="../../../members/team/team.html">
  <span class="dropdown-text"><i class="fa-solid fa-person-chalkboard" aria-label="person-chalkboard"></i> Team</span></a>
   </li>  
@@ -188,15 +212,15 @@ gtag('config', 'G-HJEMN0LJY7', { 'anonymize_ip': true});
  <span class="dropdown-text"><i class="fa-solid fa-scale-balanced" aria-label="scale-balanced"></i> Club Statutes</span></a>
   </li>  
     </ul>
-</li>
+  </li>
   <li class="nav-item dropdown ">
     <a class="nav-link dropdown-toggle" href="#" id="nav-menu-learn" role="button" data-bs-toggle="dropdown" aria-expanded="false">
       <i class="bi bi-mortarboard-fill" role="img">
 </i> 
  <span class="menu-text">Learn</span>
     </a>
-    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-learn">
-<li>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-learn">    
+        <li>
     <a class="dropdown-item" href="../../../learn/rstudio.html">
  <span class="dropdown-text"><i class="fa-brands fa-r-project" aria-label="r-project"></i> language</span></a>
   </li>  
@@ -205,7 +229,7 @@ gtag('config', 'G-HJEMN0LJY7', { 'anonymize_ip': true});
  <span class="dropdown-text"><i class="fa-brands fa-python" aria-label="python"></i> Python</span></a>
   </li>  
     </ul>
-</li>
+  </li>
   <li class="nav-item">
     <a class="nav-link" href="../../../material/index.html">
  <span class="menu-text"><i class="fa-solid fa-meteor" aria-label="meteor"></i> Material</span></a>
@@ -220,13 +244,17 @@ gtag('config', 'G-HJEMN0LJY7', { 'anonymize_ip': true});
  <span class="menu-text"><i class="fa-solid fa-laptop-code" aria-label="laptop-code"></i> About us</span></a>
   </li>  
 </ul>
-<div class="quarto-toggle-container">
+              <div class="quarto-toggle-container">
                   <a href="" class="quarto-color-scheme-toggle nav-link" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
               </div>
               <div id="quarto-search" class="" title="Search"></div>
           </div> <!-- /navcollapse -->
       </div> <!-- /container-fluid -->
-    </nav></header><!-- content --><header id="title-block-header" class="quarto-title-block default page-columns page-full"><div class="quarto-title-banner page-columns page-full">
+    </nav>
+</header>
+<!-- content -->
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
       <h1 class="title"><span class="animate__animated animate__fadeInDown animate__delay-.6s" style="display: inline-block;">Introduction to Social Media Scraping</span></h1>
             <p class="subtitle lead"><span class="animate__animated animate__fadeInDown animate__delay-.6s" style="display: inline-block;">Learn the basic tools for scraping Twitter Data in R</span></p>
@@ -263,42 +291,43 @@ gtag('config', 'G-HJEMN0LJY7', { 'anonymize_ip': true});
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active"><h2 id="toc-title">On this page</h2>
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
    
   <ul>
-<li>
-<a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a>
   <ul class="collapse">
-<li><a href="#loading-in-packages-and-authorizing-rtweet" id="toc-loading-in-packages-and-authorizing-rtweet" class="nav-link" data-scroll-target="#loading-in-packages-and-authorizing-rtweet">Loading in packages and authorizing rtweet</a></li>
-  </ul>
-</li>
+  <li><a href="#loading-in-packages-and-authorizing-rtweet" id="toc-loading-in-packages-and-authorizing-rtweet" class="nav-link" data-scroll-target="#loading-in-packages-and-authorizing-rtweet">Loading in packages and authorizing rtweet</a></li>
+  </ul></li>
   <li><a href="#scraping-tweets" id="toc-scraping-tweets" class="nav-link" data-scroll-target="#scraping-tweets">Scraping Tweets</a></li>
   <li><a href="#frequency-of-biden-tweets" id="toc-frequency-of-biden-tweets" class="nav-link" data-scroll-target="#frequency-of-biden-tweets">Frequency of Biden tweets</a></li>
-  <li>
-<a href="#topic-modeling" id="toc-topic-modeling" class="nav-link" data-scroll-target="#topic-modeling">Topic Modeling</a>
+  <li><a href="#topic-modeling" id="toc-topic-modeling" class="nav-link" data-scroll-target="#topic-modeling">Topic Modeling</a>
   <ul class="collapse">
-<li><a href="#corpus" id="toc-corpus" class="nav-link" data-scroll-target="#corpus">Corpus</a></li>
+  <li><a href="#corpus" id="toc-corpus" class="nav-link" data-scroll-target="#corpus">Corpus</a></li>
   <li><a href="#document-term-matrix" id="toc-document-term-matrix" class="nav-link" data-scroll-target="#document-term-matrix">Document Term Matrix</a></li>
   <li><a href="#lets-create-the-topic-model-well-start-with-5-topics" id="toc-lets-create-the-topic-model-well-start-with-5-topics" class="nav-link" data-scroll-target="#lets-create-the-topic-model-well-start-with-5-topics">Let’s create the topic model! We’ll start with 5 topics</a></li>
-  </ul>
-</li>
+  </ul></li>
   <li><a href="#top-10-terms-by-topic" id="toc-top-10-terms-by-topic" class="nav-link" data-scroll-target="#top-10-terms-by-topic">Top 10 Terms by Topic</a></li>
-  <li>
-<a href="#word-cloud" id="toc-word-cloud" class="nav-link" data-scroll-target="#word-cloud">Word Cloud</a>
+  <li><a href="#word-cloud" id="toc-word-cloud" class="nav-link" data-scroll-target="#word-cloud">Word Cloud</a>
   <ul class="collapse">
-<li><a href="#word-cloud-of-biden-tweets" id="toc-word-cloud-of-biden-tweets" class="nav-link" data-scroll-target="#word-cloud-of-biden-tweets">Word Cloud of Biden Tweets</a></li>
+  <li><a href="#word-cloud-of-biden-tweets" id="toc-word-cloud-of-biden-tweets" class="nav-link" data-scroll-target="#word-cloud-of-biden-tweets">Word Cloud of Biden Tweets</a></li>
   <li><a href="#comparison-cloud-of-biden-tweets-by-sentiment" id="toc-comparison-cloud-of-biden-tweets-by-sentiment" class="nav-link" data-scroll-target="#comparison-cloud-of-biden-tweets-by-sentiment">Comparison Cloud of Biden Tweets by Sentiment</a></li>
   <li><a href="#cloud" id="toc-cloud" class="nav-link" data-scroll-target="#cloud">Cloud</a></li>
-  </ul>
-</li>
+  </ul></li>
   <li><a href="#sentiment-analysis" id="toc-sentiment-analysis" class="nav-link" data-scroll-target="#sentiment-analysis">Sentiment Analysis</a></li>
   <li><a href="#sentiment-analysis-of-bidens-tweets" id="toc-sentiment-analysis-of-bidens-tweets" class="nav-link" data-scroll-target="#sentiment-analysis-of-bidens-tweets">Sentiment Analysis of Biden’s Tweets</a></li>
   <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion">Conclusion</a></li>
   <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
-  </ul></nav>
+  </ul>
+</nav>
     </div>
 <!-- main -->
-<main class="content quarto-banner-title-block" id="quarto-document-content"><div class="callout-important callout callout-style-default callout-captioned">
+<main class="content quarto-banner-title-block" id="quarto-document-content">
+
+
+
+
+<div class="callout-important callout callout-style-default callout-captioned">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
@@ -311,26 +340,31 @@ NEWS
 <p>With the next Twitter regulations, The free package comes with rate-limited access to v2 tweet posting and media upload endpoints, with a posting limit of 1,500 tweets per month at the app level. If you want to access to posting tweets are up to 3,000 per month, and for reading, it’s up to 10,000 tweets per month, you will need to pay 100 USD per month. However, you can sill acces to databases and use this tutorial to analyze text in general.</p>
 </div>
 </div>
-<section id="introduction" class="level1"><h1>Introduction</h1>
+<section id="introduction" class="level1">
+<h1>Introduction</h1>
 <hr>
 <p>Social media has become an important source of information and communication for individuals, businesses, and organizations; actually there is a growing need to analyze social media data to gain insights into user behavior, sentiment, and trends. With the NLP trend and other inputs, Social media scraping, which involves collecting and analyzing data from social media sites, such as Twitter, has emerged as a powerful tool for such analysis.</p>
 <p>In this introduction, we will explore the basics of social media scraping using R and Twitter, including how to access the Twitter API, retrieve data from Twitter, and perform basic analyses on the data. We will also discuss some of the ethical and legal considerations of social media scraping, and provide tips for using social media scraping responsibly.</p>
 <p>&nbsp;</p>
-<section id="loading-in-packages-and-authorizing-rtweet" class="level2"><h2 class="anchored" data-anchor-id="loading-in-packages-and-authorizing-rtweet">Loading in packages and authorizing rtweet</h2>
+<section id="loading-in-packages-and-authorizing-rtweet" class="level2">
+<h2 class="anchored" data-anchor-id="loading-in-packages-and-authorizing-rtweet">Loading in packages and authorizing rtweet</h2>
 <p>So the first thing we want to do is load in the packages we’ll be using to scrape and manipulate our data. The most important of those is rtweet, which is the one we’ll be using to interact with the Twitter API.</p>
 <p>In order to scrape tweets, you’ll need a Twitter developer account and have to make a Twitter app. This is actually a pretty simple process (and won’t require any coding). <a href="https://jtr13.github.io/cc21fall2/scrape-twitter-data-using-r.html">Here’s a step-by-step guide</a></p>
 <div class="cell">
-<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">pacman</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/pacman/man/p_load.html">p_load</a></span><span class="op">(</span><span class="va">rtweet</span>, <span class="va">tidyverse</span>, <span class="va">ggplot2</span>, <span class="va">utils</span>, <span class="va">tm</span>, <span class="va">SnowballC</span>, <span class="va">caTools</span>, </span>
-<span>               <span class="va">rpart</span>, <span class="va">topicmodels</span>, <span class="va">tidytext</span>, <span class="va">wordcloud</span>, <span class="va">lexicon</span>, <span class="va">reshape2</span>,</span>
-<span>               <span class="va">sentimentr</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>pacman<span class="sc">::</span><span class="fu">p_load</span>(rtweet, tidyverse, ggplot2, utils, tm, SnowballC, caTools, </span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>               rpart, topicmodels, tidytext, wordcloud, lexicon, reshape2,</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>               sentimentr)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Running the code above (without the #’s) will prompt a dialogue box to pop up on your screen asking you for a bearer token. You can find that on the Twitter developer page. I made the last two lines into comments so that this can be knit into HTML smoothly.</p>
-</section></section><section id="scraping-tweets" class="level1"><h1>Scraping Tweets</h1>
+</section>
+</section>
+<section id="scraping-tweets" class="level1">
+<h1>Scraping Tweets</h1>
 <hr>
 <p>We’ll be make two datasets: one containing tweets just from US President Biden’s Twitter account and the other scraping the most recent (English language) tweets from all Twitter accounts mentioning the word “green.”</p>
 <div class="cell">
-<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">biden_tweets</span> <span class="op">&lt;-</span> <span class="fu">read_csv</span><span class="op">(</span><span class="st">"https://raw.githubusercontent.com/lukaslehmann-R/common_files/main/biden_tweets.csv"</span><span class="op">)</span></span>
-<span><span class="va">green</span> <span class="op">&lt;-</span> <span class="fu">read_csv</span><span class="op">(</span><span class="st">"https://raw.githubusercontent.com/lukaslehmann-R/common_files/main/green.csv"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>biden_tweets <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"https://raw.githubusercontent.com/lukaslehmann-R/common_files/main/biden_tweets.csv"</span>)</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>green <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"https://raw.githubusercontent.com/lukaslehmann-R/common_files/main/green.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>&nbsp;</p>
 <p>Here are the Biden tweets. We show the first 6 entries of the <code>biden_tweets</code> database</p>
@@ -358,46 +392,55 @@ NEWS
 </div>
 <p>I turned the first two lines into comments for the same reason as earlier. The third and fourth lines will load in the same datasets (although the data within will different because Biden and other Twitter users will continue to tweet)</p>
 <p>&nbsp;</p>
-</section><section id="frequency-of-biden-tweets" class="level1"><h1>Frequency of Biden tweets</h1>
+</section>
+<section id="frequency-of-biden-tweets" class="level1">
+<h1>Frequency of Biden tweets</h1>
 <hr>
 <p>Now that we have our tweets, let’s construct a time series plot that shows the frequency of tweets by President Joe Biden over time. The data is aggregated using two-week intervals. The plot displays the number of tweets on the y-axis and time on the x-axis. Each point on the plot represents the number of tweets for a particular two-week interval.</p>
 <div class="cell">
-<details><summary>Code</summary><div class="sourceCode" id="cb3"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># Create time series plot using ts_plot() function from tsbox package</span></span>
-<span><span class="co"># "2 weeks" specifies the interval for aggregating the data</span></span>
-<span><span class="va">biden_tweets</span> <span class="op">%&gt;%</span> <span class="fu">ts_plot</span><span class="op">(</span><span class="st">"2 weeks"</span><span class="op">)</span> <span class="op">+</span></span>
-<span><span class="co"># Customize plot appearance using ggplot2 functions</span></span>
-<span><span class="fu">ggplot2</span><span class="fu">::</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html">theme_minimal</a></span><span class="op">(</span>base_size<span class="op">=</span><span class="fl">16</span><span class="op">)</span> <span class="op">+</span>  <span class="co"># remove background gridlines and borders</span></span>
-<span><span class="fu">ggplot2</span><span class="fu">::</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/theme.html">theme</a></span><span class="op">(</span>plot.title <span class="op">=</span> <span class="fu">ggplot2</span><span class="fu">::</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html">element_text</a></span><span class="op">(</span>face <span class="op">=</span> <span class="st">"bold"</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span>  <span class="co"># set plot title to boldface font</span></span>
-<span><span class="fu">ggplot2</span><span class="fu">::</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">labs</a></span><span class="op">(</span>x <span class="op">=</span> <span class="cn">NULL</span>, y <span class="op">=</span> <span class="st">"Number of Tweets"</span>,  <span class="co"># set labels for x and y axis</span></span>
-<span>     title <span class="op">=</span> <span class="st">"Frequency of Biden tweets"</span>,  <span class="co"># set plot title</span></span>
-<span>     subtitle <span class="op">=</span> <span class="st">"Tweet counts aggregated using two-week intervals"</span>,  <span class="co"># set plot subtitle</span></span>
-<span>     caption <span class="op">=</span> <span class="st">"\nSource: Data collected from Twitter's REST API via rtweet"</span><span class="op">)</span> <span class="op">+</span>  <span class="co"># set plot caption</span></span>
-<span><span class="fu">geom_point</span><span class="op">(</span>size<span class="op">=</span><span class="fl">6</span><span class="op">)</span> <span class="op">+</span> <span class="co"># add points to plot to show tweet count at each interval</span></span>
-<span><span class="fu">geom_line</span><span class="op">(</span>linewidth<span class="op">=</span><span class="fl">1.5</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details><div class="cell-output-display">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create time series plot using ts_plot() function from tsbox package</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="co"># "2 weeks" specifies the interval for aggregating the data</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>biden_tweets <span class="sc">%&gt;%</span> <span class="fu">ts_plot</span>(<span class="st">"2 weeks"</span>) <span class="sc">+</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Customize plot appearance using ggplot2 functions</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>ggplot2<span class="sc">::</span><span class="fu">theme_minimal</span>(<span class="at">base_size=</span><span class="dv">16</span>) <span class="sc">+</span>  <span class="co"># remove background gridlines and borders</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>ggplot2<span class="sc">::</span><span class="fu">theme</span>(<span class="at">plot.title =</span> ggplot2<span class="sc">::</span><span class="fu">element_text</span>(<span class="at">face =</span> <span class="st">"bold"</span>)) <span class="sc">+</span>  <span class="co"># set plot title to boldface font</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>ggplot2<span class="sc">::</span><span class="fu">labs</span>(<span class="at">x =</span> <span class="cn">NULL</span>, <span class="at">y =</span> <span class="st">"Number of Tweets"</span>,  <span class="co"># set labels for x and y axis</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>     <span class="at">title =</span> <span class="st">"Frequency of Biden tweets"</span>,  <span class="co"># set plot title</span></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>     <span class="at">subtitle =</span> <span class="st">"Tweet counts aggregated using two-week intervals"</span>,  <span class="co"># set plot subtitle</span></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>     <span class="at">caption =</span> <span class="st">"</span><span class="sc">\n</span><span class="st">Source: Data collected from Twitter's REST API via rtweet"</span>) <span class="sc">+</span>  <span class="co"># set plot caption</span></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a><span class="fu">geom_point</span>(<span class="at">size=</span><span class="dv">6</span>) <span class="sc">+</span> <span class="co"># add points to plot to show tweet count at each interval</span></span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a><span class="fu">geom_line</span>(<span class="at">linewidth=</span><span class="fl">1.5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="index_files/figure-html/first_plot-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="index_files/figure-html/first_plot-1.png" class="img-fluid figure-img" style="width:80.0%"></a></p>
+<figure class="figure">
+<p><a href="index_files/figure-html/first_plot-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="index_files/figure-html/first_plot-1.png" class="img-fluid figure-img" style="width:80.0%"></a></p>
 </figure>
 </div>
 </div>
 </div>
 <p>&nbsp;</p>
-</section><section id="topic-modeling" class="level1"><h1>Topic Modeling</h1>
+</section>
+<section id="topic-modeling" class="level1">
+<h1>Topic Modeling</h1>
 <hr>
 <p>There’s a lot that goes into explaining what a topic model is. One kind of topic model is called LDA, and you can read all about it <a href="https://www.tidytextmining.com/topicmodeling.html">here</a></p>
 <p>&nbsp;</p>
-<section id="corpus" class="level2"><h2 class="anchored" data-anchor-id="corpus">Corpus</h2>
+<section id="corpus" class="level2">
+<h2 class="anchored" data-anchor-id="corpus">Corpus</h2>
 <p>In natural language processing (NLP), a corpus is a collection of written or spoken language that is used as a basis for analysis. A corpus can be made up of many different types of texts, including books, articles, speeches, social media posts, and more. Here, we will make a corpus of documents using just the full_text part of green tweets</p>
 <div class="cell">
-<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">corpus1</span> <span class="op">&lt;-</span> <span class="fu">Corpus</span><span class="op">(</span><span class="fu">VectorSource</span><span class="op">(</span><span class="va">green</span><span class="op">$</span><span class="va">full_text</span><span class="op">)</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>corpus1 <span class="ot">&lt;-</span> <span class="fu">Corpus</span>(<span class="fu">VectorSource</span>(green<span class="sc">$</span>full_text))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Now we need to clean our text a bit. Change to lower case and remove punctuation!</p>
 <div class="cell">
-<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">corpus1</span> <span class="op">&lt;-</span> <span class="fu">tm_map</span><span class="op">(</span><span class="va">corpus1</span>, <span class="va">tolower</span><span class="op">)</span></span>
-<span><span class="va">corpus1</span> <span class="op">&lt;-</span> <span class="fu">tm_map</span><span class="op">(</span><span class="va">corpus1</span>, <span class="va">removePunctuation</span><span class="op">)</span></span>
-<span><span class="co">#We need to remove stop words to get meaningful results from this exercise. </span></span>
-<span><span class="co">#We'll remove words like "me", "is", "was"</span></span>
-<span><span class="fu">stopwords</span><span class="op">(</span><span class="st">"english"</span><span class="op">)</span><span class="op">[</span><span class="fl">1</span><span class="op">:</span><span class="fl">50</span><span class="op">]</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>corpus1 <span class="ot">&lt;-</span> <span class="fu">tm_map</span>(corpus1, tolower)</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>corpus1 <span class="ot">&lt;-</span> <span class="fu">tm_map</span>(corpus1, removePunctuation)</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="co">#We need to remove stop words to get meaningful results from this exercise. </span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="co">#We'll remove words like "me", "is", "was"</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="fu">stopwords</span>(<span class="st">"english"</span>)[<span class="dv">1</span><span class="sc">:</span><span class="dv">50</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code> [1] "i"          "me"         "my"         "myself"     "we"        
  [6] "our"        "ours"       "ourselves"  "you"        "your"      
@@ -410,20 +453,22 @@ NEWS
 [41] "was"        "were"       "be"         "been"       "being"     
 [46] "have"       "has"        "had"        "having"     "do"        </code></pre>
 </div>
-<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">corpus1</span> <span class="op">&lt;-</span> <span class="fu">tm_map</span><span class="op">(</span><span class="va">corpus1</span>, <span class="va">removeWords</span>, <span class="op">(</span><span class="fu">stopwords</span><span class="op">(</span><span class="st">"english"</span><span class="op">)</span><span class="op">)</span><span class="op">)</span></span>
-<span><span class="co">#We need to clean the words in the corpus further by "stemming" words</span></span>
-<span><span class="co">#A word like "understand" and "understands" will both become "understand"</span></span>
-<span><span class="va">corpus1</span> <span class="op">&lt;-</span> <span class="fu">tm_map</span><span class="op">(</span><span class="va">corpus1</span>, <span class="va">stemDocument</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>corpus1 <span class="ot">&lt;-</span> <span class="fu">tm_map</span>(corpus1, removeWords, (<span class="fu">stopwords</span>(<span class="st">"english"</span>)))</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="co">#We need to clean the words in the corpus further by "stemming" words</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="co">#A word like "understand" and "understands" will both become "understand"</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>corpus1 <span class="ot">&lt;-</span> <span class="fu">tm_map</span>(corpus1, stemDocument)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>&nbsp;</p>
-</section><section id="document-term-matrix" class="level2"><h2 class="anchored" data-anchor-id="document-term-matrix">Document Term Matrix</h2>
+</section>
+<section id="document-term-matrix" class="level2">
+<h2 class="anchored" data-anchor-id="document-term-matrix">Document Term Matrix</h2>
 <p>So, a DTM is a way of representing a collection of text documents quantitativelythat allows us to do some cool stuff with them. It’s basically a matrix where the rows correspond to the documents in the collection, and the columns correspond to the unique words or terms that appear in the documents. Each cell in the matrix represents the frequency of a particular term in a particular document.</p>
 <div class="cell">
-<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co">#creates a document term matrix, which is necessary for building a topic model</span></span>
-<span><span class="va">DTM1</span> <span class="op">&lt;-</span> <span class="fu">DocumentTermMatrix</span><span class="op">(</span><span class="va">corpus1</span><span class="op">)</span></span>
-<span><span class="co">#Here we can see the most frequently used terms</span></span>
-<span><span class="va">frequent_ge_20</span> <span class="op">&lt;-</span> <span class="fu">findFreqTerms</span><span class="op">(</span><span class="va">DTM1</span>, lowfreq <span class="op">=</span> <span class="fl">100</span><span class="op">)</span></span>
-<span><span class="va">frequent_ge_20</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co">#creates a document term matrix, which is necessary for building a topic model</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>DTM1 <span class="ot">&lt;-</span> <span class="fu">DocumentTermMatrix</span>(corpus1)</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="co">#Here we can see the most frequently used terms</span></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>frequent_ge_20 <span class="ot">&lt;-</span> <span class="fu">findFreqTerms</span>(DTM1, <span class="at">lowfreq =</span> <span class="dv">100</span>)</span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>frequent_ge_20</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code> [1] "amp"       "green"     "like"      "store"     "day"       "…"        
  [7] "’s"        "light"     "one"       "year"      "figur"     "red"      
@@ -432,55 +477,64 @@ NEWS
 </div>
 </div>
 <p>&nbsp;</p>
-</section><section id="lets-create-the-topic-model-well-start-with-5-topics" class="level2"><h2 class="anchored" data-anchor-id="lets-create-the-topic-model-well-start-with-5-topics">Let’s create the topic model! We’ll start with 5 topics</h2>
+</section>
+<section id="lets-create-the-topic-model-well-start-with-5-topics" class="level2">
+<h2 class="anchored" data-anchor-id="lets-create-the-topic-model-well-start-with-5-topics">Let’s create the topic model! We’ll start with 5 topics</h2>
 <p>The code snippet performs topic modeling on a corpus of text data represented as a Document-Term Matrix (DTM) using the Latent Dirichlet Allocation (LDA) algorithm. The LDA() function from the topic models package is used to create a model with 7 topics and a specified random seed for reproducibility. The resulting model is stored in the green_lda1 object.</p>
 <div class="cell">
-<div class="sourceCode" id="cb10"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co">#Perform LDA topic modeling on a Document-Term Matrix (DTM) with 7 topics</span></span>
-<span><span class="va">green_lda1</span> <span class="op">&lt;-</span> <span class="fu">LDA</span><span class="op">(</span><span class="va">DTM1</span>, k <span class="op">=</span> <span class="fl">7</span>, control <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span><span class="op">(</span>seed <span class="op">=</span> <span class="fl">1234</span><span class="op">)</span><span class="op">)</span></span>
-<span></span>
-<span><span class="co">#Print the model summary</span></span>
-<span><span class="va">green_lda1</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Perform LDA topic modeling on a Document-Term Matrix (DTM) with 7 topics</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>green_lda1 <span class="ot">&lt;-</span> <span class="fu">LDA</span>(DTM1, <span class="at">k =</span> <span class="dv">7</span>, <span class="at">control =</span> <span class="fu">list</span>(<span class="at">seed =</span> <span class="dv">1234</span>))</span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a><span class="co">#Print the model summary</span></span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>green_lda1</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>A LDA_VEM topic model with 7 topics.</code></pre>
 </div>
-<div class="sourceCode" id="cb12"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co">#Convert the model's beta matrix to a tidy format</span></span>
-<span><span class="va">green_topics1</span> <span class="op">&lt;-</span> <span class="fu">tidy</span><span class="op">(</span><span class="va">green_lda1</span>, matrix <span class="op">=</span> <span class="st">"beta"</span><span class="op">)</span></span>
-<span></span>
-<span><span class="va">green_top_terms1</span> <span class="op">&lt;-</span> <span class="va">green_topics1</span> <span class="op">%&gt;%</span></span>
-<span>  <span class="fu">group_by</span><span class="op">(</span><span class="va">topic</span><span class="op">)</span> <span class="op">%&gt;%</span> <span class="co">#Group the terms by topic</span></span>
-<span>  <span class="fu">slice_max</span><span class="op">(</span><span class="va">beta</span>, n <span class="op">=</span> <span class="fl">10</span><span class="op">)</span> <span class="op">%&gt;%</span> <span class="co">#Top 10 terms with the highest probabilities</span></span>
-<span>  <span class="fu">ungroup</span><span class="op">(</span><span class="op">)</span> <span class="op">%&gt;%</span> <span class="co">#Remove the grouping attribute from the data frame</span></span>
-<span>  <span class="fu">arrange</span><span class="op">(</span><span class="va">topic</span>, <span class="op">-</span><span class="va">beta</span><span class="op">)</span> <span class="co">#Sort the data frame by topic index and term probability</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Convert the model's beta matrix to a tidy format</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>green_topics1 <span class="ot">&lt;-</span> <span class="fu">tidy</span>(green_lda1, <span class="at">matrix =</span> <span class="st">"beta"</span>)</span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>green_top_terms1 <span class="ot">&lt;-</span> green_topics1 <span class="sc">%&gt;%</span></span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(topic) <span class="sc">%&gt;%</span> <span class="co">#Group the terms by topic</span></span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">slice_max</span>(beta, <span class="at">n =</span> <span class="dv">10</span>) <span class="sc">%&gt;%</span> <span class="co">#Top 10 terms with the highest probabilities</span></span>
+<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ungroup</span>() <span class="sc">%&gt;%</span> <span class="co">#Remove the grouping attribute from the data frame</span></span>
+<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(topic, <span class="sc">-</span>beta) <span class="co">#Sort the data frame by topic index and term probability</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>&nbsp;</p>
-</section></section><section id="top-10-terms-by-topic" class="level1"><h1>Top 10 Terms by Topic</h1>
+</section>
+</section>
+<section id="top-10-terms-by-topic" class="level1">
+<h1>Top 10 Terms by Topic</h1>
 <hr>
 <div class="cell">
-<details><summary>Code</summary><div class="sourceCode" id="cb13"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://ggplot2.tidyverse.org">ggplot2</a></span><span class="op">)</span></span>
-<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/juliasilge/tidytext">tidytext</a></span><span class="op">)</span></span>
-<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://wilkelab.org/ggtext/">ggtext</a></span><span class="op">)</span></span>
-<span></span>
-<span><span class="co">#Reorder the terms within each topic based on their probability (beta) values</span></span>
-<span><span class="va">green_top_terms1</span> <span class="op">%&gt;%</span></span>
-<span>  <span class="fu">mutate</span><span class="op">(</span>term <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/pkg/tidytext/man/reorder_within.html">reorder_within</a></span><span class="op">(</span><span class="va">term</span>, <span class="va">beta</span>, <span class="va">topic</span><span class="op">)</span><span class="op">)</span> <span class="op">%&gt;%</span></span>
-<span><span class="co">#Create a bar plot of the term probabilities for each topic</span></span>
-<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span><span class="va">beta</span>, <span class="va">term</span>, fill <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/factor.html">factor</a></span><span class="op">(</span><span class="va">topic</span><span class="op">)</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
-<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_bar.html">geom_col</a></span><span class="op">(</span>show.legend <span class="op">=</span> <span class="cn">FALSE</span>, width <span class="op">=</span> <span class="fl">0.8</span><span class="op">)</span> <span class="op">+</span></span>
-<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/scale_manual.html">scale_fill_manual</a></span><span class="op">(</span>values <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"#1f77b4"</span>, <span class="st">"#ff7f0e"</span>, <span class="st">"#2ca02c"</span>, <span class="st">"#d62728"</span>, <span class="st">"#9467bd"</span>, <span class="st">"#8c564b"</span>, <span class="st">"#e377c2"</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
-<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html">theme_minimal</a></span><span class="op">(</span><span class="op">)</span><span class="op">+</span></span>
-<span><span class="co">#Create separate plots for each topic and adjust the y-axis limits for each plot</span></span>
-<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/facet_wrap.html">facet_wrap</a></span><span class="op">(</span><span class="op">~</span> <span class="va">topic</span>, scales <span class="op">=</span> <span class="st">"free"</span>, ncol <span class="op">=</span> <span class="fl">2</span>, strip.position <span class="op">=</span> <span class="st">"bottom"</span><span class="op">)</span> <span class="op">+</span></span>
-<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/theme.html">theme</a></span><span class="op">(</span>strip.background <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html">element_blank</a></span><span class="op">(</span><span class="op">)</span>,</span>
-<span>        strip.text <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html">element_text</a></span><span class="op">(</span>size <span class="op">=</span> <span class="fl">12</span>, face <span class="op">=</span> <span class="st">"bold"</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
-<span><span class="co">#Apply a custom scale for the y-axis that preserves the within-topic ordering of terms</span></span>
-<span>  <span class="fu"><a href="https://rdrr.io/pkg/tidytext/man/reorder_within.html">scale_y_reordered</a></span><span class="op">(</span>expand <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">0</span>, <span class="fl">0</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
-<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">labs</a></span><span class="op">(</span>title <span class="op">=</span> <span class="st">"Top 10 Terms by Topic"</span>,</span>
-<span>       x <span class="op">=</span> <span class="st">"Term Probability"</span>,</span>
-<span>       y <span class="op">=</span> <span class="cn">NULL</span>,</span>
-<span>       caption <span class="op">=</span> <span class="st">"Source: LDA Topic Model of Green Energy Tweets"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details><div class="cell-output-display">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidytext)</span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggtext)</span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a><span class="co">#Reorder the terms within each topic based on their probability (beta) values</span></span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a>green_top_terms1 <span class="sc">%&gt;%</span></span>
+<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">term =</span> <span class="fu">reorder_within</span>(term, beta, topic)) <span class="sc">%&gt;%</span></span>
+<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a><span class="co">#Create a bar plot of the term probabilities for each topic</span></span>
+<span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(beta, term, <span class="at">fill =</span> <span class="fu">factor</span>(topic))) <span class="sc">+</span></span>
+<span id="cb13-10"><a href="#cb13-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_col</span>(<span class="at">show.legend =</span> <span class="cn">FALSE</span>, <span class="at">width =</span> <span class="fl">0.8</span>) <span class="sc">+</span></span>
+<span id="cb13-11"><a href="#cb13-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">"#1f77b4"</span>, <span class="st">"#ff7f0e"</span>, <span class="st">"#2ca02c"</span>, <span class="st">"#d62728"</span>, <span class="st">"#9467bd"</span>, <span class="st">"#8c564b"</span>, <span class="st">"#e377c2"</span>)) <span class="sc">+</span></span>
+<span id="cb13-12"><a href="#cb13-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()<span class="sc">+</span></span>
+<span id="cb13-13"><a href="#cb13-13" aria-hidden="true" tabindex="-1"></a><span class="co">#Create separate plots for each topic and adjust the y-axis limits for each plot</span></span>
+<span id="cb13-14"><a href="#cb13-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span> topic, <span class="at">scales =</span> <span class="st">"free"</span>, <span class="at">ncol =</span> <span class="dv">2</span>, <span class="at">strip.position =</span> <span class="st">"bottom"</span>) <span class="sc">+</span></span>
+<span id="cb13-15"><a href="#cb13-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">strip.background =</span> <span class="fu">element_blank</span>(),</span>
+<span id="cb13-16"><a href="#cb13-16" aria-hidden="true" tabindex="-1"></a>        <span class="at">strip.text =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">12</span>, <span class="at">face =</span> <span class="st">"bold"</span>)) <span class="sc">+</span></span>
+<span id="cb13-17"><a href="#cb13-17" aria-hidden="true" tabindex="-1"></a><span class="co">#Apply a custom scale for the y-axis that preserves the within-topic ordering of terms</span></span>
+<span id="cb13-18"><a href="#cb13-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_y_reordered</span>(<span class="at">expand =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">0</span>)) <span class="sc">+</span></span>
+<span id="cb13-19"><a href="#cb13-19" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Top 10 Terms by Topic"</span>,</span>
+<span id="cb13-20"><a href="#cb13-20" aria-hidden="true" tabindex="-1"></a>       <span class="at">x =</span> <span class="st">"Term Probability"</span>,</span>
+<span id="cb13-21"><a href="#cb13-21" aria-hidden="true" tabindex="-1"></a>       <span class="at">y =</span> <span class="cn">NULL</span>,</span>
+<span id="cb13-22"><a href="#cb13-22" aria-hidden="true" tabindex="-1"></a>       <span class="at">caption =</span> <span class="st">"Source: LDA Topic Model of Green Energy Tweets"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="index_files/figure-html/second_plot-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="index_files/figure-html/second_plot-1.png" class="img-fluid figure-img" style="width:80.0%"></a></p>
+<figure class="figure">
+<p><a href="index_files/figure-html/second_plot-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="index_files/figure-html/second_plot-1.png" class="img-fluid figure-img" style="width:80.0%"></a></p>
 </figure>
 </div>
 </div>
@@ -488,140 +542,168 @@ NEWS
 <p>The plot is a bar chart showing the top 10 terms for each of the 7 topics generated by an LDA topic modeling algorithm. Each topic is represented by a different color, and the bars are sorted in descending order of probability (beta) within each topic. The x-axis shows the probability (beta) of each term being associated with the topic, ranging from 0 at the left side of the plot to 0.05 at the right side of the plot. The y-axis shows the top 10 terms for each topic, with each topic in a separate facet of the plot.</p>
 <p>Overall, the plot allows us to see which terms are most strongly associated with each of the 7 topics. For example, we can see that for topic 1 (represented by blue bars), the most strongly associated terms are “climate”, “change”, “renewable”, and “energy”, while for topic 5 (represented by purple bars), the most strongly associated terms are “carbon”, “footprint”, and “reduction”.</p>
 <p>&nbsp;</p>
-</section><section id="word-cloud" class="level1"><h1>Word Cloud</h1>
+</section>
+<section id="word-cloud" class="level1">
+<h1>Word Cloud</h1>
 <hr>
 <p>Now let’s go back to the Biden tweets and make a word cloud. What’s a word cloud? A word cloud is a graphical representation of textual data in which the size of each word represents its frequency or importance. It’s a popular visualization tool in data analysis and is often used to quickly identify the most common words in a text or group of texts. You can read about it in detail <a href="https://towardsdatascience.com/create-a-word-cloud-with-r-bde3e7422e8a">here</a></p>
 <div class="cell">
-<div class="sourceCode" id="cb14"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">words_data</span> <span class="op">&lt;-</span> <span class="va">biden_tweets</span> <span class="op">%&gt;%</span> </span>
-<span>  <span class="fu">select</span><span class="op">(</span><span class="va">text</span><span class="op">)</span><span class="op">%&gt;%</span></span>
-<span>  <span class="fu"><a href="https://rdrr.io/pkg/tidytext/man/unnest_tokens.html">unnest_tokens</a></span><span class="op">(</span><span class="va">word</span>, <span class="va">text</span><span class="op">)</span> </span>
-<span><span class="co">#Let's get rid of some words associated with links and things that cause errors</span></span>
-<span><span class="va">words_data</span> <span class="op">&lt;-</span> <span class="va">words_data</span> <span class="op">%&gt;%</span> </span>
-<span>  <span class="fu"><a href="https://rdrr.io/r/stats/filter.html">filter</a></span><span class="op">(</span><span class="op">!</span><span class="va">word</span> <span class="op"><a href="https://rdrr.io/r/base/match.html">%in%</a></span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">'https'</span>, <span class="st">'t.co'</span>, <span class="st">'he\'s'</span>, <span class="st">'i\'m'</span>, <span class="st">'it\'s'</span><span class="op">)</span><span class="op">)</span></span>
-<span><span class="co">#Let's get rid of stopwords</span></span>
-<span><span class="va">words_data2</span> <span class="op">&lt;-</span> <span class="va">words_data</span> <span class="op">%&gt;%</span></span>
-<span>  <span class="fu">anti_join</span><span class="op">(</span><span class="va">stop_words</span><span class="op">)</span> <span class="op">%&gt;%</span></span>
-<span>  <span class="fu">count</span><span class="op">(</span><span class="va">word</span>, sort <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>words_data <span class="ot">&lt;-</span> biden_tweets <span class="sc">%&gt;%</span> </span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(text)<span class="sc">%&gt;%</span></span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">unnest_tokens</span>(word, text) </span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a><span class="co">#Let's get rid of some words associated with links and things that cause errors</span></span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>words_data <span class="ot">&lt;-</span> words_data <span class="sc">%&gt;%</span> </span>
+<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="sc">!</span>word <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">'https'</span>, <span class="st">'t.co'</span>, <span class="st">'he</span><span class="sc">\'</span><span class="st">s'</span>, <span class="st">'i</span><span class="sc">\'</span><span class="st">m'</span>, <span class="st">'it</span><span class="sc">\'</span><span class="st">s'</span>))</span>
+<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a><span class="co">#Let's get rid of stopwords</span></span>
+<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a>words_data2 <span class="ot">&lt;-</span> words_data <span class="sc">%&gt;%</span></span>
+<span id="cb14-9"><a href="#cb14-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">anti_join</span>(stop_words) <span class="sc">%&gt;%</span></span>
+<span id="cb14-10"><a href="#cb14-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">count</span>(word, <span class="at">sort =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>&nbsp;</p>
-<section id="word-cloud-of-biden-tweets" class="level2"><h2 class="anchored" data-anchor-id="word-cloud-of-biden-tweets">Word Cloud of Biden Tweets</h2>
+<section id="word-cloud-of-biden-tweets" class="level2">
+<h2 class="anchored" data-anchor-id="word-cloud-of-biden-tweets">Word Cloud of Biden Tweets</h2>
 <div class="cell">
-<details><summary>Code</summary><div class="sourceCode" id="cb15"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># Create custom color palette</span></span>
-<span><span class="va">my_palette</span> <span class="op">&lt;-</span> <span class="fu">brewer.pal</span><span class="op">(</span><span class="fl">8</span>, <span class="st">"Dark2"</span><span class="op">)</span></span>
-<span></span>
-<span><span class="co"># Create word cloud with larger font size and custom layout</span></span>
-<span><span class="fu">wordcloud</span><span class="op">(</span><span class="va">words_data2</span><span class="op">$</span><span class="va">word</span>, </span>
-<span>          <span class="va">words_data2</span><span class="op">$</span><span class="va">n</span>, </span>
-<span>          max.words <span class="op">=</span> <span class="fl">200</span>, </span>
-<span>          colors <span class="op">=</span> <span class="va">my_palette</span>, </span>
-<span>          scale <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">5</span>, <span class="fl">0.3</span><span class="op">)</span>,</span>
-<span>          random.order <span class="op">=</span> <span class="cn">FALSE</span>,</span>
-<span>          rot.per <span class="op">=</span> <span class="fl">0.25</span>,</span>
-<span>          random.color <span class="op">=</span> <span class="cn">TRUE</span>,</span>
-<span>          main <span class="op">=</span> <span class="st">"Word Cloud of Biden Tweets"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details><div class="cell-output-display">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create custom color palette</span></span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>my_palette <span class="ot">&lt;-</span> <span class="fu">brewer.pal</span>(<span class="dv">8</span>, <span class="st">"Dark2"</span>)</span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Create word cloud with larger font size and custom layout</span></span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a><span class="fu">wordcloud</span>(words_data2<span class="sc">$</span>word, </span>
+<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a>          words_data2<span class="sc">$</span>n, </span>
+<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a>          <span class="at">max.words =</span> <span class="dv">200</span>, </span>
+<span id="cb15-8"><a href="#cb15-8" aria-hidden="true" tabindex="-1"></a>          <span class="at">colors =</span> my_palette, </span>
+<span id="cb15-9"><a href="#cb15-9" aria-hidden="true" tabindex="-1"></a>          <span class="at">scale =</span> <span class="fu">c</span>(<span class="dv">5</span>, <span class="fl">0.3</span>),</span>
+<span id="cb15-10"><a href="#cb15-10" aria-hidden="true" tabindex="-1"></a>          <span class="at">random.order =</span> <span class="cn">FALSE</span>,</span>
+<span id="cb15-11"><a href="#cb15-11" aria-hidden="true" tabindex="-1"></a>          <span class="at">rot.per =</span> <span class="fl">0.25</span>,</span>
+<span id="cb15-12"><a href="#cb15-12" aria-hidden="true" tabindex="-1"></a>          <span class="at">random.color =</span> <span class="cn">TRUE</span>,</span>
+<span id="cb15-13"><a href="#cb15-13" aria-hidden="true" tabindex="-1"></a>          <span class="at">main =</span> <span class="st">"Word Cloud of Biden Tweets"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="index_files/figure-html/third_plot-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img src="index_files/figure-html/third_plot-1.png" class="img-fluid figure-img" style="width:80.0%"></a></p>
+<figure class="figure">
+<p><a href="index_files/figure-html/third_plot-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img src="index_files/figure-html/third_plot-1.png" class="img-fluid figure-img" style="width:80.0%"></a></p>
 </figure>
 </div>
 </div>
 </div>
 <p>&nbsp;</p>
-</section><section id="comparison-cloud-of-biden-tweets-by-sentiment" class="level2"><h2 class="anchored" data-anchor-id="comparison-cloud-of-biden-tweets-by-sentiment">Comparison Cloud of Biden Tweets by Sentiment</h2>
+</section>
+<section id="comparison-cloud-of-biden-tweets-by-sentiment" class="level2">
+<h2 class="anchored" data-anchor-id="comparison-cloud-of-biden-tweets-by-sentiment">Comparison Cloud of Biden Tweets by Sentiment</h2>
 <p>Now let’s make a word cloud from those tweets but highlight which words are positive and which are negative</p>
 <div class="cell">
-<div class="sourceCode" id="cb16"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co">#Select and tokenize words</span></span>
-<span><span class="va">words_data</span> <span class="op">&lt;-</span> <span class="va">biden_tweets</span> <span class="op">%&gt;%</span> </span>
-<span>  <span class="fu">select</span><span class="op">(</span><span class="va">text</span><span class="op">)</span> <span class="op">%&gt;%</span></span>
-<span>  <span class="fu"><a href="https://rdrr.io/pkg/tidytext/man/unnest_tokens.html">unnest_tokens</a></span><span class="op">(</span><span class="va">word</span>, <span class="va">text</span><span class="op">)</span> </span>
-<span></span>
-<span><span class="co">#Get sentiment scores for each word using the bing lexicon</span></span>
-<span><span class="va">sentiment_scores</span> <span class="op">&lt;-</span> <span class="va">words_data2</span> <span class="op">%&gt;%</span></span>
-<span>  <span class="fu">inner_join</span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/pkg/tidytext/man/get_sentiments.html">get_sentiments</a></span><span class="op">(</span><span class="st">"bing"</span><span class="op">)</span><span class="op">)</span></span>
-<span></span>
-<span><span class="co">#Count the number of words in each sentiment category</span></span>
-<span><span class="va">sentiment_counts</span> <span class="op">&lt;-</span> <span class="va">sentiment_scores</span> <span class="op">%&gt;%</span></span>
-<span>  <span class="fu">count</span><span class="op">(</span><span class="va">sentiment</span>, sort <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span>
-<span></span>
-<span><span class="co">#Create a list of profanity words to remove from the dataset</span></span>
-<span><span class="va">profanity_list</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/unique.html">unique</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/chartr.html">tolower</a></span><span class="op">(</span><span class="fu">lexicon</span><span class="fu">::</span><span class="va"><a href="https://rdrr.io/pkg/lexicon/man/profanity_alvarez.html">profanity_alvarez</a></span><span class="op">)</span><span class="op">)</span></span>
-<span></span>
-<span><span class="co">#Filter out stop words and profanity words from the dataset</span></span>
-<span><span class="va">filtered_words_data</span> <span class="op">&lt;-</span> <span class="va">words_data</span> <span class="op">%&gt;%</span></span>
-<span>  <span class="fu"><a href="https://rdrr.io/r/stats/filter.html">filter</a></span><span class="op">(</span><span class="op">!</span><span class="va">word</span> <span class="op"><a href="https://rdrr.io/r/base/match.html">%in%</a></span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">'https'</span>, <span class="st">'t.co'</span>, <span class="st">'he\'s'</span>, <span class="st">'i\'m'</span>, <span class="st">'it\'s'</span>, <span class="va">profanity_list</span><span class="op">)</span><span class="op">)</span></span>
-<span></span>
-<span><span class="co">#Get sentiment scores for each filtered word using the bing lexicon</span></span>
-<span><span class="va">filtered_sentiment_scores</span> <span class="op">&lt;-</span> <span class="va">filtered_words_data</span> <span class="op">%&gt;%</span></span>
-<span>  <span class="fu">inner_join</span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/pkg/tidytext/man/get_sentiments.html">get_sentiments</a></span><span class="op">(</span><span class="st">"bing"</span><span class="op">)</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Select and tokenize words</span></span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>words_data <span class="ot">&lt;-</span> biden_tweets <span class="sc">%&gt;%</span> </span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(text) <span class="sc">%&gt;%</span></span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">unnest_tokens</span>(word, text) </span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a><span class="co">#Get sentiment scores for each word using the bing lexicon</span></span>
+<span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a>sentiment_scores <span class="ot">&lt;-</span> words_data2 <span class="sc">%&gt;%</span></span>
+<span id="cb16-8"><a href="#cb16-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">inner_join</span>(<span class="fu">get_sentiments</span>(<span class="st">"bing"</span>))</span>
+<span id="cb16-9"><a href="#cb16-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-10"><a href="#cb16-10" aria-hidden="true" tabindex="-1"></a><span class="co">#Count the number of words in each sentiment category</span></span>
+<span id="cb16-11"><a href="#cb16-11" aria-hidden="true" tabindex="-1"></a>sentiment_counts <span class="ot">&lt;-</span> sentiment_scores <span class="sc">%&gt;%</span></span>
+<span id="cb16-12"><a href="#cb16-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">count</span>(sentiment, <span class="at">sort =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb16-13"><a href="#cb16-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-14"><a href="#cb16-14" aria-hidden="true" tabindex="-1"></a><span class="co">#Create a list of profanity words to remove from the dataset</span></span>
+<span id="cb16-15"><a href="#cb16-15" aria-hidden="true" tabindex="-1"></a>profanity_list <span class="ot">&lt;-</span> <span class="fu">unique</span>(<span class="fu">tolower</span>(lexicon<span class="sc">::</span>profanity_alvarez))</span>
+<span id="cb16-16"><a href="#cb16-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-17"><a href="#cb16-17" aria-hidden="true" tabindex="-1"></a><span class="co">#Filter out stop words and profanity words from the dataset</span></span>
+<span id="cb16-18"><a href="#cb16-18" aria-hidden="true" tabindex="-1"></a>filtered_words_data <span class="ot">&lt;-</span> words_data <span class="sc">%&gt;%</span></span>
+<span id="cb16-19"><a href="#cb16-19" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="sc">!</span>word <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">'https'</span>, <span class="st">'t.co'</span>, <span class="st">'he</span><span class="sc">\'</span><span class="st">s'</span>, <span class="st">'i</span><span class="sc">\'</span><span class="st">m'</span>, <span class="st">'it</span><span class="sc">\'</span><span class="st">s'</span>, profanity_list))</span>
+<span id="cb16-20"><a href="#cb16-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-21"><a href="#cb16-21" aria-hidden="true" tabindex="-1"></a><span class="co">#Get sentiment scores for each filtered word using the bing lexicon</span></span>
+<span id="cb16-22"><a href="#cb16-22" aria-hidden="true" tabindex="-1"></a>filtered_sentiment_scores <span class="ot">&lt;-</span> filtered_words_data <span class="sc">%&gt;%</span></span>
+<span id="cb16-23"><a href="#cb16-23" aria-hidden="true" tabindex="-1"></a>  <span class="fu">inner_join</span>(<span class="fu">get_sentiments</span>(<span class="st">"bing"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>&nbsp;</p>
-</section><section id="cloud" class="level2"><h2 class="anchored" data-anchor-id="cloud">Cloud</h2>
+</section>
+<section id="cloud" class="level2">
+<h2 class="anchored" data-anchor-id="cloud">Cloud</h2>
 <div class="cell">
-<details><summary>Code</summary><div class="sourceCode" id="cb17"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co">#Count the number of filtered words with each sentiment score</span></span>
-<span><span class="va">word_sentiment_counts</span> <span class="op">&lt;-</span> <span class="va">filtered_sentiment_scores</span> <span class="op">%&gt;%</span></span>
-<span>  <span class="fu">count</span><span class="op">(</span><span class="va">word</span>, <span class="va">sentiment</span>, sort <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span> <span class="op">%&gt;%</span></span>
-<span>  <span class="fu">acast</span><span class="op">(</span><span class="va">word</span> <span class="op">~</span> <span class="va">sentiment</span>, value.var <span class="op">=</span> <span class="st">"n"</span>, fill <span class="op">=</span> <span class="fl">0</span><span class="op">)</span></span>
-<span></span>
-<span><span class="co">#Create a comparison cloud using the word and sentiment counts</span></span>
-<span><span class="fu">comparison.cloud</span><span class="op">(</span><span class="va">word_sentiment_counts</span>, </span>
-<span>                  colors <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"red"</span>, <span class="st">"blue"</span><span class="op">)</span>,</span>
-<span>                  max.words <span class="op">=</span> <span class="cn">Inf</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details><div class="cell-output-display">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Count the number of filtered words with each sentiment score</span></span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>word_sentiment_counts <span class="ot">&lt;-</span> filtered_sentiment_scores <span class="sc">%&gt;%</span></span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">count</span>(word, sentiment, <span class="at">sort =</span> <span class="cn">TRUE</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">acast</span>(word <span class="sc">~</span> sentiment, <span class="at">value.var =</span> <span class="st">"n"</span>, <span class="at">fill =</span> <span class="dv">0</span>)</span>
+<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a><span class="co">#Create a comparison cloud using the word and sentiment counts</span></span>
+<span id="cb17-7"><a href="#cb17-7" aria-hidden="true" tabindex="-1"></a><span class="fu">comparison.cloud</span>(word_sentiment_counts, </span>
+<span id="cb17-8"><a href="#cb17-8" aria-hidden="true" tabindex="-1"></a>                  <span class="at">colors =</span> <span class="fu">c</span>(<span class="st">"red"</span>, <span class="st">"blue"</span>),</span>
+<span id="cb17-9"><a href="#cb17-9" aria-hidden="true" tabindex="-1"></a>                  <span class="at">max.words =</span> <span class="cn">Inf</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="index_files/figure-html/fourth_plot-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4"><img src="index_files/figure-html/fourth_plot-1.png" class="img-fluid figure-img" style="width:80.0%"></a></p>
+<figure class="figure">
+<p><a href="index_files/figure-html/fourth_plot-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4"><img src="index_files/figure-html/fourth_plot-1.png" class="img-fluid figure-img" style="width:80.0%"></a></p>
 </figure>
 </div>
 </div>
 </div>
 <p>&nbsp;</p>
-</section></section><section id="sentiment-analysis" class="level1"><h1>Sentiment Analysis</h1>
+</section>
+</section>
+<section id="sentiment-analysis" class="level1">
+<h1>Sentiment Analysis</h1>
 <p>Now we are going to see how many of President Biden’s tweets can be classified as positive, neutral, and negative. <code>sentimentr</code> is the main package in use here. The code snippet provided takes the tweets from Biden’s Twitter account and extracts individual sentences from each tweet. It then calculates the sentiment score for each sentence using the <code>sentiment()</code>, which uses a lexicon of positive and negative words to score each sentence as positive or negative. The sentiment scores for each sentence are then aggregated to obtain the mean sentiment score for each tweet. Based on these mean scores, the code then calculates the number of tweets that are positive, negative, or neutral in sentiment.</p>
 <div class="cell">
-<div class="sourceCode" id="cb18"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">tweet_sentences_data</span> <span class="op">&lt;-</span> <span class="fu">sentiment</span><span class="op">(</span><span class="fu">get_sentences</span><span class="op">(</span><span class="va">biden_tweets</span><span class="op">$</span><span class="va">text</span><span class="op">)</span><span class="op">)</span> <span class="op">%&gt;%</span> </span>
-<span>  <span class="fu">group_by</span><span class="op">(</span><span class="va">element_id</span><span class="op">)</span> <span class="op">%&gt;%</span> </span>
-<span>  <span class="fu">summarize</span><span class="op">(</span>meanSentiment <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/mean.html">mean</a></span><span class="op">(</span><span class="va">sentiment</span><span class="op">)</span><span class="op">)</span></span>
-<span></span>
-<span><span class="co"># Objects representing the number of positive, neutral, </span></span>
-<span><span class="co">#and negative tweets from President Biden</span></span>
-<span><span class="va">negative_t</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/sum.html">sum</a></span><span class="op">(</span><span class="va">tweet_sentences_data</span><span class="op">$</span><span class="va">meanSentiment</span> <span class="op">&lt;</span> <span class="fl">0</span><span class="op">)</span></span>
-<span><span class="va">neutral_t</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/sum.html">sum</a></span><span class="op">(</span><span class="va">tweet_sentences_data</span><span class="op">$</span><span class="va">meanSentiment</span> <span class="op">==</span> <span class="fl">0</span><span class="op">)</span></span>
-<span><span class="va">positive_t</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/sum.html">sum</a></span><span class="op">(</span><span class="va">tweet_sentences_data</span><span class="op">$</span><span class="va">meanSentiment</span> <span class="op">&gt;</span> <span class="fl">0</span><span class="op">)</span></span>
-<span></span>
-<span><span class="co"># Creating vectors for a dataframe</span></span>
-<span><span class="va">type_tweet</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"Negative"</span>, <span class="st">"Neutral"</span>, <span class="st">"Positive"</span><span class="op">)</span></span>
-<span><span class="va">values</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="va">negative_t</span>, <span class="va">neutral_t</span>, <span class="va">positive_t</span><span class="op">)</span></span>
-<span><span class="va">df_sentiment</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html">data.frame</a></span><span class="op">(</span><span class="va">type_tweet</span>, <span class="va">values</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>tweet_sentences_data <span class="ot">&lt;-</span> <span class="fu">sentiment</span>(<span class="fu">get_sentences</span>(biden_tweets<span class="sc">$</span>text)) <span class="sc">%&gt;%</span> </span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(element_id) <span class="sc">%&gt;%</span> </span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarize</span>(<span class="at">meanSentiment =</span> <span class="fu">mean</span>(sentiment))</span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Objects representing the number of positive, neutral, </span></span>
+<span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a><span class="co">#and negative tweets from President Biden</span></span>
+<span id="cb18-7"><a href="#cb18-7" aria-hidden="true" tabindex="-1"></a>negative_t <span class="ot">&lt;-</span> <span class="fu">sum</span>(tweet_sentences_data<span class="sc">$</span>meanSentiment <span class="sc">&lt;</span> <span class="dv">0</span>)</span>
+<span id="cb18-8"><a href="#cb18-8" aria-hidden="true" tabindex="-1"></a>neutral_t <span class="ot">&lt;-</span> <span class="fu">sum</span>(tweet_sentences_data<span class="sc">$</span>meanSentiment <span class="sc">==</span> <span class="dv">0</span>)</span>
+<span id="cb18-9"><a href="#cb18-9" aria-hidden="true" tabindex="-1"></a>positive_t <span class="ot">&lt;-</span> <span class="fu">sum</span>(tweet_sentences_data<span class="sc">$</span>meanSentiment <span class="sc">&gt;</span> <span class="dv">0</span>)</span>
+<span id="cb18-10"><a href="#cb18-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-11"><a href="#cb18-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Creating vectors for a dataframe</span></span>
+<span id="cb18-12"><a href="#cb18-12" aria-hidden="true" tabindex="-1"></a>type_tweet <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"Negative"</span>, <span class="st">"Neutral"</span>, <span class="st">"Positive"</span>)</span>
+<span id="cb18-13"><a href="#cb18-13" aria-hidden="true" tabindex="-1"></a>values <span class="ot">&lt;-</span> <span class="fu">c</span>(negative_t, neutral_t, positive_t)</span>
+<span id="cb18-14"><a href="#cb18-14" aria-hidden="true" tabindex="-1"></a>df_sentiment <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(type_tweet, values)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>&nbsp;</p>
-</section><section id="sentiment-analysis-of-bidens-tweets" class="level1"><h1>Sentiment Analysis of Biden’s Tweets</h1>
+</section>
+<section id="sentiment-analysis-of-bidens-tweets" class="level1">
+<h1>Sentiment Analysis of Biden’s Tweets</h1>
 <p>Finally, the results are visualized in a bar chart using the ggplot2 package.</p>
 <div class="cell">
-<details><summary>Code</summary><div class="sourceCode" id="cb19"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">custom_palette</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"#FF6361"</span>,<span class="st">"#9B9B9B"</span>, <span class="st">"#00A693"</span><span class="op">)</span></span>
-<span></span>
-<span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span>data <span class="op">=</span> <span class="va">df_sentiment</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">type_tweet</span>, y <span class="op">=</span> <span class="va">values</span>, fill <span class="op">=</span> <span class="va">type_tweet</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
-<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_bar.html">geom_col</a></span><span class="op">(</span>width <span class="op">=</span> <span class="fl">0.7</span>, position <span class="op">=</span> <span class="st">"dodge"</span><span class="op">)</span> <span class="op">+</span></span>
-<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/scale_manual.html">scale_fill_manual</a></span><span class="op">(</span>values <span class="op">=</span> <span class="va">custom_palette</span><span class="op">)</span> <span class="op">+</span></span>
-<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">labs</a></span><span class="op">(</span>title <span class="op">=</span> <span class="st">"Sentiment Analysis of Biden's Tweets"</span>, x <span class="op">=</span> <span class="cn">NULL</span>, y <span class="op">=</span> <span class="st">"Number of Tweets"</span><span class="op">)</span> <span class="op">+</span></span>
-<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html">theme_minimal</a></span><span class="op">(</span>base_size <span class="op">=</span> <span class="fl">16</span><span class="op">)</span> <span class="op">+</span></span>
-<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/theme.html">theme</a></span><span class="op">(</span>plot.title <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html">element_text</a></span><span class="op">(</span>face <span class="op">=</span> <span class="st">"bold"</span>, size <span class="op">=</span> <span class="fl">20</span><span class="op">)</span>,</span>
-<span>        axis.title <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html">element_text</a></span><span class="op">(</span>size <span class="op">=</span> <span class="fl">18</span><span class="op">)</span>,</span>
-<span>        axis.text <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html">element_text</a></span><span class="op">(</span>size <span class="op">=</span> <span class="fl">14</span><span class="op">)</span>,</span>
-<span>        legend.position <span class="op">=</span> <span class="st">"none"</span>,</span>
-<span>        panel.grid.major.y <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html">element_line</a></span><span class="op">(</span>color <span class="op">=</span> <span class="st">"gray80"</span><span class="op">)</span>,</span>
-<span>        panel.grid.minor <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html">element_blank</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details><div class="cell-output-display">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>custom_palette <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"#FF6361"</span>,<span class="st">"#9B9B9B"</span>, <span class="st">"#00A693"</span>)</span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> df_sentiment, <span class="fu">aes</span>(<span class="at">x =</span> type_tweet, <span class="at">y =</span> values, <span class="at">fill =</span> type_tweet)) <span class="sc">+</span></span>
+<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_col</span>(<span class="at">width =</span> <span class="fl">0.7</span>, <span class="at">position =</span> <span class="st">"dodge"</span>) <span class="sc">+</span></span>
+<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_manual</span>(<span class="at">values =</span> custom_palette) <span class="sc">+</span></span>
+<span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Sentiment Analysis of Biden's Tweets"</span>, <span class="at">x =</span> <span class="cn">NULL</span>, <span class="at">y =</span> <span class="st">"Number of Tweets"</span>) <span class="sc">+</span></span>
+<span id="cb19-7"><a href="#cb19-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">16</span>) <span class="sc">+</span></span>
+<span id="cb19-8"><a href="#cb19-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">plot.title =</span> <span class="fu">element_text</span>(<span class="at">face =</span> <span class="st">"bold"</span>, <span class="at">size =</span> <span class="dv">20</span>),</span>
+<span id="cb19-9"><a href="#cb19-9" aria-hidden="true" tabindex="-1"></a>        <span class="at">axis.title =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">18</span>),</span>
+<span id="cb19-10"><a href="#cb19-10" aria-hidden="true" tabindex="-1"></a>        <span class="at">axis.text =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">14</span>),</span>
+<span id="cb19-11"><a href="#cb19-11" aria-hidden="true" tabindex="-1"></a>        <span class="at">legend.position =</span> <span class="st">"none"</span>,</span>
+<span id="cb19-12"><a href="#cb19-12" aria-hidden="true" tabindex="-1"></a>        <span class="at">panel.grid.major.y =</span> <span class="fu">element_line</span>(<span class="at">color =</span> <span class="st">"gray80"</span>),</span>
+<span id="cb19-13"><a href="#cb19-13" aria-hidden="true" tabindex="-1"></a>        <span class="at">panel.grid.minor =</span> <span class="fu">element_blank</span>())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="index_files/figure-html/fifth_plot-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5"><img src="index_files/figure-html/fifth_plot-1.png" class="img-fluid figure-img" style="width:80.0%"></a></p>
+<figure class="figure">
+<p><a href="index_files/figure-html/fifth_plot-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5"><img src="index_files/figure-html/fifth_plot-1.png" class="img-fluid figure-img" style="width:80.0%"></a></p>
 </figure>
 </div>
 </div>
 </div>
 <p>&nbsp;</p>
-</section><section id="conclusion" class="level1"><h1>Conclusion</h1>
+</section>
+<section id="conclusion" class="level1">
+<h1>Conclusion</h1>
 <hr>
 <p>In conclusion, social media scraping using R and Twitter is a powerful method for collecting and analyzing data from Twitter. The rtweet package in R provides a convenient and efficient way to access Twitter’s REST API and retrieve large amounts of data, such as tweets, retweets, and user information.Using R and rtweet, researchers and data analysts can perform a wide range of analyses on Twitter data, including sentiment analysis, network analysis, and time series analysis. These analyses can provide insights into user behavior, sentiment, and trends on Twitter, which can be useful for a variety of applications, such as market research, political analysis, and social media monitoring.</p>
 <p>&nbsp;</p>
-</section><section id="references" class="level1"><h1>References</h1>
+</section>
+<section id="references" class="level1">
+<h1>References</h1>
 <hr>
 <div class="callout-note callout callout-style-default callout-captioned">
 <div class="callout-header d-flex align-content-center">
@@ -638,7 +720,10 @@ Note
 </div>
 
 
-</section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
     const mode = bsSheetEl.getAttribute("data-mode");
@@ -887,24 +972,25 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
-<footer class="footer"><div class="nav-footer">
+<footer class="footer">
+  <div class="nav-footer">
     <div class="nav-footer-left">
       <ul class="footer-items list-unstyled">
-<li class="nav-item">
+    <li class="nav-item">
     <a class="nav-link" href="https://creativecommons.org/licenses/by/2.0/"><i class="fa-regular fa-copyright" aria-label="copyright"></i> <i class="fa-solid fa-circle-user" aria-label="circle-user"></i> 2023 HCC | J.Roa</a>
   </li>  
 </ul>
-</div>   
+    </div>   
       <div class="nav-footer-center">
         <ul class="footer-items list-unstyled">
-<li class="nav-item">
+    <li class="nav-item">
     <a class="nav-link" href="https://quarto.org"><i class="fa-brands fa-phoenix-framework fa-lg" aria-label="phoenix-framework"></i> Quarto engine</a>
   </li>  
 </ul>
-</div>
+      </div>
     <div class="nav-footer-right">
       <ul class="footer-items list-unstyled">
-<li class="nav-item">
+    <li class="nav-item">
     <a class="nav-link" href="mailto:hertiecodingclub@gmail.com"><i class="fa-solid fa-square-envelope fa-lg" aria-label="square-envelope"></i></a>
   </li>  
     <li class="nav-item">
@@ -923,9 +1009,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     <a class="nav-link" href="https://youtube.com/@hertiecodingclub"><i class="fa-brands fa-youtube fa-lg" aria-label="youtube"></i></a>
   </li>  
 </ul>
-</div>
+    </div>
   </div>
-</footer><script>var lightboxQuarto = GLightbox({"closeEffect":"fade","skin":"lightwidth","descPosition":"left","selector":".lightbox","loop":true,"openEffect":"fade"});</script>
+</footer>
+<script>var lightboxQuarto = GLightbox({"skin":"lightwidth","loop":true,"closeEffect":"fade","openEffect":"fade","selector":".lightbox","descPosition":"left"});</script>
+
 
 
 <script src="../../../site_libs/quarto-html/zenscroll-min.js"></script>

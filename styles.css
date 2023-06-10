@@ -758,6 +758,7 @@ grid-template-columns: repeat(1, 1fr);
 grid-column-gap: var(--spacing-l);
 grid-row-gap: 10px;
 width: 100%;
+transition: transform 0.3s ease;
 border: none; /* add this line */
 }
 
@@ -830,18 +831,22 @@ width: 100%;
   top: 0;
   transform-origin: center;
   transform: scale(1) translateZ(0);
-  transition: 
-  filter 200ms linear,
-  transform 200ms linear;
+  transition: box-shadow 0.3s ease, transform 0.3s ease; /* updated line */     box-shadow: #6694bd 2px 2px 5px 2px;
+}
+
+.card_img:hover .card__heading,
+.card_img:hover .card__background,
+.card_img:hover .card__category{
+  transform: scale(1.05) translateZ(0);
+   transition: transform 0.3s ease;
+   transition: box-shadow 0.5s ease, transform 0.3s ease;
 }
 
 .card_img:hover .card__background{
   transform: scale(1.05) translateZ(0);
+    box-shadow: #6694bd 12px 12px 5px 2px;
 }
 
-.cardg:hover > .card_img:not(:hover) .card__background{
-  filter: brightness(0.5) saturate(0) contrast(1.2) blur(20px);
-}
 
 .card__content{
   left: 0;
@@ -855,6 +860,8 @@ width: 100%;
   color: #FFFFFF;
   font-size: 1vw;
   margin-bottom: var(--spacing-s);
+  transform: scale(1) translateZ(0);
+  transition: transform 0.3s ease;
   text-transform: uppercase;
   text-shadow: 1px 1px 2px rgba(0,0,0,0.5); /* updated text shadow */
 }
@@ -864,8 +871,13 @@ width: 100%;
   font-size: 6.5vw;
   text-shadow: 2px 2px 20px rgba(0,0,0,0.4);
   line-height: 1.4;
+  transform: scale(1) translateZ(0);
+    transition: transform 0.3s ease;
 }
 
+.card__heading:hover {
+  transform: scale(1.1) translateZ(0);
+}
 
 
 @media (min-width: 540px) {
@@ -3629,3 +3641,4 @@ background: repeating-radial-gradient(circle at bottom left, #fedc00 0%, #fedc00
 .btn-webr:active {
     transform: scale(1.15); /* Shrink the button slightly when clicked */
 }
+

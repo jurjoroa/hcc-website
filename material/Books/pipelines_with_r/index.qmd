@@ -1,0 +1,58 @@
+---
+title: '{{< animate fadeInDown "Building reproducible analytical pipelines with R"delay=.6s >}}'
+subtitle: '{{< animate fadeInDown "How using a few ideas from software engineering can help data scientists, analysts and researchers write reliable code."delay=.6s >}}'
+author: ["Jorge Roa"]
+date: "06-10-2023"
+categories: ["R", "Pipeline", "Reproducilibty", "EDA"]
+toc: true
+draft: false
+code-link: true
+comments: false
+title-block-banner: true
+image: images/book.png
+page-layout: full
+include-in-header: meta.html
+filters:
+   - lightbox
+lightbox: 
+  match: auto
+  effect: fade
+  desc-position: left
+  css-class: "lightwidth"
+---
+
+
+<div class="books">
+
+![](images/book.png){fig-align="center" width="300"}
+
+</div>
+
+<hr class="sep-2" />
+
+<h1 class="book_aut"> Author
+  <span style="font-size: 1em;">Bruno Rodrigues</span>
+</h1>
+
+<hr class="sep-2" />
+
+"The aim of this book is to teach you how to use some of the best practices from software engineering and DevOps to make your projects robust, reliable and reproducible. It doesn’t matter if you work alone, in a small or in a big team. It doesn’t matter if your work gets (peer-)reviewed or audited: the techniques presented in this book will make your projects more reliable and save you a lot of frustration!
+
+As someone whose primary job is analysing data, you might think that you are not a developer. It seems as if developers are these genius types that write extremely high-quality code and create these super useful packages. The truth is that you are a developer as well. It’s just that your focus is on writing code for your purposes to get your analyses going instead of writing code for others. Or at least, that’s what you think. Because in others, your teammates are included. Reviewers and auditors are included. Any people that will read your code are included, and there will be people that will read your code. At the very least future you will read your code. By learning how to set up projects and write code in a way that future you will understand and not want to murder you, you will actually work towards improving the quality of your work, naturally."
+
+
+<center>
+<form action="https://raps-with-r.dev">
+<button class="btn-hover color-9" target="_blank">
+Go to Analytical pipelines with R
+</button>
+</form>
+</center>
+
+<hr class="sep-2" />
+
+
+::: {.callout-tip}
+## Cite
+Rodrigues, B. (2023). Building reproducible analytical pipelines with R (1st ed.). https://raps-with-r.dev
+:::

@@ -7,9 +7,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Jorge Roa">
-<meta name="dcterms.date" content="2023-04-10">
+<meta name="dcterms.date" content="2023-06-10">
 
-<title>Web Scraping with R</title>
+<title>Building reproducible analytical pipelines with R</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -86,23 +86,23 @@ gtag('config', 'G-HJEMN0LJY7', { 'anonymize_ip': true});
 <!-- Open Graph / Facebook -->
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://www.hertiecodingclub.com">
-<meta property="og:title" content="Web Scraping with R">
+<meta property="og:title" content="Building reproducible analytical pipelines with R">
 <meta property="og:description" content="Welcome to the Hertie Coding Club! Our goal as a club is to help everyone and between us learn coding skills and show that coding is for everyone, no matter our background.">
 <!-- Primary Meta Tags -->
-<title>Hertie Coding Club - Web Scraping with R </title>
-<meta name="title" content="Hertie Coding Club - Web Scraping with R">
-<meta name="description" content="Web Scraping with R: From Novice to Expert - Your Complete Guide to Web Data Extraction and Analysis using R Programming">
+<title>Hertie Coding Club - Exploratory Data Analysis with R </title>
+<meta name="title" content="Hertie Coding Club - Exploratory Data Analysis with R">
+<meta name="description" content="Unlocking the Power of Exploratory Data Analysis with R: A Step-by-Step Guide to Summarizing, Visualizing, and Testing Hypotheses for Effective Model Development and Data-Driven Insights">
+
 
 <!-- Image Alt Tag -->
-<meta name="image" content="https://www.hertiecodingclub.com/material/books/webscrapping_r/images/rvest.png">
-<meta name="image_alt" content="Web Scraping with R is a comprehensive guide that provides readers with a practical and comprehensive introduction to web scraping using the R programming languag.">
-
+<meta name="image" content="https://www.hertiecodingclub.com/material/books/eda_r/images/book.jpg">
+<meta name="image_alt" content="Learn essential exploratory techniques for summarizing data with R with the Exploratory Data Analysis with R book.">
 
 <!-- Open Graph / Facebook -->
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://www.hertiecodingclub.com/material/books/webscrapping_r/">
-<meta property="og:title" content="Hertie Coding Club - Web Scraping with R">
-<meta property="og:description" content="Web Scraping with R: From Novice to Expert - Your Complete Guide to Web Data Extraction and Analysis using R Programming">
+<meta property="og:url" content="https://www.hertiecodingclub.com/material/books/eda_r/">
+<meta property="og:title" content="Hertie Coding Club - Exploratory Data Analysis with R">
+<meta property="og:description" content="Unlocking the Power of Exploratory Data Analysis with R: A Step-by-Step Guide to Summarizing, Visualizing, and Testing Hypotheses for Effective Model Development and Data-Driven Insights">
 <style>:root{--animate-duration:3s;--animate-delay:2s;--animate-repeat:1}</style>
 <style>:root{--animate-duration:3s;--animate-delay:2s;--animate-repeat:1}</style>
 <style>:root{--animate-duration:3s;--animate-delay:2s;--animate-repeat:1}</style>
@@ -194,11 +194,13 @@ gtag('config', 'G-HJEMN0LJY7', { 'anonymize_ip': true});
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-page">
-      <h1 class="title"><span class="animate__animated animate__fadeInDown animate__delay-.6s" style="display: inline-block;">Web Scraping with R</span></h1>
-            <p class="subtitle lead"><span class="animate__animated animate__fadeInDown animate__delay-.6s" style="display: inline-block;">Web Scraping with R: From Novice to Expert - Your Complete Guide to Web Data Extraction and Analysis using R Programming</span></p>
+      <h1 class="title"><span class="animate__animated animate__fadeInDown animate__delay-.6s" style="display: inline-block;">Building reproducible analytical pipelines with R</span></h1>
+            <p class="subtitle lead"><span class="animate__animated animate__fadeInDown animate__delay-.6s" style="display: inline-block;">How using a few ideas from software engineering can help data scientists, analysts and researchers write reliable code.</span></p>
                                 <div class="quarto-categories">
                 <div class="quarto-category">R</div>
-                <div class="quarto-category">Webscraping</div>
+                <div class="quarto-category">Pipeline</div>
+                <div class="quarto-category">Reproducilibty</div>
+                <div class="quarto-category">EDA</div>
               </div>
                   </div>
   </div>
@@ -216,7 +218,7 @@ gtag('config', 'G-HJEMN0LJY7', { 'anonymize_ip': true});
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">April 10, 2023</p>
+        <p class="date">June 10, 2023</p>
       </div>
     </div>
     
@@ -239,21 +241,21 @@ gtag('config', 'G-HJEMN0LJY7', { 'anonymize_ip': true});
 <div class="books">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="images/rvest.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="images/rvest.png" class="img-fluid figure-img" width="300"></a></p>
+<p><a href="images/book.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="images/book.png" class="img-fluid figure-img" width="300"></a></p>
 </figure>
 </div>
 </div>
 <hr class="sep-2">
 <h1 class="book_aut">
-Author <span style="font-size: 1em;">Steve Pittard</span>
+Author <span style="font-size: 1em;">Bruno Rodrigues</span>
 </h1>
 <hr class="sep-2">
-<p>This book has recent material and methods to learn web scraping with R using the tidyverse. It has a modern approach to getting different data types from the web and introduces API which is one fantastic option to retrieve data. I also like that it contains an example using the web scraped data doing sentiment analysis. Happy reading!</p>
-<p>“Web Scraping with R” is a comprehensive guide that provides readers with a practical and comprehensive introduction to web scraping using the R programming language. The book covers a wide range of topics related to web scraping, from the motivation for web scraping, to the techniques and tools used for web scraping, as well as the challenges that come with the process. The book is divided into several chapters, each of which delves into a particular aspect of web scraping using R.”</p>
+<p>“The aim of this book is to teach you how to use some of the best practices from software engineering and DevOps to make your projects robust, reliable and reproducible. It doesn’t matter if you work alone, in a small or in a big team. It doesn’t matter if your work gets (peer-)reviewed or audited: the techniques presented in this book will make your projects more reliable and save you a lot of frustration!</p>
+<p>As someone whose primary job is analysing data, you might think that you are not a developer. It seems as if developers are these genius types that write extremely high-quality code and create these super useful packages. The truth is that you are a developer as well. It’s just that your focus is on writing code for your purposes to get your analyses going instead of writing code for others. Or at least, that’s what you think. Because in others, your teammates are included. Reviewers and auditors are included. Any people that will read your code are included, and there will be people that will read your code. At the very least future you will read your code. By learning how to set up projects and write code in a way that future you will understand and not want to murder you, you will actually work towards improving the quality of your work, naturally.”</p>
 <center>
-<form action="https://steviep42.github.io/webscraping/book/">
+<form action="https://raps-with-r.dev">
 <button class="btn-hover color-9" target="_blank">
-Go to Webscraping for R
+Go to Analytical pipelines with R
 </button>
 </form>
 </center>
@@ -268,7 +270,7 @@ Cite
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Pittard, S. (2022, February 8). <em>Web scraping with R</em>. Carousel Template for Bootstrap. <a href="https://steviep42.github.io/webscraping/book/?">URL</a></p>
+<p>Rodrigues, B. (2023). Building reproducible analytical pipelines with R (1st ed.). https://raps-with-r.dev</p>
 </div>
 </div>
 
@@ -564,7 +566,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>
   </div>
 </footer>
-<script>var lightboxQuarto = GLightbox({"openEffect":"fade","skin":"lightwidth","closeEffect":"fade","selector":".lightbox","descPosition":"left","loop":true});</script>
+<script>var lightboxQuarto = GLightbox({"skin":"lightwidth","descPosition":"left","closeEffect":"fade","selector":".lightbox","loop":true,"openEffect":"fade"});</script>
 
 
 
