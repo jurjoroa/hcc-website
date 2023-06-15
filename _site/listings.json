@@ -49,6 +49,7 @@
       "/material/Resources/edx/index.html",
       "/material/Resources/kaggle/index.html",
       "/material/Resources/dataquest/index.html",
+      "/material/Certifications/microsoft_ds/index.html",
       "/material/Certifications/google_cert_ds/index.html",
       "/material/Certifications/cisco_pcap/index.html",
       "/material/Certifications/freecodecamp/index.html",
@@ -101,6 +102,7 @@
   {
     "listing": "/material/Certifications/indexp.html",
     "items": [
+      "/material/Certifications/microsoft_ds/index.html",
       "/material/Certifications/google_cert_ds/index.html",
       "/material/Certifications/cisco_pcap/index.html",
       "/material/Certifications/freecodecamp/index.html",

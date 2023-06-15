@@ -873,6 +873,10 @@ width: 100%;
   line-height: 1.4;
   transform: scale(1) translateZ(0);
     transition: transform 0.3s ease;
+    text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.5), 
+               -1px -1px 0px rgba(0, 0, 0, 0.5), 
+               1px -1px 0px rgba(0, 0, 0, 0.5), 
+               -1px 1px 0px rgba(0, 0, 0, 0.5);
 }
 
 .card__heading:hover {
@@ -1727,18 +1731,19 @@ code span.fu {
   font-weight: bold;
 }
 
-
-
-/**/
-
-/**/
-
-/*arrows, parenthesis
-code span.op {
-  color: #7FBCD2;
-  font-weight: bold;
+code {
+  color: #0567E4;
 }
-*/
+
+
+
+/**/
+
+/*
+
+/*arrows, parenthesis*/
+
+code span.ot { color: #C60115; }
 
 /*
 
@@ -1763,7 +1768,7 @@ code span.al {
 
 /*Packages and variables*/
 code span.va {
-  color:  #f54657;
+  color:  #f54657 !important;
   font-weight: bold;
 }
 
@@ -1775,6 +1780,7 @@ code.sourceCode python #text{
 code span.st {
   color: #b9ca4a;
 }
+
 
 
 /*library
@@ -3641,4 +3647,5 @@ background: repeating-radial-gradient(circle at bottom left, #fedc00 0%, #fedc00
 .btn-webr:active {
     transform: scale(1.15); /* Shrink the button slightly when clicked */
 }
+/*Change code variable color (box shadow)*/
 

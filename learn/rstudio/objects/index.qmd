@@ -11,7 +11,7 @@ code-copy: true
 title-block-banner: true
 comments: false
 image: images/objects.png
-include-in-header: meta.html
+include-in-header: meta.html 
 format: html
 engine: knitr
 filters:

@@ -314,14 +314,14 @@ comments: false
       </div>
     </a>
     <a class="card_img" href="../members/team/team.html">
-      <div class="card__background" style="background-image: url(images/home_cards/members_dalle.jpg)"></div>
+      <div class="card__background" style="background-image: url(images/home_cards/people_coding_dalle.png)"></div>
       <div class="card__content">
         <p class="card__category">Members</p>
         <h3 class="card__heading"> Who are we?</h3>
       </div>
     </li>
     <a class="card_img" href="../events/index.html">
-      <div class="card__background" style="background-image:url(images/home_cards/data_dalle.jpg)"></div>
+      <div class="card__background" style="background-image:url(images/home_cards/rome_coding_dalle.png)"></div>
       <div class="card__content">
         <p class="card__category">Events</p>
         <h3 class="card__heading">Our events at </br> the Hertie School</h3>

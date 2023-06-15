@@ -228,7 +228,7 @@
     "href": "learn/rstudio/objects/index.html#times",
     "title": "Understanding R Objects: Naming, Data Structures and Classes in R",
     "section": "Times:",
-    "text": "Times:\n\ntimes <- as.POSIXct(c(\"2022-01-01 10:00:00\", \"2022-01-01 11:00:00\", \"2022-01-01 12:00:00\"))\n\ntimes\n\n[1] \"2022-01-01 10:00:00 CET\" \"2022-01-01 11:00:00 CET\"\n[3] \"2022-01-01 12:00:00 CET\""
+    "text": "Times:\n\ntimes <- as.POSIXct(c(\"2022-01-01 10:00:00\", \"2022-01-01 11:00:00\", \"2022-01-01 12:00:00\"))\n\ntimes\n\n[1] \"2022-01-01 10:00:00 EET\" \"2022-01-01 11:00:00 EET\"\n[3] \"2022-01-01 12:00:00 EET\""
   },
   {
     "objectID": "learn/rstudio/objects/index.html#a-list-with-different-type-of-vectors",
@@ -858,7 +858,7 @@
     "href": "material/Certifications/indexp.html#certifications",
     "title": "Certifications",
     "section": "Certifications",
-    "text": "Certifications\n\n\n   \n     \n     \n       Order By\n       Default\n         \n          Title\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nGoogle Data Scientist Certification\n\n\nFree Certification Courses in Data Science using Python from Google\n\n\n\n\n\n\n\n\n\n\n\n\n\nCISCO Networking Academy\n\n\nPCAP: Programming Essentials in Python. Learn programming from scratch and master Python.\n\n\n\n\n\n\n\n\n\n\n\n\n\nfreeCodeCamp Certifications\n\n\nLearn to code — for free. Build projects. Earn certifications.\n\n\n\n\n\n\n\n\n\n\n\n\n\nIBM Data Analyst certification\n\n\nTry this course for free and get your certification by IBM in Data Analyst\n\n\n\n\n\n\n\nNo matching items"
+    "text": "Certifications\n\n\n   \n     \n     \n       Order By\n       Default\n         \n          Title\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nMicrosoft Data Anaylst Certification\n\n\nFree Courses in Story telling, Data modeling, Data visualization, Decision making, Data analysis in Power BI. You can pay for the certificate at the end if you want.\n\n\n\n\n\n\n\n\n\n\n\n\n\nGoogle Data Scientist Certification\n\n\nFree Certification Courses in Data Science using Python from Google\n\n\n\n\n\n\n\n\n\n\n\n\n\nCISCO Networking Academy\n\n\nPCAP: Programming Essentials in Python. Learn programming from scratch and master Python.\n\n\n\n\n\n\n\n\n\n\n\n\n\nfreeCodeCamp Certifications\n\n\nLearn to code — for free. Build projects. Earn certifications.\n\n\n\n\n\n\n\n\n\n\n\n\n\nIBM Data Analyst certification\n\n\nTry this course for free and get your certification by IBM in Data Analyst\n\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "material/Certifications/freecodecamp/index.html",
@@ -880,5 +880,12 @@
     "title": "CISCO Networking Academy",
     "section": "",
     "text": "This is a course offered by the CISCO Networking Academy. What I really like is that at the end it offers a proof of completion. This certification in combination with other tools it’s a good way to start with Python. Here I leave the summary of the CISCO website and the link as well.\n\n“How great would it be to write your own computer program? Python is a multi-paradigm programming language used by startups and tech giants like Google, Facebook, Netflix, and more. With intuitive, readable syntax, Python is a great first programming language to learn.\nProgramming skills open you up to careers in almost any industry and are required if you want to continue to more advanced and higher paying software development and engineering roles.\nThis course is a great place to start learning Python – no prior programming knowledge required. Completing the course earns you a Statement of Achievement. It is split into two parts preparing you for two certifications:\nPart 1 (PE1: 35 hours) prepares you for PCEP – Certified Entry-Level Python Programmer Certification. Part 2 (PE2: 40 hours) prepares you for PCAP – Certified Associate in Python Programming Certification.”\nYou’ll learn these core skills:\n\nThink algorithmically – how to analyze a problem and translate it for a computer to process.\nDesign, develop, and improve multi-module computer programs.\nAnalyze and model real-life problems in Object-Oriented Programming categories.\nUnderstand a programmer’s work in the software development process.\nLearn how a program is executed in a computer environment.\nGain skills to create and develop your own programming portfolio.\n\n\nCISCO Networking Academy\n\n\n\n\nGo to CISCO PCAP"
+  },
+  {
+    "objectID": "material/Certifications/microsoft_ds/index.html",
+    "href": "material/Certifications/microsoft_ds/index.html",
+    "title": "Microsoft Data Anaylst Certification",
+    "section": "",
+    "text": "“Google Digital Garage is a nonprofit program designed to help people improve their digital skills. It offers free training, courses and certifications via an online learning platform. Google Digital Garage was created by Google in 2015.Discover a range of free learning content designed to help your business or in your career. You can learn by selecting individual modules, or dive right in and take an entire course end-to-end.”\n\nThis certification is entirely free, and it consists of a series of four different courses that will strengthen your skills in data science using Python.\n\n\n\n\n  \n    \n      \n         1.- Python basics\n        \n      \n    \n    \n    \n      \n         2.- Data Science Foundations\n        \n      \n    \n    \n    \n      \n         3.- Data Science with Python\n        \n      \n    \n    \n    \n      \n         4.- ML Crash Course"
   }
 ]

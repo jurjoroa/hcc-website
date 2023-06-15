@@ -10,11 +10,11 @@
   </url>
   <url>
     <loc>https://www.hertiecodingclub.com/learn/rstudio/Multithreading/index.html</loc>
-    <lastmod>2023-06-10T15:31:55.545Z</lastmod>
+    <lastmod>2023-06-11T05:55:26.898Z</lastmod>
   </url>
   <url>
     <loc>https://www.hertiecodingclub.com/learn/rstudio/objects/index.html</loc>
-    <lastmod>2023-06-10T15:31:57.256Z</lastmod>
+    <lastmod>2023-06-11T20:09:06.563Z</lastmod>
   </url>
   <url>
     <loc>https://www.hertiecodingclub.com/learn/rstudio/social_media_scraping/index.html</loc>
@@ -34,7 +34,7 @@
   </url>
   <url>
     <loc>https://www.hertiecodingclub.com/learn/rstudio.html</loc>
-    <lastmod>2023-06-10T15:32:08.275Z</lastmod>
+    <lastmod>2023-06-11T20:08:58.527Z</lastmod>
   </url>
   <url>
     <loc>https://www.hertiecodingclub.com/shiny.html</loc>
@@ -42,7 +42,7 @@
   </url>
   <url>
     <loc>https://www.hertiecodingclub.com/index.html</loc>
-    <lastmod>2023-06-10T15:32:11.336Z</lastmod>
+    <lastmod>2023-06-11T20:39:19.499Z</lastmod>
   </url>
   <url>
     <loc>https://www.hertiecodingclub.com/register/register.html</loc>
@@ -202,7 +202,7 @@
   </url>
   <url>
     <loc>https://www.hertiecodingclub.com/material/index.html</loc>
-    <lastmod>2023-06-10T15:32:38.648Z</lastmod>
+    <lastmod>2023-06-11T20:23:08.709Z</lastmod>
   </url>
   <url>
     <loc>https://www.hertiecodingclub.com/material/Certifications/google_cert_ds/index.html</loc>
@@ -210,7 +210,7 @@
   </url>
   <url>
     <loc>https://www.hertiecodingclub.com/material/Certifications/indexp.html</loc>
-    <lastmod>2023-06-10T15:32:39.818Z</lastmod>
+    <lastmod>2023-06-11T20:39:20.116Z</lastmod>
   </url>
   <url>
     <loc>https://www.hertiecodingclub.com/material/Certifications/freecodecamp/index.html</loc>
@@ -223,5 +223,9 @@
   <url>
     <loc>https://www.hertiecodingclub.com/material/Certifications/cisco_pcap/index.html</loc>
     <lastmod>2023-06-10T15:32:41.545Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.hertiecodingclub.com/material/Certifications/microsoft_ds/index.html</loc>
+    <lastmod>2023-06-11T20:39:17.920Z</lastmod>
   </url>
 </urlset>
