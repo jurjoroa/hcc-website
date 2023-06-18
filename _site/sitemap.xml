@@ -2,230 +2,246 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://www.hertiecodingclub.com/learn/python/pdf_to_text/index.html</loc>
-    <lastmod>2023-06-10T15:31:52.069Z</lastmod>
+    <lastmod>2023-06-18T21:03:43.250Z</lastmod>
   </url>
   <url>
     <loc>https://www.hertiecodingclub.com/learn/rstudio/rstudio101/index.html</loc>
-    <lastmod>2023-06-10T15:31:53.734Z</lastmod>
+    <lastmod>2023-06-18T21:03:44.799Z</lastmod>
   </url>
   <url>
     <loc>https://www.hertiecodingclub.com/learn/rstudio/Multithreading/index.html</loc>
-    <lastmod>2023-06-11T05:55:26.898Z</lastmod>
+    <lastmod>2023-06-18T21:03:46.544Z</lastmod>
   </url>
   <url>
     <loc>https://www.hertiecodingclub.com/learn/rstudio/objects/index.html</loc>
-    <lastmod>2023-06-11T20:09:06.563Z</lastmod>
+    <lastmod>2023-06-18T21:03:48.984Z</lastmod>
   </url>
   <url>
     <loc>https://www.hertiecodingclub.com/learn/rstudio/social_media_scraping/index.html</loc>
-    <lastmod>2023-06-10T15:31:58.681Z</lastmod>
+    <lastmod>2023-06-18T21:03:52.744Z</lastmod>
   </url>
   <url>
     <loc>https://www.hertiecodingclub.com/learn/rstudio/Install-r-studio/index.html</loc>
-    <lastmod>2023-06-10T15:32:03.215Z</lastmod>
+    <lastmod>2023-06-18T21:03:56.627Z</lastmod>
   </url>
   <url>
     <loc>https://www.hertiecodingclub.com/learn/rstudio/stata_to_r/index.html</loc>
-    <lastmod>2023-06-10T15:32:05.547Z</lastmod>
+    <lastmod>2023-06-18T21:04:09.034Z</lastmod>
   </url>
   <url>
     <loc>https://www.hertiecodingclub.com/learn/python.html</loc>
-    <lastmod>2023-06-10T15:32:07.424Z</lastmod>
+    <lastmod>2023-06-18T21:04:11.098Z</lastmod>
   </url>
   <url>
     <loc>https://www.hertiecodingclub.com/learn/rstudio.html</loc>
-    <lastmod>2023-06-11T20:08:58.527Z</lastmod>
+    <lastmod>2023-06-18T21:04:11.783Z</lastmod>
   </url>
   <url>
     <loc>https://www.hertiecodingclub.com/shiny.html</loc>
-    <lastmod>2023-06-10T15:32:09.756Z</lastmod>
+    <lastmod>2023-06-18T21:04:13.202Z</lastmod>
   </url>
   <url>
     <loc>https://www.hertiecodingclub.com/index.html</loc>
-    <lastmod>2023-06-11T20:39:19.499Z</lastmod>
+    <lastmod>2023-06-18T21:04:14.428Z</lastmod>
   </url>
   <url>
     <loc>https://www.hertiecodingclub.com/register/register.html</loc>
-    <lastmod>2023-06-10T15:32:11.811Z</lastmod>
+    <lastmod>2023-06-18T21:04:14.810Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.hertiecodingclub.com/news/index.html</loc>
+    <lastmod>2023-06-18T21:04:15.252Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.hertiecodingclub.com/news/welcome_website/index.html</loc>
+    <lastmod>2023-06-18T21:04:16.529Z</lastmod>
   </url>
   <url>
     <loc>https://www.hertiecodingclub.com/members/statute/statute.html</loc>
-    <lastmod>2023-06-10T15:32:12.435Z</lastmod>
+    <lastmod>2023-06-18T21:04:17.004Z</lastmod>
   </url>
   <url>
     <loc>https://www.hertiecodingclub.com/members/team/team.html</loc>
-    <lastmod>2023-06-10T15:32:12.951Z</lastmod>
+    <lastmod>2023-06-18T21:04:17.429Z</lastmod>
   </url>
   <url>
     <loc>https://www.hertiecodingclub.com/members/team/team/gabriel_zech/gabrielzech.html</loc>
-    <lastmod>2023-06-10T15:32:13.472Z</lastmod>
+    <lastmod>2023-06-18T21:04:17.832Z</lastmod>
   </url>
   <url>
     <loc>https://www.hertiecodingclub.com/members/team/team/jorgeroa.html</loc>
-    <lastmod>2023-06-10T15:32:13.986Z</lastmod>
+    <lastmod>2023-06-18T21:04:18.238Z</lastmod>
   </url>
   <url>
     <loc>https://www.hertiecodingclub.com/members/team/team/lukas_warode/lukaswarode.html</loc>
-    <lastmod>2023-06-10T15:32:14.510Z</lastmod>
+    <lastmod>2023-06-18T21:04:18.655Z</lastmod>
   </url>
   <url>
     <loc>https://www.hertiecodingclub.com/members/team/team/rodrigo_dornelles/rodrigodornelles.html</loc>
-    <lastmod>2023-06-10T15:32:15.054Z</lastmod>
+    <lastmod>2023-06-18T21:04:19.085Z</lastmod>
   </url>
   <url>
     <loc>https://www.hertiecodingclub.com/members/team/team/lukas_lehmann/lukaslehmann.html</loc>
-    <lastmod>2023-06-10T15:32:15.570Z</lastmod>
+    <lastmod>2023-06-18T21:04:19.517Z</lastmod>
   </url>
   <url>
     <loc>https://www.hertiecodingclub.com/members/team/team/jorge_roa/jorgeroa.html</loc>
-    <lastmod>2023-06-10T15:32:16.112Z</lastmod>
+    <lastmod>2023-06-18T21:04:19.940Z</lastmod>
   </url>
   <url>
     <loc>https://www.hertiecodingclub.com/members/team/team/valeria_gracia/valeriagracia.html</loc>
-    <lastmod>2023-06-10T15:32:16.644Z</lastmod>
+    <lastmod>2023-06-18T21:04:20.358Z</lastmod>
   </url>
   <url>
     <loc>https://www.hertiecodingclub.com/members/team/team/carmen_garro/carmengarro.html</loc>
-    <lastmod>2023-06-10T15:32:17.168Z</lastmod>
+    <lastmod>2023-06-18T21:04:20.773Z</lastmod>
   </url>
   <url>
     <loc>https://www.hertiecodingclub.com/members/members/members.html</loc>
-    <lastmod>2023-06-10T15:32:17.692Z</lastmod>
+    <lastmod>2023-06-18T21:04:21.185Z</lastmod>
   </url>
   <url>
     <loc>https://www.hertiecodingclub.com/members/staff/staff/aayran_salman/aayransalman.html</loc>
-    <lastmod>2023-06-10T15:32:18.228Z</lastmod>
+    <lastmod>2023-06-18T21:04:21.625Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.hertiecodingclub.com/about_us/hertieclubs/kinoclub/index.html</loc>
+    <lastmod>2023-06-18T21:04:23.826Z</lastmod>
   </url>
   <url>
     <loc>https://www.hertiecodingclub.com/about_us/index.html</loc>
-    <lastmod>2023-06-10T15:32:18.765Z</lastmod>
+    <lastmod>2023-06-18T21:04:25.989Z</lastmod>
   </url>
   <url>
     <loc>https://www.hertiecodingclub.com/about_us/about.html</loc>
-    <lastmod>2023-06-10T15:32:19.251Z</lastmod>
+    <lastmod>2023-06-18T21:04:26.402Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.hertiecodingclub.com/about_us/hertieclubs.html</loc>
+    <lastmod>2023-06-18T21:04:26.839Z</lastmod>
   </url>
   <url>
     <loc>https://www.hertiecodingclub.com/events/index.html</loc>
-    <lastmod>2023-06-10T15:32:19.886Z</lastmod>
+    <lastmod>2023-06-18T21:04:27.369Z</lastmod>
   </url>
   <url>
     <loc>https://www.hertiecodingclub.com/events/02_wrangle/index.html</loc>
-    <lastmod>2023-06-10T15:32:21.036Z</lastmod>
+    <lastmod>2023-06-18T21:04:28.390Z</lastmod>
   </url>
   <url>
     <loc>https://www.hertiecodingclub.com/events/03_wrangle_part2/index.html</loc>
-    <lastmod>2023-06-10T15:32:22.300Z</lastmod>
+    <lastmod>2023-06-18T21:04:29.328Z</lastmod>
   </url>
   <url>
     <loc>https://www.hertiecodingclub.com/events/05_social_media_analysis/index.html</loc>
-    <lastmod>2023-06-10T15:32:23.338Z</lastmod>
+    <lastmod>2023-06-18T21:04:30.327Z</lastmod>
   </url>
   <url>
     <loc>https://www.hertiecodingclub.com/events/01_kickoff_event/index.html</loc>
-    <lastmod>2023-06-10T15:32:24.500Z</lastmod>
+    <lastmod>2023-06-18T21:04:31.358Z</lastmod>
   </url>
   <url>
     <loc>https://www.hertiecodingclub.com/events/04_environment/index.html</loc>
-    <lastmod>2023-06-10T15:32:25.605Z</lastmod>
+    <lastmod>2023-06-18T21:04:32.346Z</lastmod>
   </url>
   <url>
     <loc>https://www.hertiecodingclub.com/learn.html</loc>
-    <lastmod>2023-06-10T15:32:28.003Z</lastmod>
+    <lastmod>2023-06-18T21:04:34.391Z</lastmod>
   </url>
   <url>
     <loc>https://www.hertiecodingclub.com/material/Resources/kaggle/index.html</loc>
-    <lastmod>2023-06-10T15:32:28.567Z</lastmod>
+    <lastmod>2023-06-18T21:04:34.841Z</lastmod>
   </url>
   <url>
     <loc>https://www.hertiecodingclub.com/material/Resources/indexp.html</loc>
-    <lastmod>2023-06-10T15:32:29.145Z</lastmod>
+    <lastmod>2023-06-18T21:04:35.322Z</lastmod>
   </url>
   <url>
     <loc>https://www.hertiecodingclub.com/material/Resources/edx/index.html</loc>
-    <lastmod>2023-06-10T15:32:29.717Z</lastmod>
+    <lastmod>2023-06-18T21:04:35.776Z</lastmod>
   </url>
   <url>
     <loc>https://www.hertiecodingclub.com/material/Resources/dataquest/index.html</loc>
-    <lastmod>2023-06-10T15:32:30.291Z</lastmod>
+    <lastmod>2023-06-18T21:04:36.249Z</lastmod>
   </url>
   <url>
     <loc>https://www.hertiecodingclub.com/material/Books/art_ds/index.html</loc>
-    <lastmod>2023-06-10T15:32:30.879Z</lastmod>
+    <lastmod>2023-06-18T21:04:36.707Z</lastmod>
   </url>
   <url>
     <loc>https://www.hertiecodingclub.com/material/Books/python_for_ev/index.html</loc>
-    <lastmod>2023-06-10T15:32:31.476Z</lastmod>
+    <lastmod>2023-06-18T21:04:37.159Z</lastmod>
   </url>
   <url>
     <loc>https://www.hertiecodingclub.com/material/Books/data_management/index.html</loc>
-    <lastmod>2023-06-10T15:32:32.053Z</lastmod>
+    <lastmod>2023-06-18T21:04:37.626Z</lastmod>
   </url>
   <url>
     <loc>https://www.hertiecodingclub.com/material/Books/pipelines_with_r/index.html</loc>
-    <lastmod>2023-06-10T15:32:32.641Z</lastmod>
+    <lastmod>2023-06-18T21:04:38.093Z</lastmod>
   </url>
   <url>
     <loc>https://www.hertiecodingclub.com/material/Books/ggplot2/index.html</loc>
-    <lastmod>2023-06-10T15:32:33.206Z</lastmod>
+    <lastmod>2023-06-18T21:04:38.551Z</lastmod>
   </url>
   <url>
     <loc>https://www.hertiecodingclub.com/material/Books/ids_r/index.html</loc>
-    <lastmod>2023-06-10T15:32:33.801Z</lastmod>
+    <lastmod>2023-06-18T21:04:39.014Z</lastmod>
   </url>
   <url>
     <loc>https://www.hertiecodingclub.com/material/Books/indexp.html</loc>
-    <lastmod>2023-06-10T15:32:34.583Z</lastmod>
+    <lastmod>2023-06-18T21:04:39.634Z</lastmod>
   </url>
   <url>
     <loc>https://www.hertiecodingclub.com/material/Books/stories_with_data/index.html</loc>
-    <lastmod>2023-06-10T15:32:35.160Z</lastmod>
+    <lastmod>2023-06-18T21:04:40.089Z</lastmod>
   </url>
   <url>
     <loc>https://www.hertiecodingclub.com/material/Books/eda_r/index.html</loc>
-    <lastmod>2023-06-10T15:32:35.729Z</lastmod>
+    <lastmod>2023-06-18T21:04:40.546Z</lastmod>
   </url>
   <url>
     <loc>https://www.hertiecodingclub.com/material/Books/webscrapping_r/index.html</loc>
-    <lastmod>2023-06-10T15:32:36.295Z</lastmod>
+    <lastmod>2023-06-18T21:04:41.009Z</lastmod>
   </url>
   <url>
     <loc>https://www.hertiecodingclub.com/material/Books/r_for_ds/index.html</loc>
-    <lastmod>2023-06-10T15:32:36.889Z</lastmod>
+    <lastmod>2023-06-18T21:04:41.455Z</lastmod>
   </url>
   <url>
     <loc>https://www.hertiecodingclub.com/material/Books/data_vis/index.html</loc>
-    <lastmod>2023-06-10T15:32:37.462Z</lastmod>
+    <lastmod>2023-06-18T21:04:41.915Z</lastmod>
   </url>
   <url>
     <loc>https://www.hertiecodingclub.com/material/Books/spatial_ds/index.html</loc>
-    <lastmod>2023-06-10T15:32:38.036Z</lastmod>
+    <lastmod>2023-06-18T21:04:42.381Z</lastmod>
   </url>
   <url>
     <loc>https://www.hertiecodingclub.com/material/index.html</loc>
-    <lastmod>2023-06-11T20:23:08.709Z</lastmod>
+    <lastmod>2023-06-18T21:04:42.856Z</lastmod>
   </url>
   <url>
     <loc>https://www.hertiecodingclub.com/material/Certifications/google_cert_ds/index.html</loc>
-    <lastmod>2023-06-10T15:32:39.229Z</lastmod>
+    <lastmod>2023-06-18T21:04:43.310Z</lastmod>
   </url>
   <url>
     <loc>https://www.hertiecodingclub.com/material/Certifications/indexp.html</loc>
-    <lastmod>2023-06-11T20:39:20.116Z</lastmod>
-  </url>
-  <url>
-    <loc>https://www.hertiecodingclub.com/material/Certifications/freecodecamp/index.html</loc>
-    <lastmod>2023-06-10T15:32:40.382Z</lastmod>
-  </url>
-  <url>
-    <loc>https://www.hertiecodingclub.com/material/Certifications/IBM_data_analyst/index.html</loc>
-    <lastmod>2023-06-10T15:32:40.951Z</lastmod>
-  </url>
-  <url>
-    <loc>https://www.hertiecodingclub.com/material/Certifications/cisco_pcap/index.html</loc>
-    <lastmod>2023-06-10T15:32:41.545Z</lastmod>
+    <lastmod>2023-06-18T21:04:43.801Z</lastmod>
   </url>
   <url>
     <loc>https://www.hertiecodingclub.com/material/Certifications/microsoft_ds/index.html</loc>
-    <lastmod>2023-06-11T20:39:17.920Z</lastmod>
+    <lastmod>2023-06-18T21:04:44.248Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.hertiecodingclub.com/material/Certifications/freecodecamp/index.html</loc>
+    <lastmod>2023-06-18T21:04:44.705Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.hertiecodingclub.com/material/Certifications/IBM_data_analyst/index.html</loc>
+    <lastmod>2023-06-18T21:04:45.161Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.hertiecodingclub.com/material/Certifications/cisco_pcap/index.html</loc>
+    <lastmod>2023-06-18T21:04:45.622Z</lastmod>
   </url>
 </urlset>

@@ -1,5 +1,5 @@
 ---
-title: '{{< animate fadeInDown "Microsoft Data Anaylst Certification"delay=.6s >}}'
+title: '{{< animate fadeInDown "Microsoft Data Analyst Certification"delay=.6s >}}'
 subtitle: '{{< animate fadeInDown "Free Courses in Data modeling, Data visualization and others."delay=.6s >}}'
 author: ["Jorge Roa"]
 date: "06-11-2023"
@@ -21,19 +21,24 @@ lightbox:
   css-class: "lightwidth"
 ---
 
-![](images/Microsoft_logo.png){width="197" fig-align="center"}
+![](images/Microsoft_logo.png){width="500" fig-align="center"}
 
+![](images/microsoft_page.png){fig-align="center"}
 
 
 </br>
 
 <hr class="sep-2" />
 
-"Google Digital Garage is a nonprofit program designed to help people improve their digital skills. It offers free training, courses and certifications via an online learning platform. Google Digital Garage was created by Google in 2015.Discover a range of free learning content designed to help your business or in your career. You can learn by selecting individual modules, or dive right in and take an entire course end-to-end."
+"Become a Microsoft Power BI Data Analyst and demonstrate your skills in data analysis and visualization.
+
+The Microsoft Power BI Data Analyst certification is a great way to show employers that you have the skills they need to help them make better decisions with data. The certification requires passing the PL-300 exam, which measures your ability to prepare data, model data, visualize and analyze data, and deploy and maintain assets.
+
+The courses on Microsoft Learn are free, so you can start learning today. The learning paths cover the skills measured by the exam, and they include interactive exercises, videos, and practice exams."
 
 </br>
 
-This certification is entirely free, and it consists of a series of four different courses that will strengthen your skills in data science using Python.
+The courses on Microsoft Learn are free, but the certification exam costs $165 USD. The exam is available in multiple languages, and you can take it at a proctored testing center or online.
 
 <hr class="sep-2" />
 
@@ -68,32 +73,47 @@ This certification is entirely free, and it consists of a series of four differe
 <div class="container">
   <div class="grid-container">
     <div>
-      <form action="https://learndigital.withgoogle.com/digitalunlocked/course/learn-python-basics-for-data-analysis">
-        <button class="btn-hover color-9" target="_blank"> 1.- Python basics
+      <form action="https://learn.microsoft.com/en-us/training/paths/data-analytics-microsoft/">
+        <button class="btn-hover color-9" target="_blank"> 1.- Microsoft data analytics
         </button>
       </form>
     </div>
     
     <div>
-      <form action="https://learndigital.withgoogle.com/digitalunlocked/course/data-science-foundations">
-        <button class="btn-hover color-9" target="_blank"> 2.- Data Science Foundations
+      <form action="https://learn.microsoft.com/en-us/training/paths/prepare-data-power-bi/">
+        <button class="btn-hover color-9" target="_blank"> 2.- Prepare data for analysis
         </button>
       </form>
     </div>
     
     <div>
-      <form action="https://learndigital.withgoogle.com/digitalunlocked/course/data-science-with-python">
-        <button class="btn-hover color-9" target="_blank"> 3.- Data Science with Python
+      <form action="https://learn.microsoft.com/en-us/training/paths/model-power-bi/">
+        <button class="btn-hover color-9" target="_blank"> 3.- Model data in Power BI
         </button>
       </form>
     </div>
     
     <div>
-      <form action="https://learndigital.withgoogle.com/digitalunlocked/course/machine-learning-crash-course">
-        <button class="btn-hover color-9" target="_blank"> 4.- ML Crash Course
+      <form action="https://learn.microsoft.com/en-us/training/paths/visualize-data-power-bi/">
+        <button class="btn-hover color-9" target="_blank"> 4.- Visualize data in Power BI
         </button>
       </form>
     </div>
+    
+    <div>
+      <form action="https://learn.microsoft.com/en-us/training/paths/perform-analytics-power-bi/">
+        <button class="btn-hover color-9" target="_blank"> 5.- Data analysis in Power BI
+        </button>
+      </form>
+    </div>
+    
+    <div>
+      <form action="https://learn.microsoft.com/en-us/training/paths/manage-workspaces-datasets-power-bi/">
+        <button class="btn-hover color-9" target="_blank"> 6.- Manage workspaces in Power BI
+        </button>
+      </form>
+    </div>
+    
   </div>
 </div>
 

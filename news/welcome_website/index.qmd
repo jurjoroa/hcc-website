@@ -1,0 +1,74 @@
+---
+toc: true
+author: ["Jorge Roa"]
+categories: [Website]
+date: '2023-06-24'
+title: '{{< animate fadeInDown "Welcome to our new website: the Hertie Coding Club"delay=.6s >}}'
+subtitle: '{{< animate fadeInDown "Tutorials, books, certifications, scripts, and all you need to start your journey in the coding world"delay=.6s >}}'
+image: web.png
+draft: false
+title-block-banner: true
+code-link: true
+include-in-header: meta.html
+filters:
+   - lightbox
+lightbox: 
+  match: auto
+  effect: fade
+  desc-position: left
+  css-class: "lightwidth"
+---
+
+------------------------------------------------------------------------
+
+
+
+![](logo_long_hcc_gray.png)
+
+
+![](website.png)
+
+------------------------------------------------------------------------
+
+
+# Hertie Coding Club Launches New Website
+
+<center>
+
+{{< li tqywkdcz trigger=loop speed=0.5 >}}
+
+</center>
+
+ 
+
+The Hertie Coding Club is excited to announce the launch of our new website! The website is a comprehensive resource for anyone interested in learning to code, with information about our club, upcoming events, and helpful materials.
+
+ 
+
+## What we offer
+
+The new website features a number of amazing features, including:
+
+- A user-friendly interface.
+- A comprehensive overview of our club's mission and activities.
+- A up-to-date listing of upcoming events and workshops.
+- A section on resources, with links to helpful tutorials, books and certifications. 
+
+ 
+
+## What You Can Do
+
+The new website allows you to:
+
+- Code in R within our website.
+- Find out about upcoming events and workshops
+- Access helpful materials, such as tutorials, documentation, and datasets
+
+We hope you enjoy the new website!
+
+We are excited to share the new website with the Hertie community and hope that you will find it a valuable resource. The website is a work in progress, and we will be adding new features and content in the future. If you have any feedback or suggestions, please do not hesitate to contact us.
+
+Thank you for your continued support of the Hertie Coding Club!
+
+Happy coding!
+

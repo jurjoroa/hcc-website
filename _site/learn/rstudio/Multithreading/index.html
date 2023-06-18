@@ -1,15 +1,12 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
-
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.2.280">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-
 <meta name="author" content="Jorge Roa">
 <meta name="author" content="Fernando Alarid-Escudero">
 <meta name="dcterms.date" content="2022-07-28">
-
 <title>Enable Multithread with data.table in Mac/Intel chips</title>
 <style>
 code{white-space: pre-wrap;}
@@ -88,7 +85,6 @@ code span.vs { color: #4070a0; } /* VerbatimString */
 code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
-
 <script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="../../../site_libs/clipboard/clipboard.min.js"></script>
 <script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
@@ -109,8 +105,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <link href="../../../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <link href="../../../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
 <link href="../../../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
-<link href="../../../site_libs/quarto-contrib/animate-4.1.1/animate.min.css" rel="stylesheet">
-<script id="quarto-search-options" type="application/json">{
+<link href="../../../site_libs/quarto-contrib/animate-4.1.1/animate.min.css" rel="stylesheet"><script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
   "collapse-after": 3,
@@ -128,35 +123,24 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     "search-detached-cancel-button-title": "Cancel",
     "search-submit-button-title": "Submit"
   }
-}</script>
-<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-HJEMN0LJY7"></script>
-
-<script type="text/javascript">
+}</script><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-HJEMN0LJY7"></script><script type="text/javascript">
 
 window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 gtag('config', 'G-HJEMN0LJY7', { 'anonymize_ip': true});
-</script>
-<style>html{ scroll-behavior: smooth; }</style>
-<!-- Primary Meta Tags -->
-<title>Hertie Coding Club - Everybody can learn to code</title>
+</script><style>html{ scroll-behavior: smooth; }</style>
+<!-- Primary Meta Tags --><title>Hertie Coding Club - Everybody can learn to code</title>
 <meta name="title" content="Hertie Coding Club - Everybody can learn to code">
 <meta name="description" content="Welcome to the Hertie Coding Club! Our goal as a club is to help everyone and between us learn coding skills and show that coding is for everyone, no matter our background.">
-
-<!-- Open Graph / Facebook -->
-<meta property="og:type" content="website">
+<!-- Open Graph / Facebook --><meta property="og:type" content="website">
 <meta property="og:url" content="https://www.hertiecodingclub.com">
 <meta property="og:title" content="Enable Multithread with data.table in Mac/Intel chips">
 <meta property="og:description" content="Welcome to the Hertie Coding Club! Our goal as a club is to help everyone and between us learn coding skills and show that coding is for everyone, no matter our background.">
-
-<!-- Primary Meta Tags -->
-<title>Hertie Coding Club - Enable Multithread with data.table in Mac/Intel chips</title>
+<!-- Primary Meta Tags --><title>Hertie Coding Club - Enable Multithread with data.table in Mac/Intel chips</title>
 <meta name="title" content="Hertie Coding Club - Enable Multithread with data.table in Mac/Intel chips">
 <meta name="description" content="Multithreading offers faster and more efficient data processing, allowing for quicker analysis of complex datasets.">
-
-<!-- Open Graph / Facebook -->
-<meta property="og:type" content="website">
+<!-- Open Graph / Facebook --><meta property="og:type" content="website">
 <meta property="og:url" content="https://www.hertiecodingclub.com/learn/rstudio/rstudio/rstudio/installrstudio">
 <meta property="og:title" content="Hertie Coding Club - Enable Multithread with data.table in Mac/Intel chips">
 <meta property="og:description" content="Multithreading offers faster and more efficient data processing, allowing for quicker analysis of complex datasets.">
@@ -167,28 +151,22 @@ gtag('config', 'G-HJEMN0LJY7', { 'anonymize_ip': true});
 <style>:root{--animate-duration:3s;--animate-delay:2s;--animate-repeat:1}</style>
 <style>:root{--animate-duration:3s;--animate-delay:2s;--animate-repeat:1}</style>
 <style>:root{--animate-duration:3s;--animate-delay:2s;--animate-repeat:1}</style>
-
-
 <link rel="stylesheet" href="../../../styles.css">
 </head>
-
 <body class="nav-fixed">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg navbar-dark ">
-      <div class="navbar-container container-fluid">
+  <header id="quarto-header" class="headroom fixed-top"><nav class="navbar navbar-expand-lg navbar-dark "><div class="navbar-container container-fluid">
       <div class="navbar-brand-container">
     <a href="../../../index.html" class="navbar-brand navbar-brand-logo">
-    <img src="../../../images/hcc_final.png" alt="" class="navbar-logo">
-    </a>
+    <img src="../../../images/hcc_final.png" alt="" class="navbar-logo"></a>
   </div>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
-  <li class="nav-item">
+<li class="nav-item">
     <a class="nav-link" href="../../../index.html"><i class="bi bi-house-fill" role="img">
 </i> 
  <span class="menu-text">Home</span></a>
@@ -197,8 +175,8 @@ gtag('config', 'G-HJEMN0LJY7', { 'anonymize_ip': true});
     <a class="nav-link dropdown-toggle" href="#" id="nav-menu-fa-solid-people-group--members" role="button" data-bs-toggle="dropdown" aria-expanded="false">
  <span class="menu-text"><i class="fa-solid fa-people-group" aria-label="people-group"></i> Members</span>
     </a>
-    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-fa-solid-people-group--members">    
-        <li>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-fa-solid-people-group--members">
+<li>
     <a class="dropdown-item" href="../../../members/team/team.html">
  <span class="dropdown-text"><i class="fa-solid fa-person-chalkboard" aria-label="person-chalkboard"></i> Team</span></a>
   </li>  
@@ -207,15 +185,15 @@ gtag('config', 'G-HJEMN0LJY7', { 'anonymize_ip': true});
  <span class="dropdown-text"><i class="fa-solid fa-scale-balanced" aria-label="scale-balanced"></i> Club Statutes</span></a>
   </li>  
     </ul>
-  </li>
+</li>
   <li class="nav-item dropdown ">
     <a class="nav-link dropdown-toggle" href="#" id="nav-menu-learn" role="button" data-bs-toggle="dropdown" aria-expanded="false">
       <i class="bi bi-mortarboard-fill" role="img">
 </i> 
  <span class="menu-text">Learn</span>
     </a>
-    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-learn">    
-        <li>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-learn">
+<li>
     <a class="dropdown-item" href="../../../learn/rstudio.html">
  <span class="dropdown-text"><i class="fa-brands fa-r-project" aria-label="r-project"></i> language</span></a>
   </li>  
@@ -224,7 +202,7 @@ gtag('config', 'G-HJEMN0LJY7', { 'anonymize_ip': true});
  <span class="dropdown-text"><i class="fa-brands fa-python" aria-label="python"></i> Python</span></a>
   </li>  
     </ul>
-  </li>
+</li>
   <li class="nav-item">
     <a class="nav-link" href="../../../material/index.html">
  <span class="menu-text"><i class="fa-solid fa-meteor" aria-label="meteor"></i> Material</span></a>
@@ -235,21 +213,32 @@ gtag('config', 'G-HJEMN0LJY7', { 'anonymize_ip': true});
  <span class="menu-text">Events</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../../about_us/index.html">
- <span class="menu-text"><i class="fa-solid fa-laptop-code" aria-label="laptop-code"></i> About us</span></a>
+    <a class="nav-link" href="../../../news/index.html">
+ <span class="menu-text"><i class="fa-regular fa-newspaper" aria-label="newspaper"></i> News</span></a>
   </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-fa-solid-laptop-code--about-us" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text"><i class="fa-solid fa-laptop-code" aria-label="laptop-code"></i> About us</span>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-fa-solid-laptop-code--about-us">
+<li>
+    <a class="dropdown-item" href="../../../about_us/index.html">
+ <span class="dropdown-text"><i class="fa-solid fa-school-flag" aria-label="school-flag"></i> Who are we</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../about_us/hertieclubs.html">
+ <span class="dropdown-text"><i class="fa-solid fa-circle-nodes" aria-label="circle-nodes"></i> Hertie Clubs</span></a>
+  </li>  
+    </ul>
+</li>
 </ul>
-              <div class="quarto-toggle-container">
+<div class="quarto-toggle-container">
                   <a href="" class="quarto-color-scheme-toggle nav-link" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
               </div>
               <div id="quarto-search" class="" title="Search"></div>
           </div> <!-- /navcollapse -->
       </div> <!-- /container-fluid -->
-    </nav>
-</header>
-<!-- content -->
-<header id="title-block-header" class="quarto-title-block default page-columns page-full">
-  <div class="quarto-title-banner page-columns page-full">
+    </nav></header><!-- content --><header id="title-block-header" class="quarto-title-block default page-columns page-full"><div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
       <h1 class="title"><span class="animate__animated animate__fadeInDown animate__delay-.6s" style="display: inline-block;">Enable Multithread with data.table in Mac/Intel chips</span></h1>
             <p class="subtitle lead"><span class="animate__animated animate__fadeInDown animate__delay-.6s" style="display: inline-block;">Multithreading offers faster and more efficient data processing, allowing for quicker analysis of complex datasets.</span></p>
@@ -286,41 +275,37 @@ gtag('config', 'G-HJEMN0LJY7', { 'anonymize_ip': true});
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
+        <nav id="TOC" role="doc-toc" class="toc-active"><h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#prerequisites" id="toc-prerequisites" class="nav-link active" data-scroll-target="#prerequisites">Prerequisites</a></li>
+<li><a href="#prerequisites" id="toc-prerequisites" class="nav-link active" data-scroll-target="#prerequisites">Prerequisites</a></li>
   <li><a href="#first-step" id="toc-first-step" class="nav-link" data-scroll-target="#first-step">First Step</a></li>
   <li><a href="#second-step-install-homebrew" id="toc-second-step-install-homebrew" class="nav-link" data-scroll-target="#second-step-install-homebrew">Second Step (Install homebrew)</a></li>
   <li><a href="#third-step-check-package-and-change-paths" id="toc-third-step-check-package-and-change-paths" class="nav-link" data-scroll-target="#third-step-check-package-and-change-paths">Third Step (Check package and change paths)</a></li>
-  <li><a href="#fourth-step-installing-required-packages-libopenmp-libopenmpt-llvm-cask-ggc" id="toc-fourth-step-installing-required-packages-libopenmp-libopenmpt-llvm-cask-ggc" class="nav-link" data-scroll-target="#fourth-step-installing-required-packages-libopenmp-libopenmpt-llvm-cask-ggc">Fourth Step: Installing required packages (libopenmp, libopenmpt, llvm, cask, ggc)</a>
+  <li>
+<a href="#fourth-step-installing-required-packages-libopenmp-libopenmpt-llvm-cask-ggc" id="toc-fourth-step-installing-required-packages-libopenmp-libopenmpt-llvm-cask-ggc" class="nav-link" data-scroll-target="#fourth-step-installing-required-packages-libopenmp-libopenmpt-llvm-cask-ggc">Fourth Step: Installing required packages (libopenmp, libopenmpt, llvm, cask, ggc)</a>
   <ul class="collapse">
-  <li><a href="#install-llvm" id="toc-install-llvm" class="nav-link" data-scroll-target="#install-llvm">Install llvm</a></li>
+<li><a href="#install-llvm" id="toc-install-llvm" class="nav-link" data-scroll-target="#install-llvm">Install llvm</a></li>
   <li><a href="#install-libopenmp" id="toc-install-libopenmp" class="nav-link" data-scroll-target="#install-libopenmp">Install libopenmp</a></li>
   <li><a href="#install-libopenmpt" id="toc-install-libopenmpt" class="nav-link" data-scroll-target="#install-libopenmpt">Install libopenmpt</a></li>
   <li><a href="#install-gcc" id="toc-install-gcc" class="nav-link" data-scroll-target="#install-gcc">Install gcc</a></li>
   <li><a href="#install-cask-openmtp" id="toc-install-cask-openmtp" class="nav-link" data-scroll-target="#install-cask-openmtp">Install –cask openmtp</a></li>
-  </ul></li>
-  <li><a href="#fifth-step-create-.r-folder-and-makevars-file." id="toc-fifth-step-create-.r-folder-and-makevars-file." class="nav-link" data-scroll-target="#fifth-step-create-.r-folder-and-makevars-file.">Fifth Step: create .R folder and Makevars file.</a></li>
-  <li><a href="#sixth-step-create-our-paths-in-our-makevars-file." id="toc-sixth-step-create-our-paths-in-our-makevars-file." class="nav-link" data-scroll-target="#sixth-step-create-our-paths-in-our-makevars-file.">Sixth Step: Create our paths in our Makevars file.</a>
-  <ul class="collapse">
-  <li><a href="#apple-silicon" id="toc-apple-silicon" class="nav-link" data-scroll-target="#apple-silicon">Apple Silicon</a></li>
-  <li><a href="#intel" id="toc-intel" class="nav-link" data-scroll-target="#intel">Intel</a></li>
-  </ul></li>
-  <li><a href="#seventh-step-reinstall-data.table-and-set-your-cores." id="toc-seventh-step-reinstall-data.table-and-set-your-cores." class="nav-link" data-scroll-target="#seventh-step-reinstall-data.table-and-set-your-cores.">Seventh Step: Reinstall data.table and set your cores.</a></li>
   </ul>
-</nav>
+</li>
+  <li><a href="#fifth-step-create-.r-folder-and-makevars-file." id="toc-fifth-step-create-.r-folder-and-makevars-file." class="nav-link" data-scroll-target="#fifth-step-create-.r-folder-and-makevars-file.">Fifth Step: create .R folder and Makevars file.</a></li>
+  <li>
+<a href="#sixth-step-create-our-paths-in-our-makevars-file." id="toc-sixth-step-create-our-paths-in-our-makevars-file." class="nav-link" data-scroll-target="#sixth-step-create-our-paths-in-our-makevars-file.">Sixth Step: Create our paths in our Makevars file.</a>
+  <ul class="collapse">
+<li><a href="#apple-silicon" id="toc-apple-silicon" class="nav-link" data-scroll-target="#apple-silicon">Apple Silicon</a></li>
+  <li><a href="#intel" id="toc-intel" class="nav-link" data-scroll-target="#intel">Intel</a></li>
+  </ul>
+</li>
+  <li><a href="#seventh-step-reinstall-data.table-and-set-your-cores." id="toc-seventh-step-reinstall-data.table-and-set-your-cores." class="nav-link" data-scroll-target="#seventh-step-reinstall-data.table-and-set-your-cores.">Seventh Step: Reinstall data.table and set your cores.</a></li>
+  </ul></nav>
     </div>
 <!-- main -->
-<main class="content quarto-banner-title-block" id="quarto-document-content">
-
-
-
-
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/appleintel.png" class="img-fluid figure-img"></p>
+<main class="content quarto-banner-title-block" id="quarto-document-content"><div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="images/appleintel.png" class="img-fluid figure-img"></p>
 </figure>
 </div>
 <p>This document shows you how we can enable the use of multiple cores on Macs with Intel/Apple silicon chips (M1 and M2).</p>
@@ -339,15 +324,11 @@ gtag('config', 'G-HJEMN0LJY7', { 'anonymize_ip': true});
 </div>
 </div>
 <p>As you can see, OpenMP support is needed to use multiple cores in Macs. Therefore, we must install those packages through the terminal and set the required paths to run OpenMP.</p>
-<section id="prerequisites" class="level1">
-<h1>Prerequisites</h1>
+<section id="prerequisites" class="level1"><h1>Prerequisites</h1>
 <ol type="1">
 <li><p>Have the latest version of <i class="fa-brands fa-r-project" aria-label="r-project"></i> studio.</p></li>
 <li><p>Have the latest version of Mac Ventura</p></li>
-</ol>
-</section>
-<section id="first-step" class="level1">
-<h1>First Step</h1>
+</ol></section><section id="first-step" class="level1"><h1>First Step</h1>
 <ol type="1">
 <li>Open your terminal. It should see like this:</li>
 </ol>
@@ -360,19 +341,15 @@ gtag('config', 'G-HJEMN0LJY7', { 'anonymize_ip': true});
 <div class="quarto-layout-row quarto-layout-valign-top">
 <div class="quarto-layout-cell" style="flex-basis: 100.0%;justify-content: center;">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/firststep.png" class="img-fluid figure-img"></p>
+<figure class="figure"><p><img src="images/firststep.png" class="img-fluid figure-img"></p>
 </figure>
 </div>
 </div>
 </div>
 </div>
-</section>
-<section id="second-step-install-homebrew" class="level1">
-<h1>Second Step (Install homebrew)</h1>
+</section><section id="second-step-install-homebrew" class="level1"><h1>Second Step (Install homebrew)</h1>
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/homebrew.png" class="img-fluid figure-img" width="400"></p>
+<figure class="figure"><p><img src="images/homebrew.png" class="img-fluid figure-img" width="400"></p>
 </figure>
 </div>
 <p><a href="https://brew.sh/"></a> is an open-source software package management system that makes installing applications on Linux and Apple’s macOS operating systems easier. Homebrew will help us install <strong><code>OpenMP</code></strong>. Open Multi-Processing allows us to run applications in parallel to efficient processes. In this case, we want to employ the multiple cores that Mac has for <strong><code>data.table</code></strong> wrangling.</p>
@@ -384,9 +361,7 @@ gtag('config', 'G-HJEMN0LJY7', { 'anonymize_ip': true});
 </div>
 <p>To install <strong><code>homebrew</code></strong>, you need to enter your password and press <strong><code>ENTER</code></strong>. After installing homebrew, you should see in your terminal this screen:</p>
 <p><img src="images/secondstep_home.png" class="img-fluid"></p>
-</section>
-<section id="third-step-check-package-and-change-paths" class="level1">
-<h1>Third Step (Check package and change paths)</h1>
+</section><section id="third-step-check-package-and-change-paths" class="level1"><h1>Third Step (Check package and change paths)</h1>
 <p>We need to be sure that homebrew was installed in the correct path. For this, we can type in the terminal:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">brew</span> help</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -397,18 +372,16 @@ gtag('config', 'G-HJEMN0LJY7', { 'anonymize_ip': true});
 <col style="width: 48%">
 <col style="width: 51%">
 </colgroup>
-<thead>
-<tr class="header">
-<th style="text-align: center;"><img src="images/Apple-Silicon.png" class="img-fluid" width="30"> chips</th>
-<th style="text-align: center;"><img src="images/intel.png" width="80" height="30"> chips</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
+<thead><tr class="header">
+<th style="text-align: center;">
+<img src="images/Apple-Silicon.png" class="img-fluid" width="30"> chips</th>
+<th style="text-align: center;">
+<img src="images/intel.png" width="80" height="30"> chips</th>
+</tr></thead>
+<tbody><tr class="odd">
 <td style="text-align: center;"><strong><code>export PATH=/opt/homebrew/bin:$PATH</code></strong></td>
 <td style="text-align: center;"><strong><code>export PATH=/usr/local/opt/homebrew/bin:$PATH</code></strong></td>
-</tr>
-</tbody>
+</tr></tbody>
 </table>
 <p>With these changes, we can rerun homebrew help, and this information should appear in our terminal.</p>
 <div class="quarto-layout-panel">
@@ -423,11 +396,8 @@ gtag('config', 'G-HJEMN0LJY7', { 'anonymize_ip': true});
 </div>
 </div>
 </div>
-</section>
-<section id="fourth-step-installing-required-packages-libopenmp-libopenmpt-llvm-cask-ggc" class="level1">
-<h1>Fourth Step: Installing required packages (libopenmp, libopenmpt, llvm, cask, ggc)</h1>
-<section id="install-llvm" class="level2">
-<h2 class="anchored" data-anchor-id="install-llvm">Install llvm</h2>
+</section><section id="fourth-step-installing-required-packages-libopenmp-libopenmpt-llvm-cask-ggc" class="level1"><h1>Fourth Step: Installing required packages (libopenmp, libopenmpt, llvm, cask, ggc)</h1>
+<section id="install-llvm" class="level2"><h2 class="anchored" data-anchor-id="install-llvm">Install llvm</h2>
 <p>We need to install the llvm package to access the clang compiler, which helps us to set multithreading.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">brew</span> install llvm</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -457,64 +427,49 @@ gtag('config', 'G-HJEMN0LJY7', { 'anonymize_ip': true});
 </div>
 </div>
 </div>
-</section>
-<section id="install-libopenmp" class="level2">
-<h2 class="anchored" data-anchor-id="install-libopenmp">Install libopenmp</h2>
+</section><section id="install-libopenmp" class="level2"><h2 class="anchored" data-anchor-id="install-libopenmp">Install libopenmp</h2>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">brew</span> install libopenmp</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>This is the screen that you should see once the installation is done.</p>
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/libopenmp.png" class="img-fluid figure-img"></p>
+<figure class="figure"><p><img src="images/libopenmp.png" class="img-fluid figure-img"></p>
 </figure>
 </div>
-</section>
-<section id="install-libopenmpt" class="level2">
-<h2 class="anchored" data-anchor-id="install-libopenmpt">Install libopenmpt</h2>
+</section><section id="install-libopenmpt" class="level2"><h2 class="anchored" data-anchor-id="install-libopenmpt">Install libopenmpt</h2>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="ex">brew</span> install libopenmpt</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>This is the screen that you should see once the installation is done.</p>
 <p><img src="images/libopenmpt.png" class="img-fluid" data-fig-align="center"> :::</p>
-</section>
-<section id="install-gcc" class="level2">
-<h2 class="anchored" data-anchor-id="install-gcc">Install gcc</h2>
+</section><section id="install-gcc" class="level2"><h2 class="anchored" data-anchor-id="install-gcc">Install gcc</h2>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="ex">brew</span> install gcc</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>This is the screen that you should see once the installation is done.</p>
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/ggc.png" class="img-fluid figure-img"></p>
+<figure class="figure"><p><img src="images/ggc.png" class="img-fluid figure-img"></p>
 </figure>
 </div>
-</section>
-<section id="install-cask-openmtp" class="level2">
-<h2 class="anchored" data-anchor-id="install-cask-openmtp">Install –cask openmtp</h2>
+</section><section id="install-cask-openmtp" class="level2"><h2 class="anchored" data-anchor-id="install-cask-openmtp">Install –cask openmtp</h2>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="ex">brew</span> install <span class="at">--cask</span> openmtp</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>This is the screen that you should see once the installation is done.</p>
 <p><img src="images/cask.png" class="img-fluid" data-fig-align="center">}</p>
-</section>
-</section>
-<section id="fifth-step-create-.r-folder-and-makevars-file." class="level1">
-<h1>Fifth Step: create .R folder and Makevars file.</h1>
+</section></section><section id="fifth-step-create-.r-folder-and-makevars-file." class="level1"><h1>Fifth Step: create .R folder and Makevars file.</h1>
 <p>We need to create a text file called <strong><code>Makevars</code></strong>. This file is necessary because we need to set a file with multiple paths where we will retrieve the various packages we have installed in our R environment. We need to open a new script or open our terminal to execute the next commands:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">dir.create</span>(<span class="st">'~/.R'</span>)</span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="fu">file.create</span>(<span class="st">'~/.R/Makevars'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/files2.html">dir.create</a></span><span class="op">(</span><span class="st">'~/.R'</span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/files.html">file.create</a></span><span class="op">(</span><span class="st">'~/.R/Makevars'</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p><strong><code>dir.create</code></strong> creates a hidden folder in our environment, and <strong><code>file.create</code></strong> creates a text file in the folder we just created. This folder is located in our usrs folder. You can access your user folder and your hidden folders with the next shortcuts:</p>
 <table class="table">
-<thead>
-<tr class="header">
+<thead><tr class="header">
 <th style="text-align: center;">Open Finder</th>
 <th style="text-align: center;">Shortcuts</th>
-</tr>
-</thead>
+</tr></thead>
 <tbody>
 <tr class="odd">
 <td style="text-align: center;">Go to your home folder:</td>
@@ -539,12 +494,9 @@ gtag('config', 'G-HJEMN0LJY7', { 'anonymize_ip': true});
 </div>
 </div>
 </div>
-</section>
-<section id="sixth-step-create-our-paths-in-our-makevars-file." class="level1">
-<h1>Sixth Step: Create our paths in our Makevars file.</h1>
+</section><section id="sixth-step-create-our-paths-in-our-makevars-file." class="level1"><h1>Sixth Step: Create our paths in our Makevars file.</h1>
 <p>We need to open our Makevars file with TextEdit, and we must paste the following paths according to our chip (Apple Silicon or Intel)</p>
-<section id="apple-silicon" class="level2">
-<h2 class="anchored" data-anchor-id="apple-silicon">Apple Silicon</h2>
+<section id="apple-silicon" class="level2"><h2 class="anchored" data-anchor-id="apple-silicon">Apple Silicon</h2>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="va">HOMEBREW_LOC</span><span class="op">=</span>/opt/homebrew </span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="va">LLVM_LOC</span><span class="op">=</span><span class="va">$(</span><span class="ex">HOMEBREW_LOC</span><span class="va">)</span>/opt/llvm </span>
@@ -556,13 +508,10 @@ gtag('config', 'G-HJEMN0LJY7', { 'anonymize_ip': true});
 <span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a><span class="va">CPPFLAGS</span><span class="op">=</span>-I<span class="va">$(</span><span class="ex">HOMEBREW_LOC</span><span class="va">)</span>/opt/gettext/include <span class="ex">-I</span><span class="va">$(</span><span class="ex">LLVM_LOC</span><span class="va">)</span><span class="ex">/include</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/makevar_mac.png" class="img-fluid figure-img"></p>
+<figure class="figure"><p><img src="images/makevar_mac.png" class="img-fluid figure-img"></p>
 </figure>
 </div>
-</section>
-<section id="intel" class="level2">
-<h2 class="anchored" data-anchor-id="intel">Intel</h2>
+</section><section id="intel" class="level2"><h2 class="anchored" data-anchor-id="intel">Intel</h2>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="va">HOMEBREW_LOC</span><span class="op">=</span>/usr/local</span>
 <span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="va">LLVM_LOC</span><span class="op">=</span><span class="va">$(</span><span class="ex">HOMEBREW_LOC</span><span class="va">)</span>/opt/llvm</span>
@@ -574,33 +523,25 @@ gtag('config', 'G-HJEMN0LJY7', { 'anonymize_ip': true});
 <span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a><span class="va">CPPFLAGS</span><span class="op">=</span>-I<span class="va">$(</span><span class="ex">HOMEBREW_LOC</span><span class="va">)</span>/opt/gettext/include <span class="ex">-I</span><span class="va">$(</span><span class="ex">LLVM_LOC</span><span class="va">)</span><span class="ex">/include</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/makevar_intel.png" class="img-fluid figure-img"></p>
+<figure class="figure"><p><img src="images/makevar_intel.png" class="img-fluid figure-img"></p>
 </figure>
 </div>
 <p>Once you put the paths, save the text file and close it. The difference between Apple Silicon and Intel is just the path; everything else remains similar. For Apple Silicon, the path is <strong><code>/opt/homebrew</code></strong> and for Intel is <strong><code>/usr/local</code></strong>.</p>
-</section>
-</section>
-<section id="seventh-step-reinstall-data.table-and-set-your-cores." class="level1">
-<h1>Seventh Step: Reinstall data.table and set your cores.</h1>
+</section></section><section id="seventh-step-reinstall-data.table-and-set-your-cores." class="level1"><h1>Seventh Step: Reinstall data.table and set your cores.</h1>
 <p>Finally, we need to remove data.table and reinstall it via <strong><code>source</code></strong>.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">remove.packages</span>(<span class="st">"data.table"</span>)</span>
-<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">'data.table'</span>, <span class="at">type=</span><span class="st">'source'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb11"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/remove.packages.html">remove.packages</a></span><span class="op">(</span><span class="st">"data.table"</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span><span class="op">(</span><span class="st">'data.table'</span>, type<span class="op">=</span><span class="st">'source'</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>If everything was done correctly, you should load the package with library(data.table) and see the following message.</p>
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/library.png" class="img-fluid figure-img"></p>
+<figure class="figure"><p><img src="images/library.png" class="img-fluid figure-img"></p>
 </figure>
 </div>
 <p>Remember that you can set more threads with <strong><code>setDTthreads</code></strong> (according to the specifications of your computer). Happy coding!</p>
 
 
-</section>
-
-</main> <!-- /main -->
-<script id="quarto-html-after-body" type="application/javascript">
+</section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
     const mode = bsSheetEl.getAttribute("data-mode");
@@ -847,29 +788,27 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
 });
-</script>
-<script src="https://giscus.app/client.js" data-repo="jurjoroa/hcc-website" data-repo-id="R_kgDOIttXkg" data-category="General" data-category-id="DIC_kwDOIttXks4CUpc5" data-mapping="title" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="top" data-theme="light" data-lang="en" crossorigin="anonymous" async="">
+</script><script src="https://giscus.app/client.js" data-repo="jurjoroa/hcc-website" data-repo-id="R_kgDOIttXkg" data-category="General" data-category-id="DIC_kwDOIttXks4CUpc5" data-mapping="title" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="top" data-theme="light" data-lang="en" crossorigin="anonymous" async="">
 </script>
 </div> <!-- /content -->
-<footer class="footer">
-  <div class="nav-footer">
+<footer class="footer"><div class="nav-footer">
     <div class="nav-footer-left">
       <ul class="footer-items list-unstyled">
-    <li class="nav-item">
+<li class="nav-item">
     <a class="nav-link" href="https://creativecommons.org/licenses/by/2.0/"><i class="fa-regular fa-copyright" aria-label="copyright"></i> <i class="fa-solid fa-circle-user" aria-label="circle-user"></i> 2023 HCC | J.Roa</a>
   </li>  
 </ul>
-    </div>   
+</div>   
       <div class="nav-footer-center">
         <ul class="footer-items list-unstyled">
-    <li class="nav-item">
+<li class="nav-item">
     <a class="nav-link" href="https://quarto.org"><i class="fa-brands fa-phoenix-framework fa-lg" aria-label="phoenix-framework"></i> Quarto engine</a>
   </li>  
 </ul>
-      </div>
+</div>
     <div class="nav-footer-right">
       <ul class="footer-items list-unstyled">
-    <li class="nav-item">
+<li class="nav-item">
     <a class="nav-link" href="mailto:hertiecodingclub@gmail.com"><i class="fa-solid fa-square-envelope fa-lg" aria-label="square-envelope"></i></a>
   </li>  
     <li class="nav-item">
@@ -888,10 +827,9 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     <a class="nav-link" href="https://youtube.com/@hertiecodingclub"><i class="fa-brands fa-youtube fa-lg" aria-label="youtube"></i></a>
   </li>  
 </ul>
-    </div>
+</div>
   </div>
 </footer>
-
 
 
 <script src="../../../site_libs/quarto-html/zenscroll-min.js"></script>

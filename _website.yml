@@ -56,8 +56,15 @@ website:
       #- icon: fingerprint  
       #  href: register/register.qmd
       #  text: "Register"
+      - text: "{{< fa regular newspaper >}} News"
+        href: news/index.qmd
       - text: "{{< fa solid laptop-code >}} About us"
-        href: about_us/index.qmd
+        menu:
+          - text: "{{< fa solid school-flag >}} Who are we"
+            href: about_us/index.qmd
+          - text: "{{< fa solid circle-nodes >}} Hertie Clubs"
+            href: about_us/hertieclubs.qmd
+       
      
 comments:
   giscus:

@@ -1,0 +1,24 @@
+---
+title: "Hertie School Clubs"
+listing:
+  - id: learn-Python
+    contents: "hertieclubs/*/index.qmd"
+    type: default
+    fields: [image, title, subtitle, categories,]  
+    sort: "date desc"
+    # categories: cloud
+    sort-ui: true
+    filter-ui: true
+    page-size: 10
+page-layout: full
+title-block-banner: false
+include-in-header: meta.html
+comments: false
+---
+
+Student clubs are the heart of extracurricular activity at the Hertie School. These student-led initiatives cater to a variety of cultural, political and social interests, whether playing badminton, discussing social innovation, sustainability and international political economy, or advocating for equal rights.
+
+## Hertie School Clubs
+
+::: {#hertie-clubs}
+:::

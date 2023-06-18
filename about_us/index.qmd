@@ -14,14 +14,13 @@ comments: false
 <div class="containerabout">
 <div class="about">
 <div class="left">
-</br>
 
 <h1>
 <lord-icon
     src="https://cdn.lordicon.com/oaflahpk.json"
     trigger="loop"
     delay="250"
-    style="width:100px;height:100px">
+    style="width:60px;height:60px">
 </lord-icon>
 Hertie School </h1>
 <hr>
@@ -57,7 +56,7 @@ Hertie School </h1>
     src="https://cdn.lordicon.com/nrtdaiif.json"
     trigger="loop"
     delay="250"
-    style="width:100px;height:100px">
+    style="width:60px;height:60px">
 </lord-icon>
         Our Story
       </h1>
@@ -82,13 +81,13 @@ Hertie School </h1>
     src="https://cdn.lordicon.com/secxpvll.json"
     trigger="loop"
     delay="250"
-    style="width:100px;height:100px">
+    style="width:60px;height:60px">
 </lord-icon>
         </lord-icon>
         Our Vision
       </h1>
       <hr>
-      <p>As a club, we envision Hertie students not only excelling in public policy debates and analyses but also possessing the ability to collect, manipulate, and process data. By mastering coding and data wrangling skills, our vision is that members and anybody at the Hertie Community can become both data analysts and public policymakers at the same time. We believe that data wrangling, visualization, and table generation are essential skills for everyone at Hertie. Ultimately, our vision is to create a vibrant and supportive environment that empowers individuals to achieve their coding goals and contribute to the Hertie community's overall success. </p>
+      <p style="text-align: justify;">As a club, we envision Hertie students not only excelling in public policy debates and analyses but also possessing the ability to collect, manipulate, and process data. By mastering coding and data wrangling skills, our vision is that members and anybody at the Hertie Community can become both data analysts and public policymakers at the same time. We believe that data wrangling, visualization, and table generation are essential skills for everyone at Hertie. Ultimately, our vision is to create a vibrant and supportive environment that empowers individuals to achieve their coding goals and contribute to the Hertie community's overall success. </p>
       
     </div>
     <div class="right3">
@@ -108,7 +107,7 @@ Hertie School </h1>
     src="https://cdn.lordicon.com/sglcptvj.json"
     trigger="loop"
     delay="250"
-    style="width:100px;height:100px">
+    style="width:60px;height:60px">
 </lord-icon>
         Our Team
       </h1>
@@ -135,12 +134,12 @@ Hertie School </h1>
     src="https://cdn.lordicon.com/fpjgsroh.json"
     trigger="loop"
     delay="250"
-    style="width:100px;height:100px">
+    style="width:60px;height:60px">
 </lord-icon>
         Data Science Lab
       </h1>
       <hr>
-      <p> We partenered with The Hertie School Data Science Lab. This lab is a research and training hub that tackles societal challenges with computational and data-intensive methods.
+      <p style="text-align: justify;"> We partenered with The Hertie School Data Science Lab. This lab is a research and training hub that tackles societal challenges with computational and data-intensive methods.
 Their mission is to foster, advance and promote excellence in data science research, education and application to enable better decision-making for the common good. The Hertie School Data Science Lab will leverage and amplify breakthroughs in data science and artificial intelligence (AI) to tackle major societal problems.</p>
     </div>
     <div class="right5">

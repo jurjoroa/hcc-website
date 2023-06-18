@@ -57,6 +57,18 @@
     ]
   },
   {
+    "listing": "/news/index.html",
+    "items": [
+      "/news/welcome_website/index.html"
+    ]
+  },
+  {
+    "listing": "/about_us/hertieclubs.html",
+    "items": [
+      "/about_us/hertieclubs/kinoclub/index.html"
+    ]
+  },
+  {
     "listing": "/events/index.html",
     "items": [
       "/events/05_social_media_analysis/index.html",

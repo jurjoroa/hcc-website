@@ -2969,7 +2969,7 @@ figcaption {
   grid-column: 1 / 2;
   grid-row: 1 / 2;
   color: white;
-  font-size: 20px;
+  font-size: 18px;
   
 }
 .about .right{
@@ -2980,7 +2980,9 @@ figcaption {
     width: 100%;
   height: auto;
   margin-top: -14px;
-  border-radius: 0% 0% 11% 21% / 10% 10% 0% 21%;
+  box-shadow: -.5em .5em 1em 0em #c0041c; /* Modified box shadow values */
+
+  /*border-radius: 0% 0% 11% 21% / 10% 10% 0% 21%;*/
 }
 
 
@@ -2992,12 +2994,12 @@ figcaption {
 }
 .about .left hr{
    width: -60%;
-   border-top: 3px solid #c0041c;
-   border-radius: 10px;
-   border-bottom:none;
+  border-top: 3px solid #c0041c;
+  border-radius: 10px;
+  border-bottom: none;
 }
 .about .left p{
-   margin:20px auto;
+   margin:15px auto;
    width:80%
 }
 
@@ -3007,7 +3009,6 @@ figcaption {
     width: 100%;
   height: auto;
   margin-top: 0px;
-  border-radius: 15% 15% 15% 15% / 21% 21% 21% 20% ;
 }
 
 
@@ -3020,6 +3021,7 @@ figcaption {
   grid-row: 1 / 2;
   color: white;
   font-size: 15px;
+  margin-top: 19px;
 }
 
 
@@ -3089,14 +3091,15 @@ figcaption {
   grid-column: 2 / 3;
   grid-row: 1 / 2;
   color: white;
-  font-size: 20px;
+  font-size: 18px;
 }
 
 .about2 .left2 img {
   width: 100%;
   height: auto;
   margin-top: -14px;
-  border-radius: 0% 21% 21% 0% / 10% 20% 21% 21%;
+  box-shadow: .5em .5em 1em 0em #c0041c; /* Modified box shadow values */
+
 }
 
 .about2 .right2 h1 {
@@ -3123,7 +3126,6 @@ figcaption {
     width: 100%;
     height: auto;
     margin-top: 0px;
-    border-radius: 15% 15% 15% 15% / 21% 21% 21% 20% ;
   }
 }
 
@@ -3194,7 +3196,7 @@ figcaption {
   grid-column: 1 / 2; /* Updated grid-column */
   grid-row: 1 / 2;
   color: white;
-  font-size: 20px;
+  font-size: 18px;
 }
 
 .about3 .right3 {
@@ -3206,7 +3208,8 @@ figcaption {
   width: 100%;
   height: auto;
   margin-top: -14px;
-  border-radius: 21% 0% 0% 21% / 21% 20% 21% 21%;
+  box-shadow: -.5em .5em 1em 0em #c0041c; /* Modified box shadow values */
+
 }
 
 .about3 .left3 h1 {
@@ -3223,7 +3226,7 @@ figcaption {
 }
 
 .about3 .left3 p {
-  margin: 20px auto;
+  margin: 18px auto;
   width: 80%;
 }
 
@@ -3233,7 +3236,6 @@ figcaption {
     width: 100%;
     height: auto;
     margin-top: 0px;
-    border-radius: 15% 15% 15% 15% / 21% 21% 21% 20% ;
   }
 }
 
@@ -3298,7 +3300,7 @@ figcaption {
   grid-column: 2 / 3;
   grid-row: 1 / 2;
   color: white;
-  font-size: 20px;
+  font-size: 18px;
 }
 
 .about4 .right4 {
@@ -3310,7 +3312,8 @@ figcaption {
   width: 100%;
   height: auto;
   margin-top: -14px;
-  border-radius: 0% 21% 21% 0% / 10% 20% 21% 21%;
+    box-shadow: .5em .5em 1em 0em #c0041c; /* Modified box shadow values */
+
 }
 
 .about4 .left4 h1 {
@@ -3327,7 +3330,7 @@ figcaption {
 }
 
 .about4 .left4 p {
-  margin: 20px auto;
+  margin: 18px auto;
   width: 80%;
 }
 
@@ -3337,7 +3340,6 @@ figcaption {
     width: 100%;
     height: auto;
     margin-top: 0px;
-    border-radius: 15% 15% 15% 15% / 21% 21% 21% 20% ;
   }
 }
 
@@ -3406,7 +3408,7 @@ figcaption {
   grid-column: 1 / 2; /* Updated grid-column */
   grid-row: 1 / 2;
   color: white;
-  font-size: 20px;
+  font-size: 18px;
 }
 
 .about5 .right5 {
@@ -3418,7 +3420,8 @@ figcaption {
   width: 100%;
   height: auto;
   margin-top: -14px;
-  border-radius: 15% 0% 0% 15% / 21% 20% 21% 21%;
+  box-shadow: -.5em .5em 1em 0em #c0041c; /* Modified box shadow values */
+
 }
 
 .about5 .left5 h1 {
@@ -3435,7 +3438,7 @@ figcaption {
 }
 
 .about5 .left5 p {
-  margin: 20px auto;
+  margin: 18px auto;
   width: 80%;
 }
 
@@ -3445,7 +3448,6 @@ figcaption {
     width: 100%;
     height: auto;
     margin-top: 0px;
-    border-radius: 15% 15% 15% 15% / 21% 21% 21% 20% ;
   }
 }
 

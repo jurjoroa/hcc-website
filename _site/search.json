@@ -39,14 +39,14 @@
     "href": "learn/rstudio/rstudio101/index.html#step-1-opening-a-new-project",
     "title": "RStudio 101",
     "section": "Step 1: Opening a new project",
-    "text": "Step 1: Opening a new project\n\n\n\n\n\n\nWe will go to File tab and click in “New Project”.\n\n\n\n\n1.-Create Project\n2.-Project Type\n\n\n\n\n\n\n\n\nHere you have three options: since you are creating a new project, choose New Directory.\nSelect the type of project, as you can see, we have different options; or now, we will choose New Project"
+    "text": "Step 1: Opening a new project\n\n\n\n\n\nWe will go to File tab and click in “New Project”.\n\n\n\n1.-Create Project\n2.-Project Type\n\n\n\n\n\n\n\nHere you have three options: since you are creating a new project, choose New Directory.\nSelect the type of project, as you can see, we have different options; or now, we will choose New Project"
   },
   {
     "objectID": "learn/rstudio/rstudio101/index.html#step-2-create-our-first-project",
     "href": "learn/rstudio/rstudio101/index.html#step-2-create-our-first-project",
     "title": "RStudio 101",
     "section": "Step 2: Create our first project",
-    "text": "Step 2: Create our first project\n\nOnce we open a new project, we need to decide where we want to store our project and all the code we will generate. I’ll talk about this later, but putting a project in a separate folder is good practice to have everything ordered.\n\n\n\n\n\n\nYour name project should be precise and not too long. In our case, we will name it “Hertie Coding Club R”\n\n\n\n3.-Choose folder\n4.-Icon project in project folder\n\n\n\n\n\n\n\n\nHere we show the folder in where we will save our project\nOnce you created your project, it should appear an icon like this within your folder."
+    "text": "Step 2: Create our first project\n\nOnce we open a new project, we need to decide where we want to store our project and all the code we will generate. I’ll talk about this later, but putting a project in a separate folder is good practice to have everything ordered.\n\n\n\n\n\nYour name project should be precise and not too long. In our case, we will name it “Hertie Coding Club R”\n\n\n3.-Choose folder\n4.-Icon project in project folder\n\n\n\n\n\n\n\nHere we show the folder in where we will save our project\nOnce you created your project, it should appear an icon like this within your folder."
   },
   {
     "objectID": "learn/rstudio/rstudio101/index.html#benefits",
@@ -60,21 +60,21 @@
     "href": "learn/rstudio/rstudio101/index.html#create-a-script",
     "title": "RStudio 101",
     "section": "Create a script",
-    "text": "Create a script\nWe will create our first R Script. For that please go to Fil -> New File -> R Script\n\n\n\n\n\nOnce we create our script, it will show us a window with a tab called “Untitled1”. Now, we need to save that script in our analysis folder. For that, we need to go to File -> Save As. Next, we need to select the folder within our project where we want to save our script. Following the good practices recommended here, I’ll keep it in my analysis folder. I’m naming my script as “first_script”.\n\n\n\nFile -> R Script"
+    "text": "Create a script\nWe will create our first R Script. For that please go to Fil -> New File -> R Script\n\n\n\n\nOnce we create our script, it will show us a window with a tab called “Untitled1”. Now, we need to save that script in our analysis folder. For that, we need to go to File -> Save As. Next, we need to select the folder within our project where we want to save our script. Following the good practices recommended here, I’ll keep it in my analysis folder. I’m naming my script as “first_script”.\n\n\nFile -> R Script"
   },
   {
     "objectID": "learn/rstudio/rstudio101/index.html#source",
     "href": "learn/rstudio/rstudio101/index.html#source",
     "title": "RStudio 101",
     "section": "Source",
-    "text": "Source\n\n\n\n\n\nThe source pane is the main workspace for creating and editing R scripts, and it provides features for syntax highlighting, code completion, and error checking.\n\nOne of the key features of the source pane is syntax highlighting, which makes it easier to read and understand R code by using different colors and fonts to differentiate between different elements of the code, such as keywords, comments, and functions.\n\nWith this commands, you can select your code and run your code.\n\n\n\n\n\n\n\n\n\n“Command + Return\n“Control + Enter”\n\n\n\nThis code will excute and it will be showed in the console."
+    "text": "Source\n\n\n\n\nThe source pane is the main workspace for creating and editing R scripts, and it provides features for syntax highlighting, code completion, and error checking.\n\nOne of the key features of the source pane is syntax highlighting, which makes it easier to read and understand R code by using different colors and fonts to differentiate between different elements of the code, such as keywords, comments, and functions.\n\nWith this commands, you can select your code and run your code.\n\n\n\n\n\n\n“Command + Return\n“Control + Enter”\n\n\nThis code will excute and it will be showed in the console."
   },
   {
     "objectID": "learn/rstudio/rstudio101/index.html#console",
     "href": "learn/rstudio/rstudio101/index.html#console",
     "title": "RStudio 101",
     "section": "Console",
-    "text": "Console\nWhen a user types in a command in the console, like for example assigning a variable or running a function, R processes the command and generates the output, which is displayed in the console. The console is a critical tool for debugging R code, as it allows users to see the output of their commands and to identify errors and bugs in their code. In summary:\n\nThe console is the heart of R.\nHere R actually evaluates your code.\nTry to write most of your code in a document in the Source. Only type directly into the Console to de-bug or do quick analyses.\nWhen ready: > and If waiting: +\nCancel commands by pressing Esc. to finish a running process.\n\n\n\n\n\n\n\n\n\n\n\nIn the last pictures, for example, we evaluated the expression\n\n2 + 2\n\n[1] 4\n\n\nAs you can see, in our console it shows the operation that we ran. (Remember the commands to run your code). One of the shortcuts that I use often is the ↑ key. Pressing the top arrow shows the last code that you executed; pretty useful if you don’t want to rerun your code"
+    "text": "Console\nWhen a user types in a command in the console, like for example assigning a variable or running a function, R processes the command and generates the output, which is displayed in the console. The console is a critical tool for debugging R code, as it allows users to see the output of their commands and to identify errors and bugs in their code. In summary:\n\nThe console is the heart of R.\nHere R actually evaluates your code.\nTry to write most of your code in a document in the Source. Only type directly into the Console to de-bug or do quick analyses.\nWhen ready: > and If waiting: +\nCancel commands by pressing Esc. to finish a running process.\n\n\n\n\n\n\n\n\n\nIn the last pictures, for example, we evaluated the expression\n\n2 + 2\n\n[1] 4\n\n\nAs you can see, in our console it shows the operation that we ran. (Remember the commands to run your code). One of the shortcuts that I use often is the ↑ key. Pressing the top arrow shows the last code that you executed; pretty useful if you don’t want to rerun your code"
   },
   {
     "objectID": "learn/rstudio/rstudio101/index.html#environmenthistory",
@@ -144,14 +144,14 @@
     "href": "learn/rstudio/Multithreading/index.html#intel",
     "title": "Enable Multithread with data.table in Mac/Intel chips",
     "section": "Intel",
-    "text": "Intel\n\nHOMEBREW_LOC=/usr/local\nLLVM_LOC=$(HOMEBREW_LOC)/opt/llvm\nCC=$(LLVM_LOC)/bin/clang -fopenmp \nCXX=$(LLVM_LOC)/bin/clang++ -fopenmp \nCFLAGS=-g -O3 -Wall -pedantic -std=gnu99 -mtune=native -pipe \nCXXFLAGS=-g -O3 -Wall -pedantic -std=c++11 -mtune=native -pipe \nLDFLAGS=-L$(HOMEBREW_LOC)/opt/gettext/lib -L$(LLVM_LOC)/lib -Wl,-rpath,$(LLVM_LOC)/lib \nCPPFLAGS=-I$(HOMEBREW_LOC)/opt/gettext/include -I$(LLVM_LOC)/include\n\n\n\n\n\n\nOnce you put the paths, save the text file and close it. The difference between Apple Silicon and Intel is just the path; everything else remains similar. For Apple Silicon, the path is /opt/homebrew and for Intel is /usr/local."
+    "text": "Intel\n\nHOMEBREW_LOC=/usr/local\nLLVM_LOC=$(HOMEBREW_LOC)/opt/llvm\nCC=$(LLVM_LOC)/bin/clang -fopenmp \nCXX=$(LLVM_LOC)/bin/clang++ -fopenmp \nCFLAGS=-g -O3 -Wall -pedantic -std=gnu99 -mtune=native -pipe \nCXXFLAGS=-g -O3 -Wall -pedantic -std=c++11 -mtune=native -pipe \nLDFLAGS=-L$(HOMEBREW_LOC)/opt/gettext/lib -L$(LLVM_LOC)/lib -Wl,-rpath,$(LLVM_LOC)/lib \nCPPFLAGS=-I$(HOMEBREW_LOC)/opt/gettext/include -I$(LLVM_LOC)/include\n\n\n\n\n\nOnce you put the paths, save the text file and close it. The difference between Apple Silicon and Intel is just the path; everything else remains similar. For Apple Silicon, the path is /opt/homebrew and for Intel is /usr/local."
   },
   {
     "objectID": "learn/rstudio/objects/index.html",
     "href": "learn/rstudio/objects/index.html",
     "title": "Understanding R Objects: Naming, Data Structures and Classes in R",
     "section": "",
-    "text": "One of the things that define R as an amazing tool to do multiple things are objects. R work with objects that essentialy are data structures that can hold values, but also othr types of data and can be assigned names for easy reference. Objects in R are useful because we can organize and store data in meaningful ways. One of the most importants thigns when you are learning R is understand how to work with these objects because you will have the confidence and knowledge to use it at your better convenience. There are several types of objects in R, including vectors, matrices, data frames, lists, and factors, each with their own characteristics and uses.\n\n\n\n\n\n\nAssign objects\n\n\n\n\nTo create an object, give it a name followed by the assignment operator, followed by the value/data type.\nAssignment operator <-\nShortcut: “Alt + -” on PC, “Option + -” on Mac\n\n\n\n\n\n\n\n\n\nExecute R code in the website\n\n\n\n\nYou can execute R code within our website!!\nYou can install plots with this code webr::install(\"ggplot2\"). However, it may take 2 minutes to run.\nYou can check in this link which packages are available and datasets\n\n\n\n \n\n\n\n\n\n \nIn this image, you can see the different types of objects that we have and this is the best way to visualize. However, to really understand what is going on, you need to start writing code and start trying using this different type of objects to know them better. In the next lines, I’ll write explanations, examples and exercises."
+    "text": "One of the things that define R as an amazing tool to do multiple things are objects. R work with objects that essentialy are data structures that can hold values, but also othr types of data and can be assigned names for easy reference. Objects in R are useful because we can organize and store data in meaningful ways. One of the most importants thigns when you are learning R is understand how to work with these objects because you will have the confidence and knowledge to use it at your better convenience. There are several types of objects in R, including vectors, matrices, data frames, lists, and factors, each with their own characteristics and uses.\n\n\n\n\n\n\nAssign objects\n\n\n\n\nTo create an object, give it a name followed by the assignment operator, followed by the value/data type.\nAssignment operator <-\nShortcut: “Alt + -” on PC, “Option + -” on Mac\n\n\n\n\n\n\n\n\n\nExecute R code in the website\n\n\n\n\nYou can execute R code within our website!!\nYou can install plots with this code webr::install(\"ggplot2\"). However, it may take 2 minutes to run.\nYou can check in this link which packages are available and datasets\n\n\n\n \n\n\n\n\n \nIn this image, you can see the different types of objects that we have and this is the best way to visualize. However, to really understand what is going on, you need to start writing code and start trying using this different type of objects to know them better. In the next lines, I’ll write explanations, examples and exercises."
   },
   {
     "objectID": "learn/rstudio/objects/index.html#numeric-values",
@@ -305,7 +305,7 @@
     "href": "learn/rstudio/objects/index.html#create-a-data-frame-multiple-ways",
     "title": "Understanding R Objects: Naming, Data Structures and Classes in R",
     "section": "Create a Data Frame: multiple ways",
-    "text": "Create a Data Frame: multiple ways\n1.- Using data.frame() function: This is the most common way to create a data frame in R. You can put as many vectors (variables) as you want.\n\ndf <- data.frame(x = c(1, 2, 3), \n                 y = c(\"a\", \"b\", \"c\"), \n                 z = c(TRUE, FALSE, TRUE))\n\n2.- Using read_csv2() function: You can also create a data frame by importing data from an external file using the read.table() or read.csv() function.\n\ndf <- read.table(\"data.txt\", header = TRUE)\n\n3.- Using read_excel() function from the readxl package\n\nlibrary(readxl)\ndf <- read_excel(\"data.xlsx\")\n\n4.- Using tibble() function from the tibble package\n\nlibrary(tibble)\ndf <- tibble(x = c(1, 2, 3), y = c(\"a\", \"b\", \"c\"), z = c(TRUE, FALSE, TRUE))\n\nYou can check our other tutorials to handle data frames and start practicing. We also recommend these books from the website for you to go into more detail.\n\n\n  \n    \n      \n    \n  \n  \n    \n      \n    \n  \n\n\nNo matching items"
+    "text": "Create a Data Frame: multiple ways\n1.- Using data.frame() function: This is the most common way to create a data frame in R. You can put as many vectors (variables) as you want.\n\ndf <- data.frame(x = c(1, 2, 3), \n                 y = c(\"a\", \"b\", \"c\"), \n                 z = c(TRUE, FALSE, TRUE))\n\n2.- Using read_csv2() function: You can also create a data frame by importing data from an external file using the read.table() or read.csv() function.\n\ndf <- read.table(\"data.txt\", header = TRUE)\n\n3.- Using read_excel() function from the readxl package\n\nlibrary(readxl)\ndf <- read_excel(\"data.xlsx\")\n\n4.- Using tibble() function from the tibble package\n\nlibrary(tibble)\ndf <- tibble(x = c(1, 2, 3), y = c(\"a\", \"b\", \"c\"), z = c(TRUE, FALSE, TRUE))\n\nYou can check our other tutorials to handle data frames and start practicing. We also recommend these books from the website for you to go into more detail.\n\n\n  \n    \n      \n  \n  \n    \n      \n  \n\n\nNo matching items"
   },
   {
     "objectID": "learn/rstudio/social_media_scraping/index.html",
@@ -347,7 +347,7 @@
     "href": "learn/rstudio/social_media_scraping/index.html#word-cloud-of-biden-tweets",
     "title": "Introduction to Social Media Scraping",
     "section": "Word Cloud of Biden Tweets",
-    "text": "Word Cloud of Biden Tweets\n\n\nCode\n# Create custom color palette\nmy_palette <- brewer.pal(8, \"Dark2\")\n\n# Create word cloud with larger font size and custom layout\nwordcloud(words_data2$word, \n          words_data2$n, \n          max.words = 200, \n          colors = my_palette, \n          scale = c(5, 0.3),\n          random.order = FALSE,\n          rot.per = 0.25,\n          random.color = TRUE,\n          main = \"Word Cloud of Biden Tweets\")"
+    "text": "Word Cloud of Biden Tweets\n\nCode# Create custom color palette\nmy_palette <- brewer.pal(8, \"Dark2\")\n\n# Create word cloud with larger font size and custom layout\nwordcloud(words_data2$word, \n          words_data2$n, \n          max.words = 200, \n          colors = my_palette, \n          scale = c(5, 0.3),\n          random.order = FALSE,\n          rot.per = 0.25,\n          random.color = TRUE,\n          main = \"Word Cloud of Biden Tweets\")"
   },
   {
     "objectID": "learn/rstudio/social_media_scraping/index.html#comparison-cloud-of-biden-tweets-by-sentiment",
@@ -361,7 +361,7 @@
     "href": "learn/rstudio/social_media_scraping/index.html#cloud",
     "title": "Introduction to Social Media Scraping",
     "section": "Cloud",
-    "text": "Cloud\n\n\nCode\n#Count the number of filtered words with each sentiment score\nword_sentiment_counts <- filtered_sentiment_scores %>%\n  count(word, sentiment, sort = TRUE) %>%\n  acast(word ~ sentiment, value.var = \"n\", fill = 0)\n\n#Create a comparison cloud using the word and sentiment counts\ncomparison.cloud(word_sentiment_counts, \n                  colors = c(\"red\", \"blue\"),\n                  max.words = Inf)"
+    "text": "Cloud\n\nCode#Count the number of filtered words with each sentiment score\nword_sentiment_counts <- filtered_sentiment_scores %>%\n  count(word, sentiment, sort = TRUE) %>%\n  acast(word ~ sentiment, value.var = \"n\", fill = 0)\n\n#Create a comparison cloud using the word and sentiment counts\ncomparison.cloud(word_sentiment_counts, \n                  colors = c(\"red\", \"blue\"),\n                  max.words = Inf)"
   },
   {
     "objectID": "learn/rstudio/Install-r-studio/index.html",
@@ -382,126 +382,126 @@
     "href": "learn/rstudio/stata_to_r/index.html#csv-files",
     "title": "Making the Transition? A Guide for switching from Stata to R",
     "section": "CSV Files",
-    "text": "CSV Files\n\n\n\n\n\n\n\n/*Import csv file*/\nimport delimited \"my_data.csv\", clear\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nlibrary(readr)\n\n#Use read_csv2\ndf_data <- read_csv2(\"data.csv\")\n\n#Using read.table function with comma separator\ndf_data <- read.table(\"my_data.csv\", \n                      sep = \",\", \n                      header = TRUE)"
+    "text": "CSV Files\n\n\n\n\n\n\n/*Import csv file*/\nimport delimited \"my_data.csv\", clear\n\n\n\n\n\n\n\n\n\n\n\n\n\nlibrary(readr)\n\n#Use read_csv2\ndf_data <- read_csv2(\"data.csv\")\n\n#Using read.table function with comma separator\ndf_data <- read.table(\"my_data.csv\", \n                      sep = \",\", \n                      header = TRUE)"
   },
   {
     "objectID": "learn/rstudio/stata_to_r/index.html#excel-files",
     "href": "learn/rstudio/stata_to_r/index.html#excel-files",
     "title": "Making the Transition? A Guide for switching from Stata to R",
     "section": "Excel Files",
-    "text": "Excel Files\n\n\n\n\n\n\n\n/*Import excel file*/\nimport excel \"df_data.xlsx\", \nsheet(\"Sheet1\") firstrow clear\n\n\n\n\n\n\n\n\n\n\n\n\n\n#With readxl package\nlibrary(readxl)\ndf_data <- read_excel(\"my_data.xlsx\", \n                      sheet = \"Sheet1\")\n\n#With openxlsx package\nlibrary(openxlsx)\ndf_data <- read.xlsx(\"my_data.xlsx\", \n                     sheet = \"Sheet1\")"
+    "text": "Excel Files\n\n\n\n\n\n\n/*Import excel file*/\nimport excel \"df_data.xlsx\", \nsheet(\"Sheet1\") firstrow clear\n\n\n\n\n\n\n\n\n\n\n\n#With readxl package\nlibrary(readxl)\ndf_data <- read_excel(\"my_data.xlsx\", \n                      sheet = \"Sheet1\")\n\n#With openxlsx package\nlibrary(openxlsx)\ndf_data <- read.xlsx(\"my_data.xlsx\", \n                     sheet = \"Sheet1\")"
   },
   {
     "objectID": "learn/rstudio/stata_to_r/index.html#stata-files-.dta",
     "href": "learn/rstudio/stata_to_r/index.html#stata-files-.dta",
     "title": "Making the Transition? A Guide for switching from Stata to R",
     "section": "Stata Files (.dta)",
-    "text": "Stata Files (.dta)\n\n\n\n\n\n\n\n/*Import excel file*/\nuse \"df_data.dta\", clear\n\n\n\n\n\n\n\n\n\n\n\n\n\n#Load the package\nlibrary(haven)            \n\ndf_data <- read_dta(\"df_data.dta\")"
+    "text": "Stata Files (.dta)\n\n\n\n\n\n\n/*Import excel file*/\nuse \"df_data.dta\", clear\n\n\n\n\n\n\n\n\n\n\n\n#Load the package\nlibrary(haven)            \n\ndf_data <- read_dta(\"df_data.dta\")"
   },
   {
     "objectID": "learn/rstudio/stata_to_r/index.html#missing-data",
     "href": "learn/rstudio/stata_to_r/index.html#missing-data",
     "title": "Making the Transition? A Guide for switching from Stata to R",
     "section": "Missing Data",
-    "text": "Missing Data\n\n\n\n\n\n\n\n/* Provides the structure of the dataset */\nmissing variable1 variable2 variable3\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n#Check missing data for our entire database\nis.na(df_data)\n\n#Check missing data for our entire database\nis.na(df_data$variable1)"
+    "text": "Missing Data\n\n\n\n\n\n\n/* Provides the structure of the dataset */\nmissing variable1 variable2 variable3\n\n\n\n\n\n\n\n\n\n\n\n\n#Check missing data for our entire database\nis.na(df_data)\n\n#Check missing data for our entire database\nis.na(df_data$variable1)"
   },
   {
     "objectID": "learn/rstudio/stata_to_r/index.html#rename-variables",
     "href": "learn/rstudio/stata_to_r/index.html#rename-variables",
     "title": "Making the Transition? A Guide for switching from Stata to R",
     "section": "Rename variables",
-    "text": "Rename variables\n\n\n\n\n\n\n\n/* How to rename */\nrename oldname newname\n\nrename lastname lastname2\nrename firstname firstname2\nrename studentstatus studentstatus2\nrename averagescoregrade avgscore\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n#Rename the variables of our data\nnames(df_data) <- c(\"newvar1\", \"newvar2\")\n\n#With the dplyr package\n\nlibrary(dplyr)\ndf_data_final <- rename(df_data, \n                        newvar1 = var1, \n                        newvar2 = var2)"
+    "text": "Rename variables\n\n\n\n\n\n\n/* How to rename */\nrename oldname newname\n\nrename lastname lastname2\nrename firstname firstname2\nrename studentstatus studentstatus2\nrename averagescoregrade avgscore\n\n\n\n\n\n\n\n\n\n\n\n\n#Rename the variables of our data\nnames(df_data) <- c(\"newvar1\", \"newvar2\")\n\n#With the dplyr package\n\nlibrary(dplyr)\ndf_data_final <- rename(df_data, \n                        newvar1 = var1, \n                        newvar2 = var2)"
   },
   {
     "objectID": "learn/rstudio/stata_to_r/index.html#label-variables",
     "href": "learn/rstudio/stata_to_r/index.html#label-variables",
     "title": "Making the Transition? A Guide for switching from Stata to R",
     "section": "Label variables",
-    "text": "Label variables\n\n\n\n\n\n\n\nlabel variable w \"Weight\"\nlabel variable y \"Output\"\nlabel variable x1 \"Predictor 1\"\nlabel variable x2 \"Predictor 2\"\nlabel variable age \"Age\"\nlabel variable sex \"Gender\"\n\n\n\n\n\n\n\n\n\n\n\n\n\n#Load labelled package\nlibrary(labelled)\n\n#Define the value labels for the codes\nlabels <- c(\"Option 1\", \"Option 2\", \n            \"Option 3\", \"Option 4\", \n            \"Option 5\")\ndf_data$code <- labelled(df_data$code, \n                         labels = labels)"
+    "text": "Label variables\n\n\n\n\n\n\nlabel variable w \"Weight\"\nlabel variable y \"Output\"\nlabel variable x1 \"Predictor 1\"\nlabel variable x2 \"Predictor 2\"\nlabel variable age \"Age\"\nlabel variable sex \"Gender\"\n\n\n\n\n\n\n\n\n\n\n\n#Load labelled package\nlibrary(labelled)\n\n#Define the value labels for the codes\nlabels <- c(\"Option 1\", \"Option 2\", \n            \"Option 3\", \"Option 4\", \n            \"Option 5\")\ndf_data$code <- labelled(df_data$code, \n                         labels = labels)"
   },
   {
     "objectID": "learn/rstudio/stata_to_r/index.html#value-labels",
     "href": "learn/rstudio/stata_to_r/index.html#value-labels",
     "title": "Making the Transition? A Guide for switching from Stata to R",
     "section": "Value labels",
-    "text": "Value labels\n\n\n\n\n\n\n\n/* Value labels for the codes */\nlabel define label1 1 \"Option 1\" \n2 \"Option 2\" 3 \"Option 3\" 4 \"Option 4\" \n5 \"Option 5\"\n\n/* Assign the value labels to the codes */\nlabel values code label1\n\n\n\n\n\n\n\n\n\n\n\n\n\n#Load labelled package\nlibrary(labelled)\n\n#Define the value labels for the codes\nlabels <- c(\"Option 1\", \"Option 2\", \n            \"Option 3\", \"Option 4\", \n            \"Option 5\")\ndf_data$code <- labelled(df_data$code, \n                         labels = labels)\n\n\n#Define the value labels for the codes\nlabels <- c(\"Option 1\", \"Option 2\", \n            \"Option 3\", \"Option 4\", \n            \"Option 5\")\ndf_data$code <- factor(df_data$code, \n                       levels = 1:5, \n                       labels = labels)\n\nIn this approach, you can assign values to numeric or character variables"
+    "text": "Value labels\n\n\n\n\n\n\n/* Value labels for the codes */\nlabel define label1 1 \"Option 1\" \n2 \"Option 2\" 3 \"Option 3\" 4 \"Option 4\" \n5 \"Option 5\"\n\n/* Assign the value labels to the codes */\nlabel values code label1\n\n\n\n\n\n\n\n\n\n\n\n#Load labelled package\nlibrary(labelled)\n\n#Define the value labels for the codes\nlabels <- c(\"Option 1\", \"Option 2\", \n            \"Option 3\", \"Option 4\", \n            \"Option 5\")\ndf_data$code <- labelled(df_data$code, \n                         labels = labels)\n\n\n#Define the value labels for the codes\nlabels <- c(\"Option 1\", \"Option 2\", \n            \"Option 3\", \"Option 4\", \n            \"Option 5\")\ndf_data$code <- factor(df_data$code, \n                       levels = 1:5, \n                       labels = labels)\n\nIn this approach, you can assign values to numeric or character variables"
   },
   {
     "objectID": "learn/rstudio/stata_to_r/index.html#group-variables",
     "href": "learn/rstudio/stata_to_r/index.html#group-variables",
     "title": "Making the Transition? A Guide for switching from Stata to R",
     "section": "Group variables",
-    "text": "Group variables\n\n\n\n\n\n\n\n/* Value labels for the codes */\ncollapse (mean) var1, by(var2, var3)\n\nlist var2 var3 var1\n\n\n\n\n\n\n\n\n\n\n\n\n\n#Load dplyr package\nlibrary(dplyr)\n\n#We group the data by variables 2 and 3, \n#calculate the mean of variable 1\ndf_data_group <- df_data %>%\n  group_by(var2, var3) %>%\n  summarise(mean_var1 = mean(var1))"
+    "text": "Group variables\n\n\n\n\n\n\n/* Value labels for the codes */\ncollapse (mean) var1, by(var2, var3)\n\nlist var2 var3 var1\n\n\n\n\n\n\n\n\n\n\n\n#Load dplyr package\nlibrary(dplyr)\n\n#We group the data by variables 2 and 3, \n#calculate the mean of variable 1\ndf_data_group <- df_data %>%\n  group_by(var2, var3) %>%\n  summarise(mean_var1 = mean(var1))"
   },
   {
     "objectID": "learn/rstudio/stata_to_r/index.html#merge-two-datasets",
     "href": "learn/rstudio/stata_to_r/index.html#merge-two-datasets",
     "title": "Making the Transition? A Guide for switching from Stata to R",
     "section": "Merge two datasets",
-    "text": "Merge two datasets\n\n\n\n\n\n\n\n/* Exact match on the key variable(s). */\nuse dataset1.dta, clear\nmerge 1:1 id using dataset2.dta\n/* Each observation in the first dataset */\nmerge 1:m id using dataset2.dta\n/* Each observation in the second dataset */\nmerge m:1 id using dataset2.dta\n/* Each observation many-to-many merge */\nmerge m:1 id using dataset2.dta\nRemember that we need to have our data1 in the same path\n\n\n\n\n\n\n\n\n\n\n\n\n\n#Load dplyr package\nlibrary(dplyr)\n\n#1:1 using inner join\ndf_merged_inner <- inner_join(df_1, df_1, \n                              by = \"id1\")\n\n#1:m using left join\ndf_merged_left <- left_join(df_1, df_1, \n                            by = \"id1\")\n\n#m:1 using right join\ndf_merged_right <- right_join(df_1, df_1, \n                              by = \"id1\")\n\n#m:m using full join\ndf_merged_full <- full_join(df_1, df_1, \n                            by = c(\"id1\", \n                                   \"id2\"))\n#You can merge with more tha one variable"
+    "text": "Merge two datasets\n\n\n\n\n\n\n/* Exact match on the key variable(s). */\nuse dataset1.dta, clear\nmerge 1:1 id using dataset2.dta\n/* Each observation in the first dataset */\nmerge 1:m id using dataset2.dta\n/* Each observation in the second dataset */\nmerge m:1 id using dataset2.dta\n/* Each observation many-to-many merge */\nmerge m:1 id using dataset2.dta\nRemember that we need to have our data1 in the same path\n\n\n\n\n\n\n\n\n\n\n\n#Load dplyr package\nlibrary(dplyr)\n\n#1:1 using inner join\ndf_merged_inner <- inner_join(df_1, df_1, \n                              by = \"id1\")\n\n#1:m using left join\ndf_merged_left <- left_join(df_1, df_1, \n                            by = \"id1\")\n\n#m:1 using right join\ndf_merged_right <- right_join(df_1, df_1, \n                              by = \"id1\")\n\n#m:m using full join\ndf_merged_full <- full_join(df_1, df_1, \n                            by = c(\"id1\", \n                                   \"id2\"))\n#You can merge with more tha one variable"
   },
   {
     "objectID": "learn/rstudio/stata_to_r/index.html#create-sequenceids",
     "href": "learn/rstudio/stata_to_r/index.html#create-sequenceids",
     "title": "Making the Transition? A Guide for switching from Stata to R",
     "section": "Create sequence/ids",
-    "text": "Create sequence/ids\n\n\n\n\n\n\n\n/* Sequence of numbers from 1 to n */\ngen seq = _n\n\n/* Sequence with the total number of \nobservations */\n\ngen total_seq = _N\n\n\n\n\n\n\n\n\n\n\n\n\n\nv_seq <- seq(from = 1, to = 10, by = 1)\n\n#Load dplyr package\nlibrary(dplyr)\n\ndf_final <- df %>%\n  mutate(id = 1:n())"
+    "text": "Create sequence/ids\n\n\n\n\n\n\n/* Sequence of numbers from 1 to n */\ngen seq = _n\n\n/* Sequence with the total number of \nobservations */\n\ngen total_seq = _N\n\n\n\n\n\n\n\n\n\n\n\nv_seq <- seq(from = 1, to = 10, by = 1)\n\n#Load dplyr package\nlibrary(dplyr)\n\ndf_final <- df %>%\n  mutate(id = 1:n())"
   },
   {
     "objectID": "learn/rstudio/stata_to_r/index.html#drop-variables",
     "href": "learn/rstudio/stata_to_r/index.html#drop-variables",
     "title": "Making the Transition? A Guide for switching from Stata to R",
     "section": "Drop variables",
-    "text": "Drop variables\n\n\n\n\n\n\n\n/* Drop variable */\ndrop var1 var2\n\n/* Drop all variable and keep */\ndrop _all\nkeep var1 var2 var3\n\n\n\n\n\n\n\n\n\n\n\n\n\n#Load dplyr package\nlibrary(dplyr)\n\n#Drop some variables\ndf_new_data <- df_old %>% select(-var1, -var2)\n\n#Keep specific variables\ndf_new_data <- df_old %>% select(var1, var2)"
+    "text": "Drop variables\n\n\n\n\n\n\n/* Drop variable */\ndrop var1 var2\n\n/* Drop all variable and keep */\ndrop _all\nkeep var1 var2 var3\n\n\n\n\n\n\n\n\n\n\n\n#Load dplyr package\nlibrary(dplyr)\n\n#Drop some variables\ndf_new_data <- df_old %>% select(-var1, -var2)\n\n#Keep specific variables\ndf_new_data <- df_old %>% select(var1, var2)"
   },
   {
     "objectID": "learn/rstudio/stata_to_r/index.html#summary",
     "href": "learn/rstudio/stata_to_r/index.html#summary",
     "title": "Making the Transition? A Guide for switching from Stata to R",
     "section": "Summary",
-    "text": "Summary\n\n\n\n\n\n\n\n/* Summary of variables of interest*/\nsummarize var1 var2 var3\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n#Summary for entire data\nsummary(dataset)\n\n#Summary for a variable\nsummary(dataset$variable)"
+    "text": "Summary\n\n\n\n\n\n\n/* Summary of variables of interest*/\nsummarize var1 var2 var3\n\n\n\n\n\n\n\n\n\n\n\n\n#Summary for entire data\nsummary(dataset)\n\n#Summary for a variable\nsummary(dataset$variable)"
   },
   {
     "objectID": "learn/rstudio/stata_to_r/index.html#linear-model",
     "href": "learn/rstudio/stata_to_r/index.html#linear-model",
     "title": "Making the Transition? A Guide for switching from Stata to R",
     "section": "Linear Model",
-    "text": "Linear Model\n\n\n\n\n\n\n\n/* Fit a linear model */\nregress mpg weight length foreign\n\n/* Print summary */\nestimates table\n\n\n\n\n\n\n\n\n\n\n\n\n\n#Fit a linear model\nmodel_lm <- lm(mpg ~ wt + qsec + vs, \n               data = df_my_data)\n\n#Print summary\nsummary(model_lm)"
+    "text": "Linear Model\n\n\n\n\n\n\n/* Fit a linear model */\nregress mpg weight length foreign\n\n/* Print summary */\nestimates table\n\n\n\n\n\n\n\n\n\n\n\n#Fit a linear model\nmodel_lm <- lm(mpg ~ wt + qsec + vs, \n               data = df_my_data)\n\n#Print summary\nsummary(model_lm)"
   },
   {
     "objectID": "learn/rstudio/stata_to_r/index.html#logistic-model",
     "href": "learn/rstudio/stata_to_r/index.html#logistic-model",
     "title": "Making the Transition? A Guide for switching from Stata to R",
     "section": "Logistic Model",
-    "text": "Logistic Model\n\n\n\n\n\n\n\n/* Fit a logistic regression model */\nlogit foreign weight length\n\n/* Print summary */\nestimates table\n\n\n\n\n\n\n\n\n\n\n\n\n\n#Fit a logistic regression model\nmodel_log <- glm(vs ~ wt + qsec, \n                 data = df_my_data, \n                 family = binomial())\n\n#Print summary\nsummary(model)"
+    "text": "Logistic Model\n\n\n\n\n\n\n/* Fit a logistic regression model */\nlogit foreign weight length\n\n/* Print summary */\nestimates table\n\n\n\n\n\n\n\n\n\n\n\n#Fit a logistic regression model\nmodel_log <- glm(vs ~ wt + qsec, \n                 data = df_my_data, \n                 family = binomial())\n\n#Print summary\nsummary(model)"
   },
   {
     "objectID": "learn/rstudio/stata_to_r/index.html#poisson-model",
     "href": "learn/rstudio/stata_to_r/index.html#poisson-model",
     "title": "Making the Transition? A Guide for switching from Stata to R",
     "section": "Poisson Model",
-    "text": "Poisson Model\n\n\n\n\n\n\n\n/* Fit a Poisson regression model */\npoisson accidents weight length foreign\n\n/* Print summary */\nestimates table\n\n\n\n\n\n\n\n\n\n\n\n\n\n#Fit a Poisson regression model\nmodel_poiss <- glm(am ~ wt + hp, \n                   data = df_my_data, \n                   family = poisson())\n\n#Print summary\nsummary(model)"
+    "text": "Poisson Model\n\n\n\n\n\n\n/* Fit a Poisson regression model */\npoisson accidents weight length foreign\n\n/* Print summary */\nestimates table\n\n\n\n\n\n\n\n\n\n\n\n#Fit a Poisson regression model\nmodel_poiss <- glm(am ~ wt + hp, \n                   data = df_my_data, \n                   family = poisson())\n\n#Print summary\nsummary(model)"
   },
   {
     "objectID": "learn/rstudio/stata_to_r/index.html#scatter-plot",
     "href": "learn/rstudio/stata_to_r/index.html#scatter-plot",
     "title": "Making the Transition? A Guide for switching from Stata to R",
     "section": "Scatter plot",
-    "text": "Scatter plot\n\n\n\n\n\n\n\n/* Create scatter plot */\nscatter price mpg\n\n\n\n\n\n\n\n\n\n\n\n\n\n# Load data and ggplot2\nlibrary(ggplot2)\ndata(df_my_data)\n\n#Create scatter plot\nggplot(df_my_data, aes(x = mpg, y = wt)) + \n  geom_point() + #Here is the scatter\n  xlab(\"Miles per gallon\") +\n  ylab(\"Weight\")"
+    "text": "Scatter plot\n\n\n\n\n\n\n/* Create scatter plot */\nscatter price mpg\n\n\n\n\n\n\n\n\n\n\n\n# Load data and ggplot2\nlibrary(ggplot2)\ndata(df_my_data)\n\n#Create scatter plot\nggplot(df_my_data, aes(x = mpg, y = wt)) + \n  geom_point() + #Here is the scatter\n  xlab(\"Miles per gallon\") +\n  ylab(\"Weight\")"
   },
   {
     "objectID": "learn/rstudio/stata_to_r/index.html#line-plot",
     "href": "learn/rstudio/stata_to_r/index.html#line-plot",
     "title": "Making the Transition? A Guide for switching from Stata to R",
     "section": "Line plot",
-    "text": "Line plot\n\n\n\n\n\n\n\n/* Create Line plot */\ntwoway line le_w le_y, xlabel(1950(10)2010)\n\n\n\n\n\n\n\n\n\n\n\n\n\n# Load data and ggplot2\nlibrary(ggplot2)\ndata(df_my_data)\n\n#Create line plot\nggplot(df_my_data, aes(x = year, y = pop)) + \n  geom_line() + #Here is the line\n  xlab(\"Year\") +\n  ylab(\"Population\")"
+    "text": "Line plot\n\n\n\n\n\n\n/* Create Line plot */\ntwoway line le_w le_y, xlabel(1950(10)2010)\n\n\n\n\n\n\n\n\n\n\n\n# Load data and ggplot2\nlibrary(ggplot2)\ndata(df_my_data)\n\n#Create line plot\nggplot(df_my_data, aes(x = year, y = pop)) + \n  geom_line() + #Here is the line\n  xlab(\"Year\") +\n  ylab(\"Population\")"
   },
   {
     "objectID": "learn/rstudio/stata_to_r/index.html#bar-plot",
     "href": "learn/rstudio/stata_to_r/index.html#bar-plot",
     "title": "Making the Transition? A Guide for switching from Stata to R",
     "section": "Bar plot",
-    "text": "Bar plot\n\n\n\n\n\n\n\n/* Create a Bar plot */\ngraph bar (count) rep78, over(foreign)\n\n\n\n\n\n\n\n\n\n\n\n\n\n# Load data and ggplot2\nlibrary(ggplot2)\ndata(df_my_data)\n\n#Create bar chart\nggplot(data = df_my_data, \n       aes(x = factor(cyl))) +\n  geom_bar() + #Here is the bar\n  xlab(\"Number of cylinders\") +\n  ylab(\"Count\")\n\n\n\n \nI also want to provide a good cheat sheet that contains more information about the differences between Stata and R."
+    "text": "Bar plot\n\n\n\n\n\n\n/* Create a Bar plot */\ngraph bar (count) rep78, over(foreign)\n\n\n\n\n\n\n\n\n\n\n\n# Load data and ggplot2\nlibrary(ggplot2)\ndata(df_my_data)\n\n#Create bar chart\nggplot(data = df_my_data, \n       aes(x = factor(cyl))) +\n  geom_bar() + #Here is the bar\n  xlab(\"Number of cylinders\") +\n  ylab(\"Count\")\n\n\n\n \nI also want to provide a good cheat sheet that contains more information about the differences between Stata and R."
   },
   {
     "objectID": "learn/python.html",
@@ -516,6 +516,27 @@
     "title": "Learn R",
     "section": "",
     "text": "Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n  \n\n\n\n\n\nIf you use Stata for your analysis, but you are curious or want to switch to the R world, this is your guide for it.\n\n\n\n\nR\n\n\nStata\n\n\nTransition\n\n\n \n\n\n\n\nApr 23, 2023\n\n\nJorge Roa\n\n\n11 min\n\n\n\n\n\n\n  \n\n\n\n\n\nLearn the basic tools for scraping Twitter Data in R\n\n\n\n\nTwitter\n\n\nWebscraping\n\n\nText\n\n\n \n\n\n\n\nApr 18, 2023\n\n\nLukas Lehmann\n\n\n11 min\n\n\n\n\n\n\n  \n\n\n\n\n\nThis is why R is so powerful: all kind of objects and possibilites. Naming objects, understand structures is crucial to learn\n\n\n\n\nRstudio\n\n\nObjects\n\n\n \n\n\n\n\nApr 16, 2023\n\n\nJorge Roa\n\n\n17 min\n\n\n\n\n\n\n  \n\n\n\n\n\nLearn the basics of R: open a project, setting a working directory and navigate RStudio interface\n\n\n\n\nRstudio\n\n\nInterface\n\n\n \n\n\n\n\nApr 12, 2023\n\n\nJorge Roa\n\n\n8 min\n\n\n\n\n\n\n  \n\n\n\n\n\nUnlock the power of data analysis and statistical computing with R and RStudio! Whether you are a student of public policy or a seasoned professional.\n\n\n\n\nR\n\n\nRStudio\n\n\nAccesibility\n\n\nInstall\n\n\n \n\n\n\n\nMar 2, 2023\n\n\nJorge Roa\n\n\n2 min\n\n\n\n\n\n\n  \n\n\n\n\n\nMultithreading offers faster and more efficient data processing, allowing for quicker analysis of complex datasets.\n\n\n\n\nMultithread\n\n\nData table\n\n\n \n\n\n\n\nJul 28, 2022\n\n\nJorge Roa, Fernando Alarid-Escudero\n\n\n3 min\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "news/index.html",
+    "href": "news/index.html",
+    "title": "News",
+    "section": "",
+    "text": "Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\n\nTutorials, books, certifications, scripts, and all you need to start your journey in the coding world\n\n\n\nJun 24, 2023\n\n\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "news/welcome_website/index.html#what-we-offer",
+    "href": "news/welcome_website/index.html#what-we-offer",
+    "title": "Welcome to our new website: the Hertie Coding Club",
+    "section": "What we offer",
+    "text": "What we offer\nThe new website features a number of amazing features, including:\n\nA user-friendly interface.\nA comprehensive overview of our club’s mission and activities.\nA up-to-date listing of upcoming events and workshops.\nA section on resources, with links to helpful tutorials, books and certifications."
+  },
+  {
+    "objectID": "news/welcome_website/index.html#what-you-can-do",
+    "href": "news/welcome_website/index.html#what-you-can-do",
+    "title": "Welcome to our new website: the Hertie Coding Club",
+    "section": "What You Can Do",
+    "text": "What You Can Do\nThe new website allows you to:\n\nCode in R within our website.\nFind out about upcoming events and workshops\nAccess helpful materials, such as tutorials, documentation, and datasets\n\nWe hope you enjoy the new website!\nWe are excited to share the new website with the Hertie community and hope that you will find it a valuable resource. The website is a work in progress, and we will be adding new features and content in the future. If you have any feedback or suggestions, please do not hesitate to contact us.\nThank you for your continued support of the Hertie Coding Club!\nHappy coding!"
   },
   {
     "objectID": "members/statute/statute.html#section-1-eligibility",
@@ -656,6 +677,27 @@
     "title": "Aayran Salman",
     "section": "",
     "text": "I am a global citizen currently living in Berlin. I serve as the Director-General and President of the Global Citizenship Foundations in the EU and India. In addition, I have the privilege of being part of the International Advisory Board of Dublin City University’s Educational Disadvantage Centre. Currently, I am pursuing a Master of Public Policy degree at the Hertie School. Throughout my career, I have worked as an educator and social entrepreneur, with a strong passion for Hybrid Learning, Global Sustainability, Social and Emotional Learning, Debate Education, and Global Citizenship Education. Personally, I firmly believe in harnessing the power of data for the betterment of society."
+  },
+  {
+    "objectID": "about_us/hertieclubs/kinoclub/index.html",
+    "href": "about_us/hertieclubs/kinoclub/index.html",
+    "title": "Hertie School Kino Club",
+    "section": "",
+    "text": "Description: Kino Club gives students an easy introduction into the craft and power of cinema. From blockbusters to arthouse and from Asia to Europe, Kino Club will host diverse screenings and themed film festivals. The Club wants to show how film is approached differently throughout the world, how it shapes cultures, and what makes it so unique. Filmmakers and Professors in film will be invited for talks and Q&As. Students get the opportunity to share their own ideas and favourite topics in film by organizing their own screenings. Events will be held both at Hertie and externally.\nContact persons: Job Kemperman (Chairperson, 229889@students.hertie-school.org, +31639827571), Debarun Dutta (Treasurer, 224276@students.hertie-school.org, +491636195575)"
+  },
+  {
+    "objectID": "about_us/hertieclubs.html",
+    "href": "about_us/hertieclubs.html",
+    "title": "Hertie School Clubs",
+    "section": "",
+    "text": "Student clubs are the heart of extracurricular activity at the Hertie School. These student-led initiatives cater to a variety of cultural, political and social interests, whether playing badminton, discussing social innovation, sustainability and international political economy, or advocating for equal rights."
+  },
+  {
+    "objectID": "about_us/hertieclubs.html#hertie-school-clubs",
+    "href": "about_us/hertieclubs.html#hertie-school-clubs",
+    "title": "Hertie School Clubs",
+    "section": "Hertie School Clubs",
+    "text": "Hertie School Clubs"
   },
   {
     "objectID": "events/02_wrangle/index.html",
@@ -858,7 +900,14 @@
     "href": "material/Certifications/indexp.html#certifications",
     "title": "Certifications",
     "section": "Certifications",
-    "text": "Certifications\n\n\n   \n     \n     \n       Order By\n       Default\n         \n          Title\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nMicrosoft Data Anaylst Certification\n\n\nFree Courses in Story telling, Data modeling, Data visualization, Decision making, Data analysis in Power BI. You can pay for the certificate at the end if you want.\n\n\n\n\n\n\n\n\n\n\n\n\n\nGoogle Data Scientist Certification\n\n\nFree Certification Courses in Data Science using Python from Google\n\n\n\n\n\n\n\n\n\n\n\n\n\nCISCO Networking Academy\n\n\nPCAP: Programming Essentials in Python. Learn programming from scratch and master Python.\n\n\n\n\n\n\n\n\n\n\n\n\n\nfreeCodeCamp Certifications\n\n\nLearn to code — for free. Build projects. Earn certifications.\n\n\n\n\n\n\n\n\n\n\n\n\n\nIBM Data Analyst certification\n\n\nTry this course for free and get your certification by IBM in Data Analyst\n\n\n\n\n\n\n\nNo matching items"
+    "text": "Certifications\n\n\n   \n     \n     \n       Order By\n       Default\n         \n          Title\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nMicrosoft Data Analyst Certification\n\n\nFree Courses in Data modeling, Data visualization and others.\n\n\n\n\n\n\n\n\n\n\n\n\n\nGoogle Data Scientist Certification\n\n\nFree Certification Courses in Data Science using Python from Google\n\n\n\n\n\n\n\n\n\n\n\n\n\nCISCO Networking Academy\n\n\nPCAP: Programming Essentials in Python. Learn programming from scratch and master Python.\n\n\n\n\n\n\n\n\n\n\n\n\n\nfreeCodeCamp Certifications\n\n\nLearn to code — for free. Build projects. Earn certifications.\n\n\n\n\n\n\n\n\n\n\n\n\n\nIBM Data Analyst certification\n\n\nTry this course for free and get your certification by IBM in Data Analyst\n\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "material/Certifications/microsoft_ds/index.html",
+    "href": "material/Certifications/microsoft_ds/index.html",
+    "title": "Microsoft Data Analyst Certification",
+    "section": "",
+    "text": "“Become a Microsoft Power BI Data Analyst and demonstrate your skills in data analysis and visualization.\nThe Microsoft Power BI Data Analyst certification is a great way to show employers that you have the skills they need to help them make better decisions with data. The certification requires passing the PL-300 exam, which measures your ability to prepare data, model data, visualize and analyze data, and deploy and maintain assets.\nThe courses on Microsoft Learn are free, so you can start learning today. The learning paths cover the skills measured by the exam, and they include interactive exercises, videos, and practice exams.”\n\nThe courses on Microsoft Learn are free, but the certification exam costs $165 USD. The exam is available in multiple languages, and you can take it at a proctored testing center or online.\n\n\n\n\n  \n    \n      \n         1.- Microsoft data analytics\n        \n      \n    \n    \n    \n      \n         2.- Prepare data for analysis\n        \n      \n    \n    \n    \n      \n         3.- Model data in Power BI\n        \n      \n    \n    \n    \n      \n         4.- Visualize data in Power BI\n        \n      \n    \n    \n    \n      \n         5.- Data analysis in Power BI\n        \n      \n    \n    \n    \n      \n         6.- Manage workspaces in Power BI"
   },
   {
     "objectID": "material/Certifications/freecodecamp/index.html",
@@ -880,12 +929,5 @@
     "title": "CISCO Networking Academy",
     "section": "",
     "text": "This is a course offered by the CISCO Networking Academy. What I really like is that at the end it offers a proof of completion. This certification in combination with other tools it’s a good way to start with Python. Here I leave the summary of the CISCO website and the link as well.\n\n“How great would it be to write your own computer program? Python is a multi-paradigm programming language used by startups and tech giants like Google, Facebook, Netflix, and more. With intuitive, readable syntax, Python is a great first programming language to learn.\nProgramming skills open you up to careers in almost any industry and are required if you want to continue to more advanced and higher paying software development and engineering roles.\nThis course is a great place to start learning Python – no prior programming knowledge required. Completing the course earns you a Statement of Achievement. It is split into two parts preparing you for two certifications:\nPart 1 (PE1: 35 hours) prepares you for PCEP – Certified Entry-Level Python Programmer Certification. Part 2 (PE2: 40 hours) prepares you for PCAP – Certified Associate in Python Programming Certification.”\nYou’ll learn these core skills:\n\nThink algorithmically – how to analyze a problem and translate it for a computer to process.\nDesign, develop, and improve multi-module computer programs.\nAnalyze and model real-life problems in Object-Oriented Programming categories.\nUnderstand a programmer’s work in the software development process.\nLearn how a program is executed in a computer environment.\nGain skills to create and develop your own programming portfolio.\n\n\nCISCO Networking Academy\n\n\n\n\nGo to CISCO PCAP"
-  },
-  {
-    "objectID": "material/Certifications/microsoft_ds/index.html",
-    "href": "material/Certifications/microsoft_ds/index.html",
-    "title": "Microsoft Data Anaylst Certification",
-    "section": "",
-    "text": "“Google Digital Garage is a nonprofit program designed to help people improve their digital skills. It offers free training, courses and certifications via an online learning platform. Google Digital Garage was created by Google in 2015.Discover a range of free learning content designed to help your business or in your career. You can learn by selecting individual modules, or dive right in and take an entire course end-to-end.”\n\nThis certification is entirely free, and it consists of a series of four different courses that will strengthen your skills in data science using Python.\n\n\n\n\n  \n    \n      \n         1.- Python basics\n        \n      \n    \n    \n    \n      \n         2.- Data Science Foundations\n        \n      \n    \n    \n    \n      \n         3.- Data Science with Python\n        \n      \n    \n    \n    \n      \n         4.- ML Crash Course"
   }
 ]
