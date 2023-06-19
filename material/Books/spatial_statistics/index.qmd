@@ -1,0 +1,71 @@
+---
+title: '{{< animate fadeInDown "Spatial Statistics for Data Science: Theory and Practice with R"delay=.6s >}}'
+subtitle: '{{< animate fadeInDown "It provides a comprehensive introduction to spatial statistics, from the basics to advanced topics."delay=.6s >}}'
+author: ["Jorge Roa"]
+date: "06-19-2023"
+categories: ["R", "Spatial Analysis", "Spatial Statistics"]
+toc: true
+draft: false
+code-link: true
+comments: false
+title-block-banner: true
+image: images/bookcover.jpg
+page-layout: full
+include-in-header: meta.html
+filters:
+   - lightbox
+lightbox: 
+  match: auto
+  effect: fade
+  desc-position: left
+  css-class: "lightwidth"
+---
+
+
+<div class="books">
+
+![](images/bookcover.jpg){fig-align="center" width="300"}
+
+</div>
+
+<hr class="sep-2" />
+
+<h1 class="book_aut"> Author
+  <span style="font-size: 1em;">Paula Moraga</span>
+</h1>
+
+<hr class="sep-2" />
+
+As you know, data science is a rapidly growing field, and one of the most important aspects of data science is spatial data analysis. Spatial data analysis is the process of analyzing data that is located in space. This type of data can be used to answer a wide variety of questions, such as:
+
+- How does the distribution of crime vary across a city?
+- What are the factors that contribute to the spread of a disease?
+- How can we predict the location of future earthquakes?
+
+
+Spatial statistics is a branch of statistics that is specifically designed for the analysis of spatial data. This book provides a comprehensive introduction to spatial statistics, from the basics to advanced topics. It also uses the R programming language, which is a powerful and flexible tool for spatial data analysis.
+
+In this book, you will learn about:
+
+- The basics of spatial statistics, such as spatial autocorrelation and spatial regression.
+- How to use the R programming language to implement spatial statistical methods.
+- How to use spatial statistics to solve real-world problems.
+
+
+
+<center>
+<form action="https://www.paulamoraga.com/book-spatial/index.html">
+<button class="btn-hover color-9" target="_blank">
+Go to Spatial Statistics
+</button>
+</form>
+</center>
+
+
+<hr class="sep-2" />
+
+::: {.callout-tip}
+## Cite
+Moraga, P. (2023). Spatial Statistics for Data Science: Theory and Practice with R. Available at: https://www.paulamoraga.com/book-spatial/index.html
+:::
+
