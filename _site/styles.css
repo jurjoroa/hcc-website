@@ -1182,7 +1182,7 @@ display: grid;
 }
 
 .bio {
-  margin-top: 330px;
+  margin-top: 25vh;
   line-height: 1.8; 
 }
 
@@ -1221,7 +1221,7 @@ display: grid;
   position: relative;
 }
 .bio {
-  margin-top: 380px;
+  margin-top: 37vh;
   font-size: 1rem;
   line-height: 1.2; 
   position: relative;
@@ -1233,7 +1233,7 @@ display: grid;
   
   .card .text_grid{
   margin-top: -200px;
-  font-size: .8rem;
+  font-size: .7rem;
   position: relative;
 }
 
@@ -1394,20 +1394,20 @@ display: grid;
 
 
 .user-container .card:nth-child(1) {
-  background: url("Presentation/images/lukas.jpeg") no-repeat;
+  background: url("members_images/giorgiocoppola.jpg") no-repeat;
   background-size: 400px 400px;
   background-position: center;
 }
 
 .user-container .card:nth-child(2) {
-  background: url("Presentation/images/lukas.jpeg") no-repeat;
+  background: url("members_images/tushiagarwal.jpeg") no-repeat;
   background-size: 400px 400px;
   background-position: center;
 }
 
 .user-container .card:nth-child(3) {
-  background: url("Presentation/images/lukas.jpeg") no-repeat;
-  background-size: 400px 400px;
+  background: url("members_images/issacjohn.jpg") no-repeat;
+  background-size: 350px 450px;
   background-position: center;
 }
 
@@ -1450,7 +1450,11 @@ display: grid;
 }
 
 
-
+.user-container #simonmunzert.card_team {
+  background: url("members/team/team/simon_munzert/simonmunzert.jpg") no-repeat;
+  background-size: 300px 400px;
+  background-position: center;
+}
 
 .user-container #jorgeroa.card_team {
   background: url("members/team/team/jorge_roa/jorgeroa.jpeg") no-repeat;
@@ -2684,7 +2688,7 @@ a.about-link:nth-child(5):hover {
 }
 
 
-/* apply style to the fifth icon */
+/* apply style to the sixth icon */
 a.about-link:nth-child(6){
   background-color: #ff8000;
   border: 1px solid #ff8000 !important;
@@ -2703,6 +2707,44 @@ a.about-link:nth-child(6):hover {
 
 
 
+/* apply style to the seventh icon */
+a.about-link:nth-child(7){
+  background-color: #B2182B;
+  border: 1px solid #B2182B !important;
+  border-radius: 20px !important;
+  transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275), border-color 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
+}
+
+a.about-link:nth-child(7):hover {
+  transform: scale(1.1);
+  border-color: #B2182B; 
+  cursor: pointer;
+  background-color: #B2182B;
+  box-shadow: 0px 4px 6px #B2182B;
+  transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  
+}
+
+
+/* apply style to the eigth icon */
+a.about-link:nth-child(8){
+  background-color: #A25416;
+  border: 1px solid #A25416 !important;
+  border-radius: 20px !important;
+  transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275), border-color 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
+}
+
+a.about-link:nth-child(8):hover {
+  transform: scale(1.1);
+  border-color: #A25416; 
+  cursor: pointer;
+  background-color: #A25416;
+  box-shadow: 0px 4px 6px #A25416;
+  transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  
+}
+
+
 
 div.about-entity .title{
   color: black !important;
@@ -2712,14 +2754,14 @@ div.about-entity .title{
   position: relative;
   background: white;
   border-radius: 0% 0% 0% 0% / 0% 0% 0% 0%;
-  box-shadow: 20px 20px #1C93E4;
+  box-shadow: 1em 1em 2em 0em #c0041c;
   transition: all .4s ease;
 }
 
 .rounded:hover {
   border-radius: 0% 0% 50% 50% / 0% 0% 5% 5%;
   transform: scale(1.1);
-  box-shadow: 10px 10px #BA0020;
+  box-shadow: 1em 1em 2em 0em #004e92;
   transition: all .4s ease;
 }
 
@@ -2744,7 +2786,7 @@ div.about-entity .title{
   width: 100%;
   height: 100%;
   border-radius: 0% 0% 50% 50% / 0% 0% 5% 5%;
-  box-shadow: 10px 10px #BA0020;
+  box-shadow: .5em .5em 1em 0em #c0041c;
   opacity: 0.5;
   transition: all .4s ease;
 }

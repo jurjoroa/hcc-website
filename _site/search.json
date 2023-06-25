@@ -557,28 +557,28 @@
     "href": "members/statute/statute.html#section-1-composition",
     "title": "Hertie Coding Club Statutes",
     "section": "Section 1: Composition",
-    "text": "Section 1: Composition\nThe Executive Committee shall consist of the following positions: President, Vice President, Secretary, Treasurer, and Communications Officer."
+    "text": "Section 1: Composition\nThe Executive Committee shall consist of the following positions: President, Vice President, Treasurer, and Communications Officer."
   },
   {
     "objectID": "members/statute/statute.html#section-2-duties",
     "href": "members/statute/statute.html#section-2-duties",
     "title": "Hertie Coding Club Statutes",
     "section": "Section 2: Duties",
-    "text": "Section 2: Duties\n\nPresident: Oversee club operations, lead meetings, and represent the club within the Hertie community and beyond.\nVice President: Assist the President and assume their duties in their absence, coordinate club activities, and manage subcommittees.\nSecretary: Maintain club records, meeting minutes, and membership information; schedule meetings and notify members of upcoming events.\nTreasurer: Manage club finances, including budgeting, fundraising, and allocation of resources.\nCommunications Officer: Oversee club communications, promote events and activities, and maintain the club’s online presence."
+    "text": "Section 2: Duties\n\nPresident: Oversee club operations, lead meetings, and represent the club within the Hertie community and beyond.\nVice President: Assist the President and assume their duties in their absence, coordinate club activities, and manage subcommittees.\nTreasurer: Manage club finances, including budgeting, fundraising, and allocation of resources.\nCommunications Officer: Oversee club communications, promote events and activities, and maintain the club’s online presence."
   },
   {
     "objectID": "members/statute/statute.html#section-3-elections",
     "href": "members/statute/statute.html#section-3-elections",
     "title": "Hertie Coding Club Statutes",
     "section": "Section 3: Elections",
-    "text": "Section 3: Elections\nElections shall be held annually during the last meeting of the academic year. All club members are eligible to run for a position and vote in the election. The candidate receiving the most votes for each position shall be elected."
+    "text": "Section 3: Elections\nElections shall be held annually during the last meeting of the academic year. All club members are eligible to run for a position. The new memebers will be choose by the President at that time."
   },
   {
     "objectID": "members/statute/statute.html#section-1-frequency",
     "href": "members/statute/statute.html#section-1-frequency",
     "title": "Hertie Coding Club Statutes",
     "section": "Section 1: Frequency",
-    "text": "Section 1: Frequency\nRegular club meetings shall be held weekly during the academic year. Additional meetings, workshops, or events may be scheduled as needed."
+    "text": "Section 1: Frequency\nRegular club meetings shall be held at least once per month during the academic year. Additional meetings, workshops, or events may be scheduled as needed."
   },
   {
     "objectID": "members/statute/statute.html#section-2-quorum",
@@ -613,7 +613,7 @@
     "href": "members/team/team.html",
     "title": "Team",
     "section": "",
-    "text": "Academic Advisors\n\n\n\nAcademic Advisors\n\n\n\n\n\n\n\n\n\n\n\nInstructors\n\n\n\nInstructors\n\n\n\n\n\n      \n\n\n    \n\n        \n        \n        \n           Jorge Roa\n        \n        \n        \n        \n        \n           Lukas Warode \n        \n        \n        \n        \n        \n           Valeria Gracia\n        \n        \n        \n        \n        \n           Carmen Garro\n        \n        \n        \n\n        \n        \n        \n           Rodrigo Dornelles\n        \n        \n        \n        \n        \n          Gabriel Zech\n        \n        \n        \n        \n        \n          Lukas Lehmann\n        \n        \n\n    \n\n \n\n\nStaff\n\n\n\nStaff\n\n\n\n\n\n      \n\n\n    \n\n        \n        \n        \n           Aayran Salman"
+    "text": "Academic Advisors\n\n\n\nAcademic Advisors\n\n\n\n\n\n      \n\n\n    \n\n        \n        \n        \n           Simon Munzert\n        \n        \n\n    \n\n \n\n\n\n\n\n\n\nInstructors\n\n\n\nInstructors\n\n\n\n\n\n      \n\n\n    \n\n        \n        \n        \n           Jorge Roa\n        \n        \n        \n        \n        \n           Lukas Warode \n        \n        \n        \n        \n        \n           Valeria Gracia\n        \n        \n        \n        \n        \n           Carmen Garro\n        \n        \n        \n\n        \n        \n        \n           Rodrigo Dornelles\n        \n        \n        \n        \n        \n          Gabriel Zech\n        \n        \n        \n        \n        \n          Lukas Lehmann\n        \n        \n\n    \n\n \n\n\nStaff\n\n\n\nStaff\n\n\n\n\n\n      \n\n\n    \n\n        \n        \n        \n           Aayran Salman"
   },
   {
     "objectID": "members/team/team/gabriel_zech/gabrielzech.html",
@@ -635,6 +635,13 @@
     "title": "Rodrigo Dornelles",
     "section": "",
     "text": "Initially a lawyer with experience in criminal law, strategic litigation, and public law, I’ve now developed a strong passion for harnessing data analysis and data science to serve the public good. My diverse roles have included Research Assistant at the Hertie School Data Science Lab, Visiting Scholar at UC Berkeley, Attorney at Conectas Human Rights, and Chief Advisor at the Penitentiary Administration in Maranhão, Brazil.\nMy multidisciplinary background in law, public policy, and public management drives me to address complex social challenges such as public security, access to justice, and enhancing government effectiveness. I’m particularly fascinated with natural language processing (NLP), data wrangling, and web scraping as they enable me to extract valuable insights from intricate data sources. I’m always eager to collaborate with like-minded professionals to create innovative solutions that leave a lasting, positive impact on communities worldwide, with a special focus on Latin America."
+  },
+  {
+    "objectID": "members/team/team/simon_munzert/simonmunzert.html",
+    "href": "members/team/team/simon_munzert/simonmunzert.html",
+    "title": "Simon Munzert",
+    "section": "",
+    "text": "About Me \n\nI’m Professor of Data Science and Public Policy at the Hertie School in Berlin and Director of the Data Science Lab. My research focuses on public opinion, attitude formation in the digital age, and the use of online data in social research. I use experimental methods, online data, and innovative measurement strategies to study how people act and think, politically.\n\n\nCurrent research \n\n\nThe Lancet Countdown on health and climate change. (Working group 5: public and political engagement)\nGlobal Affective partisan polarization and moral dilemmas during the COVID-19 pandemic (joint project with Lukas Stoetzer et al.)\nGlobal Preferences for Online Hate Speech Regulation (joint project with Richard Traunmüller, funded by Facebook Research)\nMedia Exposure and Opinion Formation in an Age of Information Overload (joint project with Pablo Barberá, Andrew Guess and JungHwan Yang, funded by the Volkswagen Foundation)\nCitizen and Elite Activity on the Wikipedia Market Place of Political Information (funded by the Daimler and Benz Foundation)\n\n\n\nPublications \n\nSee here for an overview of my current research and publications.\n\nAndrew Guess et al. The consequences of online partisan media. PNAS.\nSascha Göbel and Simon Munzert. The Comparative Legislators Database. British Journal of Political Science.\nSimon Munzert et al. Tracking and Promoting the Usage of a COVID-19 Contact Tracing App. Nature Human Behaviour.\nSimon Munzert et al. Do Online Voter Guides Empower Citizens? Evidence from a Field Experiment with Digital Trace Data. Public Opinion Quarterly.\n\n\n\nTeaching \n\nI regularly teach graduate students about causal inference, online data collection, and computational social science in general. You can find syllabi here.\n\nAutomated Data Collection with R\n\nTogether with Christian Rubba, Peter Meißner and Dominic Nyhuis, I’ve written a book, Automated Data Collection with R - A Practical Guide to Web Scraping and Text Mining. The book has been published at John Wiley & Sons in 2015."
   },
   {
     "objectID": "members/team/team/lukas_lehmann/lukaslehmann.html",

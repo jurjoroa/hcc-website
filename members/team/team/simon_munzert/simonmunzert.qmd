@@ -1,0 +1,95 @@
+---
+title: "Simon Munzert"
+page-layout: full
+image: simonmunzert.jpg
+filters:
+   - lightbox
+lightbox: 
+  match: auto
+  effect: fade
+  desc-position: left
+  css-class: "lightwidth"
+about:
+  template: trestles
+  image-shape: rounded
+  links:
+    - text: "{{< fa brands linkedin >}} LinkedIn"
+      url: "https://de.linkedin.com/in/simon-munzert"
+    - text: "{{< fa brands github >}} GitHub"
+      url: "https://github.com/simonmunzert"
+    - text: "{{< fa brands twitter >}} Twitter"
+      url: "https://twitter.com/simonsaysnothin"
+    - text: "{{< fa brands orcid >}} ORCID"
+      url: "https://orcid.org/0000-0003-4760-367X"
+    - text: "{{< fa solid envelopes-bulk >}} Mail"
+      url: "mailto:munzert@hertie-school.org"
+    - text: "{{< fa solid graduation-cap >}} Google Scholar"
+      url: "https://scholar.google.com/citations?user=hIMdRkMAAAAJ"
+    - text: "{{< fa solid globe >}} Website"
+      url: "https://simonmunzert.com"
+    - text: "{{< fa solid address-card >}} Curriculum Vitae"
+      url: "https://simonmunzert.com/cv/cv-munzert.pdf"
+comments: false
+---
+
+<style>
+  body {
+  background: linear-gradient(to right, #000428, #004e92);
+  font-size: 15px;
+}
+
+ .level1 h1, .level1 h3{
+  color: white !important;
+}
+  
+</style>
+
+# About Me {{< fa regular address-card >}}
+
+<hr>
+
+I'm Professor of Data Science and Public Policy at the Hertie School in Berlin and Director of the Data Science Lab. My research focuses on public opinion, attitude formation in the digital age, and the use of online data in social research. I use experimental methods, online data, and innovative measurement strategies to study how people act and think, politically.
+
+
+
+# Current research {{< fa solid pen-fancy >}}
+
+<hr>
+
+- [The Lancet Countdown on health and climate change](https://www.thelancet.com/countdown-health-climate). (Working group 5: public and political engagement)
+
+- [Global Affective partisan polarization and moral dilemmas during the COVID-19 pandemic](https://osf.io/r32fa/) (joint project with Lukas Stoetzer et al.)
+
+- [Global Preferences for Online Hate Speech Regulation](https://research.fb.com/blog/2020/02/announcing-winners-content-governance-rfp/) (joint project with Richard Traunmüller, funded by Facebook Research)
+
+- [Media Exposure and Opinion Formation in an Age of Information Overload](https://simonmunzert.github.io/meof/) (joint project with Pablo Barberá, Andrew Guess and JungHwan Yang, funded by the Volkswagen Foundation)
+
+- [Citizen and Elite Activity on the Wikipedia Market Place of Political Information](https://www.daimler-benz-stiftung.de/cms/nachwuchs/stipendienprogramm-fuer-postdoktoranden/750-stipendiaten-2017.html) (funded by the Daimler and Benz Foundation)
+
+
+
+# Publications {{< fa solid landmark >}}
+
+<hr>
+
+See [here](https://simonmunzert.com/publications.html) for an overview of my current research and publications.
+
+- Andrew Guess et al. [The consequences of online partisan media](https://www.pnas.org/content/118/14/e2013464118). *PNAS*. 
+
+- Sascha Göbel and Simon Munzert. [The Comparative Legislators Database](https://www.cambridge.org/core/journals/british-journal-of-political-science/article/abs/comparative-legislators-database/D28BB58A8B2C08C8593DB741F42C18B2). *British Journal of Political Science.*
+
+- Simon Munzert et al. [Tracking and Promoting the Usage of a COVID-19 Contact Tracing App](https://www.nature.com/articles/s41562-020-01044-x). *Nature Human Behaviour.*
+
+- Simon Munzert et al. [Do Online Voter Guides Empower Citizens? Evidence from a Field Experiment with Digital Trace Data](https://academic.oup.com/poq/advance-article/doi/10.1093/poq/nfaa037/6104133). *Public Opinion Quarterly.*
+
+
+
+# Teaching {{< fa solid person-chalkboard >}}
+
+<hr>
+
+I regularly teach graduate students about causal inference, online data collection, and computational social science in general. You can find syllabi [here](https://simonmunzert.com/teaching.html).
+
+### Automated Data Collection with R 
+
+- Together with Christian Rubba, [Peter Meißner](https://petermeissner.de/) and [Dominic Nyhuis](https://dominicnyhuis.com/), I've written a book, Automated Data Collection with R - A Practical Guide to Web Scraping and Text Mining. The [book](http://www.r-datacollection.com/) has been published at John Wiley & Sons in 2015.

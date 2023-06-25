@@ -58,18 +58,17 @@ Members are expected to actively participate in club activities, contribute to a
 <hr>
 
 ## Section 1: Composition {style="color: white; text-align: center;"}
-The Executive Committee shall consist of the following positions: President, Vice President, Secretary, Treasurer, and Communications Officer.
+The Executive Committee shall consist of the following positions: President, Vice President, Treasurer, and Communications Officer.
 
 ## Section 2: Duties {style="color: white; text-align: center;"}
 
 - President: Oversee club operations, lead meetings, and represent the club within the Hertie community and beyond.
 - Vice President: Assist the President and assume their duties in their absence, coordinate club activities, and manage subcommittees.
-- Secretary: Maintain club records, meeting minutes, and membership information; schedule meetings and notify members of upcoming events.
 - Treasurer: Manage club finances, including budgeting, fundraising, and allocation of resources.
 - Communications Officer: Oversee club communications, promote events and activities, and maintain the club's online presence.
 
 ## Section 3: Elections {style="color: white; text-align: center;"}
-Elections shall be held annually during the last meeting of the academic year. All club members are eligible to run for a position and vote in the election. The candidate receiving the most votes for each position shall be elected.
+Elections shall be held annually during the last meeting of the academic year. All club members are eligible to run for a position. The new memebers will be choose by the President at that time. 
 
  
 
@@ -78,18 +77,10 @@ Elections shall be held annually during the last meeting of the academic year. A
 <hr>
 
 ## Section 1: Frequency {style="color: white; text-align: center; "}
-Regular club meetings shall be held weekly during the academic year. Additional meetings, workshops, or events may be scheduled as needed.
+Regular club meetings shall be held at least once per month during the academic year. Additional meetings, workshops, or events may be scheduled as needed.
 
 ## Section 2: Quorum {style="color: white; text-align: center;"}
 A quorum shall consist of at least 50% of the club's active membership. Decisions shall be made by a majority vote of members present at a meeting with a quorum.
-
- 
-
-# Article VI: Subcommittees {style="color: white; text-align: center;"}
-
-<hr>
-
-Subcommittees may be formed for specific purposes, such as organizing events, developing curriculum, or managing club projects. Subcommittee membership is open to all club members.
 
  
 
