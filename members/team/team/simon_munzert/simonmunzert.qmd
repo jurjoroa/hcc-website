@@ -41,6 +41,10 @@ comments: false
  .level1 h1, .level1 h3{
   color: white !important;
 }
+
+a{
+color: #fb1433 !important;
+}
   
 </style>
 
@@ -74,13 +78,13 @@ I'm Professor of Data Science and Public Policy at the Hertie School in Berlin a
 
 See [here](https://simonmunzert.com/publications.html) for an overview of my current research and publications.
 
-- Andrew Guess et al. [The consequences of online partisan media](https://www.pnas.org/content/118/14/e2013464118). *PNAS*. 
+- {{< fa solid file-lines >}} Andrew Guess et al. [The consequences of online partisan media](https://www.pnas.org/content/118/14/e2013464118). *PNAS*. 
 
-- Sascha Göbel and Simon Munzert. [The Comparative Legislators Database](https://www.cambridge.org/core/journals/british-journal-of-political-science/article/abs/comparative-legislators-database/D28BB58A8B2C08C8593DB741F42C18B2). *British Journal of Political Science.*
+- {{< fa solid file-lines >}} Sascha Göbel and Simon Munzert. [The Comparative Legislators Database](https://www.cambridge.org/core/journals/british-journal-of-political-science/article/abs/comparative-legislators-database/D28BB58A8B2C08C8593DB741F42C18B2). *British Journal of Political Science.*
 
-- Simon Munzert et al. [Tracking and Promoting the Usage of a COVID-19 Contact Tracing App](https://www.nature.com/articles/s41562-020-01044-x). *Nature Human Behaviour.*
+- {{< fa solid file-lines >}} Simon Munzert et al. [Tracking and Promoting the Usage of a COVID-19 Contact Tracing App](https://www.nature.com/articles/s41562-020-01044-x). *Nature Human Behaviour.*
 
-- Simon Munzert et al. [Do Online Voter Guides Empower Citizens? Evidence from a Field Experiment with Digital Trace Data](https://academic.oup.com/poq/advance-article/doi/10.1093/poq/nfaa037/6104133). *Public Opinion Quarterly.*
+- {{< fa solid file-lines >}} Simon Munzert et al. [Do Online Voter Guides Empower Citizens? Evidence from a Field Experiment with Digital Trace Data](https://academic.oup.com/poq/advance-article/doi/10.1093/poq/nfaa037/6104133). *Public Opinion Quarterly.*
 
 
 
