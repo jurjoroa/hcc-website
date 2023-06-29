@@ -1178,7 +1178,8 @@ display: grid;
 .user-content {
   opacity: 0;
   transition: all 0.5s ease-in-out;
-  line-height: 1.2; 
+  line-height: 1.2;
+  height: auto; 
 }
 
 .bio {
@@ -1360,7 +1361,6 @@ display: grid;
   background-color: #ffffff;
   border-radius: 5px;
   transition: all 0.5s ease-in-out;
-  height: 100%;
   width: 100%;
 }
 .bio {

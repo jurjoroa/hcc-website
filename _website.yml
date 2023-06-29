@@ -37,8 +37,8 @@ website:
         menu:
           - text: "{{< fa solid person-chalkboard >}} Team"
             href: members/team/team.qmd
-          - text: "{{< fa solid users-rectangle >}} Club Members"
-            href: members/members/members.qmd
+         # - text: "{{< fa solid users-rectangle >}} Club Members"
+         #   href: members/members/members.qmd
           - text: "{{< fa solid scale-balanced >}} Club Statutes"
             href: members/statute/statute.qmd
       - icon: mortarboard-fill  
