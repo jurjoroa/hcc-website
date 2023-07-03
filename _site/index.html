@@ -32,8 +32,6 @@ ul.task-list li input[type="checkbox"] {
 <link href="./images/hcc.png" rel="icon" type="image/png">
 <script src="site_libs/quarto-listing/list.min.js"></script>
 <script src="site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="site_libs/cookie-consent/cookie-consent.js"></script>
-<link href="site_libs/cookie-consent/cookie-consent.css" rel="stylesheet">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -77,10 +75,10 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: ['listing-image','listing-date','listing-title','listing-subtitle','listing-categories','listing-author','listing-reading-time',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      page: 3,
+      valueNames: ['listing-image','listing-title','listing-author',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      page: 2,
     pagination: { item: "<li class='page-item'><a class='page page-link' href='#'></a></li>" },
-      searchColumns: ["listing-date","listing-title","listing-author","listing-subtitle","listing-image","listing-description"],
+      searchColumns: ["listing-title","listing-author","listing-date","listing-image","listing-description"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -106,7 +104,7 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: ['listing-image','listing-date','listing-title',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      valueNames: ['listing-image','listing-title',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
       page: 2,
     pagination: { item: "<li class='page-item'><a class='page page-link' href='#'></a></li>" },
       searchColumns: ["listing-title","listing-author","listing-date","listing-image","listing-description"],
@@ -215,30 +213,13 @@ ul.task-list li input[type="checkbox"] {
   </script>
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-HJEMN0LJY7"></script>
 
-<script type="text/plain" cookie-consent="tracking">
+<script type="text/javascript">
 
 window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 gtag('config', 'G-HJEMN0LJY7', { 'anonymize_ip': true});
 </script>
-
-<script type="text/javascript" charset="UTF-8">
-document.addEventListener('DOMContentLoaded', function () {
-cookieconsent.run({
-  "notice_banner_type":"interstitial",
-  "consent_type":"express",
-  "palette":"dark",
-  "language":"en",
-  "page_load_consent_levels":["strictly-necessary"],
-  "notice_banner_reject_button_hide":false,
-  "preferences_center_close_button_hide":false,
-  "website_name":"",
-"website_privacy_policy_url":"www.hertiecodingclub.com"
-  });
-});
-</script> 
-  
 <style>html{ scroll-behavior: smooth; }</style>
 <!-- Primary Meta Tags -->
 <title>Hertie Coding Club - Everybody can learn to code</title>
@@ -250,12 +231,6 @@ cookieconsent.run({
 <meta property="og:url" content="https://www.hertiecodingclub.com">
 <meta property="og:title" content="Hertie Coding Club - Home">
 <meta property="og:description" content="Welcome to the Hertie Coding Club! Our goal as a club is to help everyone and between us learn coding skills and show that coding is for everyone, no matter our background.">
-<style>:root{--animate-duration:3s;--animate-delay:2s;--animate-repeat:1}</style>
-<style>:root{--animate-duration:3s;--animate-delay:2s;--animate-repeat:1}</style>
-<style>:root{--animate-duration:3s;--animate-delay:2s;--animate-repeat:1}</style>
-<style>:root{--animate-duration:3s;--animate-delay:2s;--animate-repeat:1}</style>
-<style>:root{--animate-duration:3s;--animate-delay:2s;--animate-repeat:1}</style>
-<style>:root{--animate-duration:3s;--animate-delay:2s;--animate-repeat:1}</style>
 <style>:root{--animate-duration:3s;--animate-delay:2s;--animate-repeat:1}</style>
 <style>:root{--animate-duration:3s;--animate-delay:2s;--animate-repeat:1}</style>
 <style>:root{--animate-duration:3s;--animate-delay:2s;--animate-repeat:1}</style>
@@ -662,6 +637,9 @@ color: grey">
 Coding is <span class="txt-rotate" data-period="2000" data-rotate="[ &quot;teamwork and growth.&quot;, &quot;potential unlocked.&quot;, &quot;empowering.&quot;, &quot;enjoyable and engaging.&quot;, &quot;for everyone.&quot; ]"></span>
 </h1>
 </div>
+<div class="layout_grid_learnr2">
+
+</div>
 <div class="layout_grid_learnr">
 <div class="social-media">
 <h1 class="scroll-text back_resource" style="display: flex; align-items: center; justify-content: center; border-radius: 10px; font-weight: 700;
@@ -671,7 +649,7 @@ Coding is <span class="txt-rotate" data-period="2000" data-rotate="[ &quot;teamw
 Resources
 </h1>
 <div id="listing-Resources" class="quarto-listing quarto-listing-container-grid">
-<div class="list grid quarto-listing-cols-1">
+<div class="list grid quarto-listing-cols-2">
 <div class="g-col-1" data-index="0" data-categories="edX,Learning,R,Python" data-listing-date-sort="1680678000000" data-listing-file-modified-sort="1685762184871" data-listing-reading-time-sort="0.58">
 <a href="./material/Resources/edx/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
@@ -740,242 +718,122 @@ No matching items
 <p><lord-icon src="https://cdn.lordicon.com/azartkjs.json" trigger="loop" delay="250" style="width:100px;height:100px"> </lord-icon></p>
 <p>Learn R</p>
 </h1>
-<div class="image-grid">
-<div id="listing-learn" class="quarto-listing quarto-listing-container-default">
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="R,Stata,Transition" data-listing-date-sort="1682233200000" data-listing-file-modified-sort="1685762184848" data-listing-reading-time-sort="11.26">
-<div class="thumbnail">
-<p><a href="./learn/rstudio/stata_to_r/index.html"> <img src="./learn/rstudio/stata_to_r/images/rstudio_stata.png" class="thumnail-image"> </a></p>
-</div>
-<div class="body">
-<a href="./learn/rstudio/stata_to_r/index.html">
-<h3 class="no-anchor listing-title">
+<p>Learn R</p>
+<div id="listing-learn" class="quarto-listing quarto-listing-container-grid">
+<div class="list grid quarto-listing-cols-2">
+<div class="g-col-1" data-index="0" data-categories="R,Stata,Transition" data-listing-date-sort="1682233200000" data-listing-file-modified-sort="1685762184848" data-listing-reading-time-sort="11.26">
+<a href="./learn/rstudio/stata_to_r/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img src="./learn/rstudio/stata_to_r/images/rstudio_stata.png" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
 <p><span class="animate__animated animate__fadeInDown animate__delay-.6s" style="display: inline-block;">Making the Transition? A Guide for switching from Stata to R</span></p>
-</h3>
-<div class="listing-subtitle">
-<p><span class="animate__animated animate__fadeInDown animate__delay-.6s" style="display: inline-block;">If you use Stata for your analysis, but you are curious or want to switch to the R world, this is your guide for it.</span></p>
-</div>
-</a>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('R'); return false;">
-R
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Stata'); return false;">
-Stata
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Transition'); return false;">
-Transition
-</div>
-</div>
-<a href="./learn/rstudio/stata_to_r/index.html"> </a>
-</div>
-<div class="metadata">
-<a href="./learn/rstudio/stata_to_r/index.html">
-<div class="listing-date">
-Apr 23, 2023
-</div>
+</h5>
+<div class="card-attribution card-text-small start">
 <div class="listing-author">
 Jorge Roa
 </div>
-<div class="listing-reading-time">
-11 min
+</div>
+</div>
 </div>
 </a>
 </div>
-</div>
-<div class="quarto-post image-right" data-index="1" data-categories="Twitter,Webscraping,Text" data-listing-date-sort="1681801200000" data-listing-file-modified-sort="1685762184828" data-listing-reading-time-sort="11.905">
-<div class="thumbnail">
-<p><a href="./learn/rstudio/social_media_scraping/index.html"> <img src="./learn/rstudio/social_media_scraping/images/Social.png" class="thumnail-image"> </a></p>
-</div>
-<div class="body">
-<a href="./learn/rstudio/social_media_scraping/index.html">
-<h3 class="no-anchor listing-title">
+<div class="g-col-1" data-index="1" data-categories="Twitter,Webscraping,Text" data-listing-date-sort="1681801200000" data-listing-file-modified-sort="1685762184828" data-listing-reading-time-sort="11.905">
+<a href="./learn/rstudio/social_media_scraping/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img src="./learn/rstudio/social_media_scraping/images/Social.png" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
 <p><span class="animate__animated animate__fadeInDown animate__delay-.6s" style="display: inline-block;">Introduction to Social Media Scraping</span></p>
-</h3>
-<div class="listing-subtitle">
-<p><span class="animate__animated animate__fadeInDown animate__delay-.6s" style="display: inline-block;">Learn the basic tools for scraping Twitter Data in R</span></p>
-</div>
-</a>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Twitter'); return false;">
-Twitter
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Webscraping'); return false;">
-Webscraping
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Text'); return false;">
-Text
-</div>
-</div>
-<a href="./learn/rstudio/social_media_scraping/index.html"> </a>
-</div>
-<div class="metadata">
-<a href="./learn/rstudio/social_media_scraping/index.html">
-<div class="listing-date">
-Apr 18, 2023
-</div>
+</h5>
+<div class="card-attribution card-text-small start">
 <div class="listing-author">
 Lukas Lehmann
 </div>
-<div class="listing-reading-time">
-11 min
+</div>
+</div>
 </div>
 </a>
 </div>
-</div>
-<div class="quarto-post image-right" data-index="2" data-categories="Rstudio,Objects" data-listing-date-sort="1681628400000" data-listing-file-modified-sort="1686514117342" data-listing-reading-time-sort="17.685">
-<div class="thumbnail">
-<p><a href="./learn/rstudio/objects/index.html"> <img src="./learn/rstudio/objects/images/objects.png" class="thumnail-image"> </a></p>
-</div>
-<div class="body">
-<a href="./learn/rstudio/objects/index.html">
-<h3 class="no-anchor listing-title">
+<div class="g-col-1" data-index="2" data-categories="Rstudio,Objects" data-listing-date-sort="1681628400000" data-listing-file-modified-sort="1686514117342" data-listing-reading-time-sort="17.685">
+<a href="./learn/rstudio/objects/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img data-src="./learn/rstudio/objects/images/objects.png" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
 <p><span class="animate__animated animate__fadeInDown animate__delay-.6s" style="display: inline-block;">Understanding R Objects: Naming, Data Structures and Classes in R</span></p>
-</h3>
-<div class="listing-subtitle">
-<p><span class="animate__animated animate__fadeInDown animate__delay-.6s" style="display: inline-block;">This is why R is so powerful: all kind of objects and possibilites. Naming objects, understand structures is crucial to learn</span></p>
-</div>
-</a>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Rstudio'); return false;">
-Rstudio
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Objects'); return false;">
-Objects
-</div>
-</div>
-<a href="./learn/rstudio/objects/index.html"> </a>
-</div>
-<div class="metadata">
-<a href="./learn/rstudio/objects/index.html">
-<div class="listing-date">
-Apr 16, 2023
-</div>
+</h5>
+<div class="card-attribution card-text-small start">
 <div class="listing-author">
 Jorge Roa
 </div>
-<div class="listing-reading-time">
-17 min
+</div>
+</div>
 </div>
 </a>
 </div>
-</div>
-<div class="quarto-post image-right" data-index="3" data-categories="Rstudio,Interface" data-listing-date-sort="1681282800000" data-listing-file-modified-sort="1685762184827" data-listing-reading-time-sort="8.82">
-<div class="thumbnail">
-<p><a href="./learn/rstudio/rstudio101/index.html"> <img data-src="./learn/rstudio/rstudio101/images/coding.png" class="thumnail-image"> </a></p>
-</div>
-<div class="body">
-<a href="./learn/rstudio/rstudio101/index.html">
-<h3 class="no-anchor listing-title">
+<div class="g-col-1" data-index="3" data-categories="Rstudio,Interface" data-listing-date-sort="1681282800000" data-listing-file-modified-sort="1685762184827" data-listing-reading-time-sort="8.82">
+<a href="./learn/rstudio/rstudio101/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img data-src="./learn/rstudio/rstudio101/images/coding.png" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
 <p><span class="animate__animated animate__fadeInDown animate__delay-.6s" style="display: inline-block;">RStudio 101</span></p>
-</h3>
-<div class="listing-subtitle">
-<p><span class="animate__animated animate__fadeInDown animate__delay-.6s" style="display: inline-block;">Learn the basics of R: open a project, setting a working directory and navigate RStudio interface</span></p>
-</div>
-</a>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Rstudio'); return false;">
-Rstudio
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Interface'); return false;">
-Interface
-</div>
-</div>
-<a href="./learn/rstudio/rstudio101/index.html"> </a>
-</div>
-<div class="metadata">
-<a href="./learn/rstudio/rstudio101/index.html">
-<div class="listing-date">
-Apr 12, 2023
-</div>
+</h5>
+<div class="card-attribution card-text-small start">
 <div class="listing-author">
 Jorge Roa
 </div>
-<div class="listing-reading-time">
-8 min
+</div>
+</div>
 </div>
 </a>
 </div>
-</div>
-<div class="quarto-post image-right" data-index="4" data-categories="R,RStudio,Accesibility,Install" data-listing-date-sort="1677744000000" data-listing-file-modified-sort="1685762184698" data-listing-reading-time-sort="2.88">
-<div class="thumbnail">
-<p><a href="./learn/rstudio/Install-r-studio/index.html"> <img data-src="./learn/rstudio/Install-r-studio/images/r-rstudio-logos.png" class="thumnail-image"> </a></p>
-</div>
-<div class="body">
-<a href="./learn/rstudio/Install-r-studio/index.html">
-<h3 class="no-anchor listing-title">
+<div class="g-col-1" data-index="4" data-categories="R,RStudio,Accesibility,Install" data-listing-date-sort="1677744000000" data-listing-file-modified-sort="1685762184698" data-listing-reading-time-sort="2.88">
+<a href="./learn/rstudio/Install-r-studio/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img data-src="./learn/rstudio/Install-r-studio/images/r-rstudio-logos.png" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
 <p><span class="animate__animated animate__fadeInDown animate__delay-.6s" style="display: inline-block;">Install R and Rstudio: why R rocks 💻 🔥</span></p>
-</h3>
-<div class="listing-subtitle">
-<p><span class="animate__animated animate__fadeInDown animate__delay-.6s" style="display: inline-block;">Unlock the power of data analysis and statistical computing with R and RStudio! Whether you are a student of public policy or a seasoned professional.</span></p>
-</div>
-</a>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('R'); return false;">
-R
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('RStudio'); return false;">
-RStudio
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Accesibility'); return false;">
-Accesibility
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Install'); return false;">
-Install
-</div>
-</div>
-<a href="./learn/rstudio/Install-r-studio/index.html"> </a>
-</div>
-<div class="metadata">
-<a href="./learn/rstudio/Install-r-studio/index.html">
-<div class="listing-date">
-Mar 2, 2023
-</div>
+</h5>
+<div class="card-attribution card-text-small start">
 <div class="listing-author">
 Jorge Roa
 </div>
-<div class="listing-reading-time">
-2 min
+</div>
+</div>
 </div>
 </a>
 </div>
-</div>
-<div class="quarto-post image-right" data-index="5" data-categories="Multithread,Data table" data-listing-date-sort="1658991600000" data-listing-file-modified-sort="1685762184757" data-listing-reading-time-sort="3.935">
-<div class="thumbnail">
-<p><a href="./learn/rstudio/Multithreading/index.html"> <img data-src="./learn/rstudio/Multithreading/images/apple_intel_f.png" class="thumnail-image"> </a></p>
-</div>
-<div class="body">
-<a href="./learn/rstudio/Multithreading/index.html">
-<h3 class="no-anchor listing-title">
+<div class="g-col-1" data-index="5" data-categories="Multithread,Data table" data-listing-date-sort="1658991600000" data-listing-file-modified-sort="1685762184757" data-listing-reading-time-sort="3.935">
+<a href="./learn/rstudio/Multithreading/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img data-src="./learn/rstudio/Multithreading/images/apple_intel_f.png" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
 <p><span class="animate__animated animate__fadeInDown animate__delay-.6s" style="display: inline-block;">Enable Multithread with data.table in Mac/Intel chips</span></p>
-</h3>
-<div class="listing-subtitle">
-<p><span class="animate__animated animate__fadeInDown animate__delay-.6s" style="display: inline-block;">Multithreading offers faster and more efficient data processing, allowing for quicker analysis of complex datasets.</span></p>
-</div>
-</a>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Multithread'); return false;">
-Multithread
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Data table'); return false;">
-Data table
-</div>
-</div>
-<a href="./learn/rstudio/Multithreading/index.html"> </a>
-</div>
-<div class="metadata">
-<a href="./learn/rstudio/Multithreading/index.html">
-<div class="listing-date">
-Jul 28, 2022
-</div>
+</h5>
+<div class="card-attribution card-text-small start">
 <div class="listing-author">
 Jorge Roa, Fernando Alarid-Escudero
 </div>
-<div class="listing-reading-time">
-3 min
+</div>
+</div>
 </div>
 </a>
-</div>
 </div>
 </div>
 <div class="listing-no-matching d-none">
@@ -986,6 +844,10 @@ No matching items
 </nav>
 </div>
 <p><a href="../learn/rstudio.html"> <button type="button" class="btn btn-primary float-end btn-sm">See all our tools</button></a></p>
+<div class="image-grid">
+<div id="learn">
+
+</div>
 </div>
 </div>
 </div>
@@ -1020,11 +882,6 @@ Events
 <h5 class="no-anchor card-title listing-title">
 <p><span class="animate__animated animate__fadeInDown animate__delay-.6s" style="display: inline-block;">Social Media Scraping</span></p>
 </h5>
-<div class="card-attribution card-text-small end">
-<div class="listing-date">
-Mar 17, 2023
-</div>
-</div>
 </div>
 </div>
 </a>
@@ -1039,11 +896,6 @@ Mar 17, 2023
 <h5 class="no-anchor card-title listing-title">
 <p><span class="animate__animated animate__fadeInDown animate__delay-.6s" style="display: inline-block;">Setting up your environment in Python</span></p>
 </h5>
-<div class="card-attribution card-text-small end">
-<div class="listing-date">
-Feb 24, 2023
-</div>
-</div>
 </div>
 </div>
 </a>
@@ -1058,11 +910,6 @@ Feb 24, 2023
 <h5 class="no-anchor card-title listing-title">
 <p><span class="animate__animated animate__fadeInDown animate__delay-.6s" style="display: inline-block;">Meet Up III: Wrangle dataframes</span></p>
 </h5>
-<div class="card-attribution card-text-small end">
-<div class="listing-date">
-Nov 24, 2022
-</div>
-</div>
 </div>
 </div>
 </a>
@@ -1077,11 +924,6 @@ Nov 24, 2022
 <h5 class="no-anchor card-title listing-title">
 <p><span class="animate__animated animate__fadeInDown animate__delay-.6s" style="display: inline-block;">Meet Up III: Wrangle dataframes</span></p>
 </h5>
-<div class="card-attribution card-text-small end">
-<div class="listing-date">
-Nov 18, 2022
-</div>
-</div>
 </div>
 </div>
 </a>
@@ -1096,11 +938,6 @@ Nov 18, 2022
 <h5 class="no-anchor card-title listing-title">
 <p><span class="animate__animated animate__fadeInDown animate__delay-.6s" style="display: inline-block;">Kick-Off Event: Hertie Coding Club</span></p>
 </h5>
-<div class="card-attribution card-text-small end">
-<div class="listing-date">
-Nov 4, 2022
-</div>
-</div>
 </div>
 </div>
 </a>
@@ -1774,7 +1611,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     <a class="nav-link" href="https://quarto.org"><i class="fa-brands fa-phoenix-framework fa-lg" aria-label="phoenix-framework"></i> Quarto engine</a>
   </li>  
 </ul>
-      <div class="cookie-consent-footer"><a href="#" id="open_preferences_center">text</a></div></div>
+      </div>
     <div class="nav-footer-right">
       <ul class="footer-items list-unstyled">
     <li class="nav-item">

@@ -716,11 +716,20 @@ header:not(.headroom):not(.quarto-title-block).is-visible {
 }
 
 
+.layout_grid_learnr2{
+  padding: 1% 15%;
+  align-items: center;
+}
+
+div.listing-author{
+  color: white !important;
+}
+
 .layout_grid_learnr{
   padding: 1% 6%;
   //border-top: 2px solid #eeeeee;
   display: grid; 
-  grid-template-columns: .5fr 1.1fr; 
+  grid-template-columns: 1fr 1fr; 
   grid-gap: 60px;
   align-items: center;
 }

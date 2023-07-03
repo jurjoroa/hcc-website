@@ -4,18 +4,19 @@ page-layout: custom
 listing: 
   - id: learn
     contents: learn/rstudio/*/*.qmd
-    type: default
-    fields: [image, date, title, subtitle, categories, author, reading-time]
+    type: grid
+    fields: [image, title, author]
     sort: "date desc"
     #categories: cloud
     sort-ui: false
     filter-ui: false
-    page-size: 3
+    page-size: 2
+    grid-columns: 2
   - id: Events
     contents: events/*/index.qmd
     type: grid
     grid-columns: 2
-    fields: [image, date, title]
+    fields: [image, title]
     sort: "date desc"
     #categories: cloud
     sort-ui: false
@@ -35,7 +36,7 @@ listing:
   - id: Resources
     contents: material/Resources/*/index.qmd
     type: grid
-    grid-columns: 1
+    grid-columns: 2
     fields: [image, subtitle, title]
     sort: "date desc"
     #categories: cloud
@@ -347,6 +348,11 @@ color: grey">*All the images were generated with Dall-e. </div>
 
 </div> 
 
+<div class="layout_grid_learnr2">
+
+
+
+</div> 
 
 <div class="layout_grid_learnr">
 
@@ -387,13 +393,20 @@ Resources</h1>
 
 </h1> 
 
+Learn R
+ 
+::: {#learn}
+:::
+
+<a href="../learn/rstudio.html"> <button type="button" class="btn btn-primary float-end btn-sm">See all our tools</button></a>
+
+
 
 <div class="image-grid">
 
 ::: {#learn}
 :::
 
-<a href="../learn/rstudio.html"> <button type="button" class="btn btn-primary float-end btn-sm">See all our tools</button></a>
 
 </div> 
 

@@ -1,10 +1,10 @@
 website:
-  cookie-consent:
-    type: express
-    style: interstitial
-    palette: dark
-    policy-url: www.hertiecodingclub.com
-    prefs-text: "text"
+ # cookie-consent:
+ #   type: express
+ #   style: interstitial
+ #   palette: dark
+ #   policy-url: www.hertiecodingclub.com
+ #   prefs-text: "text"
   google-analytics: "G-HJEMN0LJY7"
   title: ""
   site-url: https://www.hertiecodingclub.com/
