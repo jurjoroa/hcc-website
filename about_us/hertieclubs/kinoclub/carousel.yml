@@ -1,0 +1,52 @@
+
+- caption: "Articles and reports with Python and R"
+  image: "images/1.jpeg"
+  link: "#articles-reports"
+  
+- caption: "Create data-driven presentations"
+  image: "images/2.jpeg"
+  link: "#presentations"
+  
+- caption: "Engage readers with interactivity"
+  image: "images/3.jpeg"
+  link: "#interactive-docs"
+
+- caption: "Publish collections of articles as a website"
+  image: "images/4.jpeg"
+  link: "#websites"
+
+- caption: "Create multi-format books"
+  image: "images/5.jpeg"
+  link: "#books"
+  
+- caption: "Articles and reports with Python and R"
+  image: "images/6.jpeg"
+  link: "#articles-reports"
+  
+- caption: "Create data-driven presentations"
+  image: "images/7.jpeg"
+  link: "#presentations"
+  
+- caption: "Engage readers with interactivity"
+  image: "images/8.jpeg"
+  link: "#interactive-docs"
+
+- caption: "Publish collections of articles as a website"
+  image: "images/9.jpeg"
+  link: "#websites"
+
+- caption: "Create multi-format books"
+  image: "images/10.jpeg"
+  link: "#books"
+  
+- caption: "Engage readers with interactivity"
+  image: "images/11.jpeg"
+  link: "#interactive-docs"
+
+- caption: "Publish collections of articles as a website"
+  image: "images/12.jpeg"
+  link: "#websites"
+
+- caption: "Create multi-format books"
+  image: "images/13.jpeg"
+  link: "#books"

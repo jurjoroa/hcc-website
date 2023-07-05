@@ -20,6 +20,69 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1.6em;
   vertical-align: middle;
 }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
 
@@ -235,6 +298,10 @@ gtag('config', 'G-HJEMN0LJY7', { 'anonymize_ip': true});
   background: linear-gradient(to right, #000428, #004e92);
   color: white;
 }
+
+.carousel-control-next-icon, .carousel-control-prev-icon {
+  color: white !important;
+}
   
 </style>
 <div class="quarto-figure quarto-figure-center">
@@ -244,6 +311,148 @@ gtag('config', 'G-HJEMN0LJY7', { 'anonymize_ip': true});
 </div>
 <p>Description: Kino Club gives students an easy introduction into the craft and power of cinema. From blockbusters to arthouse and from Asia to Europe, Kino Club will host diverse screenings and themed film festivals. The Club wants to show how film is approached differently throughout the world, how it shapes cultures, and what makes it so unique. Filmmakers and Professors in film will be invited for talks and Q&amp;As. Students get the opportunity to share their own ideas and favourite topics in film by organizing their own screenings. Events will be held both at Hertie and externally.</p>
 <p>Contact persons: Job Kemperman (Chairperson, 229889@students.hertie-school.org, +31639827571), Debarun Dutta (Treasurer, 224276@students.hertie-school.org, +491636195575)</p>
+<div class="cell g-col-lg-6 g-col-12 g-col-md-12">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">source</span>(<span class="st">"carousel.R"</span>)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">carousel</span>(<span class="st">"gallery-carousel"</span>, <span class="dv">5000</span>, </span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>         <span class="fu">yaml.load_file</span>(<span class="st">"carousel.yml"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in readLines(con, warn = readLines.warn): incomplete final line found on
+'carousel.yml'</code></pre>
+</div>
+<div class="cell-output-display">
+<div id="gallery-carousel" class="carousel carousel-dark slide" data-bs-ride="carousel">
+<div class="carousel-indicators">
+<button type="button" data-bs-target="#gallery-carousel" data-bs-slide-to="0" aria-label="Slide 1" class="active" aria-current="true"></button>
+<button type="button" data-bs-target="#gallery-carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+<button type="button" data-bs-target="#gallery-carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+<button type="button" data-bs-target="#gallery-carousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+<button type="button" data-bs-target="#gallery-carousel" data-bs-slide-to="4" aria-label="Slide 5"></button>
+<button type="button" data-bs-target="#gallery-carousel" data-bs-slide-to="5" aria-label="Slide 6"></button>
+<button type="button" data-bs-target="#gallery-carousel" data-bs-slide-to="6" aria-label="Slide 7"></button>
+<button type="button" data-bs-target="#gallery-carousel" data-bs-slide-to="7" aria-label="Slide 8"></button>
+<button type="button" data-bs-target="#gallery-carousel" data-bs-slide-to="8" aria-label="Slide 9"></button>
+<button type="button" data-bs-target="#gallery-carousel" data-bs-slide-to="9" aria-label="Slide 10"></button>
+<button type="button" data-bs-target="#gallery-carousel" data-bs-slide-to="10" aria-label="Slide 11"></button>
+<button type="button" data-bs-target="#gallery-carousel" data-bs-slide-to="11" aria-label="Slide 12"></button>
+<button type="button" data-bs-target="#gallery-carousel" data-bs-slide-to="12" aria-label="Slide 13"></button>
+</div>
+<div class="carousel-inner">
+<div class="carousel-item active" data-bs-interval="5000">
+<a href="#articles-reports">
+<img src="images/1.jpeg" class="d-block  mx-auto border" style="border: 4px solid #ff3366; border-radius: 15px;">
+</a>
+<div class="carousel-caption d-none d-md-block">
+<p class="fw-light" style="color: white;">Articles and reports with Python and R</p>
+</div>
+</div>
+<div class="carousel-item" data-bs-interval="5000">
+<a href="#presentations">
+<img src="images/2.jpeg" class="d-block  mx-auto border" style="border: 4px solid #ff3366; border-radius: 15px;">
+</a>
+<div class="carousel-caption d-none d-md-block">
+<p class="fw-light" style="color: white;">Create data-driven presentations</p>
+</div>
+</div>
+<div class="carousel-item" data-bs-interval="5000">
+<a href="#interactive-docs">
+<img src="images/3.jpeg" class="d-block  mx-auto border" style="border: 4px solid #ff3366; border-radius: 15px;">
+</a>
+<div class="carousel-caption d-none d-md-block">
+<p class="fw-light" style="color: white;">Engage readers with interactivity</p>
+</div>
+</div>
+<div class="carousel-item" data-bs-interval="5000">
+<a href="#websites">
+<img src="images/4.jpeg" class="d-block  mx-auto border" style="border: 4px solid #ff3366; border-radius: 15px;">
+</a>
+<div class="carousel-caption d-none d-md-block">
+<p class="fw-light" style="color: white;">Publish collections of articles as a website</p>
+</div>
+</div>
+<div class="carousel-item" data-bs-interval="5000">
+<a href="#books">
+<img src="images/5.jpeg" class="d-block  mx-auto border" style="border: 4px solid #ff3366; border-radius: 15px;">
+</a>
+<div class="carousel-caption d-none d-md-block">
+<p class="fw-light" style="color: white;">Create multi-format books</p>
+</div>
+</div>
+<div class="carousel-item" data-bs-interval="5000">
+<a href="#articles-reports">
+<img src="images/6.jpeg" class="d-block  mx-auto border" style="border: 4px solid #ff3366; border-radius: 15px;">
+</a>
+<div class="carousel-caption d-none d-md-block">
+<p class="fw-light" style="color: white;">Articles and reports with Python and R</p>
+</div>
+</div>
+<div class="carousel-item" data-bs-interval="5000">
+<a href="#presentations">
+<img src="images/7.jpeg" class="d-block  mx-auto border" style="border: 4px solid #ff3366; border-radius: 15px;">
+</a>
+<div class="carousel-caption d-none d-md-block">
+<p class="fw-light" style="color: white;">Create data-driven presentations</p>
+</div>
+</div>
+<div class="carousel-item" data-bs-interval="5000">
+<a href="#interactive-docs">
+<img src="images/8.jpeg" class="d-block  mx-auto border" style="border: 4px solid #ff3366; border-radius: 15px;">
+</a>
+<div class="carousel-caption d-none d-md-block">
+<p class="fw-light" style="color: white;">Engage readers with interactivity</p>
+</div>
+</div>
+<div class="carousel-item" data-bs-interval="5000">
+<a href="#websites">
+<img src="images/9.jpeg" class="d-block  mx-auto border" style="border: 4px solid #ff3366; border-radius: 15px;">
+</a>
+<div class="carousel-caption d-none d-md-block">
+<p class="fw-light" style="color: white;">Publish collections of articles as a website</p>
+</div>
+</div>
+<div class="carousel-item" data-bs-interval="5000">
+<a href="#books">
+<img src="images/10.jpeg" class="d-block  mx-auto border" style="border: 4px solid #ff3366; border-radius: 15px;">
+</a>
+<div class="carousel-caption d-none d-md-block">
+<p class="fw-light" style="color: white;">Create multi-format books</p>
+</div>
+</div>
+<div class="carousel-item" data-bs-interval="5000">
+<a href="#interactive-docs">
+<img src="images/11.jpeg" class="d-block  mx-auto border" style="border: 4px solid #ff3366; border-radius: 15px;">
+</a>
+<div class="carousel-caption d-none d-md-block">
+<p class="fw-light" style="color: white;">Engage readers with interactivity</p>
+</div>
+</div>
+<div class="carousel-item" data-bs-interval="5000">
+<a href="#websites">
+<img src="images/12.jpeg" class="d-block  mx-auto border" style="border: 4px solid #ff3366; border-radius: 15px;">
+</a>
+<div class="carousel-caption d-none d-md-block">
+<p class="fw-light" style="color: white;">Publish collections of articles as a website</p>
+</div>
+</div>
+<div class="carousel-item" data-bs-interval="5000">
+<a href="#books">
+<img src="images/13.jpeg" class="d-block  mx-auto border" style="border: 4px solid #ff3366; border-radius: 15px;">
+</a>
+<div class="carousel-caption d-none d-md-block">
+<p class="fw-light" style="color: white;">Create multi-format books</p>
+</div>
+</div>
+</div>
+<button class="carousel-control-prev" type="button" data-bs-target="#gallery-carousel" data-bs-slide="prev">
+<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+<span class="visually-hidden">Prevoius</span>
+</button>
+<button class="carousel-control-next" type="button" data-bs-target="#gallery-carousel" data-bs-slide="next">
+<span class="carousel-control-next-icon" aria-hidden="true"></span>
+<span class="visually-hidden">Next</span>
+</button>
+</div>
+</div>
+</div>
 
 
 
