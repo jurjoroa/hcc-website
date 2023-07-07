@@ -5,7 +5,7 @@
 
   <hr>
   <br>
-  <img src="logo/website.png" alt="Image 2" width="400">
+  <img src="logo/website.png" alt="Image 2" width="600">
 
 </div>
 
