@@ -20,7 +20,6 @@ Founded in October 2022 in the vibrant city of Berlin, Germany, the Hertie Codin
 |                               |                               |
 |----------------------------------------|----------------------------------------|
 | ![Image 1](logo/kick_off_event3.jpeg)  | ![Image 2](logo/kick_off_event1.jpeg)  |
-| ![Image 3](logo/event2.jpeg)           | ![Image 4](logo/event4.jpg)         |
 
 
 
