@@ -15,10 +15,10 @@ carousel <- function(id, duration, items) {
   items <- div(class = "carousel-inner",
                tagList(lapply(items, function(item) item$item))           
   )
-  div(id = id, class="carousel carousel-dark slide", `data-bs-ride`="carousel",
+  div(id = id, class = "carousel carousel-dark slide", `data-bs-ride` = "carousel",
       indicators,
       items,
-      navButton(id, "prev", "Prevoius"),
+      navButton(id, "prev", "Previous"),
       navButton(id, "next", "Next")
   )
 }
@@ -39,10 +39,12 @@ carouselItem <- function(caption, image, link, index, interval) {
   }
   item <- div(class = paste0("carousel-item", ifelse(index == 0, " active", "")),
               `data-bs-interval` = interval,
-              a(href = link, img(src = image, class = "d-block  mx-auto border",
-                                 style="border: 4px solid #ff3366; border-radius: 15px;")),
+              a(href = link,
+                img(src = image, class = "d-block mx-auto border img-fluid red-frame",
+                    style = "border: 4px solid #ff3366; border-radius: 15px;")
+              ),
               div(class = "carousel-caption d-none d-md-block",
-                  tags$p(class = "fw-light", caption, style="color: white;")
+                  tags$p(class = "fw-light", caption, style = "color: white;")
               )
   )
   list(
@@ -62,4 +64,3 @@ navButton <- function(targetId, type, text) {
               span(class = "visually-hidden", text)
   )
 }
-

@@ -1,52 +1,48 @@
 
-- caption: "Articles and reports with Python and R"
-  image: "images/1.jpeg"
-  link: "#articles-reports"
-  
-- caption: "Create data-driven presentations"
-  image: "images/2.jpeg"
-  link: "#presentations"
-  
-- caption: "Engage readers with interactivity"
+- caption: ""
   image: "images/3.jpeg"
-  link: "#interactive-docs"
-
-- caption: "Publish collections of articles as a website"
-  image: "images/4.jpeg"
-  link: "#websites"
-
-- caption: "Create multi-format books"
-  image: "images/5.jpeg"
-  link: "#books"
-  
-- caption: "Articles and reports with Python and R"
-  image: "images/6.jpeg"
   link: "#articles-reports"
   
-- caption: "Create data-driven presentations"
-  image: "images/7.jpeg"
+- caption: ""
+  image: "images/6.jpeg"
   link: "#presentations"
   
-- caption: "Engage readers with interactivity"
-  image: "images/8.jpeg"
+- caption: ""
+  image: "images/10.jpeg"
   link: "#interactive-docs"
 
-- caption: "Publish collections of articles as a website"
-  image: "images/9.jpeg"
+- caption: ""
+  image: "images/11.jpeg"
   link: "#websites"
 
-- caption: "Create multi-format books"
-  image: "images/10.jpeg"
+- caption: ""
+  image: "images/12.jpeg"
   link: "#books"
   
-- caption: "Engage readers with interactivity"
-  image: "images/11.jpeg"
+- caption: ""
+  image: "images/13.jpeg"
+  link: "#articles-reports"
+  
+- caption: ""
+  image: "images/14.jpeg"
+  link: "#presentations"
+  
+- caption: ""
+  image: "images/15.jpeg"
   link: "#interactive-docs"
 
-- caption: "Publish collections of articles as a website"
-  image: "images/12.jpeg"
+- caption: ""
+  image: "images/16.jpeg"
   link: "#websites"
 
-- caption: "Create multi-format books"
-  image: "images/13.jpeg"
+- caption: ""
+  image: "images/17.jpeg"
   link: "#books"
+  
+- caption: ""
+  image: "images/19.jpeg"
+  link: "#interactive-docs"
+
+- caption: ""
+  image: "images/20.jpeg"
+  link: "#websites"

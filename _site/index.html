@@ -105,7 +105,7 @@ ul.task-list li input[type="checkbox"] {
 
     const options = {
       valueNames: ['listing-image','listing-title',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      page: 2,
+      page: 3,
     pagination: { item: "<li class='page-item'><a class='page page-link' href='#'></a></li>" },
       searchColumns: ["listing-title","listing-author","listing-date","listing-image","listing-description"],
     };
@@ -133,7 +133,7 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: ['listing-image','listing-title',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      valueNames: ['listing-image',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
       page: 3,
     pagination: { item: "<li class='page-item'><a class='page page-link' href='#'></a></li>" },
       searchColumns: ["listing-title","listing-author","listing-date","listing-image","listing-description"],
@@ -162,7 +162,7 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: ['listing-image','listing-subtitle','listing-title',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      valueNames: ['listing-image','listing-title','listing-subtitle','listing-author',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
       page: 2,
     pagination: { item: "<li class='page-item'><a class='page page-link' href='#'></a></li>" },
       searchColumns: ["listing-title","listing-author","listing-date","listing-image","listing-description"],
@@ -191,10 +191,10 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: ['listing-image','listing-title','listing-subtitle',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-title-sort'] }],
-      page: 2,
+      valueNames: ['listing-image','listing-title',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      page: 4,
     pagination: { item: "<li class='page-item'><a class='page page-link' href='#'></a></li>" },
-      searchColumns: ["listing-date","listing-title","listing-author"],
+      searchColumns: ["listing-title","listing-author","listing-date","listing-image","listing-description"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -231,24 +231,6 @@ gtag('config', 'G-HJEMN0LJY7', { 'anonymize_ip': true});
 <meta property="og:url" content="https://www.hertiecodingclub.com">
 <meta property="og:title" content="Hertie Coding Club - Home">
 <meta property="og:description" content="Welcome to the Hertie Coding Club! Our goal as a club is to help everyone and between us learn coding skills and show that coding is for everyone, no matter our background.">
-<style>:root{--animate-duration:3s;--animate-delay:2s;--animate-repeat:1}</style>
-<style>:root{--animate-duration:3s;--animate-delay:2s;--animate-repeat:1}</style>
-<style>:root{--animate-duration:3s;--animate-delay:2s;--animate-repeat:1}</style>
-<style>:root{--animate-duration:3s;--animate-delay:2s;--animate-repeat:1}</style>
-<style>:root{--animate-duration:3s;--animate-delay:2s;--animate-repeat:1}</style>
-<style>:root{--animate-duration:3s;--animate-delay:2s;--animate-repeat:1}</style>
-<style>:root{--animate-duration:3s;--animate-delay:2s;--animate-repeat:1}</style>
-<style>:root{--animate-duration:3s;--animate-delay:2s;--animate-repeat:1}</style>
-<style>:root{--animate-duration:3s;--animate-delay:2s;--animate-repeat:1}</style>
-<style>:root{--animate-duration:3s;--animate-delay:2s;--animate-repeat:1}</style>
-<style>:root{--animate-duration:3s;--animate-delay:2s;--animate-repeat:1}</style>
-<style>:root{--animate-duration:3s;--animate-delay:2s;--animate-repeat:1}</style>
-<style>:root{--animate-duration:3s;--animate-delay:2s;--animate-repeat:1}</style>
-<style>:root{--animate-duration:3s;--animate-delay:2s;--animate-repeat:1}</style>
-<style>:root{--animate-duration:3s;--animate-delay:2s;--animate-repeat:1}</style>
-<style>:root{--animate-duration:3s;--animate-delay:2s;--animate-repeat:1}</style>
-<style>:root{--animate-duration:3s;--animate-delay:2s;--animate-repeat:1}</style>
-<style>:root{--animate-duration:3s;--animate-delay:2s;--animate-repeat:1}</style>
 <style>:root{--animate-duration:3s;--animate-delay:2s;--animate-repeat:1}</style>
 <style>:root{--animate-duration:3s;--animate-delay:2s;--animate-repeat:1}</style>
 <style>:root{--animate-duration:3s;--animate-delay:2s;--animate-repeat:1}</style>
@@ -637,20 +619,26 @@ color: grey">
 Coding is <span class="txt-rotate" data-period="2000" data-rotate="[ &quot;teamwork and growth.&quot;, &quot;potential unlocked.&quot;, &quot;empowering.&quot;, &quot;enjoyable and engaging.&quot;, &quot;for everyone.&quot; ]"></span>
 </h1>
 </div>
-<div class="layout_grid_learnr2">
-
-</div>
 <div class="layout_grid_learnr">
 <div class="social-media">
-<h1 class="scroll-text back_resource" style="display: flex; align-items: center; justify-content: center; border-radius: 10px; font-weight: 700;
-  color: white;
-  font-size: 50px;">
-<p><lord-icon src="https://cdn.lordicon.com/ckatldkn.json" trigger="loop" delay="250" style="width:100px;height:100px"> </lord-icon></p>
-Resources
+
+<h1 style="font-size: 40px;
+margin-bottom:40px;
+display: flex;
+justify-content: center;
+align-items: center;
+font-weight: 700;
+  color: #C0031C;
+  background-clip: text;
+  -webkit-background-clip: text;" class="scroll-text"> Resources 
+  
+<lord-icon src="https://cdn.lordicon.com/qbaenubu.json" trigger="loop" delay="3000" colors="primary:#646e78,secondary:#ebe6ef" style="width:50px;height:50px">
+</lord-icon>
+
 </h1>
 <div id="listing-Resources" class="quarto-listing quarto-listing-container-grid">
 <div class="list grid quarto-listing-cols-2">
-<div class="g-col-1" data-index="0" data-categories="edX,Learning,R,Python" data-listing-date-sort="1680678000000" data-listing-file-modified-sort="1685762184871" data-listing-reading-time-sort="0.58">
+<div class="g-col-1" data-index="0" data-categories="edX,Learning,R,Python" data-listing-date-sort="1680678000000" data-listing-file-modified-sort="1682290925133" data-listing-reading-time-sort="0.58">
 <a href="./material/Resources/edx/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -663,11 +651,16 @@ Resources
 <div class="card-subtitle listing-subtitle">
 <p><span class="animate__animated animate__fadeInDown animate__delay-.6s" style="display: inline-block;">edX offers varios online courses with free verified certificates</span></p>
 </div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+Jorge Roa
+</div>
+</div>
 </div>
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="1" data-categories="Kaggle,Learning,R,Python,Data Science" data-listing-date-sort="1680159600000" data-listing-file-modified-sort="1685762184873" data-listing-reading-time-sort="0.765">
+<div class="g-col-1" data-index="1" data-categories="Kaggle,Learning,R,Python,Data Science" data-listing-date-sort="1680159600000" data-listing-file-modified-sort="1682290925135" data-listing-reading-time-sort="0.765">
 <a href="./material/Resources/kaggle/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -680,11 +673,16 @@ Resources
 <div class="card-subtitle listing-subtitle">
 <p><span class="animate__animated animate__fadeInDown animate__delay-.6s" style="display: inline-block;">Inside Kaggle you’ll find all the code &amp; data you need to do your data science work.</span></p>
 </div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+Jorge Roa
+</div>
+</div>
 </div>
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="2" data-categories="Dataquest,Learning,R,Python" data-listing-date-sort="1680073200000" data-listing-file-modified-sort="1685762184870" data-listing-reading-time-sort="0.805">
+<div class="g-col-1" data-index="2" data-categories="Dataquest,Learning,R,Python" data-listing-date-sort="1680073200000" data-listing-file-modified-sort="1682290925132" data-listing-reading-time-sort="0.805">
 <a href="./material/Resources/dataquest/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -696,6 +694,11 @@ Resources
 </h5>
 <div class="card-subtitle listing-subtitle">
 <p><span class="animate__animated animate__fadeInDown animate__delay-.6s" style="display: inline-block;">Dataquest is platform that offers coding challenges and projects to learn essential data science skillsets.</span></p>
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+Hertie School Data Science Lab
+</div>
 </div>
 </div>
 </div>
@@ -709,19 +712,27 @@ No matching items
   <ul class="pagination"></ul>
 </nav>
 </div>
+
 </div>
 <div>
-<h1 class="scroll-text back_resource" style="display: flex; align-items: center; justify-content: center; border-radius: 10px;
-  font-weight: 900;
-  color: white;
-  font-size: 50px;">
-<p><lord-icon src="https://cdn.lordicon.com/azartkjs.json" trigger="loop" delay="250" style="width:100px;height:100px"> </lord-icon></p>
-<p>Learn R</p>
+
+<h1 style="font-size: 40px;
+margin-bottom:40px;
+display: flex;
+justify-content: center;
+align-items: center;
+font-weight: 700;
+  color: #C0031C;
+  background-clip: text;
+  -webkit-background-clip: text;" class="scroll-text"> Learn R 
+  
+<lord-icon src="https://cdn.lordicon.com/sglcptvj.json" trigger="loop" delay="3000" colors="primary:#646e78,secondary:#ebe6ef" style="width:50px;height:50px">
+</lord-icon>
+
 </h1>
-<p>Learn R</p>
 <div id="listing-learn" class="quarto-listing quarto-listing-container-grid">
 <div class="list grid quarto-listing-cols-2">
-<div class="g-col-1" data-index="0" data-categories="R,Stata,Transition" data-listing-date-sort="1682233200000" data-listing-file-modified-sort="1685762184848" data-listing-reading-time-sort="11.26">
+<div class="g-col-1" data-index="0" data-categories="R,Stata,Transition" data-listing-date-sort="1682233200000" data-listing-file-modified-sort="1682851760184" data-listing-reading-time-sort="11.26">
 <a href="./learn/rstudio/stata_to_r/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -740,7 +751,7 @@ Jorge Roa
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="1" data-categories="Twitter,Webscraping,Text" data-listing-date-sort="1681801200000" data-listing-file-modified-sort="1685762184828" data-listing-reading-time-sort="11.905">
+<div class="g-col-1" data-index="1" data-categories="Twitter,Webscraping,Text" data-listing-date-sort="1681801200000" data-listing-file-modified-sort="1682290925096" data-listing-reading-time-sort="11.905">
 <a href="./learn/rstudio/social_media_scraping/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -759,7 +770,7 @@ Lukas Lehmann
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="2" data-categories="Rstudio,Objects" data-listing-date-sort="1681628400000" data-listing-file-modified-sort="1686514117342" data-listing-reading-time-sort="17.685">
+<div class="g-col-1" data-index="2" data-categories="Rstudio,Objects" data-listing-date-sort="1681628400000" data-listing-file-modified-sort="1686848898514" data-listing-reading-time-sort="17.685">
 <a href="./learn/rstudio/objects/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -778,7 +789,7 @@ Jorge Roa
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="3" data-categories="Rstudio,Interface" data-listing-date-sort="1681282800000" data-listing-file-modified-sort="1685762184827" data-listing-reading-time-sort="8.82">
+<div class="g-col-1" data-index="3" data-categories="Rstudio,Interface" data-listing-date-sort="1681282800000" data-listing-file-modified-sort="1682290925095" data-listing-reading-time-sort="8.82">
 <a href="./learn/rstudio/rstudio101/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -797,7 +808,7 @@ Jorge Roa
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="4" data-categories="R,RStudio,Accesibility,Install" data-listing-date-sort="1677744000000" data-listing-file-modified-sort="1685762184698" data-listing-reading-time-sort="2.88">
+<div class="g-col-1" data-index="4" data-categories="R,RStudio,Accesibility,Install" data-listing-date-sort="1677744000000" data-listing-file-modified-sort="1682290924987" data-listing-reading-time-sort="2.88">
 <a href="./learn/rstudio/Install-r-studio/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -816,7 +827,7 @@ Jorge Roa
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="5" data-categories="Multithread,Data table" data-listing-date-sort="1658991600000" data-listing-file-modified-sort="1685762184757" data-listing-reading-time-sort="3.935">
+<div class="g-col-1" data-index="5" data-categories="Multithread,Data table" data-listing-date-sort="1658991600000" data-listing-file-modified-sort="1682290925036" data-listing-reading-time-sort="3.935">
 <a href="./learn/rstudio/Multithreading/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -852,27 +863,174 @@ No matching items
 </div>
 </div>
 <hr class="sep-2">
-<div class="layout_grid_events">
-<div class="events">
-<div class="social-media-mobile2">
-<h1 style="font-size: 90px;
-margin-top:20px;
+</div>
+<div class="layout_grid_learnr2">
+<div>
+
+<h1 style="font-size: 40px;
+margin-bottom:40px;
 display: flex;
 justify-content: center;
 align-items: center;
 font-weight: 700;
-  background-image: conic-gradient(#553c9a, #ee4b2b, #00c2cb, #553c9a);
-  color: transparent;
+  color: #C0031C;
   background-clip: text;
-  -webkit-background-clip: text;" class="scroll-text">
-Events
+  -webkit-background-clip: text;" class="scroll-text"> Books 
+  
+<lord-icon src="https://cdn.lordicon.com/dxoycpzg.json" trigger="loop" delay="3000" colors="primary:#646e78,secondary:#ebe6ef" style="width:50px;height:50px">
+</lord-icon>
+
 </h1>
+<div id="listing-books" class="quarto-listing quarto-listing-container-grid">
+<div class="list grid quarto-listing-cols-3">
+<div class="g-col-1" data-index="0" data-categories="R,Spatial Analysis,Spatial Statistics" data-listing-date-sort="1687158000000" data-listing-file-modified-sort="1687132382132" data-listing-reading-time-sort="1.055">
+<a href="./material/Books/spatial_statistics/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img src="./material/Books/spatial_statistics/images/bookcover.jpg" class="thumbnail-image card-img" style="height: 250px;">
+</p>
+</div>
+</a>
+</div>
+<div class="g-col-1" data-index="1" data-categories="R,Pipeline,Reproducilibty,EDA" data-listing-date-sort="1686380400000" data-listing-file-modified-sort="1686848898516" data-listing-reading-time-sort="1.315">
+<a href="./material/Books/pipelines_with_r/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img src="./material/Books/pipelines_with_r/images/book.png" class="thumbnail-image card-img" style="height: 250px;">
+</p>
+</div>
+</a>
+</div>
+<div class="g-col-1" data-index="2" data-categories="R,Visualization,EDA" data-listing-date-sort="1684738800000" data-listing-file-modified-sort="1684712780930" data-listing-reading-time-sort="0.68">
+<a href="./material/Books/stories_with_data/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img src="./material/Books/stories_with_data/images/book.png" class="thumbnail-image card-img" style="height: 250px;">
+</p>
+</div>
+</a>
+</div>
+<div class="g-col-1" data-index="3" data-categories="R,Data Management" data-listing-date-sort="1681887600000" data-listing-file-modified-sort="1682290925115" data-listing-reading-time-sort="1.22">
+<a href="./material/Books/data_management/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img data-src="./material/Books/data_management/images/book.jpg" class="thumbnail-image card-img" style="height: 250px;">
+</p>
+</div>
+</a>
+</div>
+<div class="g-col-1" data-index="4" data-categories="R,Data Analysis,EDA" data-listing-date-sort="1681196400000" data-listing-file-modified-sort="1682290925114" data-listing-reading-time-sort="0.995">
+<a href="./material/Books/art_ds/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img data-src="./material/Books/art_ds/images/book.jpg" class="thumbnail-image card-img" style="height: 250px;">
+</p>
+</div>
+</a>
+</div>
+<div class="g-col-1" data-index="5" data-categories="R,Learning,Data Analysis,EDA" data-listing-date-sort="1681196400000" data-listing-file-modified-sort="1682290925116" data-listing-reading-time-sort="0.86">
+<a href="./material/Books/eda_r/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img data-src="./material/Books/eda_r/images/book.jpg" class="thumbnail-image card-img" style="height: 250px;">
+</p>
+</div>
+</a>
+</div>
+<div class="g-col-1" data-index="6" data-categories="R,Spatial Data,Spatial Analysis" data-listing-date-sort="1681196400000" data-listing-file-modified-sort="1682290925121" data-listing-reading-time-sort="1.29">
+<a href="./material/Books/spatial_ds/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img data-src="./material/Books/spatial_ds/images/book.jpeg" class="thumbnail-image card-img" style="height: 250px;">
+</p>
+</div>
+</a>
+</div>
+<div class="g-col-1" data-index="7" data-categories="R,ggplot2,Data Visualization" data-listing-date-sort="1681110000000" data-listing-file-modified-sort="1682290925117" data-listing-reading-time-sort="1">
+<a href="./material/Books/ggplot2/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img data-src="./material/Books/ggplot2/images/book.jpg" class="thumbnail-image card-img" style="height: 250px;">
+</p>
+</div>
+</a>
+</div>
+<div class="g-col-1" data-index="8" data-categories="R,Learning,Data Wrangling" data-listing-date-sort="1681110000000" data-listing-file-modified-sort="1682290925118" data-listing-reading-time-sort="1.74">
+<a href="./material/Books/ids_r/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img data-src="./material/Books/ids_r/images/book.png" class="thumbnail-image card-img" style="height: 250px;">
+</p>
+</div>
+</a>
+</div>
+<div class="g-col-1" data-index="9" data-categories="Python,Learning" data-listing-date-sort="1681110000000" data-listing-file-modified-sort="1682290925119" data-listing-reading-time-sort="1.06">
+<a href="./material/Books/python_for_ev/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img data-src="./material/Books/python_for_ev/images/book.jpeg" class="thumbnail-image card-img" style="height: 250px;">
+</p>
+</div>
+</a>
+</div>
+<div class="g-col-1" data-index="10" data-categories="R,Webscraping" data-listing-date-sort="1681110000000" data-listing-file-modified-sort="1682290925122" data-listing-reading-time-sort="0.885">
+<a href="./material/Books/webscrapping_r/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img data-src="./material/Books/webscrapping_r/images/rvest.png" class="thumbnail-image card-img" style="height: 250px;">
+</p>
+</div>
+</a>
+</div>
+<div class="g-col-1" data-index="11" data-categories="R,Learning,Data Visualization" data-listing-date-sort="1681023600000" data-listing-file-modified-sort="1682290925116" data-listing-reading-time-sort="1.14">
+<a href="./material/Books/data_vis/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img data-src="./material/Books/data_vis/images/book.jpeg" class="thumbnail-image card-img" style="height: 250px;">
+</p>
+</div>
+</a>
+</div>
+<div class="g-col-1" data-index="12" data-categories="R,Learning,Data Science" data-listing-date-sort="1681023600000" data-listing-file-modified-sort="1682290925120" data-listing-reading-time-sort="1.165">
+<a href="./material/Books/r_for_ds/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img data-src="./material/Books/r_for_ds/images/r_for_ds.jpg" class="thumbnail-image card-img" style="height: 250px;">
+</p>
+</div>
+</a>
 </div>
 </div>
-<div style="justify-self: end;">
+<div class="listing-no-matching d-none">
+No matching items
+</div>
+<nav id="books-pagination" class="listing-pagination" aria-label="Page Navigation">
+  <ul class="pagination"></ul>
+</nav>
+</div>
+<p><a href="../books/index.html"> <button type="button" class="btn btn-primary float-end btn-sm">See all our books</button></a></p>
+<p><br></p>
+</div>
+<div>
+<p><br></p>
+
+<h1 style="font-size: 40px;
+margin-bottom:40px;
+display: flex;
+justify-content: center;
+align-items: center;
+font-weight: 700;
+  color: #C0031C;
+  background-clip: text;
+  -webkit-background-clip: text;" class="scroll-text"> Events
+  
+<lord-icon src="https://cdn.lordicon.com/qierxeeb.json" trigger="loop" delay="3000" colors="primary:#646e78,secondary:#ebe6ef" style="width:50px;height:50px">
+</lord-icon>
+
+</h1>
 <div id="listing-Events" class="quarto-listing quarto-listing-container-grid">
-<div class="list grid quarto-listing-cols-2">
-<div class="g-col-1" data-index="0" data-categories="Rstudio,Twitter,Wrangling" data-listing-date-sort="1679036400000" data-listing-file-modified-sort="1685762184611" data-listing-reading-time-sort="0.33">
+<div class="list grid quarto-listing-cols-3">
+<div class="g-col-1" data-index="0" data-categories="Rstudio,Twitter,Wrangling" data-listing-date-sort="1679036400000" data-listing-file-modified-sort="1682290924972" data-listing-reading-time-sort="0.33">
 <a href="./events/05_social_media_analysis/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -886,7 +1044,7 @@ Events
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="1" data-categories="Python,Environment,VSC Code" data-listing-date-sort="1677225600000" data-listing-file-modified-sort="1685762184604" data-listing-reading-time-sort="0.555">
+<div class="g-col-1" data-index="1" data-categories="Python,Environment,VSC Code" data-listing-date-sort="1677225600000" data-listing-file-modified-sort="1682290924968" data-listing-reading-time-sort="0.555">
 <a href="./events/04_environment/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -900,11 +1058,11 @@ Events
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="2" data-categories="Rstudio,Wrangling,Tidyverse" data-listing-date-sort="1669276800000" data-listing-file-modified-sort="1685762184602" data-listing-reading-time-sort="0.415">
+<div class="g-col-1" data-index="2" data-categories="Rstudio,Wrangling,Tidyverse" data-listing-date-sort="1669276800000" data-listing-file-modified-sort="1682290924965" data-listing-reading-time-sort="0.415">
 <a href="./events/03_wrangle_part2/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
-<img data-src="./events/03_wrangle_part2/ftdata.png" class="thumbnail-image card-img" style="height: 150px;">
+<img src="./events/03_wrangle_part2/ftdata.png" class="thumbnail-image card-img" style="height: 150px;">
 </p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
@@ -914,7 +1072,7 @@ Events
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="3" data-categories="Rstudio,Wrangling,Tidyverse" data-listing-date-sort="1668758400000" data-listing-file-modified-sort="1685762184599" data-listing-reading-time-sort="0.51">
+<div class="g-col-1" data-index="3" data-categories="Rstudio,Wrangling,Tidyverse" data-listing-date-sort="1668758400000" data-listing-file-modified-sort="1682290924965" data-listing-reading-time-sort="0.51">
 <a href="./events/02_wrangle/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -928,7 +1086,7 @@ Events
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="4" data-categories="Rstudio" data-listing-date-sort="1667545200000" data-listing-file-modified-sort="1685762184591" data-listing-reading-time-sort="0.5">
+<div class="g-col-1" data-index="4" data-categories="Rstudio" data-listing-date-sort="1667545200000" data-listing-file-modified-sort="1682290924961" data-listing-reading-time-sort="0.5">
 <a href="./events/01_kickoff_event/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -953,298 +1111,97 @@ No matching items
 <p><a href="../events/index.html"> <button type="button" class="btn btn-primary float-end btn-sm">See all our events</button></a></p>
 </div>
 </div>
-</div>
-<hr class="sep-2">
-<div class="layout_grid_books">
-<div class="events">
-<div class="social-media-mobile3">
-<h1 class="scroll-text book_style_mob">
-Books
-</h1>
-<div style="justify-self: end;">
-<div id="listing-books" class="quarto-listing quarto-listing-container-grid">
-<div class="list grid quarto-listing-cols-3">
-<div class="g-col-1" data-index="0" data-categories="R,Spatial Analysis,Spatial Statistics" data-listing-date-sort="1687158000000" data-listing-file-modified-sort="1687994812964" data-listing-reading-time-sort="1.055">
-<a href="./material/Books/spatial_statistics/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img src="./material/Books/spatial_statistics/images/bookcover.jpg" class="thumbnail-image card-img" style="height: 400px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-<p><span class="animate__animated animate__fadeInDown animate__delay-.6s" style="display: inline-block;">Spatial Statistics for Data Science: Theory and Practice with R</span></p>
-</h5>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="1" data-categories="R,Pipeline,Reproducilibty,EDA" data-listing-date-sort="1686380400000" data-listing-file-modified-sort="1686354918645" data-listing-reading-time-sort="1.315">
-<a href="./material/Books/pipelines_with_r/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img src="./material/Books/pipelines_with_r/images/book.png" class="thumbnail-image card-img" style="height: 400px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-<p><span class="animate__animated animate__fadeInDown animate__delay-.6s" style="display: inline-block;">Building reproducible analytical pipelines with R</span></p>
-</h5>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="2" data-categories="R,Visualization,EDA" data-listing-date-sort="1684738800000" data-listing-file-modified-sort="1685762184859" data-listing-reading-time-sort="0.68">
-<a href="./material/Books/stories_with_data/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img src="./material/Books/stories_with_data/images/book.png" class="thumbnail-image card-img" style="height: 400px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-<p><span class="animate__animated animate__fadeInDown animate__delay-.6s" style="display: inline-block;">Telling Stories with Data: Applications in R</span></p>
-</h5>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="3" data-categories="R,Data Management" data-listing-date-sort="1681887600000" data-listing-file-modified-sort="1685762184851" data-listing-reading-time-sort="1.22">
-<a href="./material/Books/data_management/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img data-src="./material/Books/data_management/images/book.jpg" class="thumbnail-image card-img" style="height: 400px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-<p><span class="animate__animated animate__fadeInDown animate__delay-.6s" style="display: inline-block;">Data Management for Social Scientists: From Files to Databases</span></p>
-</h5>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="4" data-categories="R,Data Analysis,EDA" data-listing-date-sort="1681196400000" data-listing-file-modified-sort="1685762184849" data-listing-reading-time-sort="0.995">
-<a href="./material/Books/art_ds/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img data-src="./material/Books/art_ds/images/book.jpg" class="thumbnail-image card-img" style="height: 400px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-<p><span class="animate__animated animate__fadeInDown animate__delay-.6s" style="display: inline-block;">The Art of Data Science: A Guide for Anyone Who Works with Data</span></p>
-</h5>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="5" data-categories="R,Learning,Data Analysis,EDA" data-listing-date-sort="1681196400000" data-listing-file-modified-sort="1685762184852" data-listing-reading-time-sort="0.86">
-<a href="./material/Books/eda_r/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img data-src="./material/Books/eda_r/images/book.jpg" class="thumbnail-image card-img" style="height: 400px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-<p><span class="animate__animated animate__fadeInDown animate__delay-.6s" style="display: inline-block;">Exploratory Data Analysis with R</span></p>
-</h5>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="6" data-categories="R,Spatial Data,Spatial Analysis" data-listing-date-sort="1681196400000" data-listing-file-modified-sort="1685762184858" data-listing-reading-time-sort="1.29">
-<a href="./material/Books/spatial_ds/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img data-src="./material/Books/spatial_ds/images/book.jpeg" class="thumbnail-image card-img" style="height: 400px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-<p><span class="animate__animated animate__fadeInDown animate__delay-.6s" style="display: inline-block;">Spatial Data Science with applications in R</span></p>
-</h5>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="7" data-categories="R,ggplot2,Data Visualization" data-listing-date-sort="1681110000000" data-listing-file-modified-sort="1685762184853" data-listing-reading-time-sort="1">
-<a href="./material/Books/ggplot2/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img data-src="./material/Books/ggplot2/images/book.jpg" class="thumbnail-image card-img" style="height: 400px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-<p><span class="animate__animated animate__fadeInDown animate__delay-.6s" style="display: inline-block;">ggplot2: elegant graphics for data analysis</span></p>
-</h5>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="8" data-categories="R,Learning,Data Wrangling" data-listing-date-sort="1681110000000" data-listing-file-modified-sort="1685762184854" data-listing-reading-time-sort="1.74">
-<a href="./material/Books/ids_r/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img data-src="./material/Books/ids_r/images/book.png" class="thumbnail-image card-img" style="height: 400px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-<p><span class="animate__animated animate__fadeInDown animate__delay-.6s" style="display: inline-block;">Introduction to Data Science</span></p>
-</h5>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="9" data-categories="Python,Learning" data-listing-date-sort="1681110000000" data-listing-file-modified-sort="1685762184856" data-listing-reading-time-sort="1.06">
-<a href="./material/Books/python_for_ev/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img data-src="./material/Books/python_for_ev/images/book.jpeg" class="thumbnail-image card-img" style="height: 400px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-<p><span class="animate__animated animate__fadeInDown animate__delay-.6s" style="display: inline-block;">Python for Everybody</span></p>
-</h5>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="10" data-categories="R,Webscraping" data-listing-date-sort="1681110000000" data-listing-file-modified-sort="1685762184860" data-listing-reading-time-sort="0.885">
-<a href="./material/Books/webscrapping_r/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img data-src="./material/Books/webscrapping_r/images/rvest.png" class="thumbnail-image card-img" style="height: 400px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-<p><span class="animate__animated animate__fadeInDown animate__delay-.6s" style="display: inline-block;">Web Scraping with R</span></p>
-</h5>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="11" data-categories="R,Learning,Data Visualization" data-listing-date-sort="1681023600000" data-listing-file-modified-sort="1685762184852" data-listing-reading-time-sort="1.14">
-<a href="./material/Books/data_vis/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img data-src="./material/Books/data_vis/images/book.jpeg" class="thumbnail-image card-img" style="height: 400px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-<p><span class="animate__animated animate__fadeInDown animate__delay-.6s" style="display: inline-block;">Data Visualization: A Practical Introduction</span></p>
-</h5>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="12" data-categories="R,Learning,Data Science" data-listing-date-sort="1681023600000" data-listing-file-modified-sort="1685762184857" data-listing-reading-time-sort="1.165">
-<a href="./material/Books/r_for_ds/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img data-src="./material/Books/r_for_ds/images/r_for_ds.jpg" class="thumbnail-image card-img" style="height: 400px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-<p><span class="animate__animated animate__fadeInDown animate__delay-.6s" style="display: inline-block;">R for Data Science</span></p>
-</h5>
-</div>
-</div>
-</a>
-</div>
-</div>
-<div class="listing-no-matching d-none">
-No matching items
-</div>
-<nav id="books-pagination" class="listing-pagination" aria-label="Page Navigation">
-  <ul class="pagination"></ul>
-</nav>
-</div>
-<p><a href="../books/index.html"> <button type="button" class="btn btn-primary float-end btn-sm">See all our books</button></a></p>
-</div>
-</div>
-</div>
-<h1 class="scroll-text book_style_desktop">
-Books
-</h1>
-</div>
+<p><br></p>
 
-<hr class="sep-2">
 <div class="layout_table">
-<h1 class="scroll-text certification_style_desktop">
-Certifications
-</h1>
-<h1 class="scroll-text certification_style_mobile">
-Certifications
-</h1>
-<div id="listing-material" class="quarto-listing quarto-listing-container-table">
 
-<table class="quarto-listing-table table">
-<thead>
-<tr>
-<th>
-</th>
-<th>
-Title
-</th>
-<th>
-Subtitle
-</th>
-</tr>
-</thead>
-<tbody class="list">
-<tr data-index="0" data-categories="Microsoft,Data Analysis,Course" data-listing-date-sort="1686466800000" data-listing-file-modified-sort="1687994812967" data-listing-reading-time-sort="2.5" data-listing-title-sort="{{< animate fadeInDown &quot;Microsoft Data Analyst Certification&quot;delay=.6s >}}" data-listing-filename-sort="index.qmd">
-<td class="listing-image">
-<img src="./material/Certifications/microsoft_ds/images/Microsoft_logo.png" style="height: 70px;">
-</td>
-<td class="listing-title">
-<a href="./material/Certifications/microsoft_ds/index.html" class="title"><span class="animate__animated animate__fadeInDown animate__delay-.6s" style="display: inline-block;">Microsoft Data Analyst Certification</span></a>
-</td>
-<td class="listing-subtitle">
-<p><span class="animate__animated animate__fadeInDown animate__delay-.6s" style="display: inline-block;">Free Courses in Data modeling, Data visualization and others.</span></p>
-</td>
-</tr>
-<tr data-index="1" data-categories="Google,Data Science,Course,Free Certificate" data-listing-date-sort="1682406000000" data-listing-file-modified-sort="1685762184868" data-listing-reading-time-sort="1.755" data-listing-title-sort="{{< animate fadeInDown &quot;Google Data Scientist Certification&quot;delay=.6s >}}" data-listing-filename-sort="index.qmd">
-<td class="listing-image">
-<img src="./material/Certifications/google_cert_ds/images/logo-Google.png" style="height: 70px;">
-</td>
-<td class="listing-title">
-<a href="./material/Certifications/google_cert_ds/index.html" class="title"><span class="animate__animated animate__fadeInDown animate__delay-.6s" style="display: inline-block;">Google Data Scientist Certification</span></a>
-</td>
-<td class="listing-subtitle">
-<p><span class="animate__animated animate__fadeInDown animate__delay-.6s" style="display: inline-block;">Free Certification Courses in Data Science using Python from Google</span></p>
-</td>
-</tr>
-<tr data-index="2" data-categories="CISCO,Learning,Python" data-listing-date-sort="1680159600000" data-listing-file-modified-sort="1685762184864" data-listing-reading-time-sort="1.335" data-listing-title-sort="{{< animate fadeInDown &quot;CISCO Networking Academy&quot;delay=.6s >}}" data-listing-filename-sort="index.qmd">
-<td class="listing-image">
-<img data-src="./material/Certifications/cisco_pcap/images/cisco.png" style="height: 70px;">
-</td>
-<td class="listing-title">
-<a href="./material/Certifications/cisco_pcap/index.html" class="title"><span class="animate__animated animate__fadeInDown animate__delay-.6s" style="display: inline-block;">CISCO Networking Academy</span></a>
-</td>
-<td class="listing-subtitle">
-<p><span class="animate__animated animate__fadeInDown animate__delay-.6s" style="display: inline-block;">PCAP: Programming Essentials in Python. Learn programming from scratch and master Python.</span></p>
-</td>
-</tr>
-<tr data-index="3" data-categories="freeCodeCamp,Data Analysis,Course,Free Certificate" data-listing-date-sort="1680073200000" data-listing-file-modified-sort="1685762184865" data-listing-reading-time-sort="0.52" data-listing-title-sort="{{< animate fadeInDown &quot;freeCodeCamp Certifications&quot;delay=.6s >}}" data-listing-filename-sort="index.qmd">
-<td class="listing-image">
-<img data-src="./material/Certifications/freecodecamp/images/fcc.png" style="height: 70px;">
-</td>
-<td class="listing-title">
-<a href="./material/Certifications/freecodecamp/index.html" class="title"><span class="animate__animated animate__fadeInDown animate__delay-.6s" style="display: inline-block;">freeCodeCamp Certifications</span></a>
-</td>
-<td class="listing-subtitle">
-<p><span class="animate__animated animate__fadeInDown animate__delay-.6s" style="display: inline-block;">Learn to code — for free. Build projects. Earn certifications.</span></p>
-</td>
-</tr>
-<tr data-index="4" data-categories="IBM,Data Analysis,Course,Free Certificate" data-listing-date-sort="1679727600000" data-listing-file-modified-sort="1685762184861" data-listing-reading-time-sort="0.815" data-listing-title-sort="{{< animate fadeInDown &quot;IBM Data Analyst certification&quot;delay=.6s >}}" data-listing-filename-sort="index.qmd">
-<td class="listing-image">
-<img data-src="./material/Certifications/IBM_data_analyst/images/IBM.png" style="height: 70px;">
-</td>
-<td class="listing-title">
-<a href="./material/Certifications/IBM_data_analyst/index.html" class="title"><span class="animate__animated animate__fadeInDown animate__delay-.6s" style="display: inline-block;">IBM Data Analyst certification</span></a>
-</td>
-<td class="listing-subtitle">
-<p><span class="animate__animated animate__fadeInDown animate__delay-.6s" style="display: inline-block;">Try this course for free and get your certification by IBM in Data Analyst</span></p>
-</td>
-</tr>
-</tbody>
+<h1 style="font-size: 40px;
+margin-bottom:40px;
+display: flex;
+justify-content: center;
+align-items: center;
+font-weight: 700;
+  color: #C0031C;
+  background-clip: text;
+  -webkit-background-clip: text;" class="scroll-text"> Certifications
+  
+<lord-icon src="https://cdn.lordicon.com/rzqpczno.json" trigger="loop" delay="3000" colors="primary:#0f4667" style="width:50px;height:50px">
+</lord-icon>
 
-</table>
+</h1>
+<div id="listing-material" class="quarto-listing quarto-listing-container-grid">
+<div class="list grid quarto-listing-cols-4">
+<div class="g-col-1" data-index="0" data-categories="Microsoft,Data Analysis,Course" data-listing-date-sort="1686466800000" data-listing-file-modified-sort="1687043425816" data-listing-reading-time-sort="2.5">
+<a href="./material/Certifications/microsoft_ds/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img src="./material/Certifications/microsoft_ds/images/Microsoft_logo.png" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+<p><span class="animate__animated animate__fadeInDown animate__delay-.6s" style="display: inline-block;">Microsoft Data Analyst Certification</span></p>
+</h5>
+</div>
+</div>
+</a>
+</div>
+<div class="g-col-1" data-index="1" data-categories="Google,Data Science,Course,Free Certificate" data-listing-date-sort="1682406000000" data-listing-file-modified-sort="1682482718127" data-listing-reading-time-sort="1.755">
+<a href="./material/Certifications/google_cert_ds/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img src="./material/Certifications/google_cert_ds/images/logo-Google.png" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+<p><span class="animate__animated animate__fadeInDown animate__delay-.6s" style="display: inline-block;">Google Data Scientist Certification</span></p>
+</h5>
+</div>
+</div>
+</a>
+</div>
+<div class="g-col-1" data-index="2" data-categories="CISCO,Learning,Python" data-listing-date-sort="1680159600000" data-listing-file-modified-sort="1682290925126" data-listing-reading-time-sort="1.335">
+<a href="./material/Certifications/cisco_pcap/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img src="./material/Certifications/cisco_pcap/images/cisco.png" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+<p><span class="animate__animated animate__fadeInDown animate__delay-.6s" style="display: inline-block;">CISCO Networking Academy</span></p>
+</h5>
+</div>
+</div>
+</a>
+</div>
+<div class="g-col-1" data-index="3" data-categories="freeCodeCamp,Data Analysis,Course,Free Certificate" data-listing-date-sort="1680073200000" data-listing-file-modified-sort="1682290925130" data-listing-reading-time-sort="0.52">
+<a href="./material/Certifications/freecodecamp/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img src="./material/Certifications/freecodecamp/images/fcc.png" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+<p><span class="animate__animated animate__fadeInDown animate__delay-.6s" style="display: inline-block;">freeCodeCamp Certifications</span></p>
+</h5>
+</div>
+</div>
+</a>
+</div>
+<div class="g-col-1" data-index="4" data-categories="IBM,Data Analysis,Course,Free Certificate" data-listing-date-sort="1679727600000" data-listing-file-modified-sort="1682290925124" data-listing-reading-time-sort="0.815">
+<a href="./material/Certifications/IBM_data_analyst/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img data-src="./material/Certifications/IBM_data_analyst/images/IBM.png" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+<p><span class="animate__animated animate__fadeInDown animate__delay-.6s" style="display: inline-block;">IBM Data Analyst certification</span></p>
+</h5>
+</div>
+</div>
+</a>
+</div>
+</div>
 <div class="listing-no-matching d-none">
 No matching items
 </div>
@@ -1253,8 +1210,9 @@ No matching items
 </nav>
 </div>
 <p><a href="../material/index.html"> <button type="button" class="btn btn-primary float-end btn-sm">See all our material</button></a></p>
-<p><br></p>
 </div>
+<p><br></p>
+<hr class="sep-2">
 <div class="container-footer2">
 
 </div>

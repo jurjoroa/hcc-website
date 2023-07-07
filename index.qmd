@@ -15,16 +15,6 @@ listing:
   - id: Events
     contents: events/*/index.qmd
     type: grid
-    grid-columns: 2
-    fields: [image, title]
-    sort: "date desc"
-    #categories: cloud
-    sort-ui: false
-    filter-ui: false
-    page-size: 2
-  - id: books
-    contents: material/Books/*/index.qmd
-    type: grid
     grid-columns: 3
     fields: [image, title]
     sort: "date desc"
@@ -32,12 +22,22 @@ listing:
     sort-ui: false
     filter-ui: false
     page-size: 3
-    image-height: 400px
+  - id: books
+    contents: material/Books/*/index.qmd
+    type: grid
+    grid-columns: 3
+    fields: [image]
+    sort: "date desc"
+    #categories: cloud
+    sort-ui: false
+    filter-ui: false
+    page-size: 3
+    image-height: 250px
   - id: Resources
     contents: material/Resources/*/index.qmd
     type: grid
     grid-columns: 2
-    fields: [image, subtitle, title]
+    fields: [image, title, subtitle, author]
     sort: "date desc"
     #categories: cloud
     sort-ui: false
@@ -45,14 +45,14 @@ listing:
     page-size: 2
   - id: material
     contents: material/Certifications/*/index.qmd
-    type: table
-    fields: [image, title, subtitle]
+    type: grid
+    fields: [image, title]
     sort: "date desc"
     #categories: cloud
     sort-ui: false
     filter-ui: false
-    page-size: 2
-    image-height: 70px
+    grid-columns: 4
+    page-size: 4
 toc: true
 title-block-banner: false
 include-in-header: meta.html
@@ -348,52 +348,69 @@ color: grey">*All the images were generated with Dall-e. </div>
 
 </div> 
 
-<div class="layout_grid_learnr2">
-
-
-
-</div> 
 
 <div class="layout_grid_learnr">
 
 <div class="social-media">
-<h1 class="scroll-text back_resource" style="display: flex; align-items: center; justify-content: center; border-radius: 10px; font-weight: 700;
-  color: white;
-  font-size: 50px;">
 
+
+```{=HTML}
+
+<h1 style="font-size: 40px;
+margin-bottom:40px;
+display: flex;
+justify-content: center;
+align-items: center;
+font-weight: 700;
+  color: #C0031C;
+  background-clip: text;
+  -webkit-background-clip: text;"
+  class="scroll-text"> Resources 
+  
 <lord-icon
-    src="https://cdn.lordicon.com/ckatldkn.json"
+    src="https://cdn.lordicon.com/qbaenubu.json"
     trigger="loop"
-    delay="250"
-    style="width:100px;height:100px">
+    delay="3000"
+    colors="primary:#646e78,secondary:#ebe6ef"
+    style="width:50px;height:50px">
 </lord-icon>
 
-Resources</h1>
+</h1>
+```
 
 ::: {#Resources}
 :::
 
+</hr>
+
 </div> 
 
   <div>
-<h1 class="scroll-text back_resource" style="display: flex; align-items: center; justify-content: center; border-radius: 10px;
-  font-weight: 900;
-  color: white;
-  font-size: 50px;">
 
+
+```{=HTML}
+
+<h1 style="font-size: 40px;
+margin-bottom:40px;
+display: flex;
+justify-content: center;
+align-items: center;
+font-weight: 700;
+  color: #C0031C;
+  background-clip: text;
+  -webkit-background-clip: text;"
+  class="scroll-text"> Learn R 
+  
 <lord-icon
-    src="https://cdn.lordicon.com/azartkjs.json"
+    src="https://cdn.lordicon.com/sglcptvj.json"
     trigger="loop"
-    delay="250"
-    style="width:100px;height:100px">
+    delay="3000"
+    colors="primary:#646e78,secondary:#ebe6ef"
+    style="width:50px;height:50px">
 </lord-icon>
 
- Learn R
-
-
-</h1> 
-
-Learn R
+</h1>
+```
  
 ::: {#learn}
 :::
@@ -419,95 +436,134 @@ Learn R
 
 
 
-<div class="layout_grid_events">
+</div>
+
+<div class="layout_grid_learnr2">
 
 
+<div>
 
- <div class="events">
+```{=HTML}
 
-
- <div class="social-media-mobile2">
-<h1 style="font-size: 90px;
-margin-top:20px;
+<h1 style="font-size: 40px;
+margin-bottom:40px;
 display: flex;
 justify-content: center;
 align-items: center;
 font-weight: 700;
-  background-image: conic-gradient(#553c9a, #ee4b2b, #00c2cb, #553c9a);
-  color: transparent;
+  color: #C0031C;
   background-clip: text;
   -webkit-background-clip: text;"
-  class="scroll-text"> Events </h1>
-</div> 
-
-</div> 
-
-<div style="justify-self: end;"> 
-
-::: {#Events}
-:::
-
-<a href="../events/index.html"> <button type="button" class="btn btn-primary float-end btn-sm">See all our events</button></a>
-
-
- </div>
- 
-</div>
-
-</div>
-
-
-<hr class="sep-2" />
-
-<div class="layout_grid_books">
-
-
-
- <div class="events">
-
-
- <div class="social-media-mobile3">
- 
- <h1 class="scroll-text book_style_mob"> Books </h1>
+  class="scroll-text"> Books 
   
-  <div style="justify-self: end;"> 
+<lord-icon
+    src="https://cdn.lordicon.com/dxoycpzg.json"
+    trigger="loop"
+    delay="3000"
+    colors="primary:#646e78,secondary:#ebe6ef"
+    style="width:50px;height:50px">
+</lord-icon>
+
+</h1>
+```
+
 
 ::: {#books}
 :::
 
 <a href="../books/index.html"> <button type="button" class="btn btn-primary float-end btn-sm">See all our books</button></a>
 
+</br>
 
- </div>
+</div>
+
+<div>
   
-</div> 
+</br>
 
-</div> 
+```{=HTML}
 
-<h1 class="scroll-text book_style_desktop"> Books </h1>
- 
+<h1 style="font-size: 40px;
+margin-bottom:40px;
+display: flex;
+justify-content: center;
+align-items: center;
+font-weight: 700;
+  color: #C0031C;
+  background-clip: text;
+  -webkit-background-clip: text;"
+  class="scroll-text"> Events
+  
+<lord-icon
+    src="https://cdn.lordicon.com/qierxeeb.json"
+    trigger="loop"
+    delay="3000"
+    colors="primary:#646e78,secondary:#ebe6ef"
+    style="width:50px;height:50px">
+</lord-icon>
+
+</h1>
+```
+
+
+::: {#Events}
+:::
+
+<a href="../events/index.html"> <button type="button" class="btn btn-primary float-end btn-sm">See all our events</button></a>
+
 </div>
 
+
 </div>
 
-<hr class="sep-2" />
+</br>
+
+</div> 
 
 
 <div class="layout_table">
 
-<h1 class="scroll-text certification_style_desktop"> Certifications </h1>
-<h1 class="scroll-text certification_style_mobile"> Certifications </h1>
+
+```{=HTML}
+
+<h1 style="font-size: 40px;
+margin-bottom:40px;
+display: flex;
+justify-content: center;
+align-items: center;
+font-weight: 700;
+  color: #C0031C;
+  background-clip: text;
+  -webkit-background-clip: text;"
+  class="scroll-text"> Certifications
+  
+<lord-icon
+    src="https://cdn.lordicon.com/rzqpczno.json"
+    trigger="loop"
+    delay="3000"
+    colors="primary:#0f4667"
+    style="width:50px;height:50px">
+</lord-icon>
+
+</h1>
+```
+
 
 ::: {#material}
 :::
 
 <a href="../material/index.html"> <button type="button" class="btn btn-primary float-end btn-sm">See all our material</button></a>
 
+
+</div>
+
 </br>
 
 
+<hr class="sep-2" />
 
-</div>
+
+
 
 
 <div class="container-footer2">
