@@ -1,6 +1,6 @@
 
 
-<div style="text-align: center;">
+<div align="center">
   <img src="logo/long_gray_HCC.png" alt="Image 1" width="700">
 
   <img src="logo/website.png" alt="Image 2" width="400">
