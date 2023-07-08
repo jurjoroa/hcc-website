@@ -1473,6 +1473,11 @@ display: grid;
 
 }
 
+.user-container #huydang.card_team {
+  background: url("members/team/team/huy_dang/huydang.png") no-repeat;
+  background-size: 300px 400px;
+  background-position: center;
+}
 
 .user-container #simonmunzert.card_team {
   background: url("members/team/team/simon_munzert/simonmunzert.jpg") no-repeat;

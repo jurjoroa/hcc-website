@@ -1,0 +1,36 @@
+---
+title: "Huy Dang"
+page-layout: full
+image: huydang.png
+filters:
+   - lightbox
+lightbox: 
+  match: auto
+  effect: fade
+  desc-position: left
+  css-class: "lightwidth"
+about:
+  template: trestles
+  image-shape: rounded
+  links:
+    - text: "{{< fa solid envelopes-bulk >}} Mail"
+      url: "mailto:h.dang@hertie-school.org"
+comments: false
+---
+
+<style>
+  body {
+  background: linear-gradient(to right, #000428, #004e92);
+}
+
+ .level1 h1, .level1 h3{
+  color: white !important;
+}
+
+a{
+color: #fb1433 !important;
+}
+  
+</style>
+
+Huy Dang is the Manager of the Data Science Lab and the Coordinator for the Master of Data Science for Public Policy at the Hertie School. Before joining Hertie, he was a government official at the Ministry of Finance of Vietnam and a strategic investment specialist in IFC-compliant development projects. His interest is primarily in the field of machine learning, AI-generated art, and computer vision.
