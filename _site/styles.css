@@ -3748,3 +3748,7 @@ background: repeating-radial-gradient(circle at bottom left, #fedc00 0%, #fedc00
 }
 
 
+html body.nav-fixed.quarto-light div#quarto-content.quarto-container.page-columns.page-rows-contents.page-layout-article.page-navbar main#quarto-document-content.content.quarto-banner-title-block div.quarto-figure.quarto-figure-center figure.figure p img.img-fluid.figure-img{
+  margin-top: -100px;
+}
+

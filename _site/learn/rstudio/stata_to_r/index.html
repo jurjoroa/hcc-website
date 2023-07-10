@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.2.280">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
 <meta name="author" content="Jorge Roa">
 <meta name="dcterms.date" content="2023-04-23">
+
 <title>Making the Transition? A Guide for switching from Stata to R</title>
 <style>
 code{white-space: pre-wrap;}
@@ -84,6 +87,7 @@ code span.vs { color: #4070a0; } /* VerbatimString */
 code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
+
 <script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="../../../site_libs/clipboard/clipboard.min.js"></script>
 <script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
@@ -107,7 +111,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <link href="../../../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <link href="../../../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
 <link href="../../../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
-<link href="../../../site_libs/quarto-contrib/animate-4.1.1/animate.min.css" rel="stylesheet"><script id="quarto-search-options" type="application/json">{
+<link href="../../../site_libs/quarto-contrib/animate-4.1.1/animate.min.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
   "collapse-after": 3,
@@ -125,24 +130,34 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     "search-detached-cancel-button-title": "Cancel",
     "search-submit-button-title": "Submit"
   }
-}</script><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-HJEMN0LJY7"></script><script type="text/javascript">
+}</script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-HJEMN0LJY7"></script>
+
+<script type="text/javascript">
 
 window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 gtag('config', 'G-HJEMN0LJY7', { 'anonymize_ip': true});
-</script><style>html{ scroll-behavior: smooth; }</style>
-<!-- Primary Meta Tags --><title>Hertie Coding Club - Everybody can learn to code</title>
+</script>
+<style>html{ scroll-behavior: smooth; }</style>
+<!-- Primary Meta Tags -->
+<title>Hertie Coding Club - Everybody can learn to code</title>
 <meta name="title" content="Hertie Coding Club - Everybody can learn to code">
 <meta name="description" content="Welcome to the Hertie Coding Club! Our goal as a club is to help everyone and between us learn coding skills and show that coding is for everyone, no matter our background.">
-<!-- Open Graph / Facebook --><meta property="og:type" content="website">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
 <meta property="og:url" content="https://www.hertiecodingclub.com">
 <meta property="og:title" content="Making the Transition? A Guide for switching from Stata to R">
 <meta property="og:description" content="Welcome to the Hertie Coding Club! Our goal as a club is to help everyone and between us learn coding skills and show that coding is for everyone, no matter our background.">
-<!-- Primary Meta Tags --><title>Hertie Coding Club - Making the Transition? A Guide for switching from Stata to R</title>
+<!-- Primary Meta Tags -->
+<title>Hertie Coding Club - Making the Transition? A Guide for switching from Stata to R</title>
 <meta name="title" content="Hertie Coding Club - Making the Transition? A Guide for switching from Stata to R">
 <meta name="description" content="If you use Stata for your analysis, but you are courios or want to switch to the R world, this is your guide for it.">
-<!-- Open Graph / Facebook --><meta property="og:type" content="website">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
 <meta property="og:url" content="https://www.hertiecodingclub.com/learn/rstudio/rstudio/rstudio/stata_to_r">
 <meta property="og:title" content="Hertie Coding Club - Making the Transition? A Guide for switching from Stata to R">
 <meta property="og:description" content="If you use Stata for your analysis, but you are courios or want to switch to the R world, this is your guide for it.">
@@ -153,22 +168,28 @@ gtag('config', 'G-HJEMN0LJY7', { 'anonymize_ip': true});
 <style>:root{--animate-duration:3s;--animate-delay:2s;--animate-repeat:1}</style>
 <style>:root{--animate-duration:3s;--animate-delay:2s;--animate-repeat:1}</style>
 <style>:root{--animate-duration:3s;--animate-delay:2s;--animate-repeat:1}</style>
+
+
 <link rel="stylesheet" href="../../../styles.css">
 </head>
+
 <body class="nav-fixed">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top"><nav class="navbar navbar-expand-lg navbar-dark "><div class="navbar-container container-fluid">
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
       <div class="navbar-brand-container">
     <a href="../../../index.html" class="navbar-brand navbar-brand-logo">
-    <img src="../../../images/hcc_final.png" alt="" class="navbar-logo"></a>
+    <img src="../../../images/hcc_final.png" alt="" class="navbar-logo">
+    </a>
   </div>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
-<li class="nav-item">
+  <li class="nav-item">
     <a class="nav-link" href="../../../index.html"><i class="bi bi-house-fill" role="img">
 </i> 
  <span class="menu-text">Home</span></a>
@@ -177,8 +198,8 @@ gtag('config', 'G-HJEMN0LJY7', { 'anonymize_ip': true});
     <a class="nav-link dropdown-toggle" href="#" id="nav-menu-fa-solid-people-group--members" role="button" data-bs-toggle="dropdown" aria-expanded="false">
  <span class="menu-text"><i class="fa-solid fa-people-group" aria-label="people-group"></i> Members</span>
     </a>
-    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-fa-solid-people-group--members">
-<li>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-fa-solid-people-group--members">    
+        <li>
     <a class="dropdown-item" href="../../../members/team/team.html">
  <span class="dropdown-text"><i class="fa-solid fa-person-chalkboard" aria-label="person-chalkboard"></i> Team</span></a>
   </li>  
@@ -187,15 +208,15 @@ gtag('config', 'G-HJEMN0LJY7', { 'anonymize_ip': true});
  <span class="dropdown-text"><i class="fa-solid fa-scale-balanced" aria-label="scale-balanced"></i> Club Statutes</span></a>
   </li>  
     </ul>
-</li>
+  </li>
   <li class="nav-item dropdown ">
     <a class="nav-link dropdown-toggle" href="#" id="nav-menu-learn" role="button" data-bs-toggle="dropdown" aria-expanded="false">
       <i class="bi bi-mortarboard-fill" role="img">
 </i> 
  <span class="menu-text">Learn</span>
     </a>
-    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-learn">
-<li>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-learn">    
+        <li>
     <a class="dropdown-item" href="../../../learn/rstudio.html">
  <span class="dropdown-text"><i class="fa-brands fa-r-project" aria-label="r-project"></i> language</span></a>
   </li>  
@@ -204,7 +225,7 @@ gtag('config', 'G-HJEMN0LJY7', { 'anonymize_ip': true});
  <span class="dropdown-text"><i class="fa-brands fa-python" aria-label="python"></i> Python</span></a>
   </li>  
     </ul>
-</li>
+  </li>
   <li class="nav-item">
     <a class="nav-link" href="../../../material/index.html">
  <span class="menu-text"><i class="fa-solid fa-meteor" aria-label="meteor"></i> Material</span></a>
@@ -222,8 +243,8 @@ gtag('config', 'G-HJEMN0LJY7', { 'anonymize_ip': true});
     <a class="nav-link dropdown-toggle" href="#" id="nav-menu-fa-solid-laptop-code--about-us" role="button" data-bs-toggle="dropdown" aria-expanded="false">
  <span class="menu-text"><i class="fa-solid fa-laptop-code" aria-label="laptop-code"></i> About us</span>
     </a>
-    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-fa-solid-laptop-code--about-us">
-<li>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-fa-solid-laptop-code--about-us">    
+        <li>
     <a class="dropdown-item" href="../../../about_us/index.html">
  <span class="dropdown-text"><i class="fa-solid fa-school-flag" aria-label="school-flag"></i> Who are we</span></a>
   </li>  
@@ -232,15 +253,19 @@ gtag('config', 'G-HJEMN0LJY7', { 'anonymize_ip': true});
  <span class="dropdown-text"><i class="fa-solid fa-circle-nodes" aria-label="circle-nodes"></i> Hertie Clubs</span></a>
   </li>  
     </ul>
-</li>
+  </li>
 </ul>
-<div class="quarto-toggle-container">
+              <div class="quarto-toggle-container">
                   <a href="" class="quarto-color-scheme-toggle nav-link" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
               </div>
               <div id="quarto-search" class="" title="Search"></div>
           </div> <!-- /navcollapse -->
       </div> <!-- /container-fluid -->
-    </nav></header><!-- content --><header id="title-block-header" class="quarto-title-block default page-columns page-full"><div class="quarto-title-banner page-columns page-full">
+    </nav>
+</header>
+<!-- content -->
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
       <h1 class="title"><span class="animate__animated animate__fadeInDown animate__delay-.6s" style="display: inline-block;">Making the Transition? A Guide for switching from Stata to R</span></h1>
             <p class="subtitle lead"><span class="animate__animated animate__fadeInDown animate__delay-.6s" style="display: inline-block;">If you use Stata for your analysis, but you are curious or want to switch to the R world, this is your guide for it.</span></p>
@@ -277,24 +302,22 @@ gtag('config', 'G-HJEMN0LJY7', { 'anonymize_ip': true});
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active"><h2 id="toc-title">On this page</h2>
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
    
   <ul>
-<li><a href="#working-directory" id="toc-working-directory" class="nav-link active" data-scroll-target="#working-directory">Working directory</a></li>
+  <li><a href="#working-directory" id="toc-working-directory" class="nav-link active" data-scroll-target="#working-directory">Working directory</a></li>
   <li><a href="#packages" id="toc-packages" class="nav-link" data-scroll-target="#packages">Packages</a></li>
   <li><a href="#help" id="toc-help" class="nav-link" data-scroll-target="#help">Help</a></li>
-  <li>
-<a href="#load-data" id="toc-load-data" class="nav-link" data-scroll-target="#load-data">Load Data</a>
+  <li><a href="#load-data" id="toc-load-data" class="nav-link" data-scroll-target="#load-data">Load Data</a>
   <ul class="collapse">
-<li><a href="#csv-files" id="toc-csv-files" class="nav-link" data-scroll-target="#csv-files">CSV Files</a></li>
+  <li><a href="#csv-files" id="toc-csv-files" class="nav-link" data-scroll-target="#csv-files">CSV Files</a></li>
   <li><a href="#excel-files" id="toc-excel-files" class="nav-link" data-scroll-target="#excel-files">Excel Files</a></li>
   <li><a href="#stata-files-.dta" id="toc-stata-files-.dta" class="nav-link" data-scroll-target="#stata-files-.dta">Stata Files (.dta)</a></li>
-  </ul>
-</li>
-  <li>
-<a href="#explore-data" id="toc-explore-data" class="nav-link" data-scroll-target="#explore-data">Explore Data</a>
+  </ul></li>
+  <li><a href="#explore-data" id="toc-explore-data" class="nav-link" data-scroll-target="#explore-data">Explore Data</a>
   <ul class="collapse">
-<li><a href="#missing-data" id="toc-missing-data" class="nav-link" data-scroll-target="#missing-data">Missing Data</a></li>
+  <li><a href="#missing-data" id="toc-missing-data" class="nav-link" data-scroll-target="#missing-data">Missing Data</a></li>
   <li><a href="#rename-variables" id="toc-rename-variables" class="nav-link" data-scroll-target="#rename-variables">Rename variables</a></li>
   <li><a href="#label-variables" id="toc-label-variables" class="nav-link" data-scroll-target="#label-variables">Label variables</a></li>
   <li><a href="#value-labels" id="toc-value-labels" class="nav-link" data-scroll-target="#value-labels">Value labels</a></li>
@@ -302,34 +325,35 @@ gtag('config', 'G-HJEMN0LJY7', { 'anonymize_ip': true});
   <li><a href="#merge-two-datasets" id="toc-merge-two-datasets" class="nav-link" data-scroll-target="#merge-two-datasets">Merge two datasets</a></li>
   <li><a href="#create-sequenceids" id="toc-create-sequenceids" class="nav-link" data-scroll-target="#create-sequenceids">Create sequence/ids</a></li>
   <li><a href="#drop-variables" id="toc-drop-variables" class="nav-link" data-scroll-target="#drop-variables">Drop variables</a></li>
-  </ul>
-</li>
+  </ul></li>
   <li><a href="#frequenciestabulation" id="toc-frequenciestabulation" class="nav-link" data-scroll-target="#frequenciestabulation">Frequencies/Tabulation</a></li>
-  <li>
-<a href="#statistics" id="toc-statistics" class="nav-link" data-scroll-target="#statistics">Statistics</a>
+  <li><a href="#statistics" id="toc-statistics" class="nav-link" data-scroll-target="#statistics">Statistics</a>
   <ul class="collapse">
-<li><a href="#summary" id="toc-summary" class="nav-link" data-scroll-target="#summary">Summary</a></li>
+  <li><a href="#summary" id="toc-summary" class="nav-link" data-scroll-target="#summary">Summary</a></li>
   <li><a href="#linear-model" id="toc-linear-model" class="nav-link" data-scroll-target="#linear-model">Linear Model</a></li>
   <li><a href="#logistic-model" id="toc-logistic-model" class="nav-link" data-scroll-target="#logistic-model">Logistic Model</a></li>
   <li><a href="#poisson-model" id="toc-poisson-model" class="nav-link" data-scroll-target="#poisson-model">Poisson Model</a></li>
-  </ul>
-</li>
-  <li>
-<a href="#plots" id="toc-plots" class="nav-link" data-scroll-target="#plots">Plots</a>
+  </ul></li>
+  <li><a href="#plots" id="toc-plots" class="nav-link" data-scroll-target="#plots">Plots</a>
   <ul class="collapse">
-<li><a href="#scatter-plot" id="toc-scatter-plot" class="nav-link" data-scroll-target="#scatter-plot">Scatter plot</a></li>
+  <li><a href="#scatter-plot" id="toc-scatter-plot" class="nav-link" data-scroll-target="#scatter-plot">Scatter plot</a></li>
   <li><a href="#line-plot" id="toc-line-plot" class="nav-link" data-scroll-target="#line-plot">Line plot</a></li>
   <li><a href="#bar-plot" id="toc-bar-plot" class="nav-link" data-scroll-target="#bar-plot">Bar plot</a></li>
-  </ul>
-</li>
+  </ul></li>
   <li><a href="#cheat-sheet-stata-to-r" id="toc-cheat-sheet-stata-to-r" class="nav-link" data-scroll-target="#cheat-sheet-stata-to-r">Cheat Sheet: Stata to R</a></li>
   <li><a href="#rstata" id="toc-rstata" class="nav-link" data-scroll-target="#rstata">RStata</a></li>
   <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion">Conclusion</a></li>
   <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
-  </ul></nav>
+  </ul>
+</nav>
     </div>
 <!-- main -->
-<main class="content quarto-banner-title-block" id="quarto-document-content"><style>
+<main class="content quarto-banner-title-block" id="quarto-document-content">
+
+
+
+
+<style>
 
 div.sourceCode {
   font-size: .7em;
@@ -337,7 +361,8 @@ div.sourceCode {
 
 </style>
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="images/rstudio_stata.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="images/rstudio_stata.png" class="img-fluid figure-img"></a></p>
+<figure class="figure">
+<p><a href="images/rstudio_stata.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="images/rstudio_stata.png" class="img-fluid figure-img"></a></p>
 </figure>
 </div>
 <hr>
@@ -345,12 +370,14 @@ div.sourceCode {
 <p>Because of this and because I know that different people and scholars are using Stata and they are curious about what R offers, here is an essential guide of commands for doing some data wrangling, analysis, and running some models. Of course, I don’t cover plenty of things, but this is just to show the differences between using R and Stata. I’m sorry if I don’t use the new Stata approaches since I learned the version 11º or 12º and now the are in the 17º version, however, the commands still can be useful.</p>
 <p>&nbsp; &nbsp;</p>
 <p>We are going to work a lot with the <code>dplyr</code>package. You need to load the package just once when you open your environment. If you have any question, please check our other material to start learning R. However, the best way to learn is try different approaches (;</p>
-<section id="working-directory" class="level1"><h1>Working directory</h1>
+<section id="working-directory" class="level1">
+<h1>Working directory</h1>
 <hr>
 <div class="columns">
 <div class="column" style="width:45%;">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="images/stata.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="images/stata.png" height="34" class="figure-img"></a></p>
+<figure class="figure">
+<p><a href="images/stata.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="images/stata.png" height="34" class="figure-img"></a></p>
 </figure>
 </div>
 <div class="sourceCode" id="cb1"><pre class="sourceCode stata code-with-copy"><code class="sourceCode stata"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">/*Working directory path*/</span></span>
@@ -360,30 +387,35 @@ div.sourceCode {
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>cd c:\myfolder\<span class="kw">data</span> </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div><div class="column" style="width:10%;">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="images/arrow.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img src="images/arrow.png" height="40" class="figure-img"></a></p>
+<figure class="figure">
+<p><a href="images/arrow.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img src="images/arrow.png" height="40" class="figure-img"></a></p>
 </figure>
 </div>
 </div><div class="column" style="width:45%;">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="images/studio.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4"><img src="images/studio.png" height="34" class="figure-img"></a></p>
+<figure class="figure">
+<p><a href="images/studio.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4"><img src="images/studio.png" height="34" class="figure-img"></a></p>
 </figure>
 </div>
 <div class="cell">
-<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co">#Working directory path</span></span>
-<span><span class="fu"><a href="https://rdrr.io/r/base/getwd.html">getwd</a></span><span class="op">(</span><span class="op">)</span></span>
-<span></span>
-<span><span class="co">#Changes the working directory path</span></span>
-<span><span class="fu"><a href="https://rdrr.io/r/base/getwd.html">setwd</a></span><span class="op">(</span><span class="st">"my_path"</span><span class="op">)</span> </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Working directory path</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">getwd</span>()</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="co">#Changes the working directory path</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="fu">setwd</span>(<span class="st">"my_path"</span>) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 </div>
 <p>&nbsp;</p>
-</section><section id="packages" class="level1"><h1>Packages</h1>
+</section>
+<section id="packages" class="level1">
+<h1>Packages</h1>
 <hr>
 <div class="columns">
 <div class="column" style="width:45%;">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="images/stata.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5"><img src="images/stata.png" height="34" class="figure-img"></a></p>
+<figure class="figure">
+<p><a href="images/stata.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5"><img src="images/stata.png" height="34" class="figure-img"></a></p>
 </figure>
 </div>
 <div class="sourceCode" id="cb3"><pre class="sourceCode stata code-with-copy"><code class="sourceCode stata"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co">/*Install package*/</span></span>
@@ -393,30 +425,35 @@ div.sourceCode {
 <p>Once is installed, we don’t need to “load it”</p>
 </div><div class="column" style="width:10%;">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="images/arrow.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6"><img src="images/arrow.png" height="40" class="figure-img"></a></p>
+<figure class="figure">
+<p><a href="images/arrow.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6"><img src="images/arrow.png" height="40" class="figure-img"></a></p>
 </figure>
 </div>
 </div><div class="column" style="width:45%;">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="images/studio.png" class="lightbox" data-gallery="quarto-lightbox-gallery-7"><img src="images/studio.png" height="34" class="figure-img"></a></p>
+<figure class="figure">
+<p><a href="images/studio.png" class="lightbox" data-gallery="quarto-lightbox-gallery-7"><img src="images/studio.png" height="34" class="figure-img"></a></p>
 </figure>
 </div>
 <div class="cell">
-<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co">#Working directory path</span></span>
-<span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span><span class="op">(</span><span class="st">"tidyverse"</span><span class="op">)</span></span>
-<span></span>
-<span><span class="co">#Load library</span></span>
-<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://tidyverse.tidyverse.org">tidyverse</a></span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Working directory path</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"tidyverse"</span>)</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="co">#Load library</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 </div>
 <p>&nbsp;</p>
-</section><section id="help" class="level1"><h1>Help</h1>
+</section>
+<section id="help" class="level1">
+<h1>Help</h1>
 <hr>
 <div class="columns">
 <div class="column" style="width:45%;">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="images/stata.png" class="lightbox" data-gallery="quarto-lightbox-gallery-8"><img src="images/stata.png" height="34" class="figure-img"></a></p>
+<figure class="figure">
+<p><a href="images/stata.png" class="lightbox" data-gallery="quarto-lightbox-gallery-8"><img src="images/stata.png" height="34" class="figure-img"></a></p>
 </figure>
 </div>
 <div class="sourceCode" id="cb5"><pre class="sourceCode stata code-with-copy"><code class="sourceCode stata"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co">/*Get help with the command regression*/</span></span>
@@ -424,29 +461,35 @@ div.sourceCode {
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div><div class="column" style="width:10%;">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="images/arrow.png" class="lightbox" data-gallery="quarto-lightbox-gallery-9"><img src="images/arrow.png" height="40" class="figure-img"></a></p>
+<figure class="figure">
+<p><a href="images/arrow.png" class="lightbox" data-gallery="quarto-lightbox-gallery-9"><img src="images/arrow.png" height="40" class="figure-img"></a></p>
 </figure>
 </div>
 </div><div class="column" style="width:45%;">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="images/studio.png" class="lightbox" data-gallery="quarto-lightbox-gallery-10"><img src="images/studio.png" height="34" class="figure-img"></a></p>
+<figure class="figure">
+<p><a href="images/studio.png" class="lightbox" data-gallery="quarto-lightbox-gallery-10"><img src="images/studio.png" height="34" class="figure-img"></a></p>
 </figure>
 </div>
 <div class="cell">
-<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co">#Help with mutate function from dplyr package</span></span>
-<span><span class="op">?</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Help with mutate function from dplyr package</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>?<span class="fu">mutate</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 </div>
 <p>&nbsp;</p>
-</section><section id="load-data" class="level1"><h1>Load Data</h1>
+</section>
+<section id="load-data" class="level1">
+<h1>Load Data</h1>
 <hr>
 <p>&nbsp;</p>
-<section id="csv-files" class="level2"><h2 class="anchored" data-anchor-id="csv-files">CSV Files</h2>
+<section id="csv-files" class="level2">
+<h2 class="anchored" data-anchor-id="csv-files">CSV Files</h2>
 <div class="columns">
 <div class="column" style="width:45%;">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="images/stata.png" class="lightbox" data-gallery="quarto-lightbox-gallery-11"><img src="images/stata.png" height="34" class="figure-img"></a></p>
+<figure class="figure">
+<p><a href="images/stata.png" class="lightbox" data-gallery="quarto-lightbox-gallery-11"><img src="images/stata.png" height="34" class="figure-img"></a></p>
 </figure>
 </div>
 <div class="sourceCode" id="cb7"><pre class="sourceCode stata code-with-copy"><code class="sourceCode stata"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co">/*Import csv file*/</span></span>
@@ -455,33 +498,38 @@ div.sourceCode {
 <span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div><div class="column" style="width:10%;">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="images/arrow.png" class="lightbox" data-gallery="quarto-lightbox-gallery-12"><img src="images/arrow.png" height="40" class="figure-img"></a></p>
+<figure class="figure">
+<p><a href="images/arrow.png" class="lightbox" data-gallery="quarto-lightbox-gallery-12"><img src="images/arrow.png" height="40" class="figure-img"></a></p>
 </figure>
 </div>
 </div><div class="column" style="width:45%;">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="images/studio.png" class="lightbox" data-gallery="quarto-lightbox-gallery-13"><img src="images/studio.png" height="34" class="figure-img"></a></p>
+<figure class="figure">
+<p><a href="images/studio.png" class="lightbox" data-gallery="quarto-lightbox-gallery-13"><img src="images/studio.png" height="34" class="figure-img"></a></p>
 </figure>
 </div>
 <div class="cell">
-<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://readr.tidyverse.org">readr</a></span><span class="op">)</span></span>
-<span></span>
-<span><span class="co">#Use read_csv2</span></span>
-<span><span class="va">df_data</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://readr.tidyverse.org/reference/read_delim.html">read_csv2</a></span><span class="op">(</span><span class="st">"data.csv"</span><span class="op">)</span></span>
-<span></span>
-<span><span class="co">#Using read.table function with comma separator</span></span>
-<span><span class="va">df_data</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/utils/read.table.html">read.table</a></span><span class="op">(</span><span class="st">"my_data.csv"</span>, </span>
-<span>                      sep <span class="op">=</span> <span class="st">","</span>, </span>
-<span>                      header <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readr)</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="co">#Use read_csv2</span></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>df_data <span class="ot">&lt;-</span> <span class="fu">read_csv2</span>(<span class="st">"data.csv"</span>)</span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a><span class="co">#Using read.table function with comma separator</span></span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>df_data <span class="ot">&lt;-</span> <span class="fu">read.table</span>(<span class="st">"my_data.csv"</span>, </span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>                      <span class="at">sep =</span> <span class="st">","</span>, </span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a>                      <span class="at">header =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 </div>
 <p>&nbsp;</p>
-</section><section id="excel-files" class="level2"><h2 class="anchored" data-anchor-id="excel-files">Excel Files</h2>
+</section>
+<section id="excel-files" class="level2">
+<h2 class="anchored" data-anchor-id="excel-files">Excel Files</h2>
 <div class="columns">
 <div class="column" style="width:45%;">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="images/stata.png" class="lightbox" data-gallery="quarto-lightbox-gallery-14"><img src="images/stata.png" height="34" class="figure-img"></a></p>
+<figure class="figure">
+<p><a href="images/stata.png" class="lightbox" data-gallery="quarto-lightbox-gallery-14"><img src="images/stata.png" height="34" class="figure-img"></a></p>
 </figure>
 </div>
 <div class="sourceCode" id="cb9"><pre class="sourceCode stata code-with-copy"><code class="sourceCode stata"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co">/*Import excel file*/</span></span>
@@ -489,63 +537,74 @@ div.sourceCode {
 <span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>sheet(<span class="st">"Sheet1"</span>) firstrow <span class="kw">clear</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div><div class="column" style="width:10%;">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="images/arrow.png" class="lightbox" data-gallery="quarto-lightbox-gallery-15"><img src="images/arrow.png" height="40" class="figure-img"></a></p>
+<figure class="figure">
+<p><a href="images/arrow.png" class="lightbox" data-gallery="quarto-lightbox-gallery-15"><img src="images/arrow.png" height="40" class="figure-img"></a></p>
 </figure>
 </div>
 </div><div class="column" style="width:45%;">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="images/studio.png" class="lightbox" data-gallery="quarto-lightbox-gallery-16"><img src="images/studio.png" height="34" class="figure-img"></a></p>
+<figure class="figure">
+<p><a href="images/studio.png" class="lightbox" data-gallery="quarto-lightbox-gallery-16"><img src="images/studio.png" height="34" class="figure-img"></a></p>
 </figure>
 </div>
 <div class="cell">
-<div class="sourceCode" id="cb10"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co">#With readxl package</span></span>
-<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://readxl.tidyverse.org">readxl</a></span><span class="op">)</span></span>
-<span><span class="va">df_data</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://readxl.tidyverse.org/reference/read_excel.html">read_excel</a></span><span class="op">(</span><span class="st">"my_data.xlsx"</span>, </span>
-<span>                      sheet <span class="op">=</span> <span class="st">"Sheet1"</span><span class="op">)</span></span>
-<span></span>
-<span><span class="co">#With openxlsx package</span></span>
-<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://ycphs.github.io/openxlsx/index.html">openxlsx</a></span><span class="op">)</span></span>
-<span><span class="va">df_data</span> <span class="op">&lt;-</span> <span class="fu">read.xlsx</span><span class="op">(</span><span class="st">"my_data.xlsx"</span>, </span>
-<span>                     sheet <span class="op">=</span> <span class="st">"Sheet1"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co">#With readxl package</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readxl)</span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>df_data <span class="ot">&lt;-</span> <span class="fu">read_excel</span>(<span class="st">"my_data.xlsx"</span>, </span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>                      <span class="at">sheet =</span> <span class="st">"Sheet1"</span>)</span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a><span class="co">#With openxlsx package</span></span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(openxlsx)</span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a>df_data <span class="ot">&lt;-</span> <span class="fu">read.xlsx</span>(<span class="st">"my_data.xlsx"</span>, </span>
+<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a>                     <span class="at">sheet =</span> <span class="st">"Sheet1"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 </div>
 <p>&nbsp;</p>
-</section><section id="stata-files-.dta" class="level2"><h2 class="anchored" data-anchor-id="stata-files-.dta">Stata Files (.dta)</h2>
+</section>
+<section id="stata-files-.dta" class="level2">
+<h2 class="anchored" data-anchor-id="stata-files-.dta">Stata Files (.dta)</h2>
 <div class="columns">
 <div class="column" style="width:45%;">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="images/stata.png" class="lightbox" data-gallery="quarto-lightbox-gallery-17"><img src="images/stata.png" height="34" class="figure-img"></a></p>
+<figure class="figure">
+<p><a href="images/stata.png" class="lightbox" data-gallery="quarto-lightbox-gallery-17"><img src="images/stata.png" height="34" class="figure-img"></a></p>
 </figure>
 </div>
 <div class="sourceCode" id="cb11"><pre class="sourceCode stata code-with-copy"><code class="sourceCode stata"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co">/*Import excel file*/</span></span>
 <span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="kw">use</span> <span class="st">"df_data.dta"</span>, <span class="kw">clear</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div><div class="column" style="width:10%;">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="images/arrow.png" class="lightbox" data-gallery="quarto-lightbox-gallery-18"><img src="images/arrow.png" height="40" class="figure-img"></a></p>
+<figure class="figure">
+<p><a href="images/arrow.png" class="lightbox" data-gallery="quarto-lightbox-gallery-18"><img src="images/arrow.png" height="40" class="figure-img"></a></p>
 </figure>
 </div>
 </div><div class="column" style="width:45%;">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="images/studio.png" class="lightbox" data-gallery="quarto-lightbox-gallery-19"><img src="images/studio.png" height="34" class="figure-img"></a></p>
+<figure class="figure">
+<p><a href="images/studio.png" class="lightbox" data-gallery="quarto-lightbox-gallery-19"><img src="images/studio.png" height="34" class="figure-img"></a></p>
 </figure>
 </div>
 <div class="cell">
-<div class="sourceCode" id="cb12"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co">#Load the package</span></span>
-<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://haven.tidyverse.org">haven</a></span><span class="op">)</span>            </span>
-<span></span>
-<span><span class="va">df_data</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://haven.tidyverse.org/reference/read_dta.html">read_dta</a></span><span class="op">(</span><span class="st">"df_data.dta"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Load the package</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(haven)            </span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>df_data <span class="ot">&lt;-</span> <span class="fu">read_dta</span>(<span class="st">"df_data.dta"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 </div>
 <p>&nbsp;</p>
-</section></section><section id="explore-data" class="level1"><h1>Explore Data</h1>
+</section>
+</section>
+<section id="explore-data" class="level1">
+<h1>Explore Data</h1>
 <hr>
 <p>Remember the difference between R and Stata. While in R you need to specify which object (or data) you want to work with, in Stata, the variables are loaded, so it’s easier to work with them.</p>
 <div class="columns">
 <div class="column" style="width:45%;">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="images/stata.png" class="lightbox" data-gallery="quarto-lightbox-gallery-20"><img src="images/stata.png" height="34" class="figure-img"></a></p>
+<figure class="figure">
+<p><a href="images/stata.png" class="lightbox" data-gallery="quarto-lightbox-gallery-20"><img src="images/stata.png" height="34" class="figure-img"></a></p>
 </figure>
 </div>
 <div class="sourceCode" id="cb13"><pre class="sourceCode stata code-with-copy"><code class="sourceCode stata"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co">/* Provides the structure of the dataset */</span></span>
@@ -576,49 +635,53 @@ div.sourceCode {
 <span id="cb13-26"><a href="#cb13-26" aria-hidden="true" tabindex="-1"></a>browse </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div><div class="column" style="width:10%;">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="images/arrow.png" class="lightbox" data-gallery="quarto-lightbox-gallery-21"><img src="images/arrow.png" height="40" class="figure-img"></a></p>
+<figure class="figure">
+<p><a href="images/arrow.png" class="lightbox" data-gallery="quarto-lightbox-gallery-21"><img src="images/arrow.png" height="40" class="figure-img"></a></p>
 </figure>
 </div>
 </div><div class="column" style="width:45%;">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="images/studio.png" class="lightbox" data-gallery="quarto-lightbox-gallery-22"><img src="images/studio.png" height="34" class="figure-img"></a></p>
+<figure class="figure">
+<p><a href="images/studio.png" class="lightbox" data-gallery="quarto-lightbox-gallery-22"><img src="images/studio.png" height="34" class="figure-img"></a></p>
 </figure>
 </div>
 <div class="cell">
-<div class="sourceCode" id="cb14"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co">#Provides the structure of our data </span></span>
-<span><span class="fu"><a href="https://rdrr.io/r/utils/str.html">str</a></span><span class="op">(</span><span class="va">df_data</span><span class="op">)</span></span>
-<span></span>
-<span><span class="co">#Basic descriptive statistics</span></span>
-<span><span class="fu"><a href="https://rdrr.io/r/base/summary.html">summary</a></span><span class="op">(</span><span class="va">df_data</span><span class="op">)</span></span>
-<span></span>
-<span><span class="co">#Lists the variables of our data </span></span>
-<span><span class="fu"><a href="https://rdrr.io/r/base/names.html">names</a></span><span class="op">(</span><span class="va">df_data</span><span class="op">)</span></span>
-<span></span>
-<span><span class="co">#Show first 10 observations of our data </span></span>
-<span><span class="fu"><a href="https://rdrr.io/r/utils/head.html">head</a></span><span class="op">(</span><span class="va">df_data</span>, n <span class="op">=</span> <span class="fl">10</span><span class="op">)</span></span>
-<span></span>
-<span><span class="co">#Show last 10 observations of our data </span></span>
-<span><span class="fu"><a href="https://rdrr.io/r/utils/head.html">tail</a></span><span class="op">(</span><span class="va">df_data</span>, n <span class="op">=</span> <span class="fl">10</span><span class="op">)</span></span>
-<span></span>
-<span><span class="co">#Show first 10 observations of the </span></span>
-<span><span class="co"># first three variables of our data </span></span>
-<span><span class="va">df_data</span><span class="op">[</span><span class="fl">1</span><span class="op">:</span><span class="fl">10</span>, <span class="fl">1</span><span class="op">:</span><span class="fl">3</span><span class="op">]</span></span>
-<span></span>
-<span><span class="co"># With dplyr, this would be other option</span></span>
-<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://dplyr.tidyverse.org">dplyr</a></span><span class="op">)</span></span>
-<span><span class="va">df_data</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/slice.html">slice</a></span><span class="op">(</span><span class="fl">1</span><span class="op">:</span><span class="fl">10</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op">(</span><span class="fl">1</span><span class="op">:</span><span class="fl">3</span><span class="op">)</span></span>
-<span></span>
-<span><span class="co">#View data</span></span>
-<span><span class="fu"><a href="https://rdrr.io/r/utils/View.html">View</a></span><span class="op">(</span><span class="va">df_data</span><span class="op">)</span> </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Provides the structure of our data </span></span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(df_data)</span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a><span class="co">#Basic descriptive statistics</span></span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(df_data)</span>
+<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a><span class="co">#Lists the variables of our data </span></span>
+<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a><span class="fu">names</span>(df_data)</span>
+<span id="cb14-9"><a href="#cb14-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-10"><a href="#cb14-10" aria-hidden="true" tabindex="-1"></a><span class="co">#Show first 10 observations of our data </span></span>
+<span id="cb14-11"><a href="#cb14-11" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(df_data, <span class="at">n =</span> <span class="dv">10</span>)</span>
+<span id="cb14-12"><a href="#cb14-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-13"><a href="#cb14-13" aria-hidden="true" tabindex="-1"></a><span class="co">#Show last 10 observations of our data </span></span>
+<span id="cb14-14"><a href="#cb14-14" aria-hidden="true" tabindex="-1"></a><span class="fu">tail</span>(df_data, <span class="at">n =</span> <span class="dv">10</span>)</span>
+<span id="cb14-15"><a href="#cb14-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-16"><a href="#cb14-16" aria-hidden="true" tabindex="-1"></a><span class="co">#Show first 10 observations of the </span></span>
+<span id="cb14-17"><a href="#cb14-17" aria-hidden="true" tabindex="-1"></a><span class="co"># first three variables of our data </span></span>
+<span id="cb14-18"><a href="#cb14-18" aria-hidden="true" tabindex="-1"></a>df_data[<span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>, <span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>]</span>
+<span id="cb14-19"><a href="#cb14-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-20"><a href="#cb14-20" aria-hidden="true" tabindex="-1"></a><span class="co"># With dplyr, this would be other option</span></span>
+<span id="cb14-21"><a href="#cb14-21" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb14-22"><a href="#cb14-22" aria-hidden="true" tabindex="-1"></a>df_data <span class="sc">%&gt;%</span> <span class="fu">slice</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>) <span class="sc">%&gt;%</span> <span class="fu">select</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>)</span>
+<span id="cb14-23"><a href="#cb14-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-24"><a href="#cb14-24" aria-hidden="true" tabindex="-1"></a><span class="co">#View data</span></span>
+<span id="cb14-25"><a href="#cb14-25" aria-hidden="true" tabindex="-1"></a><span class="fu">View</span>(df_data) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 </div>
 <p>&nbsp;</p>
-<section id="missing-data" class="level2"><h2 class="anchored" data-anchor-id="missing-data">Missing Data</h2>
+<section id="missing-data" class="level2">
+<h2 class="anchored" data-anchor-id="missing-data">Missing Data</h2>
 <div class="columns">
 <div class="column" style="width:45%;">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="images/stata.png" class="lightbox" data-gallery="quarto-lightbox-gallery-23"><img src="images/stata.png" height="34" class="figure-img"></a></p>
+<figure class="figure">
+<p><a href="images/stata.png" class="lightbox" data-gallery="quarto-lightbox-gallery-23"><img src="images/stata.png" height="34" class="figure-img"></a></p>
 </figure>
 </div>
 <div class="sourceCode" id="cb15"><pre class="sourceCode stata code-with-copy"><code class="sourceCode stata"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co">/* Provides the structure of the dataset */</span></span>
@@ -626,29 +689,34 @@ div.sourceCode {
 <span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div><div class="column" style="width:10%;">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="images/arrow.png" class="lightbox" data-gallery="quarto-lightbox-gallery-24"><img src="images/arrow.png" height="40" class="figure-img"></a></p>
+<figure class="figure">
+<p><a href="images/arrow.png" class="lightbox" data-gallery="quarto-lightbox-gallery-24"><img src="images/arrow.png" height="40" class="figure-img"></a></p>
 </figure>
 </div>
 </div><div class="column" style="width:45%;">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="images/studio.png" class="lightbox" data-gallery="quarto-lightbox-gallery-25"><img src="images/studio.png" height="34" class="figure-img"></a></p>
+<figure class="figure">
+<p><a href="images/studio.png" class="lightbox" data-gallery="quarto-lightbox-gallery-25"><img src="images/studio.png" height="34" class="figure-img"></a></p>
 </figure>
 </div>
 <div class="cell">
-<div class="sourceCode" id="cb16"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co">#Check missing data for our entire database</span></span>
-<span><span class="fu"><a href="https://rdrr.io/r/base/NA.html">is.na</a></span><span class="op">(</span><span class="va">df_data</span><span class="op">)</span></span>
-<span></span>
-<span><span class="co">#Check missing data for our entire database</span></span>
-<span><span class="fu"><a href="https://rdrr.io/r/base/NA.html">is.na</a></span><span class="op">(</span><span class="va">df_data</span><span class="op">$</span><span class="va">variable1</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Check missing data for our entire database</span></span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a><span class="fu">is.na</span>(df_data)</span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a><span class="co">#Check missing data for our entire database</span></span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a><span class="fu">is.na</span>(df_data<span class="sc">$</span>variable1)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 </div>
 <p>&nbsp;</p>
-</section><section id="rename-variables" class="level2"><h2 class="anchored" data-anchor-id="rename-variables">Rename variables</h2>
+</section>
+<section id="rename-variables" class="level2">
+<h2 class="anchored" data-anchor-id="rename-variables">Rename variables</h2>
 <div class="columns">
 <div class="column" style="width:45%;">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="images/stata.png" class="lightbox" data-gallery="quarto-lightbox-gallery-26"><img src="images/stata.png" height="34" class="figure-img"></a></p>
+<figure class="figure">
+<p><a href="images/stata.png" class="lightbox" data-gallery="quarto-lightbox-gallery-26"><img src="images/stata.png" height="34" class="figure-img"></a></p>
 </figure>
 </div>
 <div class="sourceCode" id="cb17"><pre class="sourceCode stata code-with-copy"><code class="sourceCode stata"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="co">/* How to rename */</span></span>
@@ -661,33 +729,38 @@ div.sourceCode {
 <span id="cb17-8"><a href="#cb17-8" aria-hidden="true" tabindex="-1"></a></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div><div class="column" style="width:10%;">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="images/arrow.png" class="lightbox" data-gallery="quarto-lightbox-gallery-27"><img src="images/arrow.png" height="40" class="figure-img"></a></p>
+<figure class="figure">
+<p><a href="images/arrow.png" class="lightbox" data-gallery="quarto-lightbox-gallery-27"><img src="images/arrow.png" height="40" class="figure-img"></a></p>
 </figure>
 </div>
 </div><div class="column" style="width:45%;">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="images/studio.png" class="lightbox" data-gallery="quarto-lightbox-gallery-28"><img src="images/studio.png" height="34" class="figure-img"></a></p>
+<figure class="figure">
+<p><a href="images/studio.png" class="lightbox" data-gallery="quarto-lightbox-gallery-28"><img src="images/studio.png" height="34" class="figure-img"></a></p>
 </figure>
 </div>
 <div class="cell">
-<div class="sourceCode" id="cb18"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co">#Rename the variables of our data</span></span>
-<span><span class="fu"><a href="https://rdrr.io/r/base/names.html">names</a></span><span class="op">(</span><span class="va">df_data</span><span class="op">)</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"newvar1"</span>, <span class="st">"newvar2"</span><span class="op">)</span></span>
-<span></span>
-<span><span class="co">#With the dplyr package</span></span>
-<span></span>
-<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://dplyr.tidyverse.org">dplyr</a></span><span class="op">)</span></span>
-<span><span class="va">df_data_final</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/rename.html">rename</a></span><span class="op">(</span><span class="va">df_data</span>, </span>
-<span>                        newvar1 <span class="op">=</span> <span class="va">var1</span>, </span>
-<span>                        newvar2 <span class="op">=</span> <span class="va">var2</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Rename the variables of our data</span></span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a><span class="fu">names</span>(df_data) <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"newvar1"</span>, <span class="st">"newvar2"</span>)</span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a><span class="co">#With the dplyr package</span></span>
+<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb18-7"><a href="#cb18-7" aria-hidden="true" tabindex="-1"></a>df_data_final <span class="ot">&lt;-</span> <span class="fu">rename</span>(df_data, </span>
+<span id="cb18-8"><a href="#cb18-8" aria-hidden="true" tabindex="-1"></a>                        <span class="at">newvar1 =</span> var1, </span>
+<span id="cb18-9"><a href="#cb18-9" aria-hidden="true" tabindex="-1"></a>                        <span class="at">newvar2 =</span> var2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 </div>
 <p>&nbsp;</p>
-</section><section id="label-variables" class="level2"><h2 class="anchored" data-anchor-id="label-variables">Label variables</h2>
+</section>
+<section id="label-variables" class="level2">
+<h2 class="anchored" data-anchor-id="label-variables">Label variables</h2>
 <div class="columns">
 <div class="column" style="width:45%;">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="images/stata.png" class="lightbox" data-gallery="quarto-lightbox-gallery-29"><img src="images/stata.png" height="34" class="figure-img"></a></p>
+<figure class="figure">
+<p><a href="images/stata.png" class="lightbox" data-gallery="quarto-lightbox-gallery-29"><img src="images/stata.png" height="34" class="figure-img"></a></p>
 </figure>
 </div>
 <div class="sourceCode" id="cb19"><pre class="sourceCode stata code-with-copy"><code class="sourceCode stata"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="kw">label</span> <span class="kw">variable</span> <span class="fu">w</span> <span class="st">"Weight"</span></span>
@@ -698,33 +771,38 @@ div.sourceCode {
 <span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a><span class="kw">label</span> <span class="kw">variable</span> sex <span class="st">"Gender"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div><div class="column" style="width:10%;">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="images/arrow.png" class="lightbox" data-gallery="quarto-lightbox-gallery-30"><img src="images/arrow.png" height="40" class="figure-img"></a></p>
+<figure class="figure">
+<p><a href="images/arrow.png" class="lightbox" data-gallery="quarto-lightbox-gallery-30"><img src="images/arrow.png" height="40" class="figure-img"></a></p>
 </figure>
 </div>
 </div><div class="column" style="width:45%;">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="images/studio.png" class="lightbox" data-gallery="quarto-lightbox-gallery-31"><img src="images/studio.png" height="34" class="figure-img"></a></p>
+<figure class="figure">
+<p><a href="images/studio.png" class="lightbox" data-gallery="quarto-lightbox-gallery-31"><img src="images/studio.png" height="34" class="figure-img"></a></p>
 </figure>
 </div>
 <div class="cell">
-<div class="sourceCode" id="cb20"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co">#Load labelled package</span></span>
-<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://larmarange.github.io/labelled/">labelled</a></span><span class="op">)</span></span>
-<span></span>
-<span><span class="co">#Define the value labels for the codes</span></span>
-<span><span class="va">labels</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"Option 1"</span>, <span class="st">"Option 2"</span>, </span>
-<span>            <span class="st">"Option 3"</span>, <span class="st">"Option 4"</span>, </span>
-<span>            <span class="st">"Option 5"</span><span class="op">)</span></span>
-<span><span class="va">df_data</span><span class="op">$</span><span class="va">code</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://haven.tidyverse.org/reference/labelled.html">labelled</a></span><span class="op">(</span><span class="va">df_data</span><span class="op">$</span><span class="va">code</span>, </span>
-<span>                         labels <span class="op">=</span> <span class="va">labels</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Load labelled package</span></span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(labelled)</span>
+<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a><span class="co">#Define the value labels for the codes</span></span>
+<span id="cb20-5"><a href="#cb20-5" aria-hidden="true" tabindex="-1"></a>labels <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"Option 1"</span>, <span class="st">"Option 2"</span>, </span>
+<span id="cb20-6"><a href="#cb20-6" aria-hidden="true" tabindex="-1"></a>            <span class="st">"Option 3"</span>, <span class="st">"Option 4"</span>, </span>
+<span id="cb20-7"><a href="#cb20-7" aria-hidden="true" tabindex="-1"></a>            <span class="st">"Option 5"</span>)</span>
+<span id="cb20-8"><a href="#cb20-8" aria-hidden="true" tabindex="-1"></a>df_data<span class="sc">$</span>code <span class="ot">&lt;-</span> <span class="fu">labelled</span>(df_data<span class="sc">$</span>code, </span>
+<span id="cb20-9"><a href="#cb20-9" aria-hidden="true" tabindex="-1"></a>                         <span class="at">labels =</span> labels)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 </div>
 <p>&nbsp;</p>
-</section><section id="value-labels" class="level2"><h2 class="anchored" data-anchor-id="value-labels">Value labels</h2>
+</section>
+<section id="value-labels" class="level2">
+<h2 class="anchored" data-anchor-id="value-labels">Value labels</h2>
 <div class="columns">
 <div class="column" style="width:45%;">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="images/stata.png" class="lightbox" data-gallery="quarto-lightbox-gallery-32"><img src="images/stata.png" height="34" class="figure-img"></a></p>
+<figure class="figure">
+<p><a href="images/stata.png" class="lightbox" data-gallery="quarto-lightbox-gallery-32"><img src="images/stata.png" height="34" class="figure-img"></a></p>
 </figure>
 </div>
 <div class="sourceCode" id="cb21"><pre class="sourceCode stata code-with-copy"><code class="sourceCode stata"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="co">/* Value labels for the codes */</span></span>
@@ -736,43 +814,48 @@ div.sourceCode {
 <span id="cb21-7"><a href="#cb21-7" aria-hidden="true" tabindex="-1"></a><span class="kw">label</span> <span class="kw">values</span> code label1</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div><div class="column" style="width:10%;">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="images/arrow.png" class="lightbox" data-gallery="quarto-lightbox-gallery-33"><img src="images/arrow.png" height="40" class="figure-img"></a></p>
+<figure class="figure">
+<p><a href="images/arrow.png" class="lightbox" data-gallery="quarto-lightbox-gallery-33"><img src="images/arrow.png" height="40" class="figure-img"></a></p>
 </figure>
 </div>
 </div><div class="column" style="width:45%;">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="images/studio.png" class="lightbox" data-gallery="quarto-lightbox-gallery-34"><img src="images/studio.png" height="34" class="figure-img"></a></p>
+<figure class="figure">
+<p><a href="images/studio.png" class="lightbox" data-gallery="quarto-lightbox-gallery-34"><img src="images/studio.png" height="34" class="figure-img"></a></p>
 </figure>
 </div>
 <div class="cell">
-<div class="sourceCode" id="cb22"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co">#Load labelled package</span></span>
-<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://larmarange.github.io/labelled/">labelled</a></span><span class="op">)</span></span>
-<span></span>
-<span><span class="co">#Define the value labels for the codes</span></span>
-<span><span class="va">labels</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"Option 1"</span>, <span class="st">"Option 2"</span>, </span>
-<span>            <span class="st">"Option 3"</span>, <span class="st">"Option 4"</span>, </span>
-<span>            <span class="st">"Option 5"</span><span class="op">)</span></span>
-<span><span class="va">df_data</span><span class="op">$</span><span class="va">code</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://haven.tidyverse.org/reference/labelled.html">labelled</a></span><span class="op">(</span><span class="va">df_data</span><span class="op">$</span><span class="va">code</span>, </span>
-<span>                         labels <span class="op">=</span> <span class="va">labels</span><span class="op">)</span></span>
-<span></span>
-<span></span>
-<span><span class="co">#Define the value labels for the codes</span></span>
-<span><span class="va">labels</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"Option 1"</span>, <span class="st">"Option 2"</span>, </span>
-<span>            <span class="st">"Option 3"</span>, <span class="st">"Option 4"</span>, </span>
-<span>            <span class="st">"Option 5"</span><span class="op">)</span></span>
-<span><span class="va">df_data</span><span class="op">$</span><span class="va">code</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/factor.html">factor</a></span><span class="op">(</span><span class="va">df_data</span><span class="op">$</span><span class="va">code</span>, </span>
-<span>                       levels <span class="op">=</span> <span class="fl">1</span><span class="op">:</span><span class="fl">5</span>, </span>
-<span>                       labels <span class="op">=</span> <span class="va">labels</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Load labelled package</span></span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(labelled)</span>
+<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a><span class="co">#Define the value labels for the codes</span></span>
+<span id="cb22-5"><a href="#cb22-5" aria-hidden="true" tabindex="-1"></a>labels <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"Option 1"</span>, <span class="st">"Option 2"</span>, </span>
+<span id="cb22-6"><a href="#cb22-6" aria-hidden="true" tabindex="-1"></a>            <span class="st">"Option 3"</span>, <span class="st">"Option 4"</span>, </span>
+<span id="cb22-7"><a href="#cb22-7" aria-hidden="true" tabindex="-1"></a>            <span class="st">"Option 5"</span>)</span>
+<span id="cb22-8"><a href="#cb22-8" aria-hidden="true" tabindex="-1"></a>df_data<span class="sc">$</span>code <span class="ot">&lt;-</span> <span class="fu">labelled</span>(df_data<span class="sc">$</span>code, </span>
+<span id="cb22-9"><a href="#cb22-9" aria-hidden="true" tabindex="-1"></a>                         <span class="at">labels =</span> labels)</span>
+<span id="cb22-10"><a href="#cb22-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-11"><a href="#cb22-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-12"><a href="#cb22-12" aria-hidden="true" tabindex="-1"></a><span class="co">#Define the value labels for the codes</span></span>
+<span id="cb22-13"><a href="#cb22-13" aria-hidden="true" tabindex="-1"></a>labels <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"Option 1"</span>, <span class="st">"Option 2"</span>, </span>
+<span id="cb22-14"><a href="#cb22-14" aria-hidden="true" tabindex="-1"></a>            <span class="st">"Option 3"</span>, <span class="st">"Option 4"</span>, </span>
+<span id="cb22-15"><a href="#cb22-15" aria-hidden="true" tabindex="-1"></a>            <span class="st">"Option 5"</span>)</span>
+<span id="cb22-16"><a href="#cb22-16" aria-hidden="true" tabindex="-1"></a>df_data<span class="sc">$</span>code <span class="ot">&lt;-</span> <span class="fu">factor</span>(df_data<span class="sc">$</span>code, </span>
+<span id="cb22-17"><a href="#cb22-17" aria-hidden="true" tabindex="-1"></a>                       <span class="at">levels =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>, </span>
+<span id="cb22-18"><a href="#cb22-18" aria-hidden="true" tabindex="-1"></a>                       <span class="at">labels =</span> labels)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>In this approach, you can assign values to numeric or character variables</p>
 </div>
 </div>
 <p>&nbsp;</p>
-</section><section id="group-variables" class="level2"><h2 class="anchored" data-anchor-id="group-variables">Group variables</h2>
+</section>
+<section id="group-variables" class="level2">
+<h2 class="anchored" data-anchor-id="group-variables">Group variables</h2>
 <div class="columns">
 <div class="column" style="width:45%;">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="images/stata.png" class="lightbox" data-gallery="quarto-lightbox-gallery-35"><img src="images/stata.png" height="34" class="figure-img"></a></p>
+<figure class="figure">
+<p><a href="images/stata.png" class="lightbox" data-gallery="quarto-lightbox-gallery-35"><img src="images/stata.png" height="34" class="figure-img"></a></p>
 </figure>
 </div>
 <div class="sourceCode" id="cb23"><pre class="sourceCode stata code-with-copy"><code class="sourceCode stata"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="co">/* Value labels for the codes */</span></span>
@@ -781,32 +864,37 @@ div.sourceCode {
 <span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a><span class="ot">list</span> var2 var3 var1</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div><div class="column" style="width:10%;">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="images/arrow.png" class="lightbox" data-gallery="quarto-lightbox-gallery-36"><img src="images/arrow.png" height="40" class="figure-img"></a></p>
+<figure class="figure">
+<p><a href="images/arrow.png" class="lightbox" data-gallery="quarto-lightbox-gallery-36"><img src="images/arrow.png" height="40" class="figure-img"></a></p>
 </figure>
 </div>
 </div><div class="column" style="width:45%;">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="images/studio.png" class="lightbox" data-gallery="quarto-lightbox-gallery-37"><img src="images/studio.png" height="34" class="figure-img"></a></p>
+<figure class="figure">
+<p><a href="images/studio.png" class="lightbox" data-gallery="quarto-lightbox-gallery-37"><img src="images/studio.png" height="34" class="figure-img"></a></p>
 </figure>
 </div>
 <div class="cell">
-<div class="sourceCode" id="cb24"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co">#Load dplyr package</span></span>
-<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://dplyr.tidyverse.org">dplyr</a></span><span class="op">)</span></span>
-<span></span>
-<span><span class="co">#We group the data by variables 2 and 3, </span></span>
-<span><span class="co">#calculate the mean of variable 1</span></span>
-<span><span class="va">df_data_group</span> <span class="op">&lt;-</span> <span class="va">df_data</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
-<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/group_by.html">group_by</a></span><span class="op">(</span><span class="va">var2</span>, <span class="va">var3</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
-<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/summarise.html">summarise</a></span><span class="op">(</span>mean_var1 <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/mean.html">mean</a></span><span class="op">(</span><span class="va">var1</span><span class="op">)</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Load dplyr package</span></span>
+<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-4"><a href="#cb24-4" aria-hidden="true" tabindex="-1"></a><span class="co">#We group the data by variables 2 and 3, </span></span>
+<span id="cb24-5"><a href="#cb24-5" aria-hidden="true" tabindex="-1"></a><span class="co">#calculate the mean of variable 1</span></span>
+<span id="cb24-6"><a href="#cb24-6" aria-hidden="true" tabindex="-1"></a>df_data_group <span class="ot">&lt;-</span> df_data <span class="sc">%&gt;%</span></span>
+<span id="cb24-7"><a href="#cb24-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(var2, var3) <span class="sc">%&gt;%</span></span>
+<span id="cb24-8"><a href="#cb24-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">mean_var1 =</span> <span class="fu">mean</span>(var1))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 </div>
 <p>&nbsp;</p>
-</section><section id="merge-two-datasets" class="level2"><h2 class="anchored" data-anchor-id="merge-two-datasets">Merge two datasets</h2>
+</section>
+<section id="merge-two-datasets" class="level2">
+<h2 class="anchored" data-anchor-id="merge-two-datasets">Merge two datasets</h2>
 <div class="columns">
 <div class="column" style="width:45%;">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="images/stata.png" class="lightbox" data-gallery="quarto-lightbox-gallery-38"><img src="images/stata.png" height="34" class="figure-img"></a></p>
+<figure class="figure">
+<p><a href="images/stata.png" class="lightbox" data-gallery="quarto-lightbox-gallery-38"><img src="images/stata.png" height="34" class="figure-img"></a></p>
 </figure>
 </div>
 <div class="sourceCode" id="cb25"><pre class="sourceCode stata code-with-copy"><code class="sourceCode stata"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="co">/* Exact match on the key variable(s). */</span></span>
@@ -821,43 +909,48 @@ div.sourceCode {
 <p>Remember that we need to have our data1 in the same path</p>
 </div><div class="column" style="width:10%;">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="images/arrow.png" class="lightbox" data-gallery="quarto-lightbox-gallery-39"><img src="images/arrow.png" height="40" class="figure-img"></a></p>
+<figure class="figure">
+<p><a href="images/arrow.png" class="lightbox" data-gallery="quarto-lightbox-gallery-39"><img src="images/arrow.png" height="40" class="figure-img"></a></p>
 </figure>
 </div>
 </div><div class="column" style="width:45%;">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="images/studio.png" class="lightbox" data-gallery="quarto-lightbox-gallery-40"><img src="images/studio.png" height="34" class="figure-img"></a></p>
+<figure class="figure">
+<p><a href="images/studio.png" class="lightbox" data-gallery="quarto-lightbox-gallery-40"><img src="images/studio.png" height="34" class="figure-img"></a></p>
 </figure>
 </div>
 <div class="cell">
-<div class="sourceCode" id="cb26"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co">#Load dplyr package</span></span>
-<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://dplyr.tidyverse.org">dplyr</a></span><span class="op">)</span></span>
-<span></span>
-<span><span class="co">#1:1 using inner join</span></span>
-<span><span class="va">df_merged_inner</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate-joins.html">inner_join</a></span><span class="op">(</span><span class="va">df_1</span>, <span class="va">df_1</span>, </span>
-<span>                              by <span class="op">=</span> <span class="st">"id1"</span><span class="op">)</span></span>
-<span></span>
-<span><span class="co">#1:m using left join</span></span>
-<span><span class="va">df_merged_left</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate-joins.html">left_join</a></span><span class="op">(</span><span class="va">df_1</span>, <span class="va">df_1</span>, </span>
-<span>                            by <span class="op">=</span> <span class="st">"id1"</span><span class="op">)</span></span>
-<span></span>
-<span><span class="co">#m:1 using right join</span></span>
-<span><span class="va">df_merged_right</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate-joins.html">right_join</a></span><span class="op">(</span><span class="va">df_1</span>, <span class="va">df_1</span>, </span>
-<span>                              by <span class="op">=</span> <span class="st">"id1"</span><span class="op">)</span></span>
-<span></span>
-<span><span class="co">#m:m using full join</span></span>
-<span><span class="va">df_merged_full</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate-joins.html">full_join</a></span><span class="op">(</span><span class="va">df_1</span>, <span class="va">df_1</span>, </span>
-<span>                            by <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"id1"</span>, </span>
-<span>                                   <span class="st">"id2"</span><span class="op">)</span><span class="op">)</span></span>
-<span><span class="co">#You can merge with more tha one variable</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Load dplyr package</span></span>
+<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb26-4"><a href="#cb26-4" aria-hidden="true" tabindex="-1"></a><span class="co">#1:1 using inner join</span></span>
+<span id="cb26-5"><a href="#cb26-5" aria-hidden="true" tabindex="-1"></a>df_merged_inner <span class="ot">&lt;-</span> <span class="fu">inner_join</span>(df_1, df_1, </span>
+<span id="cb26-6"><a href="#cb26-6" aria-hidden="true" tabindex="-1"></a>                              <span class="at">by =</span> <span class="st">"id1"</span>)</span>
+<span id="cb26-7"><a href="#cb26-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb26-8"><a href="#cb26-8" aria-hidden="true" tabindex="-1"></a><span class="co">#1:m using left join</span></span>
+<span id="cb26-9"><a href="#cb26-9" aria-hidden="true" tabindex="-1"></a>df_merged_left <span class="ot">&lt;-</span> <span class="fu">left_join</span>(df_1, df_1, </span>
+<span id="cb26-10"><a href="#cb26-10" aria-hidden="true" tabindex="-1"></a>                            <span class="at">by =</span> <span class="st">"id1"</span>)</span>
+<span id="cb26-11"><a href="#cb26-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb26-12"><a href="#cb26-12" aria-hidden="true" tabindex="-1"></a><span class="co">#m:1 using right join</span></span>
+<span id="cb26-13"><a href="#cb26-13" aria-hidden="true" tabindex="-1"></a>df_merged_right <span class="ot">&lt;-</span> <span class="fu">right_join</span>(df_1, df_1, </span>
+<span id="cb26-14"><a href="#cb26-14" aria-hidden="true" tabindex="-1"></a>                              <span class="at">by =</span> <span class="st">"id1"</span>)</span>
+<span id="cb26-15"><a href="#cb26-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb26-16"><a href="#cb26-16" aria-hidden="true" tabindex="-1"></a><span class="co">#m:m using full join</span></span>
+<span id="cb26-17"><a href="#cb26-17" aria-hidden="true" tabindex="-1"></a>df_merged_full <span class="ot">&lt;-</span> <span class="fu">full_join</span>(df_1, df_1, </span>
+<span id="cb26-18"><a href="#cb26-18" aria-hidden="true" tabindex="-1"></a>                            <span class="at">by =</span> <span class="fu">c</span>(<span class="st">"id1"</span>, </span>
+<span id="cb26-19"><a href="#cb26-19" aria-hidden="true" tabindex="-1"></a>                                   <span class="st">"id2"</span>))</span>
+<span id="cb26-20"><a href="#cb26-20" aria-hidden="true" tabindex="-1"></a><span class="co">#You can merge with more tha one variable</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 </div>
-</section><section id="create-sequenceids" class="level2"><h2 class="anchored" data-anchor-id="create-sequenceids">Create sequence/ids</h2>
+</section>
+<section id="create-sequenceids" class="level2">
+<h2 class="anchored" data-anchor-id="create-sequenceids">Create sequence/ids</h2>
 <div class="columns">
 <div class="column" style="width:45%;">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="images/stata.png" class="lightbox" data-gallery="quarto-lightbox-gallery-41"><img src="images/stata.png" height="34" class="figure-img"></a></p>
+<figure class="figure">
+<p><a href="images/stata.png" class="lightbox" data-gallery="quarto-lightbox-gallery-41"><img src="images/stata.png" height="34" class="figure-img"></a></p>
 </figure>
 </div>
 <div class="sourceCode" id="cb27"><pre class="sourceCode stata code-with-copy"><code class="sourceCode stata"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="co">/* Sequence of numbers from 1 to n */</span></span>
@@ -869,30 +962,35 @@ div.sourceCode {
 <span id="cb27-7"><a href="#cb27-7" aria-hidden="true" tabindex="-1"></a><span class="kw">gen</span> total_seq = _N</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div><div class="column" style="width:10%;">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="images/arrow.png" class="lightbox" data-gallery="quarto-lightbox-gallery-42"><img src="images/arrow.png" height="40" class="figure-img"></a></p>
+<figure class="figure">
+<p><a href="images/arrow.png" class="lightbox" data-gallery="quarto-lightbox-gallery-42"><img src="images/arrow.png" height="40" class="figure-img"></a></p>
 </figure>
 </div>
 </div><div class="column" style="width:45%;">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="images/studio.png" class="lightbox" data-gallery="quarto-lightbox-gallery-43"><img src="images/studio.png" height="34" class="figure-img"></a></p>
+<figure class="figure">
+<p><a href="images/studio.png" class="lightbox" data-gallery="quarto-lightbox-gallery-43"><img src="images/studio.png" height="34" class="figure-img"></a></p>
 </figure>
 </div>
 <div class="cell">
-<div class="sourceCode" id="cb28"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">v_seq</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/seq.html">seq</a></span><span class="op">(</span>from <span class="op">=</span> <span class="fl">1</span>, to <span class="op">=</span> <span class="fl">10</span>, by <span class="op">=</span> <span class="fl">1</span><span class="op">)</span></span>
-<span></span>
-<span><span class="co">#Load dplyr package</span></span>
-<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://dplyr.tidyverse.org">dplyr</a></span><span class="op">)</span></span>
-<span></span>
-<span><span class="va">df_final</span> <span class="op">&lt;-</span> <span class="va">df</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
-<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span>id <span class="op">=</span> <span class="fl">1</span><span class="op">:</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/context.html">n</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a>v_seq <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="at">from =</span> <span class="dv">1</span>, <span class="at">to =</span> <span class="dv">10</span>, <span class="at">by =</span> <span class="dv">1</span>)</span>
+<span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-3"><a href="#cb28-3" aria-hidden="true" tabindex="-1"></a><span class="co">#Load dplyr package</span></span>
+<span id="cb28-4"><a href="#cb28-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb28-5"><a href="#cb28-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-6"><a href="#cb28-6" aria-hidden="true" tabindex="-1"></a>df_final <span class="ot">&lt;-</span> df <span class="sc">%&gt;%</span></span>
+<span id="cb28-7"><a href="#cb28-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">id =</span> <span class="dv">1</span><span class="sc">:</span><span class="fu">n</span>())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 </div>
-</section><section id="drop-variables" class="level2"><h2 class="anchored" data-anchor-id="drop-variables">Drop variables</h2>
+</section>
+<section id="drop-variables" class="level2">
+<h2 class="anchored" data-anchor-id="drop-variables">Drop variables</h2>
 <div class="columns">
 <div class="column" style="width:45%;">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="images/stata.png" class="lightbox" data-gallery="quarto-lightbox-gallery-44"><img src="images/stata.png" height="34" class="figure-img"></a></p>
+<figure class="figure">
+<p><a href="images/stata.png" class="lightbox" data-gallery="quarto-lightbox-gallery-44"><img src="images/stata.png" height="34" class="figure-img"></a></p>
 </figure>
 </div>
 <div class="sourceCode" id="cb29"><pre class="sourceCode stata code-with-copy"><code class="sourceCode stata"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="co">/* Drop variable */</span></span>
@@ -903,31 +1001,37 @@ div.sourceCode {
 <span id="cb29-6"><a href="#cb29-6" aria-hidden="true" tabindex="-1"></a><span class="kw">keep</span> var1 var2 var3</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div><div class="column" style="width:10%;">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="images/arrow.png" class="lightbox" data-gallery="quarto-lightbox-gallery-45"><img src="images/arrow.png" height="40" class="figure-img"></a></p>
+<figure class="figure">
+<p><a href="images/arrow.png" class="lightbox" data-gallery="quarto-lightbox-gallery-45"><img src="images/arrow.png" height="40" class="figure-img"></a></p>
 </figure>
 </div>
 </div><div class="column" style="width:45%;">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="images/studio.png" class="lightbox" data-gallery="quarto-lightbox-gallery-46"><img src="images/studio.png" height="34" class="figure-img"></a></p>
+<figure class="figure">
+<p><a href="images/studio.png" class="lightbox" data-gallery="quarto-lightbox-gallery-46"><img src="images/studio.png" height="34" class="figure-img"></a></p>
 </figure>
 </div>
 <div class="cell">
-<div class="sourceCode" id="cb30"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co">#Load dplyr package</span></span>
-<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://dplyr.tidyverse.org">dplyr</a></span><span class="op">)</span></span>
-<span></span>
-<span><span class="co">#Drop some variables</span></span>
-<span><span class="va">df_new_data</span> <span class="op">&lt;-</span> <span class="va">df_old</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op">(</span><span class="op">-</span><span class="va">var1</span>, <span class="op">-</span><span class="va">var2</span><span class="op">)</span></span>
-<span></span>
-<span><span class="co">#Keep specific variables</span></span>
-<span><span class="va">df_new_data</span> <span class="op">&lt;-</span> <span class="va">df_old</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op">(</span><span class="va">var1</span>, <span class="va">var2</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Load dplyr package</span></span>
+<span id="cb30-2"><a href="#cb30-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb30-3"><a href="#cb30-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb30-4"><a href="#cb30-4" aria-hidden="true" tabindex="-1"></a><span class="co">#Drop some variables</span></span>
+<span id="cb30-5"><a href="#cb30-5" aria-hidden="true" tabindex="-1"></a>df_new_data <span class="ot">&lt;-</span> df_old <span class="sc">%&gt;%</span> <span class="fu">select</span>(<span class="sc">-</span>var1, <span class="sc">-</span>var2)</span>
+<span id="cb30-6"><a href="#cb30-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb30-7"><a href="#cb30-7" aria-hidden="true" tabindex="-1"></a><span class="co">#Keep specific variables</span></span>
+<span id="cb30-8"><a href="#cb30-8" aria-hidden="true" tabindex="-1"></a>df_new_data <span class="ot">&lt;-</span> df_old <span class="sc">%&gt;%</span> <span class="fu">select</span>(var1, var2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 </div>
-</section></section><section id="frequenciestabulation" class="level1"><h1>Frequencies/Tabulation</h1>
+</section>
+</section>
+<section id="frequenciestabulation" class="level1">
+<h1>Frequencies/Tabulation</h1>
 <div class="columns">
 <div class="column" style="width:45%;">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="images/stata.png" class="lightbox" data-gallery="quarto-lightbox-gallery-47"><img src="images/stata.png" height="34" class="figure-img"></a></p>
+<figure class="figure">
+<p><a href="images/stata.png" class="lightbox" data-gallery="quarto-lightbox-gallery-47"><img src="images/stata.png" height="34" class="figure-img"></a></p>
 </figure>
 </div>
 <div class="sourceCode" id="cb31"><pre class="sourceCode stata code-with-copy"><code class="sourceCode stata"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="co">/* Cross-tabulate 3 variables*/</span></span>
@@ -938,32 +1042,38 @@ div.sourceCode {
 <span id="cb31-6"><a href="#cb31-6" aria-hidden="true" tabindex="-1"></a><span class="kw">tabulate</span> var1 var2, <span class="ot">row</span> col</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div><div class="column" style="width:10%;">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="images/arrow.png" class="lightbox" data-gallery="quarto-lightbox-gallery-48"><img src="images/arrow.png" height="40" class="figure-img"></a></p>
+<figure class="figure">
+<p><a href="images/arrow.png" class="lightbox" data-gallery="quarto-lightbox-gallery-48"><img src="images/arrow.png" height="40" class="figure-img"></a></p>
 </figure>
 </div>
 </div><div class="column" style="width:45%;">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="images/studio.png" class="lightbox" data-gallery="quarto-lightbox-gallery-49"><img src="images/studio.png" height="34" class="figure-img"></a></p>
+<figure class="figure">
+<p><a href="images/studio.png" class="lightbox" data-gallery="quarto-lightbox-gallery-49"><img src="images/studio.png" height="34" class="figure-img"></a></p>
 </figure>
 </div>
 <div class="cell">
-<div class="sourceCode" id="cb32"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co">#Cross-tabulate 3 variables</span></span>
-<span><span class="fu"><a href="https://rdrr.io/r/base/table.html">table</a></span><span class="op">(</span><span class="va">var1</span>, <span class="va">var2</span>, <span class="va">var3</span><span class="op">)</span></span>
-<span></span>
-<span><span class="co"># The ~ symbol separates </span></span>
-<span><span class="co"># the row and column variables</span></span>
-<span><span class="fu"><a href="https://rdrr.io/r/stats/xtabs.html">xtabs</a></span><span class="op">(</span><span class="op">~</span><span class="va">var1</span><span class="op">+</span><span class="va">var2</span>, data <span class="op">=</span> <span class="va">dataset</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Cross-tabulate 3 variables</span></span>
+<span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a><span class="fu">table</span>(var1, var2, var3)</span>
+<span id="cb32-3"><a href="#cb32-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-4"><a href="#cb32-4" aria-hidden="true" tabindex="-1"></a><span class="co"># The ~ symbol separates </span></span>
+<span id="cb32-5"><a href="#cb32-5" aria-hidden="true" tabindex="-1"></a><span class="co"># the row and column variables</span></span>
+<span id="cb32-6"><a href="#cb32-6" aria-hidden="true" tabindex="-1"></a><span class="fu">xtabs</span>(<span class="sc">~</span>var1<span class="sc">+</span>var2, <span class="at">data =</span> dataset)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 </div>
 <p>&nbsp;</p>
-</section><section id="statistics" class="level1"><h1>Statistics</h1>
+</section>
+<section id="statistics" class="level1">
+<h1>Statistics</h1>
 <hr>
-<section id="summary" class="level2"><h2 class="anchored" data-anchor-id="summary">Summary</h2>
+<section id="summary" class="level2">
+<h2 class="anchored" data-anchor-id="summary">Summary</h2>
 <div class="columns">
 <div class="column" style="width:45%;">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="images/stata.png" class="lightbox" data-gallery="quarto-lightbox-gallery-50"><img src="images/stata.png" height="34" class="figure-img"></a></p>
+<figure class="figure">
+<p><a href="images/stata.png" class="lightbox" data-gallery="quarto-lightbox-gallery-50"><img src="images/stata.png" height="34" class="figure-img"></a></p>
 </figure>
 </div>
 <div class="sourceCode" id="cb33"><pre class="sourceCode stata code-with-copy"><code class="sourceCode stata"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="co">/* Summary of variables of interest*/</span></span>
@@ -971,28 +1081,33 @@ div.sourceCode {
 <span id="cb33-3"><a href="#cb33-3" aria-hidden="true" tabindex="-1"></a></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div><div class="column" style="width:10%;">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="images/arrow.png" class="lightbox" data-gallery="quarto-lightbox-gallery-51"><img src="images/arrow.png" height="40" class="figure-img"></a></p>
+<figure class="figure">
+<p><a href="images/arrow.png" class="lightbox" data-gallery="quarto-lightbox-gallery-51"><img src="images/arrow.png" height="40" class="figure-img"></a></p>
 </figure>
 </div>
 </div><div class="column" style="width:45%;">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="images/studio.png" class="lightbox" data-gallery="quarto-lightbox-gallery-52"><img src="images/studio.png" height="34" class="figure-img"></a></p>
+<figure class="figure">
+<p><a href="images/studio.png" class="lightbox" data-gallery="quarto-lightbox-gallery-52"><img src="images/studio.png" height="34" class="figure-img"></a></p>
 </figure>
 </div>
 <div class="cell">
-<div class="sourceCode" id="cb34"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co">#Summary for entire data</span></span>
-<span><span class="fu"><a href="https://rdrr.io/r/base/summary.html">summary</a></span><span class="op">(</span><span class="va">dataset</span><span class="op">)</span></span>
-<span></span>
-<span><span class="co">#Summary for a variable</span></span>
-<span><span class="fu"><a href="https://rdrr.io/r/base/summary.html">summary</a></span><span class="op">(</span><span class="va">dataset</span><span class="op">$</span><span class="va">variable</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Summary for entire data</span></span>
+<span id="cb34-2"><a href="#cb34-2" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(dataset)</span>
+<span id="cb34-3"><a href="#cb34-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-4"><a href="#cb34-4" aria-hidden="true" tabindex="-1"></a><span class="co">#Summary for a variable</span></span>
+<span id="cb34-5"><a href="#cb34-5" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(dataset<span class="sc">$</span>variable)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 </div>
-</section><section id="linear-model" class="level2"><h2 class="anchored" data-anchor-id="linear-model">Linear Model</h2>
+</section>
+<section id="linear-model" class="level2">
+<h2 class="anchored" data-anchor-id="linear-model">Linear Model</h2>
 <div class="columns">
 <div class="column" style="width:45%;">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="images/stata.png" class="lightbox" data-gallery="quarto-lightbox-gallery-53"><img src="images/stata.png" height="34" class="figure-img"></a></p>
+<figure class="figure">
+<p><a href="images/stata.png" class="lightbox" data-gallery="quarto-lightbox-gallery-53"><img src="images/stata.png" height="34" class="figure-img"></a></p>
 </figure>
 </div>
 <div class="sourceCode" id="cb35"><pre class="sourceCode stata code-with-copy"><code class="sourceCode stata"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="co">/* Fit a linear model */</span></span>
@@ -1002,30 +1117,35 @@ div.sourceCode {
 <span id="cb35-5"><a href="#cb35-5" aria-hidden="true" tabindex="-1"></a><span class="kw">estimates</span> <span class="kw">table</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div><div class="column" style="width:10%;">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="images/arrow.png" class="lightbox" data-gallery="quarto-lightbox-gallery-54"><img src="images/arrow.png" height="40" class="figure-img"></a></p>
+<figure class="figure">
+<p><a href="images/arrow.png" class="lightbox" data-gallery="quarto-lightbox-gallery-54"><img src="images/arrow.png" height="40" class="figure-img"></a></p>
 </figure>
 </div>
 </div><div class="column" style="width:45%;">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="images/studio.png" class="lightbox" data-gallery="quarto-lightbox-gallery-55"><img src="images/studio.png" height="34" class="figure-img"></a></p>
+<figure class="figure">
+<p><a href="images/studio.png" class="lightbox" data-gallery="quarto-lightbox-gallery-55"><img src="images/studio.png" height="34" class="figure-img"></a></p>
 </figure>
 </div>
 <div class="cell">
-<div class="sourceCode" id="cb36"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co">#Fit a linear model</span></span>
-<span><span class="va">model_lm</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/lm.html">lm</a></span><span class="op">(</span><span class="va">mpg</span> <span class="op">~</span> <span class="va">wt</span> <span class="op">+</span> <span class="va">qsec</span> <span class="op">+</span> <span class="va">vs</span>, </span>
-<span>               data <span class="op">=</span> <span class="va">df_my_data</span><span class="op">)</span></span>
-<span></span>
-<span><span class="co">#Print summary</span></span>
-<span><span class="fu"><a href="https://rdrr.io/r/base/summary.html">summary</a></span><span class="op">(</span><span class="va">model_lm</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb36"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Fit a linear model</span></span>
+<span id="cb36-2"><a href="#cb36-2" aria-hidden="true" tabindex="-1"></a>model_lm <span class="ot">&lt;-</span> <span class="fu">lm</span>(mpg <span class="sc">~</span> wt <span class="sc">+</span> qsec <span class="sc">+</span> vs, </span>
+<span id="cb36-3"><a href="#cb36-3" aria-hidden="true" tabindex="-1"></a>               <span class="at">data =</span> df_my_data)</span>
+<span id="cb36-4"><a href="#cb36-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb36-5"><a href="#cb36-5" aria-hidden="true" tabindex="-1"></a><span class="co">#Print summary</span></span>
+<span id="cb36-6"><a href="#cb36-6" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(model_lm)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 </div>
 <p>&nbsp;</p>
-</section><section id="logistic-model" class="level2"><h2 class="anchored" data-anchor-id="logistic-model">Logistic Model</h2>
+</section>
+<section id="logistic-model" class="level2">
+<h2 class="anchored" data-anchor-id="logistic-model">Logistic Model</h2>
 <div class="columns">
 <div class="column" style="width:45%;">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="images/stata.png" class="lightbox" data-gallery="quarto-lightbox-gallery-56"><img src="images/stata.png" height="34" class="figure-img"></a></p>
+<figure class="figure">
+<p><a href="images/stata.png" class="lightbox" data-gallery="quarto-lightbox-gallery-56"><img src="images/stata.png" height="34" class="figure-img"></a></p>
 </figure>
 </div>
 <div class="sourceCode" id="cb37"><pre class="sourceCode stata code-with-copy"><code class="sourceCode stata"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a><span class="co">/* Fit a logistic regression model */</span></span>
@@ -1035,31 +1155,36 @@ div.sourceCode {
 <span id="cb37-5"><a href="#cb37-5" aria-hidden="true" tabindex="-1"></a><span class="kw">estimates</span> <span class="kw">table</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div><div class="column" style="width:10%;">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="images/arrow.png" class="lightbox" data-gallery="quarto-lightbox-gallery-57"><img src="images/arrow.png" height="40" class="figure-img"></a></p>
+<figure class="figure">
+<p><a href="images/arrow.png" class="lightbox" data-gallery="quarto-lightbox-gallery-57"><img src="images/arrow.png" height="40" class="figure-img"></a></p>
 </figure>
 </div>
 </div><div class="column" style="width:45%;">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="images/studio.png" class="lightbox" data-gallery="quarto-lightbox-gallery-58"><img src="images/studio.png" height="34" class="figure-img"></a></p>
+<figure class="figure">
+<p><a href="images/studio.png" class="lightbox" data-gallery="quarto-lightbox-gallery-58"><img src="images/studio.png" height="34" class="figure-img"></a></p>
 </figure>
 </div>
 <div class="cell">
-<div class="sourceCode" id="cb38"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co">#Fit a logistic regression model</span></span>
-<span><span class="va">model_log</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/glm.html">glm</a></span><span class="op">(</span><span class="va">vs</span> <span class="op">~</span> <span class="va">wt</span> <span class="op">+</span> <span class="va">qsec</span>, </span>
-<span>                 data <span class="op">=</span> <span class="va">df_my_data</span>, </span>
-<span>                 family <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/stats/family.html">binomial</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span></span>
-<span></span>
-<span><span class="co">#Print summary</span></span>
-<span><span class="fu"><a href="https://rdrr.io/r/base/summary.html">summary</a></span><span class="op">(</span><span class="va">model</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb38"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Fit a logistic regression model</span></span>
+<span id="cb38-2"><a href="#cb38-2" aria-hidden="true" tabindex="-1"></a>model_log <span class="ot">&lt;-</span> <span class="fu">glm</span>(vs <span class="sc">~</span> wt <span class="sc">+</span> qsec, </span>
+<span id="cb38-3"><a href="#cb38-3" aria-hidden="true" tabindex="-1"></a>                 <span class="at">data =</span> df_my_data, </span>
+<span id="cb38-4"><a href="#cb38-4" aria-hidden="true" tabindex="-1"></a>                 <span class="at">family =</span> <span class="fu">binomial</span>())</span>
+<span id="cb38-5"><a href="#cb38-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb38-6"><a href="#cb38-6" aria-hidden="true" tabindex="-1"></a><span class="co">#Print summary</span></span>
+<span id="cb38-7"><a href="#cb38-7" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(model)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 </div>
 <p>&nbsp;</p>
-</section><section id="poisson-model" class="level2"><h2 class="anchored" data-anchor-id="poisson-model">Poisson Model</h2>
+</section>
+<section id="poisson-model" class="level2">
+<h2 class="anchored" data-anchor-id="poisson-model">Poisson Model</h2>
 <div class="columns">
 <div class="column" style="width:45%;">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="images/stata.png" class="lightbox" data-gallery="quarto-lightbox-gallery-59"><img src="images/stata.png" height="34" class="figure-img"></a></p>
+<figure class="figure">
+<p><a href="images/stata.png" class="lightbox" data-gallery="quarto-lightbox-gallery-59"><img src="images/stata.png" height="34" class="figure-img"></a></p>
 </figure>
 </div>
 <div class="sourceCode" id="cb39"><pre class="sourceCode stata code-with-copy"><code class="sourceCode stata"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a><span class="co">/* Fit a Poisson regression model */</span></span>
@@ -1069,147 +1194,177 @@ div.sourceCode {
 <span id="cb39-5"><a href="#cb39-5" aria-hidden="true" tabindex="-1"></a><span class="kw">estimates</span> <span class="kw">table</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div><div class="column" style="width:10%;">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="images/arrow.png" class="lightbox" data-gallery="quarto-lightbox-gallery-60"><img src="images/arrow.png" height="40" class="figure-img"></a></p>
+<figure class="figure">
+<p><a href="images/arrow.png" class="lightbox" data-gallery="quarto-lightbox-gallery-60"><img src="images/arrow.png" height="40" class="figure-img"></a></p>
 </figure>
 </div>
 </div><div class="column" style="width:45%;">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="images/studio.png" class="lightbox" data-gallery="quarto-lightbox-gallery-61"><img src="images/studio.png" height="34" class="figure-img"></a></p>
+<figure class="figure">
+<p><a href="images/studio.png" class="lightbox" data-gallery="quarto-lightbox-gallery-61"><img src="images/studio.png" height="34" class="figure-img"></a></p>
 </figure>
 </div>
 <div class="cell">
-<div class="sourceCode" id="cb40"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co">#Fit a Poisson regression model</span></span>
-<span><span class="va">model_poiss</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/glm.html">glm</a></span><span class="op">(</span><span class="va">am</span> <span class="op">~</span> <span class="va">wt</span> <span class="op">+</span> <span class="va">hp</span>, </span>
-<span>                   data <span class="op">=</span> <span class="va">df_my_data</span>, </span>
-<span>                   family <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/stats/family.html">poisson</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span></span>
-<span></span>
-<span><span class="co">#Print summary</span></span>
-<span><span class="fu"><a href="https://rdrr.io/r/base/summary.html">summary</a></span><span class="op">(</span><span class="va">model</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb40"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Fit a Poisson regression model</span></span>
+<span id="cb40-2"><a href="#cb40-2" aria-hidden="true" tabindex="-1"></a>model_poiss <span class="ot">&lt;-</span> <span class="fu">glm</span>(am <span class="sc">~</span> wt <span class="sc">+</span> hp, </span>
+<span id="cb40-3"><a href="#cb40-3" aria-hidden="true" tabindex="-1"></a>                   <span class="at">data =</span> df_my_data, </span>
+<span id="cb40-4"><a href="#cb40-4" aria-hidden="true" tabindex="-1"></a>                   <span class="at">family =</span> <span class="fu">poisson</span>())</span>
+<span id="cb40-5"><a href="#cb40-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb40-6"><a href="#cb40-6" aria-hidden="true" tabindex="-1"></a><span class="co">#Print summary</span></span>
+<span id="cb40-7"><a href="#cb40-7" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(model)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 </div>
 <p>&nbsp;</p>
-</section></section><section id="plots" class="level1"><h1>Plots</h1>
+</section>
+</section>
+<section id="plots" class="level1">
+<h1>Plots</h1>
 <hr>
-<section id="scatter-plot" class="level2"><h2 class="anchored" data-anchor-id="scatter-plot">Scatter plot</h2>
+<section id="scatter-plot" class="level2">
+<h2 class="anchored" data-anchor-id="scatter-plot">Scatter plot</h2>
 <div class="columns">
 <div class="column" style="width:45%;">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="images/stata.png" class="lightbox" data-gallery="quarto-lightbox-gallery-62"><img src="images/stata.png" height="34" class="figure-img"></a></p>
+<figure class="figure">
+<p><a href="images/stata.png" class="lightbox" data-gallery="quarto-lightbox-gallery-62"><img src="images/stata.png" height="34" class="figure-img"></a></p>
 </figure>
 </div>
 <div class="sourceCode" id="cb41"><pre class="sourceCode stata code-with-copy"><code class="sourceCode stata"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a><span class="co">/* Create scatter plot */</span></span>
 <span id="cb41-2"><a href="#cb41-2" aria-hidden="true" tabindex="-1"></a><span class="kw">scatter</span> price mpg</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div><div class="column" style="width:10%;">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="images/arrow.png" class="lightbox" data-gallery="quarto-lightbox-gallery-63"><img src="images/arrow.png" height="40" class="figure-img"></a></p>
+<figure class="figure">
+<p><a href="images/arrow.png" class="lightbox" data-gallery="quarto-lightbox-gallery-63"><img src="images/arrow.png" height="40" class="figure-img"></a></p>
 </figure>
 </div>
 </div><div class="column" style="width:45%;">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="images/studio.png" class="lightbox" data-gallery="quarto-lightbox-gallery-64"><img src="images/studio.png" height="34" class="figure-img"></a></p>
+<figure class="figure">
+<p><a href="images/studio.png" class="lightbox" data-gallery="quarto-lightbox-gallery-64"><img src="images/studio.png" height="34" class="figure-img"></a></p>
 </figure>
 </div>
 <div class="cell">
-<div class="sourceCode" id="cb42"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># Load data and ggplot2</span></span>
-<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://ggplot2.tidyverse.org">ggplot2</a></span><span class="op">)</span></span>
-<span><span class="fu"><a href="https://rdrr.io/r/utils/data.html">data</a></span><span class="op">(</span><span class="va">df_my_data</span><span class="op">)</span></span>
-<span></span>
-<span><span class="co">#Create scatter plot</span></span>
-<span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">df_my_data</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">mpg</span>, y <span class="op">=</span> <span class="va">wt</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span> </span>
-<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_point.html">geom_point</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span> <span class="co">#Here is the scatter</span></span>
-<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">xlab</a></span><span class="op">(</span><span class="st">"Miles per gallon"</span><span class="op">)</span> <span class="op">+</span></span>
-<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">ylab</a></span><span class="op">(</span><span class="st">"Weight"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb42"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Load data and ggplot2</span></span>
+<span id="cb42-2"><a href="#cb42-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb42-3"><a href="#cb42-3" aria-hidden="true" tabindex="-1"></a><span class="fu">data</span>(df_my_data)</span>
+<span id="cb42-4"><a href="#cb42-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-5"><a href="#cb42-5" aria-hidden="true" tabindex="-1"></a><span class="co">#Create scatter plot</span></span>
+<span id="cb42-6"><a href="#cb42-6" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(df_my_data, <span class="fu">aes</span>(<span class="at">x =</span> mpg, <span class="at">y =</span> wt)) <span class="sc">+</span> </span>
+<span id="cb42-7"><a href="#cb42-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span> <span class="co">#Here is the scatter</span></span>
+<span id="cb42-8"><a href="#cb42-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="st">"Miles per gallon"</span>) <span class="sc">+</span></span>
+<span id="cb42-9"><a href="#cb42-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylab</span>(<span class="st">"Weight"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 </div>
 <p>&nbsp;</p>
-</section><section id="line-plot" class="level2"><h2 class="anchored" data-anchor-id="line-plot">Line plot</h2>
+</section>
+<section id="line-plot" class="level2">
+<h2 class="anchored" data-anchor-id="line-plot">Line plot</h2>
 <div class="columns">
 <div class="column" style="width:45%;">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="images/stata.png" class="lightbox" data-gallery="quarto-lightbox-gallery-65"><img src="images/stata.png" height="34" class="figure-img"></a></p>
+<figure class="figure">
+<p><a href="images/stata.png" class="lightbox" data-gallery="quarto-lightbox-gallery-65"><img src="images/stata.png" height="34" class="figure-img"></a></p>
 </figure>
 </div>
 <div class="sourceCode" id="cb43"><pre class="sourceCode stata code-with-copy"><code class="sourceCode stata"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a><span class="co">/* Create Line plot */</span></span>
 <span id="cb43-2"><a href="#cb43-2" aria-hidden="true" tabindex="-1"></a><span class="kw">twoway</span> <span class="kw">line</span> le_w le_y, <span class="kw">xlabel</span>(1950(10)2010)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div><div class="column" style="width:10%;">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="images/arrow.png" class="lightbox" data-gallery="quarto-lightbox-gallery-66"><img src="images/arrow.png" height="40" class="figure-img"></a></p>
+<figure class="figure">
+<p><a href="images/arrow.png" class="lightbox" data-gallery="quarto-lightbox-gallery-66"><img src="images/arrow.png" height="40" class="figure-img"></a></p>
 </figure>
 </div>
 </div><div class="column" style="width:45%;">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="images/studio.png" class="lightbox" data-gallery="quarto-lightbox-gallery-67"><img src="images/studio.png" height="34" class="figure-img"></a></p>
+<figure class="figure">
+<p><a href="images/studio.png" class="lightbox" data-gallery="quarto-lightbox-gallery-67"><img src="images/studio.png" height="34" class="figure-img"></a></p>
 </figure>
 </div>
 <div class="cell">
-<div class="sourceCode" id="cb44"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># Load data and ggplot2</span></span>
-<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://ggplot2.tidyverse.org">ggplot2</a></span><span class="op">)</span></span>
-<span><span class="fu"><a href="https://rdrr.io/r/utils/data.html">data</a></span><span class="op">(</span><span class="va">df_my_data</span><span class="op">)</span></span>
-<span></span>
-<span><span class="co">#Create line plot</span></span>
-<span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">df_my_data</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">year</span>, y <span class="op">=</span> <span class="va">pop</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span> </span>
-<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_path.html">geom_line</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span> <span class="co">#Here is the line</span></span>
-<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">xlab</a></span><span class="op">(</span><span class="st">"Year"</span><span class="op">)</span> <span class="op">+</span></span>
-<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">ylab</a></span><span class="op">(</span><span class="st">"Population"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb44"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Load data and ggplot2</span></span>
+<span id="cb44-2"><a href="#cb44-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb44-3"><a href="#cb44-3" aria-hidden="true" tabindex="-1"></a><span class="fu">data</span>(df_my_data)</span>
+<span id="cb44-4"><a href="#cb44-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-5"><a href="#cb44-5" aria-hidden="true" tabindex="-1"></a><span class="co">#Create line plot</span></span>
+<span id="cb44-6"><a href="#cb44-6" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(df_my_data, <span class="fu">aes</span>(<span class="at">x =</span> year, <span class="at">y =</span> pop)) <span class="sc">+</span> </span>
+<span id="cb44-7"><a href="#cb44-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>() <span class="sc">+</span> <span class="co">#Here is the line</span></span>
+<span id="cb44-8"><a href="#cb44-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="st">"Year"</span>) <span class="sc">+</span></span>
+<span id="cb44-9"><a href="#cb44-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylab</span>(<span class="st">"Population"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 </div>
 <p>&nbsp;</p>
-</section><section id="bar-plot" class="level2"><h2 class="anchored" data-anchor-id="bar-plot">Bar plot</h2>
+</section>
+<section id="bar-plot" class="level2">
+<h2 class="anchored" data-anchor-id="bar-plot">Bar plot</h2>
 <div class="columns">
 <div class="column" style="width:45%;">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="images/stata.png" class="lightbox" data-gallery="quarto-lightbox-gallery-68"><img src="images/stata.png" height="34" class="figure-img"></a></p>
+<figure class="figure">
+<p><a href="images/stata.png" class="lightbox" data-gallery="quarto-lightbox-gallery-68"><img src="images/stata.png" height="34" class="figure-img"></a></p>
 </figure>
 </div>
 <div class="sourceCode" id="cb45"><pre class="sourceCode stata code-with-copy"><code class="sourceCode stata"><span id="cb45-1"><a href="#cb45-1" aria-hidden="true" tabindex="-1"></a><span class="co">/* Create a Bar plot */</span></span>
 <span id="cb45-2"><a href="#cb45-2" aria-hidden="true" tabindex="-1"></a><span class="kw">graph</span> <span class="bn">bar</span> (<span class="fu">count</span>) rep78, <span class="bn">over</span>(foreign)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div><div class="column" style="width:10%;">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="images/arrow.png" class="lightbox" data-gallery="quarto-lightbox-gallery-69"><img src="images/arrow.png" height="40" class="figure-img"></a></p>
+<figure class="figure">
+<p><a href="images/arrow.png" class="lightbox" data-gallery="quarto-lightbox-gallery-69"><img src="images/arrow.png" height="40" class="figure-img"></a></p>
 </figure>
 </div>
 </div><div class="column" style="width:45%;">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="images/studio.png" class="lightbox" data-gallery="quarto-lightbox-gallery-70"><img src="images/studio.png" height="34" class="figure-img"></a></p>
+<figure class="figure">
+<p><a href="images/studio.png" class="lightbox" data-gallery="quarto-lightbox-gallery-70"><img src="images/studio.png" height="34" class="figure-img"></a></p>
 </figure>
 </div>
 <div class="cell">
-<div class="sourceCode" id="cb46"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># Load data and ggplot2</span></span>
-<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://ggplot2.tidyverse.org">ggplot2</a></span><span class="op">)</span></span>
-<span><span class="fu"><a href="https://rdrr.io/r/utils/data.html">data</a></span><span class="op">(</span><span class="va">df_my_data</span><span class="op">)</span></span>
-<span></span>
-<span><span class="co">#Create bar chart</span></span>
-<span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span>data <span class="op">=</span> <span class="va">df_my_data</span>, </span>
-<span>       <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/factor.html">factor</a></span><span class="op">(</span><span class="va">cyl</span><span class="op">)</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
-<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_bar.html">geom_bar</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span> <span class="co">#Here is the bar</span></span>
-<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">xlab</a></span><span class="op">(</span><span class="st">"Number of cylinders"</span><span class="op">)</span> <span class="op">+</span></span>
-<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">ylab</a></span><span class="op">(</span><span class="st">"Count"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb46"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Load data and ggplot2</span></span>
+<span id="cb46-2"><a href="#cb46-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb46-3"><a href="#cb46-3" aria-hidden="true" tabindex="-1"></a><span class="fu">data</span>(df_my_data)</span>
+<span id="cb46-4"><a href="#cb46-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb46-5"><a href="#cb46-5" aria-hidden="true" tabindex="-1"></a><span class="co">#Create bar chart</span></span>
+<span id="cb46-6"><a href="#cb46-6" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> df_my_data, </span>
+<span id="cb46-7"><a href="#cb46-7" aria-hidden="true" tabindex="-1"></a>       <span class="fu">aes</span>(<span class="at">x =</span> <span class="fu">factor</span>(cyl))) <span class="sc">+</span></span>
+<span id="cb46-8"><a href="#cb46-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>() <span class="sc">+</span> <span class="co">#Here is the bar</span></span>
+<span id="cb46-9"><a href="#cb46-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="st">"Number of cylinders"</span>) <span class="sc">+</span></span>
+<span id="cb46-10"><a href="#cb46-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylab</span>(<span class="st">"Count"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 </div>
 <p>&nbsp;</p>
 <p>I also want to provide a good cheat sheet that contains more information about the differences between Stata and R.</p>
-</section></section><section id="cheat-sheet-stata-to-r" class="level1"><h1>Cheat Sheet: Stata to R</h1>
+</section>
+</section>
+<section id="cheat-sheet-stata-to-r" class="level1">
+<h1>Cheat Sheet: Stata to R</h1>
 <hr>
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="images/cheatsheet1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-71"><img src="images/cheatsheet1.png" class="img-fluid figure-img"></a></p>
+<figure class="figure">
+<p><a href="images/cheatsheet1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-71"><img src="images/cheatsheet1.png" class="img-fluid figure-img"></a></p>
 </figure>
 </div>
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="images/cheatsheet2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-72"><img src="images/cheatsheet2.png" class="img-fluid figure-img"></a></p>
+<figure class="figure">
+<p><a href="images/cheatsheet2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-72"><img src="images/cheatsheet2.png" class="img-fluid figure-img"></a></p>
 </figure>
 </div>
 <p>&nbsp;</p>
-</section><section id="rstata" class="level1"><h1>RStata</h1>
+</section>
+<section id="rstata" class="level1">
+<h1>RStata</h1>
 <p>Believe it or not, R has a package called <code>RStata</code>. This package Stata interface allows the user to execute Stata commands (both inline and from a .do file) from R. I leave <a href="https://github.com/lbraglia/RStata">here</a>the package. Looks interesting; however, I personally prefer to use a language as expected.</p>
-</section><section id="conclusion" class="level1"><h1>Conclusion</h1>
+</section>
+<section id="conclusion" class="level1">
+<h1>Conclusion</h1>
 <hr>
 <p>In conclusion, the decision to transition from one to the other should be made based on the user’s specific needs and preferences. This notebook shows you the differences between Stata and R. At the end, use the language you prefer, but in my own experience, R was a life changer.</p>
 <p>&nbsp;</p>
-</section><section id="references" class="level1"><h1>References</h1>
+</section>
+<section id="references" class="level1">
+<h1>References</h1>
 <hr>
 <div class="callout-note callout callout-style-default callout-captioned">
 <div class="callout-header d-flex align-content-center">
@@ -1226,7 +1381,10 @@ Note
 </div>
 
 
-</section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
     const mode = bsSheetEl.getAttribute("data-mode");
@@ -1473,27 +1631,29 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
 });
-</script><script src="https://giscus.app/client.js" data-repo="jurjoroa/hcc-website" data-repo-id="R_kgDOIttXkg" data-category="General" data-category-id="DIC_kwDOIttXks4CUpc5" data-mapping="title" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="top" data-theme="light" data-lang="en" crossorigin="anonymous" async="">
+</script>
+<script src="https://giscus.app/client.js" data-repo="jurjoroa/hcc-website" data-repo-id="R_kgDOIttXkg" data-category="General" data-category-id="DIC_kwDOIttXks4CUpc5" data-mapping="title" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="top" data-theme="light" data-lang="en" crossorigin="anonymous" async="">
 </script>
 </div> <!-- /content -->
-<footer class="footer"><div class="nav-footer">
+<footer class="footer">
+  <div class="nav-footer">
     <div class="nav-footer-left">
       <ul class="footer-items list-unstyled">
-<li class="nav-item">
+    <li class="nav-item">
     <a class="nav-link" href="https://creativecommons.org/licenses/by/2.0/"><i class="fa-regular fa-copyright" aria-label="copyright"></i> <i class="fa-solid fa-circle-user" aria-label="circle-user"></i> 2023 HCC | J.Roa</a>
   </li>  
 </ul>
-</div>   
+    </div>   
       <div class="nav-footer-center">
         <ul class="footer-items list-unstyled">
-<li class="nav-item">
+    <li class="nav-item">
     <a class="nav-link" href="https://quarto.org"><i class="fa-brands fa-phoenix-framework fa-lg" aria-label="phoenix-framework"></i> Quarto engine</a>
   </li>  
 </ul>
-</div>
+      </div>
     <div class="nav-footer-right">
       <ul class="footer-items list-unstyled">
-<li class="nav-item">
+    <li class="nav-item">
     <a class="nav-link" href="mailto:hertiecodingclub@gmail.com"><i class="fa-solid fa-square-envelope fa-lg" aria-label="square-envelope"></i></a>
   </li>  
     <li class="nav-item">
@@ -1512,9 +1672,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     <a class="nav-link" href="https://youtube.com/@hertiecodingclub"><i class="fa-brands fa-youtube fa-lg" aria-label="youtube"></i></a>
   </li>  
 </ul>
-</div>
+    </div>
   </div>
-</footer><script>var lightboxQuarto = GLightbox({"closeEffect":"fade","selector":".lightbox","loop":true,"openEffect":"fade","descPosition":"left","skin":"lightwidth"});</script>
+</footer>
+<script>var lightboxQuarto = GLightbox({"skin":"lightwidth","selector":".lightbox","closeEffect":"fade","loop":true,"openEffect":"fade","descPosition":"left"});</script>
+
 
 
 <script src="../../../site_libs/quarto-html/zenscroll-min.js"></script>

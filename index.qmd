@@ -81,7 +81,7 @@ comments: false
 </head>
 
 <!--  It doesn't work with class. We nned to put style  -->
-<div style=" flex-direction: column; width: 100%; height: 100vh; margin-top: -100px; background-size: cover; background-position: center; background-repeat: no-repeat; overflow: hidden; overflow: clip;  contain: content; display: flex; align-items: center; justify-content: center; background: linear-gradient(to right, #000428, #004e92);">
+<div style=" flex-direction: column; width: 100%; height: 110vh; margin-top: -185px; background-size: cover; background-position: center; background-repeat: no-repeat; overflow: hidden; overflow: clip;  contain: content; display: flex; align-items: center; justify-content: center; background: linear-gradient(to right, #000428, #004e92);">
 
 <css-doodle>
   <style>
@@ -558,12 +558,6 @@ font-weight: 700;
 </div>
 
 </br>
-
-
-<hr class="sep-2" />
-
-
-
 
 
 <div class="container-footer2">
