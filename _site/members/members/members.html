@@ -227,15 +227,16 @@ color: white;
 .profile-card{
     overflow: hidden;
     position:relative;
-    margin-bottom:10px;
-    border: 1px solid #000;
+    margin-bottom:0px;
+  
     transition: all .7s ease-in-out;
 }
 
 .profile-card img{
     width:100%;
     height:auto;
-    border: 1px solid red;
+    border: 3px solid #BA0020;
+    border-radius: 4px;
     transform: scale(0.9,0.9) translateX(0); /* reduce scale */
     transition: all .7s ease-in-out;
 }
@@ -246,7 +247,7 @@ color: white;
 
 .profile-card .profile-content{
     position: absolute;
-    bottom:30px;
+    bottom:20px;
     right:0;
     width:100%;
     color:#333;
@@ -291,7 +292,17 @@ color: white;
             color:#808080;
         }
 
+.profile-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px; /* adjust this as needed for your preferred gap between cards */
+}
 
+@media (max-width: 768px) { /* change this to your preferred breakpoint for mobile layout */
+    .profile-grid {
+        grid-template-columns: 1fr;
+    }
+}
 
 
 
@@ -364,57 +375,50 @@ Members
     </div>
 </section>
 
-
-<div class="container">
-    <div class="row">
-        <div class="col-md-4 col-sm-6">
-            <div class="profile-card">
-                <img src="https://static.pexels.com/photos/17597/pexels-photo.jpg" alt="team profile">
-                <div class="profile-content">
-                    <h3 class="anchored" data-anchor-id="members">Thompson Bill</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis consequuntur cupiditate dolor ea nihil nisi officiis tenetur ullam. Alias, rem?</p>
-                    <ul>
-                        <li><a href="" class="fa fa-facebook"></a></li>
-                        <li><a href="" class="fa fa-twitter"></a></li>
-                        <li><a href="" class="fa fa-google"></a></li>
-                        <li><a href="" class="fa fa-instagram"></a></li>
-                    </ul>
-                </div>
+<div class="container  show-on-scroll">
+    <div class="profile-grid show-on-scroll">
+        <div class="profile-card show-on-scroll">
+            <img src="https://static.pexels.com/photos/17597/pexels-photo.jpg" alt="team profile">
+            <div class="profile-content  show-on-scroll">
+                <h3 class="anchored" data-anchor-id="members">Thompson Bill</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis consequuntur cupiditate dolor ea nihil nisi officiis tenetur ullam. Alias, rem?</p>
+                <ul>
+                    <li><a href="" class="fa fa-facebook"></a></li>
+                    <li><a href="" class="fa fa-twitter"></a></li>
+                    <li><a href="" class="fa fa-google"></a></li>
+                    <li><a href="" class="fa fa-instagram"></a></li>
+                </ul>
             </div>
         </div>
-        <div class="col-md-4 col-sm-6">
-            <div class="profile-card">
-                <img src="https://static.pexels.com/photos/17597/pexels-photo.jpg" alt="team profile">
-                <div class="profile-content">
-                    <h3 class="anchored">Thompson Bill</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis consequuntur cupiditate dolor ea nihil nisi officiis tenetur ullam. Alias, rem?</p>
-                    <ul>
-                        <li><a href="" class="fa fa-facebook"></a></li>
-                        <li><a href="" class="fa fa-twitter"></a></li>
-                        <li><a href="" class="fa fa-google"></a></li>
-                        <li><a href="" class="fa fa-instagram"></a></li>
-                    </ul>
-                </div>
+        <div class="profile-card  show-on-scroll">
+            <img src="https://static.pexels.com/photos/17597/pexels-photo.jpg" alt="team profile">
+            <div class="profile-content  show-on-scroll">
+                <h3 class="anchored">Thompson Bill</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis consequuntur cupiditate dolor ea nihil nisi officiis tenetur ullam. Alias, rem?</p>
+                <ul>
+                    <li><a href="" class="fa fa-facebook"></a></li>
+                    <li><a href="" class="fa fa-twitter"></a></li>
+                    <li><a href="" class="fa fa-google"></a></li>
+                    <li><a href="" class="fa fa-instagram"></a></li>
+                </ul>
             </div>
         </div>
-        <div class="col-md-4 col-sm-6">
-            <div class="profile-card">
-                <img src="https://static.pexels.com/photos/17597/pexels-photo.jpg" alt="team profile">
-                <div class="profile-content">
-                    <h3 class="anchored">Thompson Bill</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis consequuntur cupiditate dolor ea nihil nisi officiis tenetur ullam. Alias, rem?</p>
-                    <ul>
-                        <li><a href="" class="fa fa-facebook"></a></li>
-                        <li><a href="" class="fa fa-twitter"></a></li>
-                        <li><a href="" class="fa fa-google"></a></li>
-                        <li><a href="" class="fa fa-instagram"></a></li>
-                    </ul>
-                </div>
+        <div class="profile-card  show-on-scroll">
+            <img src="https://static.pexels.com/photos/17597/pexels-photo.jpg" alt="team profile">
+            <div class="profile-content  show-on-scroll">
+                <h3 class="anchored">Thompson Bill</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis consequuntur cupiditate dolor ea nihil nisi officiis tenetur ullam. Alias, rem?</p>
+                <ul>
+                    <li><a href="" class="fa fa-facebook"></a></li>
+                    <li><a href="" class="fa fa-twitter"></a></li>
+                    <li><a href="" class="fa fa-google"></a></li>
+                    <li><a href="" class="fa fa-instagram"></a></li>
+                </ul>
             </div>
         </div>
     </div>
 </div>
- 
+
 
 
 </section>
