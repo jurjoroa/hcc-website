@@ -1,0 +1,37 @@
+---
+title: "I2DS Tools for Data Science"
+listing:
+  - id: i2ds
+    contents: "I2DS/*/index.qmd"
+    type: grid
+    fields: [image, title, subtitle, categories]  
+    sort: "date desc"
+    #categories: true
+    sort-ui: true
+    filter-ui: true
+    page-size: 10
+page-layout: full
+title-block-banner: false
+include-in-header: meta.html
+comments: false
+---
+
+<style>
+
+html body.nav-fixed.quarto-light div#quarto-content.quarto-container.page-columns.page-rows-contents.page-layout-full.page-navbar main#quarto-document-content.content.column-page header#title-block-header.quarto-title-block.default div.quarto-title h1.title{
+color: transparent !important;
+}
+
+
+html body.nav-fixed.quarto-light div#quarto-content.quarto-container.page-columns.page-rows-contents.page-layout-full.page-navbar main#quarto-document-content.content.column-page{
+
+margin-top: -80px;
+}
+
+</style>
+
+
+A workshop on tools for data science with R. Run by students of the course Introduction to Data Science (IDS) at the Hertie School, Berlin, Germany. All content produced and prepared by students of the Master of Data Science for Public Policy, the Master of Public Policy, and the Master of International Affairs.
+
+::: {#i2ds}
+:::

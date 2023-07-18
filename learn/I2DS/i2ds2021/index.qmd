@@ -1,0 +1,50 @@
+---
+title:  '{{< animate fadeInDown "I2DS Tools for Data Science Workshop 2021"delay=.6s >}}'
+subtitle: '{{< animate fadeInDown "A workshop on tools for data science with R. Run by students of the course Introduction to Data Science (IDS) at the Hertie School, Berlin, Germany."delay=.6s >}}'
+author: ["Hertie Coding Club"]
+date: "2023-04-16"
+categories: ["I2DS", "R", "Hertie School"]
+toc: true
+draft: false
+code-link: true
+code-copy: true
+title-block-banner: true
+comments: false
+image: images/screen.png
+include-in-header: meta.html 
+format: html
+engine: knitr
+filters:
+   - lightbox
+   - webr
+lightbox: 
+  match: auto
+  effect: fade
+  desc-position: left
+  css-class: "lightwidth"
+---
+
+
+
+![](images/screen.png)
+
+ 
+
+
+The Introduction to Data Science (IDS) course at the Hertie School in Berlin, Germany, is designed to provide students with a comprehensive understanding of data science principles, techniques, and tools. As part of the course curriculum, students actively engage in organizing workshops and activities to enhance their practical skills and share their knowledge with others.
+
+ 
+
+These student-led activities, such as the workshop on Tools for Data Science with R, serve as valuable opportunities for participants to gain hands-on experience and learn directly from their peers. The I2DS course encourages students to take the lead in organizing and delivering these workshops, fostering a collaborative learning environment.
+
+
+
+
+<div>
+  <form action="https://intro-to-data-science-21-workshop.github.io">
+    <button class="button_i2ds" type="submit">
+       <i class="fa-solid fa-screwdriver-wrench fa-2x"></i></i> Go to I2DS Tools 2021
+    </button>
+  </form>
+</div>
+

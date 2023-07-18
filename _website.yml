@@ -43,17 +43,19 @@ website:
         menu:
           - text: "{{< fa solid person-chalkboard >}} Team"
             href: members/team/team.qmd
-         # - text: "{{< fa solid users-rectangle >}} Club Members"
-         #   href: members/members/members.qmd
+          - text: "{{< fa solid users-rectangle >}} Club Members"
+            href: members/members/members.qmd
           - text: "{{< fa solid scale-balanced >}} Club Statutes"
             href: members/statute/statute.qmd
       - icon: mortarboard-fill  
         text: "Learn"
         menu:
-          - text: "{{< fa brands r-project >}} language"
+          - text: "{{< fa brands r-project >}} R"
             href: learn/rstudio.qmd
           - text: "{{< fa brands python >}} Python"
             href: learn/python.qmd
+          - text: "{{< fa solid screwdriver-wrench >}} I2DS Tools"
+            href: learn/i2ds.qmd
       - text: "{{< fa solid meteor >}} Material"
         href: material/index.qmd
       - icon: bi-calendar3  

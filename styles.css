@@ -3748,7 +3748,41 @@ background: repeating-radial-gradient(circle at bottom left, #fedc00 0%, #fedc00
 }
 
 
+
+/*distance from image to header*/
 html body.nav-fixed.quarto-light div#quarto-content.quarto-container.page-columns.page-rows-contents.page-layout-article.page-navbar main#quarto-document-content.content.quarto-banner-title-block div.quarto-figure.quarto-figure-center figure.figure p img.img-fluid.figure-img{
   margin-top: -100px;
+}
+
+
+    
+.button_i2ds{
+  width: 170px;
+  height: 30px;
+  border: 2px solid #BA0020;
+  font-size: 8px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  outline: none;
+  border-radius: 150px;
+  background: transparent;
+  cursor: pointer;
+  transition: 0.3s all;
+  color: #968C83;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1.5);
+  margin-top: 70px;
+  text-align: center;
+}
+
+.button_i2ds:hover
+{
+  background: #BA0020;
+  color: white;
+  box-shadow: 0 0 10px #BA0020,
+              0 0 10px #BA0020;
+  filter:
 }
 

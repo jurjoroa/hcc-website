@@ -1081,5 +1081,5 @@ In conclusion, the decision to transition from one to the other should be made b
 ------------------------------------------------------------------------
 
 ::: {.callout-note}
-Cite this page: Roa, J. (2023, April 23). *Making the Transition?: A Guide for Switching from Stata to R*. Hertie Coding Club. [URL](https://www.hertiecodingclub.com/learn/rstudio/stata_to_r/)
+Jutkowitz, E., Pizzi, L. T., Shewmaker, P., Alarid‐Escudero, F., Epstein‐Lubow, G., Prioli, K. M., ... & Gitlin, L. N. (2023). Cost effectiveness of non‐drug interventions that reduce nursing home admissions for people living with dementia. *Alzheimer's & Dementia.*
 :::

@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Members</title>
+<title></title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -80,7 +80,7 @@ gtag('config', 'G-HJEMN0LJY7', { 'anonymize_ip': true});
 <!-- Open Graph / Facebook -->
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://www.hertiecodingclub.com">
-<meta property="og:title" content="Members">
+<meta property="og:title" content="">
 <meta property="og:description" content="Welcome to the Hertie Coding Club! Our goal as a club is to help everyone and between us learn coding skills and show that coding is for everyone, no matter our background.">
 <script src="js/anime_photos.js, js/background.js, https://s3-us-west-2.amazonaws.com/s.cdpn.io/499416/TweenLite.min.js, https://s3-us-west-2.amazonaws.com/s.cdpn.io/499416/EasePack.min.js, https://s3-us-west-2.amazonaws.com/s.cdpn.io/499416/demo.js"></script>
 
@@ -117,6 +117,10 @@ gtag('config', 'G-HJEMN0LJY7', { 'anonymize_ip': true});
         <li>
     <a class="dropdown-item" href="../../members/team/team.html">
  <span class="dropdown-text"><i class="fa-solid fa-person-chalkboard" aria-label="person-chalkboard"></i> Team</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../members/members/members.html">
+ <span class="dropdown-text"><i class="fa-solid fa-users-rectangle" aria-label="users-rectangle"></i> Club Members</span></a>
   </li>  
         <li>
     <a class="dropdown-item" href="../../members/statute/statute.html">
@@ -194,24 +198,14 @@ gtag('config', 'G-HJEMN0LJY7', { 'anonymize_ip': true});
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">Members</h1>
-</div>
 
-
-
-<div class="quarto-title-meta">
-
-    
-  
-    
-  </div>
-  
-
-</header>
 
 <style>
+
+html body.nav-fixed.quarto-light div#quarto-content.quarto-container.page-columns.page-rows-contents.page-layout-article.page-navbar main#quarto-document-content.content section#members.level1{
+margin-top:-150px;
+}
+
   body {
   background: linear-gradient(to right, #000428, #004e92);
 }
@@ -225,24 +219,31 @@ color: white;
 }
 
 .profile-card{
-    overflow: hidden;
-    position:relative;
-    margin-bottom:0px;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  margin-bottom: -20px;
+  margin-top: 50px;
+  transform: translateY(4em); //rotateZ(-5deg);
+  transition: transform 4s .25s cubic-bezier(0,1,.3,1),
+              opacity .3s .25s ease-out;
+  will-change: transform, opacity;
   
-    transition: all .7s ease-in-out;
 }
 
 .profile-card img{
-    width:100%;
-    height:auto;
     border: 3px solid #BA0020;
-    border-radius: 4px;
-    transform: scale(0.9,0.9) translateX(0); /* reduce scale */
+    border-radius: 10px;
+    transform: scale(1.1,1.1) translateX(10); /* reduce scale */
     transition: all .7s ease-in-out;
+    width: 37vh;
+   height: 40vh;
 }
 
 .profile-card:hover img{
-        transform: scale(0.9,0.9) translateX(15px);
+        transform: scale(1,1);
+        
+        
 }
 
 .profile-card .profile-content{
@@ -250,26 +251,32 @@ color: white;
     bottom:20px;
     right:0;
     width:100%;
-    color:#333;
+    color:white;
+    background: #BA0020 ;
     padding:20px;
     text-align: right;
     border-radius:10px;
-    background:rgba(255,255,255,0.6);
-        transform: scale(0.8,0.8) translateY(100%); /* reduce scale */
+        transform: scale(0.8,0.8) translateY(105%); /* reduce scale */
     transition: all .7s ease-in-out;
+     font-size:10px; 
 }
 
 .profile-card:hover .profile-content{
-    transform: scale(0.9,0.9) translateY(0);
+    transform: scale(0.9,0.9) translateY(10%);
+    background: rgba(255, 0, 0, 0.3); /* Semi-transparent red */
 }
         .profile-card .profile-content h3{
             margin: 0 0 10px;
             font-size:20px; /* reduce font size */
+            color: white;
         }
         .profile-card .profile-content p{
             margin: 0 0 10px;
-           font-size:13px; /* reduce font size */
-            line-height:24px;
+           font-size:20px; 
+            line-height:15px;
+            color: white;
+            text-align: justify;
+            
         }
         .profile-card .profile-content ul{
             margin:0 0 15px;
@@ -282,20 +289,21 @@ color: white;
         }
         .profile-card .profile-content ul li a{
             display:block;
-            color:#333;
-           font-size:18px; 
+            color:white;
+           font-size:15px; 
             text-align:center;
             transition: all 0.50s linear 0s;
+             text-decoration: none;
         }
         .profile-card .profile-content ul li a:hover{
             text-decoration:none;
-            color:#808080;
+            color:#004e92;
         }
 
 .profile-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 20px; /* adjust this as needed for your preferred gap between cards */
+    gap: 10px; /* adjust this as needed for your preferred gap between cards */
 }
 
 @media (max-width: 768px) { /* change this to your preferred breakpoint for mobile layout */
@@ -305,12 +313,13 @@ color: white;
 }
 
 
+.profile-card.is-visible {
+  opacity: 1;
+  transform: rotateZ(0deg);
+} 
 
-Resources
 
 </style>
-<p>&nbsp;</p>
-
 
 
 <script src="assets/js/anime_photos.js"></script>
@@ -327,95 +336,89 @@ Members
 </header>
 </div>
 <hr>
-
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-      <script>
-         $(document).ready(function(){
-            $('#giorgiocoppola').load("giorgiocoppola.html");
-            $('#tushiagarwal').load("tushiagarwal.html");
-            $('#issacjohn').load("issacjohn.html");
-            $('#member4').load("member4.html");
-            $('#member5').load("member5.html");
-            $('#member6').load("member6.html");
-            $('#member7').load("member7.html");
-         });
-      </script>
-
-<section id="container">
-    <div class="user-container">
-
-        <!-- Card Two-->
-        <div class="card inline-photo3 show-on-scroll">
-          <div id="giorgiocoppola"></div>
-        </div>
-        <!-- Card Two-->
-        <div class="card inline-photo3 show-on-scroll">
-          <div id="tushiagarwal"></div>
-        </div>
-        <!-- Card Two-->
-        <div class="card inline-photo3 show-on-scroll">
-          <div id="issacjohn"></div>
-        </div>
-        <!-- Card Two-->
-        <div class="card inline-photo3 show-on-scroll">
-          <div id="member4"></div>
-        </div>
-        <!-- Card Two-->
-        <div class="card inline-photo3 show-on-scroll">
-          <div id="member5"></div>
-        </div>
-        <!-- Card Two-->
-        <div class="card inline-photo3 show-on-scroll">
-          <div id="member6"></div>
-        </div>
-        <div class="card inline-photo3 show-on-scroll">
-          <div id="member7"></div>
-        </div>
-
-    </div>
-</section>
 
 <div class="container  show-on-scroll">
     <div class="profile-grid show-on-scroll">
         <div class="profile-card show-on-scroll">
-            <img src="https://static.pexels.com/photos/17597/pexels-photo.jpg" alt="team profile">
+            <img src="giorgiocoppola.jpg" alt="team profile">
             <div class="profile-content  show-on-scroll">
-                <h3 class="anchored" data-anchor-id="members">Thompson Bill</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis consequuntur cupiditate dolor ea nihil nisi officiis tenetur ullam. Alias, rem?</p>
+                <h3 class="anchored" data-anchor-id="members">Giorgio Coppola <br> MPP 2024</h3>
+                <p>I am passionate about socio-ecological systems. Indeed, my main research interest lies in the long-term relationship between human well-being, economic growth, natural resource and energy flows, as well as climate and environmental policy applications. I am keen to widen my quantitative and data science skills and apply them to environmental social sciences to make the most impactful contribution to public policy research.</p>
                 <ul>
-                    <li><a href="" class="fa fa-facebook"></a></li>
-                    <li><a href="" class="fa fa-twitter"></a></li>
-                    <li><a href="" class="fa fa-google"></a></li>
-                    <li><a href="" class="fa fa-instagram"></a></li>
+                    <li><a href="https://www.linkedin.com/in/giorgio-coppola-01o/" class="fab fa-linkedin"></a></li>
+                    <li><a href="mailto:g.coppola@students.hertie-school.org" class="fa fa-envelope"></a></li>
                 </ul>
             </div>
         </div>
-        <div class="profile-card  show-on-scroll">
-            <img src="https://static.pexels.com/photos/17597/pexels-photo.jpg" alt="team profile">
+  <div class="profile-card show-on-scroll">
+            <img src="tushiagarwal.jpeg" alt="team profile">
             <div class="profile-content  show-on-scroll">
-                <h3 class="anchored">Thompson Bill</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis consequuntur cupiditate dolor ea nihil nisi officiis tenetur ullam. Alias, rem?</p>
+                <h3 class="anchored">Tushi Agarwal <br> MPP 2024 </h3>
+                <p>I am keen on studying socio-economic development, with a focus on education and poverty and understanding the nexus of these fields with accelerated digital development in today's times. I want to learn coding to make this  journey easier by being able to analyse raw data, draw conclusions and validate theories. Also, I just think coding is a cool skill to have up your sleeve. ;)</p>
                 <ul>
-                    <li><a href="" class="fa fa-facebook"></a></li>
-                    <li><a href="" class="fa fa-twitter"></a></li>
-                    <li><a href="" class="fa fa-google"></a></li>
-                    <li><a href="" class="fa fa-instagram"></a></li>
+                    <li><a href="https://www.linkedin.com/in/tushi-agarwal/" class="fab fa-linkedin"></a></li>
+                    <li><a href="mailto:221tushi@gmail.com" class="fa fa-envelope"></a></li>
                 </ul>
             </div>
         </div>
-        <div class="profile-card  show-on-scroll">
-            <img src="https://static.pexels.com/photos/17597/pexels-photo.jpg" alt="team profile">
+
+
+  <div class="profile-card show-on-scroll">
+            <img src="issacjohn.jpg" alt="team profile" "="">
             <div class="profile-content  show-on-scroll">
-                <h3 class="anchored">Thompson Bill</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis consequuntur cupiditate dolor ea nihil nisi officiis tenetur ullam. Alias, rem?</p>
+                <h3 class="anchored">Issac John <br> MPP 2024</h3>
+                <p>I hope to work on the design and analysis of development and social policies. My specific areas of interest include agricultural livelihoods and rural access to health. I want to get better at coding to supplement my quantitative analysis skills, and consequently become a more holistic development professional.</p>
                 <ul>
-                    <li><a href="" class="fa fa-facebook"></a></li>
-                    <li><a href="" class="fa fa-twitter"></a></li>
-                    <li><a href="" class="fa fa-google"></a></li>
-                    <li><a href="" class="fa fa-instagram"></a></li>
+                    <li><a href="https://www.linkedin.com/in/issacjohnpolicy/" class="fab fa-linkedin"></a></li>
+                    <li><a href="I.John@students.hertie-school.org" class="fa fa-envelope"></a></li>
                 </ul>
             </div>
         </div>
+
+
+  <div class="profile-card show-on-scroll">
+            <img src="kellycruz.jpg" alt="team profile">
+            <div class="profile-content  show-on-scroll">
+                <h3 class="anchored">Sany Kelly Cruz  <br> MPP 2024 </h3>
+                <p>Interested in education policies and policy analysis, and curious about the use of technology in these fields :) I see coding as a tool that will help me navigate through the data analysis universe and, eventually pave the way so I can contribute to the formulation of impactful policies.</p>
+                <ul>
+                    <li><a href="www.linkedin.com/in/sany-cruz" class="fab fa-linkedin"></a></li>
+                    <li><a href="mailto:sanny.cruz.batista@gmail.com" class="fa fa-envelope"></a></li>
+                </ul>
+            </div>
+        </div>
+
+
+  <div class="profile-card show-on-scroll">
+            <img src="fercorral.png" alt="team profile">
+            <div class="profile-content  show-on-scroll">
+                <h3 class="anchored">Fernando Corral <br> MDS 2024</h3>
+                <p>As someone interested in expanding my skills and exploring new opportunities, I believe learning how to code could be incredibly beneficial for me. Not only is there a high demand for coders in many industries, but coding also teaches problem-solving skills, fosters creativity and innovation, and can even automate tasks to increase productivity. Moreover, the cognitive skills I can gain from learning how to code can help me become a better problem solver.</p>
+                <ul>
+                    <li><a href="https://www.linkedin.com/in/fernando-cl-data-analyst/" class="fab fa-linkedin"></a></li>
+                    <li><a href="mailto:fernancors@hotmail.com" class="fa fa-envelope"></a></li>
+                </ul>
+            </div>
+        </div>
+
+  <div class="profile-card show-on-scroll">
+            <img src="miguelpinto.png" alt="team profile">
+            <div class="profile-content  show-on-scroll">
+                <h3 class="anchored">Miguel Pinto Ferreira <br> MIA 2022</h3>
+                <p>I essentially want to get better at R for statistics as well as learning Python for eventual data scrapping.</p>
+                <ul>
+                    <li><a href="https://twitter.com/MiOli1111" class="fab fa-twitter"></a></li>
+                    <li><a href="mailto:m.oliveira@students.hertie-school.org" class="fa fa-envelope"></a></li>
+                </ul>
+            </div>
+        </div>
+
+
+
+
+
+
     </div>
 </div>
 

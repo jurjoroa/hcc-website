@@ -1,0 +1,14 @@
+{
+  "hash": "27f830f899c1b319251a4fce319152c8",
+  "result": {
+    "markdown": "---\ntitle:  '{{< animate fadeInDown \"I2DS Tools for Data Science Workshop 2021\"delay=.6s >}}'\nsubtitle: '{{< animate fadeInDown \"A workshop on tools for data science with R. Run by students of the course Introduction to Data Science (IDS) at the Hertie School, Berlin, Germany.\"delay=.6s >}}'\nauthor: [\"Hertie Coding Club\"]\ndate: \"2023-04-16\"\ncategories: [\"I2DS\", \"R\", \"Hertie School\"]\ntoc: true\ndraft: false\ncode-link: true\ncode-copy: true\ntitle-block-banner: true\ncomments: false\nimage: images/screen.png\ninclude-in-header: meta.html \nformat: html\nengine: knitr\nfilters:\n   - lightbox\n   - webr\nlightbox: \n  match: auto\n  effect: fade\n  desc-position: left\n  css-class: \"lightwidth\"\n---\n\n\n\n\n![](images/screen.png)\n\n \n\n\nThe Introduction to Data Science (IDS) course at the Hertie School in Berlin, Germany, is designed to provide students with a comprehensive understanding of data science principles, techniques, and tools. As part of the course curriculum, students actively engage in organizing workshops and activities to enhance their practical skills and share their knowledge with others.\n\n \n\nThese student-led activities, such as the workshop on Tools for Data Science with R, serve as valuable opportunities for participants to gain hands-on experience and learn directly from their peers. The I2DS course encourages students to take the lead in organizing and delivering these workshops, fostering a collaborative learning environment.\n\n\n\n\n<div>\n  <form action=\"https://intro-to-data-science-21-workshop.github.io\">\n    <button class=\"button_i2ds\" type=\"submit\">\n       <i class=\"fa-solid fa-screwdriver-wrench fa-2x\"></i></i> Go to I2DS Tools 2021\n    </button>\n  </form>\n</div>\n\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}
