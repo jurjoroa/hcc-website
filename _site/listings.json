@@ -1,5 +1,12 @@
 [
   {
+    "listing": "/learn/i2ds.html",
+    "items": [
+      "/learn/I2DS/i2ds2021/index.html",
+      "/learn/I2DS/i2ds2022/index.html"
+    ]
+  },
+  {
     "listing": "/learn/rstudio/objects/index.html",
     "items": []
   },
@@ -121,13 +128,6 @@
       "/material/Certifications/cisco_pcap/index.html",
       "/material/Certifications/freecodecamp/index.html",
       "/material/Certifications/IBM_data_analyst/index.html"
-    ]
-  },
-  {
-    "listing": "/learn/i2ds.html",
-    "items": [
-      "/learn/I2DS/i2ds2021/index.html",
-      "/learn/I2DS/i2ds2022/index.html"
     ]
   }
 ]
