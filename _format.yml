@@ -10,7 +10,7 @@ format:
     css: styles.css
     toc: true
     code-link: true
-    #link-external-newwindow: true 
+    link-external-newwindow: true 
     citations-hover: true
     footnotes-hover: true
 editor: visual

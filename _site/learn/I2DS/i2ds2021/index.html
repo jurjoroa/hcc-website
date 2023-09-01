@@ -1,14 +1,11 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
-
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.2.280">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-
 <meta name="author" content="Hertie Coding Club">
 <meta name="dcterms.date" content="2023-04-16">
-
 <title>I2DS Tools for Data Science Workshop 2021</title>
 <style>
 code{white-space: pre-wrap;}
@@ -23,7 +20,6 @@ ul.task-list li input[type="checkbox"] {
   vertical-align: middle;
 }
 </style>
-
 
 <script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="../../../site_libs/clipboard/clipboard.min.js"></script>
@@ -48,8 +44,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="../../../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <link href="../../../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
 <link href="../../../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
-<link href="../../../site_libs/quarto-contrib/animate-4.1.1/animate.min.css" rel="stylesheet">
-<script id="quarto-search-options" type="application/json">{
+<link href="../../../site_libs/quarto-contrib/animate-4.1.1/animate.min.css" rel="stylesheet"><script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
   "collapse-after": 3,
@@ -67,35 +62,24 @@ ul.task-list li input[type="checkbox"] {
     "search-detached-cancel-button-title": "Cancel",
     "search-submit-button-title": "Submit"
   }
-}</script>
-<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-HJEMN0LJY7"></script>
-
-<script type="text/javascript">
+}</script><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-HJEMN0LJY7"></script><script type="text/javascript">
 
 window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 gtag('config', 'G-HJEMN0LJY7', { 'anonymize_ip': true});
-</script>
-<style>html{ scroll-behavior: smooth; }</style>
-<!-- Primary Meta Tags -->
-<title>Hertie Coding Club - Everybody can learn to code</title>
+</script><style>html{ scroll-behavior: smooth; }</style>
+<!-- Primary Meta Tags --><title>Hertie Coding Club - Everybody can learn to code</title>
 <meta name="title" content="Hertie Coding Club - Everybody can learn to code">
 <meta name="description" content="Welcome to the Hertie Coding Club! Our goal as a club is to help everyone and between us learn coding skills and show that coding is for everyone, no matter our background.">
-
-<!-- Open Graph / Facebook -->
-<meta property="og:type" content="website">
+<!-- Open Graph / Facebook --><meta property="og:type" content="website">
 <meta property="og:url" content="https://www.hertiecodingclub.com">
 <meta property="og:title" content="I2DS Tools for Data Science Workshop 2021">
 <meta property="og:description" content="Welcome to the Hertie Coding Club! Our goal as a club is to help everyone and between us learn coding skills and show that coding is for everyone, no matter our background.">
-
-<!-- Primary Meta Tags -->
-<title>Hertie Coding Club - RStudio 101</title>
+<!-- Primary Meta Tags --><title>Hertie Coding Club - RStudio 101</title>
 <meta name="title" content="Hertie Coding Club - Enable Multithread with data.table in Mac/Intel chips">
 <meta name="description" content="Learn the basics of R: open a project, setting a working directory and navigate RStudio interface">
-
-<!-- Open Graph / Facebook -->
-<meta property="og:type" content="website">
+<!-- Open Graph / Facebook --><meta property="og:type" content="website">
 <meta property="og:url" content="https://www.hertiecodingclub.com/learn/rstudio/rstudio101/">
 <meta property="og:title" content="Hertie Coding Club - RStudio 101">
 <meta property="og:description" content="Learn the basics of R: open a project, setting a working directory and navigate RStudio interface">
@@ -106,28 +90,22 @@ gtag('config', 'G-HJEMN0LJY7', { 'anonymize_ip': true});
 <style>:root{--animate-duration:3s;--animate-delay:2s;--animate-repeat:1}</style>
 <style>:root{--animate-duration:3s;--animate-delay:2s;--animate-repeat:1}</style>
 <style>:root{--animate-duration:3s;--animate-delay:2s;--animate-repeat:1}</style>
-
-
 <link rel="stylesheet" href="../../../styles.css">
 </head>
-
 <body class="nav-fixed">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg navbar-dark ">
-      <div class="navbar-container container-fluid">
+  <header id="quarto-header" class="headroom fixed-top"><nav class="navbar navbar-expand-lg navbar-dark "><div class="navbar-container container-fluid">
       <div class="navbar-brand-container">
     <a href="../../../index.html" class="navbar-brand navbar-brand-logo">
-    <img src="../../../images/hcc_final.png" alt="" class="navbar-logo">
-    </a>
+    <img src="../../../images/hcc_final.png" alt="" class="navbar-logo"></a>
   </div>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
-  <li class="nav-item">
+<li class="nav-item">
     <a class="nav-link" href="../../../index.html"><i class="bi bi-house-fill" role="img">
 </i> 
  <span class="menu-text">Home</span></a>
@@ -136,8 +114,8 @@ gtag('config', 'G-HJEMN0LJY7', { 'anonymize_ip': true});
     <a class="nav-link dropdown-toggle" href="#" id="nav-menu-fa-solid-people-group--members" role="button" data-bs-toggle="dropdown" aria-expanded="false">
  <span class="menu-text"><i class="fa-solid fa-people-group" aria-label="people-group"></i> Members</span>
     </a>
-    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-fa-solid-people-group--members">    
-        <li>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-fa-solid-people-group--members">
+<li>
     <a class="dropdown-item" href="../../../members/team/team.html">
  <span class="dropdown-text"><i class="fa-solid fa-person-chalkboard" aria-label="person-chalkboard"></i> Team</span></a>
   </li>  
@@ -150,15 +128,15 @@ gtag('config', 'G-HJEMN0LJY7', { 'anonymize_ip': true});
  <span class="dropdown-text"><i class="fa-solid fa-scale-balanced" aria-label="scale-balanced"></i> Club Statutes</span></a>
   </li>  
     </ul>
-  </li>
+</li>
   <li class="nav-item dropdown ">
     <a class="nav-link dropdown-toggle" href="#" id="nav-menu-learn" role="button" data-bs-toggle="dropdown" aria-expanded="false">
       <i class="bi bi-mortarboard-fill" role="img">
 </i> 
  <span class="menu-text">Learn</span>
     </a>
-    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-learn">    
-        <li>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-learn">
+<li>
     <a class="dropdown-item" href="../../../learn/rstudio.html">
  <span class="dropdown-text"><i class="fa-brands fa-r-project" aria-label="r-project"></i> R</span></a>
   </li>  
@@ -171,7 +149,7 @@ gtag('config', 'G-HJEMN0LJY7', { 'anonymize_ip': true});
  <span class="dropdown-text"><i class="fa-solid fa-screwdriver-wrench" aria-label="screwdriver-wrench"></i> I2DS Tools</span></a>
   </li>  
     </ul>
-  </li>
+</li>
   <li class="nav-item">
     <a class="nav-link" href="../../../material/index.html">
  <span class="menu-text"><i class="fa-solid fa-meteor" aria-label="meteor"></i> Material</span></a>
@@ -189,8 +167,8 @@ gtag('config', 'G-HJEMN0LJY7', { 'anonymize_ip': true});
     <a class="nav-link dropdown-toggle" href="#" id="nav-menu-fa-solid-laptop-code--about-us" role="button" data-bs-toggle="dropdown" aria-expanded="false">
  <span class="menu-text"><i class="fa-solid fa-laptop-code" aria-label="laptop-code"></i> About us</span>
     </a>
-    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-fa-solid-laptop-code--about-us">    
-        <li>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-fa-solid-laptop-code--about-us">
+<li>
     <a class="dropdown-item" href="../../../about_us/index.html">
  <span class="dropdown-text"><i class="fa-solid fa-school-flag" aria-label="school-flag"></i> Who are we</span></a>
   </li>  
@@ -199,19 +177,15 @@ gtag('config', 'G-HJEMN0LJY7', { 'anonymize_ip': true});
  <span class="dropdown-text"><i class="fa-solid fa-circle-nodes" aria-label="circle-nodes"></i> Hertie Clubs</span></a>
   </li>  
     </ul>
-  </li>
+</li>
 </ul>
-              <div class="quarto-toggle-container">
+<div class="quarto-toggle-container">
                   <a href="" class="quarto-color-scheme-toggle nav-link" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
               </div>
               <div id="quarto-search" class="" title="Search"></div>
           </div> <!-- /navcollapse -->
       </div> <!-- /container-fluid -->
-    </nav>
-</header>
-<!-- content -->
-<header id="title-block-header" class="quarto-title-block default page-columns page-full">
-  <div class="quarto-title-banner page-columns page-full">
+    </nav></header><!-- content --><header id="title-block-header" class="quarto-title-block default page-columns page-full"><div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
       <h1 class="title"><span class="animate__animated animate__fadeInDown animate__delay-.6s" style="display: inline-block;">I2DS Tools for Data Science Workshop 2021</span></h1>
             <p class="subtitle lead"><span class="animate__animated animate__fadeInDown animate__delay-.6s" style="display: inline-block;">A workshop on tools for data science with R. Run by students of the course Introduction to Data Science (IDS) at the Hertie School, Berlin, Germany.</span></p>
@@ -251,14 +225,8 @@ gtag('config', 'G-HJEMN0LJY7', { 'anonymize_ip': true});
         
     </div>
 <!-- main -->
-<main class="content quarto-banner-title-block" id="quarto-document-content">
-
-
-
-
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="images/screen.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="images/screen.png" class="img-fluid figure-img"></a></p>
+<main class="content quarto-banner-title-block" id="quarto-document-content"><div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><a href="images/screen.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="images/screen.png" class="img-fluid figure-img"></a></p>
 </figure>
 </div>
 <p>&nbsp;</p>
@@ -275,8 +243,7 @@ gtag('config', 'G-HJEMN0LJY7', { 'anonymize_ip': true});
 
 
 
-</main> <!-- /main -->
-<script id="quarto-html-after-body" type="application/javascript">
+</main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
     const mode = bsSheetEl.getAttribute("data-mode");
@@ -522,28 +489,41 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       });
     }
   }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var filterRegex = new RegExp(/https:\/\/www\.hertiecodingclub\.com/);
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+    var links = window.document.querySelectorAll('a:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+          // target, if specified
+          link.setAttribute("target", "_blank");
+      }
+    }
 });
 </script>
 </div> <!-- /content -->
-<footer class="footer">
-  <div class="nav-footer">
+<footer class="footer"><div class="nav-footer">
     <div class="nav-footer-left">
       <ul class="footer-items list-unstyled">
-    <li class="nav-item">
+<li class="nav-item">
     <a class="nav-link" href="https://creativecommons.org/licenses/by/2.0/"><i class="fa-regular fa-copyright" aria-label="copyright"></i> <i class="fa-solid fa-circle-user" aria-label="circle-user"></i> 2023 HCC | J.Roa</a>
   </li>  
 </ul>
-    </div>   
+</div>   
       <div class="nav-footer-center">
         <ul class="footer-items list-unstyled">
-    <li class="nav-item">
+<li class="nav-item">
     <a class="nav-link" href="https://quarto.org"><i class="fa-brands fa-phoenix-framework fa-lg" aria-label="phoenix-framework"></i> Quarto engine</a>
   </li>  
 </ul>
-      </div>
+</div>
     <div class="nav-footer-right">
       <ul class="footer-items list-unstyled">
-    <li class="nav-item">
+<li class="nav-item">
     <a class="nav-link" href="mailto:hertiecodingclub@gmail.com"><i class="fa-solid fa-square-envelope fa-lg" aria-label="square-envelope"></i></a>
   </li>  
     <li class="nav-item">
@@ -562,11 +542,9 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     <a class="nav-link" href="https://youtube.com/@hertiecodingclub"><i class="fa-brands fa-youtube fa-lg" aria-label="youtube"></i></a>
   </li>  
 </ul>
-    </div>
+</div>
   </div>
-</footer>
-<script>var lightboxQuarto = GLightbox({"skin":"lightwidth","closeEffect":"fade","loop":true,"descPosition":"left","selector":".lightbox","openEffect":"fade"});</script>
-
+</footer><script>var lightboxQuarto = GLightbox({"skin":"lightwidth","selector":".lightbox","loop":true,"closeEffect":"fade","openEffect":"fade","descPosition":"left"});</script>
 
 
 <script src="../../../site_libs/quarto-html/zenscroll-min.js"></script>

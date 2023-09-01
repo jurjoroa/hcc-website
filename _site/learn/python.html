@@ -292,7 +292,7 @@ gtag('config', 'G-HJEMN0LJY7', { 'anonymize_ip': true});
     </div>
 </div>
 <div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="PDF,Text,Transform" data-listing-date-sort="1681801200000" data-listing-file-modified-sort="1685762184691" data-listing-reading-time-sort="7.04">
+<div class="quarto-post image-right" data-index="0" data-categories="PDF,Text,Transform" data-listing-date-sort="1681801200000" data-listing-file-modified-sort="1682878544085" data-listing-reading-time-sort="7.04">
 <div class="thumbnail">
 <p><a href="../learn/python/pdf_to_text/index.html"> <img src="../learn/python/pdf_to_text/images/pdf_to_text.png" class="thumnail-image"> </a></p>
 </div>
@@ -589,6 +589,20 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       });
     }
   }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var filterRegex = new RegExp(/https:\/\/www\.hertiecodingclub\.com/);
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+    var links = window.document.querySelectorAll('a:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+          // target, if specified
+          link.setAttribute("target", "_blank");
+      }
+    }
 });
 </script>
 </div> <!-- /content -->

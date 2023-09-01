@@ -291,7 +291,7 @@ margin-top: -80px;
     </div>
 </div>
 <div class="list grid quarto-listing-cols-3">
-<div class="g-col-1" data-index="0" data-categories="I2DS,R,Hertie School" data-listing-date-sort="1681628400000" data-listing-file-modified-sort="1689656037432" data-listing-reading-time-sort="0.67">
+<div class="g-col-1" data-index="0" data-categories="I2DS,R,Hertie School" data-listing-date-sort="1681628400000" data-listing-file-modified-sort="1693540007225" data-listing-reading-time-sort="0.67">
 <a href="../learn/I2DS/i2ds2021/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -319,7 +319,7 @@ Hertie School
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="1" data-categories="I2DS,R,Hertie School" data-listing-date-sort="1668412800000" data-listing-file-modified-sort="1689656034225" data-listing-reading-time-sort="0.67">
+<div class="g-col-1" data-index="1" data-categories="I2DS,R,Hertie School" data-listing-date-sort="1668412800000" data-listing-file-modified-sort="1693540007226" data-listing-reading-time-sort="0.67">
 <a href="../learn/I2DS/i2ds2022/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -603,6 +603,20 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       });
     }
   }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var filterRegex = new RegExp(/https:\/\/www\.hertiecodingclub\.com/);
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+    var links = window.document.querySelectorAll('a:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+          // target, if specified
+          link.setAttribute("target", "_blank");
+      }
+    }
 });
 </script>
 </div> <!-- /content -->

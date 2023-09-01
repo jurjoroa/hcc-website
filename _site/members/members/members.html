@@ -418,7 +418,17 @@ Members
             </div>
         </div>
 
-
+  <div class="profile-card show-on-scroll">
+            <img src="felixconstantin.png" alt="team profile">
+            <div class="profile-content  show-on-scroll">
+                <h3 class="anchored">Felix Constantin Reinke <br> MIA 2023</h3>
+                <p>Hello! My work lead me to dip into data science, relational databases (sql) and python-coding. As this arose my interest in coding overall, I’d like to connect with people who are into coding as well, share knowledge and create something all together.</p>
+                <ul>
+                    <li><a href="https://www.linkedin.com/in/felix-reinke-b65636222" class="fab fa-linkedin"></a></li>
+                    <li><a href="mailto:f.reinke@students.hertie-school.org" class="fa fa-envelope"></a></li>
+                </ul>
+            </div>
+        </div>
 
 
 
@@ -677,6 +687,20 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       });
     }
   }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var filterRegex = new RegExp(/https:\/\/www\.hertiecodingclub\.com/);
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+    var links = window.document.querySelectorAll('a:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+          // target, if specified
+          link.setAttribute("target", "_blank");
+      }
+    }
 });
 </script>
 </div> <!-- /content -->

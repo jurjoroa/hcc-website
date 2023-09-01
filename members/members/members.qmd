@@ -242,7 +242,17 @@ color: white;
             </div>
         </div>
 
-
+  <div class="profile-card show-on-scroll">
+            <img src="felixconstantin.png" alt="team profile"/>
+            <div class="profile-content  show-on-scroll">
+                <h3>Felix Constantin Reinke <br> MIA 2023</h3>
+                <p>Hello! My work lead me to dip into data science, relational databases (sql) and python-coding. As this arose my interest in coding overall, I’d like to connect with people who are into coding as well, share knowledge and create something all together.</p>
+                <ul>
+                    <li><a href="https://www.linkedin.com/in/felix-reinke-b65636222" class="fab fa-linkedin"></a></li>
+                    <li><a href="mailto:f.reinke@students.hertie-school.org" class="fa fa-envelope"></a></li>
+                </ul>
+            </div>
+        </div>
 
 
 

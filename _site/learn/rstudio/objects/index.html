@@ -1,14 +1,11 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
-
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.2.280">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-
 <meta name="author" content="Jorge Roa">
 <meta name="dcterms.date" content="2023-04-16">
-
 <title>Understanding R Objects: Naming, Data Structures and Classes in R</title>
 <style>
 code{white-space: pre-wrap;}
@@ -87,7 +84,6 @@ code span.vs { color: #4070a0; } /* VerbatimString */
 code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
-
 <script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="../../../site_libs/clipboard/clipboard.min.js"></script>
 <script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
@@ -113,8 +109,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <link href="../../../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <link href="../../../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
 <link href="../../../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
-<link href="../../../site_libs/quarto-contrib/animate-4.1.1/animate.min.css" rel="stylesheet">
-<script id="quarto-search-options" type="application/json">{
+<link href="../../../site_libs/quarto-contrib/animate-4.1.1/animate.min.css" rel="stylesheet"><script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
   "collapse-after": 3,
@@ -132,8 +127,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     "search-detached-cancel-button-title": "Cancel",
     "search-submit-button-title": "Submit"
   }
-}</script>
-<script>
+}</script><script>
 
   window.document.addEventListener("DOMContentLoaded", function (_event) {
     const listingTargetEl = window.document.querySelector('#listing-eda .list');
@@ -161,35 +155,24 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       window['quarto-listing-loaded']();
     }
   })
-  </script>
-<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-HJEMN0LJY7"></script>
-
-<script type="text/javascript">
+  </script><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-HJEMN0LJY7"></script><script type="text/javascript">
 
 window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 gtag('config', 'G-HJEMN0LJY7', { 'anonymize_ip': true});
-</script>
-<style>html{ scroll-behavior: smooth; }</style>
-<!-- Primary Meta Tags -->
-<title>Hertie Coding Club - Everybody can learn to code</title>
+</script><style>html{ scroll-behavior: smooth; }</style>
+<!-- Primary Meta Tags --><title>Hertie Coding Club - Everybody can learn to code</title>
 <meta name="title" content="Hertie Coding Club - Everybody can learn to code">
 <meta name="description" content="Welcome to the Hertie Coding Club! Our goal as a club is to help everyone and between us learn coding skills and show that coding is for everyone, no matter our background.">
-
-<!-- Open Graph / Facebook -->
-<meta property="og:type" content="website">
+<!-- Open Graph / Facebook --><meta property="og:type" content="website">
 <meta property="og:url" content="https://www.hertiecodingclub.com">
 <meta property="og:title" content="Understanding R Objects: Naming, Data Structures and Classes in R">
 <meta property="og:description" content="Welcome to the Hertie Coding Club! Our goal as a club is to help everyone and between us learn coding skills and show that coding is for everyone, no matter our background.">
-
-<!-- Primary Meta Tags -->
-<title>Hertie Coding Club - RStudio 101</title>
+<!-- Primary Meta Tags --><title>Hertie Coding Club - RStudio 101</title>
 <meta name="title" content="Hertie Coding Club - Enable Multithread with data.table in Mac/Intel chips">
 <meta name="description" content="Learn the basics of R: open a project, setting a working directory and navigate RStudio interface">
-
-<!-- Open Graph / Facebook -->
-<meta property="og:type" content="website">
+<!-- Open Graph / Facebook --><meta property="og:type" content="website">
 <meta property="og:url" content="https://www.hertiecodingclub.com/learn/rstudio/rstudio101/">
 <meta property="og:title" content="Hertie Coding Club - RStudio 101">
 <meta property="og:description" content="Learn the basics of R: open a project, setting a working directory and navigate RStudio interface">
@@ -204,9 +187,7 @@ gtag('config', 'G-HJEMN0LJY7', { 'anonymize_ip': true});
     border-bottom-right-radius: 0;
   }
 </style>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/6.65.7/codemirror.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/6.65.7/mode/r/r.js"></script>
-<script type="module">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/6.65.7/codemirror.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/6.65.7/mode/r/r.js"></script><script type="module">
 
   // Start a timer
   const initializeWebRTimerStart = performance.now();
@@ -301,37 +282,29 @@ gtag('config', 'G-HJEMN0LJY7', { 'anonymize_ip': true});
     // If initialized, switch to a green light
     startupMessageWebR.innerText = "🟢 Ready!"
   }
-</script>  
+</script><style>:root{--animate-duration:3s;--animate-delay:2s;--animate-repeat:1}</style>
 <style>:root{--animate-duration:3s;--animate-delay:2s;--animate-repeat:1}</style>
 <style>:root{--animate-duration:3s;--animate-delay:2s;--animate-repeat:1}</style>
 <style>:root{--animate-duration:3s;--animate-delay:2s;--animate-repeat:1}</style>
 <style>:root{--animate-duration:3s;--animate-delay:2s;--animate-repeat:1}</style>
 <style>:root{--animate-duration:3s;--animate-delay:2s;--animate-repeat:1}</style>
 <style>:root{--animate-duration:3s;--animate-delay:2s;--animate-repeat:1}</style>
-<style>:root{--animate-duration:3s;--animate-delay:2s;--animate-repeat:1}</style>
-
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<link rel="stylesheet" href="../../../styles.css">
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script><link rel="stylesheet" href="../../../styles.css">
 </head>
-
 <body class="nav-fixed">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg navbar-dark ">
-      <div class="navbar-container container-fluid">
+  <header id="quarto-header" class="headroom fixed-top"><nav class="navbar navbar-expand-lg navbar-dark "><div class="navbar-container container-fluid">
       <div class="navbar-brand-container">
     <a href="../../../index.html" class="navbar-brand navbar-brand-logo">
-    <img src="../../../images/hcc_final.png" alt="" class="navbar-logo">
-    </a>
+    <img src="../../../images/hcc_final.png" alt="" class="navbar-logo"></a>
   </div>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
-  <li class="nav-item">
+<li class="nav-item">
     <a class="nav-link" href="../../../index.html"><i class="bi bi-house-fill" role="img">
 </i> 
  <span class="menu-text">Home</span></a>
@@ -340,8 +313,8 @@ gtag('config', 'G-HJEMN0LJY7', { 'anonymize_ip': true});
     <a class="nav-link dropdown-toggle" href="#" id="nav-menu-fa-solid-people-group--members" role="button" data-bs-toggle="dropdown" aria-expanded="false">
  <span class="menu-text"><i class="fa-solid fa-people-group" aria-label="people-group"></i> Members</span>
     </a>
-    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-fa-solid-people-group--members">    
-        <li>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-fa-solid-people-group--members">
+<li>
     <a class="dropdown-item" href="../../../members/team/team.html">
  <span class="dropdown-text"><i class="fa-solid fa-person-chalkboard" aria-label="person-chalkboard"></i> Team</span></a>
   </li>  
@@ -354,15 +327,15 @@ gtag('config', 'G-HJEMN0LJY7', { 'anonymize_ip': true});
  <span class="dropdown-text"><i class="fa-solid fa-scale-balanced" aria-label="scale-balanced"></i> Club Statutes</span></a>
   </li>  
     </ul>
-  </li>
+</li>
   <li class="nav-item dropdown ">
     <a class="nav-link dropdown-toggle" href="#" id="nav-menu-learn" role="button" data-bs-toggle="dropdown" aria-expanded="false">
       <i class="bi bi-mortarboard-fill" role="img">
 </i> 
  <span class="menu-text">Learn</span>
     </a>
-    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-learn">    
-        <li>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-learn">
+<li>
     <a class="dropdown-item" href="../../../learn/rstudio.html">
  <span class="dropdown-text"><i class="fa-brands fa-r-project" aria-label="r-project"></i> R</span></a>
   </li>  
@@ -375,7 +348,7 @@ gtag('config', 'G-HJEMN0LJY7', { 'anonymize_ip': true});
  <span class="dropdown-text"><i class="fa-solid fa-screwdriver-wrench" aria-label="screwdriver-wrench"></i> I2DS Tools</span></a>
   </li>  
     </ul>
-  </li>
+</li>
   <li class="nav-item">
     <a class="nav-link" href="../../../material/index.html">
  <span class="menu-text"><i class="fa-solid fa-meteor" aria-label="meteor"></i> Material</span></a>
@@ -393,8 +366,8 @@ gtag('config', 'G-HJEMN0LJY7', { 'anonymize_ip': true});
     <a class="nav-link dropdown-toggle" href="#" id="nav-menu-fa-solid-laptop-code--about-us" role="button" data-bs-toggle="dropdown" aria-expanded="false">
  <span class="menu-text"><i class="fa-solid fa-laptop-code" aria-label="laptop-code"></i> About us</span>
     </a>
-    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-fa-solid-laptop-code--about-us">    
-        <li>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-fa-solid-laptop-code--about-us">
+<li>
     <a class="dropdown-item" href="../../../about_us/index.html">
  <span class="dropdown-text"><i class="fa-solid fa-school-flag" aria-label="school-flag"></i> Who are we</span></a>
   </li>  
@@ -403,19 +376,15 @@ gtag('config', 'G-HJEMN0LJY7', { 'anonymize_ip': true});
  <span class="dropdown-text"><i class="fa-solid fa-circle-nodes" aria-label="circle-nodes"></i> Hertie Clubs</span></a>
   </li>  
     </ul>
-  </li>
+</li>
 </ul>
-              <div class="quarto-toggle-container">
+<div class="quarto-toggle-container">
                   <a href="" class="quarto-color-scheme-toggle nav-link" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
               </div>
               <div id="quarto-search" class="" title="Search"></div>
           </div> <!-- /navcollapse -->
       </div> <!-- /container-fluid -->
-    </nav>
-</header>
-<!-- content -->
-<header id="title-block-header" class="quarto-title-block default page-columns page-full">
-  <div class="quarto-title-banner page-columns page-full">
+    </nav></header><!-- content --><header id="title-block-header" class="quarto-title-block default page-columns page-full"><div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
       <h1 class="title"><span class="animate__animated animate__fadeInDown animate__delay-.6s" style="display: inline-block;">Understanding R Objects: Naming, Data Structures and Classes in R</span></h1>
             <p class="subtitle lead"><span class="animate__animated animate__fadeInDown animate__delay-.6s" style="display: inline-block;">This is why R is so powerful: all kind of objects and possibilites. Naming objects, understand structures is crucial to learn</span></p>
@@ -451,20 +420,22 @@ gtag('config', 'G-HJEMN0LJY7', { 'anonymize_ip': true});
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
+        <nav id="TOC" role="doc-toc" class="toc-active"><h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#objects-in-r" id="toc-objects-in-r" class="nav-link active" data-scroll-target="#objects-in-r">Objects in R</a></li>
+<li><a href="#objects-in-r" id="toc-objects-in-r" class="nav-link active" data-scroll-target="#objects-in-r">Objects in R</a></li>
   <li><a href="#naming-objects" id="toc-naming-objects" class="nav-link" data-scroll-target="#naming-objects">Naming Objects</a></li>
-  <li><a href="#single-values" id="toc-single-values" class="nav-link" data-scroll-target="#single-values">Single Values</a>
+  <li>
+<a href="#single-values" id="toc-single-values" class="nav-link" data-scroll-target="#single-values">Single Values</a>
   <ul class="collapse">
-  <li><a href="#numeric-values" id="toc-numeric-values" class="nav-link" data-scroll-target="#numeric-values">Numeric values</a></li>
+<li><a href="#numeric-values" id="toc-numeric-values" class="nav-link" data-scroll-target="#numeric-values">Numeric values</a></li>
   <li><a href="#character-values" id="toc-character-values" class="nav-link" data-scroll-target="#character-values">Character values</a></li>
-  </ul></li>
-  <li><a href="#vectors" id="toc-vectors" class="nav-link" data-scroll-target="#vectors">Vectors</a>
+  </ul>
+</li>
+  <li>
+<a href="#vectors" id="toc-vectors" class="nav-link" data-scroll-target="#vectors">Vectors</a>
   <ul class="collapse">
-  <li><a href="#create-a-numeric-vector" id="toc-create-a-numeric-vector" class="nav-link" data-scroll-target="#create-a-numeric-vector">Create a numeric vector</a></li>
+<li><a href="#create-a-numeric-vector" id="toc-create-a-numeric-vector" class="nav-link" data-scroll-target="#create-a-numeric-vector">Create a numeric vector</a></li>
   <li><a href="#access-elements-of-a-vector" id="toc-access-elements-of-a-vector" class="nav-link" data-scroll-target="#access-elements-of-a-vector">Access elements of a vector</a></li>
   <li><a href="#perform-arithmetic-operations" id="toc-perform-arithmetic-operations" class="nav-link" data-scroll-target="#perform-arithmetic-operations">Perform arithmetic operations</a></li>
   <li><a href="#find-the-length-of-a-vector" id="toc-find-the-length-of-a-vector" class="nav-link" data-scroll-target="#find-the-length-of-a-vector">Find the length of a vector:</a></li>
@@ -473,42 +444,42 @@ gtag('config', 'G-HJEMN0LJY7', { 'anonymize_ip': true});
   <li><a href="#character-values-1" id="toc-character-values-1" class="nav-link" data-scroll-target="#character-values-1">Character values</a></li>
   <li><a href="#logical-values" id="toc-logical-values" class="nav-link" data-scroll-target="#logical-values">Logical values</a></li>
   <li><a href="#times" id="toc-times" class="nav-link" data-scroll-target="#times">Times:</a></li>
-  </ul></li>
+  </ul>
+</li>
   <li><a href="#exercises" id="toc-exercises" class="nav-link" data-scroll-target="#exercises">Exercises</a></li>
-  <li><a href="#lists" id="toc-lists" class="nav-link" data-scroll-target="#lists">Lists</a>
+  <li>
+<a href="#lists" id="toc-lists" class="nav-link" data-scroll-target="#lists">Lists</a>
   <ul class="collapse">
-  <li><a href="#a-list-with-different-type-of-vectors" id="toc-a-list-with-different-type-of-vectors" class="nav-link" data-scroll-target="#a-list-with-different-type-of-vectors">A list with different type of vectors</a></li>
+<li><a href="#a-list-with-different-type-of-vectors" id="toc-a-list-with-different-type-of-vectors" class="nav-link" data-scroll-target="#a-list-with-different-type-of-vectors">A list with different type of vectors</a></li>
   <li><a href="#access-an-element-of-the-list-using-indexing" id="toc-access-an-element-of-the-list-using-indexing" class="nav-link" data-scroll-target="#access-an-element-of-the-list-using-indexing">Access an element of the list using indexing</a></li>
   <li><a href="#add-a-new-element-to-the-list" id="toc-add-a-new-element-to-the-list" class="nav-link" data-scroll-target="#add-a-new-element-to-the-list">Add a new element to the list:</a></li>
   <li><a href="#create-a-nested-list-with-two-elements" id="toc-create-a-nested-list-with-two-elements" class="nav-link" data-scroll-target="#create-a-nested-list-with-two-elements">Create a nested list with two elements:</a></li>
-  </ul></li>
+  </ul>
+</li>
   <li><a href="#exercises-1" id="toc-exercises-1" class="nav-link" data-scroll-target="#exercises-1">Exercises</a></li>
-  <li><a href="#matrices-and-arrays" id="toc-matrices-and-arrays" class="nav-link" data-scroll-target="#matrices-and-arrays">Matrices and arrays</a>
+  <li>
+<a href="#matrices-and-arrays" id="toc-matrices-and-arrays" class="nav-link" data-scroll-target="#matrices-and-arrays">Matrices and arrays</a>
   <ul class="collapse">
-  <li><a href="#createing-a-matrix" id="toc-createing-a-matrix" class="nav-link" data-scroll-target="#createing-a-matrix">Createing a matrix</a></li>
+<li><a href="#createing-a-matrix" id="toc-createing-a-matrix" class="nav-link" data-scroll-target="#createing-a-matrix">Createing a matrix</a></li>
   <li><a href="#access-an-element-of-the-matrix-using-indexing" id="toc-access-an-element-of-the-matrix-using-indexing" class="nav-link" data-scroll-target="#access-an-element-of-the-matrix-using-indexing">Access an element of the matrix using indexing</a></li>
   <li><a href="#modify-an-element-of-the-matrix" id="toc-modify-an-element-of-the-matrix" class="nav-link" data-scroll-target="#modify-an-element-of-the-matrix">Modify an element of the matrix</a></li>
   <li><a href="#create-an-array-with-three-dimensions" id="toc-create-an-array-with-three-dimensions" class="nav-link" data-scroll-target="#create-an-array-with-three-dimensions">Create an array with three dimensions</a></li>
   <li><a href="#access-an-element-of-the-array-using-indexing" id="toc-access-an-element-of-the-array-using-indexing" class="nav-link" data-scroll-target="#access-an-element-of-the-array-using-indexing">Access an element of the array using indexing</a></li>
   <li><a href="#modify-an-element-of-the-array" id="toc-modify-an-element-of-the-array" class="nav-link" data-scroll-target="#modify-an-element-of-the-array">Modify an element of the array</a></li>
-  </ul></li>
-  <li><a href="#exercises-2" id="toc-exercises-2" class="nav-link" data-scroll-target="#exercises-2">Exercises</a></li>
-  <li><a href="#data-frame" id="toc-data-frame" class="nav-link" data-scroll-target="#data-frame">Data Frame</a>
-  <ul class="collapse">
-  <li><a href="#create-a-data-frame-multiple-ways" id="toc-create-a-data-frame-multiple-ways" class="nav-link" data-scroll-target="#create-a-data-frame-multiple-ways">Create a Data Frame: multiple ways</a></li>
-  </ul></li>
-  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
   </ul>
-</nav>
+</li>
+  <li><a href="#exercises-2" id="toc-exercises-2" class="nav-link" data-scroll-target="#exercises-2">Exercises</a></li>
+  <li>
+<a href="#data-frame" id="toc-data-frame" class="nav-link" data-scroll-target="#data-frame">Data Frame</a>
+  <ul class="collapse">
+<li><a href="#create-a-data-frame-multiple-ways" id="toc-create-a-data-frame-multiple-ways" class="nav-link" data-scroll-target="#create-a-data-frame-multiple-ways">Create a Data Frame: multiple ways</a></li>
+  </ul>
+</li>
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
+  </ul></nav>
     </div>
 <!-- main -->
-<main class="content quarto-banner-title-block" id="quarto-document-content">
-
-
-
-
-<section id="objects-in-r" class="level1">
-<h1>Objects in R</h1>
+<main class="content quarto-banner-title-block" id="quarto-document-content"><section id="objects-in-r" class="level1"><h1>Objects in R</h1>
 <hr>
 <p>One of the things that define R as an amazing tool to do multiple things are objects. R work with objects that essentialy are data structures that can hold values, but also othr types of data and can be assigned names for easy reference. Objects in R are useful because we can organize and store data in meaningful ways. One of the most importants thigns when you are learning R is understand how to work with these objects because you will have the confidence and knowledge to use it at your better convenience. There are several types of objects in R, including vectors, matrices, data frames, lists, and factors, each with their own characteristics and uses.</p>
 <div class="callout-warning callout callout-style-default callout-captioned">
@@ -547,16 +518,13 @@ Execute R code in the website
 </div>
 <p>&nbsp;</p>
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="images/dataStructures.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="images/dataStructures.png" class="img-fluid figure-img"></a></p>
+<figure class="figure"><p><a href="images/dataStructures.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="images/dataStructures.png" class="img-fluid figure-img"></a></p>
 </figure>
 </div>
 <p>&nbsp;</p>
 <p>In this image, you can see the different types of objects that we have and this is the best way to visualize. However, to really understand what is going on, you need to start writing code and start trying using this different type of objects to know them better. In the next lines, I’ll write explanations, examples and exercises.</p>
 <p>&nbsp;</p>
-</section>
-<section id="naming-objects" class="level1">
-<h1>Naming Objects</h1>
+</section><section id="naming-objects" class="level1"><h1>Naming Objects</h1>
 <p>It can be headache naming objects in R since you need to have the creativity to write a short but precise name for your object. Here are some reasons why naming objects in R is so essential.</p>
 <ul>
 <li><p><strong>Use descriptive names</strong>: Choose names that describe the contents or purpose of the object. Avoid using single-letter variable names or abbreviations that are unclear or confusing. For example, use “number_of_widgets” instead of “n” or “num_wgts”.</p></li>
@@ -567,64 +535,54 @@ Execute R code in the website
 </ul>
 <p>Personally, I like to name my objects according to the next table:</p>
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="images/name.png" class="lightbox" title="Alarid et. al.&nbsp;(2019)" data-gallery="quarto-lightbox-gallery-2"><img src="images/name.png" class="img-fluid figure-img"></a></p>
+<figure class="figure"><p><a href="images/name.png" class="lightbox" title="Alarid et. al.&nbsp;(2019)" data-gallery="quarto-lightbox-gallery-2"><img src="images/name.png" class="img-fluid figure-img"></a></p>
 <p></p><figcaption class="figure-caption">Alarid et. al.&nbsp;(2019)</figcaption><p></p>
 </figure>
 </div>
 <p>I like it since it gives you structure and clarity about how to name your objects. For example:</p>
 <p>This logics applies the same with matrices, arrays, data frames, etc. It’s a good practice to follow this criteria since is going to be much easier to identify your objects in your environment.</p>
 <p>&nbsp;</p>
-</section>
-<section id="single-values" class="level1">
-<h1>Single Values</h1>
-<section id="numeric-values" class="level2">
-<h2 class="anchored" data-anchor-id="numeric-values">Numeric values</h2>
+</section><section id="single-values" class="level1"><h1>Single Values</h1>
+<section id="numeric-values" class="level2"><h2 class="anchored" data-anchor-id="numeric-values">Numeric values</h2>
 <p>A numeric object can be stored as a number.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="dv">6</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(x)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">x</span> <span class="op">&lt;-</span> <span class="fl">6</span></span>
+<span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/class.html">class</a></span><span class="op">(</span><span class="va">x</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "numeric"</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>x</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">x</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 6</code></pre>
 </div>
 </div>
-</section>
-<section id="character-values" class="level2">
-<h2 class="anchored" data-anchor-id="character-values">Character values</h2>
+</section><section id="character-values" class="level2"><h2 class="anchored" data-anchor-id="character-values">Character values</h2>
 <p>Stores a sequence of characters, such as letters, numbers, and symbols. A character value is created by enclosing the sequence of characters within quotation marks, either single or double.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>character <span class="ot">&lt;-</span> <span class="st">"Welcome to the Hertie Coding Club"</span>   <span class="co"># creating a character value</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">character</span> <span class="op">&lt;-</span> <span class="st">"Welcome to the Hertie Coding Club"</span>   <span class="co"># creating a character value</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>Character values can be combined using the <code>paste()</code> or <code>paste0()</code> functions, which concatenate two or more character values into a single character value.</p>
+<p>Character values can be combined using the <code><a href="https://rdrr.io/r/base/paste.html">paste()</a></code> or <code><a href="https://rdrr.io/r/base/paste.html">paste0()</a></code> functions, which concatenate two or more character values into a single character value.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="st">"Welcome to"</span></span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>y <span class="ot">&lt;-</span> <span class="st">"the Hertie Coding Club"</span></span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>z <span class="ot">&lt;-</span> <span class="fu">paste</span>(x, y, <span class="at">sep =</span> <span class="st">": "</span>)</span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(z)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">x</span> <span class="op">&lt;-</span> <span class="st">"Welcome to"</span></span>
+<span><span class="va">y</span> <span class="op">&lt;-</span> <span class="st">"the Hertie Coding Club"</span></span>
+<span><span class="va">z</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/paste.html">paste</a></span><span class="op">(</span><span class="va">x</span>, <span class="va">y</span>, sep <span class="op">=</span> <span class="st">": "</span><span class="op">)</span></span>
+<span></span>
+<span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/class.html">class</a></span><span class="op">(</span><span class="va">z</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "character"</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>z</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">z</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "Welcome to: the Hertie Coding Club"</code></pre>
 </div>
 </div>
 <p>&nbsp;</p>
-</section>
-</section>
-<section id="vectors" class="level1">
-<h1>Vectors</h1>
+</section></section><section id="vectors" class="level1"><h1>Vectors</h1>
 <hr>
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="images/vector.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img src="images/vector.png" class="img-fluid figure-img" width="300"></a></p>
+<figure class="figure"><p><a href="images/vector.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img src="images/vector.png" class="img-fluid figure-img" width="300"></a></p>
 </figure>
 </div>
 <p>Vectors are one-dimensional arrays of data that contain elements of the same data type, such as numbers or characters. They are a fundamental building block in R and are used extensively in data analysis and statistical computing.</p>
@@ -644,143 +602,123 @@ Tip
 <p>&nbsp;</p>
 <p>In R, you can assign a name to an object using the assignment operator “&lt;-” or the equal sign “=”. Here are multiple way to assign a name to an object.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="dv">2</span></span>
-<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>x <span class="ot">=</span> <span class="dv">2</span></span>
-<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a><span class="fu">assign</span>(<span class="st">"x"</span>, <span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb10"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">x</span> <span class="op">&lt;-</span> <span class="fl">2</span></span>
+<span></span>
+<span><span class="va">x</span> <span class="op">=</span> <span class="fl">2</span></span>
+<span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/assign.html">assign</a></span><span class="op">(</span><span class="st">"x"</span>, <span class="fl">2</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>&nbsp;</p>
-<section id="create-a-numeric-vector" class="level2">
-<h2 class="anchored" data-anchor-id="create-a-numeric-vector">Create a numeric vector</h2>
+<section id="create-a-numeric-vector" class="level2"><h2 class="anchored" data-anchor-id="create-a-numeric-vector">Create a numeric vector</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>)</span>
-<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>x</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb11"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">x</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fl">2</span>, <span class="fl">3</span>, <span class="fl">4</span>, <span class="fl">5</span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">x</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 1 2 3 4 5</code></pre>
 </div>
 </div>
 <p>&nbsp;</p>
-</section>
-<section id="access-elements-of-a-vector" class="level2">
-<h2 class="anchored" data-anchor-id="access-elements-of-a-vector">Access elements of a vector</h2>
+</section><section id="access-elements-of-a-vector" class="level2"><h2 class="anchored" data-anchor-id="access-elements-of-a-vector">Access elements of a vector</h2>
 <p>Returns the second element of x, which is 2</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>x[<span class="dv">2</span>] </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb13"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">x</span><span class="op">[</span><span class="fl">2</span><span class="op">]</span> </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 2</code></pre>
 </div>
 </div>
 <p>&nbsp;</p>
-</section>
-<section id="perform-arithmetic-operations" class="level2">
-<h2 class="anchored" data-anchor-id="perform-arithmetic-operations">Perform arithmetic operations</h2>
+</section><section id="perform-arithmetic-operations" class="level2"><h2 class="anchored" data-anchor-id="perform-arithmetic-operations">Perform arithmetic operations</h2>
 <p>Adds 2 to each element of x, resulting in the vector c(3, 4, 5, 6, 7)</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>x <span class="sc">+</span> <span class="dv">2</span> </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb15"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">x</span> <span class="op">+</span> <span class="fl">2</span> </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 3 4 5 6 7</code></pre>
 </div>
 </div>
 <p>&nbsp;</p>
-</section>
-<section id="find-the-length-of-a-vector" class="level2">
-<h2 class="anchored" data-anchor-id="find-the-length-of-a-vector">Find the length of a vector:</h2>
+</section><section id="find-the-length-of-a-vector" class="level2"><h2 class="anchored" data-anchor-id="find-the-length-of-a-vector">Find the length of a vector:</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="fu">length</span>(x) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb17"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/length.html">length</a></span><span class="op">(</span><span class="va">x</span><span class="op">)</span> </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 5</code></pre>
 </div>
 </div>
 <p>&nbsp;</p>
-</section>
-<section id="modify-a-vector" class="level2">
-<h2 class="anchored" data-anchor-id="modify-a-vector">Modify a vector</h2>
+</section><section id="modify-a-vector" class="level2"><h2 class="anchored" data-anchor-id="modify-a-vector">Modify a vector</h2>
 <p>Changes the third element of x to 10</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>x[<span class="dv">3</span>] <span class="ot">&lt;-</span> <span class="dv">10</span></span>
-<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>x</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb19"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">x</span><span class="op">[</span><span class="fl">3</span><span class="op">]</span> <span class="op">&lt;-</span> <span class="fl">10</span></span>
+<span></span>
+<span><span class="va">x</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1]  1  2 10  4  5</code></pre>
 </div>
 </div>
 <p>&nbsp;</p>
-</section>
-<section id="apply-functions-to-a-vector" class="level2">
-<h2 class="anchored" data-anchor-id="apply-functions-to-a-vector">Apply functions to a vector</h2>
+</section><section id="apply-functions-to-a-vector" class="level2"><h2 class="anchored" data-anchor-id="apply-functions-to-a-vector">Apply functions to a vector</h2>
 <p>Returns the sum of the elements in x, which is 22</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sum</span>(x) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb21"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/sum.html">sum</a></span><span class="op">(</span><span class="va">x</span><span class="op">)</span> </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 22</code></pre>
 </div>
 </div>
 <p>Returns the mean (average) of the elements in x, which is 4.4</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(x)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb23"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/mean.html">mean</a></span><span class="op">(</span><span class="va">x</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 4.4</code></pre>
 </div>
 </div>
 <p>Returns the maximum value in x, which is 10</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="fu">max</span>(x)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb25"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/Extremes.html">max</a></span><span class="op">(</span><span class="va">x</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 10</code></pre>
 </div>
 </div>
 <p>Returns the minimum value in x, which is 1</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="fu">min</span>(x)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb27"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/Extremes.html">min</a></span><span class="op">(</span><span class="va">x</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 1</code></pre>
 </div>
 </div>
 <p>&nbsp;</p>
 <p>In addition to numeric values, you can put a wide variety of other data types in a vector in R. Here are some examples:</p>
-</section>
-<section id="character-values-1" class="level2">
-<h2 class="anchored" data-anchor-id="character-values-1">Character values</h2>
+</section><section id="character-values-1" class="level2"><h2 class="anchored" data-anchor-id="character-values-1">Character values</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a>names <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"Hertie School"</span>, <span class="st">"Berlin"</span>, <span class="st">"Public Policy"</span>)</span>
-<span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb29-3"><a href="#cb29-3" aria-hidden="true" tabindex="-1"></a>names</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb29"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">names</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"Hertie School"</span>, <span class="st">"Berlin"</span>, <span class="st">"Public Policy"</span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">names</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "Hertie School" "Berlin"        "Public Policy"</code></pre>
 </div>
 </div>
 <p>&nbsp;</p>
-</section>
-<section id="logical-values" class="level2">
-<h2 class="anchored" data-anchor-id="logical-values">Logical values</h2>
+</section><section id="logical-values" class="level2"><h2 class="anchored" data-anchor-id="logical-values">Logical values</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a>flags <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="cn">TRUE</span>, <span class="cn">FALSE</span>, <span class="cn">TRUE</span>)</span>
-<span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb31-3"><a href="#cb31-3" aria-hidden="true" tabindex="-1"></a>flags</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb31"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">flags</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="cn">TRUE</span>, <span class="cn">FALSE</span>, <span class="cn">TRUE</span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">flags</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1]  TRUE FALSE  TRUE</code></pre>
 </div>
 </div>
 <p>&nbsp;</p>
-</section>
-<section id="times" class="level2">
-<h2 class="anchored" data-anchor-id="times">Times:</h2>
+</section><section id="times" class="level2"><h2 class="anchored" data-anchor-id="times">Times:</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a>times <span class="ot">&lt;-</span> <span class="fu">as.POSIXct</span>(<span class="fu">c</span>(<span class="st">"2022-01-01 10:00:00"</span>, <span class="st">"2022-01-01 11:00:00"</span>, <span class="st">"2022-01-01 12:00:00"</span>))</span>
-<span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb33-3"><a href="#cb33-3" aria-hidden="true" tabindex="-1"></a>times</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb33"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">times</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/as.POSIXlt.html">as.POSIXct</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"2022-01-01 10:00:00"</span>, <span class="st">"2022-01-01 11:00:00"</span>, <span class="st">"2022-01-01 12:00:00"</span><span class="op">)</span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">times</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "2022-01-01 10:00:00 EET" "2022-01-01 11:00:00 EET"
 [3] "2022-01-01 12:00:00 EET"</code></pre>
 </div>
 </div>
 <p>&nbsp;</p>
-</section>
-</section>
-<section id="exercises" class="level1">
-<h1>Exercises</h1>
+</section></section><section id="exercises" class="level1"><h1>Exercises</h1>
 <hr>
 <p>1.-Create a numeric vector x with values 1 through 10. Then, calculate the sum of the first 5 elements of x.</p>
 <button class="btn btn-default btn-webr" disabled="" type="button" id="webr-run-button-1">Loading webR...</button>
@@ -857,17 +795,13 @@ Tip
       runButton.disabled = false;
     }
   }
-</script>
-
-<p><strong>Answer</strong></p>
+</script><p><strong>Answer</strong></p>
 <div class="cell">
-<details>
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a numeric vector containing the numbers 1 through 10</span></span>
-<span id="cb35-2"><a href="#cb35-2" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">10</span></span>
-<span id="cb35-3"><a href="#cb35-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-4"><a href="#cb35-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Find the sum of the first five elements of the vector x using indexing</span></span>
-<span id="cb35-5"><a href="#cb35-5" aria-hidden="true" tabindex="-1"></a><span class="fu">sum</span>(x[<span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<details><summary>Code</summary><div class="sourceCode" id="cb35"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># Create a numeric vector containing the numbers 1 through 10</span></span>
+<span><span class="va">x</span> <span class="op">&lt;-</span> <span class="fl">1</span><span class="op">:</span><span class="fl">10</span></span>
+<span></span>
+<span><span class="co"># Find the sum of the first five elements of the vector x using indexing</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/sum.html">sum</a></span><span class="op">(</span><span class="va">x</span><span class="op">[</span><span class="fl">1</span><span class="op">:</span><span class="fl">5</span><span class="op">]</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 <hr>
@@ -946,17 +880,13 @@ Tip
       runButton.disabled = false;
     }
   }
-</script>
-
-<p><strong>Answer</strong></p>
+</script><p><strong>Answer</strong></p>
 <div class="cell">
-<details>
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb36"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a character vector containing the names "pizza", "tacos", and "soup"</span></span>
-<span id="cb36-2"><a href="#cb36-2" aria-hidden="true" tabindex="-1"></a>names <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"pizza"</span>, <span class="st">"tacos"</span>, <span class="st">"soup"</span>)</span>
-<span id="cb36-3"><a href="#cb36-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb36-4"><a href="#cb36-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Extract the second element of the vector using indexing</span></span>
-<span id="cb36-5"><a href="#cb36-5" aria-hidden="true" tabindex="-1"></a>names[<span class="dv">2</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<details><summary>Code</summary><div class="sourceCode" id="cb36"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># Create a character vector containing the names "pizza", "tacos", and "soup"</span></span>
+<span><span class="va">names</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"pizza"</span>, <span class="st">"tacos"</span>, <span class="st">"soup"</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># Extract the second element of the vector using indexing</span></span>
+<span><span class="va">names</span><span class="op">[</span><span class="fl">2</span><span class="op">]</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 <hr>
@@ -1035,30 +965,24 @@ Tip
       runButton.disabled = false;
     }
   }
-</script>
-
-<p><strong>Answer</strong></p>
+</script><p><strong>Answer</strong></p>
 <div class="cell">
-<details>
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb37"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a><span class="co"># create a logical vector containing the values TRUE, FALSE, TRUE, and TRUE</span></span>
-<span id="cb37-2"><a href="#cb37-2" aria-hidden="true" tabindex="-1"></a>flags <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="cn">TRUE</span>, <span class="cn">FALSE</span>, <span class="cn">TRUE</span>, <span class="cn">TRUE</span>)</span>
-<span id="cb37-3"><a href="#cb37-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb37-4"><a href="#cb37-4" aria-hidden="true" tabindex="-1"></a><span class="co"># use the which() function to find the indices of the TRUE values in the vector</span></span>
-<span id="cb37-5"><a href="#cb37-5" aria-hidden="true" tabindex="-1"></a><span class="fu">which</span>(flags)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<details><summary>Code</summary><div class="sourceCode" id="cb37"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># create a logical vector containing the values TRUE, FALSE, TRUE, and TRUE</span></span>
+<span><span class="va">flags</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="cn">TRUE</span>, <span class="cn">FALSE</span>, <span class="cn">TRUE</span>, <span class="cn">TRUE</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># use the which() function to find the indices of the TRUE values in the vector</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/which.html">which</a></span><span class="op">(</span><span class="va">flags</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 <hr>
 <p>4.-Create a date vector dates with the dates “2022-01-01”, “2022-02-01”, “2022-03-01”, “2022-04-01”, “2022-05-01”. Then, use the month() function to extract the month of the second date in dates.</p>
 <p><strong>Answer</strong></p>
 <div class="cell">
-<details>
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb38"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a Date vector containing five dates using the as.Date() function</span></span>
-<span id="cb38-2"><a href="#cb38-2" aria-hidden="true" tabindex="-1"></a>dates <span class="ot">&lt;-</span> <span class="fu">as.Date</span>(<span class="fu">c</span>(<span class="st">"2022-01-01"</span>, <span class="st">"2022-02-01"</span>, <span class="st">"2022-03-01"</span>, <span class="st">"2022-04-01"</span>, <span class="st">"2022-05-01"</span>))</span>
-<span id="cb38-3"><a href="#cb38-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb38-4"><a href="#cb38-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Extract the second element of the vector using indexing and find its month using the month() function</span></span>
-<span id="cb38-5"><a href="#cb38-5" aria-hidden="true" tabindex="-1"></a><span class="fu">month</span>(dates[<span class="dv">2</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<details><summary>Code</summary><div class="sourceCode" id="cb38"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># Create a Date vector containing five dates using the as.Date() function</span></span>
+<span><span class="va">dates</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/as.Date.html">as.Date</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"2022-01-01"</span>, <span class="st">"2022-02-01"</span>, <span class="st">"2022-03-01"</span>, <span class="st">"2022-04-01"</span>, <span class="st">"2022-05-01"</span><span class="op">)</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># Extract the second element of the vector using indexing and find its month using the month() function</span></span>
+<span><span class="fu">month</span><span class="op">(</span><span class="va">dates</span><span class="op">[</span><span class="fl">2</span><span class="op">]</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 <hr>
@@ -1137,40 +1061,32 @@ Tip
       runButton.disabled = false;
     }
   }
-</script>
-
-<p><strong>Answer</strong></p>
+</script><p><strong>Answer</strong></p>
 <div class="cell">
-<details>
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb39"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create two numeric vectors containing </span></span>
-<span id="cb39-2"><a href="#cb39-2" aria-hidden="true" tabindex="-1"></a><span class="co"># the numbers 1 through 5 and 6 through 10, respectively</span></span>
-<span id="cb39-3"><a href="#cb39-3" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>)</span>
-<span id="cb39-4"><a href="#cb39-4" aria-hidden="true" tabindex="-1"></a>y <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">6</span><span class="sc">:</span><span class="dv">10</span>)</span>
-<span id="cb39-5"><a href="#cb39-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb39-6"><a href="#cb39-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Concatenate the two vectors to create a </span></span>
-<span id="cb39-7"><a href="#cb39-7" aria-hidden="true" tabindex="-1"></a><span class="co"># new vector called z using the c() function</span></span>
-<span id="cb39-8"><a href="#cb39-8" aria-hidden="true" tabindex="-1"></a>z <span class="ot">&lt;-</span> <span class="fu">c</span>(x, y)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<details><summary>Code</summary><div class="sourceCode" id="cb39"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># Create two numeric vectors containing </span></span>
+<span><span class="co"># the numbers 1 through 5 and 6 through 10, respectively</span></span>
+<span><span class="va">x</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">1</span><span class="op">:</span><span class="fl">5</span><span class="op">)</span></span>
+<span><span class="va">y</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">6</span><span class="op">:</span><span class="fl">10</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># Concatenate the two vectors to create a </span></span>
+<span><span class="co"># new vector called z using the c() function</span></span>
+<span><span class="va">z</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="va">x</span>, <span class="va">y</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 <p>&nbsp;</p>
-</section>
-<section id="lists" class="level1">
-<h1>Lists</h1>
+</section><section id="lists" class="level1"><h1>Lists</h1>
 <hr>
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="images/list.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4"><img src="images/list.png" class="img-fluid figure-img" width="300"></a></p>
+<figure class="figure"><p><a href="images/list.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4"><img src="images/list.png" class="img-fluid figure-img" width="300"></a></p>
 </figure>
 </div>
 <p>A list allow you to store multiple objects of different types. Lists are similar to vectors in that they can store multiple elements, but unlike vectors, the elements of a list can be of different types, such as numeric, character, or even other lists. Each element of a list can be named, allowing you to access and manipulate specific elements of the list by name.</p>
 <p>Lists are handy since they can allow you to store different outputs simultaneously. For example, when you are running models, the results are stored in lists and you can access to them by specifying <code>[[]]</code> and the name of the list inside of the squared brackets.</p>
-<section id="a-list-with-different-type-of-vectors" class="level2">
-<h2 class="anchored" data-anchor-id="a-list-with-different-type-of-vectors">A list with different type of vectors</h2>
+<section id="a-list-with-different-type-of-vectors" class="level2"><h2 class="anchored" data-anchor-id="a-list-with-different-type-of-vectors">A list with different type of vectors</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb40"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a>my_list <span class="ot">&lt;-</span> <span class="fu">list</span>(<span class="at">numbers =</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>), <span class="at">names =</span> <span class="fu">c</span>(<span class="st">"Alejandro"</span>, <span class="st">"Eduardo"</span>, <span class="st">"Fernanda"</span>), <span class="at">statement =</span> <span class="fu">c</span>(<span class="cn">TRUE</span>, <span class="cn">FALSE</span>, <span class="cn">TRUE</span>))</span>
-<span id="cb40-2"><a href="#cb40-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb40-3"><a href="#cb40-3" aria-hidden="true" tabindex="-1"></a>my_list</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb40"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">my_list</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span><span class="op">(</span>numbers <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fl">2</span>, <span class="fl">3</span><span class="op">)</span>, names <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"Alejandro"</span>, <span class="st">"Eduardo"</span>, <span class="st">"Fernanda"</span><span class="op">)</span>, statement <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="cn">TRUE</span>, <span class="cn">FALSE</span>, <span class="cn">TRUE</span><span class="op">)</span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">my_list</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>$numbers
 [1] 1 2 3
@@ -1182,39 +1098,35 @@ $statement
 [1]  TRUE FALSE  TRUE</code></pre>
 </div>
 </div>
-</section>
-<section id="access-an-element-of-the-list-using-indexing" class="level2">
-<h2 class="anchored" data-anchor-id="access-an-element-of-the-list-using-indexing">Access an element of the list using indexing</h2>
+</section><section id="access-an-element-of-the-list-using-indexing" class="level2"><h2 class="anchored" data-anchor-id="access-an-element-of-the-list-using-indexing">Access an element of the list using indexing</h2>
 <p>We can access an element of the list using indexing, which is really useful when you are doing functions and storing results or calling them.</p>
 <p>Here this returns the second element of my_list, which is the character vector “names”</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb42"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a>my_list[[<span class="dv">2</span>]]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb42"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">my_list</span><span class="op">[[</span><span class="fl">2</span><span class="op">]</span><span class="op">]</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "Alejandro" "Eduardo"   "Fernanda" </code></pre>
 </div>
 </div>
 <p>or also we can access an element of the list using named indexing:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb44"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a>my_list[[<span class="st">"names"</span>]]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb44"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">my_list</span><span class="op">[[</span><span class="st">"names"</span><span class="op">]</span><span class="op">]</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "Alejandro" "Eduardo"   "Fernanda" </code></pre>
 </div>
 </div>
-</section>
-<section id="add-a-new-element-to-the-list" class="level2">
-<h2 class="anchored" data-anchor-id="add-a-new-element-to-the-list">Add a new element to the list:</h2>
+</section><section id="add-a-new-element-to-the-list" class="level2"><h2 class="anchored" data-anchor-id="add-a-new-element-to-the-list">Add a new element to the list:</h2>
 <p>Adds a new numeric vector “ages” to my_list</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb46"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a>my_list[[<span class="st">"ages"</span>]] <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">25</span>, <span class="dv">30</span>, <span class="dv">35</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb46"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">my_list</span><span class="op">[[</span><span class="st">"ages"</span><span class="op">]</span><span class="op">]</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">25</span>, <span class="fl">30</span>, <span class="fl">35</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>We can do the same even with a dataframe inside a list</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb47"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb47-1"><a href="#cb47-1" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">name =</span> <span class="fu">c</span>(<span class="st">"Alejandro"</span>, <span class="st">"Eduardo"</span>, <span class="st">"Marifer"</span>), </span>
-<span id="cb47-2"><a href="#cb47-2" aria-hidden="true" tabindex="-1"></a>                 <span class="at">age =</span> <span class="fu">c</span>(<span class="dv">30</span>, <span class="dv">27</span>, <span class="dv">17</span>)) <span class="co"># Create the dataframe</span></span>
-<span id="cb47-3"><a href="#cb47-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb47-4"><a href="#cb47-4" aria-hidden="true" tabindex="-1"></a>my_list[[<span class="st">"my_df"</span>]] <span class="ot">&lt;-</span> df</span>
-<span id="cb47-5"><a href="#cb47-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb47-6"><a href="#cb47-6" aria-hidden="true" tabindex="-1"></a>my_list</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb47"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">df</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html">data.frame</a></span><span class="op">(</span>name <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"Alejandro"</span>, <span class="st">"Eduardo"</span>, <span class="st">"Marifer"</span><span class="op">)</span>, </span>
+<span>                 age <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">30</span>, <span class="fl">27</span>, <span class="fl">17</span><span class="op">)</span><span class="op">)</span> <span class="co"># Create the dataframe</span></span>
+<span></span>
+<span><span class="va">my_list</span><span class="op">[[</span><span class="st">"my_df"</span><span class="op">]</span><span class="op">]</span> <span class="op">&lt;-</span> <span class="va">df</span></span>
+<span></span>
+<span><span class="va">my_list</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>$numbers
 [1] 1 2 3
@@ -1235,13 +1147,11 @@ $my_df
 3   Marifer  17</code></pre>
 </div>
 </div>
-</section>
-<section id="create-a-nested-list-with-two-elements" class="level2">
-<h2 class="anchored" data-anchor-id="create-a-nested-list-with-two-elements">Create a nested list with two elements:</h2>
+</section><section id="create-a-nested-list-with-two-elements" class="level2"><h2 class="anchored" data-anchor-id="create-a-nested-list-with-two-elements">Create a nested list with two elements:</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb49"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb49-1"><a href="#cb49-1" aria-hidden="true" tabindex="-1"></a>nested_list <span class="ot">&lt;-</span> <span class="fu">list</span>(<span class="at">numbers =</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>), <span class="at">list_2 =</span> <span class="fu">list</span>(<span class="at">letter =</span> <span class="st">"A"</span>, <span class="at">number =</span> <span class="dv">42</span>))</span>
-<span id="cb49-2"><a href="#cb49-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb49-3"><a href="#cb49-3" aria-hidden="true" tabindex="-1"></a>nested_list</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb49"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">nested_list</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span><span class="op">(</span>numbers <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fl">2</span>, <span class="fl">3</span><span class="op">)</span>, list_2 <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span><span class="op">(</span>letter <span class="op">=</span> <span class="st">"A"</span>, number <span class="op">=</span> <span class="fl">42</span><span class="op">)</span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">nested_list</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>$numbers
 [1] 1 2 3
@@ -1256,16 +1166,13 @@ $list_2$number
 </div>
 <p>For access a nested element of the list:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb51"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb51-1"><a href="#cb51-1" aria-hidden="true" tabindex="-1"></a>nested_list[[<span class="st">"list_2"</span>]][[<span class="st">"number"</span>]]  </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb51"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">nested_list</span><span class="op">[[</span><span class="st">"list_2"</span><span class="op">]</span><span class="op">]</span><span class="op">[[</span><span class="st">"number"</span><span class="op">]</span><span class="op">]</span>  </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 42</code></pre>
 </div>
 </div>
 <p>As you can see, we can access the outputs of the list we want. This is useful since you can apply functions to retrieve your data from a nested list or access to a specific output of your model, for example.</p>
-</section>
-</section>
-<section id="exercises-1" class="level1">
-<h1>Exercises</h1>
+</section></section><section id="exercises-1" class="level1"><h1>Exercises</h1>
 <hr>
 <p>1.-Create a list with three elements: a numeric vector, a character vector, and a logical vector. Then, add a new element to the list containing a data frame with three columns: “name”, “age”, and “gender”.</p>
 <button class="btn btn-default btn-webr" disabled="" type="button" id="webr-run-button-5">Loading webR...</button>
@@ -1342,26 +1249,22 @@ $list_2$number
       runButton.disabled = false;
     }
   }
-</script>
-
-<p><strong>Answer</strong></p>
+</script><p><strong>Answer</strong></p>
 <div class="cell">
-<details>
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb53"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb53-1"><a href="#cb53-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a list with three elements: </span></span>
-<span id="cb53-2"><a href="#cb53-2" aria-hidden="true" tabindex="-1"></a><span class="co"># a numeric vector, a character vector, and a logical vector</span></span>
-<span id="cb53-3"><a href="#cb53-3" aria-hidden="true" tabindex="-1"></a>l_exercise1 <span class="ot">&lt;-</span> <span class="fu">list</span>(<span class="at">numbers =</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>), </span>
-<span id="cb53-4"><a href="#cb53-4" aria-hidden="true" tabindex="-1"></a>                    <span class="at">names =</span> <span class="fu">c</span>(<span class="st">"Alice"</span>, <span class="st">"Bob"</span>, <span class="st">"Charlie"</span>), </span>
-<span id="cb53-5"><a href="#cb53-5" aria-hidden="true" tabindex="-1"></a>                    <span class="at">logical =</span> <span class="fu">c</span>(<span class="cn">TRUE</span>, <span class="cn">FALSE</span>, <span class="cn">TRUE</span>))</span>
-<span id="cb53-6"><a href="#cb53-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb53-7"><a href="#cb53-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a data frame with three columns</span></span>
-<span id="cb53-8"><a href="#cb53-8" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">name =</span> <span class="fu">c</span>(<span class="st">"Alice"</span>, <span class="st">"Bob"</span>, <span class="st">"Charlie"</span>), </span>
-<span id="cb53-9"><a href="#cb53-9" aria-hidden="true" tabindex="-1"></a>                 <span class="at">age =</span> <span class="fu">c</span>(<span class="dv">25</span>, <span class="dv">30</span>, <span class="dv">35</span>), </span>
-<span id="cb53-10"><a href="#cb53-10" aria-hidden="true" tabindex="-1"></a>                 <span class="at">gender =</span> <span class="fu">c</span>(<span class="st">"F"</span>, <span class="st">"M"</span>, <span class="st">"M"</span>))</span>
-<span id="cb53-11"><a href="#cb53-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb53-12"><a href="#cb53-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Add the data frame as a fourth element </span></span>
-<span id="cb53-13"><a href="#cb53-13" aria-hidden="true" tabindex="-1"></a><span class="co"># to the list using the [[]] operator</span></span>
-<span id="cb53-14"><a href="#cb53-14" aria-hidden="true" tabindex="-1"></a>l_exercise1[[<span class="st">"df"</span>]] <span class="ot">&lt;-</span> df</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<details><summary>Code</summary><div class="sourceCode" id="cb53"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># Create a list with three elements: </span></span>
+<span><span class="co"># a numeric vector, a character vector, and a logical vector</span></span>
+<span><span class="va">l_exercise1</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span><span class="op">(</span>numbers <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fl">2</span>, <span class="fl">3</span><span class="op">)</span>, </span>
+<span>                    names <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"Alice"</span>, <span class="st">"Bob"</span>, <span class="st">"Charlie"</span><span class="op">)</span>, </span>
+<span>                    logical <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="cn">TRUE</span>, <span class="cn">FALSE</span>, <span class="cn">TRUE</span><span class="op">)</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># Create a data frame with three columns</span></span>
+<span><span class="va">df</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html">data.frame</a></span><span class="op">(</span>name <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"Alice"</span>, <span class="st">"Bob"</span>, <span class="st">"Charlie"</span><span class="op">)</span>, </span>
+<span>                 age <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">25</span>, <span class="fl">30</span>, <span class="fl">35</span><span class="op">)</span>, </span>
+<span>                 gender <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"F"</span>, <span class="st">"M"</span>, <span class="st">"M"</span><span class="op">)</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># Add the data frame as a fourth element </span></span>
+<span><span class="co"># to the list using the [[]] operator</span></span>
+<span><span class="va">l_exercise1</span><span class="op">[[</span><span class="st">"df"</span><span class="op">]</span><span class="op">]</span> <span class="op">&lt;-</span> <span class="va">df</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 <hr>
@@ -1440,18 +1343,14 @@ $list_2$number
       runButton.disabled = false;
     }
   }
-</script>
-
-<p><strong>Answer</strong></p>
+</script><p><strong>Answer</strong></p>
 <div class="cell">
-<details>
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb54"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb54-1"><a href="#cb54-1" aria-hidden="true" tabindex="-1"></a><span class="co"># The first element is a character vector containing the names of three countries</span></span>
-<span id="cb54-2"><a href="#cb54-2" aria-hidden="true" tabindex="-1"></a><span class="co"># The second element is a list containing two named vectors: population and area</span></span>
-<span id="cb54-3"><a href="#cb54-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb54-4"><a href="#cb54-4" aria-hidden="true" tabindex="-1"></a>l_exercise2 <span class="ot">&lt;-</span> <span class="fu">list</span>(<span class="at">countries =</span> <span class="fu">c</span>(<span class="st">"USA"</span>, <span class="st">"China"</span>, <span class="st">"India"</span>), </span>
-<span id="cb54-5"><a href="#cb54-5" aria-hidden="true" tabindex="-1"></a>                    <span class="at">data =</span> <span class="fu">list</span>(<span class="at">population =</span> <span class="fu">c</span>(<span class="dv">328</span>, <span class="dv">1394</span>, <span class="dv">1380</span>), </span>
-<span id="cb54-6"><a href="#cb54-6" aria-hidden="true" tabindex="-1"></a>                                <span class="at">area =</span> <span class="fu">c</span>(<span class="fl">9.8</span>, <span class="fl">9.6</span>, <span class="fl">3.3</span>)))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<details><summary>Code</summary><div class="sourceCode" id="cb54"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># The first element is a character vector containing the names of three countries</span></span>
+<span><span class="co"># The second element is a list containing two named vectors: population and area</span></span>
+<span></span>
+<span><span class="va">l_exercise2</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span><span class="op">(</span>countries <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"USA"</span>, <span class="st">"China"</span>, <span class="st">"India"</span><span class="op">)</span>, </span>
+<span>                    data <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span><span class="op">(</span>population <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">328</span>, <span class="fl">1394</span>, <span class="fl">1380</span><span class="op">)</span>, </span>
+<span>                                area <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">9.8</span>, <span class="fl">9.6</span>, <span class="fl">3.3</span><span class="op">)</span><span class="op">)</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 <hr>
@@ -1530,24 +1429,20 @@ $list_2$number
       runButton.disabled = false;
     }
   }
-</script>
-
-<p><strong>Answer</strong></p>
+</script><p><strong>Answer</strong></p>
 <div class="cell">
-<details>
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb55"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb55-1"><a href="#cb55-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a list with four elements: two numeric vectors, a character vector, and a data frame</span></span>
-<span id="cb55-2"><a href="#cb55-2" aria-hidden="true" tabindex="-1"></a>l_exercise3 <span class="ot">&lt;-</span> <span class="fu">list</span>(<span class="at">x =</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>), <span class="at">y =</span> <span class="fu">c</span>(<span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>), </span>
-<span id="cb55-3"><a href="#cb55-3" aria-hidden="true" tabindex="-1"></a>                    <span class="at">names =</span> <span class="fu">c</span>(<span class="st">"Guillermo"</span>, <span class="st">"Alonso"</span>, <span class="st">"Chivo"</span>), </span>
-<span id="cb55-4"><a href="#cb55-4" aria-hidden="true" tabindex="-1"></a>                    <span class="at">df =</span> <span class="fu">data.frame</span>(<span class="at">name =</span> <span class="fu">c</span>(<span class="st">"Guillermo"</span>, <span class="st">"Alonso"</span>, <span class="st">"Chivo"</span>), </span>
-<span id="cb55-5"><a href="#cb55-5" aria-hidden="true" tabindex="-1"></a>                                    <span class="at">age =</span> <span class="fu">c</span>(<span class="dv">25</span>, <span class="dv">21</span>, <span class="dv">45</span>), </span>
-<span id="cb55-6"><a href="#cb55-6" aria-hidden="true" tabindex="-1"></a>                                    <span class="at">gender =</span> <span class="fu">c</span>(<span class="st">"M"</span>, <span class="st">"M"</span>, <span class="st">"M"</span>)))</span>
-<span id="cb55-7"><a href="#cb55-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb55-8"><a href="#cb55-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Extract the second element of the names vector using the [[]] operator</span></span>
-<span id="cb55-9"><a href="#cb55-9" aria-hidden="true" tabindex="-1"></a>l_exercise3[[<span class="st">"names"</span>]][<span class="dv">2</span>]</span>
-<span id="cb55-10"><a href="#cb55-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb55-11"><a href="#cb55-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Extract the third column of the df data frame using the [[]] operator</span></span>
-<span id="cb55-12"><a href="#cb55-12" aria-hidden="true" tabindex="-1"></a>l_exercise3[[<span class="st">"df"</span>]][<span class="dv">3</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<details><summary>Code</summary><div class="sourceCode" id="cb55"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># Create a list with four elements: two numeric vectors, a character vector, and a data frame</span></span>
+<span><span class="va">l_exercise3</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span><span class="op">(</span>x <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fl">2</span>, <span class="fl">3</span><span class="op">)</span>, y <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">4</span>, <span class="fl">5</span>, <span class="fl">6</span><span class="op">)</span>, </span>
+<span>                    names <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"Guillermo"</span>, <span class="st">"Alonso"</span>, <span class="st">"Chivo"</span><span class="op">)</span>, </span>
+<span>                    df <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html">data.frame</a></span><span class="op">(</span>name <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"Guillermo"</span>, <span class="st">"Alonso"</span>, <span class="st">"Chivo"</span><span class="op">)</span>, </span>
+<span>                                    age <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">25</span>, <span class="fl">21</span>, <span class="fl">45</span><span class="op">)</span>, </span>
+<span>                                    gender <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"M"</span>, <span class="st">"M"</span>, <span class="st">"M"</span><span class="op">)</span><span class="op">)</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># Extract the second element of the names vector using the [[]] operator</span></span>
+<span><span class="va">l_exercise3</span><span class="op">[[</span><span class="st">"names"</span><span class="op">]</span><span class="op">]</span><span class="op">[</span><span class="fl">2</span><span class="op">]</span></span>
+<span></span>
+<span><span class="co"># Extract the third column of the df data frame using the [[]] operator</span></span>
+<span><span class="va">l_exercise3</span><span class="op">[[</span><span class="st">"df"</span><span class="op">]</span><span class="op">]</span><span class="op">[</span><span class="fl">3</span><span class="op">]</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 <hr>
@@ -1626,20 +1521,16 @@ $list_2$number
       runButton.disabled = false;
     }
   }
-</script>
-
-<p><strong>Answer</strong></p>
+</script><p><strong>Answer</strong></p>
 <div class="cell">
-<details>
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb56"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb56-1"><a href="#cb56-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a list with two elements: a numeric vector and a data frame</span></span>
-<span id="cb56-2"><a href="#cb56-2" aria-hidden="true" tabindex="-1"></a>my_list <span class="ot">&lt;-</span> <span class="fu">list</span>(<span class="at">x =</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>), </span>
-<span id="cb56-3"><a href="#cb56-3" aria-hidden="true" tabindex="-1"></a>                <span class="at">df =</span> <span class="fu">data.frame</span>(<span class="at">name =</span> <span class="fu">c</span>(<span class="st">"Trejo"</span>, <span class="st">"Adame"</span>, <span class="st">"Rose"</span>), </span>
-<span id="cb56-4"><a href="#cb56-4" aria-hidden="true" tabindex="-1"></a>                                <span class="at">age =</span> <span class="fu">c</span>(<span class="dv">25</span>, <span class="dv">30</span>, <span class="dv">35</span>), </span>
-<span id="cb56-5"><a href="#cb56-5" aria-hidden="true" tabindex="-1"></a>                                <span class="at">gender =</span> <span class="fu">c</span>(<span class="st">"M"</span>, <span class="st">"M"</span>, <span class="st">"F"</span>)))</span>
-<span id="cb56-6"><a href="#cb56-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb56-7"><a href="#cb56-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Display the structure of the list using the str() function</span></span>
-<span id="cb56-8"><a href="#cb56-8" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(my_list)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<details><summary>Code</summary><div class="sourceCode" id="cb56"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># Create a list with two elements: a numeric vector and a data frame</span></span>
+<span><span class="va">my_list</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span><span class="op">(</span>x <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fl">2</span>, <span class="fl">3</span><span class="op">)</span>, </span>
+<span>                df <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html">data.frame</a></span><span class="op">(</span>name <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"Trejo"</span>, <span class="st">"Adame"</span>, <span class="st">"Rose"</span><span class="op">)</span>, </span>
+<span>                                age <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">25</span>, <span class="fl">30</span>, <span class="fl">35</span><span class="op">)</span>, </span>
+<span>                                gender <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"M"</span>, <span class="st">"M"</span>, <span class="st">"F"</span><span class="op">)</span><span class="op">)</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># Display the structure of the list using the str() function</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/utils/str.html">str</a></span><span class="op">(</span><span class="va">my_list</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 <hr>
@@ -1718,19 +1609,15 @@ $list_2$number
       runButton.disabled = false;
     }
   }
-</script>
-
-<p><strong>Answer</strong></p>
+</script><p><strong>Answer</strong></p>
 <div class="cell">
-<details>
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb57"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb57-1"><a href="#cb57-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a list with three elements: a numeric vector, a character vector, and a logical vector</span></span>
-<span id="cb57-2"><a href="#cb57-2" aria-hidden="true" tabindex="-1"></a>l_exercise5 <span class="ot">&lt;-</span> <span class="fu">list</span>(<span class="at">numbers =</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>), </span>
-<span id="cb57-3"><a href="#cb57-3" aria-hidden="true" tabindex="-1"></a>                    <span class="at">names =</span> <span class="fu">c</span>(<span class="st">"Mariana"</span>, <span class="st">"Bobby"</span>, <span class="st">"Niurka"</span>, <span class="st">"Ricardo"</span>), </span>
-<span id="cb57-4"><a href="#cb57-4" aria-hidden="true" tabindex="-1"></a>                    <span class="at">logical =</span> <span class="fu">c</span>(<span class="cn">TRUE</span>, <span class="cn">FALSE</span>, <span class="cn">TRUE</span>))</span>
-<span id="cb57-5"><a href="#cb57-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb57-6"><a href="#cb57-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Use the names() function to assign names to the elements of the list</span></span>
-<span id="cb57-7"><a href="#cb57-7" aria-hidden="true" tabindex="-1"></a><span class="fu">names</span>(l_exercise5) <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"num"</span>, <span class="st">"nam"</span>, <span class="st">"log"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<details><summary>Code</summary><div class="sourceCode" id="cb57"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># Create a list with three elements: a numeric vector, a character vector, and a logical vector</span></span>
+<span><span class="va">l_exercise5</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span><span class="op">(</span>numbers <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fl">2</span>, <span class="fl">3</span><span class="op">)</span>, </span>
+<span>                    names <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"Mariana"</span>, <span class="st">"Bobby"</span>, <span class="st">"Niurka"</span>, <span class="st">"Ricardo"</span><span class="op">)</span>, </span>
+<span>                    logical <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="cn">TRUE</span>, <span class="cn">FALSE</span>, <span class="cn">TRUE</span><span class="op">)</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># Use the names() function to assign names to the elements of the list</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/names.html">names</a></span><span class="op">(</span><span class="va">l_exercise5</span><span class="op">)</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"num"</span>, <span class="st">"nam"</span>, <span class="st">"log"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 <hr>
@@ -1809,39 +1696,31 @@ $list_2$number
       runButton.disabled = false;
     }
   }
-</script>
-
-<p><strong>Answer</strong></p>
+</script><p><strong>Answer</strong></p>
 <div class="cell">
-<details>
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb58"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb58-1"><a href="#cb58-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a list with three elements: a numeric vector, a character vector, and a logical vector</span></span>
-<span id="cb58-2"><a href="#cb58-2" aria-hidden="true" tabindex="-1"></a>l_exercise6 <span class="ot">&lt;-</span> <span class="fu">list</span>(<span class="at">numbers =</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>), </span>
-<span id="cb58-3"><a href="#cb58-3" aria-hidden="true" tabindex="-1"></a>                <span class="at">names =</span> <span class="fu">c</span>(<span class="st">"Mariana"</span>, <span class="st">"Bobby"</span>, <span class="st">"Niurka"</span>), </span>
-<span id="cb58-4"><a href="#cb58-4" aria-hidden="true" tabindex="-1"></a>                <span class="at">logical =</span> <span class="fu">c</span>(<span class="cn">TRUE</span>, <span class="cn">FALSE</span>, <span class="cn">TRUE</span>))</span>
-<span id="cb58-5"><a href="#cb58-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb58-6"><a href="#cb58-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Use the length() function to find the length of the "names" vector</span></span>
-<span id="cb58-7"><a href="#cb58-7" aria-hidden="true" tabindex="-1"></a><span class="fu">length</span>(l_exercise6[[<span class="st">"names"</span>]])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<details><summary>Code</summary><div class="sourceCode" id="cb58"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># Create a list with three elements: a numeric vector, a character vector, and a logical vector</span></span>
+<span><span class="va">l_exercise6</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span><span class="op">(</span>numbers <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fl">2</span>, <span class="fl">3</span><span class="op">)</span>, </span>
+<span>                names <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"Mariana"</span>, <span class="st">"Bobby"</span>, <span class="st">"Niurka"</span><span class="op">)</span>, </span>
+<span>                logical <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="cn">TRUE</span>, <span class="cn">FALSE</span>, <span class="cn">TRUE</span><span class="op">)</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># Use the length() function to find the length of the "names" vector</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/length.html">length</a></span><span class="op">(</span><span class="va">l_exercise6</span><span class="op">[[</span><span class="st">"names"</span><span class="op">]</span><span class="op">]</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 <p>&nbsp;</p>
-</section>
-<section id="matrices-and-arrays" class="level1">
-<h1>Matrices and arrays</h1>
+</section><section id="matrices-and-arrays" class="level1"><h1>Matrices and arrays</h1>
 <hr>
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="images/matrix_array.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5"><img src="images/matrix_array.png" class="img-fluid figure-img" width="300"></a></p>
+<figure class="figure"><p><a href="images/matrix_array.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5"><img src="images/matrix_array.png" class="img-fluid figure-img" width="300"></a></p>
 </figure>
 </div>
 <p>A matrix is a two-dimensional data structure that contains a fixed number of rows and columns. As it showed in the image, matrix can have the same functions as a dataframe, but the difference is how you approach to this object. For example, the elements of a matrix must all be of the same data type, such as numeric or character. Matrices are similar to data frames, but they do not have column names or row names. Usually, this ones are used to mathematic operations or modeling. Arrays, on the other hand, can have any number of dimensions, even including two dimensions for matrices. Arrays can contain elements of different data types, and they are useful for storing and manipulating large amounts of data with complex structures.</p>
-<section id="createing-a-matrix" class="level2">
-<h2 class="anchored" data-anchor-id="createing-a-matrix">Createing a matrix</h2>
+<section id="createing-a-matrix" class="level2"><h2 class="anchored" data-anchor-id="createing-a-matrix">Createing a matrix</h2>
 <p>Create a matrix with three rows and four columns:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb59"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb59-1"><a href="#cb59-1" aria-hidden="true" tabindex="-1"></a>m_example <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">12</span>, <span class="at">nrow =</span> <span class="dv">3</span>, <span class="at">ncol =</span> <span class="dv">4</span>)</span>
-<span id="cb59-2"><a href="#cb59-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb59-3"><a href="#cb59-3" aria-hidden="true" tabindex="-1"></a>m_example</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb59"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">m_example</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/matrix.html">matrix</a></span><span class="op">(</span><span class="fl">1</span><span class="op">:</span><span class="fl">12</span>, nrow <span class="op">=</span> <span class="fl">3</span>, ncol <span class="op">=</span> <span class="fl">4</span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">m_example</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>     [,1] [,2] [,3] [,4]
 [1,]    1    4    7   10
@@ -1849,24 +1728,20 @@ $list_2$number
 [3,]    3    6    9   12</code></pre>
 </div>
 </div>
-</section>
-<section id="access-an-element-of-the-matrix-using-indexing" class="level2">
-<h2 class="anchored" data-anchor-id="access-an-element-of-the-matrix-using-indexing">Access an element of the matrix using indexing</h2>
+</section><section id="access-an-element-of-the-matrix-using-indexing" class="level2"><h2 class="anchored" data-anchor-id="access-an-element-of-the-matrix-using-indexing">Access an element of the matrix using indexing</h2>
 <p>Returns the element in the second row and third column of my_matrix, which is 7</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb61"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb61-1"><a href="#cb61-1" aria-hidden="true" tabindex="-1"></a>m_example[<span class="dv">2</span>, <span class="dv">3</span>] </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb61"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">m_example</span><span class="op">[</span><span class="fl">2</span>, <span class="fl">3</span><span class="op">]</span> </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 8</code></pre>
 </div>
 </div>
-</section>
-<section id="modify-an-element-of-the-matrix" class="level2">
-<h2 class="anchored" data-anchor-id="modify-an-element-of-the-matrix">Modify an element of the matrix</h2>
+</section><section id="modify-an-element-of-the-matrix" class="level2"><h2 class="anchored" data-anchor-id="modify-an-element-of-the-matrix">Modify an element of the matrix</h2>
 <p>Changes the element in the first row and fourth column of my_matrix to 20</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb63"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb63-1"><a href="#cb63-1" aria-hidden="true" tabindex="-1"></a>m_example[<span class="dv">1</span>, <span class="dv">4</span>] <span class="ot">&lt;-</span> <span class="dv">20</span>  </span>
-<span id="cb63-2"><a href="#cb63-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb63-3"><a href="#cb63-3" aria-hidden="true" tabindex="-1"></a>m_example</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb63"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">m_example</span><span class="op">[</span><span class="fl">1</span>, <span class="fl">4</span><span class="op">]</span> <span class="op">&lt;-</span> <span class="fl">20</span>  </span>
+<span></span>
+<span><span class="va">m_example</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>     [,1] [,2] [,3] [,4]
 [1,]    1    4    7   20
@@ -1874,13 +1749,11 @@ $list_2$number
 [3,]    3    6    9   12</code></pre>
 </div>
 </div>
-</section>
-<section id="create-an-array-with-three-dimensions" class="level2">
-<h2 class="anchored" data-anchor-id="create-an-array-with-three-dimensions">Create an array with three dimensions</h2>
+</section><section id="create-an-array-with-three-dimensions" class="level2"><h2 class="anchored" data-anchor-id="create-an-array-with-three-dimensions">Create an array with three dimensions</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb65"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb65-1"><a href="#cb65-1" aria-hidden="true" tabindex="-1"></a>arr_example <span class="ot">&lt;-</span> <span class="fu">array</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">24</span>, <span class="at">dim =</span> <span class="fu">c</span>(<span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>))</span>
-<span id="cb65-2"><a href="#cb65-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb65-3"><a href="#cb65-3" aria-hidden="true" tabindex="-1"></a>arr_example</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb65"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">arr_example</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/array.html">array</a></span><span class="op">(</span><span class="fl">1</span><span class="op">:</span><span class="fl">24</span>, dim <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">2</span>, <span class="fl">3</span>, <span class="fl">4</span><span class="op">)</span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">arr_example</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>, , 1
 
@@ -1907,24 +1780,20 @@ $list_2$number
 [2,]   20   22   24</code></pre>
 </div>
 </div>
-</section>
-<section id="access-an-element-of-the-array-using-indexing" class="level2">
-<h2 class="anchored" data-anchor-id="access-an-element-of-the-array-using-indexing">Access an element of the array using indexing</h2>
+</section><section id="access-an-element-of-the-array-using-indexing" class="level2"><h2 class="anchored" data-anchor-id="access-an-element-of-the-array-using-indexing">Access an element of the array using indexing</h2>
 <p>Returns the element in the second row, third column, and fourth layer of my_array, which is 23</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb67"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb67-1"><a href="#cb67-1" aria-hidden="true" tabindex="-1"></a>arr_example[<span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb67"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">arr_example</span><span class="op">[</span><span class="fl">2</span>, <span class="fl">3</span>, <span class="fl">4</span><span class="op">]</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 24</code></pre>
 </div>
 </div>
-</section>
-<section id="modify-an-element-of-the-array" class="level2">
-<h2 class="anchored" data-anchor-id="modify-an-element-of-the-array">Modify an element of the array</h2>
+</section><section id="modify-an-element-of-the-array" class="level2"><h2 class="anchored" data-anchor-id="modify-an-element-of-the-array">Modify an element of the array</h2>
 <p>Changes the element in the second row, second column, and first layer of arr_example to 10</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb69"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb69-1"><a href="#cb69-1" aria-hidden="true" tabindex="-1"></a>arr_example[<span class="dv">2</span>, <span class="dv">2</span>, <span class="dv">1</span>] <span class="ot">&lt;-</span> <span class="dv">10</span> </span>
-<span id="cb69-2"><a href="#cb69-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb69-3"><a href="#cb69-3" aria-hidden="true" tabindex="-1"></a>arr_example</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb69"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">arr_example</span><span class="op">[</span><span class="fl">2</span>, <span class="fl">2</span>, <span class="fl">1</span><span class="op">]</span> <span class="op">&lt;-</span> <span class="fl">10</span> </span>
+<span></span>
+<span><span class="va">arr_example</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>, , 1
 
@@ -1951,10 +1820,7 @@ $list_2$number
 [2,]   20   22   24</code></pre>
 </div>
 </div>
-</section>
-</section>
-<section id="exercises-2" class="level1">
-<h1>Exercises</h1>
+</section></section><section id="exercises-2" class="level1"><h1>Exercises</h1>
 <hr>
 <p>1.-Create a matrix with four rows and three columns, where each element is the square of its row number.</p>
 <button class="btn btn-default btn-webr" disabled="" type="button" id="webr-run-button-11">Loading webR...</button>
@@ -2031,26 +1897,22 @@ $list_2$number
       runButton.disabled = false;
     }
   }
-</script>
-
-<p><strong>Answer</strong></p>
+</script><p><strong>Answer</strong></p>
 <div class="cell">
-<details>
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb71"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb71-1"><a href="#cb71-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a matrix with 4 rows and 3 columns </span></span>
-<span id="cb71-2"><a href="#cb71-2" aria-hidden="true" tabindex="-1"></a><span class="co"># containing the squares of the numbers 1 through 4</span></span>
-<span id="cb71-3"><a href="#cb71-3" aria-hidden="true" tabindex="-1"></a>m_exercise1 <span class="ot">&lt;-</span> <span class="fu">matrix</span>((<span class="dv">1</span><span class="sc">:</span><span class="dv">4</span>)<span class="sc">^</span><span class="dv">2</span>, <span class="at">nrow =</span> <span class="dv">4</span>, <span class="at">ncol =</span> <span class="dv">3</span>)</span>
-<span id="cb71-4"><a href="#cb71-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb71-5"><a href="#cb71-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Display the matrix</span></span>
-<span id="cb71-6"><a href="#cb71-6" aria-hidden="true" tabindex="-1"></a>m_exercise1</span>
-<span id="cb71-7"><a href="#cb71-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb71-8"><a href="#cb71-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Output</span></span>
-<span id="cb71-9"><a href="#cb71-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb71-10"><a href="#cb71-10" aria-hidden="true" tabindex="-1"></a><span class="co">#      [,1] [,2] [,3]</span></span>
-<span id="cb71-11"><a href="#cb71-11" aria-hidden="true" tabindex="-1"></a><span class="co"># [1,]    1    1    1</span></span>
-<span id="cb71-12"><a href="#cb71-12" aria-hidden="true" tabindex="-1"></a><span class="co"># [2,]    4    4    4</span></span>
-<span id="cb71-13"><a href="#cb71-13" aria-hidden="true" tabindex="-1"></a><span class="co"># [3,]    9    9    9</span></span>
-<span id="cb71-14"><a href="#cb71-14" aria-hidden="true" tabindex="-1"></a><span class="co"># [4,]   16   16   16</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<details><summary>Code</summary><div class="sourceCode" id="cb71"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># Create a matrix with 4 rows and 3 columns </span></span>
+<span><span class="co"># containing the squares of the numbers 1 through 4</span></span>
+<span><span class="va">m_exercise1</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/matrix.html">matrix</a></span><span class="op">(</span><span class="op">(</span><span class="fl">1</span><span class="op">:</span><span class="fl">4</span><span class="op">)</span><span class="op">^</span><span class="fl">2</span>, nrow <span class="op">=</span> <span class="fl">4</span>, ncol <span class="op">=</span> <span class="fl">3</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># Display the matrix</span></span>
+<span><span class="va">m_exercise1</span></span>
+<span></span>
+<span><span class="co"># Output</span></span>
+<span></span>
+<span><span class="co">#      [,1] [,2] [,3]</span></span>
+<span><span class="co"># [1,]    1    1    1</span></span>
+<span><span class="co"># [2,]    4    4    4</span></span>
+<span><span class="co"># [3,]    9    9    9</span></span>
+<span><span class="co"># [4,]   16   16   16</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 <hr>
@@ -2129,25 +1991,21 @@ $list_2$number
       runButton.disabled = false;
     }
   }
-</script>
-
-<p><strong>Answer</strong></p>
+</script><p><strong>Answer</strong></p>
 <div class="cell">
-<details>
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb72"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb72-1"><a href="#cb72-1" aria-hidden="true" tabindex="-1"></a>l_exercise2 <span class="ot">&lt;-</span> <span class="fu">list</span>(<span class="at">countries =</span> <span class="fu">c</span>(<span class="st">"USA"</span>, <span class="st">"China"</span>, <span class="st">"India"</span>), </span>
-<span id="cb72-2"><a href="#cb72-2" aria-hidden="true" tabindex="-1"></a>                    <span class="at">data =</span> <span class="fu">list</span>(<span class="at">population =</span> <span class="fu">c</span>(<span class="dv">328</span>, <span class="dv">1394</span>, <span class="dv">1380</span>), </span>
-<span id="cb72-3"><a href="#cb72-3" aria-hidden="true" tabindex="-1"></a>                                <span class="at">area =</span> <span class="fu">c</span>(<span class="fl">9.8</span>, <span class="fl">9.6</span>, <span class="fl">3.3</span>)))</span>
-<span id="cb72-4"><a href="#cb72-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb72-5"><a href="#cb72-5" aria-hidden="true" tabindex="-1"></a><span class="co"># $countries</span></span>
-<span id="cb72-6"><a href="#cb72-6" aria-hidden="true" tabindex="-1"></a><span class="co"># [1] "USA"   "China" "India"</span></span>
-<span id="cb72-7"><a href="#cb72-7" aria-hidden="true" tabindex="-1"></a><span class="co"># </span></span>
-<span id="cb72-8"><a href="#cb72-8" aria-hidden="true" tabindex="-1"></a><span class="co"># $data</span></span>
-<span id="cb72-9"><a href="#cb72-9" aria-hidden="true" tabindex="-1"></a><span class="co"># $data$population</span></span>
-<span id="cb72-10"><a href="#cb72-10" aria-hidden="true" tabindex="-1"></a><span class="co"># [1]  328 1394 1380</span></span>
-<span id="cb72-11"><a href="#cb72-11" aria-hidden="true" tabindex="-1"></a><span class="co"># </span></span>
-<span id="cb72-12"><a href="#cb72-12" aria-hidden="true" tabindex="-1"></a><span class="co"># $data$area</span></span>
-<span id="cb72-13"><a href="#cb72-13" aria-hidden="true" tabindex="-1"></a><span class="co"># [1] 9.8 9.6 3.3</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<details><summary>Code</summary><div class="sourceCode" id="cb72"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">l_exercise2</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span><span class="op">(</span>countries <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"USA"</span>, <span class="st">"China"</span>, <span class="st">"India"</span><span class="op">)</span>, </span>
+<span>                    data <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span><span class="op">(</span>population <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">328</span>, <span class="fl">1394</span>, <span class="fl">1380</span><span class="op">)</span>, </span>
+<span>                                area <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">9.8</span>, <span class="fl">9.6</span>, <span class="fl">3.3</span><span class="op">)</span><span class="op">)</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># $countries</span></span>
+<span><span class="co"># [1] "USA"   "China" "India"</span></span>
+<span><span class="co"># </span></span>
+<span><span class="co"># $data</span></span>
+<span><span class="co"># $data$population</span></span>
+<span><span class="co"># [1]  328 1394 1380</span></span>
+<span><span class="co"># </span></span>
+<span><span class="co"># $data$area</span></span>
+<span><span class="co"># [1] 9.8 9.6 3.3</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 <hr>
@@ -2226,27 +2084,23 @@ $list_2$number
       runButton.disabled = false;
     }
   }
-</script>
-
-<p><strong>Answer</strong></p>
+</script><p><strong>Answer</strong></p>
 <div class="cell">
-<details>
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb73"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb73-1"><a href="#cb73-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a 5 x 2 matrix with random values between 1 and 10</span></span>
-<span id="cb73-2"><a href="#cb73-2" aria-hidden="true" tabindex="-1"></a>m_exercise3 <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="fu">sample</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>, <span class="dv">10</span>), <span class="at">nrow =</span> <span class="dv">5</span>, <span class="at">ncol =</span> <span class="dv">2</span>)</span>
-<span id="cb73-3"><a href="#cb73-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb73-4"><a href="#cb73-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Display the matrix</span></span>
-<span id="cb73-5"><a href="#cb73-5" aria-hidden="true" tabindex="-1"></a>m_exercise3</span>
-<span id="cb73-6"><a href="#cb73-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb73-7"><a href="#cb73-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb73-8"><a href="#cb73-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Output</span></span>
-<span id="cb73-9"><a href="#cb73-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb73-10"><a href="#cb73-10" aria-hidden="true" tabindex="-1"></a><span class="co">#      [,1] [,2]</span></span>
-<span id="cb73-11"><a href="#cb73-11" aria-hidden="true" tabindex="-1"></a><span class="co"># [1,]    3    8</span></span>
-<span id="cb73-12"><a href="#cb73-12" aria-hidden="true" tabindex="-1"></a><span class="co"># [2,]    4    9</span></span>
-<span id="cb73-13"><a href="#cb73-13" aria-hidden="true" tabindex="-1"></a><span class="co"># [3,]    2    7</span></span>
-<span id="cb73-14"><a href="#cb73-14" aria-hidden="true" tabindex="-1"></a><span class="co"># [4,]    6    1</span></span>
-<span id="cb73-15"><a href="#cb73-15" aria-hidden="true" tabindex="-1"></a><span class="co"># [5,]    5   10</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<details><summary>Code</summary><div class="sourceCode" id="cb73"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># Create a 5 x 2 matrix with random values between 1 and 10</span></span>
+<span><span class="va">m_exercise3</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/matrix.html">matrix</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/sample.html">sample</a></span><span class="op">(</span><span class="fl">1</span><span class="op">:</span><span class="fl">10</span>, <span class="fl">10</span><span class="op">)</span>, nrow <span class="op">=</span> <span class="fl">5</span>, ncol <span class="op">=</span> <span class="fl">2</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># Display the matrix</span></span>
+<span><span class="va">m_exercise3</span></span>
+<span></span>
+<span></span>
+<span><span class="co"># Output</span></span>
+<span></span>
+<span><span class="co">#      [,1] [,2]</span></span>
+<span><span class="co"># [1,]    3    8</span></span>
+<span><span class="co"># [2,]    4    9</span></span>
+<span><span class="co"># [3,]    2    7</span></span>
+<span><span class="co"># [4,]    6    1</span></span>
+<span><span class="co"># [5,]    5   10</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 <hr>
@@ -2326,29 +2180,25 @@ $list_2$number
       runButton.disabled = false;
     }
   }
-</script>
-
-<p><strong>Answer</strong></p>
+</script><p><strong>Answer</strong></p>
 <div class="cell">
-<details>
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb74"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb74-1"><a href="#cb74-1" aria-hidden="true" tabindex="-1"></a><span class="co"># cCeate a 3 x 2 matrix containing the numbers 1 through 6</span></span>
-<span id="cb74-2"><a href="#cb74-2" aria-hidden="true" tabindex="-1"></a>m_exercise4_1 <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>), <span class="at">nrow =</span> <span class="dv">3</span>, <span class="at">ncol =</span> <span class="dv">2</span>)</span>
-<span id="cb74-3"><a href="#cb74-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb74-4"><a href="#cb74-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a 2 x 3 matrix containing the numbers 1 through 6 in a different order</span></span>
-<span id="cb74-5"><a href="#cb74-5" aria-hidden="true" tabindex="-1"></a>m_exercise4_2 <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="fu">c</span>(<span class="dv">2</span>, <span class="dv">1</span>, <span class="dv">4</span>, <span class="dv">3</span>, <span class="dv">6</span>, <span class="dv">5</span>), <span class="at">nrow =</span> <span class="dv">2</span>, <span class="at">ncol =</span> <span class="dv">3</span>)</span>
-<span id="cb74-6"><a href="#cb74-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb74-7"><a href="#cb74-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Perform matrix multiplication on the two matrices</span></span>
-<span id="cb74-8"><a href="#cb74-8" aria-hidden="true" tabindex="-1"></a>m_multiplication <span class="ot">&lt;-</span> m_exercise4_1 <span class="sc">%*%</span> m_exercise4_2</span>
-<span id="cb74-9"><a href="#cb74-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb74-10"><a href="#cb74-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Display the result of the matrix multiplication</span></span>
-<span id="cb74-11"><a href="#cb74-11" aria-hidden="true" tabindex="-1"></a>m_multiplication</span>
-<span id="cb74-12"><a href="#cb74-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb74-13"><a href="#cb74-13" aria-hidden="true" tabindex="-1"></a><span class="co"># Output</span></span>
-<span id="cb74-14"><a href="#cb74-14" aria-hidden="true" tabindex="-1"></a><span class="co">#      [,1] [,2] [,3]</span></span>
-<span id="cb74-15"><a href="#cb74-15" aria-hidden="true" tabindex="-1"></a><span class="co"># [1,]    6   16   26</span></span>
-<span id="cb74-16"><a href="#cb74-16" aria-hidden="true" tabindex="-1"></a><span class="co"># [2,]    9   23   37</span></span>
-<span id="cb74-17"><a href="#cb74-17" aria-hidden="true" tabindex="-1"></a><span class="co"># [3,]   12   30   48</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<details><summary>Code</summary><div class="sourceCode" id="cb74"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># cCeate a 3 x 2 matrix containing the numbers 1 through 6</span></span>
+<span><span class="va">m_exercise4_1</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/matrix.html">matrix</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fl">2</span>, <span class="fl">3</span>, <span class="fl">4</span>, <span class="fl">5</span>, <span class="fl">6</span><span class="op">)</span>, nrow <span class="op">=</span> <span class="fl">3</span>, ncol <span class="op">=</span> <span class="fl">2</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># Create a 2 x 3 matrix containing the numbers 1 through 6 in a different order</span></span>
+<span><span class="va">m_exercise4_2</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/matrix.html">matrix</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">2</span>, <span class="fl">1</span>, <span class="fl">4</span>, <span class="fl">3</span>, <span class="fl">6</span>, <span class="fl">5</span><span class="op">)</span>, nrow <span class="op">=</span> <span class="fl">2</span>, ncol <span class="op">=</span> <span class="fl">3</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># Perform matrix multiplication on the two matrices</span></span>
+<span><span class="va">m_multiplication</span> <span class="op">&lt;-</span> <span class="va">m_exercise4_1</span> <span class="op"><a href="https://rdrr.io/r/base/matmult.html">%*%</a></span> <span class="va">m_exercise4_2</span></span>
+<span></span>
+<span><span class="co"># Display the result of the matrix multiplication</span></span>
+<span><span class="va">m_multiplication</span></span>
+<span></span>
+<span><span class="co"># Output</span></span>
+<span><span class="co">#      [,1] [,2] [,3]</span></span>
+<span><span class="co"># [1,]    6   16   26</span></span>
+<span><span class="co"># [2,]    9   23   37</span></span>
+<span><span class="co"># [3,]   12   30   48</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 <hr>
@@ -2427,37 +2277,30 @@ $list_2$number
       runButton.disabled = false;
     }
   }
-</script>
-
-<p><strong>Answer</strong></p>
+</script><p><strong>Answer</strong></p>
 <div class="cell">
-<details>
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb75"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb75-1"><a href="#cb75-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a 3 x 4 array containing the numbers 1 through 12</span></span>
-<span id="cb75-2"><a href="#cb75-2" aria-hidden="true" tabindex="-1"></a>array_exercise5 <span class="ot">&lt;-</span> <span class="fu">array</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">12</span>, <span class="at">dim =</span> <span class="fu">c</span>(<span class="dv">3</span>, <span class="dv">4</span>))</span>
-<span id="cb75-3"><a href="#cb75-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb75-4"><a href="#cb75-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Extract a 2 x 3 sub-array from rows 2 and 3 and columns 2 through 4</span></span>
-<span id="cb75-5"><a href="#cb75-5" aria-hidden="true" tabindex="-1"></a>sub_array_ex5 <span class="ot">&lt;-</span> array_exercise5[<span class="dv">2</span><span class="sc">:</span><span class="dv">3</span>, <span class="dv">2</span><span class="sc">:</span><span class="dv">4</span>]</span>
-<span id="cb75-6"><a href="#cb75-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb75-7"><a href="#cb75-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Display the sub-array</span></span>
-<span id="cb75-8"><a href="#cb75-8" aria-hidden="true" tabindex="-1"></a>sub_array_ex5</span>
-<span id="cb75-9"><a href="#cb75-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb75-10"><a href="#cb75-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb75-11"><a href="#cb75-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Output</span></span>
-<span id="cb75-12"><a href="#cb75-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb75-13"><a href="#cb75-13" aria-hidden="true" tabindex="-1"></a><span class="co">#      [,1] [,2] [,3]</span></span>
-<span id="cb75-14"><a href="#cb75-14" aria-hidden="true" tabindex="-1"></a><span class="co"># [1,]    5    8   11</span></span>
-<span id="cb75-15"><a href="#cb75-15" aria-hidden="true" tabindex="-1"></a><span class="co"># [2,]    6    9   12</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<details><summary>Code</summary><div class="sourceCode" id="cb75"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># Create a 3 x 4 array containing the numbers 1 through 12</span></span>
+<span><span class="va">array_exercise5</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/array.html">array</a></span><span class="op">(</span><span class="fl">1</span><span class="op">:</span><span class="fl">12</span>, dim <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">3</span>, <span class="fl">4</span><span class="op">)</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># Extract a 2 x 3 sub-array from rows 2 and 3 and columns 2 through 4</span></span>
+<span><span class="va">sub_array_ex5</span> <span class="op">&lt;-</span> <span class="va">array_exercise5</span><span class="op">[</span><span class="fl">2</span><span class="op">:</span><span class="fl">3</span>, <span class="fl">2</span><span class="op">:</span><span class="fl">4</span><span class="op">]</span></span>
+<span></span>
+<span><span class="co"># Display the sub-array</span></span>
+<span><span class="va">sub_array_ex5</span></span>
+<span></span>
+<span></span>
+<span><span class="co"># Output</span></span>
+<span></span>
+<span><span class="co">#      [,1] [,2] [,3]</span></span>
+<span><span class="co"># [1,]    5    8   11</span></span>
+<span><span class="co"># [2,]    6    9   12</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 <p>&nbsp;</p>
-</section>
-<section id="data-frame" class="level1">
-<h1>Data Frame</h1>
+</section><section id="data-frame" class="level1"><h1>Data Frame</h1>
 <hr>
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="images/df.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6"><img src="images/df.png" class="img-fluid figure-img" width="300"></a></p>
+<figure class="figure"><p><a href="images/df.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6"><img src="images/df.png" class="img-fluid figure-img" width="300"></a></p>
 </figure>
 </div>
 <p>A data frame is the a common object, specially for people that does data wrangling and analyze data. Thos popular object is a tabular data structure where the rows represent observations and columns represent variables.</p>
@@ -2474,27 +2317,26 @@ Warning
 <p>Data Frames must have columns representing a vector of the same length. If you try to merge a vector of 5 elements and a vector of 4 elements, it will give you an error.</p>
 </div>
 </div>
-<section id="create-a-data-frame-multiple-ways" class="level2">
-<h2 class="anchored" data-anchor-id="create-a-data-frame-multiple-ways">Create a Data Frame: multiple ways</h2>
-<p>1.- Using <code>data.frame()</code> function: This is the most common way to create a data frame in R. You can put as many vectors (variables) as you want.</p>
+<section id="create-a-data-frame-multiple-ways" class="level2"><h2 class="anchored" data-anchor-id="create-a-data-frame-multiple-ways">Create a Data Frame: multiple ways</h2>
+<p>1.- Using <code><a href="https://rdrr.io/r/base/data.frame.html">data.frame()</a></code> function: This is the most common way to create a data frame in R. You can put as many vectors (variables) as you want.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb76"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb76-1"><a href="#cb76-1" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">x =</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>), </span>
-<span id="cb76-2"><a href="#cb76-2" aria-hidden="true" tabindex="-1"></a>                 <span class="at">y =</span> <span class="fu">c</span>(<span class="st">"a"</span>, <span class="st">"b"</span>, <span class="st">"c"</span>), </span>
-<span id="cb76-3"><a href="#cb76-3" aria-hidden="true" tabindex="-1"></a>                 <span class="at">z =</span> <span class="fu">c</span>(<span class="cn">TRUE</span>, <span class="cn">FALSE</span>, <span class="cn">TRUE</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb76"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">df</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html">data.frame</a></span><span class="op">(</span>x <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fl">2</span>, <span class="fl">3</span><span class="op">)</span>, </span>
+<span>                 y <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"a"</span>, <span class="st">"b"</span>, <span class="st">"c"</span><span class="op">)</span>, </span>
+<span>                 z <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="cn">TRUE</span>, <span class="cn">FALSE</span>, <span class="cn">TRUE</span><span class="op">)</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>2.- Using <code>read_csv2()</code> function: You can also create a data frame by importing data from an external file using the <code>read.table()</code> or read.csv() function.</p>
+<p>2.- Using <code>read_csv2()</code> function: You can also create a data frame by importing data from an external file using the <code><a href="https://rdrr.io/r/utils/read.table.html">read.table()</a></code> or read.csv() function.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb77"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb77-1"><a href="#cb77-1" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> <span class="fu">read.table</span>(<span class="st">"data.txt"</span>, <span class="at">header =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb77"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">df</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/utils/read.table.html">read.table</a></span><span class="op">(</span><span class="st">"data.txt"</span>, header <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>3.- Using <code>read_excel()</code> function from the <code>readxl</code> package</p>
+<p>3.- Using <code><a href="https://readxl.tidyverse.org/reference/read_excel.html">read_excel()</a></code> function from the <code>readxl</code> package</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb78"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb78-1"><a href="#cb78-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readxl)</span>
-<span id="cb78-2"><a href="#cb78-2" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> <span class="fu">read_excel</span>(<span class="st">"data.xlsx"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb78"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://readxl.tidyverse.org">readxl</a></span><span class="op">)</span></span>
+<span><span class="va">df</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://readxl.tidyverse.org/reference/read_excel.html">read_excel</a></span><span class="op">(</span><span class="st">"data.xlsx"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>4.- Using <code>tibble()</code> function from the tibble package</p>
+<p>4.- Using <code><a href="https://tibble.tidyverse.org/reference/tibble.html">tibble()</a></code> function from the tibble package</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb79"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb79-1"><a href="#cb79-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tibble)</span>
-<span id="cb79-2"><a href="#cb79-2" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> <span class="fu">tibble</span>(<span class="at">x =</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>), <span class="at">y =</span> <span class="fu">c</span>(<span class="st">"a"</span>, <span class="st">"b"</span>, <span class="st">"c"</span>), <span class="at">z =</span> <span class="fu">c</span>(<span class="cn">TRUE</span>, <span class="cn">FALSE</span>, <span class="cn">TRUE</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb79"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://tibble.tidyverse.org/">tibble</a></span><span class="op">)</span></span>
+<span><span class="va">df</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://tibble.tidyverse.org/reference/tibble.html">tibble</a></span><span class="op">(</span>x <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fl">2</span>, <span class="fl">3</span><span class="op">)</span>, y <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"a"</span>, <span class="st">"b"</span>, <span class="st">"c"</span><span class="op">)</span>, z <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="cn">TRUE</span>, <span class="cn">FALSE</span>, <span class="cn">TRUE</span><span class="op">)</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>You can check our other tutorials to handle data frames and start practicing. We also recommend these books from the website for you to go into more detail.</p>
 <div id="listing-eda" class="quarto-listing quarto-listing-container-custom">
@@ -2502,24 +2344,18 @@ Warning
 color: white !important;">
   <div style="color: white !important;" class="card border-2 rounded-3 g-col-12 g-col-sm-6 g-col-md-4 mb-2 books" data-index="0">
     <a href="https://www.hertiecodingclub.com/material/books/eda_r/">
-      <img src="book.jpg" alt="" class="card-img-top">
-    </a>
+      <img src="book.jpg" alt="" class="card-img-top"></a>
   </div>
   <div style="color: white !important;" class="card border-2 rounded-3 g-col-12 g-col-sm-6 g-col-md-4 mb-2 books" data-index="1">
     <a href="https://www.hertiecodingclub.com/material/books/r_for_ds/">
-      <img src="r_for_ds.jpg" alt="" class="card-img-top">
-    </a>
+      <img src="r_for_ds.jpg" alt="" class="card-img-top"></a>
   </div>
 </div>
 <div class="listing-no-matching d-none">
 No matching items
 </div>
 </div>
-<hr>
-</section>
-</section>
-<section id="references" class="level1">
-<h1>References</h1>
+<hr></section></section><section id="references" class="level1"><h1>References</h1>
 <hr>
 <div class="callout-tip callout callout-style-default callout-captioned">
 <div class="callout-header d-flex align-content-center">
@@ -2550,10 +2386,7 @@ Note
 
 
 
-</section>
-
-</main> <!-- /main -->
-<script id="quarto-html-after-body" type="application/javascript">
+</section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
     const mode = bsSheetEl.getAttribute("data-mode");
@@ -2799,28 +2632,41 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       });
     }
   }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var filterRegex = new RegExp(/https:\/\/www\.hertiecodingclub\.com/);
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+    var links = window.document.querySelectorAll('a:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+          // target, if specified
+          link.setAttribute("target", "_blank");
+      }
+    }
 });
 </script>
 </div> <!-- /content -->
-<footer class="footer">
-  <div class="nav-footer">
+<footer class="footer"><div class="nav-footer">
     <div class="nav-footer-left">
       <ul class="footer-items list-unstyled">
-    <li class="nav-item">
+<li class="nav-item">
     <a class="nav-link" href="https://creativecommons.org/licenses/by/2.0/"><i class="fa-regular fa-copyright" aria-label="copyright"></i> <i class="fa-solid fa-circle-user" aria-label="circle-user"></i> 2023 HCC | J.Roa</a>
   </li>  
 </ul>
-    </div>   
+</div>   
       <div class="nav-footer-center">
         <ul class="footer-items list-unstyled">
-    <li class="nav-item">
+<li class="nav-item">
     <a class="nav-link" href="https://quarto.org"><i class="fa-brands fa-phoenix-framework fa-lg" aria-label="phoenix-framework"></i> Quarto engine</a>
   </li>  
 </ul>
-      </div>
+</div>
     <div class="nav-footer-right">
       <ul class="footer-items list-unstyled">
-    <li class="nav-item">
+<li class="nav-item">
     <a class="nav-link" href="mailto:hertiecodingclub@gmail.com"><i class="fa-solid fa-square-envelope fa-lg" aria-label="square-envelope"></i></a>
   </li>  
     <li class="nav-item">
@@ -2839,11 +2685,9 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     <a class="nav-link" href="https://youtube.com/@hertiecodingclub"><i class="fa-brands fa-youtube fa-lg" aria-label="youtube"></i></a>
   </li>  
 </ul>
-    </div>
+</div>
   </div>
-</footer>
-<script>var lightboxQuarto = GLightbox({"closeEffect":"fade","selector":".lightbox","openEffect":"fade","skin":"lightwidth","descPosition":"left","loop":true});</script>
-
+</footer><script>var lightboxQuarto = GLightbox({"openEffect":"fade","skin":"lightwidth","loop":true,"selector":".lightbox","closeEffect":"fade","descPosition":"left"});</script>
 
 
 <script src="../../../site_libs/quarto-html/zenscroll-min.js"></script>

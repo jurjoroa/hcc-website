@@ -6,10 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Jorge Roa">
-<meta name="dcterms.date" content="2023-05-22">
 
-<title>Telling Stories with Data: Applications in R</title>
+<title>Ridhima Singh</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -25,30 +23,25 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../../../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../../../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../../../">
-<link href="../../../images/hcc.png" rel="icon" type="image/png">
-<script src="../../../site_libs/quarto-html/quarto.js"></script>
-<script src="../../../site_libs/quarto-html/popper.min.js"></script>
-<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<script src="../../../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
-<link href="../../../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
-<link href="../../../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
-<link href="../../../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
-<link href="../../../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
-<link href="../../../site_libs/quarto-contrib/animate-4.1.1/animate.min.css" rel="stylesheet">
+<script src="../../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../../">
+<link href="../../../../images/hcc.png" rel="icon" type="image/png">
+<script src="../../../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<link href="../../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../../../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../../../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
+<link href="../../../../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -86,33 +79,11 @@ gtag('config', 'G-HJEMN0LJY7', { 'anonymize_ip': true});
 <!-- Open Graph / Facebook -->
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://www.hertiecodingclub.com">
-<meta property="og:title" content="Telling Stories with Data: Applications in R">
+<meta property="og:title" content="Ridhima Singh">
 <meta property="og:description" content="Welcome to the Hertie Coding Club! Our goal as a club is to help everyone and between us learn coding skills and show that coding is for everyone, no matter our background.">
-<!-- Primary Meta Tags -->
-<title>Hertie Coding Club - Exploratory Data Analysis with R </title>
-<meta name="title" content="Hertie Coding Club - Exploratory Data Analysis with R">
-<meta name="description" content="Unlocking the Power of Exploratory Data Analysis with R: A Step-by-Step Guide to Summarizing, Visualizing, and Testing Hypotheses for Effective Model Development and Data-Driven Insights">
 
 
-<!-- Image Alt Tag -->
-<meta name="image" content="https://www.hertiecodingclub.com/material/books/eda_r/images/book.jpg">
-<meta name="image_alt" content="Learn essential exploratory techniques for summarizing data with R with the Exploratory Data Analysis with R book.">
-
-<!-- Open Graph / Facebook -->
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://www.hertiecodingclub.com/material/books/eda_r/">
-<meta property="og:title" content="Hertie Coding Club - Exploratory Data Analysis with R">
-<meta property="og:description" content="Unlocking the Power of Exploratory Data Analysis with R: A Step-by-Step Guide to Summarizing, Visualizing, and Testing Hypotheses for Effective Model Development and Data-Driven Insights">
-<style>:root{--animate-duration:3s;--animate-delay:2s;--animate-repeat:1}</style>
-<style>:root{--animate-duration:3s;--animate-delay:2s;--animate-repeat:1}</style>
-<style>:root{--animate-duration:3s;--animate-delay:2s;--animate-repeat:1}</style>
-<style>:root{--animate-duration:3s;--animate-delay:2s;--animate-repeat:1}</style>
-<style>:root{--animate-duration:3s;--animate-delay:2s;--animate-repeat:1}</style>
-<style>:root{--animate-duration:3s;--animate-delay:2s;--animate-repeat:1}</style>
-<style>:root{--animate-duration:3s;--animate-delay:2s;--animate-repeat:1}</style>
-
-
-<link rel="stylesheet" href="../../../styles.css">
+<link rel="stylesheet" href="../../../../styles.css">
 </head>
 
 <body class="nav-fixed">
@@ -122,8 +93,8 @@ gtag('config', 'G-HJEMN0LJY7', { 'anonymize_ip': true});
     <nav class="navbar navbar-expand-lg navbar-dark ">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container">
-    <a href="../../../index.html" class="navbar-brand navbar-brand-logo">
-    <img src="../../../images/hcc_final.png" alt="" class="navbar-logo">
+    <a href="../../../../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../../../../images/hcc_final.png" alt="" class="navbar-logo">
     </a>
   </div>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
@@ -132,7 +103,7 @@ gtag('config', 'G-HJEMN0LJY7', { 'anonymize_ip': true});
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../../index.html"><i class="bi bi-house-fill" role="img">
+    <a class="nav-link" href="../../../../index.html"><i class="bi bi-house-fill" role="img">
 </i> 
  <span class="menu-text">Home</span></a>
   </li>  
@@ -142,15 +113,15 @@ gtag('config', 'G-HJEMN0LJY7', { 'anonymize_ip': true});
     </a>
     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-fa-solid-people-group--members">    
         <li>
-    <a class="dropdown-item" href="../../../members/team/team.html">
+    <a class="dropdown-item" href="../../../../members/team/team.html">
  <span class="dropdown-text"><i class="fa-solid fa-person-chalkboard" aria-label="person-chalkboard"></i> Team</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../../members/members/members.html">
+    <a class="dropdown-item" href="../../../../members/members/members.html">
  <span class="dropdown-text"><i class="fa-solid fa-users-rectangle" aria-label="users-rectangle"></i> Club Members</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../../members/statute/statute.html">
+    <a class="dropdown-item" href="../../../../members/statute/statute.html">
  <span class="dropdown-text"><i class="fa-solid fa-scale-balanced" aria-label="scale-balanced"></i> Club Statutes</span></a>
   </li>  
     </ul>
@@ -163,30 +134,30 @@ gtag('config', 'G-HJEMN0LJY7', { 'anonymize_ip': true});
     </a>
     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-learn">    
         <li>
-    <a class="dropdown-item" href="../../../learn/rstudio.html">
+    <a class="dropdown-item" href="../../../../learn/rstudio.html">
  <span class="dropdown-text"><i class="fa-brands fa-r-project" aria-label="r-project"></i> R</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../../learn/python.html">
+    <a class="dropdown-item" href="../../../../learn/python.html">
  <span class="dropdown-text"><i class="fa-brands fa-python" aria-label="python"></i> Python</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../../learn/i2ds.html">
+    <a class="dropdown-item" href="../../../../learn/i2ds.html">
  <span class="dropdown-text"><i class="fa-solid fa-screwdriver-wrench" aria-label="screwdriver-wrench"></i> I2DS Tools</span></a>
   </li>  
     </ul>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="../../../material/index.html">
+    <a class="nav-link" href="../../../../material/index.html">
  <span class="menu-text"><i class="fa-solid fa-meteor" aria-label="meteor"></i> Material</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../../events/index.html"><i class="bi bi-calendar3" role="img">
+    <a class="nav-link" href="../../../../events/index.html"><i class="bi bi-calendar3" role="img">
 </i> 
  <span class="menu-text">Events</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../../news/index.html">
+    <a class="nav-link" href="../../../../news/index.html">
  <span class="menu-text"><i class="fa-regular fa-newspaper" aria-label="newspaper"></i> News</span></a>
   </li>  
   <li class="nav-item dropdown ">
@@ -195,11 +166,11 @@ gtag('config', 'G-HJEMN0LJY7', { 'anonymize_ip': true});
     </a>
     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-fa-solid-laptop-code--about-us">    
         <li>
-    <a class="dropdown-item" href="../../../about_us/index.html">
+    <a class="dropdown-item" href="../../../../about_us/index.html">
  <span class="dropdown-text"><i class="fa-solid fa-school-flag" aria-label="school-flag"></i> Who are we</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../../about_us/hertieclubs.html">
+    <a class="dropdown-item" href="../../../../about_us/hertieclubs.html">
  <span class="dropdown-text"><i class="fa-solid fa-circle-nodes" aria-label="circle-nodes"></i> Hertie Clubs</span></a>
   </li>  
     </ul>
@@ -214,90 +185,44 @@ gtag('config', 'G-HJEMN0LJY7', { 'anonymize_ip': true});
     </nav>
 </header>
 <!-- content -->
-<header id="title-block-header" class="quarto-title-block default page-columns page-full">
-  <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-page">
-      <h1 class="title"><span class="animate__animated animate__fadeInDown animate__delay-.6s" style="display: inline-block;">Telling Stories with Data: Applications in R</span></h1>
-            <p class="subtitle lead"><span class="animate__animated animate__fadeInDown animate__delay-.6s" style="display: inline-block;">This book will help you tell stories with data. It establishes a foundation on which you can build and share knowledge about an aspect of the world that interests you based on data that you observe.</span></p>
-                                <div class="quarto-categories">
-                <div class="quarto-category">R</div>
-                <div class="quarto-category">Visualization</div>
-                <div class="quarto-category">EDA</div>
-              </div>
-                  </div>
-  </div>
-    
-  
-  <div class="quarto-title-meta">
-
-      <div>
-      <div class="quarto-title-meta-heading">Author</div>
-      <div class="quarto-title-meta-contents">
-               <p>Jorge Roa </p>
-            </div>
-    </div>
-      
-      <div>
-      <div class="quarto-title-meta-heading">Published</div>
-      <div class="quarto-title-meta-contents">
-        <p class="date">May 22, 2023</p>
-      </div>
-    </div>
-    
-      
-    </div>
-    
-  
-  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
-    </div>
+    
 <!-- main -->
-<main class="content quarto-banner-title-block column-page" id="quarto-document-content">
+<div class="quarto-about-trestles column-page">
+  <div class="about-entity">
+    <img src="ridhimasingh.jpeg" class="about-image
+  rounded " style="width: 20em;">
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Ridhima Singh</h1>
+</div>
+<div class="quarto-title-meta">
+  </div>
+</header>
+    <div class="about-links">
+  <a href="https://www.linkedin.com/in/ridhimasingh98/ " class="about-link">
+     <span class="about-link-text"><i class="fa-brands fa-linkedin" aria-label="linkedin"></i> LinkedIn</span>
+  </a>
+  <a href="mailto:229469@students.hertie-school.org" class="about-link">
+     <span class="about-link-text"><i class="fa-solid fa-envelopes-bulk" aria-label="envelopes-bulk"></i> Mail</span>
+  </a>
+</div>
+  </div>
+  <div class="about-contents"><main class="content column-page" id="quarto-document-content">
+<style>
+  body {
+  background: linear-gradient(to right, #000428, #004e92);
+}
+</style>
+<p>&nbsp;</p>
+<p>I’m Ridhima, and I’m currently pursuing my Master’s in Public Policy from Hertie and the London School of Economics. I discovered my love for data analysis during my time as a consultant for the Government of India, and am now excited to dive deeper into the world of policy, data and strategic decision making.</p>
 
 
-
-
-<div class="books">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="images/book.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="images/book.png" class="img-fluid figure-img" width="300"></a></p>
-</figure>
+</main></div>
 </div>
-</div>
-<hr class="sep-2">
-<h1 class="book_aut">
-Authors <span style="font-size: 1em;">Rohan Alexander</span>
-</h1>
-<hr class="sep-2">
-<p>“This book will help you tell stories with data. It establishes a foundation on which you can build and share knowledge about an aspect of the world that interests you based on data that you observe. Telling stories in small groups around a fire played a critical role in the development of humans and society (Wiessner 2014). Today our stories, based on data, can influence millions. In this book we will explore, prod, push, manipulate, knead, and ultimately, try to understand the implications of, data. A variety of features drive the choices in this book.”</p>
-<center>
-<form action="https://tellingstorieswithdata.com">
-<button class="btn-hover color-9" target="_blank">
-Go to Telling Stories with Data
-</button>
-</form>
-</center>
-<hr class="sep-2">
-<div class="callout-tip callout callout-style-default callout-captioned">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-caption-container flex-fill">
-Cite
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Alexander, R. (2023). Telling Stories with Data: With Applications in R (1st ed.). Chapman and Hall/CRC. https://doi.org/10.1201/9781003229407</p>
-</div>
-</div>
-
-
-
-</main> <!-- /main -->
+ <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -433,13 +358,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   } else {
     toggleColorMode(false);
   }
-  const icon = "";
-  const anchorJS = new window.AnchorJS();
-  anchorJS.options = {
-    placement: 'right',
-    icon: icon
-  };
-  anchorJS.add('.anchored');
   const clipboard = new window.ClipboardJS('.code-copy-button', {
     target: function(trigger) {
       return trigger.previousElementSibling;
@@ -601,9 +519,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>
   </div>
 </footer>
-<script>var lightboxQuarto = GLightbox({"closeEffect":"fade","selector":".lightbox","loop":true,"skin":"lightwidth","openEffect":"fade","descPosition":"left"});</script>
 
 
 
-<script src="../../../site_libs/quarto-html/zenscroll-min.js"></script>
+<script src="../../../../site_libs/quarto-html/zenscroll-min.js"></script>
 </body></html>

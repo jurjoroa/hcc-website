@@ -300,11 +300,11 @@ comments: false
 
 <div class="layout_grid_cards">
    <div class="cardg">
-    <a class="card_img" href="../material/index.html">
-      <div class="card__background" style="background-image: url(images/home_cards/keyboard_dalle.jpeg)"></div>
+          <a class="card_img" href="../members/team/team.html">
+      <div class="card__background" style="background-image: url(images/home_cards/people_coding_dalle.png)"></div>
       <div class="card__content">
-        <p class="card__category">Material</p>
-        <h3 class="card__heading">Certifications, books and resources.</h3>
+        <p class="card__category">Members</p>
+        <h3 class="card__heading"> Who are we?</h3>
       </div>
     </a>
     <a class="card_img" href="../learn/rstudio.html">
@@ -314,11 +314,11 @@ comments: false
         <h3 class="card__heading">Boost your skills and learn R</h3>
       </div>
     </a>
-    <a class="card_img" href="../members/team/team.html">
-      <div class="card__background" style="background-image: url(images/home_cards/people_coding_dalle.png)"></div>
+    <a class="card_img" href="../material/index.html">
+      <div class="card__background" style="background-image: url(images/home_cards/keyboard_dalle.jpeg)"></div>
       <div class="card__content">
-        <p class="card__category">Members</p>
-        <h3 class="card__heading"> Who are we?</h3>
+        <p class="card__category">Material</p>
+        <h3 class="card__heading">Certifications, books and resources.</h3>
       </div>
     </li>
     <a class="card_img" href="../events/index.html">

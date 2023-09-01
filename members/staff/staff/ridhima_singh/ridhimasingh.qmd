@@ -1,0 +1,34 @@
+---
+title: "Ridhima Singh"
+page-layout: full
+image: ridhimasingh.jpeg
+filters:
+   - lightbox
+lightbox: 
+  match: auto
+  effect: fade
+  desc-position: left
+  css-class: "lightwidth"
+about:
+  template: trestles
+  image-shape: rounded
+  links:
+    - text: "{{< fa brands linkedin >}} LinkedIn"
+      url: "https://www.linkedin.com/in/ridhimasingh98/ "
+    - text: "{{< fa solid envelopes-bulk >}} Mail"
+      url: "mailto:229469@students.hertie-school.org"
+comments: false
+---
+
+<style>
+  body {
+  background: linear-gradient(to right, #000428, #004e92);
+}
+  
+</style>
+
+
+ 
+
+I’m Ridhima, and I’m currently pursuing my Master’s in Public Policy from Hertie and the London School of Economics. I discovered my love for data analysis during my time as a consultant for the Government of India, and am now excited to dive deeper into the world of policy, data and strategic decision making.
+

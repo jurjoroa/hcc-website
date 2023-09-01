@@ -1532,6 +1532,14 @@ display: grid;
   background-position: center;
 }
 
+.user-container #ridhimasingh.card_team {
+  background: url("members/staff/staff/ridhima_singh/ridhimasingh.jpeg") no-repeat;
+  background-size:400px 400px;
+  background-position: center;
+}
+
+
+
 /* Image move up */
 .user-container .card_team:nth-child(1):hover,
 .user-container .card_team:nth-child(2):hover,

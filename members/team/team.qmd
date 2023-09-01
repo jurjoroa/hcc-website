@@ -184,6 +184,13 @@ color: white;
         </div>
         </a>
         
+                <!-- Card Two-->
+        <a href="../staff/staff/ridhima_singh/ridhimasingh.html">
+        <div id="ridhimasingh" class="card_team inline-photo3 show-on-scroll">
+          <div class="hover_esp_team"> Ridhima Singh</div>
+        </div>
+        </a>
+        
 
     </div>
 </section>
