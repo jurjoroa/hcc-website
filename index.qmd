@@ -647,14 +647,21 @@ document.addEventListener('DOMContentLoaded', function () {
 </div>
 
 <div class="container-footer3">
+
+
 <div class="layout_footer">
-  This website, the content and everything related to it is licensed under <a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank"> Creative Commons Attribution-NonCommercial 4.0 International License.</a>
+
+
+
+   <a href="https://www.hertiecodingclub.com/about_us/privacy" target="_blank" style="font-size: 13px;"> <i class="fas fa-shield-alt"></i> Privacy Policy </a> | <a href="https://www.hertiecodingclub.com/about_us/impressum" target="_blank" style="font-size: 13px;"> <i class="fas fa-file-alt"></i> Impressum </a> | This website, the content and everything related to it is licensed under <a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank"> Creative Commons Attribution-NonCommercial 4.0 International License.</a>
   
   <div class="cc-icons-row">
   <img src="_site/images/cc/cc.svg" alt="CC" class="cc-icon">
   <img src="_site/images/cc/by.svg" alt="BY" class="cc-icon">
   <img src="_site/images/cc/nc.svg" alt="NC" class="cc-icon">
   <img src="_site/images/cc/nd.svg" alt="ND" class="cc-icon">
+  
+
  </div> 
 </div>
 </div>

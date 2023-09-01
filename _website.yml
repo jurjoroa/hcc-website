@@ -72,6 +72,11 @@ website:
             href: about_us/index.qmd
           - text: "{{< fa solid circle-nodes >}} Hertie Clubs"
             href: about_us/hertieclubs.qmd
+          - text: "{{< fa solid shield-alt >}} Privacy Policy"
+            href: about_us/privacy.qmd
+          - text: "{{< fa solid file-alt >}} Impressum"
+            href: about_us/impressum.qmd
+            
        
      
 comments:
