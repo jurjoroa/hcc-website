@@ -1,0 +1,76 @@
+---
+title: "{{< fa solid handshake-angle >}} Coding peers"
+page-layout: custom
+toc: true
+include-in-header: meta.html
+comments: false
+---
+
+
+<style>
+
+.calendly-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  margin: 20px;
+}
+
+.calendly-item {
+  /* Adjust styles as needed */
+   margin: 20px;
+}
+
+@media (max-width: 768px) {
+  .calendly-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+  body {
+  background: linear-gradient(to right, #000428, #004e92);
+}
+
+
+.margin-intro{
+      margin: 60px;
+      color: white;
+}
+
+div.quarto-title h1.title{
+      margin: 60px;
+      color: white;
+      margin-top: 10px;
+}
+
+</style>
+
+
+<div class="margin-intro">
+
+Looking for coding assistance or guidance? You're in the right place!
+
+
+We are a group of Hertie students dedicated to helping our peers and between us learn to code. Through our weekly Zoom meetings or in person meeting at Hertie, we offer support for coding questions, best practices, and more. Whether you're a beginner or have some experience, we're here to help level up our coding skills together and learn from each other!
+
+</div>
+
+```{=HTML}
+
+<div class="calendly-grid">
+    <!-- Calendly inline widget begin -->
+    <div class="calendly-item">
+      <div class="calendly-inline-widget" data-url="https://calendly.com/jorge_roa/hertiecodingclub" style="min-width:320px;height:700px;"></div>
+    </div>
+    <!-- Calendly inline widget end -->
+
+    <!-- Calendly inline widget begin -->
+    <div class="calendly-item">
+      <div class="calendly-inline-widget" data-url="https://calendly.com/jorge_roa/hertiecodingclub" style="min-width:320px;height:700px;"></div>
+    </div>
+    <!-- Calendly inline widget end -->
+  </div>
+  
+  <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+
+```

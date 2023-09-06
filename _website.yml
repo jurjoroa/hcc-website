@@ -61,6 +61,8 @@ website:
       - icon: bi-calendar3  
         href: events/index.qmd
         text: "Events"
+      - text: "{{< fa solid handshake-angle >}} Coding peers"
+        href: coding/index.qmd
       #- icon: fingerprint  
       #  href: register/register.qmd
       #  text: "Register"

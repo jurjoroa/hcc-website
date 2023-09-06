@@ -1728,11 +1728,12 @@ code span {
 /*modify code*/
 
 div.sourceCode {
-  background: linear-gradient(to right, rgba(0, 4, 40, 0.9), rgba(0, 78, 146, 0.9));
+  background: #2a2a2a;
   border: 3px solid #F3182E;
   border-style: ;
   font-size: .9em;
 }
+
 
 div.sourceCode#text {
   background: linear-gradient(to right, rgba(0, 4, 40, 0.9), rgba(0, 78, 146, 0.9));
@@ -1742,7 +1743,7 @@ div.sourceCode#text {
 }
 
 div.sourceCode pre code {
-  color:white;
+  color:red;
 }
 
 
@@ -1784,7 +1785,8 @@ code {
 
 /*arrows, parenthesis*/
 
-code span.ot { color: #C60115; }
+code span.ot { 
+  color: #C60115 !important;}
 
 /*
 
@@ -1809,12 +1811,12 @@ code span.al {
 
 /*Packages and variables*/
 code span.va {
-  color:  #f54657 !important;
+  color:  white !important;
   font-weight: bold;
 }
 
 code.sourceCode python #text{
-  color:  #F3182E !important;
+  color:  white !important;
 }
 
 /*Strings*/
@@ -3229,6 +3231,8 @@ figcaption {
   }
 }
 
+
+
 @media only screen and (max-width: 900px) {
   .about2 .right2 {
     grid-column: 1 / 2;
@@ -3756,11 +3760,6 @@ background: repeating-radial-gradient(circle at bottom left, #fedc00 0%, #fedc00
 }
 
 
-
-/*distance from image to header*/
-html body.nav-fixed.quarto-light div#quarto-content.quarto-container.page-columns.page-rows-contents.page-layout-article.page-navbar main#quarto-document-content.content.quarto-banner-title-block div.quarto-figure.quarto-figure-center figure.figure p img.img-fluid.figure-img{
-  margin-top: -100px;
-}
 
 
     

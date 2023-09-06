@@ -1,0 +1,69 @@
+---
+title: "About Us"
+page-layout: custom
+toc: true
+include-in-header: meta.html
+comments: false
+---
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<hr class="sep-2-f" style="margin-top: 50px;"/>
+
+<div style="margin-top: 50px;"/>
+
+
+
+::: {.grid}
+::: {.g-col-3}
+
+![](images/DSL.png){width="150" fig-align="center"}
+
+:::
+::: {.g-col-6}
+
+![](images/hcc_final.png){width="150" fig-align="center"}
+
+:::
+::: {.g-col-3}
+
+![](images/hertie.png){width="150"  fig-align="center"}
+
+:::
+:::
+
+</div>
+
+<div class="container-footer3">
+<div class="layout_footer">
+  This website, the content and everything related to it is licensed under <a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank"> Creative Commons Attribution-NonCommercial 4.0 International License.</a>
+  
+  <div class="cc-icons-row">
+  <img src="images/cc/cc.svg" alt="CC" class="cc-icon">
+  <img src="images/cc/by.svg" alt="BY" class="cc-icon">
+  <img src="images/cc/nc.svg" alt="NC" class="cc-icon">
+  <img src="images/cc/nd.svg" alt="ND" class="cc-icon">
+ </div> 
+</div>
+</div>
+
+
+
+
+
+
+

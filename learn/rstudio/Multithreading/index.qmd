@@ -41,7 +41,6 @@ As you can see, OpenMP support is needed to use multiple cores in Macs. Therefor
 
 1)  Open your terminal. It should see like this:
 
-\vspace{-1cm}
 
 ::: {layout="[[-1], [1], [-1]]"}
 ![](images/firststep.png){fig-align="center"}
@@ -80,9 +79,12 @@ brew help
 
 We need to set our paths properly if the command is not recognized.
 
-| ![](images/Apple-Silicon.png){width="30"} chips | ![](images/intel.png){width="80" height="30"} chips |
-|:---------------------------------:|:-----------------------------------:|
-|    **`export PATH=/opt/homebrew/bin:$PATH`**    | **`export PATH=/usr/local/opt/homebrew/bin:$PATH`** |
+| Apple chips ![](images/Apple-Silicon.png){width="30"}|
+|---------------------------------|
+|    **`export PATH=/opt/homebrew/bin:$PATH`**    
+| Intel chips ![](images/intel.png){width="40" height="15"}|
+| **`export PATH=/usr/local/opt/homebrew/bin:$PATH`** |
+
 
 With these changes, we can rerun homebrew help, and this information should appear in our terminal.
 
@@ -162,7 +164,6 @@ brew install --cask openmtp
 
 This is the screen that you should see once the installation is done.
 
-\vspace{-1cm}
 
 
 ![](images/cask.png){fig-align="center"}}

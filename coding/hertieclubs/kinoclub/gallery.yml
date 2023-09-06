@@ -1,0 +1,282 @@
+
+- category: Articles & Reports
+  description: |
+    Write a single markdown file and create output in a variety of formats.
+  tiles:
+    - title: HTML
+      subtitle: for web publishing
+      href: https://quarto-dev.github.io/quarto-gallery/articles/html/html.html
+      code: https://github.com/quarto-dev/quarto-gallery/blob/main/articles/html/html.qmd
+      thumbnail: articles/articles-html.png
+    - title: PDF
+      subtitle: for high quality print
+      href: https://nmfs-opensci.github.io/quarto_titlepages/titlepages/bg-image/article.pdf
+      code: https://github.com/nmfs-opensci/quarto_titlepages/blob/main/example_1.qmd
+      thumbnail: articles/articles-pdf.png
+    - title: MS Word
+      subtitle: for Office workflows
+      href: https://quarto-dev.github.io/quarto-gallery/articles/msword/msword.docx
+      code:  https://github.com/quarto-dev/quarto-gallery/blob/main/articles/msword/msword.qmd
+      thumbnail: articles/articles-msword.png
+    - title: HTML
+      subtitle: with advanced layout
+      href: https://quarto-dev.github.io/quarto-gallery/page-layout/tufte.html
+      code: https://github.com/quarto-dev/quarto-gallery/blob/main/page-layout/tufte.qmd
+      thumbnail: articles/advanced-layout-html.png
+    - title: PDF
+      subtitle: with advanced layout
+      href: https://quarto-dev.github.io/quarto-gallery/page-layout/tufte.pdf
+      code: https://github.com/quarto-dev/quarto-gallery/blob/main/page-layout/tufte.qmd
+      thumbnail: articles/advanced-layout-pdf.png
+
+- category: Presentations
+  description: |
+    Create presentations (slide show) in a variety of formats.
+  tiles:
+    - title: RevealJS 
+      subtitle: HTML presentations
+      href: https://quarto.org/docs/presentations/revealjs/demo/
+      code: https://github.com/quarto-dev/quarto-web/blob/main/docs/presentations/revealjs/demo/index.qmd
+      thumbnail: presentations/presentations-revealjs.png
+    - title: Beamer 
+      subtitle: PDF presentations
+      href: https://quarto-dev.github.io/quarto-gallery/presentations/beamer/beamer.pdf
+      code: https://github.com/quarto-dev/quarto-gallery/blob/main/presentations/beamer/beamer.qmd
+      thumbnail: presentations/presentations-beamer.png
+    - title: PowerPoint
+      subtitle: presentations
+      href: https://quarto-dev.github.io/quarto-gallery/presentations/powerpoint/powerpoint.pptx
+      code: https://github.com/quarto-dev/quarto-gallery/blob/main/presentations/powerpoint/powerpoint.qmd
+      thumbnail: presentations/presentations-powerpoint.png
+    - title: Streamlining with R
+      href: https://meghan.rbind.io/slides/neair/neair.html
+      code: https://github.com/meghall06/personal-website/blob/master/static/slides/NEAIR/NEAIR.qmd
+      thumbnail: presentations/presentations-streamlining-with-r.png
+    - title: An educator's perspective of the tidyverse
+      href: https://mine-cetinkaya-rundel.github.io/tidyperspective/talks/dagstat-2022.html
+      code: https://github.com/mine-cetinkaya-rundel/tidyperspective/blob/main/talks/dagstat-2022.qmd
+      thumbnail: presentations/presentations-educators-perspective-tidyverse.png
+    - title: An anthology of experimental designs
+      href: https://emitanaka.org/slides/toronto2022/
+      code: https://github.com/emitanaka/talks/tree/master/Toronto2022
+      thumbnail: presentations/presentations-anthology-experimental-designs.png
+    - title: The untold story of palmerpenguins
+      href: https://apreshill.github.io/palmerpenguins-useR-2022/
+      code: https://github.com/apreshill/palmerpenguins-useR-2022
+      thumbnail: presentations/presentations-penguins-story.png
+    - title: Outrageously efficient EDA
+      href: https://jthomasmock.github.io/arrow-dplyr/
+      code: https://github.com/jthomasmock/arrow-dplyr
+      thumbnail: presentations/presentations-arrow-dplyr.png
+    - title: Improvements in textrecipes
+      href: https://emilhvitfeldt.github.io/useR2022-textrecipes/
+      code: https://github.com/emilhvitfeldt/useR2022-textrecipes/
+      thumbnail: presentations/presentations-textrecipes.png
+      
+
+
+- category: Interactive Docs
+  description: |
+    Engage readers and deliver more insights with interactive documents.
+  tiles:
+    - title: Observable
+      subtitle: reactive JavaScript
+      href: ../interactive/ojs/examples/penguins.html
+      code: https://github.com/quarto-dev/quarto-web/blob/main/docs/interactive/ojs/examples/penguins.qmd
+      thumbnail: interactive/interactive-ojs.png
+    - title: Shiny
+      subtitle: web framework for R
+      href: https://jjallaire.shinyapps.io/diamonds-explorer/
+      code: https://github.com/quarto-dev/quarto-web/blob/main/docs/interactive/shiny/_examples/diamonds/shiny-diamonds.qmd
+      thumbnail: interactive/interactive-shiny.png
+    - title: Jupyter 
+      subtitle: interactive widgets
+      href: ../interactive/widgets/jupyter.html
+      code: https://github.com/quarto-dev/quarto-web/blob/main/docs/interactive/widgets/jupyter.qmd
+      thumbnail: interactive/interactive-jupyter.png
+  
+  
+- category: Websites
+  description: |
+    Publish collections of articles as a website
+  tiles:
+    - title: quarto.org 
+      subtitle: documentation
+      href: https://quarto.org
+      code: https://github.com/quarto-dev/quarto-web/
+      thumbnail: websites/websites-quarto.png
+    - title: R-Manuals
+      subtitle: documentation
+      href: https://rstudio.github.io/r-manuals/
+      code: https://github.com/rstudio/r-manualsweb
+      thumbnail: websites/websites-r-manuals.png
+    - title: Quarto tip a day
+      subtitle: blog
+      href: https://mine-cetinkaya-rundel.github.io/quarto-tip-a-day/
+      code: https://github.com/mine-cetinkaya-rundel/quarto-tip-a-day
+      thumbnail: websites/websites-quartotip.png
+    - title: nbdev
+      subtitle: from fast.ai
+      href: https://nbdev.fast.ai/
+      code: https://github.com/fastai/nbdev
+      thumbnail: websites/websites-nbdev.png
+    - title: Practical Deep Learning
+      subtitle: from fast.ai
+      href: https://course.fast.ai/
+      code: https://github.com/fastai/course22/
+      thumbnail: websites/websites-practical-deep-learning.png
+    - title: Beatriz Milz
+      subtitle: personal website + blog
+      href: https://beamilz.com/
+      code: https://github.com/beatrizmilz/blog-en
+      thumbnail: websites/websites-bea-milz.png    
+    - title: Mike Mahoney
+      subtitle: personal website + blog
+      href: https://www.mm218.dev/
+      code: https://github.com/mikemahoney218/mm218.dev
+      thumbnail: websites/websites-mike-mahoney.png
+    - title: ForBo7 // Salman Naqvi
+      subtitle: personal site + blog + works
+      href: https://forbo7.github.io
+      code: https://github.com/ForBo7/forbo7.github.io
+      thumbnail: websites/websites-forbo7-landing.png
+    - title: LTM Data Workflows w/ Arrow
+      subtitle: workshop
+      href: https://arrow-user2022.netlify.app/
+      code: https://github.com/djnavarro/arrow-user2022
+      thumbnail: websites/websites-arrow-workshop.png
+    - title: Julia Workshop for Data Science
+      subtitle: course
+      href: https://crsl4.github.io/julia-workshop/
+      code: https://github.com/crsl4/julia-workshop
+      thumbnail: websites/websites-julia-workshop.png
+    - title: STA 210 - Regression Analysis
+      subtitle: course
+      href: https://sta210-s22.github.io/website/
+      code: https://github.com/sta210-s22/website
+      thumbnail: websites/websites-sta210.png
+    - title: The MockUp
+      subtitle: blog
+      href: https://themockup.blog/
+      code: https://github.com/jthomasmock/themockup-blog
+      thumbnail: websites/websites-mockup.png
+    - title: mrgsolve
+      subtitle: documentation
+      href: https://mrgsolve.org/
+      code: https://github.com/metrumresearchgroup/mrgsolve
+      thumbnail: websites/websites-mrgsolve.png
+    - title: NASA & OpenScapes
+      subtitle: website
+      href: https://nasa-openscapes.github.io/
+      code: https://github.com/NASA-Openscapes/NASA-Openscapes.github.io
+      thumbnail: websites/websites-nasa-openscapes.png
+    - title: 2021 Cloud Hackathon
+      subtitle: event
+      href: https://nasa-openscapes.github.io/2021-Cloud-Hackathon/
+      code: https://github.com/nasa-openscapes/2021-Cloud-Hackathon
+      thumbnail: websites/websites-2021-cloud-hackathon.png
+    - title: Making shareable docs with Quarto
+      subtitle: tutorial
+      href: https://openscapes.github.io/quarto-website-tutorial/
+      code: https://github.com/openscapes/quarto-website-tutorial
+      thumbnail: websites/websites-opescapes-quarto-tutorial.png
+    - title: Data Science in a Box
+      subtitle: course website
+      href: https://datasciencebox.org/
+      code: https://github.com/rstudio-education/datascience-box
+      thumbnail: websites/websites-datascienceinabox.png
+    - title: Wannabe Rstats-fu
+      subtitle: blog
+      href: https://yutani.rbind.io/
+      code: https://github.com/rbind/yutani
+      thumbnail: websites/websites-wannabe-rstats-fu.png
+    - title: Hamel Husain's Professional Site
+      subtitle: blog + notes
+      href: https://hamel.dev
+      code: https://github.com/hamelsmu/hamel/
+      thumbnail: websites/websites-hamel.png
+    - title: Python for Data Science
+      subtitle: course website + notebooks
+      href: https://pythonds.linogaliana.fr/
+      code: https://github.com/linogaliana/python-datascientist
+      thumbnail: websites/websites-linogaliana.png
+    - title: fluidsyndicate 
+      subtitle: open source material for performances
+      href: https://fluidsyndicate.com
+      code: https://codeberg.org/jcolomb/fluidsyndicate
+      thumbnail: websites/websites-fluidsyndicate.png  
+    - title: Real World Data Science
+      subtitle: Ethical, impactful data science by the RSS
+      href: https://realworlddatascience.net/
+      code: https://github.com/realworlddatascience/realworlddatascience.github.io
+      thumbnail: websites/websites-real-world-data-science.png
+    - title: Hertie Coding Club
+      subtitle: Website platform to learn coding skills
+      href: https://www.hertiecodingclub.com/
+      code: https://github.com/jurjoroa/hcc-website
+      thumbnail: websites/websites-hertie-coding-club.png
+
+
+- category: Books
+  description: |
+    Publish a book in multiple formats
+  tiles:
+    - title: Modern Polars
+      href: https://kevinheavey.github.io/modern-polars/
+      code: https://github.com/kevinheavey/modern-polars
+      thumbnail: books/modern-polars.png
+    - title: Hands on Programming with R
+      href: https://jjallaire.github.io/hopr/
+      code: https://github.com/jjallaire/hopr/
+      thumbnail: websites/websites-hopr.png
+    - title: Visualization Curriculum
+      href: https://jjallaire.github.io/visualization-curriculum
+      code: https://github.com/jjallaire/visualization-curriculum
+      thumbnail: websites/websites-jupyter.png
+    - title: Python for Data Analysis, 3E
+      href: https://wesmckinney.com/book/
+      thumbnail: books/books-python-for-data.png
+    - title: R for Data Science, 2E
+      href: https://r4ds.hadley.nz/
+      code: https://github.com/hadley/r4ds/
+      thumbnail: books/books-r4ds.png      
+    - title: R Packages
+      href: https://r-pkgs.org/
+      code: https://github.com/hadley/r-pkgs/
+      thumbnail: books/books-r-pkgs.png  
+    - title: mlr3book
+      href: https://mlr3book.mlr-org.com/
+      code: https://github.com/mlr-org/mlr3book/tree/main/book/
+      thumbnail: books/books-mlr3book.png
+    - title: Telling Stories with Data
+      href: https://tellingstorieswithdata.com/
+      code: https://github.com/RohanAlexander/telling_stories
+      thumbnail: books/books-telling-stories.png
+    - title: Geocomputation with Python
+      href: https://py.geocompx.org/
+      code: https://github.com/geocompx/py
+      thumbnail: books/geocompy.png      
+    - title: utilitR documentation (French)
+      href: https://www.book.utilitr.org/
+      code: https://github.com/InseeFrLab/utilitR
+      thumbnail: books/utilitr.png      
+    - title: Analyse et conception de logiciels (French)
+      href: https://fuhrmanator.github.io/log210-ndc-quarto/
+      code: https://github.com/fuhrmanator/log210-ndc-quarto/
+      thumbnail: books/book-analyse-conceptions-french.png
+    - title: Time Series Analysis
+      href: https://vlyubchich.github.io/tsar/
+      code: https://github.com/vlyubchich/tsar/
+      thumbnail: books/tsar.png
+    - title: Causal Inference in R 
+      href: https://www.r-causal.org/
+      code: https://github.com/malcolmbarrett/causal-inference-in-r
+      thumbnail: books/ci-in-r.png
+    - title: R for Clinical Study Reports and Submission
+      href: https://r4csr.org/
+      code: https://github.com/elong0527/r4csr
+      thumbnail: books/books-r4csr.png
+    - title: Cookbook Polars for R
+      href: https://ddotta.github.io/cookbook-rpolars/
+      code: https://github.com/ddotta/cookbook-rpolars
+      thumbnail: books/books-cookbook-rpolars.png

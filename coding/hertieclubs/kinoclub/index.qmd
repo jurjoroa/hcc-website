@@ -1,0 +1,53 @@
+---
+title:  '{{< animate fadeInDown "Hertie School Kino Club"delay=.6s >}}'
+subtitle: '{{< animate fadeInDown "Kino Club gives students an easy introduction into the craft and power of cinema. From blockbusters to arthouse and from Asia to Europe, Kino Club will host diverse screenings and themed film festivals. "delay=.6s >}}'
+categories: ["Cinema", "Films"]
+toc: true
+draft: false
+code-link: true
+code-copy: true
+title-block-banner: true
+image: images/kino_club.png
+include-in-header: meta.html
+comments: false
+---
+
+<style>
+  body {
+  background: linear-gradient(to right, #000428, #004e92);
+  color: white;
+}
+
+.carousel-control-next-icon, .carousel-control-prev-icon {
+  color: white !important;
+}
+  
+</style>
+
+![](images/kino_club.png){fig-align="center"}
+
+
+Description:  The Kino Club brings you to Berlin film culture. From blockbusters to arthouse and from Asia to Europe, Kino Club will host and visit diverse screenings and festivals throughout the city. The Club wants to show how film is approached differently throughout the world, how it shapes cultures, and what makes it so unique. Filmmakers and Professors in film will be invited for talks and Q&As. Students get the opportunity to share their own ideas and favourite topics in film by organizing their own screenings. Events will be held both at Hertie and externally.
+
+
+Contact persons: 
+
+- Job Kemperman (Chairperson, 229889@students.hertie-school.org)
+
+- Debarun Dutta (Treasurer, 224276@students.hertie-school.org)
+
+
+
+ 
+
+ 
+
+
+```{r, echo=FALSE, warning=FALSE}
+#| classes: '.g-col-lg-6 .g-col-12 .g-col-md-12'
+
+
+source("carousel.R")
+carousel("gallery-carousel", 5000, 
+         yaml.load_file("carousel.yml"))
+```
