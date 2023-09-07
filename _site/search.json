@@ -151,7 +151,7 @@
     "href": "learn/rstudio/Multithreading/index.html#intel",
     "title": "Enable Multithread with data.table in Mac/Intel chips",
     "section": "Intel",
-    "text": "Intel\n\nHOMEBREW_LOC=/usr/local\nLLVM_LOC=$(HOMEBREW_LOC)/opt/llvm\nCC=$(LLVM_LOC)/bin/clang -fopenmp \nCXX=$(LLVM_LOC)/bin/clang++ -fopenmp \nCFLAGS=-g -O3 -Wall -pedantic -std=gnu99 -mtune=native -pipe \nCXXFLAGS=-g -O3 -Wall -pedantic -std=c++11 -mtune=native -pipe \nLDFLAGS=-L$(HOMEBREW_LOC)/opt/gettext/lib -L$(LLVM_LOC)/lib -Wl,-rpath,$(LLVM_LOC)/lib \nCPPFLAGS=-I$(HOMEBREW_LOC)/opt/gettext/include -I$(LLVM_LOC)/include\n\n\n\n\n\n\nOnce you put the paths, save the text file and close it. The difference between Apple Silicon and Intel is just the path; everything else remains similar. For Apple Silicon, the path is /opt/homebrew and for Intel is /usr/local."
+    "text": "Intel\n\nHOMEBREW_LOC=/usr/local\nLLVM_LOC=$(HOMEBREW_LOC)/opt/llvm\nCC=$(LLVM_LOC)/bin/clang -fopenmp \nCXX=$(LLVM_LOC)/bin/clang++ -fopenmp \nCFLAGS=-g -O3 -Wall -pedantic -std=gnu99 -mtune=native -pipe \nCXXFLAGS=-g -O3 -Wall -pedantic -std=c++11 -mtune=native -pipe \nLDFLAGS=-L$(HOMEBREW_LOC)/opt/gettext/lib -L$(LLVM_LOC)/lib -Wl,-rpath,$(LLVM_LOC)/lib \nCPPFLAGS=-I$(HOMEBREW_LOC)/opt/gettext/include -I$(LLVM_LOC)/include\n\n\n\n\n\nOnce you put the paths, save the text file and close it. The difference between Apple Silicon and Intel is just the path; everything else remains similar. For Apple Silicon, the path is /opt/homebrew and for Intel is /usr/local."
   },
   {
     "objectID": "learn/rstudio/objects/index.html",

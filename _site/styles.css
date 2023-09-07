@@ -1786,7 +1786,14 @@ code {
 /*arrows, parenthesis*/
 
 code span.ot { 
-  color: #C60115 !important;}
+  color: #C60115 !important;
+  
+}
+
+code span.op { 
+  color: #C60115 !important;
+  
+}
 
 /*
 
