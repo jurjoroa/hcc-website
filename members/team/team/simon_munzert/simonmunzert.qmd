@@ -55,23 +55,6 @@ color: #fb1433 !important;
 I'm Professor of Data Science and Public Policy at the Hertie School in Berlin and Director of the Data Science Lab. My research focuses on public opinion, attitude formation in the digital age, and the use of online data in social research. I use experimental methods, online data, and innovative measurement strategies to study how people act and think, politically.
 
 
-
-# Current research {{< fa solid pen-fancy >}}
-
-<hr>
-
-- [The Lancet Countdown on health and climate change](https://www.thelancet.com/countdown-health-climate). (Working group 5: public and political engagement)
-
-- [Global Affective partisan polarization and moral dilemmas during the COVID-19 pandemic](https://osf.io/r32fa/) (joint project with Lukas Stoetzer et al.)
-
-- [Global Preferences for Online Hate Speech Regulation](https://research.fb.com/blog/2020/02/announcing-winners-content-governance-rfp/) (joint project with Richard Traunmüller, funded by Facebook Research)
-
-- [Media Exposure and Opinion Formation in an Age of Information Overload](https://simonmunzert.github.io/meof/) (joint project with Pablo Barberá, Andrew Guess and JungHwan Yang, funded by the Volkswagen Foundation)
-
-- [Citizen and Elite Activity on the Wikipedia Market Place of Political Information](https://www.daimler-benz-stiftung.de/cms/nachwuchs/stipendienprogramm-fuer-postdoktoranden/750-stipendiaten-2017.html) (funded by the Daimler and Benz Foundation)
-
-
-
 # Publications {{< fa solid landmark >}}
 
 <hr>

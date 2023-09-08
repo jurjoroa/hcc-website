@@ -36,52 +36,6 @@ color: white;
  
 
 
-# Academic Advisors  {style="color: transparent;"}
-
-<div class="container">
-  <header class="header show-on-scroll">
-    <h1 class="heading" style="color: white;"> Academic Advisors </h1>
-  </header>
-</div>
-
-
-<hr>
-
-```{=HTML}
-
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
-<section id="container">
-    <div class="user-container">
-
-        <!-- Card Two-->
-        <a href="../team/team/simon_munzert/simonmunzert.html">
-        <div id="simonmunzert" class="card_team inline-photo3 show-on-scroll">
-          <div class="hover_esp_team"> Simon Munzert</div>
-        </div>
-        </a>
-        
-                <!-- Card Two-->
-        <a href="../team/team/huy_dang/huydang.html">
-        <div id="huydang" class="card_team inline-photo3 show-on-scroll">
-          <div class="hover_esp_team"> Huy Dang</div>
-        </div>
-        </a>
-
-    </div>
-</section>
- 
-```
-
-
-```{=html}
-
-
-<script src='assets/js/anime_photos.js'></script>
-<script src="assets/js/members.js"></script>
-
-```
-
 
 # Instructors {style="color: transparent;"}
 
@@ -200,6 +154,52 @@ color: white;
 
 
 
+
+# Academic Advisors  {style="color: transparent;"}
+
+<div class="container">
+  <header class="header show-on-scroll">
+    <h1 class="heading" style="color: white;"> Academic Advisors </h1>
+  </header>
+</div>
+
+
+<hr>
+
+```{=HTML}
+
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<section id="container">
+    <div class="user-container">
+
+        <!-- Card Two-->
+        <a href="../team/team/simon_munzert/simonmunzert.html">
+        <div id="simonmunzert" class="card_team inline-photo3 show-on-scroll">
+          <div class="hover_esp_team"> Simon Munzert</div>
+        </div>
+        </a>
+        
+                <!-- Card Two-->
+        <a href="../team/team/huy_dang/huydang.html">
+        <div id="huydang" class="card_team inline-photo3 show-on-scroll">
+          <div class="hover_esp_team"> Huy Dang</div>
+        </div>
+        </a>
+
+    </div>
+</section>
+ 
+```
+
+
+```{=html}
+
+
+<script src='assets/js/anime_photos.js'></script>
+<script src="assets/js/members.js"></script>
+
+```
 
 
 
