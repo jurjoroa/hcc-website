@@ -9,11 +9,18 @@ local hasDoneWebRSetup = false
 -- https://docs.r-wasm.org/webr/latest/api/js/interfaces/WebR.WebROptions.html
 
 -- Define a base compatibile version
-local baseVersionWebR = "0.1.1"
+local baseVersionWebR = "0.2.1"
 
 -- Define where WebR can be found
 local baseUrl = ""
 local serviceWorkerUrl = ""
+
+-- Define the webR communication protocol
+local channelType = "ChannelType.Automatic"
+
+-- Define a variable to suppress exporting service workers if not required.
+-- (e.g. skipped for PostMessage or SharedArrayBuffer)
+local hasServiceWorkerFiles = true
 
 -- Define user directory
 local homeDir = "/home/web_user"
@@ -40,6 +47,25 @@ local counter = 0
 function is_variable_empty(s)
   return s == nil or s == ''
 end
+
+-- Convert the communication channel meta option into a WebROptions.channelType option
+function convertMetaChannelTypeToWebROption(input)
+  -- Create a table of conditions
+  local conditions = {
+    ["automatic"] = "ChannelType.Automatic",
+    [0] = "ChannelType.Automatic",
+    ["shared-array-buffer"] = "ChannelType.SharedArrayBuffer",
+    [1] = "ChannelType.SharedArrayBuffer",
+    ["service-worker"] = "ChannelType.ServiceWorker",
+    [2] = "ChannelType.ServiceWorker",
+    ["post-message"] = "ChannelType.PostMessage",
+    [3] = "ChannelType.PostMessage",
+  }
+  -- Subset the table to obtain the communication channel.
+  -- If the option isn't found, return automatic.
+  return conditions[input] or "ChannelType.Automatic"
+end
+
 
 -- Parse the different webr options set in the YAML frontmatter, e.g.
 --
@@ -71,6 +97,17 @@ function setWebRInitializationOptions(meta)
   -- https://docs.r-wasm.org/webr/latest/api/js/interfaces/WebR.WebROptions.html#baseurl
   if not is_variable_empty(webr["base-url"]) then
     baseUrl = pandoc.utils.stringify(webr["base-url"])
+  end
+
+  -- The communication channel mode webR uses to connect R with the web browser 
+  -- Default: "ChannelType.Automatic"
+  -- Documentation:
+  -- https://docs.r-wasm.org/webr/latest/api/js/interfaces/WebR.WebROptions.html#channeltype
+  if not is_variable_empty(webr["channel-type"]) then
+    channelType = convertMetaChannelTypeToWebROption(pandoc.utils.stringify(webr["channel-type"]))
+    if not (channelType == "ChannelType.Automatic" and channelType == "ChannelType.ServiceWorker") then
+      hasServiceWorkerFiles = false
+    end
   end
 
   -- The base URL from where to load JavaScript worker scripts when loading webR
@@ -148,9 +185,19 @@ function readTemplateFile(template)
   return content
 end
 
--- Obtain the editor template file at webr-editor.html
-function editorTemplateFile()
-  return readTemplateFile("webr-editor.html")
+-- Obtain the editor template file at webr-context-interactive.html
+function interactiveTemplateFile()
+  return readTemplateFile("webr-context-interactive.html")
+end
+
+-- Obtain the output template file at webr-context-output.html
+function outputTemplateFile()
+  return readTemplateFile("webr-context-output.html")
+end
+
+-- Obtain the setup template file at webr-context-setup.html
+function setupTemplateFile()
+  return readTemplateFile("webr-context-setup.html")
 end
 
 -- Obtain the initialization template file at webr-init.html
@@ -158,8 +205,12 @@ function initializationTemplateFile()
   return readTemplateFile("webr-init.html")
 end
 
--- Cache a copy of the template to avoid multiple read/writes.
-editor_template = editorTemplateFile()
+-- Cache a copy of each public-facing templates to avoid multiple read/writes.
+interactive_template = interactiveTemplateFile()
+
+output_template = outputTemplateFile()
+
+setup_template = setupTemplateFile()
 ----
 
 -- Define a function that escape control sequence
@@ -195,7 +246,7 @@ function checkMajorMinorPatchVersionFormat(version_string)
       error("Invalid version string: " .. version_string)
   end
   -- Empty return to use as enforcement
-  return 
+  return false
 end
 
 -- Compare versions
@@ -238,6 +289,7 @@ function initializationWebR()
     ["SHOWSTARTUPMESSAGE"] = showStartUpMessage, -- tostring()
     ["SHOWHEADERMESSAGE"] = showHeaderMessage,
     ["BASEURL"] = baseUrl, 
+    ["CHANNELTYPE"] = channelType,
     ["SERVICEWORKERURL"] = serviceWorkerUrl, 
     ["HOMEDIR"] = homeDir,
     ["INSTALLRPACKAGESLIST"] = installRPackagesList
@@ -270,10 +322,29 @@ function ensureWebRSetup()
   -- https://quarto.org/docs/extensions/lua-api.html#includes
   quarto.doc.include_text("in-header", initializedConfigurationWebR)
 
-  -- Copy the two web workers into the directory
-  -- https://quarto.org/docs/extensions/lua-api.html#dependencies
-  quarto.doc.add_format_resource("webr-worker.js")	
-  quarto.doc.add_format_resource("webr-serviceworker.js")	
+  -- Insert the monaco editor initialization
+  quarto.doc.include_file("before-body", "monaco-editor-init.html")
+
+  -- If the ChannelType requires service workers, register and copy them into the 
+  -- output directory.
+  if hasServiceWorkerFiles then 
+    -- Copy the two web workers into the directory
+    -- https://quarto.org/docs/extensions/lua-api.html#dependencies
+    quarto.doc.add_html_dependency({
+      name = "webr-worker",
+      version = baseVersionWebR,
+      seviceworkers = {"webr-worker.js"}, -- Kept to avoid error text.
+      serviceworkers = {"webr-worker.js"}
+    })
+
+    quarto.doc.add_html_dependency({
+      name = "webr-serviceworker",
+      version = baseVersionWebR,
+      seviceworkers = {"webr-serviceworker.js"}, -- Kept to avoid error text.
+      serviceworkers = {"webr-serviceworker.js"}
+    })
+  end
+
 end
 
 -- Define a function to replace keywords given by {{ WORD }}
@@ -287,6 +358,44 @@ function substitute_in_file(contents, substitutions)
   return contents
 end
 
+-- Extract Quarto code cell options from the block's text
+function extractCodeBlockOptions(block)
+  
+  -- Access the text aspect of the code block
+  local code = block.text
+
+  -- Define two local tables:
+  --  the block's attributes
+  --  the block's code lines
+  local newAttributes = {}
+  local newCodeLines = {}
+
+  -- Iterate over each line in the code block 
+  for line in code:gmatch("([^\r\n]*)[\r\n]?") do
+    -- Check if the line starts with "#|" and extract the key-value pairing
+    -- e.g. #| key: value goes to newAttributes[key] -> value
+    local key, value = line:match("^#|%s*(.-):%s*(.-)%s*$")
+
+    -- If a special comment is found, then add the key-value pairing to the newAttributes table
+    if key and value then
+      newAttributes[key] = value
+    else
+      -- Otherwise, it's not a special comment, keep the code line
+      table.insert(newCodeLines, line)
+    end
+  end
+
+  -- Set the new attributes for the code block
+  block.attributes = newAttributes
+
+  -- Set the codeblock text to exclude the special comments.
+  block.text = table.concat(newCodeLines, '\n')
+
+  -- Return the full block
+  return block
+end
+
+-- Replace the code cell with a webR editor
 function enableWebRCodeCell(el)
       
   -- Let's see what's going on here:
@@ -321,6 +430,9 @@ function enableWebRCodeCell(el)
       -- Modify the counter variable each time this is run to create
       -- unique code cells
       counter = counter + 1
+
+      -- Convert webr-specific option commands into attributes
+      el = extractCodeBlockOptions(el)
       
       -- 7 is the default height and width for knitr. But, that doesn't translate to pixels.
       -- So, we have 504 and 360 respectively.
@@ -333,14 +445,28 @@ function enableWebRCodeCell(el)
         ["WEBRCODE"] = escapeControlSequences(el.text)
       }
       
-      -- Make sure we perform a copy
-      local copied_editor_template = editor_template
+      -- Retrieve the newly defined attributes
+      local cell_context = el.attributes.context
 
-      -- Make the necessary substitutions
-      local webr_enabled_code_cell = substitute_in_file(copied_editor_template, substitutions)
+      -- Decide the correct template
+      -- Make sure we perform a copy of each template
+      local copied_code_template = nil
+      if is_variable_empty(cell_context) or cell_context == "interactive" then
+        copied_code_template = interactive_template
+      elseif cell_context == "setup" then
+        copied_code_template = setup_template
+      elseif cell_context == "output" then
+        copied_code_template = output_template
+      else
+        error("The `context` option must contain either: `interactive`, `setup`, or `output`. Not the value of `".. cell_context .."`")
+      end
+
+      -- Make the necessary substitutions into the template
+      local webr_enabled_code_cell = substitute_in_file(copied_code_template, substitutions)
 
       -- Return the modified HTML template as a raw cell
       return pandoc.RawInline('html', webr_enabled_code_cell)
+
     end
   end
   -- Allow for a pass through in other languages
