@@ -2,7 +2,7 @@
 toc: true
 author: ["Jorge Roa"]
 categories: [Website]
-date: '2023-06-24'
+date: '2023-09-08'
 title: '{{< animate fadeInDown "Welcome to our new website: the Hertie Coding Club"delay=.6s >}}'
 subtitle: '{{< animate fadeInDown "Tutorials, books, certifications, scripts, and all you need to start your journey in the coding world"delay=.6s >}}'
 image: web.png
