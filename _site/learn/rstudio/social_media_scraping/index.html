@@ -920,7 +920,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
-      var filterRegex = new RegExp(/https:\/\/www\.hertiecodingclub\.com/);
+      var filterRegex = new RegExp(/https:\/\/www\.hertiecodingclub\.com\//);
     var isInternal = (href) => {
         return filterRegex.test(href) || localhostRegex.test(href);
     }
@@ -974,7 +974,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </ul>
 </div>
   </div>
-</footer><script>var lightboxQuarto = GLightbox({"loop":true,"descPosition":"left","skin":"lightwidth","openEffect":"fade","selector":".lightbox","closeEffect":"fade"});</script>
+</footer><script>var lightboxQuarto = GLightbox({"descPosition":"left","openEffect":"fade","selector":".lightbox","closeEffect":"fade","loop":true,"skin":"lightwidth"});</script>
 
 
 <script src="../../../site_libs/quarto-html/zenscroll-min.js"></script>
