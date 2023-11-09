@@ -1,0 +1,461 @@
+---
+title: "RStudio shortcuts that will save your life"
+subtitle: '{{< animate fadeInDown "Learn some of the most useful tools to optimize your coding sessions in RStudio."delay=.6s >}}'
+author: "David U. Garibay-Treviño, MSc"
+date: "2023-11-10"
+categories: ["RStudio", "Shortcuts", "Snippets", "Code completion"]
+toc: true
+draft: false
+code-link: true
+code-copy: true
+number-sections: true
+title-block-banner: true
+comments: false
+image: figs/foco.png
+include-in-header: meta.html
+filters:
+   - lightbox
+lightbox: 
+  match: auto
+  effect: fade
+  desc-position: left
+  css-class: "lightwidth"
+---
+
+
+
+
+<!-- ::: {.callout-warning} -->
+
+<!-- - Add source column -->
+
+<!-- - Show document outline -->
+
+<!-- - Use the same format as the shortcuts help  -->
+
+<!-- - [commands palette](https://juliendiot42.github.io/RTips-Tricks/) -->
+
+<!-- - Jump to matching Brace/Paren -->
+
+<!-- ::: -->
+
+# Introduction {#sec-intro}
+
+------------------------------------------------------------------------
+
+I remember when I started to code in R. I was highly inefficient and didn't know any of the RStudio capabilities. I manually typed every part of the assignment operator (`<` and then `-`), as well as every `#` at the start of all the lines I wanted to comment. The mouse was my main tool to open new scripts, change tabs, and close tabs. When I had to read or write any file I had to double check how it was written and where it was located. And when an important script was lost, I did not have any alternative other than to check every one of the folders where I thought it could be placed.
+
+At first I did not imagine that a blessed group of people already had thought about smart ways to tackle these and many other difficulties.
+
+Everything started to change for me when I saw a colleague selecting multiples lines of code and commenting them all at once. I was amazed. I asked him how he did it, and from that point I started my journey to learn and use new shortcuts and commands in RStudio.
+
+If you have kept thinking on how to speed up your code writing process or even if you only want to be more comfortable developing code, then you have arrived to the right place! In this brief tutorial I share some of the shortcuts I use the most. Besides from my own experience, I have also looked for what other users have talked on the subject (check @sec-ref).
+
+To make this tutorial a little bit more intuitive. I have split the text in the next categories:
+
+-   Insert code
+-   Edit code
+-   Move between panes and tabs
+-   Find files and functions
+-   Running code
+-   Code completion
+-   Snippets
+
+All the shortcuts in this tutorial will be listed inside of a table, where the title is the name (or description) of the shortcut, and the body shows how the shortcut should be typed for Windows and Mac OS. With nothing less to add let's start!
+
+**Show keyboard shortcuts help** is the first thing you have to keep in mind. This shortcut brings up a screen listing some of some of the most useful shortcuts in RStudio. In case you want to check the full list of shortcuts, in the upper right corner of the help screen you will find a link called *See All Shortcuts*. It will take you to a page containing all the shortcuts divided by OS. To exit the help screen you just have to press `Esc`.
+
+| Windows ![](figs/windows.png){width="5%"} | Mac ![](figs/apple.png){width="6.5%"} |
+|:------------------------------------:|:--------------------------------:|
+|                Alt+Shift+K                |            Option+Shift+K             |
+
+: **Show keyboard shortcuts help**
+
+![How to check for the full list of shortcuts](figs/help.png){fig-align="center" width="100%"}
+
+# Insert code {#sec-insert}
+
+------------------------------------------------------------------------
+
+Want to create a new R Script? easy-peasy!
+
+| Windows ![](figs/windows.png){width="5%"} | Mac ![](figs/apple.png){width="6.5%"} |
+|:------------------------------------:|:--------------------------------:|
+|                Ctr+Shift+N                |              Cmd+Shift+N              |
+
+: **Create a new R Script**
+
+You want to assign an object? Instead of writting `<-` key by key, you can do it directly by pressing:
+
+| Windows ![](figs/windows.png){width="5%"} | Mac ![](figs/apple.png){width="6.5%"} |
+|:------------------------------------:|:--------------------------------:|
+|                   Alt+-                   |               Option+-                |
+
+: **Insert assignment operator `<-`**
+
+While concatenating functions or operations, forget about writing the pipe opearator by hand. You can insert it directly by pressing:
+
+| Windows ![](figs/windows.png){width="5%"} | Mac ![](figs/apple.png){width="6.5%"} |
+|:------------------------------------:|:--------------------------------:|
+|               Ctrl+Shift+M                |              Cmd+Shift+M              |
+
+: **Insert pipe operator`%>%` or `|>`**
+
+::: {.callout-tip title="Defining the default pipe"}
+The type of pipe that is going to be inserted is defined at `Global Options`.
+
+Currently there are two pipes that are commonly used:
+
+-   the magrittr pipe `%>%`, and
+-   the native pipe `|>`.
+
+You can preset the pipe you want to insert by accessing `Global Options/Code/Editing` and defining if you want to use the native pipe (in case you don't, the magrittr pipe will be automatically used).
+
+![](figs/pipe.png){fig-align="center" width="60%"}
+:::
+
+You can forget of writing every component of the code chunks by hand while working on a `Quarto` or an `R Markdown` file, by using the **insert code chunk** shortcut.
+
+It certainly will save you a good amount of time. Besides, it will help you to keep focused in the main things while creating a Notebook: improve your writing and develop code.
+
+| Windows ![](figs/windows.png){width="5%"} | Mac ![](figs/apple.png){width="6.5%"} |
+|:------------------------------------:|:--------------------------------:|
+|                Ctrl+Alt+I                 |             Cmd+Option+I              |
+
+: **Insert code chunk (for Quarto and RMarkdown)**
+
+**Comment/uncomment current line selection** is one of the first shortcuts that I learned, and currently it is still among the ones I use the most. Instead of manually adding `#` at the start of each line you want to comment, select the section of code you want to coment, and then and then use this shortcut. Since commenting code is very common, this shortcut will save you an enormous amount of time.
+
+| Windows ![](figs/windows.png){width="5%"} | Mac ![](figs/apple.png){width="6.5%"} |
+|:------------------------------------:|:--------------------------------:|
+|               Ctrl+Shift+C                |              Cmd+Shift+C              |
+
+: **Comment/uncomment current line selection**
+
+In case you are looking how to organize your code scripts sections, subsections and other sorting levels, you will be happy to find about how to **insert a new code section**. This is ideal to have a good structure of your code, and the best part is that all the sections and subsections that you create will be visible in the code outline that is next to the `Source` button in Rstudio.
+
+| Windows ![](figs/windows.png){width="5%"} | Mac ![](figs/apple.png){width="6.5%"} |
+|:------------------------------------:|:--------------------------------:|
+|               Ctrl+Shift+R                |              Cmd+Shift+R              |
+
+: **Insert a new code section**
+
+Here's how to **Toggle document outline** in case you were looking for it.
+
+| Windows ![](figs/windows.png){width="5%"} | Mac ![](figs/apple.png){width="6.5%"} |
+|:------------------------------------:|:--------------------------------:|
+|               Ctrl+Shift+O                |              Cmd+Shift+O              |
+
+: **Toggle document outline**
+
+::: {.callout-tip title="Defining the level of the headers"}
+The section breaks have a similar structure as the [Quarto and RMarkdown headings](https://quarto.org/docs/authoring/markdown-basics.html#headings). The number of `#`'s at the beginning of each line defines the level of the headers:
+
+-   `#` stands for 1st level header,
+-   `##` stands for 2nd level headers,
+-   `###` stands for 3rd level headers, and so on.
+
+![](figs/outline.png){fig-align="center" width="100%"}
+:::
+
+Instead of manually indenting your code, you can make a selection of the code and indent every selected line. If want to reindent all the content of a script, first select all (`Ctrl + A` for Windows, or `Cmd + A` for Mac) and then reindent. This will save you a lot of time and headaches figuring out how the code should be indented. This is a great aid to visually structure your code.
+
+| Windows ![](figs/windows.png){width="5%"} | Mac ![](figs/apple.png){width="6.5%"} |
+|:------------------------------------:|:--------------------------------:|
+|                  Ctrl+I                   |                 Cmd+I                 |
+
+: **Reindent selection**
+
+# Edit code {#edit_code}
+
+------------------------------------------------------------------------
+
+You can move lines of code up or down without having to copy them.
+
+| Windows ![](figs/windows.png){width="5%"} | Mac ![](figs/apple.png){width="6.5%"} |
+|:------------------------------------:|:--------------------------------:|
+|                Alt+Up/Down                |            Option+Up/Down             |
+
+: **Move lines up/down**
+
+You can also copy lines of code up or down without having to copy and paste them.
+
+| Windows ![](figs/windows.png){width="5%"} | Mac ![](figs/apple.png){width="6.5%"} |
+|:------------------------------------:|:--------------------------------:|
+|             Shift+Alt+Up/Down             |          Option+Cmd+Up/Down           |
+
+: **Copy lines up/down**
+
+You can select code without using the mouse. To create or modify a selection using the keyboard, you have to maintain `Shift` pressed while moving your cursor. This will select anything that have been passed by your cursor. Once you stop pressing `Shift` you will stop modifying your selection.
+
+| Windows ![](figs/windows.png){width="5%"} | Mac ![](figs/apple.png){width="6.5%"} |
+|:------------------------------------:|:--------------------------------:|
+|              Shift+\[Arrow\]              |            Shift+\[Arrow\]            |
+
+: **Select**
+
+You can move your cursor directly to the start or the end of a line only with your keyboard following the next key combination:
+
+| Windows ![](figs/windows.png){width="5%"} | Mac ![](figs/apple.png){width="6.5%"} |
+|:------------------------------------:|:--------------------------------:|
+|              Alt+Left/Right               |            Cmd+Left/Right             |
+
+: **Move cursor to start/end of line**
+
+You can also move your cursor to the start or the end of a word with the following shortcut:
+
+| Windows ![](figs/windows.png){width="5%"} | Mac ![](figs/apple.png){width="6.5%"} |
+|:------------------------------------:|:--------------------------------:|
+|              Ctrl+Left/Right              |           Option+Left/Right           |
+
+: **Jump to word** (move cursor to start/end of word)
+
+You can add multiple cursors to edit multiple lines of code simultaneously. For that you need to press the next combination of keys.
+
+| Windows ![](figs/windows.png){width="5%"} | Mac ![](figs/apple.png){width="6.5%"} |
+|:------------------------------------:|:--------------------------------:|
+|             Ctrl+Alt+Up/Down              |          Ctrl+Option+Up/Down          |
+
+: **Add cursor Above/Below current cursor**
+
+::: {.callout-tip title="Advanced selection"}
+Once you know how to select, move the cursor to the start/end of a line, move the cursor to the start/end of a word, and add multiple cursors, you have all the ingredients to make more complex selections. You can combine `select` with any of these shortcuts to get different types of selections.
+
+Here is an examples (in Mac format):
+
+-   You can make a selection from your cursor position to the end of a line by pressing `Shift+Alt+Left` in Windows (or `Shift+Cmd+Left` in Mac).
+:::
+
+# Move between panes and tabs {#sec-panes_tabs}
+
+------------------------------------------------------------------------
+
+You can **move focus to Source Editor**, i.e., place the cursor in the active script, without taking your hands out of the keyboard with the following shortcut.
+
+| Windows ![](figs/windows.png){width="5%"} | Mac ![](figs/apple.png){width="6.5%"} |
+|:------------------------------------:|:--------------------------------:|
+|                  Ctrl+1                   |                Ctrl+1                 |
+
+: **Move focus to Source Editor**
+
+The same idea goes for the console. You can place the cursor in the Console by using:
+
+| Windows ![](figs/windows.png){width="5%"} | Mac ![](figs/apple.png){width="6.5%"} |
+|:------------------------------------:|:--------------------------------:|
+|                  Ctrl+2                   |                Ctrl+2                 |
+
+: **Move focus to Console**
+
+I mainly use the shortcuts to move the cursor between the Source Editor (1) and the Console (2). In any case, you can focus the following elements inside RStudio just by changing the number of the key combination:
+
+-   1 - Source Editor
+-   2 - Console
+-   3 - Help
+-   4 - History
+-   5 - Files
+-   6 - Plots
+-   7 - Packages
+-   8 - Environment
+-   9 - Viewer
+
+To move between tabs without taking your hands out of the keyboard you have to type:
+
+| Windows ![](figs/windows.png){width="5%"} | Mac ![](figs/apple.png){width="6.5%"} |
+|:------------------------------------:|:--------------------------------:|
+|            Ctrl+Alt+Left/Right            |        Ctrl+Option+Left/Right         |
+
+: **Open previous/next tab**
+
+The previous shortcut may not be practical if you have opened many tabs. If you know the name of the tab you want to go, you can open it directly using **Switch to tab** which shows a list of all the tabs. You can look for a specific tab by writing its name and access it by pressing `enter`.
+
+| Windows ![](figs/windows.png){width="5%"} | Mac ![](figs/apple.png){width="6.5%"} |
+|:------------------------------------:|:--------------------------------:|
+|               Ctrl+Shift+.                |             Ctrl+Shift+.              |
+
+: **Switch to tab**
+
+![Switch to tab...](figs/switch_tab.png){fig-align="center" width="100%"}
+
+You can **close current document** once you have finished working on it. This is very usefull to close multiple tabs without using the mouse.
+
+| Windows ![](figs/windows.png){width="5%"} | Mac ![](figs/apple.png){width="6.5%"} |
+|:------------------------------------:|:--------------------------------:|
+|                  Ctrl+W                   |                 Cmd+W                 |
+
+: **Close current document**
+
+# Find files and functions {#sec-find}
+
+------------------------------------------------------------------------
+
+**Find/Replace text** shows a find/replace utility were you can find everything that match your search, one by one (by pressing the `Next` or `Prev` buttons), or at once (pressing `All`). It also lets you replace all the matches with another text. When a part of the of code is previously selected, the search and replace utility will only look into the selected code by default. You can modify the behavior of this utility by modifying its different options.
+
+| Windows ![](figs/windows.png){width="5%"} | Mac ![](figs/apple.png){width="6.5%"} |
+|:------------------------------------:|:--------------------------------:|
+|                  Ctrl+F                   |                 Cmd+F                 |
+
+: **Find/Replace text** (in active tab)
+
+![Selecting all the text that matches with the word `fear`](figs/find_replace.png){fig-align="center" width="100%"}
+
+The shortcut **Go to file/function** brings up a search box that allows you to:
+
+-   access the files where you have defined specific functions, or
+-   open files that are present in your current working directory.
+
+To do this, you will have to type the name of the file/function that you want to check and then press `enter`.
+
+| Windows ![](figs/windows.png){width="5%"} | Mac ![](figs/apple.png){width="6.5%"} |
+|:------------------------------------:|:--------------------------------:|
+|                  Ctrl+.                   |                Ctrl+.                 |
+
+: **Go to file/function**
+
+![Looking for the `basic_fun` function among the files of a working directory](figs/basic_fun.png){fig-align="center" width="100%"}
+
+In my consideration the most powerful and usefull search tool in the RStudio IDE is **Find in files**. It lets you find any text that matches your search among *all the files present under your working directory* or in any directory that you specify. It will list you all the findings disaggregating them by location. Just as **Find/replace text** this utility also lets you replace all the matches with specified text.
+
+| Windows ![](figs/windows.png){width="5%"} | Mac ![](figs/apple.png){width="6.5%"} |
+|:------------------------------------:|:--------------------------------:|
+|               Ctrl+Shift+F                |              Cmd+Shift+F              |
+
+: **Find in files**
+
+![Looking for the word `and` among the RScripts of a given directory](figs/find_in_files.png){fig-align="center" width="100%"}
+
+# Run code {#sec-run_code}
+
+------------------------------------------------------------------------
+
+The most basic way to execute code in the Source Editor is to put the cursor in the line (or selection) of code you want to run and use this shortcut. This will execute the current line (or selection) and move your cursor to the next part of the code. It is very useful when you are running your Scritps step by step.
+
+| Windows ![](figs/windows.png){width="5%"} | Mac ![](figs/apple.png){width="6.5%"} |
+|:------------------------------------:|:--------------------------------:|
+|                Ctrl+Enter                 |               Cmd+Enter               |
+
+: **Run current line or selection**
+
+This shortcut is similar to the previous one, except that the cursor will remain in its place after executing the code. It can be very useful, specially while making code tests or developing figures in `ggplot`, and you don't want to move your cursor away every time the code is executed.
+
+| Windows ![](figs/windows.png){width="5%"} | Mac ![](figs/apple.png){width="6.5%"} |
+|:------------------------------------:|:--------------------------------:|
+|                 Alt+Enter                 |             Option+Enter              |
+
+: **Run current line or selection (without moving cursor)**
+
+Imagine that you have written a lot of lines in a script and you would like to run continue modifying it after restarting your computer You don't have to run the code line by line until you arrive to a specific part of the code. With this shortcut you can place your cursor in a line and run everything before it. It is one of my favorites.
+
+| Windows ![](figs/windows.png){width="5%"} | Mac ![](figs/apple.png){width="6.5%"} |
+|:------------------------------------:|:--------------------------------:|
+|                Ctrl+Alt+B                 |             Ctrl+Option+B             |
+
+: Run from document **B**eginning to current line
+
+This is the complement of the previous shortcut. After placing the cursor in a specific line, you can run the rest of the code by using:
+
+| Windows ![](figs/windows.png){width="5%"} | Mac ![](figs/apple.png){width="6.5%"} |
+|:------------------------------------:|:--------------------------------:|
+|                Ctrl+Alt+E                 |             Ctrl+Option+E             |
+
+: Run from current line to document **E**nd
+
+# Code completion {#sec-auto}
+
+------------------------------------------------------------------------
+
+Once you start typing, a completion list will pop up showing the names of functions, objects and snippets that match your text. If the list is not shown, you can make it appear by pressing `Tab` after typing something. Inside the list use the `Up`/`Down` arrows to move between the suggestions, and press `Enter` or `Tab` to select an option. To exit the completion list without making a selection just press `Esc`.
+
+![Code completion of `read`](figs/code_completion.png){fig-align="center" width="85%"}
+
+While using functions, you can list their arguments by pressing `Tab` or `Ctrl+Space` inside the function parentheses. As in the previous case, you have to use the `Up`/`Down` arrows to move between the options and press `Enter` or `Tab` once you have made your selection. This can be extremely useful if you want to be very specific about the arguments that are used inside of a function.
+
+![Showing the arguments of the `read.csv` function](figs/fun_completion.png){fig-align="center" width="85%"}
+
+If you are using paths to read or write files, RStudio also has a completion tool to speed things up. To enter the path completion list you have to write quotation marks `""` and press `Tab` while your cursor is inside. A list showing the folders and files of your current working directory will appear. You can navigate between the options using the `Up`/`Down` arrows or you can type the name of the file/folder you want to go. Press `Enter` or `Tab` to make your selection. If you have accessed a new folder the process will repeat until you select a file.
+
+![Path completion while reading csv files](figs/path_completion.png){fig-align="center" width="85%"}
+
+::: {.callout-tip title="Tips for file navigation"}
+While navigating locations to save or read files, it is important to consider the following:
+
+-   `""` starts navigation at your *current working directory*,
+-   `"/"` starts navigation at you *root directory*, and
+-   `"../"` starts navigation *one level above* the working directory.
+:::
+
+# Snippets {#sec-snippets}
+
+------------------------------------------------------------------------
+
+Snippets are pieces of re-usable boilerplate code. They are very useful to avoid the repetition of writing several lines of code since they are a way to automate the insertion of pre-made pieces of code.
+
+To insert a snippet you have to write it and then select it from a completion list. It will be inserted along with some text placeholders which you can fill in. To move to the next placeholder you have to press `Tab`.
+
+Let's use the `fun` snippet, used to define new functions. First we have to write `fun` in an R script and select it from an autocompletion list. You will be able to recognize it because it has the `{snippet}` tag.
+
+![](figs/snippet_1.png){fig-align="center" width="85%"}
+
+Second, the `fun` snippet will be inserted with three placeholders: one to define the function **name**, another to define the function **variables**, and the last one to define the **body** of the function. Don't forget to press `Tab` to move to the next placeholder once you finish filling them!
+
+![](figs/snippet_2.png){fig-align="center" width="85%"}
+
+Here's a list of some useful snippets:
+
+-   `fun` to declare a new function,
+-   `lib` to declare a new library to be imported,
+-   `mat` to insert a new matrix,
+-   `for` to insert a for loop,
+-   `while` to insert a while loop,
+-   `if` to insert an *if* conditional statement,
+-   `el` to insert and *else* conditional statement,
+-   `ei` to insert and *else if* conditional statement,
+-   `apply` to insert an apply function, and
+-   `shiny` to insert a shiny app template.
+
+Besides, **you can customize and create your own snippets!**. To do this, you have to access `Global Options/Code/Editing` and click into *Edit Snippets*.
+
+![](figs/snippet_3.png){fig-align="center" width="60%"}
+
+You can look for more details on how to create custom snippets at this [website](https://appsilon.com/rstudio-shortcuts-and-tips/#:~:text=Reformat%20R%20scripts&text=Ctrl%20%2B%20Shift%20%2B%20A%20%E2%80%93%20Does,selected%20part%20of%20a%20code).
+
+# Conclusion
+
+------------------------------------------------------------------------
+
+As we have seen here, there are several shortcuts and commands that are incorporated into the RStudio IDE. It will take you some time learning and getting used to them. You will practice some more than others, and that is normal. Every developer has different tasks and priorities. Little by little you will notice how you are incorporating them in your usual workflow, and eventually, you will know more tips and tricks than the ones listed in this site.
+
+In the meanwhile, I hope this is useful for you, and I wish you the best of lucks in your path developing R code!
+
+::: {.callout-tip title="Custom keyboard shortcuts"}
+Just one last thing. RStudio allows you to create and customize keyboard shortcuts in `Tools/Modify keyboard shortcuts` you can more details about this in [this website](https://docs.posit.co/ide/user/ide/guide/productivity/custom-shortcuts.html#:~:text=Modify%20a%20command's%20shortcut%20by,based%20on%20the%20keys%20entered.).
+:::
+
+# References {#sec-ref}
+
+
+
+
+------------------------------------------------------------------------
+
+-   [Keyboard Shortcuts in the RStudio IDE](https://support.posit.co/hc/en-us/articles/200711853-Keyboard-Shortcuts-in-the-RStudio-IDE)
+-   [RStudio Shortcuts and Tips (Updated 2022)](https://appsilon.com/rstudio-shortcuts-and-tips/#:~:text=Reformat%20R%20scripts&text=Ctrl%20%2B%20Shift%20%2B%20A%20%E2%80%93%20Does,selected%20part%20of%20a%20code)
+-   [23 RStudio Tips, Tricks, and Shortcuts](https://www.dataquest.io/blog/rstudio-tips-tricks-shortcuts/)
+-   [6 RStudio Keyboard Shortcuts (that will change your life)](https://www.youtube.com/watch?v=U373PGg8Y_0&ab_channel=BusinessScience)
+-   [Custom Shortcuts - RStudio User Guide](https://docs.posit.co/ide/user/ide/guide/productivity/custom-shortcuts.html#:~:text=Modify%20a%20command's%20shortcut%20by,based%20on%20the%20keys%20entered.)
+-   [R Tips & Tricks](https://juliendiot42.github.io/RTips-Tricks/#73_Add_project_templates)
+
+
+
+
+::: callout-note
+Cite this page: Garibay-Treviño, D. (2023, November 10). *R shortcuts that will save your life*. Hertie Coding Club. [URL](https://www.hertiecodingclub.com/learn/rstudio/r_shortcuts/)
+:::
+
+
+# Appendix
+
+Source code of this document is available on [this Github repository](https://github.com/du-gartre/R_shortcuts)
+
+
+
+

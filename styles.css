@@ -1515,6 +1515,12 @@ display: grid;
   background-position: center;
 }
 
+.user-container #davidgaribay.card_team {
+  background: url("members/team/team/david_garibay/davidgaribay.png") no-repeat;
+  background-size: 350px 450px;
+  background-position: center;
+}
+
 .user-container #gabrielzech.card_team {
   background: url("members/team/team/gabriel_zech/gabriel.jpg") no-repeat;
   background-size: 320px 460px;

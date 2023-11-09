@@ -1,0 +1,42 @@
+---
+title: "David Garibay"
+page-layout: full
+image: davidgaribay.png
+filters:
+   - lightbox
+lightbox: 
+  match: auto
+  effect: fade
+  desc-position: left
+  css-class: "lightwidth"
+about:
+  template: trestles
+  image-shape: rounded
+  links:
+    - text: "{{< fa brands linkedin >}} LinkedIn"
+      url: "https://www.linkedin.com/in/david-garibayt/"
+    - text: "{{< fa brands github >}} GitHub"
+      url: "https://github.com/du-gartre"
+    - text: "{{< fa brands twitter >}} Twitter"
+      url: "https://twitter.com/du_garibay"
+    - text: "{{< fa brands orcid >}} ORCID"
+      url: "https://orcid.org/0000-0002-0459-1579"
+    - text: "{{< fa solid envelopes-bulk >}} Mail"
+      url: "mailto:202.davidgaribay@gmail.com"
+comments: false
+---
+
+<style>
+  body {
+  background: linear-gradient(to right, #000428, #004e92);
+}
+  
+</style>
+
+ 
+
+
+I am David, a Data Analyst and a Senior Associate at PADeCI (Spanish acronym for Project of Decision Analysis under Uncertain Contexts). Here, I develop decision-analytic models in health policy, particularly in colorectal and bladder cancer. I am also part of the Bladder cancer modeling group of the Cancer Intervention and Surveillance Modeling Network (CISNET), a member of the Society for Medical Decision Making (SMDM), and a member of Stanford’s Data Science x Decision Science (DS^2) group. I have a bachelor’s degree in economics and a master’s in methods for public policy analysis. I support evidence-based policymaking, and I consider that data science is a required foundation to generate rigorous and reproducible research.
+
+
+

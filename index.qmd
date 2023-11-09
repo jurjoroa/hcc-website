@@ -415,7 +415,7 @@ font-weight: 700;
 ::: {#learn}
 :::
 
-<a href="../learn/rstudio.html"> <button type="button" class="btn btn-primary float-end btn-sm">See all our tools</button></a>
+
 
 
 
