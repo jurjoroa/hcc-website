@@ -11,7 +11,7 @@ website:
   favicon: images/hcc.png
   page-footer:
     left: 
-      - text: "{{< fa regular copyright >}} {{< fa solid circle-user >}} 2023 HCC | J.Roa"
+      - text: "{{< fa regular copyright >}} {{< fa solid circle-user >}} 2024 HCC | J.Roa"
         href: https://creativecommons.org/licenses/by/2.0/
     center: 
       - text: "{{< fa brands phoenix-framework size=lg >}} Quarto engine"
@@ -61,8 +61,6 @@ website:
       - icon: bi-calendar3  
         href: events/index.qmd
         text: "Events"
-      - text: "{{< fa solid handshake-angle >}} Coding peers"
-        href: coding/index.qmd
       #- icon: fingerprint  
       #  href: register/register.qmd
       #  text: "Register"

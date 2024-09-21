@@ -5,7 +5,6 @@ format:
     include-in-header: meta.html
     theme: 
           light: spacelab
-          dark: cyborg
           
     css: styles.css
     toc: true

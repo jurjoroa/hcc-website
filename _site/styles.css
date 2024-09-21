@@ -52,7 +52,7 @@ hr {
 /**** navbar overrides *****/
 
 .navbar {
-    background: linear-gradient(to right, #000428, #004e92); 
+    background: black;/*linear-gradient(to right, #000428, #004e92);  **/
     position: fixed;
     width: 100%;
 }
@@ -66,7 +66,7 @@ hr {
 
 .dropdown-menu .dropdown-item {
 text-align: center;
-background: linear-gradient(to right, #000428, #004e92); 
+background: black;/*linear-gradient(to right, #000428, #004e92);  **/
 transition: all 0.3s ease-in-out;
 overflow: hidden;
 
@@ -242,7 +242,7 @@ div > h1.title {
   margin-block-end: 1rem;
   margin-top: 50px;
   height: 85%;
-  background: linear-gradient(to right, #000428, #004e92); 
+  background: black;/*linear-gradient(to right, #000428, #004e92);  **/
   color: white !important;
   background-color:  white !important;
   
@@ -253,7 +253,7 @@ div > h1.title {
  .quarto-title-banner{
   margin-top: 50px;
   overflow: auto;
-  background: linear-gradient(to right, #000428, #004e92); 
+  background: black;/*linear-gradient(to right, #000428, #004e92);  **/
   color: white !important;
   background-color:  white !important;
   
@@ -263,7 +263,7 @@ div > h1.title {
 @media screen and (min-width: 2183px) {
  .quarto-title-banner{
    margin-top: .15%;
-  background: linear-gradient(to right, #000428, #004e92); 
+  background: black;/*linear-gradient(to right, #000428, #004e92);  **/
   color: white !important;
   background-color:  white !important;
   
@@ -2164,7 +2164,7 @@ div.body div.listing-categories div.listing-category{
 
 
 .nav-footer{
- background: linear-gradient(to right, rgba(0, 4, 40), rgba(0, 78, 146));
+ background: linear-gradient(to right, black, black);
   height: 9vh;
   border: none !important; 
   padding:0 !important; 
@@ -2289,22 +2289,22 @@ bottom: 0 !important;
   .container-blue {
   background: linear-gradient(to top, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 20%),
               linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 30%),
-              linear-gradient(to right, #000428, #004e92);
+              linear-gradient(to right, black, black);
 }
     .container-footer {
-  background: linear-gradient(to right, #000428, #004e92);
+  background: linear-gradient(to right, black, black);
              
 }
 
 .container-footer2{
   background: linear-gradient(to bottom, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%),
-             linear-gradient(to right, #000428, #004e92);
+             linear-gradient(to right, black, black);
   margin-bottom: 0px;
   height:100px;
 }
 
 .container-footer3{
-  background: linear-gradient(to right, #000428, #004e92);
+  background: linear-gradient(to right, black, black);
   color: white;
   margin-bottom: 0px;
   height:100px;
