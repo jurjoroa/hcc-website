@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.2.280">
+<meta name="generator" content="quarto-1.5.57">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -17,7 +17,7 @@ div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
   width: 0.8em;
-  margin: 0 0.8em 0.2em -1.6em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
 </style>
@@ -52,7 +52,13 @@ ul.task-list li input[type="checkbox"] {
   "collapse-after": 3,
   "panel-placement": "end",
   "type": "overlay",
-  "limit": 20,
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
   "language": {
     "search-no-results-text": "No results",
     "search-matching-documents-text": "matching documents",
@@ -61,8 +67,10 @@ ul.task-list li input[type="checkbox"] {
     "search-more-match-text": "more match in this document",
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
     "search-detached-cancel-button-title": "Cancel",
-    "search-submit-button-title": "Submit"
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
   }
 }</script>
 <script>
@@ -230,7 +238,10 @@ gtag('config', 'G-HJEMN0LJY7', { 'anonymize_ip': true});
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://www.hertiecodingclub.com">
 <meta property="og:title" content="Hertie Coding Club - Home">
-<meta property="og:description" content="Welcome to the Hertie Coding Club! Our goal as a club is to help everyone and between us learn coding skills and show that coding is for everyone, no matter our background.">
+<meta property="og:description" content="">
+<style>:root{--animate-duration:3s;--animate-delay:2s;--animate-repeat:1}</style>
+<style>:root{--animate-duration:3s;--animate-delay:2s;--animate-repeat:1}</style>
+<style>:root{--animate-duration:3s;--animate-delay:2s;--animate-repeat:1}</style>
 <style>:root{--animate-duration:3s;--animate-delay:2s;--animate-repeat:1}</style>
 <style>:root{--animate-duration:3s;--animate-delay:2s;--animate-repeat:1}</style>
 <style>:root{--animate-duration:3s;--animate-delay:2s;--animate-repeat:1}</style>
@@ -254,7 +265,35 @@ gtag('config', 'G-HJEMN0LJY7', { 'anonymize_ip': true});
 <style>:root{--animate-duration:3s;--animate-delay:2s;--animate-repeat:1}</style>
 <style>:root{--animate-duration:3s;--animate-delay:2s;--animate-repeat:1}</style>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="styles.css">
 </head>
@@ -263,25 +302,26 @@ gtag('config', 'G-HJEMN0LJY7', { 'anonymize_ip': true});
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg navbar-dark ">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
-      <div class="navbar-brand-container">
+      <div class="navbar-brand-container mx-auto">
     <a href="./index.html" class="navbar-brand navbar-brand-logo">
     <img src="./images/hcc_final.png" alt="" class="navbar-logo">
     </a>
   </div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" aria-current="page"><i class="bi bi-house-fill" role="img">
+    <a class="nav-link active" href="./index.html" aria-current="page"> <i class="bi bi-house-fill" role="img">
 </i> 
- <span class="menu-text">Home</span></a>
+<span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-fa-solid-people-group--members" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-fa-solid-people-group--members" role="link" data-bs-toggle="dropdown" aria-expanded="false">
  <span class="menu-text"><i class="fa-solid fa-people-group" aria-label="people-group"></i> Members</span>
     </a>
     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-fa-solid-people-group--members">    
@@ -300,7 +340,7 @@ gtag('config', 'G-HJEMN0LJY7', { 'anonymize_ip': true});
     </ul>
   </li>
   <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-learn" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-learn" role="link" data-bs-toggle="dropdown" aria-expanded="false">
       <i class="bi bi-mortarboard-fill" role="img">
 </i> 
  <span class="menu-text">Learn</span>
@@ -321,24 +361,24 @@ gtag('config', 'G-HJEMN0LJY7', { 'anonymize_ip': true});
     </ul>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="./material/index.html">
- <span class="menu-text"><i class="fa-solid fa-meteor" aria-label="meteor"></i> Material</span></a>
+    <a class="nav-link" href="./material/index.html"> 
+<span class="menu-text"><i class="fa-solid fa-meteor" aria-label="meteor"></i> Material</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./events/index.html"><i class="bi bi-calendar3" role="img">
+    <a class="nav-link" href="./events/index.html"> <i class="bi bi-calendar3" role="img">
 </i> 
- <span class="menu-text">Events</span></a>
+<span class="menu-text">Events</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./coding/index.html">
- <span class="menu-text"><i class="fa-solid fa-handshake-angle" aria-label="handshake-angle"></i> Coding peers</span></a>
+    <a class="nav-link" href="./coding/index.html"> 
+<span class="menu-text"><i class="fa-solid fa-handshake-angle" aria-label="handshake-angle"></i> Coding peers</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./news/index.html">
- <span class="menu-text"><i class="fa-regular fa-newspaper" aria-label="newspaper"></i> News</span></a>
+    <a class="nav-link" href="./news/index.html"> 
+<span class="menu-text"><i class="fa-regular fa-newspaper" aria-label="newspaper"></i> News</span></a>
   </li>  
   <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-fa-solid-laptop-code--about-us" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-fa-solid-laptop-code--about-us" role="link" data-bs-toggle="dropdown" aria-expanded="false">
  <span class="menu-text"><i class="fa-solid fa-laptop-code" aria-label="laptop-code"></i> About us</span>
     </a>
     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-fa-solid-laptop-code--about-us">    
@@ -361,11 +401,10 @@ gtag('config', 'G-HJEMN0LJY7', { 'anonymize_ip': true});
     </ul>
   </li>
 </ul>
-              <div class="quarto-toggle-container">
-                  <a href="" class="quarto-color-scheme-toggle nav-link" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
-              </div>
-              <div id="quarto-search" class="" title="Search"></div>
           </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
       </div> <!-- /container-fluid -->
     </nav>
 </header>
@@ -390,7 +429,9 @@ gtag('config', 'G-HJEMN0LJY7', { 'anonymize_ip': true});
   </div>
   
 
+
 </header>
+
 
 
 
@@ -658,11 +699,11 @@ font-weight: 700;
 </h1>
 <div id="listing-Resources" class="quarto-listing quarto-listing-container-grid">
 <div class="list grid quarto-listing-cols-2">
-<div class="g-col-1" data-index="0" data-categories="edX,Learning,R,Python" data-listing-date-sort="1680645600000" data-listing-file-modified-sort="1682290925133" data-listing-reading-time-sort="0.58">
+<div class="g-col-1" data-index="0" data-categories="edX,Learning,R,Python" data-listing-date-sort="1680645600000" data-listing-file-modified-sort="1682290925133" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="116">
 <a href="./material/Resources/edx/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
-<img src="./material/Resources/edx/images/edx.png" class="thumbnail-image card-img" style="height: 150px;">
+<img loading="lazy" src="./material/Resources/edx/images/edx.png" class="thumbnail-image card-img" style="height: 150px;">
 </p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
@@ -680,11 +721,11 @@ Jorge Roa
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="1" data-categories="Kaggle,Learning,R,Python,Data Science" data-listing-date-sort="1680127200000" data-listing-file-modified-sort="1682290925135" data-listing-reading-time-sort="0.765">
+<div class="g-col-1" data-index="1" data-categories="Kaggle,Learning,R,Python,Data Science" data-listing-date-sort="1680127200000" data-listing-file-modified-sort="1682290925135" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="153">
 <a href="./material/Resources/kaggle/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
-<img src="./material/Resources/kaggle/images/kaggle.png" class="thumbnail-image card-img" style="height: 150px;">
+<img loading="lazy" src="./material/Resources/kaggle/images/kaggle.png" class="thumbnail-image card-img" style="height: 150px;">
 </p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
@@ -702,11 +743,11 @@ Jorge Roa
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="2" data-categories="Dataquest,Learning,R,Python" data-listing-date-sort="1680040800000" data-listing-file-modified-sort="1682290925132" data-listing-reading-time-sort="0.805">
+<div class="g-col-1" data-index="2" data-categories="Dataquest,Learning,R,Python" data-listing-date-sort="1680040800000" data-listing-file-modified-sort="1682290925132" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="161">
 <a href="./material/Resources/dataquest/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
-<img data-src="./material/Resources/dataquest/images/dataquest.png" class="thumbnail-image card-img" style="height: 150px;">
+<img loading="lazy" data-src="./material/Resources/dataquest/images/dataquest.png" class="thumbnail-image card-img" style="height: 150px;">
 </p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
@@ -752,11 +793,64 @@ font-weight: 700;
 </h1>
 <div id="listing-learn" class="quarto-listing quarto-listing-container-grid">
 <div class="list grid quarto-listing-cols-2">
-<div class="g-col-1" data-index="0" data-categories="RStudio,Shortcuts,Snippets,Code completion" data-listing-date-sort="1699570800000" data-listing-file-modified-sort="1699573628120" data-listing-reading-time-sort="22.88">
+<div class="g-col-1" data-index="0" data-listing-file-modified-sort="1726909975104" data-listing-reading-time-sort="1" data-listing-word-count-sort="75">
+<a href="./learn/rstudio/Multithreading/PrettyPDF.qmd" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Pretty PDFs with Quarto
+</h5>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+
+</div>
+</div>
+</div>
+</div>
+</a>
+</div>
+<div class="g-col-1" data-index="1" data-listing-file-modified-sort="1726909975136" data-listing-reading-time-sort="4" data-listing-word-count-sort="787">
+<a href="./learn/rstudio/Multithreading/index_2.qmd" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Enable Multithread with data.table in Mac/Intel chips
+</h5>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+Jorge Roa, Fernando Alarid-Escudero
+</div>
+</div>
+</div>
+</div>
+</a>
+</div>
+<div class="g-col-1" data-index="2" data-categories="Statistics,R,Linear Regression" data-listing-date-sort="1702162800000" data-listing-file-modified-sort="1726909975139" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="28" data-listing-word-count-sort="5482">
+<a href="./learn/rstudio/linearregression101/index.qmd" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" data-src="./learn/rstudio/linearregression101/images/lr.png" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+<p><span class="animate__animated animate__fadeInDown animate__delay-.6s" style="display: inline-block;">Linear Regression 101 in R</span></p>
+</h5>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+Jorge Roa
+</div>
+</div>
+</div>
+</div>
+</a>
+</div>
+<div class="g-col-1" data-index="3" data-categories="RStudio,Shortcuts,Snippets,Code completion" data-listing-date-sort="1699570800000" data-listing-file-modified-sort="1722521526538" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="23" data-listing-word-count-sort="4576">
 <a href="./learn/rstudio/r_shortcuts/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
-<img src="./learn/rstudio/r_shortcuts/figs/foco.png" class="thumbnail-image card-img" style="height: 150px;">
+<img loading="lazy" data-src="./learn/rstudio/r_shortcuts/figs/foco.png" class="thumbnail-image card-img" style="height: 150px;">
 </p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
@@ -771,11 +865,11 @@ David U. Garibay-Treviño, MSc
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="1" data-categories="R,Stata,Transition" data-listing-date-sort="1682200800000" data-listing-file-modified-sort="1693540007230" data-listing-reading-time-sort="11.335">
+<div class="g-col-1" data-index="4" data-categories="R,Stata,Transition" data-listing-date-sort="1682200800000" data-listing-file-modified-sort="1722521526037" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="12" data-listing-word-count-sort="2267">
 <a href="./learn/rstudio/stata_to_r/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
-<img src="./learn/rstudio/stata_to_r/images/rstudio_stata.png" class="thumbnail-image card-img" style="height: 150px;">
+<img loading="lazy" data-src="./learn/rstudio/stata_to_r/images/rstudio_stata.png" class="thumbnail-image card-img" style="height: 150px;">
 </p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
@@ -790,11 +884,11 @@ Jorge Roa
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="2" data-categories="Twitter,Webscraping,Text" data-listing-date-sort="1681768800000" data-listing-file-modified-sort="1682290925096" data-listing-reading-time-sort="11.905">
+<div class="g-col-1" data-index="5" data-categories="Twitter,Webscraping,Text" data-listing-date-sort="1681768800000" data-listing-file-modified-sort="1722521526068" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="12" data-listing-word-count-sort="2381">
 <a href="./learn/rstudio/social_media_scraping/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
-<img data-src="./learn/rstudio/social_media_scraping/images/Social.png" class="thumbnail-image card-img" style="height: 150px;">
+<img loading="lazy" data-src="./learn/rstudio/social_media_scraping/images/Social.png" class="thumbnail-image card-img" style="height: 150px;">
 </p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
@@ -809,11 +903,11 @@ Lukas Lehmann
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="3" data-categories="Rstudio,Objects" data-listing-date-sort="1681596000000" data-listing-file-modified-sort="1686848898514" data-listing-reading-time-sort="17.685">
+<div class="g-col-1" data-index="6" data-categories="Rstudio,Objects" data-listing-date-sort="1681596000000" data-listing-file-modified-sort="1722521526134" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="18" data-listing-word-count-sort="3537">
 <a href="./learn/rstudio/objects/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
-<img data-src="./learn/rstudio/objects/images/objects.png" class="thumbnail-image card-img" style="height: 150px;">
+<img loading="lazy" data-src="./learn/rstudio/objects/images/objects.png" class="thumbnail-image card-img" style="height: 150px;">
 </p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
@@ -828,11 +922,11 @@ Jorge Roa
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="4" data-categories="Rstudio,Interface" data-listing-date-sort="1681250400000" data-listing-file-modified-sort="1682290925095" data-listing-reading-time-sort="8.82">
+<div class="g-col-1" data-index="7" data-categories="Rstudio,Interface" data-listing-date-sort="1681250400000" data-listing-file-modified-sort="1682290925095" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="9" data-listing-word-count-sort="1764">
 <a href="./learn/rstudio/rstudio101/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
-<img data-src="./learn/rstudio/rstudio101/images/coding.png" class="thumbnail-image card-img" style="height: 150px;">
+<img loading="lazy" data-src="./learn/rstudio/rstudio101/images/coding.png" class="thumbnail-image card-img" style="height: 150px;">
 </p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
@@ -847,11 +941,11 @@ Jorge Roa
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="5" data-categories="R,RStudio,Accesibility,Install" data-listing-date-sort="1677711600000" data-listing-file-modified-sort="1682290924987" data-listing-reading-time-sort="2.88">
+<div class="g-col-1" data-index="8" data-categories="R,RStudio,Accesibility,Install" data-listing-date-sort="1677711600000" data-listing-file-modified-sort="1682290924987" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="576">
 <a href="./learn/rstudio/Install-r-studio/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
-<img data-src="./learn/rstudio/Install-r-studio/images/r-rstudio-logos.png" class="thumbnail-image card-img" style="height: 150px;">
+<img loading="lazy" data-src="./learn/rstudio/Install-r-studio/images/r-rstudio-logos.png" class="thumbnail-image card-img" style="height: 150px;">
 </p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
@@ -866,11 +960,11 @@ Jorge Roa
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="6" data-categories="Multithread,Data table" data-listing-date-sort="1658959200000" data-listing-file-modified-sort="1694026894588" data-listing-reading-time-sort="3.935">
+<div class="g-col-1" data-index="9" data-categories="Multithread,Data table" data-listing-date-sort="1658959200000" data-listing-file-modified-sort="1722522207092" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="787">
 <a href="./learn/rstudio/Multithreading/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
-<img data-src="./learn/rstudio/Multithreading/images/apple_intel_f.png" class="thumbnail-image card-img" style="height: 150px;">
+<img loading="lazy" data-src="./learn/rstudio/Multithreading/images/apple_intel_f.png" class="thumbnail-image card-img" style="height: 150px;">
 </p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
@@ -893,6 +987,7 @@ No matching items
   <ul class="pagination"></ul>
 </nav>
 </div>
+<p><a href="../learn/rstudio.html"> <button type="button" class="btn btn-primary float-end btn-sm">See all our tools</button></a></p>
 <div class="image-grid">
 <div id="learn">
 
@@ -921,119 +1016,119 @@ font-weight: 700;
 </h1>
 <div id="listing-books" class="quarto-listing quarto-listing-container-grid">
 <div class="list grid quarto-listing-cols-3">
-<div class="g-col-1" data-index="0" data-categories="R,Spatial Analysis,Spatial Statistics" data-listing-date-sort="1687125600000" data-listing-file-modified-sort="1687132382132" data-listing-reading-time-sort="1.055">
+<div class="g-col-1" data-index="0" data-categories="R,Spatial Analysis,Spatial Statistics" data-listing-date-sort="1687125600000" data-listing-file-modified-sort="1722521526023" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="211">
 <a href="./material/Books/spatial_statistics/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
-<img src="./material/Books/spatial_statistics/images/bookcover.jpg" class="thumbnail-image card-img" style="height: 250px;">
+<img loading="lazy" src="./material/Books/spatial_statistics/images/bookcover.jpg" class="thumbnail-image card-img" style="height: 250px;">
 </p>
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="1" data-categories="R,Pipeline,Reproducilibty,EDA" data-listing-date-sort="1686348000000" data-listing-file-modified-sort="1686848898516" data-listing-reading-time-sort="1.315">
+<div class="g-col-1" data-index="1" data-categories="R,Pipeline,Reproducilibty,EDA" data-listing-date-sort="1686348000000" data-listing-file-modified-sort="1686848898516" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="263">
 <a href="./material/Books/pipelines_with_r/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
-<img src="./material/Books/pipelines_with_r/images/book.png" class="thumbnail-image card-img" style="height: 250px;">
+<img loading="lazy" src="./material/Books/pipelines_with_r/images/book.png" class="thumbnail-image card-img" style="height: 250px;">
 </p>
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="2" data-categories="R,Visualization,EDA" data-listing-date-sort="1684706400000" data-listing-file-modified-sort="1684712780930" data-listing-reading-time-sort="0.68">
+<div class="g-col-1" data-index="2" data-categories="R,Visualization,EDA" data-listing-date-sort="1684706400000" data-listing-file-modified-sort="1722521526029" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="136">
 <a href="./material/Books/stories_with_data/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
-<img src="./material/Books/stories_with_data/images/book.png" class="thumbnail-image card-img" style="height: 250px;">
+<img loading="lazy" src="./material/Books/stories_with_data/images/book.png" class="thumbnail-image card-img" style="height: 250px;">
 </p>
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="3" data-categories="R,Data Management" data-listing-date-sort="1681855200000" data-listing-file-modified-sort="1682290925115" data-listing-reading-time-sort="1.22">
+<div class="g-col-1" data-index="3" data-categories="R,Data Management" data-listing-date-sort="1681855200000" data-listing-file-modified-sort="1682290925115" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="244">
 <a href="./material/Books/data_management/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
-<img data-src="./material/Books/data_management/images/book.jpg" class="thumbnail-image card-img" style="height: 250px;">
+<img loading="lazy" data-src="./material/Books/data_management/images/book.jpg" class="thumbnail-image card-img" style="height: 250px;">
 </p>
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="4" data-categories="R,Data Analysis,EDA" data-listing-date-sort="1681164000000" data-listing-file-modified-sort="1682290925114" data-listing-reading-time-sort="0.995">
+<div class="g-col-1" data-index="4" data-categories="R,Data Analysis,EDA" data-listing-date-sort="1681164000000" data-listing-file-modified-sort="1682290925114" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="199">
 <a href="./material/Books/art_ds/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
-<img data-src="./material/Books/art_ds/images/book.jpg" class="thumbnail-image card-img" style="height: 250px;">
+<img loading="lazy" data-src="./material/Books/art_ds/images/book.jpg" class="thumbnail-image card-img" style="height: 250px;">
 </p>
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="5" data-categories="R,Learning,Data Analysis,EDA" data-listing-date-sort="1681164000000" data-listing-file-modified-sort="1682290925116" data-listing-reading-time-sort="0.86">
+<div class="g-col-1" data-index="5" data-categories="R,Learning,Data Analysis,EDA" data-listing-date-sort="1681164000000" data-listing-file-modified-sort="1722521525965" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="172">
 <a href="./material/Books/eda_r/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
-<img data-src="./material/Books/eda_r/images/book.jpg" class="thumbnail-image card-img" style="height: 250px;">
+<img loading="lazy" data-src="./material/Books/eda_r/images/book.jpg" class="thumbnail-image card-img" style="height: 250px;">
 </p>
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="6" data-categories="R,Spatial Data,Spatial Analysis" data-listing-date-sort="1681164000000" data-listing-file-modified-sort="1682290925121" data-listing-reading-time-sort="1.29">
+<div class="g-col-1" data-index="6" data-categories="R,Spatial Data,Spatial Analysis" data-listing-date-sort="1681164000000" data-listing-file-modified-sort="1682290925121" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="258">
 <a href="./material/Books/spatial_ds/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
-<img data-src="./material/Books/spatial_ds/images/book.jpeg" class="thumbnail-image card-img" style="height: 250px;">
+<img loading="lazy" data-src="./material/Books/spatial_ds/images/book.jpeg" class="thumbnail-image card-img" style="height: 250px;">
 </p>
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="7" data-categories="R,ggplot2,Data Visualization" data-listing-date-sort="1681077600000" data-listing-file-modified-sort="1682290925117" data-listing-reading-time-sort="1">
+<div class="g-col-1" data-index="7" data-categories="R,ggplot2,Data Visualization" data-listing-date-sort="1681077600000" data-listing-file-modified-sort="1682290925117" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="200">
 <a href="./material/Books/ggplot2/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
-<img data-src="./material/Books/ggplot2/images/book.jpg" class="thumbnail-image card-img" style="height: 250px;">
+<img loading="lazy" data-src="./material/Books/ggplot2/images/book.jpg" class="thumbnail-image card-img" style="height: 250px;">
 </p>
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="8" data-categories="R,Learning,Data Wrangling" data-listing-date-sort="1681077600000" data-listing-file-modified-sort="1682290925118" data-listing-reading-time-sort="1.74">
+<div class="g-col-1" data-index="8" data-categories="R,Learning,Data Wrangling" data-listing-date-sort="1681077600000" data-listing-file-modified-sort="1682290925118" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="348">
 <a href="./material/Books/ids_r/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
-<img data-src="./material/Books/ids_r/images/book.png" class="thumbnail-image card-img" style="height: 250px;">
+<img loading="lazy" data-src="./material/Books/ids_r/images/book.png" class="thumbnail-image card-img" style="height: 250px;">
 </p>
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="9" data-categories="Python,Learning" data-listing-date-sort="1681077600000" data-listing-file-modified-sort="1682290925119" data-listing-reading-time-sort="1.06">
+<div class="g-col-1" data-index="9" data-categories="Python,Learning" data-listing-date-sort="1681077600000" data-listing-file-modified-sort="1682290925119" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="212">
 <a href="./material/Books/python_for_ev/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
-<img data-src="./material/Books/python_for_ev/images/book.jpeg" class="thumbnail-image card-img" style="height: 250px;">
+<img loading="lazy" data-src="./material/Books/python_for_ev/images/book.jpeg" class="thumbnail-image card-img" style="height: 250px;">
 </p>
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="10" data-categories="R,Webscraping" data-listing-date-sort="1681077600000" data-listing-file-modified-sort="1682290925122" data-listing-reading-time-sort="0.885">
+<div class="g-col-1" data-index="10" data-categories="R,Webscraping" data-listing-date-sort="1681077600000" data-listing-file-modified-sort="1682290925122" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="177">
 <a href="./material/Books/webscrapping_r/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
-<img data-src="./material/Books/webscrapping_r/images/rvest.png" class="thumbnail-image card-img" style="height: 250px;">
+<img loading="lazy" data-src="./material/Books/webscrapping_r/images/rvest.png" class="thumbnail-image card-img" style="height: 250px;">
 </p>
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="11" data-categories="R,Learning,Data Visualization" data-listing-date-sort="1680991200000" data-listing-file-modified-sort="1682290925116" data-listing-reading-time-sort="1.14">
+<div class="g-col-1" data-index="11" data-categories="R,Learning,Data Visualization" data-listing-date-sort="1680991200000" data-listing-file-modified-sort="1682290925116" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="228">
 <a href="./material/Books/data_vis/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
-<img data-src="./material/Books/data_vis/images/book.jpeg" class="thumbnail-image card-img" style="height: 250px;">
+<img loading="lazy" data-src="./material/Books/data_vis/images/book.jpeg" class="thumbnail-image card-img" style="height: 250px;">
 </p>
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="12" data-categories="R,Learning,Data Science" data-listing-date-sort="1680991200000" data-listing-file-modified-sort="1682290925120" data-listing-reading-time-sort="1.165">
+<div class="g-col-1" data-index="12" data-categories="R,Learning,Data Science" data-listing-date-sort="1680991200000" data-listing-file-modified-sort="1682290925120" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="233">
 <a href="./material/Books/r_for_ds/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
-<img data-src="./material/Books/r_for_ds/images/r_for_ds.jpg" class="thumbnail-image card-img" style="height: 250px;">
+<img loading="lazy" data-src="./material/Books/r_for_ds/images/r_for_ds.jpg" class="thumbnail-image card-img" style="height: 250px;">
 </p>
 </div>
 </a>
@@ -1068,11 +1163,39 @@ font-weight: 700;
 </h1>
 <div id="listing-Events" class="quarto-listing quarto-listing-container-grid">
 <div class="list grid quarto-listing-cols-3">
-<div class="g-col-1" data-index="0" data-categories="Rstudio,Twitter,Wrangling" data-listing-date-sort="1679007600000" data-listing-file-modified-sort="1682290924972" data-listing-reading-time-sort="0.33">
+<div class="g-col-1" data-index="0" data-categories="Rstudio,Shortcuts,Snippets,Code completion" data-listing-date-sort="1699570800000" data-listing-file-modified-sort="1726909975097" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="99">
+<a href="./events/07_shorcuts_r/index.qmd" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" src="./events/07_shorcuts_r/keyboard.png" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+<p><span class="animate__animated animate__fadeInDown animate__delay-.6s" style="display: inline-block;">RStudio shortcuts that will save your life</span></p>
+</h5>
+</div>
+</div>
+</a>
+</div>
+<div class="g-col-1" data-index="1" data-categories="Rstudio" data-listing-date-sort="1697580000000" data-listing-file-modified-sort="1726909975076" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="40">
+<a href="./events/06_code_with_us/index.qmd" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" src="./events/06_code_with_us/code.png" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+<p><span class="animate__animated animate__fadeInDown animate__delay-.6s" style="display: inline-block;">Code with us</span></p>
+</h5>
+</div>
+</div>
+</a>
+</div>
+<div class="g-col-1" data-index="2" data-categories="Rstudio,Twitter,Wrangling" data-listing-date-sort="1679007600000" data-listing-file-modified-sort="1682290924972" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="66">
 <a href="./events/05_social_media_analysis/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
-<img src="./events/05_social_media_analysis/Social-Media.png" class="thumbnail-image card-img" style="height: 150px;">
+<img loading="lazy" src="./events/05_social_media_analysis/Social-Media.png" class="thumbnail-image card-img" style="height: 150px;">
 </p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
@@ -1082,11 +1205,11 @@ font-weight: 700;
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="1" data-categories="Python,Environment,VSC Code" data-listing-date-sort="1677193200000" data-listing-file-modified-sort="1682290924968" data-listing-reading-time-sort="0.555">
+<div class="g-col-1" data-index="3" data-categories="Python,Environment,VSC Code" data-listing-date-sort="1677193200000" data-listing-file-modified-sort="1682290924968" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="111">
 <a href="./events/04_environment/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
-<img src="./events/04_environment/python_pills.png" class="thumbnail-image card-img" style="height: 150px;">
+<img loading="lazy" data-src="./events/04_environment/python_pills.png" class="thumbnail-image card-img" style="height: 150px;">
 </p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
@@ -1096,11 +1219,11 @@ font-weight: 700;
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="2" data-categories="Rstudio,Wrangling,Tidyverse" data-listing-date-sort="1669244400000" data-listing-file-modified-sort="1682290924965" data-listing-reading-time-sort="0.415">
+<div class="g-col-1" data-index="4" data-categories="Rstudio,Wrangling,Tidyverse" data-listing-date-sort="1669244400000" data-listing-file-modified-sort="1682290924965" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="83">
 <a href="./events/03_wrangle_part2/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
-<img src="./events/03_wrangle_part2/ftdata.png" class="thumbnail-image card-img" style="height: 150px;">
+<img loading="lazy" data-src="./events/03_wrangle_part2/ftdata.png" class="thumbnail-image card-img" style="height: 150px;">
 </p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
@@ -1110,11 +1233,11 @@ font-weight: 700;
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="3" data-categories="Rstudio,Wrangling,Tidyverse" data-listing-date-sort="1668726000000" data-listing-file-modified-sort="1682290924965" data-listing-reading-time-sort="0.51">
+<div class="g-col-1" data-index="5" data-categories="Rstudio,Wrangling,Tidyverse" data-listing-date-sort="1668726000000" data-listing-file-modified-sort="1682290924965" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="102">
 <a href="./events/02_wrangle/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
-<img data-src="./events/02_wrangle/box.png" class="thumbnail-image card-img" style="height: 150px;">
+<img loading="lazy" data-src="./events/02_wrangle/box.png" class="thumbnail-image card-img" style="height: 150px;">
 </p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
@@ -1124,11 +1247,11 @@ font-weight: 700;
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="4" data-categories="Rstudio" data-listing-date-sort="1667516400000" data-listing-file-modified-sort="1682290924961" data-listing-reading-time-sort="0.5">
+<div class="g-col-1" data-index="6" data-categories="Rstudio" data-listing-date-sort="1667516400000" data-listing-file-modified-sort="1682290924961" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="100">
 <a href="./events/01_kickoff_event/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
-<img data-src="./events/01_kickoff_event/kick-boxer.png" class="thumbnail-image card-img" style="height: 150px;">
+<img loading="lazy" data-src="./events/01_kickoff_event/kick-boxer.png" class="thumbnail-image card-img" style="height: 150px;">
 </p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
@@ -1169,11 +1292,11 @@ font-weight: 700;
 </h1>
 <div id="listing-material" class="quarto-listing quarto-listing-container-grid">
 <div class="list grid quarto-listing-cols-4">
-<div class="g-col-1" data-index="0" data-categories="Microsoft,Data Analysis,Course" data-listing-date-sort="1686434400000" data-listing-file-modified-sort="1687043425816" data-listing-reading-time-sort="2.5">
+<div class="g-col-1" data-index="0" data-categories="Microsoft,Data Analysis,Course" data-listing-date-sort="1686434400000" data-listing-file-modified-sort="1722521526021" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="500">
 <a href="./material/Certifications/microsoft_ds/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
-<img src="./material/Certifications/microsoft_ds/images/Microsoft_logo.png" class="thumbnail-image card-img" style="height: 150px;">
+<img loading="lazy" src="./material/Certifications/microsoft_ds/images/Microsoft_logo.png" class="thumbnail-image card-img" style="height: 150px;">
 </p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
@@ -1183,11 +1306,11 @@ font-weight: 700;
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="1" data-categories="Google,Data Science,Course,Free Certificate" data-listing-date-sort="1682373600000" data-listing-file-modified-sort="1682482718127" data-listing-reading-time-sort="1.755">
+<div class="g-col-1" data-index="1" data-categories="Google,Data Science,Course,Free Certificate" data-listing-date-sort="1682373600000" data-listing-file-modified-sort="1722521526128" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="351">
 <a href="./material/Certifications/google_cert_ds/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
-<img src="./material/Certifications/google_cert_ds/images/logo-Google.png" class="thumbnail-image card-img" style="height: 150px;">
+<img loading="lazy" src="./material/Certifications/google_cert_ds/images/logo-Google.png" class="thumbnail-image card-img" style="height: 150px;">
 </p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
@@ -1197,11 +1320,11 @@ font-weight: 700;
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="2" data-categories="CISCO,Learning,Python" data-listing-date-sort="1680127200000" data-listing-file-modified-sort="1682290925126" data-listing-reading-time-sort="1.335">
+<div class="g-col-1" data-index="2" data-categories="CISCO,Learning,Python" data-listing-date-sort="1680127200000" data-listing-file-modified-sort="1682290925126" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="267">
 <a href="./material/Certifications/cisco_pcap/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
-<img src="./material/Certifications/cisco_pcap/images/cisco.png" class="thumbnail-image card-img" style="height: 150px;">
+<img loading="lazy" src="./material/Certifications/cisco_pcap/images/cisco.png" class="thumbnail-image card-img" style="height: 150px;">
 </p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
@@ -1211,11 +1334,11 @@ font-weight: 700;
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="3" data-categories="freeCodeCamp,Data Analysis,Course,Free Certificate" data-listing-date-sort="1680040800000" data-listing-file-modified-sort="1682290925130" data-listing-reading-time-sort="0.52">
+<div class="g-col-1" data-index="3" data-categories="freeCodeCamp,Data Analysis,Course,Free Certificate" data-listing-date-sort="1680040800000" data-listing-file-modified-sort="1682290925130" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="104">
 <a href="./material/Certifications/freecodecamp/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
-<img src="./material/Certifications/freecodecamp/images/fcc.png" class="thumbnail-image card-img" style="height: 150px;">
+<img loading="lazy" src="./material/Certifications/freecodecamp/images/fcc.png" class="thumbnail-image card-img" style="height: 150px;">
 </p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
@@ -1225,11 +1348,11 @@ font-weight: 700;
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="4" data-categories="IBM,Data Analysis,Course,Free Certificate" data-listing-date-sort="1679698800000" data-listing-file-modified-sort="1682290925124" data-listing-reading-time-sort="0.815">
+<div class="g-col-1" data-index="4" data-categories="IBM,Data Analysis,Course,Free Certificate" data-listing-date-sort="1679698800000" data-listing-file-modified-sort="1682290925124" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="163">
 <a href="./material/Certifications/IBM_data_analyst/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
-<img data-src="./material/Certifications/IBM_data_analyst/images/IBM.png" class="thumbnail-image card-img" style="height: 150px;">
+<img loading="lazy" data-src="./material/Certifications/IBM_data_analyst/images/IBM.png" class="thumbnail-image card-img" style="height: 150px;">
 </p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
@@ -1301,21 +1424,21 @@ document.addEventListener('DOMContentLoaded', function () {
 <div class="g-col-3">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="_site/images/hertie/DSL.png" class="img-fluid figure-img" width="150"></p>
+<p><img src="_site/images/hertie/DSL.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="150"></p>
 </figure>
 </div>
 </div>
 <div class="g-col-6">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="_site/images/hcc_final.png" class="img-fluid figure-img" width="150"></p>
+<p><img src="_site/images/hcc_final.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="150"></p>
 </figure>
 </div>
 </div>
 <div class="g-col-3">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="_site/images/hertie/hertie.png" class="img-fluid figure-img" width="150"></p>
+<p><img src="_site/images/hertie/hertie.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="150"></p>
 </figure>
 </div>
 </div>
@@ -1340,6 +1463,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 
+</div>
 
 
 <script id="quarto-html-after-body" type="application/javascript">
@@ -1383,6 +1507,33 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       } else {
         el.classList.add('notransition');
       }
+    }
+  }
+  const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+    const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+    const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+    let newTheme = '';
+    if(darkModeDefault) {
+      newTheme = isAlternate ? baseTheme : alternateTheme;
+    } else {
+      newTheme = isAlternate ? alternateTheme : baseTheme;
+    }
+    const changeGiscusTheme = () => {
+      // From: https://github.com/giscus/giscus/issues/336
+      const sendMessage = (message) => {
+        const iframe = document.querySelector('iframe.giscus-frame');
+        if (!iframe) return;
+        iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+      }
+      sendMessage({
+        setConfig: {
+          theme: newTheme
+        }
+      });
+    }
+    const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+    if (isGiscussLoaded) {
+      changeGiscusTheme();
     }
   }
   const toggleColorMode = (alternate) => {
@@ -1451,13 +1602,15 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       return localAlternateSentinel;
     }
   }
-  let localAlternateSentinel = 'default';
+  const darkModeDefault = false;
+  let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
   // Dark / light mode switch
   window.quartoToggleColorScheme = () => {
     // Read the current dark / light value 
     let toAlternate = !hasAlternateSentinel();
     toggleColorMode(toAlternate);
     setStyleSentinel(toAlternate);
+    toggleGiscusIfUsed(toAlternate, darkModeDefault);
   };
   // Ensure there is a toggle, if there isn't float one in the top right
   if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
@@ -1484,12 +1637,15 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     icon: icon
   };
   anchorJS.add('.anchored');
-  const clipboard = new window.ClipboardJS('.code-copy-button', {
-    target: function(trigger) {
-      return trigger.previousElementSibling;
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
     }
-  });
-  clipboard.on('success', function(e) {
+    return false;
+  }
+  const onCopySuccess = function(e) {
     // button target
     const button = e.trigger;
     // don't keep focus
@@ -1521,11 +1677,55 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }, 1000);
     // clear code selection
     e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
   });
-  function tippyHover(el, contentFn) {
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp("https:\/\/www\.hertiecodingclub\.com\/");
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+          // target, if specified
+          link.setAttribute("target", "_blank");
+          if (link.getAttribute("rel") === null) {
+            link.setAttribute("rel", "noopener");
+          }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
-      content: contentFn,
       maxWidth: 500,
       delay: 100,
       arrow: false,
@@ -1535,8 +1735,17 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       interactive: true,
       interactiveBorder: 10,
       theme: 'quarto',
-      placement: 'bottom-start'
+      placement: 'bottom-start',
     };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
     window.tippy(el, config); 
   }
   const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
@@ -1548,9 +1757,245 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
-      return note.innerHTML;
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
     });
   }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
   const findCites = (el) => {
     const parentEl = el.parentElement;
     if (parentEl) {
@@ -1588,63 +2033,66 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       });
     }
   }
-    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
-      var filterRegex = new RegExp(/https:\/\/www\.hertiecodingclub\.com/);
-    var isInternal = (href) => {
-        return filterRegex.test(href) || localhostRegex.test(href);
-    }
-    // Inspect non-navigation links and adorn them if external
-    var links = window.document.querySelectorAll('a:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item)');
-    for (var i=0; i<links.length; i++) {
-      const link = links[i];
-      if (!isInternal(link.href)) {
-          // target, if specified
-          link.setAttribute("target", "_blank");
-      }
-    }
 });
 </script>
-</div> <!-- /content -->
+ <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
     <div class="nav-footer-left">
       <ul class="footer-items list-unstyled">
     <li class="nav-item">
-    <a class="nav-link" href="https://creativecommons.org/licenses/by/2.0/"><i class="fa-regular fa-copyright" aria-label="copyright"></i> <i class="fa-solid fa-circle-user" aria-label="circle-user"></i> 2023 HCC | J.Roa</a>
+    <a class="nav-link" href="https://creativecommons.org/licenses/by/2.0/">
+<p><i class="fa-regular fa-copyright" aria-label="copyright"></i> <i class="fa-solid fa-circle-user" aria-label="circle-user"></i> 2023 HCC | J.Roa</p>
+</a>
   </li>  
 </ul>
     </div>   
-      <div class="nav-footer-center">
-        <ul class="footer-items list-unstyled">
+    <div class="nav-footer-center">
+      <ul class="footer-items list-unstyled">
     <li class="nav-item">
-    <a class="nav-link" href="https://quarto.org"><i class="fa-brands fa-phoenix-framework fa-lg" aria-label="phoenix-framework"></i> Quarto engine</a>
+    <a class="nav-link" href="https://quarto.org">
+<p><i class="fa-brands fa-phoenix-framework fa-lg" aria-label="phoenix-framework"></i> Quarto engine</p>
+</a>
   </li>  
 </ul>
-      </div>
+    </div>
     <div class="nav-footer-right">
       <ul class="footer-items list-unstyled">
     <li class="nav-item">
-    <a class="nav-link" href="mailto:hertiecodingclub@gmail.com"><i class="fa-solid fa-square-envelope fa-lg" aria-label="square-envelope"></i></a>
+    <a class="nav-link" href="mailto:hertiecodingclub@gmail.com">
+<p><i class="fa-solid fa-square-envelope fa-lg" aria-label="square-envelope"></i></p>
+</a>
   </li>  
     <li class="nav-item">
-    <a class="nav-link" href="http://hertiecodingclub.slack.com"><i class="fa-brands fa-slack fa-lg" aria-label="slack"></i></a>
+    <a class="nav-link" href="http://hertiecodingclub.slack.com">
+<p><i class="fa-brands fa-slack fa-lg" aria-label="slack"></i></p>
+</a>
   </li>  
     <li class="nav-item">
-    <a class="nav-link" href="https://github.com/Hertie-Coding-Club"><i class="fa-brands fa-github fa-lg" aria-label="github"></i></a>
+    <a class="nav-link" href="https://github.com/Hertie-Coding-Club">
+<p><i class="fa-brands fa-github fa-lg" aria-label="github"></i></p>
+</a>
   </li>  
     <li class="nav-item">
-    <a class="nav-link" href="https://twitter.com/HertieCodingCLB"><i class="fa-brands fa-twitter fa-lg" aria-label="twitter"></i></a>
+    <a class="nav-link" href="https://twitter.com/HertieCodingCLB">
+<p><i class="fa-brands fa-twitter fa-lg" aria-label="twitter"></i></p>
+</a>
   </li>  
     <li class="nav-item">
-    <a class="nav-link" href="https://www.instagram.com/hertiecodingclub/"><i class="fa-brands fa-instagram fa-lg" aria-label="instagram"></i></a>
+    <a class="nav-link" href="https://www.instagram.com/hertiecodingclub/">
+<p><i class="fa-brands fa-instagram fa-lg" aria-label="instagram"></i></p>
+</a>
   </li>  
     <li class="nav-item">
-    <a class="nav-link" href="https://youtube.com/@hertiecodingclub"><i class="fa-brands fa-youtube fa-lg" aria-label="youtube"></i></a>
+    <a class="nav-link" href="https://youtube.com/@hertiecodingclub">
+<p><i class="fa-brands fa-youtube fa-lg" aria-label="youtube"></i></p>
+</a>
   </li>  
 </ul>
     </div>
   </div>
 </footer>
+
 
 
 
