@@ -25,7 +25,7 @@ margin-top:-150px;
 }
 
   body {
-  background: linear-gradient(to right, #000428, #004e92);
+  background: linear-gradient(to right, black, black);
 }
 
 section#academic-advisors.level1 h1{

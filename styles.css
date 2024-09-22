@@ -765,6 +765,10 @@ div.listing-author{
   margin-top: 100px;
 }
 
+.section_white2{
+  margin-top: 150px;
+}
+
 
 .hero-sec{
   width: 100%;
@@ -1471,6 +1475,13 @@ display: grid;
 .card:nth-child(7):hover,
 .card:nth-child(8):hover{
 
+}
+
+
+.user-container #gayatrishejwal.card_team {
+  background: url("members/team/team/gayatri_shejwal/gayatrishejwal.jpg") no-repeat;
+  background-size: 300px 400px;
+  background-position: center;
 }
 
 .user-container #huydang.card_team {
@@ -3055,7 +3066,7 @@ figcaption {
 .containerabout{
    width:100%;
    margin-top: 0px;
-  background: linear-gradient(to right, #000428, #004e92);
+  background: linear-gradient(to right, black, black);
 
 }
 .containerabout h1{
@@ -3173,7 +3184,7 @@ figcaption {
 .containerabout2 {
    width: 100%;
    margin-top: 0px;
-   background: linear-gradient(to right, #000428, #004e92);
+   background: linear-gradient(to right, black, black);
 }
 
 .containerabout2 h1 {
@@ -3285,7 +3296,7 @@ figcaption {
 .containerabout3 {
   width: 100%;
   margin-top: 0px;
-  background: linear-gradient(to right, #000428, #004e92);
+  background: linear-gradient(to right, black, black);
 }
 
 .containerabout3 h1 {
@@ -3390,7 +3401,7 @@ figcaption {
 .containerabout4 {
   width: 100%;
   margin-top: 0px;
-  background: linear-gradient(to right, #000428, #004e92);
+  background: linear-gradient(to right, black, black);
 }
 
 .containerabout4 h1 {
@@ -3497,7 +3508,7 @@ figcaption {
 .containerabout5 {
   width: 100%;
   margin-top: 0px;
-  background: linear-gradient(to right, #000428, #004e92);
+  background: linear-gradient(to right, black, black);
 }
 
 .containerabout5 h1 {

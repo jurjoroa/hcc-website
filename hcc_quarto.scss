@@ -52,7 +52,7 @@ hr {
 /**** navbar overrides *****/
 
 .navbar {
-    background: linear-gradient(to right, #000428, #004e92); 
+    background: linear-gradient(to right, black, black); 
     position: fixed;
     width: 100%;
 }
@@ -66,7 +66,7 @@ hr {
 
 .dropdown-menu .dropdown-item {
 text-align: center;
-background: linear-gradient(to right, #000428, #004e92); 
+background: linear-gradient(to right, black, black); 
 transition: all 0.2s ease-in-out;
 overflow: hidden;
 
@@ -249,7 +249,7 @@ div > h1.title {
   margin-block-end: 1rem;
   margin-top: 50px;
   height: 85%;
-  background: linear-gradient(to right, #000428, #004e92); 
+  background: linear-gradient(to right, black, black); 
   color: white !important;
   background-color:  white !important;
   
@@ -260,7 +260,7 @@ div > h1.title {
  .quarto-title-banner{
   margin-top: 50px;
   overflow: auto;
-  background: linear-gradient(to right, #000428, #004e92); 
+  background: linear-gradient(to right, black, black); 
   color: white !important;
   background-color:  white !important;
   
@@ -270,7 +270,7 @@ div > h1.title {
 @media screen and (min-width: 2183px) {
  .quarto-title-banner{
    margin-top: .15%;
-  background: linear-gradient(to right, #000428, #004e92); 
+  background: linear-gradient(to right, black, black); 
   color: white !important;
   background-color:  white !important;
   
@@ -1531,7 +1531,7 @@ code span.dv {
 /*card events*/
 .card-left {
   border: 5.5px solid #BF041C;
-  background: linear-gradient(to right, #000428, #004e92); ;
+  background: linear-gradient(to right, black, black); ;
   border-radius: 10px;
   color: white;
 }
@@ -1555,7 +1555,7 @@ code span.dv {
 /*card events*/
 .image-right {
   border: 3.5px solid #BF041C;
-  background: linear-gradient(to right, #000428, #004e92); ;
+  background: linear-gradient(to right, black, black); ;
   border-radius: 10px;
   color: white;
   transition: all 0.5s ease-in-out;
@@ -1586,7 +1586,7 @@ code span.dv {
 /*card events*/
 #learn-r .image-right {
   border: 5.5px solid #BF041C;
-  background: linear-gradient(to right, #000428, #004e92); ;
+  background: linear-gradient(to right, black, black); ;
   border-radius: 10px;
   color: white;
   transition: all 0.5s ease-in-out;

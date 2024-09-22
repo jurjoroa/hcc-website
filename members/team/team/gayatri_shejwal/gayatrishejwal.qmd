@@ -1,0 +1,34 @@
+---
+title: "Gayatri Shejwal"
+subtitle: "President of the Hertie Coding Club"
+page-layout: full
+image: gayatrishejwal.JPG
+filters:
+   - lightbox
+lightbox: 
+  match: auto
+  effect: fade
+  desc-position: left
+  css-class: "lightwidth"
+about:
+  template: trestles
+  image-shape: rounded
+  links:
+    - text: "{{< fa brands linkedin >}} LinkedIn"
+      url: "https://www.linkedin.com/in/gayatri-shejwal/"
+comments: false
+---
+
+<style>
+  body {
+  background: linear-gradient(to right, black, black);
+}
+  
+</style>
+
+
+ 
+
+I'm a second-year MDS student at the Hertie School and I currently work as a research assistant at the WZB Berlin Social Science Center, where I assist the Migration, Integration, Transnationalization (MIT) department on all types of data-related research work. I come from an interdisciplinary background, with a bachelor's degree in mechanical engineering and work experience in public policy. I have previously worked for the Indian Ministry of Skill Development and Entrepreneurship, and the German Embassy in New Delhi. Coding is my passion, among other things like reading, writing, dancing, etc.
+
+

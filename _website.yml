@@ -14,7 +14,7 @@ website:
       - text: "{{< fa regular copyright >}} {{< fa solid circle-user >}} 2024 HCC | J.Roa"
         href: https://creativecommons.org/licenses/by/2.0/
     center: 
-      - text: "{{< fa brands phoenix-framework size=lg >}} Quarto engine"
+      - text:  · [![](https://quarto.org/quarto.png){fig-alt="Quarto" width=65px}](https://quarto.org/)  engine ·
         href: https://quarto.org 
     right:
       - text: "{{< fa solid square-envelope size=lg >}}"

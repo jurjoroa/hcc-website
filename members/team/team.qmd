@@ -20,7 +20,7 @@ format:
 
 <style>
   body {
-  background: linear-gradient(to right, #000428, #004e92);
+  background: linear-gradient(to right, black, black);
 }
 
 section#academic-advisors.level1 h1{
@@ -37,17 +37,83 @@ color: white;
 
 
 
-# Instructors {style="color: transparent;"}
+# Presidency {style="color: transparent;"}
 
 <div class="container">
   <header class="header show-on-scroll">
-    <h1 class="heading" style="color: white;"> Instructors </h1>
+    <h1 class="heading" style="color: white;"> Presidency </h1>
+  </header>
+</div>
+
+<hr>
+
+```{=HTML}
+
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<section id="container">
+    <div class="user-container">
+
+        <!-- Card Two-->
+        <a href="../team/team/gayatri_shejwal/gayatrishejwal.html">
+        <div id="gayatrishejwal" class="card_team inline-photo3 show-on-scroll">
+          <div class="hover_esp_team"> Gayatri Shejwal</div>
+        </div>
+        </a>
+        
+        
+    </div>
+</section>
+ 
+```
+
+# Team {style="color: transparent;"}
+
+<div class="container">
+  <header class="header show-on-scroll">
+    <h1 class="heading" style="color: white;"> Team </h1>
   </header>
 </div>
 
 <hr>
 
 
+```{=HTML}
+
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<section id="container">
+    <div class="user-container">
+        
+        <a href="../team/team/carmen_garro/carmengarro.html">
+        <div id="carmengarro" class="card_team inline-photo3 show-on-scroll">
+          <div class="hover_esp_team"> Carmen Garro</div>
+        </div>
+        </a>
+        
+
+        
+        <a href="../team/team/rodrigo_dornelles/rodrigodornelles.html">
+        <div id="rodrigodornelles" class="card_team inline-photo3 show-on-scroll">
+          <div class="hover_esp_team"> Rodrigo Dornelles</div>
+        </div>
+        </a>
+        
+
+    </div>
+</section>
+ 
+```
+
+# Former collaborators {style="color: transparent;"}
+
+<div class="container">
+  <header class="header show-on-scroll">
+    <h1 class="heading" style="color: white;"> Former Collaborators </h1>
+  </header>
+</div>
+
+<hr>
 
 ```{=HTML}
 
@@ -81,20 +147,9 @@ color: white;
           <div class="hover_esp_team"> David Garibay</div>
         </div>
         </a>
-        
-        <a href="../team/team/carmen_garro/carmengarro.html">
-        <div id="carmengarro" class="card_team inline-photo3 show-on-scroll">
-          <div class="hover_esp_team"> Carmen Garro</div>
-        </div>
-        </a>
-        
+      
 
-        
-        <a href="../team/team/rodrigo_dornelles/rodrigodornelles.html">
-        <div id="rodrigodornelles" class="card_team inline-photo3 show-on-scroll">
-          <div class="hover_esp_team"> Rodrigo Dornelles</div>
-        </div>
-        </a>
+  
         
         <a href="../team/team/gabriel_zech/gabrielzech.html">
         <div id="gabrielzech" class="card_team inline-photo3 show-on-scroll">
@@ -107,35 +162,8 @@ color: white;
           <div class="hover_esp_team">Lukas Lehmann</div>
         </div>
         </a>
-
-    </div>
-</section>
- 
-```
-
-
-
-
-# Staff {style="color: transparent;"}
-
-<div class="container">
-  <header class="header show-on-scroll">
-    <h1 class="heading" style="color: white;"> Staff </h1>
-  </header>
-</div>
-
-<hr>
-
-
-
-```{=HTML}
-
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
-<section id="container">
-    <div class="user-container">
-
-        <!-- Card Two-->
+        
+                <!-- Card Two-->
         <a href="../staff/staff/aayran_salman/aayransalman.html">
         <div id="aayransalman" class="card_team inline-photo3 show-on-scroll">
           <div class="hover_esp_team"> Aayran Salman</div>
@@ -148,7 +176,6 @@ color: white;
           <div class="hover_esp_team"> Ridhima Singh</div>
         </div>
         </a>
-        
 
     </div>
 </section>
