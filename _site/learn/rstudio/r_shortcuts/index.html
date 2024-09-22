@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.2.280">
+<meta name="generator" content="quarto-1.5.57">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -19,7 +19,7 @@ div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
   width: 0.8em;
-  margin: 0 0.8em 0.2em -1.6em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
 </style>
@@ -37,25 +37,29 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<script src="../../../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
-<link href="../../../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
-<link href="../../../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
+<link href="../../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <link href="../../../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
 <link href="../../../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
 <link href="../../../site_libs/quarto-contrib/animate-4.1.1/animate.min.css" rel="stylesheet">
+<script src="../../../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../../../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
   "collapse-after": 3,
   "panel-placement": "end",
   "type": "overlay",
-  "limit": 20,
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
   "language": {
     "search-no-results-text": "No results",
     "search-matching-documents-text": "matching documents",
@@ -64,8 +68,10 @@ ul.task-list li input[type="checkbox"] {
     "search-more-match-text": "more match in this document",
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
     "search-detached-cancel-button-title": "Cancel",
-    "search-submit-button-title": "Submit"
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
   }
 }</script>
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-HJEMN0LJY7"></script>
@@ -87,7 +93,9 @@ gtag('config', 'G-HJEMN0LJY7', { 'anonymize_ip': true});
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://www.hertiecodingclub.com">
 <meta property="og:title" content="RStudio shortcuts that will save your life">
-<meta property="og:description" content="Welcome to the Hertie Coding Club! Our goal as a club is to help everyone and between us learn coding skills and show that coding is for everyone, no matter our background.">
+<meta property="og:description" content="Learn some of the most useful tools to optimize your coding sessions in RStudio.">
+<style>:root{--animate-duration:3s;--animate-delay:2s;--animate-repeat:1}</style>
+<style>:root{--animate-duration:3s;--animate-delay:2s;--animate-repeat:1}</style>
 <style>:root{--animate-duration:3s;--animate-delay:2s;--animate-repeat:1}</style>
 
 
@@ -97,26 +105,27 @@ gtag('config', 'G-HJEMN0LJY7', { 'anonymize_ip': true});
 <body class="nav-fixed">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg navbar-dark ">
+  <header id="quarto-header" class="headroom fixed-top quarto-banner">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
-      <div class="navbar-brand-container">
+      <div class="navbar-brand-container mx-auto">
     <a href="../../../index.html" class="navbar-brand navbar-brand-logo">
     <img src="../../../images/hcc_final.png" alt="" class="navbar-logo">
     </a>
   </div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../../index.html"><i class="bi bi-house-fill" role="img">
+    <a class="nav-link" href="../../../index.html"> <i class="bi bi-house-fill" role="img">
 </i> 
- <span class="menu-text">Home</span></a>
+<span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-fa-solid-people-group--members" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-fa-solid-people-group--members" role="link" data-bs-toggle="dropdown" aria-expanded="false">
  <span class="menu-text"><i class="fa-solid fa-people-group" aria-label="people-group"></i> Members</span>
     </a>
     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-fa-solid-people-group--members">    
@@ -135,7 +144,7 @@ gtag('config', 'G-HJEMN0LJY7', { 'anonymize_ip': true});
     </ul>
   </li>
   <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-learn" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-learn" role="link" data-bs-toggle="dropdown" aria-expanded="false">
       <i class="bi bi-mortarboard-fill" role="img">
 </i> 
  <span class="menu-text">Learn</span>
@@ -156,24 +165,20 @@ gtag('config', 'G-HJEMN0LJY7', { 'anonymize_ip': true});
     </ul>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="../../../material/index.html">
- <span class="menu-text"><i class="fa-solid fa-meteor" aria-label="meteor"></i> Material</span></a>
+    <a class="nav-link" href="../../../material/index.html"> 
+<span class="menu-text"><i class="fa-solid fa-meteor" aria-label="meteor"></i> Material</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../../events/index.html"><i class="bi bi-calendar3" role="img">
+    <a class="nav-link" href="../../../events/index.html"> <i class="bi bi-calendar3" role="img">
 </i> 
- <span class="menu-text">Events</span></a>
+<span class="menu-text">Events</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../../coding/index.html">
- <span class="menu-text"><i class="fa-solid fa-handshake-angle" aria-label="handshake-angle"></i> Coding peers</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="../../../news/index.html">
- <span class="menu-text"><i class="fa-regular fa-newspaper" aria-label="newspaper"></i> News</span></a>
+    <a class="nav-link" href="../../../news/index.html"> 
+<span class="menu-text"><i class="fa-regular fa-newspaper" aria-label="newspaper"></i> News</span></a>
   </li>  
   <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-fa-solid-laptop-code--about-us" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-fa-solid-laptop-code--about-us" role="link" data-bs-toggle="dropdown" aria-expanded="false">
  <span class="menu-text"><i class="fa-solid fa-laptop-code" aria-label="laptop-code"></i> About us</span>
     </a>
     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-fa-solid-laptop-code--about-us">    
@@ -196,11 +201,9 @@ gtag('config', 'G-HJEMN0LJY7', { 'anonymize_ip': true});
     </ul>
   </li>
 </ul>
-              <div class="quarto-toggle-container">
-                  <a href="" class="quarto-color-scheme-toggle nav-link" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
-              </div>
-              <div id="quarto-search" class="" title="Search"></div>
           </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
       </div> <!-- /container-fluid -->
     </nav>
 </header>
@@ -209,7 +212,7 @@ gtag('config', 'G-HJEMN0LJY7', { 'anonymize_ip': true});
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
       <h1 class="title">RStudio shortcuts that will save your life</h1>
-            <p class="subtitle lead"><span class="animate__animated animate__fadeInDown animate__delay-.6s" style="display: inline-block;">Learn some of the most useful tools to optimize your coding sessions in RStudio.</span></p>
+            <p class="subtitle lead"><span class="animate__animated animate__fadeInDown" style="display: inline-block;">Learn some of the most useful tools to optimize your coding sessions in RStudio.</span></p>
                                 <div class="quarto-categories">
                 <div class="quarto-category">RStudio</div>
                 <div class="quarto-category">Shortcuts</div>
@@ -248,22 +251,23 @@ gtag('config', 'G-HJEMN0LJY7', { 'anonymize_ip': true});
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#sec-intro" id="toc-sec-intro" class="nav-link active" data-scroll-target="#sec-intro"><span class="toc-section-number">1</span>  Introduction</a></li>
-  <li><a href="#sec-insert" id="toc-sec-insert" class="nav-link" data-scroll-target="#sec-insert"><span class="toc-section-number">2</span>  Insert code</a></li>
-  <li><a href="#edit_code" id="toc-edit_code" class="nav-link" data-scroll-target="#edit_code"><span class="toc-section-number">3</span>  Edit code</a></li>
-  <li><a href="#sec-panes_tabs" id="toc-sec-panes_tabs" class="nav-link" data-scroll-target="#sec-panes_tabs"><span class="toc-section-number">4</span>  Move between panes and tabs</a></li>
-  <li><a href="#sec-find" id="toc-sec-find" class="nav-link" data-scroll-target="#sec-find"><span class="toc-section-number">5</span>  Find files and functions</a></li>
-  <li><a href="#sec-run_code" id="toc-sec-run_code" class="nav-link" data-scroll-target="#sec-run_code"><span class="toc-section-number">6</span>  Run code</a></li>
-  <li><a href="#sec-auto" id="toc-sec-auto" class="nav-link" data-scroll-target="#sec-auto"><span class="toc-section-number">7</span>  Code completion</a></li>
-  <li><a href="#sec-snippets" id="toc-sec-snippets" class="nav-link" data-scroll-target="#sec-snippets"><span class="toc-section-number">8</span>  Snippets</a></li>
-  <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion"><span class="toc-section-number">9</span>  Conclusion</a></li>
-  <li><a href="#sec-ref" id="toc-sec-ref" class="nav-link" data-scroll-target="#sec-ref"><span class="toc-section-number">10</span>  References</a></li>
-  <li><a href="#appendix" id="toc-appendix" class="nav-link" data-scroll-target="#appendix"><span class="toc-section-number">11</span>  Appendix</a></li>
+  <li><a href="#sec-intro" id="toc-sec-intro" class="nav-link active" data-scroll-target="#sec-intro"><span class="header-section-number">1</span> Introduction</a></li>
+  <li><a href="#sec-insert" id="toc-sec-insert" class="nav-link" data-scroll-target="#sec-insert"><span class="header-section-number">2</span> Insert code</a></li>
+  <li><a href="#edit_code" id="toc-edit_code" class="nav-link" data-scroll-target="#edit_code"><span class="header-section-number">3</span> Edit code</a></li>
+  <li><a href="#sec-panes_tabs" id="toc-sec-panes_tabs" class="nav-link" data-scroll-target="#sec-panes_tabs"><span class="header-section-number">4</span> Move between panes and tabs</a></li>
+  <li><a href="#sec-find" id="toc-sec-find" class="nav-link" data-scroll-target="#sec-find"><span class="header-section-number">5</span> Find files and functions</a></li>
+  <li><a href="#sec-run_code" id="toc-sec-run_code" class="nav-link" data-scroll-target="#sec-run_code"><span class="header-section-number">6</span> Run code</a></li>
+  <li><a href="#sec-auto" id="toc-sec-auto" class="nav-link" data-scroll-target="#sec-auto"><span class="header-section-number">7</span> Code completion</a></li>
+  <li><a href="#sec-snippets" id="toc-sec-snippets" class="nav-link" data-scroll-target="#sec-snippets"><span class="header-section-number">8</span> Snippets</a></li>
+  <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion"><span class="header-section-number">9</span> Conclusion</a></li>
+  <li><a href="#sec-ref" id="toc-sec-ref" class="nav-link" data-scroll-target="#sec-ref"><span class="header-section-number">10</span> References</a></li>
+  <li><a href="#appendix" id="toc-appendix" class="nav-link" data-scroll-target="#appendix"><span class="header-section-number">11</span> Appendix</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content quarto-banner-title-block" id="quarto-document-content">
+
 
 
 
@@ -281,7 +285,7 @@ gtag('config', 'G-HJEMN0LJY7', { 'anonymize_ip': true});
 <p>I remember when I started to code in R. I was highly inefficient and didn’t know any of the RStudio capabilities. I manually typed every part of the assignment operator (<code>&lt;</code> and then <code>-</code>), as well as every <code>#</code> at the start of all the lines I wanted to comment. The mouse was my main tool to open new scripts, change tabs, and close tabs. When I had to read or write any file I had to double check how it was written and where it was located. And when an important script was lost, I did not have any alternative other than to check every one of the folders where I thought it could be placed.</p>
 <p>At first I did not imagine that a blessed group of people already had thought about smart ways to tackle these and many other difficulties.</p>
 <p>Everything started to change for me when I saw a colleague selecting multiples lines of code and commenting them all at once. I was amazed. I asked him how he did it, and from that point I started my journey to learn and use new shortcuts and commands in RStudio.</p>
-<p>If you have kept thinking on how to speed up your code writing process or even if you only want to be more comfortable developing code, then you have arrived to the right place! In this brief tutorial I share some of the shortcuts I use the most. Besides from my own experience, I have also looked for what other users have talked on the subject (check <a href="#sec-ref">Section&nbsp;10</a>).</p>
+<p>If you have kept thinking on how to speed up your code writing process or even if you only want to be more comfortable developing code, then you have arrived to the right place! In this brief tutorial I share some of the shortcuts I use the most. Besides from my own experience, I have also looked for what other users have talked on the subject (check <a href="#sec-ref" class="quarto-xref">Section&nbsp;10</a>).</p>
 <p>To make this tutorial a little bit more intuitive. I have split the text in the next categories:</p>
 <ul>
 <li>Insert code</li>
@@ -294,12 +298,16 @@ gtag('config', 'G-HJEMN0LJY7', { 'anonymize_ip': true});
 </ul>
 <p>All the shortcuts in this tutorial will be listed inside of a table, where the title is the name (or description) of the shortcut, and the body shows how the shortcut should be typed for Windows and Mac OS. With nothing less to add let’s start!</p>
 <p><strong>Show keyboard shortcuts help</strong> is the first thing you have to keep in mind. This shortcut brings up a screen listing some of some of the most useful shortcuts in RStudio. In case you want to check the full list of shortcuts, in the upper right corner of the help screen you will find a link called <em>See All Shortcuts</em>. It will take you to a page containing all the shortcuts divided by OS. To exit the help screen you just have to press <code>Esc</code>.</p>
-<table class="table">
+<table class="caption-top table">
 <caption><strong>Show keyboard shortcuts help</strong></caption>
+<colgroup>
+<col style="width: 52%">
+<col style="width: 47%">
+</colgroup>
 <thead>
 <tr class="header">
-<th style="text-align: center;">Windows <a href="figs/windows.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="figs/windows.png" class="img-fluid" style="width:5.0%"></a></th>
-<th style="text-align: center;">Mac <a href="figs/apple.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="figs/apple.png" class="img-fluid" style="width:6.5%"></a></th>
+<th style="text-align: center;">Windows <img src="figs/windows.png" class="img-fluid" style="width:5.0%"></th>
+<th style="text-align: center;">Mac <img src="figs/apple.png" class="img-fluid" style="width:6.5%"></th>
 </tr>
 </thead>
 <tbody>
@@ -311,8 +319,12 @@ gtag('config', 'G-HJEMN0LJY7', { 'anonymize_ip': true});
 </table>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="figs/help.png" class="lightbox" title="How to check for the full list of shortcuts" data-gallery="quarto-lightbox-gallery-3"><img src="figs/help.png" class="img-fluid figure-img" style="width:100.0%"></a></p>
-<p></p><figcaption class="figure-caption">How to check for the full list of shortcuts</figcaption><p></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="figs/help.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="How to check for the full list of shortcuts"><img src="figs/help.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%" alt="How to check for the full list of shortcuts"></a></p>
+</figure>
+</div>
+<figcaption>How to check for the full list of shortcuts</figcaption>
 </figure>
 </div>
 </section>
@@ -320,12 +332,16 @@ gtag('config', 'G-HJEMN0LJY7', { 'anonymize_ip': true});
 <h1 data-number="2"><span class="header-section-number">2</span> Insert code</h1>
 <hr>
 <p>Want to create a new R Script? easy-peasy!</p>
-<table class="table">
+<table class="caption-top table">
 <caption><strong>Create a new R Script</strong></caption>
+<colgroup>
+<col style="width: 52%">
+<col style="width: 47%">
+</colgroup>
 <thead>
 <tr class="header">
-<th style="text-align: center;">Windows <a href="figs/windows.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4"><img src="figs/windows.png" class="img-fluid" style="width:5.0%"></a></th>
-<th style="text-align: center;">Mac <a href="figs/apple.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5"><img src="figs/apple.png" class="img-fluid" style="width:6.5%"></a></th>
+<th style="text-align: center;">Windows <img src="figs/windows.png" class="img-fluid" style="width:5.0%"></th>
+<th style="text-align: center;">Mac <img src="figs/apple.png" class="img-fluid" style="width:6.5%"></th>
 </tr>
 </thead>
 <tbody>
@@ -336,12 +352,16 @@ gtag('config', 'G-HJEMN0LJY7', { 'anonymize_ip': true});
 </tbody>
 </table>
 <p>You want to assign an object? Instead of writting <code>&lt;-</code> key by key, you can do it directly by pressing:</p>
-<table class="table">
+<table class="caption-top table">
 <caption><strong>Insert assignment operator <code>&lt;-</code></strong></caption>
+<colgroup>
+<col style="width: 52%">
+<col style="width: 47%">
+</colgroup>
 <thead>
 <tr class="header">
-<th style="text-align: center;">Windows <a href="figs/windows.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6"><img src="figs/windows.png" class="img-fluid" style="width:5.0%"></a></th>
-<th style="text-align: center;">Mac <a href="figs/apple.png" class="lightbox" data-gallery="quarto-lightbox-gallery-7"><img src="figs/apple.png" class="img-fluid" style="width:6.5%"></a></th>
+<th style="text-align: center;">Windows <img src="figs/windows.png" class="img-fluid" style="width:5.0%"></th>
+<th style="text-align: center;">Mac <img src="figs/apple.png" class="img-fluid" style="width:6.5%"></th>
 </tr>
 </thead>
 <tbody>
@@ -352,12 +372,16 @@ gtag('config', 'G-HJEMN0LJY7', { 'anonymize_ip': true});
 </tbody>
 </table>
 <p>While concatenating functions or operations, forget about writing the pipe opearator by hand. You can insert it directly by pressing:</p>
-<table class="table">
+<table class="caption-top table">
 <caption><strong>Insert pipe operator<code>%&gt;%</code> or <code>|&gt;</code></strong></caption>
+<colgroup>
+<col style="width: 52%">
+<col style="width: 47%">
+</colgroup>
 <thead>
 <tr class="header">
-<th style="text-align: center;">Windows <a href="figs/windows.png" class="lightbox" data-gallery="quarto-lightbox-gallery-8"><img src="figs/windows.png" class="img-fluid" style="width:5.0%"></a></th>
-<th style="text-align: center;">Mac <a href="figs/apple.png" class="lightbox" data-gallery="quarto-lightbox-gallery-9"><img src="figs/apple.png" class="img-fluid" style="width:6.5%"></a></th>
+<th style="text-align: center;">Windows <img src="figs/windows.png" class="img-fluid" style="width:5.0%"></th>
+<th style="text-align: center;">Mac <img src="figs/apple.png" class="img-fluid" style="width:6.5%"></th>
 </tr>
 </thead>
 <tbody>
@@ -367,16 +391,16 @@ gtag('config', 'G-HJEMN0LJY7', { 'anonymize_ip': true});
 </tr>
 </tbody>
 </table>
-<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout callout-style-default callout-tip callout-titled" title="Defining the default pipe">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<div class="callout-caption-container flex-fill">
-Tip
+<div class="callout-title-container flex-fill">
+Defining the default pipe
 </div>
 </div>
-<div class="callout-body-container callout-body" title="Defining the default pipe">
+<div class="callout-body-container callout-body">
 <p>The type of pipe that is going to be inserted is defined at <code>Global Options</code>.</p>
 <p>Currently there are two pipes that are commonly used:</p>
 <ul>
@@ -386,19 +410,23 @@ Tip
 <p>You can preset the pipe you want to insert by accessing <code>Global Options/Code/Editing</code> and defining if you want to use the native pipe (in case you don’t, the magrittr pipe will be automatically used).</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="figs/pipe.png" class="lightbox" data-gallery="quarto-lightbox-gallery-10"><img src="figs/pipe.png" class="img-fluid figure-img" style="width:60.0%"></a></p>
+<p><a href="figs/pipe.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="figs/pipe.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:60.0%"></a></p>
 </figure>
 </div>
 </div>
 </div>
 <p>You can forget of writing every component of the code chunks by hand while working on a <code>Quarto</code> or an <code>R Markdown</code> file, by using the <strong>insert code chunk</strong> shortcut.</p>
 <p>It certainly will save you a good amount of time. Besides, it will help you to keep focused in the main things while creating a Notebook: improve your writing and develop code.</p>
-<table class="table">
+<table class="caption-top table">
 <caption><strong>Insert code chunk (for Quarto and RMarkdown)</strong></caption>
+<colgroup>
+<col style="width: 52%">
+<col style="width: 47%">
+</colgroup>
 <thead>
 <tr class="header">
-<th style="text-align: center;">Windows <a href="figs/windows.png" class="lightbox" data-gallery="quarto-lightbox-gallery-11"><img src="figs/windows.png" class="img-fluid" style="width:5.0%"></a></th>
-<th style="text-align: center;">Mac <a href="figs/apple.png" class="lightbox" data-gallery="quarto-lightbox-gallery-12"><img src="figs/apple.png" class="img-fluid" style="width:6.5%"></a></th>
+<th style="text-align: center;">Windows <img src="figs/windows.png" class="img-fluid" style="width:5.0%"></th>
+<th style="text-align: center;">Mac <img src="figs/apple.png" class="img-fluid" style="width:6.5%"></th>
 </tr>
 </thead>
 <tbody>
@@ -409,12 +437,16 @@ Tip
 </tbody>
 </table>
 <p><strong>Comment/uncomment current line selection</strong> is one of the first shortcuts that I learned, and currently it is still among the ones I use the most. Instead of manually adding <code>#</code> at the start of each line you want to comment, select the section of code you want to coment, and then and then use this shortcut. Since commenting code is very common, this shortcut will save you an enormous amount of time.</p>
-<table class="table">
+<table class="caption-top table">
 <caption><strong>Comment/uncomment current line selection</strong></caption>
+<colgroup>
+<col style="width: 52%">
+<col style="width: 47%">
+</colgroup>
 <thead>
 <tr class="header">
-<th style="text-align: center;">Windows <a href="figs/windows.png" class="lightbox" data-gallery="quarto-lightbox-gallery-13"><img src="figs/windows.png" class="img-fluid" style="width:5.0%"></a></th>
-<th style="text-align: center;">Mac <a href="figs/apple.png" class="lightbox" data-gallery="quarto-lightbox-gallery-14"><img src="figs/apple.png" class="img-fluid" style="width:6.5%"></a></th>
+<th style="text-align: center;">Windows <img src="figs/windows.png" class="img-fluid" style="width:5.0%"></th>
+<th style="text-align: center;">Mac <img src="figs/apple.png" class="img-fluid" style="width:6.5%"></th>
 </tr>
 </thead>
 <tbody>
@@ -425,12 +457,16 @@ Tip
 </tbody>
 </table>
 <p>In case you are looking how to organize your code scripts sections, subsections and other sorting levels, you will be happy to find about how to <strong>insert a new code section</strong>. This is ideal to have a good structure of your code, and the best part is that all the sections and subsections that you create will be visible in the code outline that is next to the <code>Source</code> button in Rstudio.</p>
-<table class="table">
+<table class="caption-top table">
 <caption><strong>Insert a new code section</strong></caption>
+<colgroup>
+<col style="width: 52%">
+<col style="width: 47%">
+</colgroup>
 <thead>
 <tr class="header">
-<th style="text-align: center;">Windows <a href="figs/windows.png" class="lightbox" data-gallery="quarto-lightbox-gallery-15"><img src="figs/windows.png" class="img-fluid" style="width:5.0%"></a></th>
-<th style="text-align: center;">Mac <a href="figs/apple.png" class="lightbox" data-gallery="quarto-lightbox-gallery-16"><img src="figs/apple.png" class="img-fluid" style="width:6.5%"></a></th>
+<th style="text-align: center;">Windows <img src="figs/windows.png" class="img-fluid" style="width:5.0%"></th>
+<th style="text-align: center;">Mac <img src="figs/apple.png" class="img-fluid" style="width:6.5%"></th>
 </tr>
 </thead>
 <tbody>
@@ -441,12 +477,16 @@ Tip
 </tbody>
 </table>
 <p>Here’s how to <strong>Toggle document outline</strong> in case you were looking for it.</p>
-<table class="table">
+<table class="caption-top table">
 <caption><strong>Toggle document outline</strong></caption>
+<colgroup>
+<col style="width: 52%">
+<col style="width: 47%">
+</colgroup>
 <thead>
 <tr class="header">
-<th style="text-align: center;">Windows <a href="figs/windows.png" class="lightbox" data-gallery="quarto-lightbox-gallery-17"><img src="figs/windows.png" class="img-fluid" style="width:5.0%"></a></th>
-<th style="text-align: center;">Mac <a href="figs/apple.png" class="lightbox" data-gallery="quarto-lightbox-gallery-18"><img src="figs/apple.png" class="img-fluid" style="width:6.5%"></a></th>
+<th style="text-align: center;">Windows <img src="figs/windows.png" class="img-fluid" style="width:5.0%"></th>
+<th style="text-align: center;">Mac <img src="figs/apple.png" class="img-fluid" style="width:6.5%"></th>
 </tr>
 </thead>
 <tbody>
@@ -456,16 +496,16 @@ Tip
 </tr>
 </tbody>
 </table>
-<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout callout-style-default callout-tip callout-titled" title="Defining the level of the headers">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<div class="callout-caption-container flex-fill">
-Tip
+<div class="callout-title-container flex-fill">
+Defining the level of the headers
 </div>
 </div>
-<div class="callout-body-container callout-body" title="Defining the level of the headers">
+<div class="callout-body-container callout-body">
 <p>The section breaks have a similar structure as the <a href="https://quarto.org/docs/authoring/markdown-basics.html#headings">Quarto and RMarkdown headings</a>. The number of <code>#</code>’s at the beginning of each line defines the level of the headers:</p>
 <ul>
 <li><code>#</code> stands for 1st level header,</li>
@@ -474,18 +514,22 @@ Tip
 </ul>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="figs/outline.png" class="lightbox" data-gallery="quarto-lightbox-gallery-19"><img src="figs/outline.png" class="img-fluid figure-img" style="width:100.0%"></a></p>
+<p><a href="figs/outline.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img src="figs/outline.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></a></p>
 </figure>
 </div>
 </div>
 </div>
 <p>Instead of manually indenting your code, you can make a selection of the code and indent every selected line. If want to reindent all the content of a script, first select all (<code>Ctrl + A</code> for Windows, or <code>Cmd + A</code> for Mac) and then reindent. This will save you a lot of time and headaches figuring out how the code should be indented. This is a great aid to visually structure your code.</p>
-<table class="table">
+<table class="caption-top table">
 <caption><strong>Reindent selection</strong></caption>
+<colgroup>
+<col style="width: 52%">
+<col style="width: 47%">
+</colgroup>
 <thead>
 <tr class="header">
-<th style="text-align: center;">Windows <a href="figs/windows.png" class="lightbox" data-gallery="quarto-lightbox-gallery-20"><img src="figs/windows.png" class="img-fluid" style="width:5.0%"></a></th>
-<th style="text-align: center;">Mac <a href="figs/apple.png" class="lightbox" data-gallery="quarto-lightbox-gallery-21"><img src="figs/apple.png" class="img-fluid" style="width:6.5%"></a></th>
+<th style="text-align: center;">Windows <img src="figs/windows.png" class="img-fluid" style="width:5.0%"></th>
+<th style="text-align: center;">Mac <img src="figs/apple.png" class="img-fluid" style="width:6.5%"></th>
 </tr>
 </thead>
 <tbody>
@@ -500,12 +544,16 @@ Tip
 <h1 data-number="3"><span class="header-section-number">3</span> Edit code</h1>
 <hr>
 <p>You can move lines of code up or down without having to copy them.</p>
-<table class="table">
+<table class="caption-top table">
 <caption><strong>Move lines up/down</strong></caption>
+<colgroup>
+<col style="width: 52%">
+<col style="width: 47%">
+</colgroup>
 <thead>
 <tr class="header">
-<th style="text-align: center;">Windows <a href="figs/windows.png" class="lightbox" data-gallery="quarto-lightbox-gallery-22"><img src="figs/windows.png" class="img-fluid" style="width:5.0%"></a></th>
-<th style="text-align: center;">Mac <a href="figs/apple.png" class="lightbox" data-gallery="quarto-lightbox-gallery-23"><img src="figs/apple.png" class="img-fluid" style="width:6.5%"></a></th>
+<th style="text-align: center;">Windows <img src="figs/windows.png" class="img-fluid" style="width:5.0%"></th>
+<th style="text-align: center;">Mac <img src="figs/apple.png" class="img-fluid" style="width:6.5%"></th>
 </tr>
 </thead>
 <tbody>
@@ -516,12 +564,16 @@ Tip
 </tbody>
 </table>
 <p>You can also copy lines of code up or down without having to copy and paste them.</p>
-<table class="table">
+<table class="caption-top table">
 <caption><strong>Copy lines up/down</strong></caption>
+<colgroup>
+<col style="width: 52%">
+<col style="width: 47%">
+</colgroup>
 <thead>
 <tr class="header">
-<th style="text-align: center;">Windows <a href="figs/windows.png" class="lightbox" data-gallery="quarto-lightbox-gallery-24"><img src="figs/windows.png" class="img-fluid" style="width:5.0%"></a></th>
-<th style="text-align: center;">Mac <a href="figs/apple.png" class="lightbox" data-gallery="quarto-lightbox-gallery-25"><img src="figs/apple.png" class="img-fluid" style="width:6.5%"></a></th>
+<th style="text-align: center;">Windows <img src="figs/windows.png" class="img-fluid" style="width:5.0%"></th>
+<th style="text-align: center;">Mac <img src="figs/apple.png" class="img-fluid" style="width:6.5%"></th>
 </tr>
 </thead>
 <tbody>
@@ -532,12 +584,16 @@ Tip
 </tbody>
 </table>
 <p>You can select code without using the mouse. To create or modify a selection using the keyboard, you have to maintain <code>Shift</code> pressed while moving your cursor. This will select anything that have been passed by your cursor. Once you stop pressing <code>Shift</code> you will stop modifying your selection.</p>
-<table class="table">
+<table class="caption-top table">
 <caption><strong>Select</strong></caption>
+<colgroup>
+<col style="width: 52%">
+<col style="width: 47%">
+</colgroup>
 <thead>
 <tr class="header">
-<th style="text-align: center;">Windows <a href="figs/windows.png" class="lightbox" data-gallery="quarto-lightbox-gallery-26"><img src="figs/windows.png" class="img-fluid" style="width:5.0%"></a></th>
-<th style="text-align: center;">Mac <a href="figs/apple.png" class="lightbox" data-gallery="quarto-lightbox-gallery-27"><img src="figs/apple.png" class="img-fluid" style="width:6.5%"></a></th>
+<th style="text-align: center;">Windows <img src="figs/windows.png" class="img-fluid" style="width:5.0%"></th>
+<th style="text-align: center;">Mac <img src="figs/apple.png" class="img-fluid" style="width:6.5%"></th>
 </tr>
 </thead>
 <tbody>
@@ -548,12 +604,16 @@ Tip
 </tbody>
 </table>
 <p>You can move your cursor directly to the start or the end of a line only with your keyboard following the next key combination:</p>
-<table class="table">
+<table class="caption-top table">
 <caption><strong>Move cursor to start/end of line</strong></caption>
+<colgroup>
+<col style="width: 52%">
+<col style="width: 47%">
+</colgroup>
 <thead>
 <tr class="header">
-<th style="text-align: center;">Windows <a href="figs/windows.png" class="lightbox" data-gallery="quarto-lightbox-gallery-28"><img src="figs/windows.png" class="img-fluid" style="width:5.0%"></a></th>
-<th style="text-align: center;">Mac <a href="figs/apple.png" class="lightbox" data-gallery="quarto-lightbox-gallery-29"><img src="figs/apple.png" class="img-fluid" style="width:6.5%"></a></th>
+<th style="text-align: center;">Windows <img src="figs/windows.png" class="img-fluid" style="width:5.0%"></th>
+<th style="text-align: center;">Mac <img src="figs/apple.png" class="img-fluid" style="width:6.5%"></th>
 </tr>
 </thead>
 <tbody>
@@ -564,12 +624,16 @@ Tip
 </tbody>
 </table>
 <p>You can also move your cursor to the start or the end of a word with the following shortcut:</p>
-<table class="table">
+<table class="caption-top table">
 <caption><strong>Jump to word</strong> (move cursor to start/end of word)</caption>
+<colgroup>
+<col style="width: 52%">
+<col style="width: 47%">
+</colgroup>
 <thead>
 <tr class="header">
-<th style="text-align: center;">Windows <a href="figs/windows.png" class="lightbox" data-gallery="quarto-lightbox-gallery-30"><img src="figs/windows.png" class="img-fluid" style="width:5.0%"></a></th>
-<th style="text-align: center;">Mac <a href="figs/apple.png" class="lightbox" data-gallery="quarto-lightbox-gallery-31"><img src="figs/apple.png" class="img-fluid" style="width:6.5%"></a></th>
+<th style="text-align: center;">Windows <img src="figs/windows.png" class="img-fluid" style="width:5.0%"></th>
+<th style="text-align: center;">Mac <img src="figs/apple.png" class="img-fluid" style="width:6.5%"></th>
 </tr>
 </thead>
 <tbody>
@@ -580,12 +644,16 @@ Tip
 </tbody>
 </table>
 <p>You can add multiple cursors to edit multiple lines of code simultaneously. For that you need to press the next combination of keys.</p>
-<table class="table">
+<table class="caption-top table">
 <caption><strong>Add cursor Above/Below current cursor</strong></caption>
+<colgroup>
+<col style="width: 52%">
+<col style="width: 47%">
+</colgroup>
 <thead>
 <tr class="header">
-<th style="text-align: center;">Windows <a href="figs/windows.png" class="lightbox" data-gallery="quarto-lightbox-gallery-32"><img src="figs/windows.png" class="img-fluid" style="width:5.0%"></a></th>
-<th style="text-align: center;">Mac <a href="figs/apple.png" class="lightbox" data-gallery="quarto-lightbox-gallery-33"><img src="figs/apple.png" class="img-fluid" style="width:6.5%"></a></th>
+<th style="text-align: center;">Windows <img src="figs/windows.png" class="img-fluid" style="width:5.0%"></th>
+<th style="text-align: center;">Mac <img src="figs/apple.png" class="img-fluid" style="width:6.5%"></th>
 </tr>
 </thead>
 <tbody>
@@ -595,16 +663,16 @@ Tip
 </tr>
 </tbody>
 </table>
-<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout callout-style-default callout-tip callout-titled" title="Advanced selection">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<div class="callout-caption-container flex-fill">
-Tip
+<div class="callout-title-container flex-fill">
+Advanced selection
 </div>
 </div>
-<div class="callout-body-container callout-body" title="Advanced selection">
+<div class="callout-body-container callout-body">
 <p>Once you know how to select, move the cursor to the start/end of a line, move the cursor to the start/end of a word, and add multiple cursors, you have all the ingredients to make more complex selections. You can combine <code>select</code> with any of these shortcuts to get different types of selections.</p>
 <p>Here is an examples (in Mac format):</p>
 <ul>
@@ -617,12 +685,16 @@ Tip
 <h1 data-number="4"><span class="header-section-number">4</span> Move between panes and tabs</h1>
 <hr>
 <p>You can <strong>move focus to Source Editor</strong>, i.e., place the cursor in the active script, without taking your hands out of the keyboard with the following shortcut.</p>
-<table class="table">
+<table class="caption-top table">
 <caption><strong>Move focus to Source Editor</strong></caption>
+<colgroup>
+<col style="width: 52%">
+<col style="width: 47%">
+</colgroup>
 <thead>
 <tr class="header">
-<th style="text-align: center;">Windows <a href="figs/windows.png" class="lightbox" data-gallery="quarto-lightbox-gallery-34"><img src="figs/windows.png" class="img-fluid" style="width:5.0%"></a></th>
-<th style="text-align: center;">Mac <a href="figs/apple.png" class="lightbox" data-gallery="quarto-lightbox-gallery-35"><img src="figs/apple.png" class="img-fluid" style="width:6.5%"></a></th>
+<th style="text-align: center;">Windows <img src="figs/windows.png" class="img-fluid" style="width:5.0%"></th>
+<th style="text-align: center;">Mac <img src="figs/apple.png" class="img-fluid" style="width:6.5%"></th>
 </tr>
 </thead>
 <tbody>
@@ -633,12 +705,16 @@ Tip
 </tbody>
 </table>
 <p>The same idea goes for the console. You can place the cursor in the Console by using:</p>
-<table class="table">
+<table class="caption-top table">
 <caption><strong>Move focus to Console</strong></caption>
+<colgroup>
+<col style="width: 52%">
+<col style="width: 47%">
+</colgroup>
 <thead>
 <tr class="header">
-<th style="text-align: center;">Windows <a href="figs/windows.png" class="lightbox" data-gallery="quarto-lightbox-gallery-36"><img src="figs/windows.png" class="img-fluid" style="width:5.0%"></a></th>
-<th style="text-align: center;">Mac <a href="figs/apple.png" class="lightbox" data-gallery="quarto-lightbox-gallery-37"><img src="figs/apple.png" class="img-fluid" style="width:6.5%"></a></th>
+<th style="text-align: center;">Windows <img src="figs/windows.png" class="img-fluid" style="width:5.0%"></th>
+<th style="text-align: center;">Mac <img src="figs/apple.png" class="img-fluid" style="width:6.5%"></th>
 </tr>
 </thead>
 <tbody>
@@ -661,12 +737,16 @@ Tip
 <li>9 - Viewer</li>
 </ul>
 <p>To move between tabs without taking your hands out of the keyboard you have to type:</p>
-<table class="table">
+<table class="caption-top table">
 <caption><strong>Open previous/next tab</strong></caption>
+<colgroup>
+<col style="width: 52%">
+<col style="width: 47%">
+</colgroup>
 <thead>
 <tr class="header">
-<th style="text-align: center;">Windows <a href="figs/windows.png" class="lightbox" data-gallery="quarto-lightbox-gallery-38"><img src="figs/windows.png" class="img-fluid" style="width:5.0%"></a></th>
-<th style="text-align: center;">Mac <a href="figs/apple.png" class="lightbox" data-gallery="quarto-lightbox-gallery-39"><img src="figs/apple.png" class="img-fluid" style="width:6.5%"></a></th>
+<th style="text-align: center;">Windows <img src="figs/windows.png" class="img-fluid" style="width:5.0%"></th>
+<th style="text-align: center;">Mac <img src="figs/apple.png" class="img-fluid" style="width:6.5%"></th>
 </tr>
 </thead>
 <tbody>
@@ -677,12 +757,16 @@ Tip
 </tbody>
 </table>
 <p>The previous shortcut may not be practical if you have opened many tabs. If you know the name of the tab you want to go, you can open it directly using <strong>Switch to tab</strong> which shows a list of all the tabs. You can look for a specific tab by writing its name and access it by pressing <code>enter</code>.</p>
-<table class="table">
+<table class="caption-top table">
 <caption><strong>Switch to tab</strong></caption>
+<colgroup>
+<col style="width: 52%">
+<col style="width: 47%">
+</colgroup>
 <thead>
 <tr class="header">
-<th style="text-align: center;">Windows <a href="figs/windows.png" class="lightbox" data-gallery="quarto-lightbox-gallery-40"><img src="figs/windows.png" class="img-fluid" style="width:5.0%"></a></th>
-<th style="text-align: center;">Mac <a href="figs/apple.png" class="lightbox" data-gallery="quarto-lightbox-gallery-41"><img src="figs/apple.png" class="img-fluid" style="width:6.5%"></a></th>
+<th style="text-align: center;">Windows <img src="figs/windows.png" class="img-fluid" style="width:5.0%"></th>
+<th style="text-align: center;">Mac <img src="figs/apple.png" class="img-fluid" style="width:6.5%"></th>
 </tr>
 </thead>
 <tbody>
@@ -694,17 +778,25 @@ Tip
 </table>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="figs/switch_tab.png" class="lightbox" title="Switch to tab…" data-gallery="quarto-lightbox-gallery-42"><img src="figs/switch_tab.png" class="img-fluid figure-img" style="width:100.0%"></a></p>
-<p></p><figcaption class="figure-caption">Switch to tab…</figcaption><p></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="figs/switch_tab.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4" title="Switch to tab…"><img src="figs/switch_tab.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%" alt="Switch to tab…"></a></p>
+</figure>
+</div>
+<figcaption>Switch to tab…</figcaption>
 </figure>
 </div>
 <p>You can <strong>close current document</strong> once you have finished working on it. This is very usefull to close multiple tabs without using the mouse.</p>
-<table class="table">
+<table class="caption-top table">
 <caption><strong>Close current document</strong></caption>
+<colgroup>
+<col style="width: 52%">
+<col style="width: 47%">
+</colgroup>
 <thead>
 <tr class="header">
-<th style="text-align: center;">Windows <a href="figs/windows.png" class="lightbox" data-gallery="quarto-lightbox-gallery-43"><img src="figs/windows.png" class="img-fluid" style="width:5.0%"></a></th>
-<th style="text-align: center;">Mac <a href="figs/apple.png" class="lightbox" data-gallery="quarto-lightbox-gallery-44"><img src="figs/apple.png" class="img-fluid" style="width:6.5%"></a></th>
+<th style="text-align: center;">Windows <img src="figs/windows.png" class="img-fluid" style="width:5.0%"></th>
+<th style="text-align: center;">Mac <img src="figs/apple.png" class="img-fluid" style="width:6.5%"></th>
 </tr>
 </thead>
 <tbody>
@@ -719,12 +811,16 @@ Tip
 <h1 data-number="5"><span class="header-section-number">5</span> Find files and functions</h1>
 <hr>
 <p><strong>Find/Replace text</strong> shows a find/replace utility were you can find everything that match your search, one by one (by pressing the <code>Next</code> or <code>Prev</code> buttons), or at once (pressing <code>All</code>). It also lets you replace all the matches with another text. When a part of the of code is previously selected, the search and replace utility will only look into the selected code by default. You can modify the behavior of this utility by modifying its different options.</p>
-<table class="table">
+<table class="caption-top table">
 <caption><strong>Find/Replace text</strong> (in active tab)</caption>
+<colgroup>
+<col style="width: 52%">
+<col style="width: 47%">
+</colgroup>
 <thead>
 <tr class="header">
-<th style="text-align: center;">Windows <a href="figs/windows.png" class="lightbox" data-gallery="quarto-lightbox-gallery-45"><img src="figs/windows.png" class="img-fluid" style="width:5.0%"></a></th>
-<th style="text-align: center;">Mac <a href="figs/apple.png" class="lightbox" data-gallery="quarto-lightbox-gallery-46"><img src="figs/apple.png" class="img-fluid" style="width:6.5%"></a></th>
+<th style="text-align: center;">Windows <img src="figs/windows.png" class="img-fluid" style="width:5.0%"></th>
+<th style="text-align: center;">Mac <img src="figs/apple.png" class="img-fluid" style="width:6.5%"></th>
 </tr>
 </thead>
 <tbody>
@@ -736,8 +832,12 @@ Tip
 </table>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="figs/find_replace.png" class="lightbox" title="Selecting all the text that matches with the word fear" data-gallery="quarto-lightbox-gallery-47"><img src="figs/find_replace.png" class="img-fluid figure-img" style="width:100.0%"></a></p>
-<p></p><figcaption class="figure-caption">Selecting all the text that matches with the word <code>fear</code></figcaption><p></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="figs/find_replace.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5" title="Selecting all the text that matches with the word fear"><img src="figs/find_replace.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%" alt="Selecting all the text that matches with the word fear"></a></p>
+</figure>
+</div>
+<figcaption>Selecting all the text that matches with the word <code>fear</code></figcaption>
 </figure>
 </div>
 <p>The shortcut <strong>Go to file/function</strong> brings up a search box that allows you to:</p>
@@ -746,12 +846,16 @@ Tip
 <li>open files that are present in your current working directory.</li>
 </ul>
 <p>To do this, you will have to type the name of the file/function that you want to check and then press <code>enter</code>.</p>
-<table class="table">
+<table class="caption-top table">
 <caption><strong>Go to file/function</strong></caption>
+<colgroup>
+<col style="width: 52%">
+<col style="width: 47%">
+</colgroup>
 <thead>
 <tr class="header">
-<th style="text-align: center;">Windows <a href="figs/windows.png" class="lightbox" data-gallery="quarto-lightbox-gallery-48"><img src="figs/windows.png" class="img-fluid" style="width:5.0%"></a></th>
-<th style="text-align: center;">Mac <a href="figs/apple.png" class="lightbox" data-gallery="quarto-lightbox-gallery-49"><img src="figs/apple.png" class="img-fluid" style="width:6.5%"></a></th>
+<th style="text-align: center;">Windows <img src="figs/windows.png" class="img-fluid" style="width:5.0%"></th>
+<th style="text-align: center;">Mac <img src="figs/apple.png" class="img-fluid" style="width:6.5%"></th>
 </tr>
 </thead>
 <tbody>
@@ -763,17 +867,25 @@ Tip
 </table>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="figs/basic_fun.png" class="lightbox" title="Looking for the basic_fun function among the files of a working directory" data-gallery="quarto-lightbox-gallery-50"><img src="figs/basic_fun.png" class="img-fluid figure-img" style="width:100.0%"></a></p>
-<p></p><figcaption class="figure-caption">Looking for the <code>basic_fun</code> function among the files of a working directory</figcaption><p></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="figs/basic_fun.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6" title="Looking for the basic_fun function among the files of a working directory"><img src="figs/basic_fun.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%" alt="Looking for the basic_fun function among the files of a working directory"></a></p>
+</figure>
+</div>
+<figcaption>Looking for the <code>basic_fun</code> function among the files of a working directory</figcaption>
 </figure>
 </div>
 <p>In my consideration the most powerful and usefull search tool in the RStudio IDE is <strong>Find in files</strong>. It lets you find any text that matches your search among <em>all the files present under your working directory</em> or in any directory that you specify. It will list you all the findings disaggregating them by location. Just as <strong>Find/replace text</strong> this utility also lets you replace all the matches with specified text.</p>
-<table class="table">
+<table class="caption-top table">
 <caption><strong>Find in files</strong></caption>
+<colgroup>
+<col style="width: 52%">
+<col style="width: 47%">
+</colgroup>
 <thead>
 <tr class="header">
-<th style="text-align: center;">Windows <a href="figs/windows.png" class="lightbox" data-gallery="quarto-lightbox-gallery-51"><img src="figs/windows.png" class="img-fluid" style="width:5.0%"></a></th>
-<th style="text-align: center;">Mac <a href="figs/apple.png" class="lightbox" data-gallery="quarto-lightbox-gallery-52"><img src="figs/apple.png" class="img-fluid" style="width:6.5%"></a></th>
+<th style="text-align: center;">Windows <img src="figs/windows.png" class="img-fluid" style="width:5.0%"></th>
+<th style="text-align: center;">Mac <img src="figs/apple.png" class="img-fluid" style="width:6.5%"></th>
 </tr>
 </thead>
 <tbody>
@@ -785,8 +897,12 @@ Tip
 </table>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="figs/find_in_files.png" class="lightbox" title="Looking for the word and among the RScripts of a given directory" data-gallery="quarto-lightbox-gallery-53"><img src="figs/find_in_files.png" class="img-fluid figure-img" style="width:100.0%"></a></p>
-<p></p><figcaption class="figure-caption">Looking for the word <code>and</code> among the RScripts of a given directory</figcaption><p></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="figs/find_in_files.png" class="lightbox" data-gallery="quarto-lightbox-gallery-7" title="Looking for the word and among the RScripts of a given directory"><img src="figs/find_in_files.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%" alt="Looking for the word and among the RScripts of a given directory"></a></p>
+</figure>
+</div>
+<figcaption>Looking for the word <code>and</code> among the RScripts of a given directory</figcaption>
 </figure>
 </div>
 </section>
@@ -794,12 +910,16 @@ Tip
 <h1 data-number="6"><span class="header-section-number">6</span> Run code</h1>
 <hr>
 <p>The most basic way to execute code in the Source Editor is to put the cursor in the line (or selection) of code you want to run and use this shortcut. This will execute the current line (or selection) and move your cursor to the next part of the code. It is very useful when you are running your Scritps step by step.</p>
-<table class="table">
+<table class="caption-top table">
 <caption><strong>Run current line or selection</strong></caption>
+<colgroup>
+<col style="width: 52%">
+<col style="width: 47%">
+</colgroup>
 <thead>
 <tr class="header">
-<th style="text-align: center;">Windows <a href="figs/windows.png" class="lightbox" data-gallery="quarto-lightbox-gallery-54"><img src="figs/windows.png" class="img-fluid" style="width:5.0%"></a></th>
-<th style="text-align: center;">Mac <a href="figs/apple.png" class="lightbox" data-gallery="quarto-lightbox-gallery-55"><img src="figs/apple.png" class="img-fluid" style="width:6.5%"></a></th>
+<th style="text-align: center;">Windows <img src="figs/windows.png" class="img-fluid" style="width:5.0%"></th>
+<th style="text-align: center;">Mac <img src="figs/apple.png" class="img-fluid" style="width:6.5%"></th>
 </tr>
 </thead>
 <tbody>
@@ -810,12 +930,16 @@ Tip
 </tbody>
 </table>
 <p>This shortcut is similar to the previous one, except that the cursor will remain in its place after executing the code. It can be very useful, specially while making code tests or developing figures in <code>ggplot</code>, and you don’t want to move your cursor away every time the code is executed.</p>
-<table class="table">
+<table class="caption-top table">
 <caption><strong>Run current line or selection (without moving cursor)</strong></caption>
+<colgroup>
+<col style="width: 52%">
+<col style="width: 47%">
+</colgroup>
 <thead>
 <tr class="header">
-<th style="text-align: center;">Windows <a href="figs/windows.png" class="lightbox" data-gallery="quarto-lightbox-gallery-56"><img src="figs/windows.png" class="img-fluid" style="width:5.0%"></a></th>
-<th style="text-align: center;">Mac <a href="figs/apple.png" class="lightbox" data-gallery="quarto-lightbox-gallery-57"><img src="figs/apple.png" class="img-fluid" style="width:6.5%"></a></th>
+<th style="text-align: center;">Windows <img src="figs/windows.png" class="img-fluid" style="width:5.0%"></th>
+<th style="text-align: center;">Mac <img src="figs/apple.png" class="img-fluid" style="width:6.5%"></th>
 </tr>
 </thead>
 <tbody>
@@ -826,12 +950,16 @@ Tip
 </tbody>
 </table>
 <p>Imagine that you have written a lot of lines in a script and you would like to run continue modifying it after restarting your computer You don’t have to run the code line by line until you arrive to a specific part of the code. With this shortcut you can place your cursor in a line and run everything before it. It is one of my favorites.</p>
-<table class="table">
+<table class="caption-top table">
 <caption>Run from document <strong>B</strong>eginning to current line</caption>
+<colgroup>
+<col style="width: 52%">
+<col style="width: 47%">
+</colgroup>
 <thead>
 <tr class="header">
-<th style="text-align: center;">Windows <a href="figs/windows.png" class="lightbox" data-gallery="quarto-lightbox-gallery-58"><img src="figs/windows.png" class="img-fluid" style="width:5.0%"></a></th>
-<th style="text-align: center;">Mac <a href="figs/apple.png" class="lightbox" data-gallery="quarto-lightbox-gallery-59"><img src="figs/apple.png" class="img-fluid" style="width:6.5%"></a></th>
+<th style="text-align: center;">Windows <img src="figs/windows.png" class="img-fluid" style="width:5.0%"></th>
+<th style="text-align: center;">Mac <img src="figs/apple.png" class="img-fluid" style="width:6.5%"></th>
 </tr>
 </thead>
 <tbody>
@@ -842,12 +970,16 @@ Tip
 </tbody>
 </table>
 <p>This is the complement of the previous shortcut. After placing the cursor in a specific line, you can run the rest of the code by using:</p>
-<table class="table">
+<table class="caption-top table">
 <caption>Run from current line to document <strong>E</strong>nd</caption>
+<colgroup>
+<col style="width: 52%">
+<col style="width: 47%">
+</colgroup>
 <thead>
 <tr class="header">
-<th style="text-align: center;">Windows <a href="figs/windows.png" class="lightbox" data-gallery="quarto-lightbox-gallery-60"><img src="figs/windows.png" class="img-fluid" style="width:5.0%"></a></th>
-<th style="text-align: center;">Mac <a href="figs/apple.png" class="lightbox" data-gallery="quarto-lightbox-gallery-61"><img src="figs/apple.png" class="img-fluid" style="width:6.5%"></a></th>
+<th style="text-align: center;">Windows <img src="figs/windows.png" class="img-fluid" style="width:5.0%"></th>
+<th style="text-align: center;">Mac <img src="figs/apple.png" class="img-fluid" style="width:6.5%"></th>
 </tr>
 </thead>
 <tbody>
@@ -864,34 +996,46 @@ Tip
 <p>Once you start typing, a completion list will pop up showing the names of functions, objects and snippets that match your text. If the list is not shown, you can make it appear by pressing <code>Tab</code> after typing something. Inside the list use the <code>Up</code>/<code>Down</code> arrows to move between the suggestions, and press <code>Enter</code> or <code>Tab</code> to select an option. To exit the completion list without making a selection just press <code>Esc</code>.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="figs/code_completion.png" class="lightbox" title="Code completion of read" data-gallery="quarto-lightbox-gallery-62"><img src="figs/code_completion.png" class="img-fluid figure-img" style="width:85.0%"></a></p>
-<p></p><figcaption class="figure-caption">Code completion of <code>read</code></figcaption><p></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="figs/code_completion.png" class="lightbox" data-gallery="quarto-lightbox-gallery-8" title="Code completion of read"><img src="figs/code_completion.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:85.0%" alt="Code completion of read"></a></p>
+</figure>
+</div>
+<figcaption>Code completion of <code>read</code></figcaption>
 </figure>
 </div>
 <p>While using functions, you can list their arguments by pressing <code>Tab</code> or <code>Ctrl+Space</code> inside the function parentheses. As in the previous case, you have to use the <code>Up</code>/<code>Down</code> arrows to move between the options and press <code>Enter</code> or <code>Tab</code> once you have made your selection. This can be extremely useful if you want to be very specific about the arguments that are used inside of a function.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="figs/fun_completion.png" class="lightbox" title="Showing the arguments of the read.csv function" data-gallery="quarto-lightbox-gallery-63"><img src="figs/fun_completion.png" class="img-fluid figure-img" style="width:85.0%"></a></p>
-<p></p><figcaption class="figure-caption">Showing the arguments of the <code>read.csv</code> function</figcaption><p></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="figs/fun_completion.png" class="lightbox" data-gallery="quarto-lightbox-gallery-9" title="Showing the arguments of the read.csv function"><img src="figs/fun_completion.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:85.0%" alt="Showing the arguments of the read.csv function"></a></p>
+</figure>
+</div>
+<figcaption>Showing the arguments of the <code>read.csv</code> function</figcaption>
 </figure>
 </div>
 <p>If you are using paths to read or write files, RStudio also has a completion tool to speed things up. To enter the path completion list you have to write quotation marks <code>""</code> and press <code>Tab</code> while your cursor is inside. A list showing the folders and files of your current working directory will appear. You can navigate between the options using the <code>Up</code>/<code>Down</code> arrows or you can type the name of the file/folder you want to go. Press <code>Enter</code> or <code>Tab</code> to make your selection. If you have accessed a new folder the process will repeat until you select a file.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="figs/path_completion.png" class="lightbox" title="Path completion while reading csv files" data-gallery="quarto-lightbox-gallery-64"><img src="figs/path_completion.png" class="img-fluid figure-img" style="width:85.0%"></a></p>
-<p></p><figcaption class="figure-caption">Path completion while reading csv files</figcaption><p></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="figs/path_completion.png" class="lightbox" data-gallery="quarto-lightbox-gallery-10" title="Path completion while reading csv files"><img src="figs/path_completion.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:85.0%" alt="Path completion while reading csv files"></a></p>
 </figure>
 </div>
-<div class="callout-tip callout callout-style-default callout-captioned">
+<figcaption>Path completion while reading csv files</figcaption>
+</figure>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled" title="Tips for file navigation">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<div class="callout-caption-container flex-fill">
-Tip
+<div class="callout-title-container flex-fill">
+Tips for file navigation
 </div>
 </div>
-<div class="callout-body-container callout-body" title="Tips for file navigation">
+<div class="callout-body-container callout-body">
 <p>While navigating locations to save or read files, it is important to consider the following:</p>
 <ul>
 <li><code>""</code> starts navigation at your <em>current working directory</em>,</li>
@@ -909,13 +1053,13 @@ Tip
 <p>Let’s use the <code>fun</code> snippet, used to define new functions. First we have to write <code>fun</code> in an R script and select it from an autocompletion list. You will be able to recognize it because it has the <code>{snippet}</code> tag.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="figs/snippet_1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-65"><img src="figs/snippet_1.png" class="img-fluid figure-img" style="width:85.0%"></a></p>
+<p><a href="figs/snippet_1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-11"><img src="figs/snippet_1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:85.0%"></a></p>
 </figure>
 </div>
 <p>Second, the <code>fun</code> snippet will be inserted with three placeholders: one to define the function <strong>name</strong>, another to define the function <strong>variables</strong>, and the last one to define the <strong>body</strong> of the function. Don’t forget to press <code>Tab</code> to move to the next placeholder once you finish filling them!</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="figs/snippet_2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-66"><img src="figs/snippet_2.png" class="img-fluid figure-img" style="width:85.0%"></a></p>
+<p><a href="figs/snippet_2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-12"><img src="figs/snippet_2.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:85.0%"></a></p>
 </figure>
 </div>
 <p>Here’s a list of some useful snippets:</p>
@@ -934,7 +1078,7 @@ Tip
 <p>Besides, <strong>you can customize and create your own snippets!</strong>. To do this, you have to access <code>Global Options/Code/Editing</code> and click into <em>Edit Snippets</em>.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="figs/snippet_3.png" class="lightbox" data-gallery="quarto-lightbox-gallery-67"><img src="figs/snippet_3.png" class="img-fluid figure-img" style="width:60.0%"></a></p>
+<p><a href="figs/snippet_3.png" class="lightbox" data-gallery="quarto-lightbox-gallery-13"><img src="figs/snippet_3.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:60.0%"></a></p>
 </figure>
 </div>
 <p>You can look for more details on how to create custom snippets at this <a href="https://appsilon.com/rstudio-shortcuts-and-tips/#:~:text=Reformat%20R%20scripts&amp;text=Ctrl%20%2B%20Shift%20%2B%20A%20%E2%80%93%20Does,selected%20part%20of%20a%20code">website</a>.</p>
@@ -944,16 +1088,16 @@ Tip
 <hr>
 <p>As we have seen here, there are several shortcuts and commands that are incorporated into the RStudio IDE. It will take you some time learning and getting used to them. You will practice some more than others, and that is normal. Every developer has different tasks and priorities. Little by little you will notice how you are incorporating them in your usual workflow, and eventually, you will know more tips and tricks than the ones listed in this site.</p>
 <p>In the meanwhile, I hope this is useful for you, and I wish you the best of lucks in your path developing R code!</p>
-<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout callout-style-default callout-tip callout-titled" title="Custom keyboard shortcuts">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<div class="callout-caption-container flex-fill">
-Tip
+<div class="callout-title-container flex-fill">
+Custom keyboard shortcuts
 </div>
 </div>
-<div class="callout-body-container callout-body" title="Custom keyboard shortcuts">
+<div class="callout-body-container callout-body">
 <p>Just one last thing. RStudio allows you to create and customize keyboard shortcuts in <code>Tools/Modify keyboard shortcuts</code> you can more details about this in <a href="https://docs.posit.co/ide/user/ide/guide/productivity/custom-shortcuts.html#:~:text=Modify%20a%20command's%20shortcut%20by,based%20on%20the%20keys%20entered.">this website</a>.</p>
 </div>
 </div>
@@ -969,12 +1113,12 @@ Tip
 <li><a href="https://docs.posit.co/ide/user/ide/guide/productivity/custom-shortcuts.html#:~:text=Modify%20a%20command's%20shortcut%20by,based%20on%20the%20keys%20entered.">Custom Shortcuts - RStudio User Guide</a></li>
 <li><a href="https://juliendiot42.github.io/RTips-Tricks/#73_Add_project_templates">R Tips &amp; Tricks</a></li>
 </ul>
-<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<div class="callout-caption-container flex-fill">
+<div class="callout-title-container flex-fill">
 Note
 </div>
 </div>
@@ -1011,121 +1155,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
   toggleBodyColorPrimary();  
-  const disableStylesheet = (stylesheets) => {
-    for (let i=0; i < stylesheets.length; i++) {
-      const stylesheet = stylesheets[i];
-      stylesheet.rel = 'prefetch';
-    }
-  }
-  const enableStylesheet = (stylesheets) => {
-    for (let i=0; i < stylesheets.length; i++) {
-      const stylesheet = stylesheets[i];
-      stylesheet.rel = 'stylesheet';
-    }
-  }
-  const manageTransitions = (selector, allowTransitions) => {
-    const els = window.document.querySelectorAll(selector);
-    for (let i=0; i < els.length; i++) {
-      const el = els[i];
-      if (allowTransitions) {
-        el.classList.remove('notransition');
-      } else {
-        el.classList.add('notransition');
-      }
-    }
-  }
-  const toggleColorMode = (alternate) => {
-    // Switch the stylesheets
-    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
-    manageTransitions('#quarto-margin-sidebar .nav-link', false);
-    if (alternate) {
-      enableStylesheet(alternateStylesheets);
-      for (const sheetNode of alternateStylesheets) {
-        if (sheetNode.id === "quarto-bootstrap") {
-          toggleBodyColorMode(sheetNode);
-        }
-      }
-    } else {
-      disableStylesheet(alternateStylesheets);
-      toggleBodyColorPrimary();
-    }
-    manageTransitions('#quarto-margin-sidebar .nav-link', true);
-    // Switch the toggles
-    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
-    for (let i=0; i < toggles.length; i++) {
-      const toggle = toggles[i];
-      if (toggle) {
-        if (alternate) {
-          toggle.classList.add("alternate");     
-        } else {
-          toggle.classList.remove("alternate");
-        }
-      }
-    }
-    // Hack to workaround the fact that safari doesn't
-    // properly recolor the scrollbar when toggling (#1455)
-    if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
-      manageTransitions("body", false);
-      window.scrollTo(0, 1);
-      setTimeout(() => {
-        window.scrollTo(0, 0);
-        manageTransitions("body", true);
-      }, 40);  
-    }
-  }
-  const isFileUrl = () => { 
-    return window.location.protocol === 'file:';
-  }
-  const hasAlternateSentinel = () => {  
-    let styleSentinel = getColorSchemeSentinel();
-    if (styleSentinel !== null) {
-      return styleSentinel === "alternate";
-    } else {
-      return false;
-    }
-  }
-  const setStyleSentinel = (alternate) => {
-    const value = alternate ? "alternate" : "default";
-    if (!isFileUrl()) {
-      window.localStorage.setItem("quarto-color-scheme", value);
-    } else {
-      localAlternateSentinel = value;
-    }
-  }
-  const getColorSchemeSentinel = () => {
-    if (!isFileUrl()) {
-      const storageValue = window.localStorage.getItem("quarto-color-scheme");
-      return storageValue != null ? storageValue : localAlternateSentinel;
-    } else {
-      return localAlternateSentinel;
-    }
-  }
-  let localAlternateSentinel = 'default';
-  // Dark / light mode switch
-  window.quartoToggleColorScheme = () => {
-    // Read the current dark / light value 
-    let toAlternate = !hasAlternateSentinel();
-    toggleColorMode(toAlternate);
-    setStyleSentinel(toAlternate);
-  };
-  // Ensure there is a toggle, if there isn't float one in the top right
-  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
-    const a = window.document.createElement('a');
-    a.classList.add('top-right');
-    a.classList.add('quarto-color-scheme-toggle');
-    a.href = "";
-    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
-    const i = window.document.createElement("i");
-    i.classList.add('bi');
-    a.appendChild(i);
-    window.document.body.appendChild(a);
-  }
-  // Switch to dark mode if need be
-  if (hasAlternateSentinel()) {
-    toggleColorMode(true);
-  } else {
-    toggleColorMode(false);
-  }
   const icon = "";
   const anchorJS = new window.AnchorJS();
   anchorJS.options = {
@@ -1133,12 +1162,15 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     icon: icon
   };
   anchorJS.add('.anchored');
-  const clipboard = new window.ClipboardJS('.code-copy-button', {
-    target: function(trigger) {
-      return trigger.previousElementSibling;
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
     }
-  });
-  clipboard.on('success', function(e) {
+    return false;
+  }
+  const onCopySuccess = function(e) {
     // button target
     const button = e.trigger;
     // don't keep focus
@@ -1170,11 +1202,55 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }, 1000);
     // clear code selection
     e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
   });
-  function tippyHover(el, contentFn) {
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp("https:\/\/www\.hertiecodingclub\.com\/");
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+          // target, if specified
+          link.setAttribute("target", "_blank");
+          if (link.getAttribute("rel") === null) {
+            link.setAttribute("rel", "noopener");
+          }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
-      content: contentFn,
       maxWidth: 500,
       delay: 100,
       arrow: false,
@@ -1184,8 +1260,17 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       interactive: true,
       interactiveBorder: 10,
       theme: 'quarto',
-      placement: 'bottom-start'
+      placement: 'bottom-start',
     };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
     window.tippy(el, config); 
   }
   const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
@@ -1197,9 +1282,245 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
-      return note.innerHTML;
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
     });
   }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
   const findCites = (el) => {
     const parentEl = el.parentElement;
     if (parentEl) {
@@ -1237,20 +1558,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       });
     }
   }
-    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
-      var filterRegex = new RegExp(/https:\/\/www\.hertiecodingclub\.com/);
-    var isInternal = (href) => {
-        return filterRegex.test(href) || localhostRegex.test(href);
-    }
-    // Inspect non-navigation links and adorn them if external
-    var links = window.document.querySelectorAll('a:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item)');
-    for (var i=0; i<links.length; i++) {
-      const link = links[i];
-      if (!isInternal(link.href)) {
-          // target, if specified
-          link.setAttribute("target", "_blank");
-      }
-    }
 });
 </script>
 </div> <!-- /content -->
@@ -1259,42 +1566,90 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     <div class="nav-footer-left">
       <ul class="footer-items list-unstyled">
     <li class="nav-item">
-    <a class="nav-link" href="https://creativecommons.org/licenses/by/2.0/"><i class="fa-regular fa-copyright" aria-label="copyright"></i> <i class="fa-solid fa-circle-user" aria-label="circle-user"></i> 2023 HCC | J.Roa</a>
+    <a class="nav-link" href="https://creativecommons.org/licenses/by/2.0/">
+<p><i class="fa-regular fa-copyright" aria-label="copyright"></i> <i class="fa-solid fa-circle-user" aria-label="circle-user"></i> 2024 HCC | J.Roa</p>
+</a>
   </li>  
 </ul>
     </div>   
-      <div class="nav-footer-center">
-        <ul class="footer-items list-unstyled">
+    <div class="nav-footer-center">
+      <ul class="footer-items list-unstyled">
     <li class="nav-item">
-    <a class="nav-link" href="https://quarto.org"><i class="fa-brands fa-phoenix-framework fa-lg" aria-label="phoenix-framework"></i> Quarto engine</a>
+    <a class="nav-link" href="https://quarto.org">
+<p>· <a href="https://quarto.org/"><img src="https://quarto.org/quarto.png" class="img-fluid" alt="Quarto" width="65"></a> engine ·</p>
+</a>
   </li>  
 </ul>
-      </div>
+    </div>
     <div class="nav-footer-right">
       <ul class="footer-items list-unstyled">
     <li class="nav-item">
-    <a class="nav-link" href="mailto:hertiecodingclub@gmail.com"><i class="fa-solid fa-square-envelope fa-lg" aria-label="square-envelope"></i></a>
+    <a class="nav-link" href="mailto:hertiecodingclub@gmail.com">
+<p><i class="fa-solid fa-square-envelope fa-lg" aria-label="square-envelope"></i></p>
+</a>
   </li>  
     <li class="nav-item">
-    <a class="nav-link" href="http://hertiecodingclub.slack.com"><i class="fa-brands fa-slack fa-lg" aria-label="slack"></i></a>
+    <a class="nav-link" href="http://hertiecodingclub.slack.com">
+<p><i class="fa-brands fa-slack fa-lg" aria-label="slack"></i></p>
+</a>
   </li>  
     <li class="nav-item">
-    <a class="nav-link" href="https://github.com/Hertie-Coding-Club"><i class="fa-brands fa-github fa-lg" aria-label="github"></i></a>
+    <a class="nav-link" href="https://github.com/Hertie-Coding-Club">
+<p><i class="fa-brands fa-github fa-lg" aria-label="github"></i></p>
+</a>
   </li>  
     <li class="nav-item">
-    <a class="nav-link" href="https://twitter.com/HertieCodingCLB"><i class="fa-brands fa-twitter fa-lg" aria-label="twitter"></i></a>
+    <a class="nav-link" href="https://twitter.com/HertieCodingCLB">
+<p><i class="fa-brands fa-twitter fa-lg" aria-label="twitter"></i></p>
+</a>
   </li>  
     <li class="nav-item">
-    <a class="nav-link" href="https://www.instagram.com/hertiecodingclub/"><i class="fa-brands fa-instagram fa-lg" aria-label="instagram"></i></a>
+    <a class="nav-link" href="https://www.instagram.com/hertiecodingclub/">
+<p><i class="fa-brands fa-instagram fa-lg" aria-label="instagram"></i></p>
+</a>
   </li>  
     <li class="nav-item">
-    <a class="nav-link" href="https://youtube.com/@hertiecodingclub"><i class="fa-brands fa-youtube fa-lg" aria-label="youtube"></i></a>
+    <a class="nav-link" href="https://youtube.com/@hertiecodingclub">
+<p><i class="fa-brands fa-youtube fa-lg" aria-label="youtube"></i></p>
+</a>
   </li>  
 </ul>
     </div>
   </div>
 </footer>
-<script>var lightboxQuarto = GLightbox({"descPosition":"left","openEffect":"fade","loop":true,"skin":"lightwidth","selector":".lightbox","closeEffect":"fade"});</script>
+<script>var lightboxQuarto = GLightbox({"closeEffect":"fade","selector":".lightbox","loop":false,"skin":"lightwidth","openEffect":"fade","descPosition":"left"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
+
 
 
 
