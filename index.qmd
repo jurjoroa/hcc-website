@@ -312,7 +312,6 @@ comments: false
   <img src='images/home_sections/r.jpg'/>
   <div class="text">
   <h1>Boost your skills and learn R</h1>
-  <h2 class="animate-text">More lorem ipsum bacon ipsum.</h2>
   <p class="animate-text">Bacon ipsum dolor amet pork belly tri-tip turducken, pancetta bresaola pork chicken meatloaf. Flank sirloin strip steak prosciutto kevin turducken. </p>
 <div class="dots">
     <span></span>
@@ -327,7 +326,6 @@ comments: false
   <img src='images/home_sections/certifications.jpeg'/>
   <div class="text">
   <h1>Certifications, books and resources</h1>
-  <h2 class="animate-text">More lorem ipsum bacon ipsum.</h2>
   <p class="animate-text">Bacon ipsum dolor amet pork belly tri-tip turducken, pancetta bresaola pork chicken meatloaf. Flank sirloin strip steak prosciutto kevin turducken. </p>
 <div class="dots">
     <span></span>
@@ -338,10 +336,9 @@ comments: false
  </div>
   
   <div class="tile"> 
-  <img src='https://images.unsplash.com/photo-1422393462206-207b0fbd8d6b?dpr=1&auto=format&crop=entropy&fit=crop&w=1500&h=1000&q=80'/>
+  <img src='images/home_sections/workshop.jpeg'/>
   <div class="text">
   <h1>Our events at the Hertie School</h1>
-  <h2 class="animate-text">More lorem ipsum bacon ipsum.</h2>
   <p class="animate-text">Bacon ipsum dolor amet pork belly tri-tip turducken, pancetta bresaola pork chicken meatloaf. Flank sirloin strip steak prosciutto kevin turducken. </p>
 <div class="dots">
     <span></span>
