@@ -3961,3 +3961,11 @@ box-shadow: 0px 35px 77px -17px rgba(0,0,0,0.64);
     width:400px;
   }
 }
+
+
+
+
+
+html body.nav-fixed.quarto-light header#title-block-header.quarto-title-block.default.page-columns.page-full div.quarto-title-banner.page-columns.page-full{
+  background: black !important;
+}

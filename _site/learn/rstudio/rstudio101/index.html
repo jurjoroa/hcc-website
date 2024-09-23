@@ -2,11 +2,11 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.2.280">
+<meta name="generator" content="quarto-1.5.57">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 <meta name="author" content="Jorge Roa">
 <meta name="dcterms.date" content="2023-04-12">
-<title>RStudio 101</title>
+<title>quarto-inputb5d4edb23f682b5a</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -16,11 +16,12 @@ div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
   width: 0.8em;
-  margin: 0 0.8em 0.2em -1.6em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
 pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span { line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -31,7 +32,7 @@ div.sourceCode { overflow: auto; }
 }
 @media print {
 pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
   { counter-reset: source-line 0; }
@@ -45,43 +46,13 @@ pre.numberSource code > span > a:first-child::before
     -khtml-user-select: none; -moz-user-select: none;
     -ms-user-select: none; user-select: none;
     padding: 0 4px; width: 4em;
-    color: #aaaaaa;
   }
-pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
 div.sourceCode
   {   }
 @media screen {
 pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
-code span.al { color: #ff0000; font-weight: bold; } /* Alert */
-code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
-code span.at { color: #7d9029; } /* Attribute */
-code span.bn { color: #40a070; } /* BaseN */
-code span.bu { color: #008000; } /* BuiltIn */
-code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
-code span.ch { color: #4070a0; } /* Char */
-code span.cn { color: #880000; } /* Constant */
-code span.co { color: #60a0b0; font-style: italic; } /* Comment */
-code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
-code span.do { color: #ba2121; font-style: italic; } /* Documentation */
-code span.dt { color: #902000; } /* DataType */
-code span.dv { color: #40a070; } /* DecVal */
-code span.er { color: #ff0000; font-weight: bold; } /* Error */
-code span.ex { } /* Extension */
-code span.fl { color: #40a070; } /* Float */
-code span.fu { color: #06287e; } /* Function */
-code span.im { color: #008000; font-weight: bold; } /* Import */
-code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
-code span.kw { color: #007020; font-weight: bold; } /* Keyword */
-code span.op { color: #666666; } /* Operator */
-code span.ot { color: #007020; } /* Other */
-code span.pp { color: #bc7a00; } /* Preprocessor */
-code span.sc { color: #4070a0; } /* SpecialChar */
-code span.ss { color: #bb6688; } /* SpecialString */
-code span.st { color: #4070a0; } /* String */
-code span.va { color: #19177c; } /* Variable */
-code span.vs { color: #4070a0; } /* VerbatimString */
-code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
 <script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -96,24 +67,28 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<script src="../../../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
-<link href="../../../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
-<link href="../../../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
+<link href="../../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <link href="../../../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
 <link href="../../../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
-<link href="../../../site_libs/quarto-contrib/animate-4.1.1/animate.min.css" rel="stylesheet"><script id="quarto-search-options" type="application/json">{
+<link href="../../../site_libs/quarto-contrib/animate-4.1.1/animate.min.css" rel="stylesheet">
+<script src="../../../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../../../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet"><script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
   "collapse-after": 3,
   "panel-placement": "end",
   "type": "overlay",
-  "limit": 20,
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
   "language": {
     "search-no-results-text": "No results",
     "search-matching-documents-text": "matching documents",
@@ -122,8 +97,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     "search-more-match-text": "more match in this document",
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
     "search-detached-cancel-button-title": "Cancel",
-    "search-submit-button-title": "Submit"
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
   }
 }</script><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-HJEMN0LJY7"></script><script type="text/javascript">
 
@@ -138,7 +115,7 @@ gtag('config', 'G-HJEMN0LJY7', { 'anonymize_ip': true});
 <!-- Open Graph / Facebook --><meta property="og:type" content="website">
 <meta property="og:url" content="https://www.hertiecodingclub.com">
 <meta property="og:title" content="RStudio 101">
-<meta property="og:description" content="Welcome to the Hertie Coding Club! Our goal as a club is to help everyone and between us learn coding skills and show that coding is for everyone, no matter our background.">
+<meta property="og:description" content="Learn the basics of R: open a project, setting a working directory and navigate RStudio interface">
 <!-- Primary Meta Tags --><title>Hertie Coding Club - RStudio 101</title>
 <meta name="title" content="Hertie Coding Club - Enable Multithread with data.table in Mac/Intel chips">
 <meta name="description" content="Learn the basics of R: open a project, setting a working directory and navigate RStudio interface">
@@ -153,28 +130,31 @@ gtag('config', 'G-HJEMN0LJY7', { 'anonymize_ip': true});
 <style>:root{--animate-duration:3s;--animate-delay:2s;--animate-repeat:1}</style>
 <style>:root{--animate-duration:3s;--animate-delay:2s;--animate-repeat:1}</style>
 <style>:root{--animate-duration:3s;--animate-delay:2s;--animate-repeat:1}</style>
+<style>:root{--animate-duration:3s;--animate-delay:2s;--animate-repeat:1}</style>
+<style>:root{--animate-duration:3s;--animate-delay:2s;--animate-repeat:1}</style>
 <link rel="stylesheet" href="../../../styles.css">
 </head>
 <body class="nav-fixed">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top"><nav class="navbar navbar-expand-lg navbar-dark "><div class="navbar-container container-fluid">
-      <div class="navbar-brand-container">
+  <header id="quarto-header" class="headroom fixed-top quarto-banner"><nav class="navbar navbar-expand-lg " data-bs-theme="dark"><div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
     <a href="../../../index.html" class="navbar-brand navbar-brand-logo">
     <img src="../../../images/hcc_final.png" alt="" class="navbar-logo"></a>
   </div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
 <li class="nav-item">
-    <a class="nav-link" href="../../../index.html"><i class="bi bi-house-fill" role="img">
+    <a class="nav-link" href="../../../index.html"> <i class="bi bi-house-fill" role="img">
 </i> 
- <span class="menu-text">Home</span></a>
+<span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-fa-solid-people-group--members" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-fa-solid-people-group--members" role="link" data-bs-toggle="dropdown" aria-expanded="false">
  <span class="menu-text"><i class="fa-solid fa-people-group" aria-label="people-group"></i> Members</span>
     </a>
     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-fa-solid-people-group--members">
@@ -193,7 +173,7 @@ gtag('config', 'G-HJEMN0LJY7', { 'anonymize_ip': true});
     </ul>
 </li>
   <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-learn" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-learn" role="link" data-bs-toggle="dropdown" aria-expanded="false">
       <i class="bi bi-mortarboard-fill" role="img">
 </i> 
  <span class="menu-text">Learn</span>
@@ -214,24 +194,20 @@ gtag('config', 'G-HJEMN0LJY7', { 'anonymize_ip': true});
     </ul>
 </li>
   <li class="nav-item">
-    <a class="nav-link" href="../../../material/index.html">
- <span class="menu-text"><i class="fa-solid fa-meteor" aria-label="meteor"></i> Material</span></a>
+    <a class="nav-link" href="../../../material/index.html"> 
+<span class="menu-text"><i class="fa-solid fa-meteor" aria-label="meteor"></i> Material</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../../events/index.html"><i class="bi bi-calendar3" role="img">
+    <a class="nav-link" href="../../../events/index.html"> <i class="bi bi-calendar3" role="img">
 </i> 
- <span class="menu-text">Events</span></a>
+<span class="menu-text">Events</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../../coding/index.html">
- <span class="menu-text"><i class="fa-solid fa-handshake-angle" aria-label="handshake-angle"></i> Coding peers</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="../../../news/index.html">
- <span class="menu-text"><i class="fa-regular fa-newspaper" aria-label="newspaper"></i> News</span></a>
+    <a class="nav-link" href="../../../news/index.html"> 
+<span class="menu-text"><i class="fa-regular fa-newspaper" aria-label="newspaper"></i> News</span></a>
   </li>  
   <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-fa-solid-laptop-code--about-us" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-fa-solid-laptop-code--about-us" role="link" data-bs-toggle="dropdown" aria-expanded="false">
  <span class="menu-text"><i class="fa-solid fa-laptop-code" aria-label="laptop-code"></i> About us</span>
     </a>
     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-fa-solid-laptop-code--about-us">
@@ -254,16 +230,14 @@ gtag('config', 'G-HJEMN0LJY7', { 'anonymize_ip': true});
     </ul>
 </li>
 </ul>
-<div class="quarto-toggle-container">
-                  <a href="" class="quarto-color-scheme-toggle nav-link" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
-              </div>
-              <div id="quarto-search" class="" title="Search"></div>
-          </div> <!-- /navcollapse -->
+</div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
       </div> <!-- /container-fluid -->
     </nav></header><!-- content --><header id="title-block-header" class="quarto-title-block default page-columns page-full"><div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title"><span class="animate__animated animate__fadeInDown animate__delay-.6s" style="display: inline-block;">RStudio 101</span></h1>
-            <p class="subtitle lead"><span class="animate__animated animate__fadeInDown animate__delay-.6s" style="display: inline-block;">Learn the basics of R: open a project, setting a working directory and navigate RStudio interface</span></p>
+      <h1 class="title"><span class="animate__animated animate__fadeInDown" style="display: inline-block;">RStudio 101</span></h1>
+            <p class="subtitle lead"><span class="animate__animated animate__fadeInDown" style="display: inline-block;">Learn the basics of R: open a project, setting a working directory and navigate RStudio interface</span></p>
                                 <div class="quarto-categories">
                 <div class="quarto-category">Rstudio</div>
                 <div class="quarto-category">Interface</div>
@@ -336,7 +310,7 @@ gtag('config', 'G-HJEMN0LJY7', { 'anonymize_ip': true});
 <main class="content quarto-banner-title-block" id="quarto-document-content"><section id="welcome-to-rstudio" class="level1"><h1>Welcome to RStudio</h1>
 <hr>
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="images/rstudio1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="images/rstudio1.png" class="img-fluid figure-img"></a></p>
+<figure class="figure"><p><a href="images/rstudio1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="images/rstudio1.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></a></p>
 </figure>
 </div>
 <p>This is the window that appears to us when we open R. As you can see, there are multiple things that we will check. But, first we are going to create our first project.</p>
@@ -345,21 +319,25 @@ gtag('config', 'G-HJEMN0LJY7', { 'anonymize_ip': true});
 <hr>
 <section id="step-1-opening-a-new-project" class="level2"><h2 class="anchored" data-anchor-id="step-1-opening-a-new-project">Step 1: Opening a new project</h2>
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="images/rstudio2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="images/rstudio2.png" class="img-fluid figure-img"></a></p>
+<figure class="figure"><p><a href="images/rstudio2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="images/rstudio2.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></a></p>
 </figure>
 </div>
 <ul>
 <li>We will go to File tab and click in “New Project”.</li>
 </ul>
-<table class="table">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
 <thead><tr class="header">
 <th>1.-Create Project</th>
 <th>2.-Project Type</th>
 </tr></thead>
 <tbody>
 <tr class="odd">
-<td><a href="images/rstudio3.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img src="images/rstudio3.png" class="img-fluid" data-fig-align="center"></a></td>
-<td><a href="images/rstudio4.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4"><img src="images/rstudio4.png" class="img-fluid" data-fig-align="center"></a></td>
+<td><img src="images/rstudio3.png" class="img-fluid quarto-figure quarto-figure-center"></td>
+<td><img src="images/rstudio4.png" class="img-fluid quarto-figure quarto-figure-center"></td>
 </tr>
 <tr class="even">
 <td>Here you have three options: since you are creating a new project, choose New Directory.</td>
@@ -373,19 +351,23 @@ gtag('config', 'G-HJEMN0LJY7', { 'anonymize_ip': true});
 <li>Once we open a new project, we need to decide where we want to store our project and all the code we will generate. I’ll talk about this later, but putting a project in a separate folder is good practice to have everything ordered.</li>
 </ul>
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="images/rstudio5.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5"><img src="images/rstudio5.png" class="img-fluid figure-img"></a></p>
+<figure class="figure"><p><a href="images/rstudio5.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img src="images/rstudio5.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></a></p>
 </figure>
 </div>
 <p>Your name project should be precise and not too long. In our case, we will name it “Hertie Coding Club R”</p>
-<table class="table">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
 <thead><tr class="header">
 <th>3.-Choose folder</th>
 <th>4.-Icon project in project folder</th>
 </tr></thead>
 <tbody>
 <tr class="odd">
-<td><a href="images/rstudio6.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6"><img src="images/rstudio6.png" class="img-fluid" data-fig-align="center"></a></td>
-<td><a href="images/rstudio7.png" class="lightbox" data-gallery="quarto-lightbox-gallery-7"><img src="images/rstudio7.png" class="img-fluid" data-fig-align="center"></a></td>
+<td><img src="images/rstudio6.png" class="img-fluid quarto-figure quarto-figure-center"></td>
+<td><img src="images/rstudio7.png" class="img-fluid quarto-figure quarto-figure-center"></td>
 </tr>
 <tr class="even">
 <td>Here we show the folder in where we will save our project</td>
@@ -399,12 +381,12 @@ gtag('config', 'G-HJEMN0LJY7', { 'anonymize_ip': true});
 <p>In R, the working directory is the folder or directory where R will look for files and where it will save output files. I firmly believe setting the working directory is one of the most critical steps when working with R, as it can save you time and prevent errors.</p>
 <p></p>
 <section id="benefits" class="level2"><h2 class="anchored" data-anchor-id="benefits">Benefits</h2>
-<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<div class="callout-caption-container flex-fill">
+<div class="callout-title-container flex-fill">
 <strong>Benefits</strong>
 </div>
 </div>
@@ -417,12 +399,12 @@ gtag('config', 'G-HJEMN0LJY7', { 'anonymize_ip': true});
 </ul>
 </div>
 </div>
-<div class="callout-important callout callout-style-default callout-captioned">
+<div class="callout callout-style-default callout-important callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<div class="callout-caption-container flex-fill">
+<div class="callout-title-container flex-fill">
 <strong>What happens if I don’t create a folder for my project?</strong>
 </div>
 </div>
@@ -438,20 +420,24 @@ gtag('config', 'G-HJEMN0LJY7', { 'anonymize_ip': true});
 <p>There are multiple ways to decide which folders you should have with your r project.</p>
 <p>Some of them look like this:</p>
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="images/folder.jpg" class="lightbox" title="https://martinctc.github.io" data-gallery="quarto-lightbox-gallery-8"><img src="images/folder.jpg" class="img-fluid figure-img"></a></p>
-<p></p><figcaption class="figure-caption">https://martinctc.github.io</figcaption><p></p>
+<figure class="figure"><div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><a href="images/folder.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-4" title="https://martinctc.github.io"><img src="images/folder.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="https://martinctc.github.io"></a></p>
 </figure>
 </div>
+<figcaption>https://martinctc.github.io</figcaption></figure>
+</div>
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="images/folder2.png" class="lightbox" title="Negoita 2021" data-gallery="quarto-lightbox-gallery-9"><img src="images/folder2.png" class="img-fluid figure-img"></a></p>
-<p></p><figcaption class="figure-caption">Negoita 2021</figcaption><p></p>
+<figure class="figure"><div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><a href="images/folder2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5" title="Negoita 2021"><img src="images/folder2.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="Negoita 2021"></a></p>
 </figure>
+</div>
+<figcaption>Negoita 2021</figcaption></figure>
 </div>
 <hr>
 <p></p>
 <p>Personally, I like this approach:</p>
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="images/folder3.png" class="lightbox" data-gallery="quarto-lightbox-gallery-10"><img src="images/folder3.png" class="img-fluid figure-img"></a></p>
+<figure class="figure"><p><a href="images/folder3.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6"><img src="images/folder3.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></a></p>
 </figure>
 </div>
 <ul>
@@ -471,9 +457,11 @@ gtag('config', 'G-HJEMN0LJY7', { 'anonymize_ip': true});
 <p></p>
 <p>This structure is based on these proposed coding framework.</p>
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="images/rstudio21.png" class="lightbox" title="Alarid et. al.&nbsp;(2019)" data-gallery="quarto-lightbox-gallery-11"><img src="images/rstudio21.png" class="img-fluid figure-img"></a></p>
-<p></p><figcaption class="figure-caption">Alarid et. al.&nbsp;(2019)</figcaption><p></p>
+<figure class="figure"><div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><a href="images/rstudio21.png" class="lightbox" data-gallery="quarto-lightbox-gallery-7" title="Alarid et. al.&nbsp;(2019)"><img src="images/rstudio21.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="Alarid et. al.&nbsp;(2019)"></a></p>
 </figure>
+</div>
+<figcaption>Alarid et. al.&nbsp;(2019)</figcaption></figure>
 </div>
 <p>I’ve been working with this folder structure for a while, and it’s super helpful because once you are used to it, it’s super fast to search your outputs, scripts, etc. If you want to know more about these approach and why a coding framework is important, please take a look to this work lead by <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6871515/">Fernando Alarid-Escudero and other scholars</a></p>
 <p></p>
@@ -482,17 +470,19 @@ gtag('config', 'G-HJEMN0LJY7', { 'anonymize_ip': true});
 <section id="create-a-script" class="level2"><h2 class="anchored" data-anchor-id="create-a-script">Create a script</h2>
 <p>We will create our first R Script. For that please go to Fil -&gt; New File -&gt; R Script</p>
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="images/rstudio11.png" class="lightbox" data-gallery="quarto-lightbox-gallery-12"><img src="images/rstudio11.png" class="img-fluid figure-img"></a></p>
+<figure class="figure"><p><a href="images/rstudio11.png" class="lightbox" data-gallery="quarto-lightbox-gallery-8"><img src="images/rstudio11.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></a></p>
 </figure>
 </div>
 <p>Once we create our script, it will show us a window with a tab called “Untitled1”. Now, we need to save that script in our analysis folder. For that, we need to go to File -&gt; Save As. Next, we need to select the folder within our project where we want to save our script. Following the good practices recommended here, I’ll keep it in my analysis folder. I’m naming my script as “first_script”.</p>
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="images/rstudio12.png" class="lightbox" title="File -> R Script" data-gallery="quarto-lightbox-gallery-13"><img src="images/rstudio12.png" class="img-fluid figure-img"></a></p>
-<p></p><figcaption class="figure-caption">File -&gt; R Script</figcaption><p></p>
+<figure class="figure"><div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><a href="images/rstudio12.png" class="lightbox" data-gallery="quarto-lightbox-gallery-9" title="File -> R Script"><img src="images/rstudio12.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="File -> R Script"></a></p>
 </figure>
 </div>
+<figcaption>File -&gt; R Script</figcaption></figure>
+</div>
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="images/rstudio13.png" class="lightbox" data-gallery="quarto-lightbox-gallery-14"><img src="images/rstudio13.png" class="img-fluid figure-img"></a></p>
+<figure class="figure"><p><a href="images/rstudio13.png" class="lightbox" data-gallery="quarto-lightbox-gallery-10"><img src="images/rstudio13.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></a></p>
 </figure>
 </div>
 <p></p>
@@ -500,14 +490,16 @@ gtag('config', 'G-HJEMN0LJY7', { 'anonymize_ip': true});
 <hr>
 <p>It’s important that you have a really clear idea about the RStudio panes concept. This panes allow users to divide the workflow. Each pane can display different types of information, such as code, console output, plots, help files, and data frames. It enables users to organize their workspace in a more efficient way and to customize their RStudio according to their needs. We will explain every R section.</p>
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="images/rstudio14.png" class="lightbox" title="Main Grafic User Interface" data-gallery="quarto-lightbox-gallery-15"><img src="images/rstudio14.png" class="img-fluid figure-img"></a></p>
-<p></p><figcaption class="figure-caption">Main Grafic User Interface</figcaption><p></p>
+<figure class="figure"><div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><a href="images/rstudio14.png" class="lightbox" data-gallery="quarto-lightbox-gallery-11" title="Main Grafic User Interface"><img src="images/rstudio14.png" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="Main Grafic User Interface"></a></p>
 </figure>
+</div>
+<figcaption>Main Grafic User Interface</figcaption></figure>
 </div>
 <p></p>
 <section id="source" class="level2"><h2 class="anchored" data-anchor-id="source">Source</h2>
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="images/rstudio16.png" class="lightbox" data-gallery="quarto-lightbox-gallery-16"><img src="images/rstudio16.png" class="img-fluid figure-img"></a></p>
+<figure class="figure"><p><a href="images/rstudio16.png" class="lightbox" data-gallery="quarto-lightbox-gallery-12"><img src="images/rstudio16.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></a></p>
 </figure>
 </div>
 <p>The source pane is the main workspace for creating and editing R scripts, and it provides features for syntax highlighting, code completion, and error checking.</p>
@@ -515,10 +507,14 @@ gtag('config', 'G-HJEMN0LJY7', { 'anonymize_ip': true});
 <li>One of the key features of the source pane is syntax highlighting, which makes it easier to read and understand R code by using different colors and fonts to differentiate between different elements of the code, such as keywords, comments, and functions.</li>
 </ul>
 <p>With this commands, you can select your code and run your code.</p>
-<table class="table">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 48%">
+<col style="width: 51%">
+</colgroup>
 <thead><tr class="header">
-<th style="text-align: center;"><a href="images/apple.png" class="lightbox" data-gallery="quarto-lightbox-gallery-17"><img src="images/apple.png" class="img-fluid" width="30"></a></th>
-<th style="text-align: center;"><a href="images/windows.png" class="lightbox" data-gallery="quarto-lightbox-gallery-18"><img src="images/windows.png" class="img-fluid" width="30"></a></th>
+<th style="text-align: center;"><img src="images/apple.png" class="img-fluid" width="30"></th>
+<th style="text-align: center;"><img src="images/windows.png" class="img-fluid" width="30"></th>
 </tr></thead>
 <tbody><tr class="odd">
 <td style="text-align: center;"><strong>“Command + Return</strong></td>
@@ -537,11 +533,11 @@ gtag('config', 'G-HJEMN0LJY7', { 'anonymize_ip': true});
 <li>Cancel commands by pressing Esc. to finish a running process.</li>
 </ul>
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="images/rstudio17.png" class="lightbox" data-gallery="quarto-lightbox-gallery-19"><img src="images/rstudio17.png" class="img-fluid figure-img"></a></p>
+<figure class="figure"><p><a href="images/rstudio17.png" class="lightbox" data-gallery="quarto-lightbox-gallery-13"><img src="images/rstudio17.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></a></p>
 </figure>
 </div>
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="images/rstudio17_1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-20"><img src="images/rstudio17_1.png" class="img-fluid figure-img"></a></p>
+<figure class="figure"><p><a href="images/rstudio17_1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-14"><img src="images/rstudio17_1.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></a></p>
 </figure>
 </div>
 <p>In the last pictures, for example, we evaluated the expression</p>
@@ -557,32 +553,32 @@ gtag('config', 'G-HJEMN0LJY7', { 'anonymize_ip': true});
 <p>In R, the environment refers to the collection of variables and their values that are currently stored in the memory. Each time a user creates a variable or loads data into R, those variables and data are stored in the environment. One of the things that I like about using RStudio as a IDE is practically this nice way of putting all the varaibles, data functions and every object that you are loading in your environment. In summary, the environment can be thought of as a workspace where the user can manipulate and analyze the data.</p>
 <p>The Environment tab of this panel shows you the names of all the objects that you have been creating. For example, you can see information like the number of observations and rows in data objects; lists, funtions, etc.</p>
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="images/rstudio18.png" class="lightbox" data-gallery="quarto-lightbox-gallery-21"><img src="images/rstudio18.png" class="img-fluid figure-img"></a></p>
+<figure class="figure"><p><a href="images/rstudio18.png" class="lightbox" data-gallery="quarto-lightbox-gallery-15"><img src="images/rstudio18.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></a></p>
 </figure>
 </div>
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="images/rstudio18_1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-22"><img src="images/rstudio18_1.png" class="img-fluid figure-img"></a></p>
+<figure class="figure"><p><a href="images/rstudio18_1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-16"><img src="images/rstudio18_1.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></a></p>
 </figure>
 </div>
 <p></p>
 </section><section id="files-and-more" class="level2"><h2 class="anchored" data-anchor-id="files-and-more">Files and more</h2>
 <p>In R, files and directories helps you managing data, plots and code. This pane provides access to the files and directories on the user’s computer. If you can see close, it will show your current working directory; this helps you to check if you are working in the correct directory. Users can navigate through the file system, create new files and directories, and open or delete existing files. The pane also provides features for searching and filtering files, as well as organizing them into projects. I personally use it to preview plots, install packages and check documentation.</p>
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="images/rstudio19.png" class="lightbox" data-gallery="quarto-lightbox-gallery-23"><img src="images/rstudio19.png" class="img-fluid figure-img"></a></p>
+<figure class="figure"><p><a href="images/rstudio19.png" class="lightbox" data-gallery="quarto-lightbox-gallery-17"><img src="images/rstudio19.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></a></p>
 </figure>
 </div>
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><a href="images/rstudio19_1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-24"><img src="images/rstudio19_1.png" class="img-fluid figure-img"></a></p>
+<figure class="figure"><p><a href="images/rstudio19_1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-18"><img src="images/rstudio19_1.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></a></p>
 </figure>
 </div>
 </section></section><section id="references" class="level1"><h1>References</h1>
 <hr>
-<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<div class="callout-caption-container flex-fill">
+<div class="callout-title-container flex-fill">
 References
 </div>
 </div>
@@ -591,12 +587,12 @@ References
 <p>Negoita, L. (2021, July 5). <em>How to organize your analyses with R studio projects.</em> R (for ecology). <a href="https://www.rforecology.com/post/organizing-your-r-studio-projects/">URL</a></p>
 </div>
 </div>
-<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<div class="callout-caption-container flex-fill">
+<div class="callout-title-container flex-fill">
 Note
 </div>
 </div>
@@ -626,121 +622,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
   toggleBodyColorPrimary();  
-  const disableStylesheet = (stylesheets) => {
-    for (let i=0; i < stylesheets.length; i++) {
-      const stylesheet = stylesheets[i];
-      stylesheet.rel = 'prefetch';
-    }
-  }
-  const enableStylesheet = (stylesheets) => {
-    for (let i=0; i < stylesheets.length; i++) {
-      const stylesheet = stylesheets[i];
-      stylesheet.rel = 'stylesheet';
-    }
-  }
-  const manageTransitions = (selector, allowTransitions) => {
-    const els = window.document.querySelectorAll(selector);
-    for (let i=0; i < els.length; i++) {
-      const el = els[i];
-      if (allowTransitions) {
-        el.classList.remove('notransition');
-      } else {
-        el.classList.add('notransition');
-      }
-    }
-  }
-  const toggleColorMode = (alternate) => {
-    // Switch the stylesheets
-    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
-    manageTransitions('#quarto-margin-sidebar .nav-link', false);
-    if (alternate) {
-      enableStylesheet(alternateStylesheets);
-      for (const sheetNode of alternateStylesheets) {
-        if (sheetNode.id === "quarto-bootstrap") {
-          toggleBodyColorMode(sheetNode);
-        }
-      }
-    } else {
-      disableStylesheet(alternateStylesheets);
-      toggleBodyColorPrimary();
-    }
-    manageTransitions('#quarto-margin-sidebar .nav-link', true);
-    // Switch the toggles
-    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
-    for (let i=0; i < toggles.length; i++) {
-      const toggle = toggles[i];
-      if (toggle) {
-        if (alternate) {
-          toggle.classList.add("alternate");     
-        } else {
-          toggle.classList.remove("alternate");
-        }
-      }
-    }
-    // Hack to workaround the fact that safari doesn't
-    // properly recolor the scrollbar when toggling (#1455)
-    if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
-      manageTransitions("body", false);
-      window.scrollTo(0, 1);
-      setTimeout(() => {
-        window.scrollTo(0, 0);
-        manageTransitions("body", true);
-      }, 40);  
-    }
-  }
-  const isFileUrl = () => { 
-    return window.location.protocol === 'file:';
-  }
-  const hasAlternateSentinel = () => {  
-    let styleSentinel = getColorSchemeSentinel();
-    if (styleSentinel !== null) {
-      return styleSentinel === "alternate";
-    } else {
-      return false;
-    }
-  }
-  const setStyleSentinel = (alternate) => {
-    const value = alternate ? "alternate" : "default";
-    if (!isFileUrl()) {
-      window.localStorage.setItem("quarto-color-scheme", value);
-    } else {
-      localAlternateSentinel = value;
-    }
-  }
-  const getColorSchemeSentinel = () => {
-    if (!isFileUrl()) {
-      const storageValue = window.localStorage.getItem("quarto-color-scheme");
-      return storageValue != null ? storageValue : localAlternateSentinel;
-    } else {
-      return localAlternateSentinel;
-    }
-  }
-  let localAlternateSentinel = 'default';
-  // Dark / light mode switch
-  window.quartoToggleColorScheme = () => {
-    // Read the current dark / light value 
-    let toAlternate = !hasAlternateSentinel();
-    toggleColorMode(toAlternate);
-    setStyleSentinel(toAlternate);
-  };
-  // Ensure there is a toggle, if there isn't float one in the top right
-  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
-    const a = window.document.createElement('a');
-    a.classList.add('top-right');
-    a.classList.add('quarto-color-scheme-toggle');
-    a.href = "";
-    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
-    const i = window.document.createElement("i");
-    i.classList.add('bi');
-    a.appendChild(i);
-    window.document.body.appendChild(a);
-  }
-  // Switch to dark mode if need be
-  if (hasAlternateSentinel()) {
-    toggleColorMode(true);
-  } else {
-    toggleColorMode(false);
-  }
   const icon = "";
   const anchorJS = new window.AnchorJS();
   anchorJS.options = {
@@ -748,12 +629,15 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     icon: icon
   };
   anchorJS.add('.anchored');
-  const clipboard = new window.ClipboardJS('.code-copy-button', {
-    target: function(trigger) {
-      return trigger.previousElementSibling;
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
     }
-  });
-  clipboard.on('success', function(e) {
+    return false;
+  }
+  const onCopySuccess = function(e) {
     // button target
     const button = e.trigger;
     // don't keep focus
@@ -785,11 +669,55 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }, 1000);
     // clear code selection
     e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
   });
-  function tippyHover(el, contentFn) {
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp("https:\/\/www\.hertiecodingclub\.com\/");
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+          // target, if specified
+          link.setAttribute("target", "_blank");
+          if (link.getAttribute("rel") === null) {
+            link.setAttribute("rel", "noopener");
+          }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
-      content: contentFn,
       maxWidth: 500,
       delay: 100,
       arrow: false,
@@ -799,8 +727,17 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       interactive: true,
       interactiveBorder: 10,
       theme: 'quarto',
-      placement: 'bottom-start'
+      placement: 'bottom-start',
     };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
     window.tippy(el, config); 
   }
   const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
@@ -812,9 +749,245 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
-      return note.innerHTML;
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
     });
   }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
   const findCites = (el) => {
     const parentEl = el.parentElement;
     if (parentEl) {
@@ -852,20 +1025,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       });
     }
   }
-    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
-      var filterRegex = new RegExp(/https:\/\/www\.hertiecodingclub\.com/);
-    var isInternal = (href) => {
-        return filterRegex.test(href) || localhostRegex.test(href);
-    }
-    // Inspect non-navigation links and adorn them if external
-    var links = window.document.querySelectorAll('a:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item)');
-    for (var i=0; i<links.length; i++) {
-      const link = links[i];
-      if (!isInternal(link.href)) {
-          // target, if specified
-          link.setAttribute("target", "_blank");
-      }
-    }
 });
 </script>
 </div> <!-- /content -->
@@ -873,41 +1032,88 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     <div class="nav-footer-left">
       <ul class="footer-items list-unstyled">
 <li class="nav-item">
-    <a class="nav-link" href="https://creativecommons.org/licenses/by/2.0/"><i class="fa-regular fa-copyright" aria-label="copyright"></i> <i class="fa-solid fa-circle-user" aria-label="circle-user"></i> 2023 HCC | J.Roa</a>
+    <a class="nav-link" href="https://creativecommons.org/licenses/by/2.0/">
+<p><i class="fa-regular fa-copyright" aria-label="copyright"></i> <i class="fa-solid fa-circle-user" aria-label="circle-user"></i> 2024 HCC | J.Roa</p>
+</a>
   </li>  
 </ul>
 </div>   
-      <div class="nav-footer-center">
-        <ul class="footer-items list-unstyled">
+    <div class="nav-footer-center">
+      <ul class="footer-items list-unstyled">
 <li class="nav-item">
-    <a class="nav-link" href="https://quarto.org"><i class="fa-brands fa-phoenix-framework fa-lg" aria-label="phoenix-framework"></i> Quarto engine</a>
+    <a class="nav-link" href="https://quarto.org">
+<p>· <a href="https://quarto.org/"><img src="https://quarto.org/quarto.png" class="img-fluid" alt="Quarto" width="65"></a> engine ·</p>
+</a>
   </li>  
 </ul>
 </div>
     <div class="nav-footer-right">
       <ul class="footer-items list-unstyled">
 <li class="nav-item">
-    <a class="nav-link" href="mailto:hertiecodingclub@gmail.com"><i class="fa-solid fa-square-envelope fa-lg" aria-label="square-envelope"></i></a>
+    <a class="nav-link" href="mailto:hertiecodingclub@gmail.com">
+<p><i class="fa-solid fa-square-envelope fa-lg" aria-label="square-envelope"></i></p>
+</a>
   </li>  
     <li class="nav-item">
-    <a class="nav-link" href="http://hertiecodingclub.slack.com"><i class="fa-brands fa-slack fa-lg" aria-label="slack"></i></a>
+    <a class="nav-link" href="http://hertiecodingclub.slack.com">
+<p><i class="fa-brands fa-slack fa-lg" aria-label="slack"></i></p>
+</a>
   </li>  
     <li class="nav-item">
-    <a class="nav-link" href="https://github.com/Hertie-Coding-Club"><i class="fa-brands fa-github fa-lg" aria-label="github"></i></a>
+    <a class="nav-link" href="https://github.com/Hertie-Coding-Club">
+<p><i class="fa-brands fa-github fa-lg" aria-label="github"></i></p>
+</a>
   </li>  
     <li class="nav-item">
-    <a class="nav-link" href="https://twitter.com/HertieCodingCLB"><i class="fa-brands fa-twitter fa-lg" aria-label="twitter"></i></a>
+    <a class="nav-link" href="https://twitter.com/HertieCodingCLB">
+<p><i class="fa-brands fa-twitter fa-lg" aria-label="twitter"></i></p>
+</a>
   </li>  
     <li class="nav-item">
-    <a class="nav-link" href="https://www.instagram.com/hertiecodingclub/"><i class="fa-brands fa-instagram fa-lg" aria-label="instagram"></i></a>
+    <a class="nav-link" href="https://www.instagram.com/hertiecodingclub/">
+<p><i class="fa-brands fa-instagram fa-lg" aria-label="instagram"></i></p>
+</a>
   </li>  
     <li class="nav-item">
-    <a class="nav-link" href="https://youtube.com/@hertiecodingclub"><i class="fa-brands fa-youtube fa-lg" aria-label="youtube"></i></a>
+    <a class="nav-link" href="https://youtube.com/@hertiecodingclub">
+<p><i class="fa-brands fa-youtube fa-lg" aria-label="youtube"></i></p>
+</a>
   </li>  
 </ul>
 </div>
   </div>
-</footer><script>var lightboxQuarto = GLightbox({"descPosition":"left","loop":true,"openEffect":"fade","skin":"lightwidth","selector":".lightbox","closeEffect":"fade"});</script>
+</footer><script>var lightboxQuarto = GLightbox({"skin":"lightwidth","openEffect":"fade","loop":false,"descPosition":"left","selector":".lightbox","closeEffect":"fade"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
 
 
 <script src="../../../site_libs/quarto-html/zenscroll-min.js"></script>

@@ -46,14 +46,14 @@
     "href": "learn/rstudio/rstudio101/index.html#step-1-opening-a-new-project",
     "title": "RStudio 101",
     "section": "Step 1: Opening a new project",
-    "text": "Step 1: Opening a new project\n\n\n\n\n\nWe will go to File tab and click in “New Project”.\n\n\n\n1.-Create Project\n2.-Project Type\n\n\n\n\n\n\n\nHere you have three options: since you are creating a new project, choose New Directory.\nSelect the type of project, as you can see, we have different options; or now, we will choose New Project"
+    "text": "Step 1: Opening a new project\n\n\n\n\n\nWe will go to File tab and click in “New Project”.\n\n\n\n\n\n\n\n1.-Create Project\n2.-Project Type\n\n\n\n\n\n\n\nHere you have three options: since you are creating a new project, choose New Directory.\nSelect the type of project, as you can see, we have different options; or now, we will choose New Project"
   },
   {
     "objectID": "learn/rstudio/rstudio101/index.html#step-2-create-our-first-project",
     "href": "learn/rstudio/rstudio101/index.html#step-2-create-our-first-project",
     "title": "RStudio 101",
     "section": "Step 2: Create our first project",
-    "text": "Step 2: Create our first project\n\nOnce we open a new project, we need to decide where we want to store our project and all the code we will generate. I’ll talk about this later, but putting a project in a separate folder is good practice to have everything ordered.\n\n\n\n\n\nYour name project should be precise and not too long. In our case, we will name it “Hertie Coding Club R”\n\n\n3.-Choose folder\n4.-Icon project in project folder\n\n\n\n\n\n\n\nHere we show the folder in where we will save our project\nOnce you created your project, it should appear an icon like this within your folder."
+    "text": "Step 2: Create our first project\n\nOnce we open a new project, we need to decide where we want to store our project and all the code we will generate. I’ll talk about this later, but putting a project in a separate folder is good practice to have everything ordered.\n\n\n\n\n\nYour name project should be precise and not too long. In our case, we will name it “Hertie Coding Club R”\n\n\n\n\n\n\n3.-Choose folder\n4.-Icon project in project folder\n\n\n\n\n\n\n\nHere we show the folder in where we will save our project\nOnce you created your project, it should appear an icon like this within your folder."
   },
   {
     "objectID": "learn/rstudio/rstudio101/index.html#benefits",
@@ -67,21 +67,21 @@
     "href": "learn/rstudio/rstudio101/index.html#create-a-script",
     "title": "RStudio 101",
     "section": "Create a script",
-    "text": "Create a script\nWe will create our first R Script. For that please go to Fil -> New File -> R Script\n\n\n\n\nOnce we create our script, it will show us a window with a tab called “Untitled1”. Now, we need to save that script in our analysis folder. For that, we need to go to File -> Save As. Next, we need to select the folder within our project where we want to save our script. Following the good practices recommended here, I’ll keep it in my analysis folder. I’m naming my script as “first_script”.\n\n\nFile -> R Script"
+    "text": "Create a script\nWe will create our first R Script. For that please go to Fil -&gt; New File -&gt; R Script\n\n\n\n\nOnce we create our script, it will show us a window with a tab called “Untitled1”. Now, we need to save that script in our analysis folder. For that, we need to go to File -&gt; Save As. Next, we need to select the folder within our project where we want to save our script. Following the good practices recommended here, I’ll keep it in my analysis folder. I’m naming my script as “first_script”.\n\n\n\n\n\nFile -&gt; R Script"
   },
   {
     "objectID": "learn/rstudio/rstudio101/index.html#source",
     "href": "learn/rstudio/rstudio101/index.html#source",
     "title": "RStudio 101",
     "section": "Source",
-    "text": "Source\n\n\n\n\nThe source pane is the main workspace for creating and editing R scripts, and it provides features for syntax highlighting, code completion, and error checking.\n\nOne of the key features of the source pane is syntax highlighting, which makes it easier to read and understand R code by using different colors and fonts to differentiate between different elements of the code, such as keywords, comments, and functions.\n\nWith this commands, you can select your code and run your code.\n\n\n\n\n\n\n“Command + Return\n“Control + Enter”\n\n\nThis code will excute and it will be showed in the console."
+    "text": "Source\n\n\n\n\nThe source pane is the main workspace for creating and editing R scripts, and it provides features for syntax highlighting, code completion, and error checking.\n\nOne of the key features of the source pane is syntax highlighting, which makes it easier to read and understand R code by using different colors and fonts to differentiate between different elements of the code, such as keywords, comments, and functions.\n\nWith this commands, you can select your code and run your code.\n\n\n\n\n\n\n\n\n\n\n“Command + Return\n“Control + Enter”\n\n\nThis code will excute and it will be showed in the console."
   },
   {
     "objectID": "learn/rstudio/rstudio101/index.html#console",
     "href": "learn/rstudio/rstudio101/index.html#console",
     "title": "RStudio 101",
     "section": "Console",
-    "text": "Console\nWhen a user types in a command in the console, like for example assigning a variable or running a function, R processes the command and generates the output, which is displayed in the console. The console is a critical tool for debugging R code, as it allows users to see the output of their commands and to identify errors and bugs in their code. In summary:\n\nThe console is the heart of R.\nHere R actually evaluates your code.\nTry to write most of your code in a document in the Source. Only type directly into the Console to de-bug or do quick analyses.\nWhen ready: > and If waiting: +\nCancel commands by pressing Esc. to finish a running process.\n\n\n\n\n\n\n\n\n\nIn the last pictures, for example, we evaluated the expression\n\n2 + 2\n\n[1] 4\n\n\nAs you can see, in our console it shows the operation that we ran. (Remember the commands to run your code). One of the shortcuts that I use often is the ↑ key. Pressing the top arrow shows the last code that you executed; pretty useful if you don’t want to rerun your code"
+    "text": "Console\nWhen a user types in a command in the console, like for example assigning a variable or running a function, R processes the command and generates the output, which is displayed in the console. The console is a critical tool for debugging R code, as it allows users to see the output of their commands and to identify errors and bugs in their code. In summary:\n\nThe console is the heart of R.\nHere R actually evaluates your code.\nTry to write most of your code in a document in the Source. Only type directly into the Console to de-bug or do quick analyses.\nWhen ready: &gt; and If waiting: +\nCancel commands by pressing Esc. to finish a running process.\n\n\n\n\n\n\n\n\n\nIn the last pictures, for example, we evaluated the expression\n\n2 + 2\n\n[1] 4\n\n\nAs you can see, in our console it shows the operation that we ran. (Remember the commands to run your code). One of the shortcuts that I use often is the ↑ key. Pressing the top arrow shows the last code that you executed; pretty useful if you don’t want to rerun your code"
   },
   {
     "objectID": "learn/rstudio/rstudio101/index.html#environmenthistory",
